@@ -71,12 +71,17 @@ $$
 **Legge di Ampére-Maxwell.**
 
 $$
-    \oint_{\partial S} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \int_{S} \mathbf{j} \cdot \hat{\mathbf{n}} \ .
+    \oint_{\partial S} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{S} \mathbf{d} \cdot \hat{\mathbf{n}} = \int_{S} \mathbf{j} \cdot \hat{\mathbf{n}} \ .
 $$
 
 
 ### Integrazione su volumi arbitrari
-Integrando su volumi e superfici in moto arbitario, si può ricavare la forma integrale dei princìpi dell'elettromagnetismo
+
+Per la loro importanza in applicazioni fondamentali come i motori elettrici, e per evitare confusione e voli pindarici quando si tratta il fenomeno dell'induzione elettromagnetica, risulta di primaria importanza fornire l'espressione corretta dei principi dell'elettromagnetismo quando sono coinvolti volumi mobili nello spazio. Non viene solo mostrata la forma di questi principi, ma anche il procedimento corretto per ricavarli partendo dalla loro forma valida per volumi di controllo fermi nello spazio: per fare questo, vengono usate le regole di derivazione nel tempo di integrali fondamentali su domini mobili, come l'integrale su un volume di una funzione densità, il flusso di un campo vettoriale attraverso una superficie o una circuitazione lungo una curva.
+
+Queste tre regole di derivazione recitano
+
+$$\dfrac{d}{dt} \int_{v_t} f = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \mathbf{u}_b \cdot \hat{\mathbf{n}}$$
 
 **Equazione di continuità per la carica elettrica**
 
