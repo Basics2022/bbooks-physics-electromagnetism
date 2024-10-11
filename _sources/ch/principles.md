@@ -130,16 +130,10 @@ $$\begin{aligned}
 \end{aligned}$$
 
 $$
-    \oint_{\partial s_t} \mathbf{e}^* \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} \ ,
+    \oint_{\partial s_t} \mathbf{h}^* \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} = \int_{s_t} \mathbf{j}^* \hat{\mathbf{n}} \ ,
 $$
-con la definizione $\mathbf{e}^* := \mathbf{e} + \mathbf{u}_b \cdot \mathbf{b}$, già usata nell'espressione della legge di Lorentz.
 
-**Legge di Ampére-Maxwell.**
-
-$$\begin{aligned}
-    \mathbf{0} & = \oint_{\partial s_t} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{d} \cdot \hat{\mathbf{n}} - \int_{s_t} \mathbf{j} \cdot \hat{\mathbf{n}} = \\
-    & = \oint_{\partial s_t} \mathbf{h} \cdot \hat{\mathbf{t}} - - \int_{s_t} \mathbf{j} \cdot \hat{\mathbf{n}} \\
-\end{aligned}$$
+avendo definito $\mathbf{h}^* := \mathbf{h} + \mathbf{u}_b \times \mathbf{d}$, e usato la definizione già introdotta in precedenza $\mathbf{j}^* := \mathbf{j} - \rho \mathbf{u}_b$.
 
 <!--
 **Equazione di continuità per la carica elettrica**
