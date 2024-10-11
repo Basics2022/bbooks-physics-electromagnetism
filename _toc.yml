@@ -10,5 +10,14 @@ parts:
   - file: ch/principles
   - file: ch/potentials
   - file: ch/energy
-  - file: ch/circuits
   - file: ch/waves
+- caption: Elettrotecnica
+  chapters:
+  - file: ch/circuits
+    section:
+    - file: ch/circuits-electric
+    - file: ch/circuits-electromagnetic
+    - file: ch/circuits-electromechanic
+- caption: Appendici
+  chapters:
+  - file: ch/optics
