@@ -9,8 +9,9 @@
 
 Osservando le unità di misura dei campi,
 
-$$[\mathbf{e}] = \frac{\text{force}}{\text{charge}}$$
-$$[\mathbf{d}]$$
+$$[\mathbf{e}] = \frac{\text{force}}{\text{charge}} = \frac{N}{C}$$
+$$[\varepsilon] = \frac{\text{charge}^2}{\text{force} \text{length}^2} = \frac{C^2}{N \ m^2}$$
+$$[\mathbf{d}] = [\varepsilon][\mathbf{e}] = \frac{C^2}{N \, m^2} \frac{N}{C} = \frac{C}{m^2}$$
 $$[\mathbf{b}]$$
 $$[\mathbf{h}]$$
 $$[u] = $$
