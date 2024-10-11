@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/media';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Bilancio di energia" href="energy.html" />
+    <link rel="next" title="Bilancio di energia del campo elettromagnetico" href="energy.html" />
     <link rel="prev" title="Potenziali elettromagnetici" href="potentials.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -174,16 +174,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="principles.html">Princìpi dell’elettromagnetismo classico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="potentials.html">Potenziali elettromagnetici</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Leggi costitutive</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="energy.html">Bilancio di energia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="energy.html">Bilancio di energia del campo elettromagnetico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">Equazioni dell’elettromagnetismo e relatività galileiana</a></li>
-<li class="toctree-l1"><a class="reference internal" href="waves.html">Onde elettromagnetiche</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">Onde elettromagnetiche</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">Onde elettromagnetiche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">Onde elettromagnetiche piane</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Elettrotecnica</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="circuits.html">Approssimazione circuitale</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="circuits.html">Approssimazione circuitale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-components.html">Componenti elementari dei circuiti elettrici</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">Regimi di funzionamento in circuiti elettrici</a></li>
 </ul>
@@ -391,15 +393,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Leggi costitutive</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vuoto">Vuoto</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mezzi-continui">Mezzi continui</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione-e-magnetizzazione-dei-mezzi">Polarizzazione e Magnetizzazione dei mezzi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esempi">Esempi</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione-e-magnetizzazione-dei-mezzi">Polarizzazione e Magnetizzazione dei mezzi</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#esempi">Esempi</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -447,19 +445,19 @@ document.write(`
 </li>
 </ul>
 </div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="polarizzazione-e-magnetizzazione-dei-mezzi">
-<h1>Polarizzazione e Magnetizzazione dei mezzi<a class="headerlink" href="#polarizzazione-e-magnetizzazione-dei-mezzi" title="Permalink to this heading">#</a></h1>
+<div class="section" id="polarizzazione-e-magnetizzazione-dei-mezzi">
+<h2>Polarizzazione e Magnetizzazione dei mezzi<a class="headerlink" href="#polarizzazione-e-magnetizzazione-dei-mezzi" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>bounded/free charges and currents</p></li>
 </ul>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="esempi">
-<h1>Esempi<a class="headerlink" href="#esempi" title="Permalink to this heading">#</a></h1>
+<div class="section" id="esempi">
+<h2>Esempi<a class="headerlink" href="#esempi" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>conduttori</p></li>
 <li><p>ferromagentici e magnetismo debole (para-, dia-, anti-)</p></li>
 </ul>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -506,7 +504,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bilancio di energia</p>
+        <p class="prev-next-title">Bilancio di energia del campo elettromagnetico</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -525,15 +523,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Leggi costitutive</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vuoto">Vuoto</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mezzi-continui">Mezzi continui</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione-e-magnetizzazione-dei-mezzi">Polarizzazione e Magnetizzazione dei mezzi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esempi">Esempi</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione-e-magnetizzazione-dei-mezzi">Polarizzazione e Magnetizzazione dei mezzi</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#esempi">Esempi</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>

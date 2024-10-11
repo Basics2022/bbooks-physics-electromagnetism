@@ -19,10 +19,10 @@
 - mezzi lineari non disperivi:
   - e isotropi
 
-# Polarizzazione e Magnetizzazione dei mezzi
+## Polarizzazione e Magnetizzazione dei mezzi
 - bounded/free charges and currents
 
-# Esempi
+## Esempi
 - conduttori
 - ferromagentici e magnetismo debole (para-, dia-, anti-)
 

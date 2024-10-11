@@ -62,12 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/waves';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Approssimazione circuitale" href="circuits.html" />
+    <link rel="next" title="Onde elettromagnetiche" href="waves-equation.html" />
+    <link rel="prev" title="Equazioni dell’elettromagnetismo e relatività galileiana" href="low-speed-relativity.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,9 +173,31 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Prime esperienze</a></li>
 <li class="toctree-l1"><a class="reference internal" href="principles.html">Princìpi dell’elettromagnetismo classico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="potentials.html">Potenziali elettromagnetici</a></li>
-<li class="toctree-l1"><a class="reference internal" href="energy.html">Bilancio di energia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="circuits.html">Approssimazione circuitale</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Onde elettromagnetiche</a></li>
+<li class="toctree-l1"><a class="reference internal" href="media.html">Leggi costitutive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="energy.html">Bilancio di energia del campo elettromagnetico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">Equazioni dell’elettromagnetismo e relatività galileiana</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Onde elettromagnetiche</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">Onde elettromagnetiche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">Onde elettromagnetiche piane</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Elettrotecnica</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="circuits.html">Approssimazione circuitale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-components.html">Componenti elementari dei circuiti elettrici</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">Regimi di funzionamento in circuiti elettrici</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="circuits-electromagnetic.html">Circuiti elettromagnetici</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuits-electromechanic.html">Circuiti elettromeccanici</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendici</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="optics.html">Ottica</a></li>
 </ul>
 
     </div>
@@ -349,9 +370,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -367,15 +386,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potenziali-elettromagnetici">Potenziali elettromagnetici</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#campo-elettrico-e-campo-magnetico">Campo elettrico e campo magnetico</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -397,7 +407,7 @@ document.write(`
 <p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Oct 11, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>0 min read</p>
 </div>
 </div>
 </div>
@@ -406,83 +416,7 @@ document.write(`
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="onde-elettromagnetiche">
 <span id="classical-electromagnetism-waves"></span><h1>Onde elettromagnetiche<a class="headerlink" href="#onde-elettromagnetiche" title="Permalink to this heading">#</a></h1>
-<p><strong>Identità vettoriale.</strong></p>
-<div class="math notranslate nohighlight">
-\[\Delta \mathbf{v} = \nabla ( \nabla \cdot \mathbf{v} ) - \nabla \times \nabla \times \mathbf{v}\]</div>
-<p><strong>Dim.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
- \nabla \times \nabla \times \mathbf{v} &amp; = \varepsilon_{ijk} \partial_j ( \varepsilon_{klm} \partial_l v_m ) = \\
- &amp; = \varepsilon_{kij} \varepsilon_{klm} \partial_{jl} v_m = \\
- &amp; = ( \delta_{il} \delta_{jm} - \delta_{im} \delta_{jl} )  \partial_{jl} v_m = \\
- &amp; = \partial_{ij} v_j - \partial_{jj} v_i = \\
- &amp; = \nabla (\nabla \cdot \mathbf{v}) - \Delta \mathbf{v} \ ,
-\end{aligned}\end{split}\]</div>
-<p>avendo utilizzato l’identità</p>
-<div class="math notranslate nohighlight">
-\[\varepsilon_{ijk} \varepsilon_{ilm} = \delta_{jl} \delta_{km} - \delta_{jm} \delta_{kl}\]</div>
-<div class="section" id="potenziali-elettromagnetici">
-<h2>Potenziali elettromagnetici<a class="headerlink" href="#potenziali-elettromagnetici" title="Permalink to this heading">#</a></h2>
-<p>Partendo dalle definizioni dei potenziali elettromagnetici e dalle equazioni di Maxwell, con l’aiuto di alcune identità vettoriali, è possibile (<strong>TODO</strong> <em>ipotesi, elencare quelle necessarie alla derivazione</em>) scrivere delle equazionin delle onde per il potenziale vettore e per il potenziale scalare.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
- \mathbf{e} &amp; = - \nabla \varphi - \partial_t \mathbf{a} \\
- \mathbf{b} &amp; = \nabla \times \mathbf{a} \\
-\end{aligned}\end{split}\]</div>
-<p>Usando le equazioni costitutive</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{d} = \varepsilon \ \mathbf{e} \qquad , \qquad
-\mathbf{b} = \mu \mathbf{h} \]</div>
-<p><strong>Potenziale vettore.</strong></p>
-<div class="math notranslate nohighlight">
-\[\mathbf{b} = \nabla \times \mathbf{a}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\mathbf{0} &amp; = \nabla \times \nabla \times \mathbf{a} - \nabla \times \mathbf{b} = \\
- &amp; = - \Delta \mathbf{a} + \nabla(\nabla \cdot \mathbf{a})  - \mu \nabla \times \mathbf{h} = \\
- &amp; = - \Delta \mathbf{a} + \nabla(\nabla \cdot \mathbf{a})  - \mu ( \partial_t \mathbf{d} + \mathbf{j} )  = \\
- &amp; = - \Delta \mathbf{a} + \nabla(\nabla \cdot \mathbf{a})  - \mu ( \varepsilon \partial_t \mathbf{e} + \mathbf{j} )  = \\
- &amp; = - \Delta \mathbf{a} + \nabla(\nabla \cdot \mathbf{a})  - \mu \varepsilon ( - \partial_t \nabla \varphi - \partial_{tt} \mathbf{a} ) + \mu \mathbf{j} = \\
- &amp; = - \Delta \mathbf{a} + \nabla(\nabla \cdot \mathbf{a})  + \frac{1}{c^2} \partial_t \nabla \varphi + \dfrac{1}{c^2} \partial_{tt} \mathbf{a} - \mu \mathbf{j}  \\
-\end{aligned}\end{split}\]</div>
-<p>Usando la condizione di gauge di Lorentz</p>
-<div class="math notranslate nohighlight">
-\[\nabla \cdot \mathbf{a} + \frac{1}{c^2} \partial_t  \varphi = 0 \ ,\]</div>
-<p>si ottiene un’equazione delle onde per il potenziale vettore</p>
-<div class="math notranslate nohighlight">
-\[ \dfrac{1}{c^2} \partial_{tt} \mathbf{a} - \Delta \mathbf{a}  =  \mu \mathbf{j}  \ .\]</div>
-<p><strong>Potenziale scalare.</strong></p>
-<div class="math notranslate nohighlight">
-\[\mathbf{e} = \nabla \varphi - \partial_t \mathbf{a}\]</div>
-<p>Calcolando la derivata nel tempo della condizione di gauge di Lorentz</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
- 0 &amp; = \partial_t (\frac{1}{c^2} \partial_t \varphi + \nabla \cdot \mathbf{a}) = \\
-   &amp; = \frac{1}{c^2} \partial_{tt} \varphi + \nabla \cdot \partial_t \mathbf{a} = \\
-   &amp; = \frac{1}{c^2} \partial_{tt} \varphi - \nabla \cdot \nabla \varphi - \nabla \cdot \mathbf{e} = \\
-   &amp; = \frac{1}{c^2} \partial_{tt} \varphi - \Delta \varphi - \frac{\rho}{\varepsilon} = \\
-\end{aligned}\end{split}\]</div>
-<p>si arriva all’equazione delle onde per il potenziale scalare,</p>
-<div class="math notranslate nohighlight">
-\[ \frac{1}{c^2} \partial_{tt} \varphi - \Delta \varphi = \frac{\rho}{\varepsilon} \ .\]</div>
-</div>
-<div class="section" id="campo-elettrico-e-campo-magnetico">
-<h2>Campo elettrico e campo magnetico<a class="headerlink" href="#campo-elettrico-e-campo-magnetico" title="Permalink to this heading">#</a></h2>
-<p>Usando le definizioni dei campi fisici in termini dei potenziali elettromagnetici e la linearità (<strong>TODO</strong> <em>tutto deve essere lineare, anche le leggi costitutive</em>) delle operazioni, partendo dalle equazioni delle onde per i potenziali, si possono ricavare le equazioni delle onde per i campi fisici. <strong>TODO</strong> <em>Nell’ipotesi di proprietà costanti e uniformi</em></p>
-<p><strong>Campo elettrico.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\square \mathbf{e} &amp; = \square ( -\nabla \varphi - \partial_t \mathbf{a}) = \\
-&amp; = - \nabla \square \varphi - \partial_t \square \mathbf{a} = \\
-&amp; = - \nabla \dfrac{\rho}{\varepsilon} - \mu \partial_t \mathbf{j}  \ .
-\end{aligned}\end{split}\]</div>
-<p><strong>Campo magnetico.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
- \square \mathbf{b} &amp; = \square \nabla \times \mathbf{a} = \\
- &amp; = \nabla \times \square \mathbf{a} = \\
- &amp; = \mu \nabla \times \mathbf{j}
-\end{aligned}\end{split}\]</div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -517,13 +451,22 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="circuits.html"
+       href="low-speed-relativity.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Approssimazione circuitale</p>
+        <p class="prev-next-title">Equazioni dell’elettromagnetismo e relatività galileiana</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="waves-equation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Onde elettromagnetiche</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -531,21 +474,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potenziali-elettromagnetici">Potenziali elettromagnetici</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#campo-elettrico-e-campo-magnetico">Campo elettrico e campo magnetico</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

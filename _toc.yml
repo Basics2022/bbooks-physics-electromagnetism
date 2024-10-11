@@ -13,6 +13,9 @@ parts:
   - file: ch/energy
   - file: ch/low-speed-relativity
   - file: ch/waves
+    sections:
+    - file: ch/waves-equation
+    - file: ch/waves-plane
 - caption: Elettrotecnica
   chapters:
   - file: ch/circuits

@@ -3,7 +3,7 @@
 :date: "{sub-ref}`today`"
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
-(classical-electromagnetism:waves)=
-# Onde elettromagnetiche
+(classical-electromagnetism:waves:plane-waves)=
+# Onde elettromagnetiche piane
 
 
