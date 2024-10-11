@@ -9,15 +9,19 @@
 
 Ispirati dalle dimensioni fisiche dei campi elettromagnetici,
 
-$$[\mathbf{e}] = \frac{\text{force}}{\text{charge}}$$
+$$\begin{aligned}
+[\mathbf{e}] = \frac{\text{force}}{\text{charge}} \qquad & , \qquad
 <!--$$[\varepsilon] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
-$$[\mathbf{d}] = \frac{\text{charge}}{\text{length}^2}$$
-$$[\mathbf{b}] = \frac{\text{force}\cdot\text{time}}{\text{charge}\cdot\text{length}}$$
+[\mathbf{d}] = \frac{\text{charge}}{\text{length}^2} \\
+[\mathbf{b}] = \frac{\text{force}\cdot\text{time}}{\text{charge}\cdot\text{length}} \qquad & , \qquad
 <!--$$[\mu] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
-$$[\mathbf{h}] = \frac{\text{charge}}{\text{time} \cdot \text{length}}$$
+[\mathbf{h}] = \frac{\text{charge}}{\text{time} \cdot \text{length}}
+\end{aligned}$$
 
-$$[\mathbf{e} \cdot \mathbf{d}] = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u]$$
-$$[\mathbf{b} \cdot \mathbf{h}] = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u]$$
+$$\begin{aligned}
+[\mathbf{e} \cdot \mathbf{d}] & = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u] \\
+[\mathbf{b} \cdot \mathbf{h}] & = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u]
+\end{aligned}$$
 
 si può costruire la densità di volume di energia  (**todo** trovare motivazioni più convincenti, non basandosi solo sull'analisi dimensionale ma sul lavoro)
 
