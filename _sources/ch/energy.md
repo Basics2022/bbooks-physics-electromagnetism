@@ -10,7 +10,7 @@
 Ispirati dalle dimensioni fisiche dei campi elettromagnetici,
 
 $$\begin{aligned}
-[\mathbf{e}] = \frac{\text{force}}{\text{charge}} \qquad & , \qquad
+\[\mathbf{e}\] = \frac{\text{force}}{\text{charge}} \qquad & , \qquad
 [\mathbf{d}] = \frac{\text{charge}}{\text{length}^2} \\
 [\mathbf{b}] = \frac{\text{force}\cdot\text{time}}{\text{charge}\cdot\text{length}} \qquad & , \qquad
 [\mathbf{h}] = \frac{\text{charge}}{\text{time} \cdot \text{length}}
