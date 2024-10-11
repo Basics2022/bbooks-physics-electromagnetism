@@ -19,7 +19,7 @@ $$\begin{aligned}
 <!--$$[\mu] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
 
 $$\begin{aligned}
-[\mathbf{e} \cdot \mathbf{d}] & = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u] \\
+\left[\mathbf{e} \cdot \mathbf{d}\right] & = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u] \\
 [\mathbf{b} \cdot \mathbf{h}] & = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u]
 \end{aligned}$$
 
