@@ -533,9 +533,24 @@ document.write(`
 \end{aligned}\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[
-    \oint_{\partial s_t} \mathbf{h}^* \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} = \int_{s_t} \mathbf{j}^* \hat{\mathbf{n}} \ ,
+    \oint_{\partial s_t} \mathbf{h}^* \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} = \int_{s_t} \mathbf{j}^* \cdot \hat{\mathbf{n}} \ ,
 \]</div>
 <p>avendo definito <span class="math notranslate nohighlight">\(\mathbf{h}^* := \mathbf{h} - \mathbf{u}_b \times \mathbf{d}\)</span>, e usato la definizione già introdotta in precedenza <span class="math notranslate nohighlight">\(\mathbf{j}^* := \mathbf{j} - \rho \mathbf{u}_b\)</span>.</p>
+<p>Aggiungendo le definizioni</p>
+<div class="math notranslate nohighlight">
+\[\rho^* = \rho\]</div>
+<div class="math notranslate nohighlight">
+\[\mathbf{d}^* = \mathbf{d}\]</div>
+<div class="math notranslate nohighlight">
+\[\mathbf{b}^* = \mathbf{b}\]</div>
+<p>si ottengono delle equazioni che hanno la stessa forma delle equazioni scritte per domini fermi nello spazio, ma che possono essere applicati a domini mobili. Le definizioni</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\rho^* = \rho \qquad &amp; , \qquad \mathbf{j}^* = \mathbf{j} - \rho \mathbf{u}_b \\
+\mathbf{d}^* = \mathbf{d} \qquad &amp; , \qquad \mathbf{e}^* = \mathbf{e} + \mathbf{u}_b \times \mathbf{b} \\
+\mathbf{b}^* = \mathbf{b} \qquad &amp; , \qquad \mathbf{h}^* = \mathbf{h} - \mathbf{u}_b \times \mathbf{d} \\
+\end{aligned}\end{split}\]</div>
+<p>non rappresentano altro che la trasformazione dei campi per due osservatori in moto relativo, e corrispondono al limite delle trasformazioni di Lorentz della relatività speciale per velocità <span class="math notranslate nohighlight">\(u \ll c\)</span>. <strong>todo</strong> riferimento alle trasformazioni galileiane e di Lorentz per la relatività nell’elettromagnetismo.</p>
 <!--
 **Equazione di continuità per la carica elettrica**
 

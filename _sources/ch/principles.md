@@ -130,10 +130,26 @@ $$\begin{aligned}
 \end{aligned}$$
 
 $$
-    \oint_{\partial s_t} \mathbf{h}^* \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} = \int_{s_t} \mathbf{j}^* \hat{\mathbf{n}} \ ,
+    \oint_{\partial s_t} \mathbf{h}^* \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} = \int_{s_t} \mathbf{j}^* \cdot \hat{\mathbf{n}} \ ,
 $$
 
 avendo definito $\mathbf{h}^* := \mathbf{h} - \mathbf{u}_b \times \mathbf{d}$, e usato la definizione già introdotta in precedenza $\mathbf{j}^* := \mathbf{j} - \rho \mathbf{u}_b$.
+
+Aggiungendo le definizioni
+
+$$\rho^* = \rho$$
+$$\mathbf{d}^* = \mathbf{d}$$
+$$\mathbf{b}^* = \mathbf{b}$$
+
+si ottengono delle equazioni che hanno la stessa forma delle equazioni scritte per domini fermi nello spazio, ma che possono essere applicati a domini mobili. Le definizioni
+
+$$\begin{aligned}
+\rho^* = \rho \qquad & , \qquad \mathbf{j}^* = \mathbf{j} - \rho \mathbf{u}_b \\
+\mathbf{d}^* = \mathbf{d} \qquad & , \qquad \mathbf{e}^* = \mathbf{e} + \mathbf{u}_b \times \mathbf{b} \\
+\mathbf{b}^* = \mathbf{b} \qquad & , \qquad \mathbf{h}^* = \mathbf{h} - \mathbf{u}_b \times \mathbf{d} \\
+\end{aligned}$$
+
+non rappresentano altro che la trasformazione dei campi per due osservatori in moto relativo, e corrispondono al limite delle trasformazioni di Lorentz della relatività speciale per velocità $u \ll c$. **todo** riferimento alle trasformazioni galileiane e di Lorentz per la relatività nell'elettromagnetismo.
 
 <!--
 **Equazione di continuità per la carica elettrica**
