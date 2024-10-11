@@ -7,6 +7,8 @@
 (classical-electromagnetism:principles)=
 # Princìpi dell'elettromagnetismo classico
 
+I progressi nello studio dei fenomeni elettromagnetici nel XIX secolo, permisero a James Clerk Maxwell di formulare quelle che oggi sono note con il nome di *equazioni di Maxwell* e possono essere considerate la prima formulazione consistente dei principi dell'elettromagnetismo classico, insieme alla legge di bilancio della carica e all'espressione della forza di Lorentz su una carica elettrica immersa in un campo elettromagnetico.
+
 ## Prinicipi in forma differenziale
 **Conservazione della carica elettrica.**
 

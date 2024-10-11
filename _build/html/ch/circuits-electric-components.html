@@ -426,24 +426,25 @@ document.write(`
 <h2>Resistore ohmico<a class="headerlink" href="#resistore-ohmico" title="Permalink to this heading">#</a></h2>
 <p>Un resistore di Ohm risulta dall’approssimazione circuitale di un materiale con equazione costitutiva lineare</p>
 <div class="math notranslate nohighlight">
-\[\mathbf{e} = \rho_R \mathbf{j} \ ,\]</div>
+\[\mathbf{e} = \rho_R \, \mathbf{j} \ ,\]</div>
 <p>tra il campo elettrico <span class="math notranslate nohighlight">\(\mathbf{e}\)</span> e la densità di corrente <span class="math notranslate nohighlight">\(\mathbf{j}\)</span>, tramite la costante di proporzionalità <span class="math notranslate nohighlight">\(\rho_R\)</span>, la <strong>resistività</strong> del materiale. La corrente elettrica attraverso una sezione del componente è definita come il flusso di carica attraverso una sua sezione</p>
 <div class="math notranslate nohighlight">
-\[i = \int_S \mathbf{j} \cdot \hat{\mathbf{t}} \simeq = j \, A \ ,\]</div>
+\[i = \int_S \mathbf{j} \cdot \hat{\mathbf{t}} \simeq j \, A \ ,\]</div>
 <p>Nell’ipotesi che il vettore densità di corrente si allineato con l’asse del componente e uniforme sulla sezione <span class="math notranslate nohighlight">\(A\)</span>, “piccola”.
 Se il materiale non è in grado di accumulare carica, il bilancio di carica elettrica si traduce nella continuità della corrente elettrica attraverso le sezioni del conduttore.</p>
 <p>Utilizzando l’equazione costitutiva su un elemento di lunghezza elementare <span class="math notranslate nohighlight">\(d\mathbf{r} =\hat{\mathbf{t}} \, d \ell \)</span>, e assumendo che il campo elettrico sia allineato con l’asse del componente, <span class="math notranslate nohighlight">\(\mathbf{e} = e \hat{\mathbf{t}}\)</span> si può scrivere il lavoro elementare per unità di carica come</p>
 <div class="math notranslate nohighlight">
 \[\delta v = \mathbf{e} \cdot d \mathbf{r} =  e \, d\ell = \rho_R \, j \, d\ell =  \frac{\rho_R \, d\ell}{A} i \ .\]</div>
 <p>Da questa ultima equazione seguono le due leggi di Ohm, per resistori lineari.</p>
-<p><strong>Prima legge di Ohm.</strong> La differenza di potenziale tra due sezioni di un resistore lineare è proporzionale alla corrente che passa attraverso di esso,
-$<span class="math notranslate nohighlight">\(\delta v = dR \, i \ .\)</span>$</p>
+<p><strong>Prima legge di Ohm.</strong> La differenza di potenziale tra due sezioni di un resistore lineare è proporzionale alla corrente che passa attraverso di esso,</p>
+<div class="math notranslate nohighlight">
+\[\delta v = dR \, i \ .\]</div>
 <p><strong>Seconda legge di Ohm.</strong> La costante di proporzionalità che lega la differenza di potenziale e la corrente all’interno di un resistore ohmico, la <strong>resistenza</strong> del resistore, è proporzionale alla resistività e alla lunghezza del resistore, e inversamente proporzionale alla sua sezione,</p>
 <div class="math notranslate nohighlight">
 \[dR = \frac{\rho_R \ d\ell}{A} \ .\]</div>
 <p>Se le proprietà sono uniformi nel resistore, si possono integrare le relazioni elementari per ottenere la relazione tra grandezze finite,</p>
 <div class="math notranslate nohighlight">
-\[\Delta V = R , i \]</div>
+\[\Delta V = R \, i \]</div>
 <div class="math notranslate nohighlight">
 \[R = \frac{\rho_R \ \ell}{A}\]</div>
 <p><strong>todo</strong> (perché si può usare il potenziale? Nelle mie note avevo usato il simbolo <span class="math notranslate nohighlight">\(v^*\)</span>, come se fosse una definizione leggermente diversa per incorporare movimento e instazionarietà, che si riduce a <span class="math notranslate nohighlight">\(v\)</span> nel caso stazionario).</p>

@@ -10,6 +10,7 @@ parts:
   - file: ch/principles
   - file: ch/potentials
   - file: ch/energy
+  - file: ch/low-speed-relativity
   - file: ch/waves
 - caption: Elettrotecnica
   chapters:
