@@ -14,7 +14,7 @@ parts:
 - caption: Elettrotecnica
   chapters:
   - file: ch/circuits
-    section:
+    sections:
     - file: ch/circuits-electric
     - file: ch/circuits-electromagnetic
     - file: ch/circuits-electromechanic
