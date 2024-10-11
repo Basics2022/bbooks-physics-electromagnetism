@@ -9,6 +9,8 @@
 
 I progressi nello studio dei fenomeni elettromagnetici nel XIX secolo, permisero a James Clerk Maxwell di formulare quelle che oggi sono note con il nome di *equazioni di Maxwell* e possono essere considerate la prima formulazione consistente dei principi dell'elettromagnetismo classico, insieme alla legge di bilancio della carica e all'espressione della forza di Lorentz su una carica elettrica immersa in un campo elettromagnetico.
 
+I principi in forma differenziale possono essere ricavati dai principi in forma integrale, più generici, se i campi soddisfano le necessarie condizioni di regolarità minima, che qualitativamente si possono enunciare come "tutte le operazioni svolte devono avere senso".
+
 ## Prinicipi in forma differenziale
 **Conservazione della carica elettrica.**
 
@@ -17,17 +19,24 @@ $$\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ .$$
 **Equazioni di Maxwell.**
 
 $$\begin{cases}
- \nabla \cdot \mathbf{d} = \rho \\
- \nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\
- \nabla \cdot \mathbf{b} = 0 \\
- \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j}
+ \nabla \cdot \mathbf{d} = \rho \\ \\
+ \nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\ \\
+ \nabla \cdot \mathbf{b} = 0 \\ \\
+ \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j} \\
 \end{cases}$$
 
 con la necessità di definire delle equazioni costitutive $\mathbf{d}(\mathbf{e}, \mathbf{b})$, $\mathbf{h}(\mathbf{e}, \mathbf{b})$.
 
-**Forza di Lorentz.** **TODO** *forma differenziale della legge di Lorentz*
+**Forza di Lorentz.** La forza per unità di volume agente sulla carica elettrica presente in un punto $\mathbf{r}$ nello spazio è
 
-...
+$$\begin{aligned}
+  \mathbf{f}(\mathbf{r},t) & = \rho(\mathbf{r},t) \mathbf{e}(\mathbf{r},t) - \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
+                           & = \rho(\mathbf{r},t) \left( \mathbf{e}(\mathbf{r}) - \mathbf{v}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
+                           & =\rho(\mathbf{r}) \mathbf{e}^*(\mathbf{r},t) \\
+\end{aligned}$$
+
+**todo.** controllare questa formula
+
 
 ## Principi in forma integrale: equazioni dell'elettromagnetismo e relatività galileiana
 
