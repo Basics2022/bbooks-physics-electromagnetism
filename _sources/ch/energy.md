@@ -8,6 +8,7 @@
 # Bilancio di energia
 
 Osservando le unità di misura dei campi,
+
 $$[\mathbf{e}] = \frac{\text{force}}{\text{charge}}$$
 $$[\mathbf{d}]$$
 $$[\mathbf{b}]$$
