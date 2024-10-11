@@ -10,11 +10,15 @@
 Osservando le unità di misura dei campi,
 
 $$[\mathbf{e}] = \frac{\text{force}}{\text{charge}} = \frac{N}{C}$$
-$$[\varepsilon] = \frac{\text{charge}^2}{\text{force} \text{length}^2} = \frac{C^2}{N \ m^2}$$
+<!--$$[\varepsilon] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
 $$[\mathbf{d}] = [\varepsilon][\mathbf{e}] = \frac{C^2}{N \, m^2} \frac{N}{C} = \frac{C}{m^2}$$
-$$[\mathbf{b}]$$
-$$[\mathbf{h}]$$
+$$[\mathbf{b}] = \frac{\text{force}\cdot\text{time}}{\text{charge}\dot\text{length}}$$
+<!--$$[\mu] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
+$$[\mathbf{h}] = \frac{\text{charge}}{\text{time} \cdot \text{length}}$$
 $$[u] = $$
+
+$$[\mathbf{e} \cdot \mathbf{d}] = \frac{N}{C} \frac{C}{m^2} = \frac{N \, m}{m^3} = \frac{J}{m^3} = \frac{\text{energy}}{\text{length}^3}$$
+$$[\mathbf{b} \cdot \mathbf{h}] = \frac{N}{C} \frac{C}{m^2} = \frac{N \, m}{m^3} = \frac{J}{m^3} = \frac{\text{energy}}{\text{length}^3}$$
 
 
 
