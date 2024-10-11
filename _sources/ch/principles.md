@@ -29,11 +29,11 @@ con la necessità di definire delle equazioni costitutive $\mathbf{d}(\mathbf{e}
 
 **Forza di Lorentz.** La forza per unità di volume agente sulla carica elettrica presente in un punto $\mathbf{r}$ nello spazio è
 
-$$
-  \mathbf{f}(\mathbf{r},t) = \rho(\mathbf{r},t) \mathbf{e}(\mathbf{r},t) - \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) =
-                           = \rho(\mathbf{r},t) \left( \mathbf{e}(\mathbf{r}) - \mathbf{v}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = 
+$$\begin{aligned}
+  \mathbf{f}(\mathbf{r},t) = \rho(\mathbf{r},t) \mathbf{e}(\mathbf{r},t) - \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
+                           = \rho(\mathbf{r},t) \left( \mathbf{e}(\mathbf{r}) - \mathbf{v}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) \right) =  \\
                            = \rho(\mathbf{r},t) \mathbf{e}^*(\mathbf{r},t) 
-$$
+\end{aligned}$$
 
 **todo.** controllare questa formula
 
