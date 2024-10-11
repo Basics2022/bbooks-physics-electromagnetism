@@ -16,9 +16,8 @@ $$[\mathbf{b}] = \frac{\text{force}\cdot\text{time}}{\text{charge}\cdot\text{len
 <!--$$[\mu] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
 $$[\mathbf{h}] = \frac{\text{charge}}{\text{time} \cdot \text{length}}$$
 
-$$[\mathbf{e} \cdot \mathbf{d}] = \frac{N}{C} \frac{C}{m^2} = \frac{N \, m}{m^3} = \frac{J}{m^3} = \frac{\text{energy}}{\text{length}^3}$$
-$$[\mathbf{b} \cdot \mathbf{h}] = \frac{N}{C} \frac{C}{m^2} = \frac{N \, m}{m^3} = \frac{J}{m^3} = \frac{\text{energy}}{\text{length}^3}$$
-
+$$[\mathbf{e} \cdot \mathbf{d}] = \frac{text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u]$$
+$$[\mathbf{b} \cdot \mathbf{h}] = \frac{text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u]$$
 
 
 $$\begin{aligned}
