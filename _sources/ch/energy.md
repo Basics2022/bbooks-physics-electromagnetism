@@ -5,7 +5,7 @@
 ```
 
 (classical-electromagnetism:energy)=
-# Bilancio di energia
+# Bilancio di energia del campo elettromagnetico
 
 Ispirati dalle dimensioni fisiche dei campi elettromagnetici,
 
