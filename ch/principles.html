@@ -392,8 +392,8 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prinicipi-in-forma-differenziale">Prinicipi in forma differenziale</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrazione-su-volumi-di-controllo">Integrazione su volumi di controllo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrazione-su-volumi-arbitrari">Integrazione su volumi arbitrari</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-integrale-su-volumi-di-controllo">Forma integrale su volumi di controllo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-integrale-su-volumi-arbitrari">Forma integrale su volumi arbitrari</a></li>
 </ul>
 </li>
 </ul>
@@ -455,8 +455,8 @@ document.write(`
 </div>
 <div class="section" id="principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">
 <h2>Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana<a class="headerlink" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana" title="Permalink to this heading">#</a></h2>
-<div class="section" id="integrazione-su-volumi-di-controllo">
-<h3>Integrazione su volumi di controllo<a class="headerlink" href="#integrazione-su-volumi-di-controllo" title="Permalink to this heading">#</a></h3>
+<div class="section" id="forma-integrale-su-volumi-di-controllo">
+<h3>Forma integrale su volumi di controllo<a class="headerlink" href="#forma-integrale-su-volumi-di-controllo" title="Permalink to this heading">#</a></h3>
 <p>La forma integrale dei principi dell’elettromagnetismo per volumi <span class="math notranslate nohighlight">\(V\)</span> e superfici <span class="math notranslate nohighlight">\(S\)</span> fissi nello spazio viene ricavata integrando le equazioni differenziali sui domini e usando il teorema della divergenza per ottenere termini di flusso, e il teorema del rotore per ottenere termini di circuitazione.</p>
 <p><strong>Continuità della carica elettrica.</strong></p>
 <div class="math notranslate nohighlight">
@@ -484,10 +484,10 @@ document.write(`
     \oint_{\partial S} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{S} \mathbf{d} \cdot \hat{\mathbf{n}} = \int_{S} \mathbf{j} \cdot \hat{\mathbf{n}} \ .
 \]</div>
 </div>
-<div class="section" id="integrazione-su-volumi-arbitrari">
-<h3>Integrazione su volumi arbitrari<a class="headerlink" href="#integrazione-su-volumi-arbitrari" title="Permalink to this heading">#</a></h3>
+<div class="section" id="forma-integrale-su-volumi-arbitrari">
+<h3>Forma integrale su volumi arbitrari<a class="headerlink" href="#forma-integrale-su-volumi-arbitrari" title="Permalink to this heading">#</a></h3>
 <p>Per la loro importanza in applicazioni fondamentali come i motori elettrici, e per evitare confusione e voli pindarici quando si tratta il fenomeno dell’induzione elettromagnetica, risulta di primaria importanza fornire l’espressione corretta dei principi dell’elettromagnetismo quando sono coinvolti volumi mobili nello spazio. Non viene solo mostrata la forma di questi principi, ma anche il procedimento corretto per ricavarli partendo dalla loro forma valida per volumi di controllo fermi nello spazio: per fare questo, vengono usate le regole di derivazione nel tempo di integrali fondamentali su domini mobili, come l’integrale su un volume di una funzione densità, il flusso di un campo vettoriale attraverso una superficie o una circuitazione lungo una curva.</p>
-<p>Queste tre regole di derivazione recitano</p>
+<p>Queste tre regole di derivazione recitano <strong>todo</strong> Iniziare il bbook di calcolo vettoriale, e aggiungere riferimento</p>
 <div class="math notranslate nohighlight">
 \[\dfrac{d}{dt} \int_{v_t} f = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \mathbf{u}_b \cdot \hat{\mathbf{n}}\]</div>
 <div class="math notranslate nohighlight">
@@ -550,73 +550,7 @@ document.write(`
 \mathbf{d}^* = \mathbf{d} \qquad &amp; , \qquad \mathbf{e}^* = \mathbf{e} + \mathbf{u}_b \times \mathbf{b} \\
 \mathbf{b}^* = \mathbf{b} \qquad &amp; , \qquad \mathbf{h}^* = \mathbf{h} - \mathbf{u}_b \times \mathbf{d} \\
 \end{aligned}\end{split}\]</div>
-<p>non rappresentano altro che la trasformazione dei campi per due osservatori in moto relativo, e corrispondono al limite delle trasformazioni di Lorentz della relatività speciale per velocità <span class="math notranslate nohighlight">\(u \ll c\)</span>. <strong>todo</strong> riferimento alle trasformazioni galileiane e di Lorentz per la relatività nell’elettromagnetismo.</p>
-<!--
-**Equazione di continuità per la carica elettrica**
-
-$$
-    \dfrac{d}{dt} \int_{v_t}  \rho = \oint_{\partial v_t} \underbrace{\rho (\mathbf{u} - \mathbf{u}_b)}_{\mathbf{j}^*} \cdot \mathbf{\hat{n}}
-$$
-
-**Legge di Gauss per il campo $\mathbf{d}(\mathbf{r})$**
-
-$$
-    \oint_{\partial v_t} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{v_t} \rho
-$$
-
-**Legge di Gauss per il campo $\mathbf{b}(\mathbf{r})$**
-
-$$
-    \oint_{\partial v_t} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
-$$
-
-**Legge di Faraday--Neumann--Lenz**
-
-$$
-\begin{aligned}
-    0 & = \oint_{\partial s_t} \mathbf{e} \cdot \mathbf{\hat{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \mathbf{\hat{n}} = \\
-      & = \oint_{\partial s_t} \mathbf{e} \cdot \mathbf{\hat{t}} + \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{u}_b \times \mathbf{b} \cdot \mathbf{\hat{t}} = \qquad \text{(...)} \ = \\ 
-      & = \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \left[ \mathbf{e} - \mathbf{b} \times \mathbf{u}_b \right] \cdot \mathbf{\hat{t}} = \\
-      & = \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{e}^* \cdot \mathbf{\hat{t}} = \\
-\end{aligned}
-$$
-
-**Legge di Ampère--Maxwell**
-
-$$
-\begin{aligned}
-    \oint_{s_t} \mathbf{j} \cdot \mathbf{\hat{n}} & = \oint_{\partial s_t} \mathbf{h} \cdot \mathbf{\hat{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{d} \cdot \mathbf{\hat{n}} = \\
-      & = \oint_{\partial s_t} \mathbf{h} \cdot \mathbf{\hat{t}} - \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} - \oint_{\partial s_t} \mathbf{u}_b \times \mathbf{d} \cdot \mathbf{\hat{t}} = \qquad \text{(...)} \ = \\ 
-      & = \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \left[ \mathbf{h} + \mathbf{d} \times \mathbf{u}_b \right] \cdot \mathbf{\hat{t}} = \\
-      & = \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{h}^* \cdot \mathbf{\hat{t}} = \\
-\end{aligned}
-$$
-
-**Forza di Lorentz**
-
-$$\begin{aligned}
-  \mathbf{F} = q \left( \mathbf{e} - \mathbf{u} \times \mathbf{b} \right) = q \, \mathbf{e}^*
-\end{aligned}$$
-
-
-
-- Equazioni di Maxwell:
-
-    $$
-        \begin{cases}
-            &  \Phi_{\partial V^*}(\mathbf{d}^*) = Q_{V^*}^{int} \\
-            &  \Gamma_{\partial S^*}(\mathbf{e}^*) + \dfrac{d}{dt}\Phi_{S^*}(\mathbf{b}^*) = 0 \\
-            &  \Phi_{\partial V^*}(\mathbf{b}^*) = 0 \\
-            &  \Gamma_{\partial S^*}(\mathbf{h}^*) - \dfrac{d}{dt}\Phi_{S^*}(\mathbf{d}^*) = \Phi_{S^*}(\mathbf{j}) \\
-        \end{cases}
-    $$
-
-- continuità della carica elettrica
-
-    $$
-        \dfrac{d}{dt} Q_{V^*}^{int} + \Phi_{\partial V^*}(\mathbf{j}^*) = 0
-    $$
--->
+<p>non rappresentano altro che la trasformazione dei campi per due osservatori in moto relativo, e corrispondono al limite delle trasformazioni di Lorentz della relatività speciale per velocità <span class="math notranslate nohighlight">\(|\mathbf{u}_b| \ll c\)</span>: in questo procedimento vengono ottenute le trasformazioni per basse velocità relative, poiché non è stata considerata nessuna trasformazione delle dimensioni spaziali e temporali, come prevede la teoria della relatività di Einstein. <strong>todo</strong> riferimento alle trasformazioni galileiane e di Lorentz per la relatività nell’elettromagnetismo.</p>
 </div>
 </div>
 </div>
@@ -686,8 +620,8 @@ $$\begin{aligned}
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prinicipi-in-forma-differenziale">Prinicipi in forma differenziale</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrazione-su-volumi-di-controllo">Integrazione su volumi di controllo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrazione-su-volumi-arbitrari">Integrazione su volumi arbitrari</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-integrale-su-volumi-di-controllo">Forma integrale su volumi di controllo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-integrale-su-volumi-arbitrari">Forma integrale su volumi arbitrari</a></li>
 </ul>
 </li>
 </ul>

@@ -40,7 +40,9 @@ $$\begin{aligned}
 
 ## Principi in forma integrale: equazioni dell'elettromagnetismo e relatività galileiana
 
-### Integrazione su volumi di controllo
+
+
+### Forma integrale su volumi di controllo
 
 La forma integrale dei principi dell'elettromagnetismo per volumi $V$ e superfici $S$ fissi nello spazio viene ricavata integrando le equazioni differenziali sui domini e usando il teorema della divergenza per ottenere termini di flusso, e il teorema del rotore per ottenere termini di circuitazione.
 
@@ -75,11 +77,11 @@ $$
 $$
 
 
-### Integrazione su volumi arbitrari
+### Forma integrale su volumi arbitrari
 
 Per la loro importanza in applicazioni fondamentali come i motori elettrici, e per evitare confusione e voli pindarici quando si tratta il fenomeno dell'induzione elettromagnetica, risulta di primaria importanza fornire l'espressione corretta dei principi dell'elettromagnetismo quando sono coinvolti volumi mobili nello spazio. Non viene solo mostrata la forma di questi principi, ma anche il procedimento corretto per ricavarli partendo dalla loro forma valida per volumi di controllo fermi nello spazio: per fare questo, vengono usate le regole di derivazione nel tempo di integrali fondamentali su domini mobili, come l'integrale su un volume di una funzione densità, il flusso di un campo vettoriale attraverso una superficie o una circuitazione lungo una curva.
 
-Queste tre regole di derivazione recitano
+Queste tre regole di derivazione recitano **todo** Iniziare il bbook di calcolo vettoriale, e aggiungere riferimento
 
 $$\dfrac{d}{dt} \int_{v_t} f = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \mathbf{u}_b \cdot \hat{\mathbf{n}}$$
 
@@ -149,72 +151,6 @@ $$\begin{aligned}
 \mathbf{b}^* = \mathbf{b} \qquad & , \qquad \mathbf{h}^* = \mathbf{h} - \mathbf{u}_b \times \mathbf{d} \\
 \end{aligned}$$
 
-non rappresentano altro che la trasformazione dei campi per due osservatori in moto relativo, e corrispondono al limite delle trasformazioni di Lorentz della relatività speciale per velocità $u \ll c$. **todo** riferimento alle trasformazioni galileiane e di Lorentz per la relatività nell'elettromagnetismo.
+non rappresentano altro che la trasformazione dei campi per due osservatori in moto relativo, e corrispondono al limite delle trasformazioni di Lorentz della relatività speciale per velocità $|\mathbf{u}_b| \ll c$: in questo procedimento vengono ottenute le trasformazioni per basse velocità relative, poiché non è stata considerata nessuna trasformazione delle dimensioni spaziali e temporali, come prevede la teoria della relatività di Einstein. **todo** riferimento alle trasformazioni galileiane e di Lorentz per la relatività nell'elettromagnetismo.
 
-<!--
-**Equazione di continuità per la carica elettrica**
-
-$$
-    \dfrac{d}{dt} \int_{v_t}  \rho = \oint_{\partial v_t} \underbrace{\rho (\mathbf{u} - \mathbf{u}_b)}_{\mathbf{j}^*} \cdot \mathbf{\hat{n}}
-$$
-
-**Legge di Gauss per il campo $\mathbf{d}(\mathbf{r})$**
-
-$$
-    \oint_{\partial v_t} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{v_t} \rho
-$$
-
-**Legge di Gauss per il campo $\mathbf{b}(\mathbf{r})$**
-
-$$
-    \oint_{\partial v_t} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
-$$
-
-**Legge di Faraday--Neumann--Lenz**
-
-$$
-\begin{aligned}
-    0 & = \oint_{\partial s_t} \mathbf{e} \cdot \mathbf{\hat{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \mathbf{\hat{n}} = \\
-      & = \oint_{\partial s_t} \mathbf{e} \cdot \mathbf{\hat{t}} + \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{u}_b \times \mathbf{b} \cdot \mathbf{\hat{t}} = \qquad \text{(...)} \ = \\ 
-      & = \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \left[ \mathbf{e} - \mathbf{b} \times \mathbf{u}_b \right] \cdot \mathbf{\hat{t}} = \\
-      & = \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{e}^* \cdot \mathbf{\hat{t}} = \\
-\end{aligned}
-$$
-
-**Legge di Ampère--Maxwell**
-
-$$
-\begin{aligned}
-    \oint_{s_t} \mathbf{j} \cdot \mathbf{\hat{n}} & = \oint_{\partial s_t} \mathbf{h} \cdot \mathbf{\hat{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{d} \cdot \mathbf{\hat{n}} = \\
-      & = \oint_{\partial s_t} \mathbf{h} \cdot \mathbf{\hat{t}} - \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} - \oint_{\partial s_t} \mathbf{u}_b \times \mathbf{d} \cdot \mathbf{\hat{t}} = \qquad \text{(...)} \ = \\ 
-      & = \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \left[ \mathbf{h} + \mathbf{d} \times \mathbf{u}_b \right] \cdot \mathbf{\hat{t}} = \\
-      & = \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{h}^* \cdot \mathbf{\hat{t}} = \\
-\end{aligned}
-$$
-
-**Forza di Lorentz**
-
-$$\begin{aligned}
-  \mathbf{F} = q \left( \mathbf{e} - \mathbf{u} \times \mathbf{b} \right) = q \, \mathbf{e}^*
-\end{aligned}$$
-
-
-
-- Equazioni di Maxwell:
-
-    $$
-        \begin{cases}
-            &  \Phi_{\partial V^*}(\mathbf{d}^*) = Q_{V^*}^{int} \\
-            &  \Gamma_{\partial S^*}(\mathbf{e}^*) + \dfrac{d}{dt}\Phi_{S^*}(\mathbf{b}^*) = 0 \\
-            &  \Phi_{\partial V^*}(\mathbf{b}^*) = 0 \\
-            &  \Gamma_{\partial S^*}(\mathbf{h}^*) - \dfrac{d}{dt}\Phi_{S^*}(\mathbf{d}^*) = \Phi_{S^*}(\mathbf{j}) \\
-        \end{cases}
-    $$
-
-- continuità della carica elettrica
-
-    $$
-        \dfrac{d}{dt} Q_{V^*}^{int} + \Phi_{\partial V^*}(\mathbf{j}^*) = 0
-    $$
--->
 
