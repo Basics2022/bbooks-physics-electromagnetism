@@ -424,6 +424,7 @@ document.write(`
 <div class="tex2jax_ignore mathjax_ignore section" id="principi-dell-elettromagnetismo-classico">
 <span id="classical-electromagnetism-principles"></span><h1>Princìpi dell’elettromagnetismo classico<a class="headerlink" href="#principi-dell-elettromagnetismo-classico" title="Permalink to this heading">#</a></h1>
 <p>I progressi nello studio dei fenomeni elettromagnetici nel XIX secolo, permisero a James Clerk Maxwell di formulare quelle che oggi sono note con il nome di <em>equazioni di Maxwell</em> e possono essere considerate la prima formulazione consistente dei principi dell’elettromagnetismo classico, insieme alla legge di bilancio della carica e all’espressione della forza di Lorentz su una carica elettrica immersa in un campo elettromagnetico.</p>
+<p>I principi in forma differenziale possono essere ricavati dai principi in forma integrale, più generici, se i campi soddisfano le necessarie condizioni di regolarità minima, che qualitativamente si possono enunciare come “tutte le operazioni svolte devono avere senso”.</p>
 <div class="section" id="prinicipi-in-forma-differenziale">
 <h2>Prinicipi in forma differenziale<a class="headerlink" href="#prinicipi-in-forma-differenziale" title="Permalink to this heading">#</a></h2>
 <p><strong>Conservazione della carica elettrica.</strong></p>
@@ -432,14 +433,20 @@ document.write(`
 <p><strong>Equazioni di Maxwell.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
- \nabla \cdot \mathbf{d} = \rho \\
- \nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\
- \nabla \cdot \mathbf{b} = 0 \\
- \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j}
+ \nabla \cdot \mathbf{d} = \rho \\ \\
+ \nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\ \\
+ \nabla \cdot \mathbf{b} = 0 \\ \\
+ \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j} \\
 \end{cases}\end{split}\]</div>
 <p>con la necessità di definire delle equazioni costitutive <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{e}, \mathbf{b})\)</span>, <span class="math notranslate nohighlight">\(\mathbf{h}(\mathbf{e}, \mathbf{b})\)</span>.</p>
-<p><strong>Forza di Lorentz.</strong> <strong>TODO</strong> <em>forma differenziale della legge di Lorentz</em></p>
-<p>…</p>
+<p><strong>Forza di Lorentz.</strong> La forza per unità di volume agente sulla carica elettrica presente in un punto <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> nello spazio è</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{f}(\mathbf{r},t) &amp; = \rho(\mathbf{r},t) \mathbf{e}(\mathbf{r},t) - \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
+                           &amp; = \rho(\mathbf{r},t) \left( \mathbf{e}(\mathbf{r}) - \mathbf{v}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
+                           &amp; =\rho(\mathbf{r}) \mathbf{e}^*(\mathbf{r},t) \\
+\end{aligned}\end{split}\]</div>
+<p><strong>todo.</strong> controllare questa formula</p>
 </div>
 <div class="section" id="principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">
 <h2>Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana<a class="headerlink" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana" title="Permalink to this heading">#</a></h2>
