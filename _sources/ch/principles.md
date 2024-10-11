@@ -101,20 +101,22 @@ $$
 **Legge di Gauss per il campo $\mathbf{d}(\mathbf{r},t)$.**
 
 $$
-    \oint_{\partial V} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{V} \rho
+    \oint_{\partial v_t} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{v_t} \rho
 $$
 
 **Legge di Gauss per il campo $\mathbf{b}(\mathbf{r},t)$.**
 
 $$
-    \oint_{\partial V} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
+    \oint_{\partial v_t} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
 $$
 
 **Legge di Faraday-Neumann-Lenz, per l'induzione elettromagnetica.**
 
-$$
-    \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \mathbf{0}
-$$
+$$\begin{aligned}
+   \mathbf{0} & = \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \\
+    & = \oint_{\partial s_t} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}}
+    - \int_{s_t} \nabla \cdot \mathbf{b} \, \mathbf{u}_b \cdot \hat{\mathbf{n}} + \oint_{s_t} \mathbf{u}_b \times \mathbf{b} \cdot \hat{\mathbf{b} \\
+\end{aligned}$$
 
 **Legge di Ampére-Maxwell.**
 

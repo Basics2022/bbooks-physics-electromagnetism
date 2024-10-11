@@ -507,18 +507,20 @@ document.write(`
 <p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{r},t)\)</span>.</strong></p>
 <div class="math notranslate nohighlight">
 \[
-    \oint_{\partial V} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{V} \rho
+    \oint_{\partial v_t} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{v_t} \rho
 \]</div>
 <p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{b}(\mathbf{r},t)\)</span>.</strong></p>
 <div class="math notranslate nohighlight">
 \[
-    \oint_{\partial V} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
+    \oint_{\partial v_t} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
 \]</div>
 <p><strong>Legge di Faraday-Neumann-Lenz, per l’induzione elettromagnetica.</strong></p>
 <div class="math notranslate nohighlight">
-\[
-    \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \mathbf{0}
-\]</div>
+\[\begin{split}\begin{aligned}
+   \mathbf{0} &amp; = \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \\
+    &amp; = \oint_{\partial s_t} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}}
+    - \int_{s_t} \nabla \cdot \mathbf{b} \, \mathbf{u}_b \cdot \hat{\mathbf{n}} + \oint_{s_t} \mathbf{u}_b \times \mathbf{b} \cdot \hat{\mathbf{b} \\
+\end{aligned}\end{split}\]</div>
 <p><strong>Legge di Ampére-Maxwell.</strong></p>
 <div class="math notranslate nohighlight">
 \[
