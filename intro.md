@@ -25,5 +25,5 @@ L'elettromagnetismo si occupa dello studio dei fenomeni elettromagnetici prodott
 
 [Ottica](classical-electromagnetism:optics)
 
-[Elettromagnetismo e relatività]() **TODO** *Relatività a per $v \ll c$; crisi della relatività galileiana*
+**Elettromagnetismo e relatività** **todo** *Relatività a per $v \ll c$; crisi della relatività galileiana*
 

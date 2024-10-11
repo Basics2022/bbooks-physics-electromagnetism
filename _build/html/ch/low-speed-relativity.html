@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Princìpi dell’elettromagnetismo classico &#8212; My sample book</title>
+    <title>Equazioni dell’elettromagnetismo e relatività galileiana &#8212; My sample book</title>
   
   
   
@@ -62,13 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/principles';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/low-speed-relativity';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Potenziali elettromagnetici" href="potentials.html" />
-    <link rel="prev" title="Prime esperienze" href="experiments.html" />
+    <link rel="next" title="Onde elettromagnetiche" href="waves.html" />
+    <link rel="prev" title="Bilancio di energia" href="energy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -173,9 +171,10 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Elettromagnetismo</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Prime esperienze</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Princìpi dell’elettromagnetismo classico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principles.html">Princìpi dell’elettromagnetismo classico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="potentials.html">Potenziali elettromagnetici</a></li>
 <li class="toctree-l1"><a class="reference internal" href="energy.html">Bilancio di energia</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Equazioni dell’elettromagnetismo e relatività galileiana</a></li>
 <li class="toctree-l1"><a class="reference internal" href="waves.html">Onde elettromagnetiche</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Elettrotecnica</span></p>
@@ -265,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch/principles.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch/low-speed-relativity.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +294,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/principles.md" target="_blank"
+      <li><a href="../_sources/ch/low-speed-relativity.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -366,9 +365,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -379,20 +376,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Princìpi dell’elettromagnetismo classico</h1>
+    <h1>Equazioni dell’elettromagnetismo e relatività galileiana</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prinicipi-in-forma-differenziale">Prinicipi in forma differenziale</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -414,103 +402,15 @@ document.write(`
 <p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Oct 11, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>0 min read</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="principi-dell-elettromagnetismo-classico">
-<span id="classical-electromagnetism-principles"></span><h1>Princìpi dell’elettromagnetismo classico<a class="headerlink" href="#principi-dell-elettromagnetismo-classico" title="Permalink to this heading">#</a></h1>
-<p>I progressi nello studio dei fenomeni elettromagnetici nel XIX secolo, permisero a James Clerk Maxwell di formulare quelle che oggi sono note con il nome di <em>equazioni di Maxwell</em> e possono essere considerate la prima formulazione consistente dei principi dell’elettromagnetismo classico, insieme alla legge di bilancio della carica e all’espressione della forza di Lorentz su una carica elettrica immersa in un campo elettromagnetico.</p>
-<p>I principi in forma differenziale possono essere ricavati dai principi in forma integrale, più generici, se i campi soddisfano le necessarie condizioni di regolarità minima, che qualitativamente si possono enunciare come “tutte le operazioni svolte devono avere senso”.</p>
-<div class="section" id="prinicipi-in-forma-differenziale">
-<h2>Prinicipi in forma differenziale<a class="headerlink" href="#prinicipi-in-forma-differenziale" title="Permalink to this heading">#</a></h2>
-<p><strong>Conservazione della carica elettrica.</strong></p>
-<div class="math notranslate nohighlight">
-\[\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ .\]</div>
-<p><strong>Equazioni di Maxwell.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
- \nabla \cdot \mathbf{d} = \rho \\ \\
- \nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\ \\
- \nabla \cdot \mathbf{b} = 0 \\ \\
- \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j} \\
-\end{cases}\end{split}\]</div>
-<p>con la necessità di definire delle equazioni costitutive <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{e}, \mathbf{b})\)</span>, <span class="math notranslate nohighlight">\(\mathbf{h}(\mathbf{e}, \mathbf{b})\)</span>.</p>
-<p><strong>Forza di Lorentz.</strong> La forza per unità di volume agente sulla carica elettrica presente in un punto <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> nello spazio è</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \mathbf{f}(\mathbf{r},t) &amp; = \rho(\mathbf{r},t) \mathbf{e}(\mathbf{r},t) - \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
-                           &amp; = \rho(\mathbf{r},t) \left( \mathbf{e}(\mathbf{r}) - \mathbf{v}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
-                           &amp; =\rho(\mathbf{r}) \mathbf{e}^*(\mathbf{r},t) \\
-\end{aligned}\end{split}\]</div>
-<p><strong>todo.</strong> controllare questa formula</p>
-</div>
-<div class="section" id="principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">
-<h2>Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana<a class="headerlink" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana" title="Permalink to this heading">#</a></h2>
-<p>Integrando su volumi e superfici in moto arbitario, si può ricavare la forma integrale dei princìpi dell’elettromagnetismo</p>
-<p><strong>Equazione di continuità per la carica elettrica</strong></p>
-<div class="math notranslate nohighlight">
-\[
-    \dfrac{d}{dt} \int_{v_t}  \rho = \oint_{\partial v_t} \underbrace{\rho (\mathbf{u} - \mathbf{u}_b)}_{\mathbf{j}^*} \cdot \mathbf{\hat{n}}
-\]</div>
-<p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{r})\)</span></strong></p>
-<div class="math notranslate nohighlight">
-\[
-    \oint_{\partial v_t} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{v_t} \rho
-\]</div>
-<p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{b}(\mathbf{r})\)</span></strong></p>
-<div class="math notranslate nohighlight">
-\[
-    \oint_{\partial v_t} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
-\]</div>
-<p><strong>Legge di Faraday–Neumann–Lenz</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-    0 &amp; = \oint_{\partial s_t} \mathbf{e} \cdot \mathbf{\hat{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \mathbf{\hat{n}} = \\
-      &amp; = \oint_{\partial s_t} \mathbf{e} \cdot \mathbf{\hat{t}} + \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{u}_b \times \mathbf{b} \cdot \mathbf{\hat{t}} = \qquad \text{(...)} \ = \\ 
-      &amp; = \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \left[ \mathbf{e} - \mathbf{b} \times \mathbf{u}_b \right] \cdot \mathbf{\hat{t}} = \\
-      &amp; = \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{e}^* \cdot \mathbf{\hat{t}} = \\
-\end{aligned}
-\end{split}\]</div>
-<p><strong>Legge di Ampère–Maxwell</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-    \oint_{s_t} \mathbf{j} \cdot \mathbf{\hat{n}} &amp; = \oint_{\partial s_t} \mathbf{h} \cdot \mathbf{\hat{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{d} \cdot \mathbf{\hat{n}} = \\
-      &amp; = \oint_{\partial s_t} \mathbf{h} \cdot \mathbf{\hat{t}} - \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} - \oint_{\partial s_t} \mathbf{u}_b \times \mathbf{d} \cdot \mathbf{\hat{t}} = \qquad \text{(...)} \ = \\ 
-      &amp; = \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \left[ \mathbf{h} + \mathbf{d} \times \mathbf{u}_b \right] \cdot \mathbf{\hat{t}} = \\
-      &amp; = \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{h}^* \cdot \mathbf{\hat{t}} = \\
-\end{aligned}
-\end{split}\]</div>
-<p><strong>Forza di Lorentz</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{aligned}
-  \mathbf{F} = q \left( \mathbf{e} - \mathbf{u} \times \mathbf{b} \right) = q \, \mathbf{e}^*
-\end{aligned}\]</div>
-<ul>
-<li><p>Equazioni di Maxwell:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-        \begin{cases}
-            &amp;  \Phi_{\partial V^*}(\mathbf{d}^*) = Q_{V^*}^{int} \\
-            &amp;  \Gamma_{\partial S^*}(\mathbf{e}^*) + \dfrac{d}{dt}\Phi_{S^*}(\mathbf{b}^*) = 0 \\
-            &amp;  \Phi_{\partial V^*}(\mathbf{b}^*) = 0 \\
-            &amp;  \Gamma_{\partial S^*}(\mathbf{h}^*) - \dfrac{d}{dt}\Phi_{S^*}(\mathbf{d}^*) = \Phi_{S^*}(\mathbf{j}) \\
-        \end{cases}
-    \end{split}\]</div>
-</li>
-<li><p>continuità della carica elettrica</p>
-<div class="math notranslate nohighlight">
-\[
-        \dfrac{d}{dt} Q_{V^*}^{int} + \Phi_{\partial V^*}(\mathbf{j}^*) = 0
-    \]</div>
-</li>
-</ul>
-</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="equazioni-dell-elettromagnetismo-e-relativita-galileiana">
+<span id="classical-electromagnetism-low-speed-relativity"></span><h1>Equazioni dell’elettromagnetismo e relatività galileiana<a class="headerlink" href="#equazioni-dell-elettromagnetismo-e-relativita-galileiana" title="Permalink to this heading">#</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -544,20 +444,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="experiments.html"
+       href="energy.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Prime esperienze</p>
+        <p class="prev-next-title">Bilancio di energia</p>
       </div>
     </a>
     <a class="right-next"
-       href="potentials.html"
+       href="waves.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Potenziali elettromagnetici</p>
+        <p class="prev-next-title">Onde elettromagnetiche</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -567,21 +467,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prinicipi-in-forma-differenziale">Prinicipi in forma differenziale</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
