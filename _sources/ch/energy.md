@@ -52,5 +52,5 @@ $$\mathbf{s} := - \mathbf{e} \times \mathbf{h} \ ,$$
 
 che può essere identificato come un flusso di potenza per unità di superficie, comparendo sotto l'operatore di divergenza nel bilnacio di energia.
 
-**todo** Rimandare a una sezione in cui si mostra questa ultima affermazione passando dal bilancio differenziale al bilancio integrale e si usa il teorema della divergenza, $\int_V \nabla \cdot \mathbf{s} = \oint_{\partiala V} \mathbf{s} \cdot \hat{\mathbf{n}}$.
+**todo.** Rimandare a una sezione in cui si mostra questa ultima affermazione passando dal bilancio differenziale al bilancio integrale e si usa il teorema della divergenza, $\int_V \nabla \cdot \mathbf{s} = \oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}}$.
 
