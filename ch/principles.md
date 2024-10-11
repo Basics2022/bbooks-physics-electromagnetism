@@ -19,9 +19,9 @@ $$\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ .$$
 **Equazioni di Maxwell.**
 
 $$\begin{cases}
- \nabla \cdot \mathbf{d} = \rho \\ \\
- \nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\ \\
- \nabla \cdot \mathbf{b} = 0 \\ \\
+ \nabla \cdot \mathbf{d} = \rho \\ \vspace{5pt}
+ \nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\ \vspace{5pt}
+ \nabla \cdot \mathbf{b} = 0 \\ \vspace{5pt}
  \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j} \\
 \end{cases}$$
 
@@ -32,7 +32,7 @@ con la necessità di definire delle equazioni costitutive $\mathbf{d}(\mathbf{e}
 $$\begin{aligned}
   \mathbf{f}(\mathbf{r},t) & = \rho(\mathbf{r},t) \mathbf{e}(\mathbf{r},t) - \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
                            & = \rho(\mathbf{r},t) \left( \mathbf{e}(\mathbf{r}) - \mathbf{v}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
-                           & =\rho(\mathbf{r}) \mathbf{e}^*(\mathbf{r},t) \\
+                           & = \rho(\mathbf{r},t) \mathbf{e}^*(\mathbf{r},t) \\
 \end{aligned}$$
 
 **todo.** controllare questa formula
