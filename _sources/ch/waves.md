@@ -1,0 +1,102 @@
+```{article-info}
+:author: basics
+:date: "{sub-ref}`today`"
+:read-time: "{sub-ref}`wordcount-minutes` min read"
+```
+(classical-electromagnetism:waves)=
+# Onde elettromagnetiche
+
+**Identità vettoriale.**
+
+$$\Delta \mathbf{v} = \nabla ( \nabla \cdot \mathbf{v} ) - \nabla \times \nabla \times \mathbf{v}$$
+
+**Dim.**
+
+$$\begin{aligned}
+ \nabla \times \nabla \times \mathbf{v} & = \varepsilon_{ijk} \partial_j ( \varepsilon_{klm} \partial_l v_m ) = \\
+ & = \varepsilon_{kij} \varepsilon_{klm} \partial_{jl} v_m = \\
+ & = ( \delta_{il} \delta_{jm} - \delta_{im} \delta_{jl} )  \partial_{jl} v_m = \\
+ & = \partial_{ij} v_j - \partial_{jj} v_i = \\
+ & = \nabla (\nabla \cdot \mathbf{v}) - \Delta \mathbf{v} \ ,
+\end{aligned}$$
+
+avendo utilizzato l'identità
+
+$$\varepsilon_{ijk} \varepsilon_{ilm} = \delta_{jl} \delta_{km} - \delta_{jm} \delta_{kl}$$
+
+## Potenziali elettromagnetici
+
+Partendo dalle definizioni dei potenziali elettromagnetici e dalle equazioni di Maxwell, con l'aiuto di alcune identità vettoriali, è possibile (**TODO** *ipotesi, elencare quelle necessarie alla derivazione*) scrivere delle equazionin delle onde per il potenziale vettore e per il potenziale scalare.
+
+$$\begin{aligned}
+ \mathbf{e} & = - \nabla \varphi - \partial_t \mathbf{a} \\
+ \mathbf{b} & = \nabla \times \mathbf{a} \\
+\end{aligned}$$
+
+Usando le equazioni costitutive
+
+$$\mathbf{d} = \varepsilon \ \mathbf{e} \qquad , \qquad
+\mathbf{b} = \mu \mathbf{h} $$
+
+**Potenziale vettore.**
+
+$$\mathbf{b} = \nabla \times \mathbf{a}$$
+
+$$\begin{aligned}
+\mathbf{0} & = \nabla \times \nabla \times \mathbf{a} - \nabla \times \mathbf{b} = \\
+ & = - \Delta \mathbf{a} + \nabla(\nabla \cdot \mathbf{a})  - \mu \nabla \times \mathbf{h} = \\
+ & = - \Delta \mathbf{a} + \nabla(\nabla \cdot \mathbf{a})  - \mu ( \partial_t \mathbf{d} + \mathbf{j} )  = \\
+ & = - \Delta \mathbf{a} + \nabla(\nabla \cdot \mathbf{a})  - \mu ( \varepsilon \partial_t \mathbf{e} + \mathbf{j} )  = \\
+ & = - \Delta \mathbf{a} + \nabla(\nabla \cdot \mathbf{a})  - \mu \varepsilon ( - \partial_t \nabla \varphi - \partial_{tt} \mathbf{a} ) + \mu \mathbf{j} = \\
+ & = - \Delta \mathbf{a} + \nabla(\nabla \cdot \mathbf{a})  + \frac{1}{c^2} \partial_t \nabla \varphi + \dfrac{1}{c^2} \partial_{tt} \mathbf{a} - \mu \mathbf{j}  \\
+\end{aligned}$$
+
+Usando la condizione di gauge di Lorentz
+
+$$\nabla \cdot \mathbf{a} + \frac{1}{c^2} \partial_t  \varphi = 0 \ ,$$
+
+si ottiene un'equazione delle onde per il potenziale vettore
+
+$$ \dfrac{1}{c^2} \partial_{tt} \mathbf{a} - \Delta \mathbf{a}  =  \mu \mathbf{j}  \ .$$
+
+**Potenziale scalare.**
+
+$$\mathbf{e} = \nabla \varphi - \partial_t \mathbf{a}$$
+
+Calcolando la derivata nel tempo della condizione di gauge di Lorentz
+
+$$\begin{aligned}
+ 0 & = \partial_t (\frac{1}{c^2} \partial_t \varphi + \nabla \cdot \mathbf{a}) = \\
+   & = \frac{1}{c^2} \partial_{tt} \varphi + \nabla \cdot \partial_t \mathbf{a} = \\
+   & = \frac{1}{c^2} \partial_{tt} \varphi - \nabla \cdot \nabla \varphi - \nabla \cdot \mathbf{e} = \\
+   & = \frac{1}{c^2} \partial_{tt} \varphi - \Delta \varphi - \frac{\rho}{\varepsilon} = \\
+\end{aligned}$$
+
+si arriva all'equazione delle onde per il potenziale scalare,
+
+$$ \frac{1}{c^2} \partial_{tt} \varphi - \Delta \varphi = \frac{\rho}{\varepsilon} \ .$$
+
+## Campo elettrico e campo magnetico
+
+Usando le definizioni dei campi fisici in termini dei potenziali elettromagnetici e la linearità (**TODO** *tutto deve essere lineare, anche le leggi costitutive*) delle operazioni, partendo dalle equazioni delle onde per i potenziali, si possono ricavare le equazioni delle onde per i campi fisici. **TODO** *Nell'ipotesi di proprietà costanti e uniformi*
+
+**Campo elettrico.**
+
+$$\begin{aligned}
+\square \mathbf{e} & = \square ( -\nabla \varphi - \partial_t \mathbf{a}) = \\
+& = - \nabla \square \varphi - \partial_t \square \mathbf{a} = \\
+& = - \nabla \dfrac{\rho}{\varepsilon} - \mu \partial_t \mathbf{j}  \ .
+\end{aligned}$$
+
+**Campo magnetico.**
+
+$$\begin{aligned}
+ \square \mathbf{b} & = \square \nabla \times \mathbf{a} = \\
+ & = \nabla \times \square \mathbf{a} = \\
+ & = \mu \nabla \times \mathbf{j}
+\end{aligned}$$
+
+
+
+
+
