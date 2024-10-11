@@ -518,12 +518,17 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
    \mathbf{0} &amp; = \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \\
-    &amp; = \oint_{\partial s_t} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} - \int_{s_t} \nabla \cdot \mathbf{b} \, \mathbf{u}_b \cdot \hat{\mathbf{n}} + \oint_{s_t} \mathbf{u}_b \times \mathbf{b} \cdot \hat{\mathbf{b}} \\
+    &amp; = \oint_{\partial s_t} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} - \int_{s_t} \underbrace{\nabla \cdot \mathbf{b}}_{=0} \, \mathbf{u}_b \cdot \hat{\mathbf{n}} + \oint_{s_t} \mathbf{u}_b \times \mathbf{b} \cdot \hat{\mathbf{t}} =  \\
 \end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+    \oint_{\partial s_t} \mathbf{e}^* \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} \ ,
+\]</div>
+<p>con la definizione <span class="math notranslate nohighlight">\(\mathbf{e}^* := \mathbf{e} + \mathbf{u}_b \cdot \mathbf{b}\)</span>, già usata nell’espressione della legge di Lorentz.</p>
 <p><strong>Legge di Ampére-Maxwell.</strong></p>
 <div class="math notranslate nohighlight">
 \[
-    \oint_{\partial S} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{S} \mathbf{d} \cdot \hat{\mathbf{n}} = \int_{S} \mathbf{j} \cdot \hat{\mathbf{n}} \ .
+    \mathbf{0} = \oint_{\partial s_t} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{d} \cdot \hat{\mathbf{n}} - \int_{s_t} \mathbf{j} \cdot \hat{\mathbf{n}} \ .
 \]</div>
 <!--
 **Equazione di continuità per la carica elettrica**
