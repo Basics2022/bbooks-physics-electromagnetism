@@ -391,7 +391,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prinicipi-in-forma-differenziale">Prinicipi in forma differenziale</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrazione-su-volumi-di-controllo">Integrazione su volumi di controllo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrazione-su-volumi-arbitrari">Integrazione su volumi arbitrari</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -443,14 +447,45 @@ document.write(`
 <p><strong>Forza di Lorentz.</strong> La forza per unità di volume agente sulla carica elettrica presente in un punto <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> nello spazio è</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \mathbf{f}(\mathbf{r},t) &amp; = \rho(\mathbf{r},t) \mathbf{e}(\mathbf{r},t) - \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
-                           &amp; = \rho(\mathbf{r},t) \left( \mathbf{e}(\mathbf{r}) - \mathbf{v}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) \right) =  \\
-                           &amp; = \rho(\mathbf{r},t) \mathbf{e}^*(\mathbf{r},t) 
+  \mathbf{f}(\mathbf{r},t) &amp; = \rho(\mathbf{r},t) \, \mathbf{e}(\mathbf{r},t) - \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
+                           &amp; = \rho(\mathbf{r},t) \left[ \mathbf{e}(\mathbf{r}) - \mathbf{v}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) \right] =  \\
+                           &amp; = \rho(\mathbf{r},t) \, \mathbf{e}^*(\mathbf{r},t) 
 \end{aligned}\end{split}\]</div>
 <p><strong>todo.</strong> controllare questa formula</p>
 </div>
 <div class="section" id="principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">
 <h2>Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana<a class="headerlink" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana" title="Permalink to this heading">#</a></h2>
+<div class="section" id="integrazione-su-volumi-di-controllo">
+<h3>Integrazione su volumi di controllo<a class="headerlink" href="#integrazione-su-volumi-di-controllo" title="Permalink to this heading">#</a></h3>
+<p>La forma integrale dei principi dell’elettromagnetismo per volumi <span class="math notranslate nohighlight">\(V\)</span> e superfici <span class="math notranslate nohighlight">\(S\)</span> fissi nello spazio viene ricavata integrando le equazioni differenziali sui domini e usando il teorema della divergenza per ottenere termini di flusso, e il teorema del rotore per ottenere termini di circuitazione.</p>
+<p><strong>Continuità della carica elettrica.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+    \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \mathbf{j} \cdot \hat{\mathbf{n}}
+\]</div>
+<p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{r},t)\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+    \oint_{\partial V} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{V} \rho
+\]</div>
+<p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{b}(\mathbf{r},t)\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+    \oint_{\partial V} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
+\]</div>
+<p><strong>Legge di Faraday-Neumann-Lenz, per l’induzione elettromagnetica.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+    \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \mathbf{0}
+\]</div>
+<p><strong>Legge di Ampére-Maxwell.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+    \oint_{\partial S} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \int_{S} \mathbf{j} \cdot \hat{\mathbf{n}} \ .
+\]</div>
+</div>
+<div class="section" id="integrazione-su-volumi-arbitrari">
+<h3>Integrazione su volumi arbitrari<a class="headerlink" href="#integrazione-su-volumi-arbitrari" title="Permalink to this heading">#</a></h3>
 <p>Integrando su volumi e superfici in moto arbitario, si può ricavare la forma integrale dei princìpi dell’elettromagnetismo</p>
 <p><strong>Equazione di continuità per la carica elettrica</strong></p>
 <div class="math notranslate nohighlight">
@@ -511,6 +546,7 @@ document.write(`
     \]</div>
 </li>
 </ul>
+</div>
 </div>
 </div>
 
@@ -578,7 +614,11 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prinicipi-in-forma-differenziale">Prinicipi in forma differenziale</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrazione-su-volumi-di-controllo">Integrazione su volumi di controllo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrazione-su-volumi-arbitrari">Integrazione su volumi arbitrari</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

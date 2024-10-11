@@ -30,9 +30,9 @@ con la necessità di definire delle equazioni costitutive $\mathbf{d}(\mathbf{e}
 **Forza di Lorentz.** La forza per unità di volume agente sulla carica elettrica presente in un punto $\mathbf{r}$ nello spazio è
 
 $$\begin{aligned}
-  \mathbf{f}(\mathbf{r},t) & = \rho(\mathbf{r},t) \mathbf{e}(\mathbf{r},t) - \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
-                           & = \rho(\mathbf{r},t) \left( \mathbf{e}(\mathbf{r}) - \mathbf{v}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) \right) =  \\
-                           & = \rho(\mathbf{r},t) \mathbf{e}^*(\mathbf{r},t) 
+  \mathbf{f}(\mathbf{r},t) & = \rho(\mathbf{r},t) \, \mathbf{e}(\mathbf{r},t) - \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
+                           & = \rho(\mathbf{r},t) \left[ \mathbf{e}(\mathbf{r}) - \mathbf{v}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) \right] =  \\
+                           & = \rho(\mathbf{r},t) \, \mathbf{e}^*(\mathbf{r},t) 
 \end{aligned}$$
 
 **todo.** controllare questa formula
@@ -40,6 +40,42 @@ $$\begin{aligned}
 
 ## Principi in forma integrale: equazioni dell'elettromagnetismo e relatività galileiana
 
+### Integrazione su volumi di controllo
+
+La forma integrale dei principi dell'elettromagnetismo per volumi $V$ e superfici $S$ fissi nello spazio viene ricavata integrando le equazioni differenziali sui domini e usando il teorema della divergenza per ottenere termini di flusso, e il teorema del rotore per ottenere termini di circuitazione.
+
+**Continuità della carica elettrica.**
+
+$$
+    \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \mathbf{j} \cdot \hat{\mathbf{n}}
+$$
+
+**Legge di Gauss per il campo $\mathbf{d}(\mathbf{r},t)$.**
+
+$$
+    \oint_{\partial V} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{V} \rho
+$$
+
+**Legge di Gauss per il campo $\mathbf{b}(\mathbf{r},t)$.**
+
+$$
+    \oint_{\partial V} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
+$$
+
+**Legge di Faraday-Neumann-Lenz, per l'induzione elettromagnetica.**
+
+$$
+    \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \mathbf{0}
+$$
+
+**Legge di Ampére-Maxwell.**
+
+$$
+    \oint_{\partial S} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \int_{S} \mathbf{j} \cdot \hat{\mathbf{n}} \ .
+$$
+
+
+### Integrazione su volumi arbitrari
 Integrando su volumi e superfici in moto arbitario, si può ricavare la forma integrale dei princìpi dell'elettromagnetismo
 
 **Equazione di continuità per la carica elettrica**
