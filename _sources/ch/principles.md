@@ -47,7 +47,7 @@ La forma integrale dei principi dell'elettromagnetismo per volumi $V$ e superfic
 **Continuità della carica elettrica.**
 
 $$
-    \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \mathbf{j} \cdot \hat{\mathbf{n}}
+    \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \mathbf{j} \cdot \hat{\mathbf{n}} = 0
 $$
 
 **Legge di Gauss per il campo $\mathbf{d}(\mathbf{r},t)$.**
@@ -87,6 +87,41 @@ $$\dfrac{d}{dt} \int_{s_t} \mathbf{f} \cdot \hat{\mathbf{n}} = \int_{s_t} \dfrac
 
 $$\dfrac{d}{dt} \int_{\ell_t} \mathbf{f} \cdot \hat{\mathbf{t}} = \int_{\ell_t} \dfrac{\partial \mathbf{f}}{\partial t} \cdot \hat{\mathbf{t}} + \int_{\ell_t} \nabla \times \mathbf{f} \, \cdot \, \mathbf{u}_b \times \hat{\mathbf{t}} + \mathbf{f}_B \cdot \mathbf{u}_B - \mathbf{f}_A \cdot \mathbf{u}_A$$
 
+**Continuità della carica elettrica.**
+$$\begin{aligned}
+   0 & = \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \mathbf{j} \cdot \hat{\mathbf{n}} = \\
+   & = \dfrac{d}{dt} \int_{v_t} \rho - \oint_{\partial v_t } \rho \mathbf{u}_b \cdot \hat{\mathbf{n}} + \oint_{\partial v_t} \mathbf{j} \cdot \hat{\mathbf{n}} 
+\end{aligned}$$
+
+$$
+    \dfrac{d}{dt} \int_{v_t} \rho + \oint_{\partial v_t} \underbrace{\rho (\mathbf{u} - \mathbf{u}_b)}_{\mathbf{j}^*} \cdot \hat{\mathbf{n}} 
+$$
+
+**Legge di Gauss per il campo $\mathbf{d}(\mathbf{r},t)$.**
+
+$$
+    \oint_{\partial V} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{V} \rho
+$$
+
+**Legge di Gauss per il campo $\mathbf{b}(\mathbf{r},t)$.**
+
+$$
+    \oint_{\partial V} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
+$$
+
+**Legge di Faraday-Neumann-Lenz, per l'induzione elettromagnetica.**
+
+$$
+    \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \mathbf{0}
+$$
+
+**Legge di Ampére-Maxwell.**
+
+$$
+    \oint_{\partial S} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{S} \mathbf{d} \cdot \hat{\mathbf{n}} = \int_{S} \mathbf{j} \cdot \hat{\mathbf{n}} \ .
+$$
+
+<!--
 **Equazione di continuità per la carica elettrica**
 
 $$
@@ -151,5 +186,5 @@ $$\begin{aligned}
     $$
         \dfrac{d}{dt} Q_{V^*}^{int} + \Phi_{\partial V^*}(\mathbf{j}^*) = 0
     $$
-
+-->
 

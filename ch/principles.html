@@ -461,7 +461,7 @@ document.write(`
 <p><strong>Continuità della carica elettrica.</strong></p>
 <div class="math notranslate nohighlight">
 \[
-    \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \mathbf{j} \cdot \hat{\mathbf{n}}
+    \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \mathbf{j} \cdot \hat{\mathbf{n}} = 0
 \]</div>
 <p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{r},t)\)</span>.</strong></p>
 <div class="math notranslate nohighlight">
@@ -494,65 +494,101 @@ document.write(`
 \[\dfrac{d}{dt} \int_{s_t} \mathbf{f} \cdot \hat{\mathbf{n}} = \int_{s_t} \dfrac{\partial \mathbf{f}}{\partial t} \cdot \hat{\mathbf{n}} + \int_{s_t} \nabla \cdot \mathbf{f} \, \mathbf{u}_b \cdot \hat{\mathbf{n}} - \oint_{\partial s_t} \mathbf{u}_b \times \mathbf{f} \cdot \hat{\mathbf{t}}\]</div>
 <div class="math notranslate nohighlight">
 \[\dfrac{d}{dt} \int_{\ell_t} \mathbf{f} \cdot \hat{\mathbf{t}} = \int_{\ell_t} \dfrac{\partial \mathbf{f}}{\partial t} \cdot \hat{\mathbf{t}} + \int_{\ell_t} \nabla \times \mathbf{f} \, \cdot \, \mathbf{u}_b \times \hat{\mathbf{t}} + \mathbf{f}_B \cdot \mathbf{u}_B - \mathbf{f}_A \cdot \mathbf{u}_A\]</div>
-<p><strong>Equazione di continuità per la carica elettrica</strong></p>
+<p><strong>Continuità della carica elettrica.</strong>
+$<span class="math notranslate nohighlight">\(\begin{aligned}
+   0 &amp; = \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \mathbf{j} \cdot \hat{\mathbf{n}} = \\
+   &amp; = \dfrac{d}{dt} \int_{v_t} \rho - \oint_{\partial v_t } \rho \mathbf{u}_b \cdot \hat{\mathbf{n}} + \oint_{\partial v_t} \mathbf{j} \cdot \hat{\mathbf{n}} 
+\end{aligned}\)</span>$</p>
 <div class="math notranslate nohighlight">
 \[
+    \dfrac{d}{dt} \int_{v_t} \rho + \oint_{\partial v_t} \underbrace{\rho (\mathbf{u} - \mathbf{u}_b)}_{\mathbf{j}^*} \cdot \hat{\mathbf{n}} 
+\]</div>
+<p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{r},t)\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+    \oint_{\partial V} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{V} \rho
+\]</div>
+<p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{b}(\mathbf{r},t)\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+    \oint_{\partial V} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
+\]</div>
+<p><strong>Legge di Faraday-Neumann-Lenz, per l’induzione elettromagnetica.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+    \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \mathbf{0}
+\]</div>
+<p><strong>Legge di Ampére-Maxwell.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+    \oint_{\partial S} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{S} \mathbf{d} \cdot \hat{\mathbf{n}} = \int_{S} \mathbf{j} \cdot \hat{\mathbf{n}} \ .
+\]</div>
+<!--
+**Equazione di continuità per la carica elettrica**
+
+$$
     \dfrac{d}{dt} \int_{v_t}  \rho = \oint_{\partial v_t} \underbrace{\rho (\mathbf{u} - \mathbf{u}_b)}_{\mathbf{j}^*} \cdot \mathbf{\hat{n}}
-\]</div>
-<p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{r})\)</span></strong></p>
-<div class="math notranslate nohighlight">
-\[
+$$
+
+**Legge di Gauss per il campo $\mathbf{d}(\mathbf{r})$**
+
+$$
     \oint_{\partial v_t} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{v_t} \rho
-\]</div>
-<p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{b}(\mathbf{r})\)</span></strong></p>
-<div class="math notranslate nohighlight">
-\[
+$$
+
+**Legge di Gauss per il campo $\mathbf{b}(\mathbf{r})$**
+
+$$
     \oint_{\partial v_t} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
-\]</div>
-<p><strong>Legge di Faraday–Neumann–Lenz</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+$$
+
+**Legge di Faraday--Neumann--Lenz**
+
+$$
 \begin{aligned}
-    0 &amp; = \oint_{\partial s_t} \mathbf{e} \cdot \mathbf{\hat{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \mathbf{\hat{n}} = \\
-      &amp; = \oint_{\partial s_t} \mathbf{e} \cdot \mathbf{\hat{t}} + \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{u}_b \times \mathbf{b} \cdot \mathbf{\hat{t}} = \qquad \text{(...)} \ = \\ 
-      &amp; = \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \left[ \mathbf{e} - \mathbf{b} \times \mathbf{u}_b \right] \cdot \mathbf{\hat{t}} = \\
-      &amp; = \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{e}^* \cdot \mathbf{\hat{t}} = \\
+    0 & = \oint_{\partial s_t} \mathbf{e} \cdot \mathbf{\hat{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \mathbf{\hat{n}} = \\
+      & = \oint_{\partial s_t} \mathbf{e} \cdot \mathbf{\hat{t}} + \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{u}_b \times \mathbf{b} \cdot \mathbf{\hat{t}} = \qquad \text{(...)} \ = \\ 
+      & = \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \left[ \mathbf{e} - \mathbf{b} \times \mathbf{u}_b \right] \cdot \mathbf{\hat{t}} = \\
+      & = \int_{s_t} \partial_t \mathbf{b} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{e}^* \cdot \mathbf{\hat{t}} = \\
 \end{aligned}
-\end{split}\]</div>
-<p><strong>Legge di Ampère–Maxwell</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+$$
+
+**Legge di Ampère--Maxwell**
+
+$$
 \begin{aligned}
-    \oint_{s_t} \mathbf{j} \cdot \mathbf{\hat{n}} &amp; = \oint_{\partial s_t} \mathbf{h} \cdot \mathbf{\hat{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{d} \cdot \mathbf{\hat{n}} = \\
-      &amp; = \oint_{\partial s_t} \mathbf{h} \cdot \mathbf{\hat{t}} - \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} - \oint_{\partial s_t} \mathbf{u}_b \times \mathbf{d} \cdot \mathbf{\hat{t}} = \qquad \text{(...)} \ = \\ 
-      &amp; = \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \left[ \mathbf{h} + \mathbf{d} \times \mathbf{u}_b \right] \cdot \mathbf{\hat{t}} = \\
-      &amp; = \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{h}^* \cdot \mathbf{\hat{t}} = \\
+    \oint_{s_t} \mathbf{j} \cdot \mathbf{\hat{n}} & = \oint_{\partial s_t} \mathbf{h} \cdot \mathbf{\hat{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{d} \cdot \mathbf{\hat{n}} = \\
+      & = \oint_{\partial s_t} \mathbf{h} \cdot \mathbf{\hat{t}} - \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} - \oint_{\partial s_t} \mathbf{u}_b \times \mathbf{d} \cdot \mathbf{\hat{t}} = \qquad \text{(...)} \ = \\ 
+      & = \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \left[ \mathbf{h} + \mathbf{d} \times \mathbf{u}_b \right] \cdot \mathbf{\hat{t}} = \\
+      & = \int_{s_t} \partial_t \mathbf{d} \cdot \mathbf{\hat{n}} + \oint_{\partial s_t} \mathbf{h}^* \cdot \mathbf{\hat{t}} = \\
 \end{aligned}
-\end{split}\]</div>
-<p><strong>Forza di Lorentz</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{aligned}
+$$
+
+**Forza di Lorentz**
+
+$$\begin{aligned}
   \mathbf{F} = q \left( \mathbf{e} - \mathbf{u} \times \mathbf{b} \right) = q \, \mathbf{e}^*
-\end{aligned}\]</div>
-<ul>
-<li><p>Equazioni di Maxwell:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+\end{aligned}$$
+
+
+
+- Equazioni di Maxwell:
+
+    $$
         \begin{cases}
-            &amp;  \Phi_{\partial V^*}(\mathbf{d}^*) = Q_{V^*}^{int} \\
-            &amp;  \Gamma_{\partial S^*}(\mathbf{e}^*) + \dfrac{d}{dt}\Phi_{S^*}(\mathbf{b}^*) = 0 \\
-            &amp;  \Phi_{\partial V^*}(\mathbf{b}^*) = 0 \\
-            &amp;  \Gamma_{\partial S^*}(\mathbf{h}^*) - \dfrac{d}{dt}\Phi_{S^*}(\mathbf{d}^*) = \Phi_{S^*}(\mathbf{j}) \\
+            &  \Phi_{\partial V^*}(\mathbf{d}^*) = Q_{V^*}^{int} \\
+            &  \Gamma_{\partial S^*}(\mathbf{e}^*) + \dfrac{d}{dt}\Phi_{S^*}(\mathbf{b}^*) = 0 \\
+            &  \Phi_{\partial V^*}(\mathbf{b}^*) = 0 \\
+            &  \Gamma_{\partial S^*}(\mathbf{h}^*) - \dfrac{d}{dt}\Phi_{S^*}(\mathbf{d}^*) = \Phi_{S^*}(\mathbf{j}) \\
         \end{cases}
-    \end{split}\]</div>
-</li>
-<li><p>continuità della carica elettrica</p>
-<div class="math notranslate nohighlight">
-\[
+    $$
+
+- continuità della carica elettrica
+
+    $$
         \dfrac{d}{dt} Q_{V^*}^{int} + \Phi_{\partial V^*}(\mathbf{j}^*) = 0
-    \]</div>
-</li>
-</ul>
+    $$
+-->
 </div>
 </div>
 </div>
