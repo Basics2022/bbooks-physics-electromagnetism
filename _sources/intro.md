@@ -11,7 +11,7 @@ L'elettromagnetismo si occupa dello studio dei fenomeni elettromagnetici prodott
 
 [Prime esperienze](classical-electromagnetism:first-experiments) **TODO** *Prime esperienze; elettromagnetismo come teoria dei* **campi** **TODO** *aggiungere una sezione su first-experiments-revisited, dopo la presentazione dei princìpi dell'elettromagnetismo*
 
-**TODO** Aggiungere sezione su strumenti matematici necessari, per la formulazione di una teoria dei campi
+**todo** Aggiungere sezione su strumenti matematici necessari, per la formulazione di una teoria dei campi
 
 [Princìpi dell'elettromagnetismo](classical-electromagnetism:principles) **TODO** *Trattare prima regime stazionario - elettricità e magnetismo - e poi regime non-stazionario - elettromagnetismo***?** **TODO** *Princìpi. Conservazione della carica, leggi di Maxwell, legge di Lorentz* **TODO** *Principi in forma integrale; princìpi in forma differenziale - le leggi di Maxwell*
 
@@ -21,7 +21,9 @@ L'elettromagnetismo si occupa dello studio dei fenomeni elettromagnetici prodott
 
 [Approssimazione circuitale](classical-electromagnetism:circuits) **TODO** *Circuiti elettrici; circuiti elettromagnetici; sistemi elettro-meccanici. Regimi: stazionario, non-stazionario: regime transitorio e armonico*
 
-[Ottica](classical-optics)
+**Extra.**
+
+[Ottica](classical-electromagnetism:optics)
 
 [Elettromagnetismo e relatività]() **TODO** *Relatività a per $v \ll c$; crisi della relatività galileiana*
 
