@@ -3,5 +3,12 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
+parts:
+- caption: Elettromagnetismo
+  chapters:
+  - file: ch/experiments
+  - file: ch/principles
+  - file: ch/potentials
+  - file: ch/energy
+  - file: ch/circuits
+  - file: ch/waves

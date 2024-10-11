@@ -1,9 +1,27 @@
-# basics-book template
+(book:classical-electromagnetism)=
+# Elettromagnetismo classico
 
-If you want ot start a new basics-book, it could be a good idea to start from this template.
+**Introduzione.**
 
-Please check out the Github repo of the project, [basics-book project](https://github.com/Basics2022).
+L'elettromagnetismo si occupa dello studio dei fenomeni elettromagnetici prodotti da cariche e correnti elettriche o dalla struttura microscopica della materia (magnetismo naturale)
 
+**Breve storia.** *Prime esperienze: cariche di 2 tipi diversi e legge di Coulomb;* 
 
-```{tableofcontents}
-```
+**Argomenti.**
+
+[Prime esperienze](classical-electromagnetism:first-experiments) **TODO** *Prime esperienze; elettromagnetismo come teoria dei* **campi** **TODO** *aggiungere una sezione su first-experiments-revisited, dopo la presentazione dei princìpi dell'elettromagnetismo*
+
+**TODO** Aggiungere sezione su strumenti matematici necessari, per la formulazione di una teoria dei campi
+
+[Princìpi dell'elettromagnetismo](classical-electromagnetism:principles) **TODO** *Trattare prima regime stazionario - elettricità e magnetismo - e poi regime non-stazionario - elettromagnetismo***?** **TODO** *Princìpi. Conservazione della carica, leggi di Maxwell, legge di Lorentz* **TODO** *Principi in forma integrale; princìpi in forma differenziale - le leggi di Maxwell*
+
+[Energia](classical-electromagnetism:energy)
+
+[Onde elettromagnetiche](classical-electromagnetism:waves)
+
+[Approssimazione circuitale](classical-electromagnetism:circuits) **TODO** *Circuiti elettrici; circuiti elettromagnetici; sistemi elettro-meccanici. Regimi: stazionario, non-stazionario: regime transitorio e armonico*
+
+[Ottica](classical-optics)
+
+[Elettromagnetismo e relatività]() **TODO** *Relatività a per $v \ll c$; crisi della relatività galileiana*
+
