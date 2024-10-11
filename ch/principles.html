@@ -489,7 +489,11 @@ document.write(`
 <p>Per la loro importanza in applicazioni fondamentali come i motori elettrici, e per evitare confusione e voli pindarici quando si tratta il fenomeno dell’induzione elettromagnetica, risulta di primaria importanza fornire l’espressione corretta dei principi dell’elettromagnetismo quando sono coinvolti volumi mobili nello spazio. Non viene solo mostrata la forma di questi principi, ma anche il procedimento corretto per ricavarli partendo dalla loro forma valida per volumi di controllo fermi nello spazio: per fare questo, vengono usate le regole di derivazione nel tempo di integrali fondamentali su domini mobili, come l’integrale su un volume di una funzione densità, il flusso di un campo vettoriale attraverso una superficie o una circuitazione lungo una curva.</p>
 <p>Queste tre regole di derivazione recitano</p>
 <div class="math notranslate nohighlight">
-\[\dfrac{d}{dt} \int_{v_t} f = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \mathbf{u}_b \cdot \hat{\mathbf{n}}\]</div>
+\[\dfrac{d}{dt} \int_{v_t} f = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \mathbf{u}_b \cdot \hat{\mathbf{n}}\]</div>
+<div class="math notranslate nohighlight">
+\[\dfrac{d}{dt} \int_{s_t} \mathbf{f} \cdot \hat{\mathbf{n}} = \int_{s_t} \dfrac{\partial \mathbf{f}}{\partial t} \cdot \hat{\mathbf{n}} + \int_{s_t} \nabla \cdot \mathbf{f} \, \mathbf{u}_b \cdot \hat{\mathbf{n}} - \oint_{\parital s_t} \mathbf{u}_b \times \mathbf{f} \cdot \hat{\mathbf{t}}\]</div>
+<div class="math notranslate nohighlight">
+\[\dfrac{d}{dt} \int_{\ell_t} \mathbf{f} \cdot \hat{\mathbf{t}} = \int_{\ell_t} \dfrac{\partial \mathbf{f}}{\partial t} \cdot \hat{\mathbf{t}} + \int_{\ell_t} \nabla \times \mathbf{f} \, \cdot \, \mathbf{u}_b \times \hat{\mathbf{t}} + \mathbf{f}(\mathbf{r}_B(t),t) \cdot \mathbf{u}_B(t) - \mathbf{f}(\mathbf{r}_A(t),t) \cdot \mathbf{u}_A(t)\]</div>
 <p><strong>Equazione di continuità per la carica elettrica</strong></p>
 <div class="math notranslate nohighlight">
 \[

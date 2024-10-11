@@ -81,7 +81,11 @@ Per la loro importanza in applicazioni fondamentali come i motori elettrici, e p
 
 Queste tre regole di derivazione recitano
 
-$$\dfrac{d}{dt} \int_{v_t} f = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \mathbf{u}_b \cdot \hat{\mathbf{n}}$$
+$$\dfrac{d}{dt} \int_{v_t} f = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \mathbf{u}_b \cdot \hat{\mathbf{n}}$$
+
+$$\dfrac{d}{dt} \int_{s_t} \mathbf{f} \cdot \hat{\mathbf{n}} = \int_{s_t} \dfrac{\partial \mathbf{f}}{\partial t} \cdot \hat{\mathbf{n}} + \int_{s_t} \nabla \cdot \mathbf{f} \, \mathbf{u}_b \cdot \hat{\mathbf{n}} - \oint_{\parital s_t} \mathbf{u}_b \times \mathbf{f} \cdot \hat{\mathbf{t}}$$
+
+$$\dfrac{d}{dt} \int_{\ell_t} \mathbf{f} \cdot \hat{\mathbf{t}} = \int_{\ell_t} \dfrac{\partial \mathbf{f}}{\partial t} \cdot \hat{\mathbf{t}} + \int_{\ell_t} \nabla \times \mathbf{f} \, \cdot \, \mathbf{u}_b \times \hat{\mathbf{t}} + \mathbf{f}(\mathbf{r}_B(t),t) \cdot \mathbf{u}_B(t) - \mathbf{f}(\mathbf{r}_A(t),t) \cdot \mathbf{u}_A(t)$$
 
 **Equazione di continuità per la carica elettrica**
 
