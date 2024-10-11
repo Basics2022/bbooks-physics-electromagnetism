@@ -7,11 +7,11 @@
 (classical-electromagnetism:energy)=
 # Bilancio di energia
 
-Osservando le unità di misura dei campi,
+Ispirati dalle dimensioni fisiche dei campi elettromagnetici,
 
-$$[\mathbf{e}] = \frac{\text{force}}{\text{charge}} = \frac{N}{C}$$
+$$[\mathbf{e}] = \frac{\text{force}}{\text{charge}}$$
 <!--$$[\varepsilon] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
-$$[\mathbf{d}] = \frac{\text{charge}}{\text{length}^2} = \frac{C}{m^2}$$
+$$[\mathbf{d}] = \frac{\text{charge}}{\text{length}^2}$$
 $$[\mathbf{b}] = \frac{\text{force}\cdot\text{time}}{\text{charge}\cdot\text{length}}$$
 <!--$$[\mu] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
 $$[\mathbf{h}] = \frac{\text{charge}}{\text{time} \cdot \text{length}}$$
@@ -19,6 +19,11 @@ $$[\mathbf{h}] = \frac{\text{charge}}{\text{time} \cdot \text{length}}$$
 $$[\mathbf{e} \cdot \mathbf{d}] = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u]$$
 $$[\mathbf{b} \cdot \mathbf{h}] = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u]$$
 
+si può costruire la densità di volume di energia 
+
+$$u = \frac{1}{2} \left( \mathbf{e} \cdot \mathbf{d} + \mathbf{b} \cdot \mathbf{h} \right) \ .$$
+
+Si può calcolare la derivata parziale nel tempo della densità di energia, $u$, e usare le equazioni di Maxwell per ottenere un'equazione di bilancio dell'energia del campo elettromagnetico,
 
 $$\begin{aligned}
 \dfrac{\partial u}{\partial t} & = \dfrac{\partial}{\partial t}\left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} + \mathbf{b} \cdot \mathbf{h} \right) =  \qquad (...) \\
