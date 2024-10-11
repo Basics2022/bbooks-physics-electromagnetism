@@ -16,6 +16,9 @@ parts:
   - file: ch/circuits
     sections:
     - file: ch/circuits-electric
+      sections:
+      - file: ch/circuits-electric-components
+      - file: ch/circuits-electric-regimes
     - file: ch/circuits-electromagnetic
     - file: ch/circuits-electromechanic
 - caption: Appendici
