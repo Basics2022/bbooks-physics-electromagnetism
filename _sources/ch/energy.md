@@ -7,6 +7,15 @@
 (classical-electromagnetism:energy)=
 # Bilancio di energia
 
+Osservando le unità di misura dei campi,
+$$[\mathbf{e}] = \frac{\text{force}}{\text{charge}}$$
+$$[\mathbf{d}]$$
+$$[\mathbf{b}]$$
+$$[\mathbf{h}]$$
+$$[u] = $$
+
+
+
 $$\begin{aligned}
 \dfrac{\partial u}{\partial t} & = \dfrac{\partial}{\partial t}\left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} + \mathbf{b} \cdot \mathbf{h} \right) =  \qquad (...) \\
 & = \mathbf{e} \cdot \partial_t \mathbf{d} + \mathbf{h} \cdot \partial_t \mathbf{b} = \\

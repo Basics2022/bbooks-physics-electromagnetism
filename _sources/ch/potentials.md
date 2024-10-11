@@ -28,7 +28,7 @@ $$\begin{cases}
  \mathbf{b} & = \nabla \times \mathbf{a} \\
 \end{cases}$$
 
-## Gauge
+## Condizioni di gauge
 
 I potenziali sono definiti a meno di una condizione di gauge, un'ulteriore condzione che elimina ogni arbitrarietà nella definizione.
 Ad esempio, il potenziale vettore è definito a meno del gradiente di una funzione scalare, poiché $\nabla \times \nabla f \equiv \mathbf{0}$, e quindi il potenziale $\tilde{\mathbf{a}} = \mathbf{a} + \nabla f$ produce lo stesso campo magnetico $\mathbf{b}$
