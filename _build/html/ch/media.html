@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bilancio di energia del campo elettromagnetico &#8212; My sample book</title>
+    <title>Leggi costitutive &#8212; My sample book</title>
   
   
   
@@ -62,13 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/energy';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/media';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Equazioni dell’elettromagnetismo e relatività galileiana" href="low-speed-relativity.html" />
-    <link rel="prev" title="Leggi costitutive" href="media.html" />
+    <link rel="next" title="Bilancio di energia" href="energy.html" />
+    <link rel="prev" title="Potenziali elettromagnetici" href="potentials.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -175,10 +173,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Prime esperienze</a></li>
 <li class="toctree-l1"><a class="reference internal" href="principles.html">Princìpi dell’elettromagnetismo classico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="potentials.html">Potenziali elettromagnetici</a></li>
-<li class="toctree-l1"><a class="reference internal" href="media.html">Leggi costitutive</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Leggi costitutive</a></li>
 
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Bilancio di energia del campo elettromagnetico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="energy.html">Bilancio di energia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">Equazioni dell’elettromagnetismo e relatività galileiana</a></li>
 <li class="toctree-l1"><a class="reference internal" href="waves.html">Onde elettromagnetiche</a></li>
 </ul>
@@ -269,7 +267,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch/energy.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch/media.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +297,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/energy.md" target="_blank"
+      <li><a href="../_sources/ch/media.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -370,7 +368,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -381,11 +381,26 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Bilancio di energia del campo elettromagnetico</h1>
+    <h1>Leggi costitutive</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Leggi costitutive</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vuoto">Vuoto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mezzi-continui">Mezzi continui</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione-e-magnetizzazione-dei-mezzi">Polarizzazione e Magnetizzazione dei mezzi</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#esempi">Esempi</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -407,58 +422,44 @@ document.write(`
 <p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Oct 11, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>0 min read</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="bilancio-di-energia-del-campo-elettromagnetico">
-<span id="classical-electromagnetism-energy"></span><h1>Bilancio di energia del campo elettromagnetico<a class="headerlink" href="#bilancio-di-energia-del-campo-elettromagnetico" title="Permalink to this heading">#</a></h1>
-<p>Ispirati dalle dimensioni fisiche dei campi elettromagnetici,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\left[\mathbf{e}\right] = \frac{\text{force}}{\text{charge}} \qquad &amp; , \qquad
-[\mathbf{d}] = \frac{\text{charge}}{\text{length}^2} \\
-[\mathbf{b}] = \frac{\text{force}\cdot\text{time}}{\text{charge}\cdot\text{length}} \qquad &amp; , \qquad
-[\mathbf{h}] = \frac{\text{charge}}{\text{time} \cdot \text{length}}
-\end{aligned}\end{split}\]</div>
-<!--$$[\varepsilon] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
-<!--$$[\mu] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\left[\mathbf{e} \cdot \mathbf{d}\right] &amp; = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u] \\
-[\mathbf{b} \cdot \mathbf{h}] &amp; = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u]
-\end{aligned}\end{split}\]</div>
-<p>si può costruire la densità di volume di energia  (<strong>todo</strong> trovare motivazioni più convincenti, non basandosi solo sull’analisi dimensionale ma sul lavoro)</p>
-<div class="math notranslate nohighlight">
-\[u = \frac{1}{2} \left( \mathbf{e} \cdot \mathbf{d} + \mathbf{b} \cdot \mathbf{h} \right) \ .\]</div>
-<p>Si può calcolare la derivata parziale nel tempo della densità di energia, <span class="math notranslate nohighlight">\(u\)</span>, e usare le equazioni di Maxwell per ottenere un’equazione di bilancio dell’energia del campo elettromagnetico. Per un mezzo isotropo lineare, per il quale valgono le equazioni costitutive <span class="math notranslate nohighlight">\(\mathbf{d} = \varepsilon \mathbf{e}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{b} = \mu \mathbf{h}\)</span>, la derivata parziale nel tempo dell’energia elettromagnetica può essere riscritta sfuttando la regola di derivazione del prodotto e le equazioni di Faraday-Lenz-Neumann e Ampére-Maxwell,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\dfrac{\partial u}{\partial t} &amp; = \dfrac{\partial}{\partial t}\left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} + \mathbf{b} \cdot \mathbf{h} \right) =  \qquad (...) \\
-&amp; = \mathbf{e} \cdot \partial_t \mathbf{d} + \mathbf{h} \cdot \partial_t \mathbf{b} = \\
-&amp; = \mathbf{e} \cdot (\nabla \times \mathbf{h} - \mathbf{j}) - \mathbf{h} \cdot \nabla \times \mathbf{e} \ .
-\end{aligned}\end{split}\]</div>
-<p>L’ultimo termine può essere ulteriormente manipolato, usando l’identità vettoriale</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\mathbf{e} \cdot \nabla \times \mathbf{h} - \mathbf{h} \cdot \nabla \times \mathbf{e} &amp; = e_i \varepsilon_{ijk} \partial_j h_k - h_i \varepsilon_{ijk} \partial_j e_k = \qquad (i \rightarrow k, k \rightarrow i)\\
-&amp; = e_i \varepsilon_{ijk} \partial_j h_k - h_k \varepsilon_{kji} \partial_j e_i = \\
-&amp; = e_i \varepsilon_{ijk} \partial_j h_k + h_k \varepsilon_{ijk} \partial_j e_i = \\
-&amp; =  \partial_j (\varepsilon_{ijk} e_i  h_k ) = \\
-&amp; =  \partial_j (\varepsilon_{jki} e_i  h_k ) = \\
-&amp; = \nabla \cdot (\mathbf{h} \times \mathbf{e}) = - \nabla \cdot (\mathbf{e} \times \mathbf{h})
-\end{aligned}\end{split}\]</div>
-<p>che permette di scrivere l’equazione del bilancio di energia elettromagnetica come,</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial u }{\partial t} + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j} \ ,\]</div>
-<p>dove è stato definito il <strong>vettore di Poynting</strong>, o meglio il campo vettoriale di Poynting</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{s}(\mathbf{r},t) := - \mathbf{e}(\mathbf{r},t) \times \mathbf{h}(\mathbf{r},t) \ ,\]</div>
-<p>che può essere identificato come un flusso di potenza per unità di superficie, comparendo sotto l’operatore di divergenza nel bilnacio di energia.</p>
-<p><strong>todo.</strong> Rimandare a una sezione in cui si mostra questa ultima affermazione passando dal bilancio differenziale al bilancio integrale e si usa il teorema della divergenza, <span class="math notranslate nohighlight">\(\int_V \nabla \cdot \mathbf{s} = \oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}}\)</span>.</p>
+<div class="tex2jax_ignore mathjax_ignore section" id="leggi-costitutive">
+<span id="classical-electromagnetism-media"></span><h1>Leggi costitutive<a class="headerlink" href="#leggi-costitutive" title="Permalink to this heading">#</a></h1>
+<p><strong>todo</strong></p>
+<div class="section" id="vuoto">
+<h2>Vuoto<a class="headerlink" href="#vuoto" title="Permalink to this heading">#</a></h2>
+<p>“vuoto di materia, ma non di proprietà fisiche”</p>
+</div>
+<div class="section" id="mezzi-continui">
+<h2>Mezzi continui<a class="headerlink" href="#mezzi-continui" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>leggi costitutive generali</p></li>
+<li><p>mezzi lineari non disperivi:</p>
+<ul>
+<li><p>e isotropi</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="polarizzazione-e-magnetizzazione-dei-mezzi">
+<h1>Polarizzazione e Magnetizzazione dei mezzi<a class="headerlink" href="#polarizzazione-e-magnetizzazione-dei-mezzi" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>bounded/free charges and currents</p></li>
+</ul>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="esempi">
+<h1>Esempi<a class="headerlink" href="#esempi" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>conduttori</p></li>
+<li><p>ferromagentici e magnetismo debole (para-, dia-, anti-)</p></li>
+</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -492,20 +493,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="media.html"
+       href="potentials.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Leggi costitutive</p>
+        <p class="prev-next-title">Potenziali elettromagnetici</p>
       </div>
     </a>
     <a class="right-next"
-       href="low-speed-relativity.html"
+       href="energy.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Equazioni dell’elettromagnetismo e relatività galileiana</p>
+        <p class="prev-next-title">Bilancio di energia</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -515,6 +516,27 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Leggi costitutive</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vuoto">Vuoto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mezzi-continui">Mezzi continui</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione-e-magnetizzazione-dei-mezzi">Polarizzazione e Magnetizzazione dei mezzi</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#esempi">Esempi</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>

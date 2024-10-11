@@ -151,6 +151,8 @@ $$\begin{aligned}
 \mathbf{b}^* = \mathbf{b} \qquad & , \qquad \mathbf{h}^* = \mathbf{h} - \mathbf{u}_b \times \mathbf{d} \\
 \end{aligned}$$
 
-non rappresentano altro che la trasformazione dei campi per due osservatori in moto relativo, e corrispondono al limite delle trasformazioni di Lorentz della relatività speciale per velocità $|\mathbf{u}_b| \ll c$: in questo procedimento vengono ottenute le trasformazioni per basse velocità relative, poiché non è stata considerata nessuna trasformazione delle dimensioni spaziali e temporali, come prevede la teoria della relatività di Einstein. **todo** riferimento alle trasformazioni galileiane e di Lorentz per la relatività nell'elettromagnetismo.
+non rappresentano altro che la trasformazione dei campi per due osservatori in moto relativo, e corrispondono al limite delle trasformazioni di Lorentz della relatività speciale per velocità $|\mathbf{u}_b| \ll c$: in questo procedimento vengono ottenute le trasformazioni per basse velocità relative, poiché non è stata considerata nessuna trasformazione delle dimensioni spaziali e temporali, come prevede la teoria della relatività di Einstein. 
+
+**todo** riferimento alle trasformazioni galileiane e di Lorentz per la relatività nell'elettromagnetismo.
 
 

@@ -9,6 +9,7 @@ parts:
   - file: ch/experiments
   - file: ch/principles
   - file: ch/potentials
+  - file: ch/media
   - file: ch/energy
   - file: ch/low-speed-relativity
   - file: ch/waves
