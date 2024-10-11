@@ -11,12 +11,12 @@ Ispirati dalle dimensioni fisiche dei campi elettromagnetici,
 
 $$\begin{aligned}
 [\mathbf{e}] = \frac{\text{force}}{\text{charge}} \qquad & , \qquad
-<!--$$[\varepsilon] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
 [\mathbf{d}] = \frac{\text{charge}}{\text{length}^2} \\
 [\mathbf{b}] = \frac{\text{force}\cdot\text{time}}{\text{charge}\cdot\text{length}} \qquad & , \qquad
-<!--$$[\mu] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
 [\mathbf{h}] = \frac{\text{charge}}{\text{time} \cdot \text{length}}
 \end{aligned}$$
+<!--$$[\varepsilon] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
+<!--$$[\mu] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
 
 $$\begin{aligned}
 [\mathbf{e} \cdot \mathbf{d}] & = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u] \\
