@@ -46,9 +46,9 @@ che permette di scrivere l'equazione del bilancio di energia elettromagnetica co
 
 $$\frac{\partial u }{\partial t} + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j} \ ,$$
 
-dove è stato definito il **vettore di Poynting**
+dove è stato definito il **vettore di Poynting**, o meglio il campo vettoriale di Poynting
 
-$$\mathbf{s} := - \mathbf{e} \times \mathbf{h} \ ,$$
+$$\mathbf{s}(\mathbf{r},t) := - \mathbf{e}(\mathbf{r},t) \times \mathbf{h}(\mathbf{r},t) \ ,$$
 
 che può essere identificato come un flusso di potenza per unità di superficie, comparendo sotto l'operatore di divergenza nel bilnacio di energia.
 
