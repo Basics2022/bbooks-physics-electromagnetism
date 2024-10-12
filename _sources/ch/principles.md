@@ -30,13 +30,12 @@ con la necessità di definire delle equazioni costitutive $\mathbf{d}(\mathbf{e}
 **Forza di Lorentz.** La forza per unità di volume agente sulla carica elettrica presente in un punto $\mathbf{r}$ nello spazio è
 
 $$\begin{aligned}
-  \mathbf{f}(\mathbf{r},t) & = \rho(\mathbf{r},t) \, \mathbf{e}(\mathbf{r},t) - \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
-                           & = \rho(\mathbf{r},t) \left[ \mathbf{e}(\mathbf{r}) - \mathbf{v}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) \right] =  \\
+  \mathbf{f}(\mathbf{r},t) & = \rho(\mathbf{r},t) \, \mathbf{e}(\mathbf{r},t) + \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
+                           & = \rho(\mathbf{r},t) \left[ \mathbf{e}(\mathbf{r}) + \mathbf{v}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) \right] =  \\
                            & = \rho(\mathbf{r},t) \, \mathbf{e}^*(\mathbf{r},t) 
 \end{aligned}$$
 
-**todo.** controllare questa formula
-
+avendo definito $\mathbf{e}^*$ il campo elettrico **visto dalla carica in movimento**.* 
 
 ## Principi in forma integrale: equazioni dell'elettromagnetismo e relatività galileiana
 

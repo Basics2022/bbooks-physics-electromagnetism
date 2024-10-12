@@ -4,7 +4,7 @@
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
 (classical-electromagnetism:waves:wave-equation)=
-# Onde elettromagnetiche
+# Equazioni delle onde in elettromagnetismo
 
 **Identità vettoriale.**
 
