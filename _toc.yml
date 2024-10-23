@@ -22,6 +22,7 @@ parts:
     sections:
     - file: ch/circuits-electric
       sections:
+      - file: ch/circuits-electric-approximation
       - file: ch/circuits-electric-components
       - file: ch/circuits-electric-regimes
     - file: ch/circuits-electromagnetic
