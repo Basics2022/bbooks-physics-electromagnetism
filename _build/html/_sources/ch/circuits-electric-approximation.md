@@ -34,6 +34,10 @@ Il bilancio di energia elettromagnetica del sistema può quindi essere riscritto
 
 $$\frac{d}{dt} \int_V u = \sum_k v_k \, i_k - \int_{V} \mathbf{j} \cdot \mathbf{e} - \oint_{\partial V} \hat{\mathbf{n}} \cdot \left( \partial_t \mathbf{d} + \mathbf{h} \times \partial_t \mathbf{a} \right) \ .$$
 
-Nelle condizioni in cui l'ultimo termine è nullo o trascurabile (**todo** *quali? Spendere due parole sulla validità dell'approssimazione, con analisi dimensionale? Fare esempio in cui l'approssimazione non funziona*), la variazione di energia interna al sistema è dovuta alla differenza della potenza in ingresso ai morsetti, e la dissipazione all'interno del volume.
+Nelle condizioni in cui l'ultimo termine è nullo o trascurabile (**todo** *quali? Spendere due parole sulla validità dell'approssimazione, con analisi dimensionale? Fare esempio in cui l'approssimazione non funziona*), la variazione di energia interna al sistema è dovuta alla differenza della potenza in ingresso ai morsetti, e la dissipazione all'interno del volume (ad esempio dovuta alla conduzione non ideale in conduttori con resistività finita),
+
+$$\dot{E}^{em} = P^{ext, vi} - \dot{D} \ ,$$
+
+con $\dot{D} \ge 0$ per il secondo principio della termodinamica **todo** *aggiungere riferimento, e discussione.*
 
 
