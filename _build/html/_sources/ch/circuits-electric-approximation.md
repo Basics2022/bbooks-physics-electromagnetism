@@ -28,7 +28,7 @@ $$\begin{aligned}
 
 e assumendo che il flusso di carica elettrica avvenga solo in corrispondenza di un numero finito di sezioni $S_k \in \partial V$ equipotenziali a potenziale $v_k = -\varphi_k$, costante sulle sezioni, e riconoscento il flusso di carica elettrica attraverso la sezione $S_k$ come la corrente $i_k = \int_{S_k} \mathbf{j} \cdot \hat{\mathbf{n}}$, si può scrivere
 
-$$- \oint_{\partial V} = \sum_k v_k \, i_k - \oint_{\partial V} \hat{\mathbf{n}} \cdot \left( \partial_t \mathbf{d} + \mathbf{h} \times \partial_t \mathbf{a} \right) \ .$$
+$$- \oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}} = \sum_k v_k \, i_k - \oint_{\partial V} \hat{\mathbf{n}} \cdot \left( \partial_t \mathbf{d} + \mathbf{h} \times \partial_t \mathbf{a} \right) \ .$$
 
 Il bilancio di energia elettromagnetica del sistema può quindi essere riscritto come
 

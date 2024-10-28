@@ -23,9 +23,12 @@ parts:
     - file: ch/circuits-electric
       sections:
       - file: ch/circuits-electric-approximation
+      - file: ch/circuits-electric-induction
       - file: ch/circuits-electric-components
       - file: ch/circuits-electric-regimes
     - file: ch/circuits-electromagnetic
+      sections:
+      - file: ch/circuits-electromagnetic-transformer
     - file: ch/circuits-electromechanic
 - caption: Appendici
   chapters:
