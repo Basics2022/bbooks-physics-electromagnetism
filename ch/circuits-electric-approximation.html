@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/circuits-electric-approximation';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Componenti elementari dei circuiti elettrici" href="circuits-electric-components.html" />
+    <link rel="next" title="Induzione elettromagnetica nell’approssimazione circuitale" href="circuits-electric-induction.html" />
     <link rel="prev" title="Circuiti elettrici" href="circuits-electric.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -189,11 +189,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="circuits.html">Approssimazione circuitale</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="circuits-electric.html">Circuiti elettrici</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Validità dell’approccio circuitale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">Induzione elettromagnetica nell’approssimazione circuitale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-components.html">Componenti elementari dei circuiti elettrici</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">Regimi di funzionamento in circuiti elettrici</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="circuits-electromagnetic.html">Circuiti elettromagnetici</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electromagnetic.html">Circuiti elettromagnetici</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electromagnetic-transformer.html">Trasformatore</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="circuits-electromechanic.html">Circuiti elettromeccanici</a></li>
 </ul>
 </li>
@@ -407,7 +411,7 @@ document.write(`
 <p class="sd-p-0 sd-m-0">basics</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Oct 23, 2024</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Oct 27, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
 <p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
@@ -436,7 +440,7 @@ document.write(`
 \end{aligned}\end{split}\]</div>
 <p>e assumendo che il flusso di carica elettrica avvenga solo in corrispondenza di un numero finito di sezioni <span class="math notranslate nohighlight">\(S_k \in \partial V\)</span> equipotenziali a potenziale <span class="math notranslate nohighlight">\(v_k = -\varphi_k\)</span>, costante sulle sezioni, e riconoscento il flusso di carica elettrica attraverso la sezione <span class="math notranslate nohighlight">\(S_k\)</span> come la corrente <span class="math notranslate nohighlight">\(i_k = \int_{S_k} \mathbf{j} \cdot \hat{\mathbf{n}}\)</span>, si può scrivere</p>
 <div class="math notranslate nohighlight">
-\[- \oint_{\partial V} = \sum_k v_k \, i_k - \oint_{\partial V} \hat{\mathbf{n}} \cdot \left( \partial_t \mathbf{d} + \mathbf{h} \times \partial_t \mathbf{a} \right) \ .\]</div>
+\[- \oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}} = \sum_k v_k \, i_k - \oint_{\partial V} \hat{\mathbf{n}} \cdot \left( \partial_t \mathbf{d} + \mathbf{h} \times \partial_t \mathbf{a} \right) \ .\]</div>
 <p>Il bilancio di energia elettromagnetica del sistema può quindi essere riscritto come</p>
 <div class="math notranslate nohighlight">
 \[\frac{d}{dt} \int_V u = \sum_k v_k \, i_k - \int_{V} \mathbf{j} \cdot \mathbf{e} - \oint_{\partial V} \hat{\mathbf{n}} \cdot \left( \partial_t \mathbf{d} + \mathbf{h} \times \partial_t \mathbf{a} \right) \ .\]</div>
@@ -486,11 +490,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="circuits-electric-components.html"
+       href="circuits-electric-induction.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Componenti elementari dei circuiti elettrici</p>
+        <p class="prev-next-title">Induzione elettromagnetica nell’approssimazione circuitale</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
