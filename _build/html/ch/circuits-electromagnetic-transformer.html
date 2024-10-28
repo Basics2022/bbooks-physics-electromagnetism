@@ -477,10 +477,12 @@ document.write(`
 \[\begin{split}\begin{aligned}
   0 &amp; = \phi_2 - \phi_1 - \phi_{2,d} + \phi_{1,d} \\
     &amp; = \phi_2 - \phi_1 - \frac{m_2}{\theta_{2,d}} + \frac{m_1}{\theta_{1,d}} \\
-    &amp; = \frac{\psi_2}{N_2} - \frac{\psi_1}{N_1} + m_1 \left( \frac{1}{\theta_{1,d}} + \frac{1}{\theta_{2,d}} \right) \\
 \end{aligned}\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\rightarrow \qquad \frac{\psi_2}{N_2} = \frac{\psi_1}{N_1} - \left( \frac{1}{\theta_{1,d}} + \frac{1}{\theta_{2,d}} \right) \, m_1 \ .\]</div>
+\[\rightarrow \qquad \frac{\psi_2}{N_2} - \frac{m_2}{\theta_{2,d}} = \frac{\psi_1}{N_1} - \frac{m_1}{\theta_{1,d}} \ .\]</div>
+<div class="math notranslate nohighlight">
+\[\rightarrow \qquad \frac{1}{N_2} \left( v_2 - \frac{N_2^2}{\theta_{2,d}} \dfrac{d i_2}{d t} \right) =  
+                     \frac{1}{N_1} \left( v_1 - \frac{N_1^2}{\theta_{1,d}} \dfrac{d i_1}{d t} \right)  \ .\]</div>
 </div>
 <div class="section" id="trasformatore-con-flussi-dispersi-e-riluttanza-theta-fe-nel-traferro">
 <h2>Trasformatore con flussi dispersi e riluttanza <span class="math notranslate nohighlight">\(\theta_{Fe}\)</span> nel traferro<a class="headerlink" href="#trasformatore-con-flussi-dispersi-e-riluttanza-theta-fe-nel-traferro" title="Permalink to this heading">#</a></h2>
@@ -493,15 +495,16 @@ document.write(`
  &amp; m_1   + m_{2} = \theta_{Fe} \, \phi
 \end{cases}\end{split}\]</div>
 <p><span style="color:red"><strong>todo</strong> finire e controllare i conti; disegnare circuito equivalente</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \frac{\psi_{2}}{N_{2}} &amp; = \phi_2 = \\
-                     &amp; = \phi + \phi_{2,d} = \\
-                     &amp; = \phi + \frac{m_2}{\theta_{2,d}} = \\
-                     &amp; = \phi + \frac{1}{\theta_{2,d}} ( \theta_{Fe} \, \phi - m_1 ) = \\
-                     &amp; = \left( 1 + \frac{\theta_{Fe}}{\theta_{2,d}} \right) \, \phi - \frac{1}{\theta_{2,d}} m_1 = \\
-                     &amp; = \left( 1 + \frac{\theta_{Fe}}{\theta_{2,d}} \right) \, \left( \frac{\psi_1}{N_1} - \frac{m_1}{\theta_{1,d}} \right) - \frac{1}{\theta_{2,d}} m_1 = \\
-\end{aligned}\end{split}\]</div>
+<!--
+$$\begin{aligned}
+  \frac{\psi_{2}}{N_{2}} & = \phi_2 = \\
+                     & = \phi + \phi_{2,d} = \\
+                     & = \phi + \frac{m_2}{\theta_{2,d}} = \\
+                     & = \phi + \frac{1}{\theta_{2,d}} ( \theta_{Fe} \, \phi - m_1 ) = \\
+                     & = \left( 1 + \frac{\theta_{Fe}}{\theta_{2,d}} \right) \, \phi - \frac{1}{\theta_{2,d}} m_1 = \\
+                     & = \left( 1 + \frac{\theta_{Fe}}{\theta_{2,d}} \right) \, \left( \frac{\psi_1}{N_1} - \frac{m_1}{\theta_{1,d}} \right) - \frac{1}{\theta_{2,d}} m_1 = \\
+\end{aligned}$$
+-->
 </div>
 </div>
 
