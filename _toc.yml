@@ -30,6 +30,9 @@ parts:
       sections:
       - file: ch/circuits-electromagnetic-transformer
     - file: ch/circuits-electromechanic
+- caption: Metodi numerici
+  chapters:
+  - file: ch/numerical-methods
 - caption: Appendici
   chapters:
   - file: ch/optics
