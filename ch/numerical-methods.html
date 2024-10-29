@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leggi costitutive &#8212; My sample book</title>
+    <title>Metodi numerici &#8212; My sample book</title>
   
   
   
@@ -62,11 +62,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/media';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/numerical-methods';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Bilancio di energia del campo elettromagnetico" href="energy.html" />
-    <link rel="prev" title="Potenziali elettromagnetici" href="potentials.html" />
+    <link rel="next" title="Ottica" href="optics.html" />
+    <link rel="prev" title="Circuiti elettromeccanici" href="circuits-electromechanic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -169,11 +171,11 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Elettromagnetismo</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Prime esperienze</a></li>
 <li class="toctree-l1"><a class="reference internal" href="principles.html">Princìpi dell’elettromagnetismo classico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="potentials.html">Potenziali elettromagnetici</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Leggi costitutive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="media.html">Leggi costitutive</a></li>
 <li class="toctree-l1"><a class="reference internal" href="energy.html">Bilancio di energia del campo elettromagnetico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">Equazioni dell’elettromagnetismo e relatività galileiana</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">Onde elettromagnetiche</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -199,6 +201,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="circuits-electromechanic.html">Circuiti elettromeccanici</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Metodi numerici</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Metodi numerici</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendici</span></p>
 <ul class="nav bd-sidenav">
@@ -274,7 +280,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch/media.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch/numerical-methods.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -304,7 +310,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/media.md" target="_blank"
+      <li><a href="../_sources/ch/numerical-methods.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -388,7 +394,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Leggi costitutive</h1>
+    <h1>Metodi numerici</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -398,10 +404,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vuoto">Vuoto</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mezzi-continui">Mezzi continui</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione-e-magnetizzazione-dei-mezzi">Polarizzazione e Magnetizzazione dei mezzi</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esempi">Esempi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elettrostatica">Elettrostatica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorgente">Sorgente</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dipolo">Dipolo</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -422,46 +429,98 @@ document.write(`
 <p class="sd-p-0 sd-m-0">basics</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Oct 28, 2024</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Oct 29, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>0 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="leggi-costitutive">
-<span id="classical-electromagnetism-media"></span><h1>Leggi costitutive<a class="headerlink" href="#leggi-costitutive" title="Permalink to this heading">#</a></h1>
-<p><strong>todo</strong></p>
-<div class="section" id="vuoto">
-<h2>Vuoto<a class="headerlink" href="#vuoto" title="Permalink to this heading">#</a></h2>
-<p>“vuoto di materia, ma non di proprietà fisiche”</p>
+<div class="tex2jax_ignore mathjax_ignore section" id="metodi-numerici">
+<span id="classical-electromagnetism-numerics"></span><h1>Metodi numerici<a class="headerlink" href="#metodi-numerici" title="Permalink to this heading">#</a></h1>
+<div class="section" id="elettrostatica">
+<h2>Elettrostatica<a class="headerlink" href="#elettrostatica" title="Permalink to this heading">#</a></h2>
+<p>I problemi dell’elettrostatica sono governate dalle due equazioni di Maxwell per i campi <span class="math notranslate nohighlight">\(\mathbf{e}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{d}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \nabla \cdot \mathbf{d} = \rho \\ \\
+  \nabla \times \mathbf{e} = \mathbf{0 \ ,}
+\end{cases}\end{split}\]</div>
+<p>dotate delle opportune condizioni al contorno ed equazioni costitutive. Per un materiale lineare isotropo, ad esempio, <span class="math notranslate nohighlight">\(\mathbf{d} = \varepsilon \mathbf{e}\)</span>. La condizione di irrotazionalità del campo elettrico, permette di scriverlo come gradiente di un potenziale scalare, <span class="math notranslate nohighlight">\(\mathbf{e} = - \nabla v\)</span>, e di ottenere l’equazione di Poisson,</p>
+<div class="math notranslate nohighlight">
+\[-\nabla \cdot (\varepsilon \nabla v ) = \rho \ .\]</div>
+<div class="section" id="sorgente">
+<h3>Sorgente<a class="headerlink" href="#sorgente" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\mathbf{e}(r) = \frac{q_i}{4 \pi \varepsilon}\frac{\mathbf{r} - \mathbf{r}_i}{|\mathbf{r} - \mathbf{r}_i|^3}\]</div>
+<div class="math notranslate nohighlight">
+\[\mathbf{e}(\mathbf{r}) = - \nabla_{\mathbf{r}} v(\mathbf{r})\]</div>
+<div class="math notranslate nohighlight">
+\[\varepsilon \, v(\mathbf{r}) = \frac{q_i}{4 \pi}\frac{1}{|\mathbf{r} - \mathbf{r}_i|}\]</div>
 </div>
-<div class="section" id="mezzi-continui">
-<h2>Mezzi continui<a class="headerlink" href="#mezzi-continui" title="Permalink to this heading">#</a></h2>
+<div class="section" id="dipolo">
+<h3>Dipolo<a class="headerlink" href="#dipolo" title="Permalink to this heading">#</a></h3>
+<p>Un dipolo è definito come due cariche di intensità uguale e contraria <span class="math notranslate nohighlight">\(-q_2 = q_1 = q &gt; 0\)</span>, nei punti dello spazio <span class="math notranslate nohighlight">\(P_1\)</span>, <span class="math notranslate nohighlight">\(P_2 = P_1 + \mathbf{l}\)</span>, nelle condizioni limite <span class="math notranslate nohighlight">\(|\mathbf{l}| \rightarrow 0\)</span>, <span class="math notranslate nohighlight">\(q \rightarrow \infty\)</span>, in modo tale da avere <span class="math notranslate nohighlight">\(q |\mathbf{l}|\)</span> finito, <span class="math notranslate nohighlight">\(\mathbf{p} = q \mathbf{l}\)</span>.</p>
+<p>Il potenziale del dipolo è dato dal principio di sovrapposizione delle cause e degli effetti,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \varepsilon \, v(\mathbf{r})
+  &amp; = - \frac{q}{4 \pi }\frac{1}{\left|\mathbf{r} - \mathbf{r}_0 + \frac{\mathbf{l}}{2} \right|} 
+      + \frac{q}{4 \pi }\frac{1}{\left|\mathbf{r} - \mathbf{r}_0 - \frac{\mathbf{l}}{2} \right|} = \\
+  &amp; = \ ... \\
+  &amp; = \frac{q}{4 \pi} \left( 
+  - \frac{1}{\left|\mathbf{r} - \mathbf{r}_0 \right|} + \frac{\mathbf{r} - \mathbf{r}_0}{\left|\mathbf{r} - \mathbf{r}_0 \right|^3} \cdot \frac{\mathbf{l}}{2}
+  + \frac{1}{\left|\mathbf{r} - \mathbf{r}_0 \right|} + \frac{\mathbf{r} - \mathbf{r}_0}{\left|\mathbf{r} - \mathbf{r}_0 \right|^3} \cdot \frac{\mathbf{l}}{2} + o(|\mathbf{l}|) \right) = \\
+  &amp; = \ ... \\
+  &amp; = \frac{1}{4 \pi}
+ \frac{\mathbf{r} - \mathbf{r}_0}{\left|\mathbf{r} - \mathbf{r}_0 \right|^3} \cdot \mathbf{P} \ ,
+\end{aligned}\end{split}\]</div>
+<p>avendo definito il vettore momento dipolo <span class="math notranslate nohighlight">\(\mathbf{P} = q \mathbf{l}\)</span>.</p>
+<p><strong>Polariazazione - Potenziale generato da una distribuzione di dipoli.</strong></p>
+<div class="math notranslate nohighlight">
+\[d \mathbf{P} = \mathbf{p} \, \Delta V\]</div>
+<div class="math notranslate nohighlight">
+\[\varepsilon v_P(\mathbf{r}) = \int_{\mathbf{r}_0 \in V_0} \frac{1}{4 \pi}
+ \frac{\mathbf{r} - \mathbf{r}_0}{\left|\mathbf{r} - \mathbf{r}_0 \right|^3} \cdot \mathbf{p}(\mathbf{r}_0) \, dV_0 \]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\partial_i |\mathbf{r}|^2 &amp; = 2 x_i \\
+                          &amp; = 2 |\mathbf{r}| \partial_i |\mathbf{r}|
+\end{aligned}
+\qquad \rightarrow \qquad \partial_i |\mathbf{r}| = \frac{x_i}{|\mathbf{r}|}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\partial_i |\mathbf{r}|^n = n |\mathbf{r}|^{n-1} \, \partial_i |\mathbf{r}| = n x_i |\mathbf{r}|^{n-2}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{\mathbf{r}-\mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} = \nabla_{\mathbf{r}_0} \frac{1}{|\mathbf{r}-\mathbf{r}_0|}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\frac{\mathbf{r}- \mathbf{r}_0}{|\mathbf{r}- \mathbf{r}_0|^3} \cdot \mathbf{p}(\mathbf{r}_0) 
+ &amp; = \nabla_{\mathbf{r}_0} \frac{1}{|\mathbf{r}-\mathbf{r}_0|} \cdot \mathbf{p}(\mathbf{r}_0) = \\
+ &amp; = \nabla_{\mathbf{r}_0} \cdot \left( \frac{1}{|\mathbf{r}-\mathbf{r}_0|} \mathbf{p}(\mathbf{r}_0) \right) - \frac{1}{|\mathbf{r}- \mathbf{r}_0|} \nabla_{\mathbf{r}_0} \cdot \mathbf{p}(\mathbf{r}_0) = \\
+\end{aligned}\end{split}\]</div>
+<p>e quindi</p>
+<div class="math notranslate nohighlight">
+\[4 \, \pi \, \varepsilon v_P(\mathbf{r}) = \oint_{\mathbf{r}_0 \in \partial V_0} \frac{\hat{\mathbf{n}}(\mathbf{r}_0) \cdot \mathbf{p}(\mathbf{r}_0)}{|\mathbf{r}-\mathbf{r}_0|} - \oint_{\mathbf{r}_0 \in V_0} \frac{\nabla_{\mathbf{r}_0} \cdot \mathbf{p}(\mathbf{r}_0)}{|\mathbf{r} - \mathbf{r}_0|}\]</div>
+<p>I due contributi hanno la forma di sorgenti, essendo termini proporzionali a <span class="math notranslate nohighlight">\(\frac{1}{|\mathbf{r}-\mathbf{r}_0|}\)</span>.
+Il potenziale dovuto alla densità di volume di dipoli equivale alla somma dei due contributi delle cariche di:</p>
 <ul class="simple">
-<li><p>leggi costitutive generali</p></li>
-<li><p>mezzi lineari non disperivi:</p>
-<ul>
-<li><p>e isotropi</p></li>
+<li><p>polarizzazione di superficie <span class="math notranslate nohighlight">\(\sigma_p =   \hat{\mathbf{n}} \cdot \mathbf{p}\)</span></p></li>
+<li><p>polarizzazione di volume     <span class="math notranslate nohighlight">\(\rho_p   = - \nabla \cdot \mathbf{p}\)</span></p></li>
 </ul>
-</li>
-</ul>
+<p><strong>Oss.</strong> Se la polarizzazione è uniforme nel volume, il contributo della polarizzazione nel volume si annulla e rimane solo il contributo della polarizzazione sul contorno del volume.</p>
+<p><strong>Oss.</strong> Legge di Gauss per il campo elettrico,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \nabla \cdot \mathbf{e} &amp; = \frac{1}{\varepsilon_0} \rho = \\
+                          &amp; = \frac{1}{\varepsilon_0} \left( \rho_l + \rho_p \right) = \\
+                          &amp; = \frac{1}{\varepsilon_0} \left( \rho_l - \nabla \cdot \mathbf{p} \right) \\
+  \nabla \cdot \left( \varepsilon_0 \mathbf{e} + \mathbf{p} \right) &amp; = \rho_l \\
+  \nabla \cdot  \mathbf{d} &amp; = \rho_l
+\end{aligned}\end{split}\]</div>
 </div>
-<div class="section" id="polarizzazione-e-magnetizzazione-dei-mezzi">
-<h2>Polarizzazione e Magnetizzazione dei mezzi<a class="headerlink" href="#polarizzazione-e-magnetizzazione-dei-mezzi" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>bounded/free charges and currents</p></li>
-</ul>
-</div>
-<div class="section" id="esempi">
-<h2>Esempi<a class="headerlink" href="#esempi" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>conduttori</p></li>
-<li><p>ferromagentici e magnetismo debole (para-, dia-, anti-)</p></li>
-</ul>
 </div>
 </div>
 
@@ -496,20 +555,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="potentials.html"
+       href="circuits-electromechanic.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Potenziali elettromagnetici</p>
+        <p class="prev-next-title">Circuiti elettromeccanici</p>
       </div>
     </a>
     <a class="right-next"
-       href="energy.html"
+       href="optics.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Bilancio di energia del campo elettromagnetico</p>
+        <p class="prev-next-title">Ottica</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -528,10 +587,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vuoto">Vuoto</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mezzi-continui">Mezzi continui</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione-e-magnetizzazione-dei-mezzi">Polarizzazione e Magnetizzazione dei mezzi</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esempi">Esempi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elettrostatica">Elettrostatica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sorgente">Sorgente</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dipolo">Dipolo</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

@@ -49,10 +49,11 @@ $$\rightarrow \qquad 0 = m_1 + m_2 = N_1 \, i_1 + N_2 \, i_2$$
 $$\begin{aligned}
   0 & = \phi_2 - \phi_1 - \phi_{2,d} + \phi_{1,d} \\
     & = \phi_2 - \phi_1 - \frac{m_2}{\theta_{2,d}} + \frac{m_1}{\theta_{1,d}} \\
-    & = \frac{\psi_2}{N_2} - \frac{\psi_1}{N_1} + m_1 \left( \frac{1}{\theta_{1,d}} + \frac{1}{\theta_{2,d}} \right) \\
 \end{aligned}$$
 
-$$\rightarrow \qquad \frac{\psi_2}{N_2} = \frac{\psi_1}{N_1} - \left( \frac{1}{\theta_{1,d}} + \frac{1}{\theta_{2,d}} \right) \, m_1 \ .$$
+$$\rightarrow \qquad \frac{\psi_2}{N_2} - \frac{m_2}{\theta_{2,d}} = \frac{\psi_1}{N_1} - \frac{m_1}{\theta_{1,d}} \ .$$
+$$\rightarrow \qquad \frac{1}{N_2} \left( v_2 - \frac{N_2^2}{\theta_{2,d}} \dfrac{d i_2}{d t} \right) =  
+                     \frac{1}{N_1} \left( v_1 - \frac{N_1^2}{\theta_{1,d}} \dfrac{d i_1}{d t} \right)  \ .$$
 
 
 ## Trasformatore con flussi dispersi e riluttanza $\theta_{Fe}$ nel traferro
@@ -67,6 +68,7 @@ $$\begin{cases}
 
 <span style="color:red">**todo** finire e controllare i conti; disegnare circuito equivalente</span>
 
+<!--
 $$\begin{aligned}
   \frac{\psi_{2}}{N_{2}} & = \phi_2 = \\
                      & = \phi + \phi_{2,d} = \\
@@ -75,7 +77,7 @@ $$\begin{aligned}
                      & = \left( 1 + \frac{\theta_{Fe}}{\theta_{2,d}} \right) \, \phi - \frac{1}{\theta_{2,d}} m_1 = \\
                      & = \left( 1 + \frac{\theta_{Fe}}{\theta_{2,d}} \right) \, \left( \frac{\psi_1}{N_1} - \frac{m_1}{\theta_{1,d}} \right) - \frac{1}{\theta_{2,d}} m_1 = \\
 \end{aligned}$$
-
+-->
 
 
 
