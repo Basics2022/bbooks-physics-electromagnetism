@@ -1,0 +1,52 @@
+\selectlanguage *{english}
+\contentsline {part}{I\hspace {1em}Elettromagnetismo}{3}{part.1}%
+\contentsline {chapter}{\numberline {1}Prime esperienze}{7}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Princìpi dell’elettromagnetismo classico}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Prinicipi in forma differenziale}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Forma integrale su volumi di controllo}{10}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Forma integrale su volumi arbitrari}{10}{subsection.2.2.2}%
+\contentsline {chapter}{\numberline {3}Potenziali elettromagnetici}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Potenziale vettore e potenziale scalare}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Condizioni di gauge}{13}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Leggi costitutive}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Vuoto}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Mezzi continui}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Polarizzazione e Magnetizzazione dei mezzi}{15}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Esempi}{15}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Bilancio di energia del campo elettromagnetico}{17}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Equazioni dell’elettromagnetismo e relatività galileiana}{19}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Onde elettromagnetiche}{21}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Equazioni delle onde in elettromagnetismo}{21}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Potenziali elettromagnetici}{21}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Campo elettrico e campo magnetico}{22}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2}Onde elettromagnetiche piane}{23}{section.7.2}%
+\contentsline {part}{II\hspace {1em}Elettrotecnica}{25}{part.2}%
+\contentsline {chapter}{\numberline {8}Approssimazione circuitale}{29}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Circuiti elettrici}{29}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Validità dell’approccio circuitale}{29}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Induzione elettromagnetica nell’approssimazione circuitale}{30}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}Componenti elementari dei circuiti elettrici}{31}{subsection.8.1.3}%
+\contentsline {subsubsection}{Resistore ohmico}{31}{subsubsection*.3}%
+\contentsline {subsection}{\numberline {8.1.4}Regimi di funzionamento in circuiti elettrici}{32}{subsection.8.1.4}%
+\contentsline {section}{\numberline {8.2}Circuiti elettromagnetici}{32}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Trasformatore}{33}{subsection.8.2.1}%
+\contentsline {subsubsection}{Trasformatore ideale}{33}{subsubsection*.4}%
+\contentsline {subsubsection}{Trasformatore con flussi dispersi}{34}{subsubsection*.5}%
+\contentsline {subsubsection}{Trasformatore con flussi dispersi e riluttanza \(\mittheta _{Fe}\) nel traferro}{34}{subsubsection*.6}%
+\contentsline {section}{\numberline {8.3}Circuiti elettromeccanici}{34}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Sistemi elettromeccanici conservativi}{35}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Equazioni di governo}{36}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Bilancio energetico}{36}{subsection.8.3.3}%
+\contentsline {subsubsection}{Energia meccanica macroscopica}{36}{subsubsection*.7}%
+\contentsline {subsubsection}{Energia cinetica}{36}{subsubsection*.8}%
+\contentsline {subsubsection}{Energia totale}{36}{subsubsection*.9}%
+\contentsline {subsubsection}{Energia interna}{36}{subsubsection*.10}%
+\contentsline {subsubsection}{Energia interna termica (microscopica)}{36}{subsubsection*.11}%
+\contentsline {part}{III\hspace {1em}Metodi numerici}{39}{part.3}%
+\contentsline {chapter}{\numberline {9}Metodi numerici}{43}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Elettrostatica}{43}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Sorgente}{43}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Dipolo}{43}{subsection.9.1.2}%
+\contentsline {part}{IV\hspace {1em}Appendici}{45}{part.4}%
+\contentsline {chapter}{\numberline {10}Ottica}{49}{chapter.10}%
