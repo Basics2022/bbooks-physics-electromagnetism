@@ -437,7 +437,7 @@ document.write(`
 <p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Nov 09, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>3 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>2 min read</p>
 </div>
 </div>
 </div>
@@ -542,7 +542,13 @@ document.write(`
 </div>
 <div class="section" id="energia-interna-termica-microscopica">
 <h3>Energia interna termica (microscopica)<a class="headerlink" href="#energia-interna-termica-microscopica" title="Permalink to this heading">#</a></h3>
-<p>Se si definisce l’energia interna termica, corrispondente all’energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, <span class="math notranslate nohighlight">\(E^{th} = E - V^{int}\)</span>, l’equazione di bilancio dell’energia interna termica è</p>
+<p>Se si definisce l’energia interna termica, corrispondente all’energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  E^{th} &amp; = E - V^{int} = \\,
+  E^{th} &amp; = E - V^{int}
+\end{aligned}\end{split}\]</div>
+<p>l’equazione di bilancio dell’energia interna termica è</p>
 <div class="math notranslate nohighlight">
 \[   \dot{E}^{th} = \dot{Q}^{ext} + \dot{D} \ . \]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -560,28 +566,7 @@ Dimostrazione<div class="sd-summary-down docutils">
     &amp; = \dot{Q}^{ext} + \dot{D} \ .
 \end{aligned}\end{split}\]</div>
 </div>
-</details><p>così che l’equazione dell’energia (elettro-magneto-)meccanica può essere scritta nella forma (<strong>todo</strong> <em>controllare e rendere consistente con la forma del primo principio della termodinamica, il bilancio di energia cinetica e di energia interna</em>)</p>
-<p>avendo riconosciuto il termine di dissipazione <span class="math notranslate nohighlight">\(\dot{D} = \dot{\mathbf{x}}^T \mathbf{D} \dot{\mathbf{x}} + \mathbf{i}^T \mathbf{R} \mathbf{i} \ge 0\)</span> come il termine non negativo.</p>
-<p>Riconoscendo l’energia meccanica come somma dell’energia cinetica e dell’energia potenziale,</p>
-<div class="math notranslate nohighlight">
-\[E^{mec, int} = K + V^{int}\]</div>
-<p>si può ricavare il bilancio di energia cinetica del sistema isolando l’energia cinetica</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \dot{K} &amp; = - \dot{V}^{int} + P^{ext} + P^{int,nc} = \\
-          &amp; = P^{ext} + P^{int} \ . \\
-\end{aligned}\end{split}\]</div>
-<p>Principio della termodinamica,</p>
-<div class="math notranslate nohighlight">
-\[\dot{E}^{tot} = P^{ext} + \dot{Q}^{ext} \ ,\]</div>
-<p>si può ricavare l’equazione di bilancio dell’energia interna,</p>
-<div class="math notranslate nohighlight">
-\[\dot{E} = \dot{Q}^{ext} - P^{int} \ .\]</div>
-<div class="math notranslate nohighlight">
-\[\dot{E} = \dot{Q}^{ext} + \dot{V}^{int} - \dot{D} \ .\]</div>
-<p><strong>todo</strong></p>
-<p>Nel caso di sistema elettromagnetico conservativo (<em>discutere l’ipotesi di fenomeni elettromagnetici conservativi, con l’isteresi, le perdite, e tutti i fenomeni dispersivi e dissipativi che possono far cadere questa ipotesi</em>),</p>
-<p><strong>Con condensatori.</strong> <strong>todo</strong></p>
+</details><p><strong>Con condensatori.</strong> <strong>todo</strong></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Equazioni<div class="sd-summary-down docutils">

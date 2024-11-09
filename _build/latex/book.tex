@@ -2320,7 +2320,7 @@ Nov 09, 2024
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-3 min read
+2 min read
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -2460,7 +2460,7 @@ e quindi
 \subsubsection{Energia cinetica}
 \label{\detokenize{ch/circuits-electromechanic:energia-cinetica}}
 \sphinxAtStartPar
-L’energia meccanica macroscopica può essere scritta come la somma dell’energia cinetica e dell’energia potenziale interna del sistema, \(E^{mec} = K + V^{int}\). La derivata nel tempo dell’energia potenziale delle azioni interne è l’opposto della potenza delle azioni interne conservative; la dissipazione è l’opposto della potenza delle azioni interne non\sphinxhyphen{}conservative. La potenza complessiva delle azioni interne può quindi essere scritta come
+L’energia meccanica macroscopica può essere scritta come la somma dell’energia cinetica e dell’energia potenziale interna del sistema, \(E^{mec} = K + V^{int}\). La derivata nel tempo dell’energia potenziale delle azioni interne è l’opposto della potenza delle azioni interne conservative, \(P^{int, c} = - \dot{V}^{int}\); la dissipazione è l’opposto della potenza delle azioni interne non\sphinxhyphen{}conservative, \(P^{int, nc} = - \dot{D}\). La potenza complessiva delle azioni interne può quindi essere scritta come
 \begin{equation*}
 \begin{split}P^{int} = P^{int, c} + P^{int, nc} = - \dot{V}^{int} - \dot{D} \ ,\end{split}
 \end{equation*}\begin{equation*}
@@ -2486,7 +2486,15 @@ L’energia interna di un sistema è definita come la differenza dell’energia 
 \subsubsection{Energia interna termica (microscopica)}
 \label{\detokenize{ch/circuits-electromechanic:energia-interna-termica-microscopica}}
 \sphinxAtStartPar
-Se si definisce l’energia interna termica, corrispondente all’energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, \(E^{th} = E - V^{int}\), l’equazione di bilancio dell’energia interna termica è
+Se si definisce l’energia interna termica, corrispondente all’energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, o differenza di energia totale ed energia meccanica macrsocopica,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  E^{th} & = E - V^{int} = \\
+         & = E^{tot} - E^{mec} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+l’equazione di bilancio dell’energia interna termica è
 \begin{equation*}
 \begin{split}   \dot{E}^{th} = \dot{Q}^{ext} + \dot{D} \ . \end{split}
 \end{equation*}\subsubsection*{Dimostrazione}
@@ -2498,43 +2506,6 @@ Se si definisce l’energia interna termica, corrispondente all’energia cineti
     & = \dot{Q}^{ext} + \dot{D} \ .
 \end{aligned}\end{split}
 \end{equation*}
-\sphinxAtStartPar
-così che l’equazione dell’energia (elettro\sphinxhyphen{}magneto\sphinxhyphen{})meccanica può essere scritta nella forma (\sphinxstylestrong{todo} \sphinxstyleemphasis{controllare e rendere consistente con la forma del primo principio della termodinamica, il bilancio di energia cinetica e di energia interna})
-
-\sphinxAtStartPar
-avendo riconosciuto il termine di dissipazione \(\dot{D} = \dot{\mathbf{x}}^T \mathbf{D} \dot{\mathbf{x}} + \mathbf{i}^T \mathbf{R} \mathbf{i} \ge 0\) come il termine non negativo.
-
-\sphinxAtStartPar
-Riconoscendo l’energia meccanica come somma dell’energia cinetica e dell’energia potenziale,
-\begin{equation*}
-\begin{split}E^{mec, int} = K + V^{int}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-si può ricavare il bilancio di energia cinetica del sistema isolando l’energia cinetica
-\begin{equation*}
-\begin{split}\begin{aligned}
-  \dot{K} & = - \dot{V}^{int} + P^{ext} + P^{int,nc} = \\
-          & = P^{ext} + P^{int} \ . \\
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Principio della termodinamica,
-\begin{equation*}
-\begin{split}\dot{E}^{tot} = P^{ext} + \dot{Q}^{ext} \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-si può ricavare l’equazione di bilancio dell’energia interna,
-\begin{equation*}
-\begin{split}\dot{E} = \dot{Q}^{ext} - P^{int} \ .\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\dot{E} = \dot{Q}^{ext} + \dot{V}^{int} - \dot{D} \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{todo}
-
-\sphinxAtStartPar
-Nel caso di sistema elettromagnetico conservativo (\sphinxstyleemphasis{discutere l’ipotesi di fenomeni elettromagnetici conservativi, con l’isteresi, le perdite, e tutti i fenomeni dispersivi e dissipativi che possono far cadere questa ipotesi}),
-
 \sphinxAtStartPar
 \sphinxstylestrong{Con condensatori.} \sphinxstylestrong{todo}
 \subsubsection*{Equazioni}

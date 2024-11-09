@@ -93,7 +93,7 @@ e quindi
 $$\dot{E}^{mec} = P^{ext} - \dot{D} \ .$$
 
 ### Energia cinetica
-L'energia meccanica macroscopica può essere scritta come la somma dell'energia cinetica e dell'energia potenziale interna del sistema, $E^{mec} = K + V^{int}$. La derivata nel tempo dell'energia potenziale delle azioni interne è l'opposto della potenza delle azioni interne conservative; la dissipazione è l'opposto della potenza delle azioni interne non-conservative. La potenza complessiva delle azioni interne può quindi essere scritta come
+L'energia meccanica macroscopica può essere scritta come la somma dell'energia cinetica e dell'energia potenziale interna del sistema, $E^{mec} = K + V^{int}$. La derivata nel tempo dell'energia potenziale delle azioni interne è l'opposto della potenza delle azioni interne conservative, $P^{int, c} = - \dot{V}^{int}$; la dissipazione è l'opposto della potenza delle azioni interne non-conservative, $P^{int, nc} = - \dot{D}$. La potenza complessiva delle azioni interne può quindi essere scritta come
 
 $$P^{int} = P^{int, c} + P^{int, nc} = - \dot{V}^{int} - \dot{D} \ ,$$
 
@@ -110,7 +110,14 @@ L'energia interna di un sistema è definita come la differenza dell'energia tota
 $$\dot{E} = Q^{ext} - P^{int} \ .$$
 
 ### Energia interna termica (microscopica)
-Se si definisce l'energia interna termica, corrispondente all'energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, $E^{th} = E - V^{int}$, l'equazione di bilancio dell'energia interna termica è
+Se si definisce l'energia interna termica, corrispondente all'energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, o differenza di energia totale ed energia meccanica macrsocopica,
+
+$$\begin{aligned}
+  E^{th} & = E - V^{int} = \\
+         & = E^{tot} - E^{mec} \ ,
+\end{aligned}$$
+
+l'equazione di bilancio dell'energia interna termica è
 
 $$   \dot{E}^{th} = \dot{Q}^{ext} + \dot{D} \ . $$
 
@@ -123,39 +130,6 @@ $$\begin{aligned}
 \end{aligned}$$
 ```
 
-
-
-così che l'equazione dell'energia (elettro-magneto-)meccanica può essere scritta nella forma (**todo** *controllare e rendere consistente con la forma del primo principio della termodinamica, il bilancio di energia cinetica e di energia interna*)
-
-avendo riconosciuto il termine di dissipazione $\dot{D} = \dot{\mathbf{x}}^T \mathbf{D} \dot{\mathbf{x}} + \mathbf{i}^T \mathbf{R} \mathbf{i} \ge 0$ come il termine non negativo.
-
-Riconoscendo l'energia meccanica come somma dell'energia cinetica e dell'energia potenziale,
-
-$$E^{mec, int} = K + V^{int}$$
-
-si può ricavare il bilancio di energia cinetica del sistema isolando l'energia cinetica
-
-$$\begin{aligned}
-  \dot{K} & = - \dot{V}^{int} + P^{ext} + P^{int,nc} = \\
-          & = P^{ext} + P^{int} \ . \\
-\end{aligned}$$
-
-Principio della termodinamica,
-
-$$\dot{E}^{tot} = P^{ext} + \dot{Q}^{ext} \ ,$$
-
-
-
-
-si può ricavare l'equazione di bilancio dell'energia interna,
-
-$$\dot{E} = \dot{Q}^{ext} - P^{int} \ .$$
-
-$$\dot{E} = \dot{Q}^{ext} + \dot{V}^{int} - \dot{D} \ .$$
-
-**todo**
-
-Nel caso di sistema elettromagnetico conservativo (*discutere l'ipotesi di fenomeni elettromagnetici conservativi, con l'isteresi, le perdite, e tutti i fenomeni dispersivi e dissipativi che possono far cadere questa ipotesi*), 
 
 **Con condensatori.** **todo**
 ```{dropdown} Equazioni
