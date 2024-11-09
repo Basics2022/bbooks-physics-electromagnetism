@@ -522,7 +522,7 @@ document.write(`
 </div>
 <div class="section" id="energia-cinetica">
 <h3>Energia cinetica<a class="headerlink" href="#energia-cinetica" title="Permalink to this heading">#</a></h3>
-<p>L’energia meccanica macroscopica può essere scritta come la somma dell’energia cinetica e dell’energia potenziale interna del sistema, <span class="math notranslate nohighlight">\(E^{mec} = K + V^{int}\)</span>. La derivata nel tempo dell’energia potenziale delle azioni interne è l’opposto della potenza delle azioni interne conservative; la dissipazione è l’opposto della potenza delle azioni interne non-conservative. La potenza complessiva delle azioni interne può quindi essere scritta come</p>
+<p>L’energia meccanica macroscopica può essere scritta come la somma dell’energia cinetica e dell’energia potenziale interna del sistema, <span class="math notranslate nohighlight">\(E^{mec} = K + V^{int}\)</span>. La derivata nel tempo dell’energia potenziale delle azioni interne è l’opposto della potenza delle azioni interne conservative, <span class="math notranslate nohighlight">\(P^{int, c} = - \dot{V}^{int}\)</span>; la dissipazione è l’opposto della potenza delle azioni interne non-conservative, <span class="math notranslate nohighlight">\(P^{int, nc} = - \dot{D}\)</span>. La potenza complessiva delle azioni interne può quindi essere scritta come</p>
 <div class="math notranslate nohighlight">
 \[P^{int} = P^{int, c} + P^{int, nc} = - \dot{V}^{int} - \dot{D} \ ,\]</div>
 <div class="math notranslate nohighlight">
@@ -542,11 +542,11 @@ document.write(`
 </div>
 <div class="section" id="energia-interna-termica-microscopica">
 <h3>Energia interna termica (microscopica)<a class="headerlink" href="#energia-interna-termica-microscopica" title="Permalink to this heading">#</a></h3>
-<p>Se si definisce l’energia interna termica, corrispondente all’energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna,</p>
+<p>Se si definisce l’energia interna termica, corrispondente all’energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, o differenza di energia totale ed energia meccanica macrsocopica,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  E^{th} &amp; = E - V^{int} = \\,
-  E^{th} &amp; = E - V^{int}
+  E^{th} &amp; = E - V^{int} = \\
+         &amp; = E^{tot} - E^{mec} \ ,
 \end{aligned}\end{split}\]</div>
 <p>l’equazione di bilancio dell’energia interna termica è</p>
 <div class="math notranslate nohighlight">
