@@ -110,7 +110,14 @@ L'energia interna di un sistema è definita come la differenza dell'energia tota
 $$\dot{E} = Q^{ext} - P^{int} \ .$$
 
 ### Energia interna termica (microscopica)
-Se si definisce l'energia interna termica, corrispondente all'energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, $E^{th} = E - V^{int}$, l'equazione di bilancio dell'energia interna termica è
+Se si definisce l'energia interna termica, corrispondente all'energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, 
+
+$$\begin{aligned}
+  E^{th} & = E - V^{int} = \\,
+  E^{th} & = E - V^{int}
+\end{aligned}$$
+
+l'equazione di bilancio dell'energia interna termica è
 
 $$   \dot{E}^{th} = \dot{Q}^{ext} + \dot{D} \ . $$
 
