@@ -2320,7 +2320,7 @@ Nov 09, 2024
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-2 min read
+3 min read
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -2454,7 +2454,7 @@ Usando l’espressione \eqref{equation:ch/circuits-electromechanic:classical-ele
 \sphinxAtStartPar
 e quindi
 \begin{equation*}
-\begin{split}\dot{E}^{mec} = P^{ext} - \dot{D} \ ,\end{split}
+\begin{split}\dot{E}^{mec} = P^{ext} - \dot{D} \ .\end{split}
 \end{equation*}
 
 \subsubsection{Energia cinetica}
@@ -2462,17 +2462,42 @@ e quindi
 \sphinxAtStartPar
 L’energia meccanica macroscopica può essere scritta come la somma dell’energia cinetica e dell’energia potenziale interna del sistema, \(E^{mec} = K + V^{int}\). La derivata nel tempo dell’energia potenziale delle azioni interne è l’opposto della potenza delle azioni interne conservative; la dissipazione è l’opposto della potenza delle azioni interne non\sphinxhyphen{}conservative. La potenza complessiva delle azioni interne può quindi essere scritta come
 \begin{equation*}
-\begin{split}P^{int} = P^{int, c} + P^{int, nc} = - \dot{V}^{int} - \dot{D} \ .\end{split}
+\begin{split}P^{int} = P^{int, c} + P^{int, nc} = - \dot{V}^{int} - \dot{D} \ ,\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\dot{K} = \dot{E}^{mec} - \dot{V}^{int} = P^{ext} \underbrace{- \dot{D} - \dot{V}^{int}}_{=P^{int}} \  \end{split}
 \end{equation*}
 
 \subsubsection{Energia totale}
 \label{\detokenize{ch/circuits-electromechanic:energia-totale}}
+\sphinxAtStartPar
+Il primo principio della termodinamica fornisce l’equazione di bilancio dell’energia totale di un sistema chiuso,
+\begin{equation*}
+\begin{split}\dot{E}^{tot} = P^{ext} + \dot{Q}^{ext} \ .\end{split}
+\end{equation*}
 
 \subsubsection{Energia interna}
 \label{\detokenize{ch/circuits-electromechanic:energia-interna}}
+\sphinxAtStartPar
+L’energia interna di un sistema è definita come la differenza dell’energia totale e dell’energia cinetica macroscopica, \(E := E^{tot} - K\). L’equazione di bilancio dell’energia interna di un sistema chiuso è
+\begin{equation*}
+\begin{split}\dot{E} = Q^{ext} - P^{int} \ .\end{split}
+\end{equation*}
 
 \subsubsection{Energia interna termica (microscopica)}
 \label{\detokenize{ch/circuits-electromechanic:energia-interna-termica-microscopica}}
+\sphinxAtStartPar
+Se si definisce l’energia interna termica, corrispondente all’energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, \(E^{th} = E - V^{int}\), l’equazione di bilancio dell’energia interna termica è
+\begin{equation*}
+\begin{split}   \dot{E}^{th} = \dot{Q}^{ext} + \dot{D} \ . \end{split}
+\end{equation*}\subsubsection*{Dimostrazione}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dot{E}^{th} = \dot{E} - V^{int}
+    & = \dot{Q}^{ext} - P^{int} - V^{int} = \\
+    & = \dot{Q}^{ext} + \dot{D} + \dot{V}^{int} - \dot{V}^{int} = \\
+    & = \dot{Q}^{ext} + \dot{D} \ .
+\end{aligned}\end{split}
+\end{equation*}
 \sphinxAtStartPar
 così che l’equazione dell’energia (elettro\sphinxhyphen{}magneto\sphinxhyphen{})meccanica può essere scritta nella forma (\sphinxstylestrong{todo} \sphinxstyleemphasis{controllare e rendere consistente con la forma del primo principio della termodinamica, il bilancio di energia cinetica e di energia interna})
 

@@ -97,14 +97,31 @@ L'energia meccanica macroscopica può essere scritta come la somma dell'energia 
 
 $$P^{int} = P^{int, c} + P^{int, nc} = - \dot{V}^{int} - \dot{D} \ ,$$
 
-$$\dot{K} + \dot{V}^{int} = \dot{E}^{mec} = P^{ext} - \dot{D} \  $$
+$$\dot{K} = \dot{E}^{mec} - \dot{V}^{int} = P^{ext} \underbrace{- \dot{D} - \dot{V}^{int}}_{=P^{int}} \  $$
 
 ### Energia totale
+Il primo principio della termodinamica fornisce l'equazione di bilancio dell'energia totale di un sistema chiuso,
+
+$$\dot{E}^{tot} = P^{ext} + \dot{Q}^{ext} \ .$$
 
 ### Energia interna
+L'energia interna di un sistema è definita come la differenza dell'energia totale e dell'energia cinetica macroscopica, $E := E^{tot} - K$. L'equazione di bilancio dell'energia interna di un sistema chiuso è
+
+$$\dot{E} = Q^{ext} - P^{int} \ .$$
 
 ### Energia interna termica (microscopica)
+Se si definisce l'energia interna termica, corrispondente all'energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, $E^{th} = E - V^{int}$, l'equazione di bilancio dell'energia interna termica è
 
+$$   \dot{E}^{th} = \dot{Q}^{ext} + \dot{D} \ . $$
+
+```{dropdown} Dimostrazione
+$$\begin{aligned}
+  \dot{E}^{th} = \dot{E} - V^{int}
+    & = \dot{Q}^{ext} - P^{int} - V^{int} = \\
+    & = \dot{Q}^{ext} + \dot{D} + \dot{V}^{int} - \dot{V}^{int} = \\
+    & = \dot{Q}^{ext} + \dot{D} \ .
+\end{aligned}$$
+```
 
 
 

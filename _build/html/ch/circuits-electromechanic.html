@@ -404,8 +404,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemi-elettromeccanici-conservativi">Sistemi elettromeccanici conservativi</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equazioni-di-governo">Equazioni di governo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bilancio-energetico">Bilancio energetico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bilancio-energetico">Bilancio energetico</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-meccanica-macroscopica">Energia meccanica macroscopica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-cinetica">Energia cinetica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-totale">Energia totale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-interna">Energia interna</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-interna-termica-microscopica">Energia interna termica (microscopica)</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -429,7 +437,7 @@ document.write(`
 <p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Nov 09, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>2 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>3 min read</p>
 </div>
 </div>
 </div>
@@ -454,6 +462,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathbf{v}(t) = \dfrac{d}{dt} \Big( \mathbf{L}(\mathbf{x}(t)) \, \mathbf{i}(t) \Big) \ .\]</div>
 <p>La matrice di induttanza <span class="math notranslate nohighlight">\(\mathbf{L}\)</span> è simmetrica <strong>todo</strong> <em>Dimostrazione</em></p>
+<div class="section" id="sistemi-elettromeccanici-conservativi">
+<h2>Sistemi elettromeccanici conservativi<a class="headerlink" href="#sistemi-elettromeccanici-conservativi" title="Permalink to this heading">#</a></h2>
 <p>Le equazioni che governano il sistema elettromeccanico, senza condensatori, in generale possono essere scritte come</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
@@ -465,15 +475,15 @@ document.write(`
 \[
 0 = \dot{\mathbf{x}}^T \left[ \mathbf{M} \ddot{\mathbf{x}} + \mathbf{D} \dot{\mathbf{x}} + \mathbf{K} \mathbf{x} - \mathbf{f}^{ext} - \mathbf{f}^{em} \right] + \mathbf{i}^T \left[ \dfrac{d}{dt} \left( \mathbf{L} \mathbf{i} \right) + \mathbf{R} \mathbf{i} - \mathbf{e} \right]
 \]</div>
-<p>Nel caso di matrici di massa, smorzamento e rigidzza costanti, e usando la redivata del prodotto per ottenere un termine di derivata dell’energia degli induttori sfruttando la simmetria di <span class="math notranslate nohighlight">\(\mathbf{L}\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{aligned}
+<p>Nel caso di matrici di massa, smorzamento e rigidzza costanti, e usando la derivata del prodotto per ottenere un termine di derivata dell’energia degli induttori sfruttando la simmetria di <span class="math notranslate nohighlight">\(\mathbf{L}\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-classical-electromagnetism-circuits-electromechanic-energy-mech-0">
+<span class="eqno">(1)<a class="headerlink" href="#equation-classical-electromagnetism-circuits-electromechanic-energy-mech-0" title="Permalink to this equation">#</a></span>\[\begin{split} \begin{aligned}
 \dfrac{d}{dt} \left[ \frac{1}{2} \mathbf{i}^T \mathbf{L} \mathbf{i} \right] 
   &amp; = \mathbf{i}^T \dfrac{d}{dt} \left( \mathbf{L} \, \mathbf{i} \right) + \frac{1}{2} \mathbf{i}^T \dfrac{d \mathbf{L}}{dt} \mathbf{i} = \\
   &amp; = \mathbf{i}^T \dfrac{d}{dt} \left( \mathbf{L} \, \mathbf{i} \right) + \sum_{a} \frac{1}{2} \mathbf{i}^T \dfrac{\partial \mathbf{L}}{\partial x_a} \mathbf{i} \, \dot{x}_a = \\
   &amp; = \mathbf{i}^T \dfrac{d}{dt} \left( \mathbf{L} \, \mathbf{i} \right) + \nabla \left( \frac{1}{2} \mathbf{i}^T \mathbf{L} \mathbf{i} \right) \dot{\mathbf{x}}  \ .
 \end{aligned}\end{split}\]</div>
-<p>si può scrivere</p>
+<p>si può scrivere un’equazione di bilancio dell’energia meccanica macroscopica, <span class="math notranslate nohighlight">\(E^{mec, int}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 0 &amp; = \dfrac{d}{dt} \left[ \dfrac{1}{2} \dot{\mathbf{x}}^T \mathbf{M} \dot{\mathbf{x}} + \dfrac{1}{2} \mathbf{x}^T \mathbf{K} \mathbf{x} + \dfrac{1}{2} \mathbf{i}^T \mathbf{L} \mathbf{i} \right] - \dot{\mathbf{x}}^T \left( \mathbf{f}^{em} - \nabla E^{ind}(\mathbf{x}, \mathbf{i})  \right) + \\
@@ -482,10 +492,11 @@ document.write(`
 \end{split}\]</div>
 <p>Nell’ipotesi che il processo sia conservativo, si ricava la forma delle forze dovute ai fenomeni elettromagnetici,</p>
 <div class="math notranslate nohighlight" id="equation-classical-electromagnetism-circuits-electromechanic-f-em">
-<span class="eqno">(1)<a class="headerlink" href="#equation-classical-electromagnetism-circuits-electromechanic-f-em" title="Permalink to this equation">#</a></span>\[\mathbf{f}^{em} = \nabla_{\mathbf{x}} E^{ind}(\mathbf{x}, \mathbf{i}) \ .\]</div>
+<span class="eqno">(2)<a class="headerlink" href="#equation-classical-electromagnetism-circuits-electromechanic-f-em" title="Permalink to this equation">#</a></span>\[\mathbf{f}^{em} = \nabla_{\mathbf{x}} E^{ind}(\mathbf{x}, \mathbf{i}) \ .\]</div>
+</div>
 <div class="section" id="equazioni-di-governo">
 <h2>Equazioni di governo<a class="headerlink" href="#equazioni-di-governo" title="Permalink to this heading">#</a></h2>
-<p>Usando l’espressione <a class="reference internal" href="#equation-classical-electromagnetism-circuits-electromechanic-f-em">(1)</a> delle azioni meccaniche dovute agli effetti elettromagnetici, del sistema sono</p>
+<p>Usando l’espressione <a class="reference internal" href="#equation-classical-electromagnetism-circuits-electromechanic-f-em">(2)</a> delle azioni meccaniche dovute agli effetti elettromagnetici, del sistema sono</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
   \mathbf{M} \ddot{\mathbf{x}} + \mathbf{D} \dot{\mathbf{x}} + \mathbf{K} \mathbf{x} - \nabla_{\mathbf{x}} E^{ind}(\mathbf{x}, \mathbf{i})  = \mathbf{f}^{ext} \\
@@ -500,11 +511,56 @@ document.write(`
 </div>
 <div class="section" id="bilancio-energetico">
 <h2>Bilancio energetico<a class="headerlink" href="#bilancio-energetico" title="Permalink to this heading">#</a></h2>
-<p>così che l’equazione dell’energia (elettro-magneto-)meccanica può essere scritta nella forma (<strong>todo</strong> <em>controllare e rendere consistente con la forma del primo principio della termodinamica, il bilancio di energia cinetica e di energia interna</em>)</p>
-<div class="math notranslate nohighlight">
-\[\dfrac{d}{dt} E^{mec, int} = P^{ext} - \dot{D} \ ,\]</div>
+<div class="section" id="energia-meccanica-macroscopica">
+<h3>Energia meccanica macroscopica<a class="headerlink" href="#energia-meccanica-macroscopica" title="Permalink to this heading">#</a></h3>
+<p>Usando l’espressione <a class="reference internal" href="#equation-classical-electromagnetism-circuits-electromechanic-f-em">(2)</a> delle azioni meccaniche dovute ai fenomeni elettromagnetici, si può riscrivere la relazione <a class="reference internal" href="#equation-classical-electromagnetism-circuits-electromechanic-energy-mech-0">(1)</a>, come un bilancio di energia meccanica macroscopica del sistema,</p>
 <div class="math notranslate nohighlight">
 \[\dfrac{d}{dt} \left[ \dfrac{1}{2} \dot{\mathbf{x}}^T \mathbf{M} \dot{\mathbf{x}} + \dfrac{1}{2} \mathbf{x}^T \mathbf{K} \mathbf{x} + \dfrac{1}{2} \mathbf{i}^T \mathbf{L} \mathbf{i} \right] = \dot{\mathbf{x}}^T \mathbf{f}^{ext} + \mathbf{i}^T \mathbf{e} - \dot{\mathbf{x}}^T \mathbf{D} \dot{\mathbf{x}} - \mathbf{i}^T \mathbf{R} \mathbf{i} \ , \]</div>
+<p>e quindi</p>
+<div class="math notranslate nohighlight">
+\[\dot{E}^{mec} = P^{ext} - \dot{D} \ .\]</div>
+</div>
+<div class="section" id="energia-cinetica">
+<h3>Energia cinetica<a class="headerlink" href="#energia-cinetica" title="Permalink to this heading">#</a></h3>
+<p>L’energia meccanica macroscopica può essere scritta come la somma dell’energia cinetica e dell’energia potenziale interna del sistema, <span class="math notranslate nohighlight">\(E^{mec} = K + V^{int}\)</span>. La derivata nel tempo dell’energia potenziale delle azioni interne è l’opposto della potenza delle azioni interne conservative; la dissipazione è l’opposto della potenza delle azioni interne non-conservative. La potenza complessiva delle azioni interne può quindi essere scritta come</p>
+<div class="math notranslate nohighlight">
+\[P^{int} = P^{int, c} + P^{int, nc} = - \dot{V}^{int} - \dot{D} \ ,\]</div>
+<div class="math notranslate nohighlight">
+\[\dot{K} = \dot{E}^{mec} - \dot{V}^{int} = P^{ext} \underbrace{- \dot{D} - \dot{V}^{int}}_{=P^{int}} \  \]</div>
+</div>
+<div class="section" id="energia-totale">
+<h3>Energia totale<a class="headerlink" href="#energia-totale" title="Permalink to this heading">#</a></h3>
+<p>Il primo principio della termodinamica fornisce l’equazione di bilancio dell’energia totale di un sistema chiuso,</p>
+<div class="math notranslate nohighlight">
+\[\dot{E}^{tot} = P^{ext} + \dot{Q}^{ext} \ .\]</div>
+</div>
+<div class="section" id="energia-interna">
+<h3>Energia interna<a class="headerlink" href="#energia-interna" title="Permalink to this heading">#</a></h3>
+<p>L’energia interna di un sistema è definita come la differenza dell’energia totale e dell’energia cinetica macroscopica, <span class="math notranslate nohighlight">\(E := E^{tot} - K\)</span>. L’equazione di bilancio dell’energia interna di un sistema chiuso è</p>
+<div class="math notranslate nohighlight">
+\[\dot{E} = Q^{ext} - P^{int} \ .\]</div>
+</div>
+<div class="section" id="energia-interna-termica-microscopica">
+<h3>Energia interna termica (microscopica)<a class="headerlink" href="#energia-interna-termica-microscopica" title="Permalink to this heading">#</a></h3>
+<p>Se si definisce l’energia interna termica, corrispondente all’energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, <span class="math notranslate nohighlight">\(E^{th} = E - V^{int}\)</span>, l’equazione di bilancio dell’energia interna termica è</p>
+<div class="math notranslate nohighlight">
+\[   \dot{E}^{th} = \dot{Q}^{ext} + \dot{D} \ . \]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Dimostrazione<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \dot{E}^{th} = \dot{E} - V^{int}
+    &amp; = \dot{Q}^{ext} - P^{int} - V^{int} = \\
+    &amp; = \dot{Q}^{ext} + \dot{D} + \dot{V}^{int} - \dot{V}^{int} = \\
+    &amp; = \dot{Q}^{ext} + \dot{D} \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details><p>così che l’equazione dell’energia (elettro-magneto-)meccanica può essere scritta nella forma (<strong>todo</strong> <em>controllare e rendere consistente con la forma del primo principio della termodinamica, il bilancio di energia cinetica e di energia interna</em>)</p>
 <p>avendo riconosciuto il termine di dissipazione <span class="math notranslate nohighlight">\(\dot{D} = \dot{\mathbf{x}}^T \mathbf{D} \dot{\mathbf{x}} + \mathbf{i}^T \mathbf{R} \mathbf{i} \ge 0\)</span> come il termine non negativo.</p>
 <p>Riconoscendo l’energia meccanica come somma dell’energia cinetica e dell’energia potenziale,</p>
 <div class="math notranslate nohighlight">
@@ -559,6 +615,7 @@ Equazioni<div class="sd-summary-down docutils">
 </ul>
 </div>
 </details></div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -624,8 +681,16 @@ Equazioni<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistemi-elettromeccanici-conservativi">Sistemi elettromeccanici conservativi</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equazioni-di-governo">Equazioni di governo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bilancio-energetico">Bilancio energetico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bilancio-energetico">Bilancio energetico</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-meccanica-macroscopica">Energia meccanica macroscopica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-cinetica">Energia cinetica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-totale">Energia totale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-interna">Energia interna</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-interna-termica-microscopica">Energia interna termica (microscopica)</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

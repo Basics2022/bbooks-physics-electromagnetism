@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  9 NOV 2024 14:10
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  9 NOV 2024 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1792,45 +1792,45 @@ LaTeX Info: Redefining \rmfamily on input line 2425.
 LaTeX Info: Redefining \sffamily on input line 2425.
 LaTeX Info: Redefining \ttfamily on input line 2425.
  [35]
-LaTeX Info: Redefining \rmfamily on input line 2499.
-LaTeX Info: Redefining \sffamily on input line 2499.
-LaTeX Info: Redefining \ttfamily on input line 2499.
+LaTeX Info: Redefining \rmfamily on input line 2486.
+LaTeX Info: Redefining \sffamily on input line 2486.
+LaTeX Info: Redefining \ttfamily on input line 2486.
  [36]
-LaTeX Info: Redefining \rmfamily on input line 2552.
-LaTeX Info: Redefining \sffamily on input line 2552.
-LaTeX Info: Redefining \ttfamily on input line 2552.
+LaTeX Info: Redefining \rmfamily on input line 2571.
+LaTeX Info: Redefining \sffamily on input line 2571.
+LaTeX Info: Redefining \ttfamily on input line 2571.
  [37]
-LaTeX Info: Redefining \rmfamily on input line 2552.
-LaTeX Info: Redefining \sffamily on input line 2552.
-LaTeX Info: Redefining \ttfamily on input line 2552.
- [38
+LaTeX Info: Redefining \rmfamily on input line 2577.
+LaTeX Info: Redefining \sffamily on input line 2577.
+LaTeX Info: Redefining \ttfamily on input line 2577.
+ [38] [39
 
-] [39] [40]
-LaTeX Info: Redefining \rmfamily on input line 2634.
-LaTeX Info: Redefining \sffamily on input line 2634.
-LaTeX Info: Redefining \ttfamily on input line 2634.
+] [40]
+LaTeX Info: Redefining \rmfamily on input line 2659.
+LaTeX Info: Redefining \sffamily on input line 2659.
+LaTeX Info: Redefining \ttfamily on input line 2659.
  [41]
-LaTeX Info: Redefining \rmfamily on input line 2634.
-LaTeX Info: Redefining \sffamily on input line 2634.
-LaTeX Info: Redefining \ttfamily on input line 2634.
+LaTeX Info: Redefining \rmfamily on input line 2659.
+LaTeX Info: Redefining \sffamily on input line 2659.
+LaTeX Info: Redefining \ttfamily on input line 2659.
  [42
 
 ]
 Chapter 9.
 [43]
-LaTeX Info: Redefining \rmfamily on input line 2746.
-LaTeX Info: Redefining \sffamily on input line 2746.
-LaTeX Info: Redefining \ttfamily on input line 2746.
+LaTeX Info: Redefining \rmfamily on input line 2771.
+LaTeX Info: Redefining \sffamily on input line 2771.
+LaTeX Info: Redefining \ttfamily on input line 2771.
  [44] [45
 
 ] [46]
-LaTeX Info: Redefining \rmfamily on input line 2828.
-LaTeX Info: Redefining \sffamily on input line 2828.
-LaTeX Info: Redefining \ttfamily on input line 2828.
+LaTeX Info: Redefining \rmfamily on input line 2853.
+LaTeX Info: Redefining \sffamily on input line 2853.
+LaTeX Info: Redefining \ttfamily on input line 2853.
  [47]
-LaTeX Info: Redefining \rmfamily on input line 2828.
-LaTeX Info: Redefining \sffamily on input line 2828.
-LaTeX Info: Redefining \ttfamily on input line 2828.
+LaTeX Info: Redefining \rmfamily on input line 2853.
+LaTeX Info: Redefining \sffamily on input line 2853.
+LaTeX Info: Redefining \ttfamily on input line 2853.
  [48
 
 ]
@@ -1871,15 +1871,15 @@ braces):
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
  [49]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2838.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2838.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2863.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2863.
  (./book.aux
 LaTeX Info: Redefining \rmfamily on input line 19.
 LaTeX Info: Redefining \sffamily on input line 19.
 LaTeX Info: Redefining \ttfamily on input line 19.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2838.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2838.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2863.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2863.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: EAF8F98332002BE495F1357758578C8A;4145.
