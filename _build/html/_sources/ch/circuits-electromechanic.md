@@ -93,7 +93,7 @@ e quindi
 $$\dot{E}^{mec} = P^{ext} - \dot{D} \ .$$
 
 ### Energia cinetica
-L'energia meccanica macroscopica può essere scritta come la somma dell'energia cinetica e dell'energia potenziale interna del sistema, $E^{mec} = K + V^{int}$. La derivata nel tempo dell'energia potenziale delle azioni interne è l'opposto della potenza delle azioni interne conservative; la dissipazione è l'opposto della potenza delle azioni interne non-conservative. La potenza complessiva delle azioni interne può quindi essere scritta come
+L'energia meccanica macroscopica può essere scritta come la somma dell'energia cinetica e dell'energia potenziale interna del sistema, $E^{mec} = K + V^{int}$. La derivata nel tempo dell'energia potenziale delle azioni interne è l'opposto della potenza delle azioni interne conservative, $P^{int, c} = - \dot{V}^{int}$; la dissipazione è l'opposto della potenza delle azioni interne non-conservative, $P^{int, nc} = - \dot{D}$. La potenza complessiva delle azioni interne può quindi essere scritta come
 
 $$P^{int} = P^{int, c} + P^{int, nc} = - \dot{V}^{int} - \dot{D} \ ,$$
 
@@ -110,11 +110,11 @@ L'energia interna di un sistema è definita come la differenza dell'energia tota
 $$\dot{E} = Q^{ext} - P^{int} \ .$$
 
 ### Energia interna termica (microscopica)
-Se si definisce l'energia interna termica, corrispondente all'energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, 
+Se si definisce l'energia interna termica, corrispondente all'energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, o differenza di energia totale ed energia meccanica macrsocopica,
 
 $$\begin{aligned}
-  E^{th} & = E - V^{int} = \\,
-  E^{th} & = E - V^{int}
+  E^{th} & = E - V^{int} = \\
+         & = E^{tot} - E^{mec} \ ,
 \end{aligned}$$
 
 l'equazione di bilancio dell'energia interna termica è
