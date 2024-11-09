@@ -437,7 +437,7 @@ document.write(`
 <p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Nov 09, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>2 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>3 min read</p>
 </div>
 </div>
 </div>
@@ -526,17 +526,41 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[P^{int} = P^{int, c} + P^{int, nc} = - \dot{V}^{int} - \dot{D} \ ,\]</div>
 <div class="math notranslate nohighlight">
-\[\dot{K} + \dot{V}^{int} = \dot{E}^{mec} = P^{ext} - \dot{D} \  \]</div>
+\[\dot{K} = \dot{E}^{mec} - \dot{V}^{int} = P^{ext} \underbrace{- \dot{D} - \dot{V}^{int}}_{=P^{int}} \  \]</div>
 </div>
 <div class="section" id="energia-totale">
 <h3>Energia totale<a class="headerlink" href="#energia-totale" title="Permalink to this heading">#</a></h3>
+<p>Il primo principio della termodinamica fornisce l’equazione di bilancio dell’energia totale di un sistema chiuso,</p>
+<div class="math notranslate nohighlight">
+\[\dot{E}^{tot} = P^{ext} + \dot{Q}^{ext} \ .\]</div>
 </div>
 <div class="section" id="energia-interna">
 <h3>Energia interna<a class="headerlink" href="#energia-interna" title="Permalink to this heading">#</a></h3>
+<p>L’energia interna di un sistema è definita come la differenza dell’energia totale e dell’energia cinetica macroscopica, <span class="math notranslate nohighlight">\(E := E^{tot} - K\)</span>. L’equazione di bilancio dell’energia interna di un sistema chiuso è</p>
+<div class="math notranslate nohighlight">
+\[\dot{E} = Q^{ext} - P^{int} \ .\]</div>
 </div>
 <div class="section" id="energia-interna-termica-microscopica">
 <h3>Energia interna termica (microscopica)<a class="headerlink" href="#energia-interna-termica-microscopica" title="Permalink to this heading">#</a></h3>
-<p>così che l’equazione dell’energia (elettro-magneto-)meccanica può essere scritta nella forma (<strong>todo</strong> <em>controllare e rendere consistente con la forma del primo principio della termodinamica, il bilancio di energia cinetica e di energia interna</em>)</p>
+<p>Se si definisce l’energia interna termica, corrispondente all’energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, <span class="math notranslate nohighlight">\(E^{th} = E - V^{int}\)</span>, l’equazione di bilancio dell’energia interna termica è</p>
+<div class="math notranslate nohighlight">
+\[   \dot{E}^{th} = \dot{Q}^{ext} + \dot{D} \ . \]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Dimostrazione<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \dot{E}^{th} = \dot{E} - V^{int}
+    &amp; = \dot{Q}^{ext} - P^{int} - V^{int} = \\
+    &amp; = \dot{Q}^{ext} + \dot{D} + \dot{V}^{int} - \dot{V}^{int} = \\
+    &amp; = \dot{Q}^{ext} + \dot{D} \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details><p>così che l’equazione dell’energia (elettro-magneto-)meccanica può essere scritta nella forma (<strong>todo</strong> <em>controllare e rendere consistente con la forma del primo principio della termodinamica, il bilancio di energia cinetica e di energia interna</em>)</p>
 <p>avendo riconosciuto il termine di dissipazione <span class="math notranslate nohighlight">\(\dot{D} = \dot{\mathbf{x}}^T \mathbf{D} \dot{\mathbf{x}} + \mathbf{i}^T \mathbf{R} \mathbf{i} \ge 0\)</span> come il termine non negativo.</p>
 <p>Riconoscendo l’energia meccanica come somma dell’energia cinetica e dell’energia potenziale,</p>
 <div class="math notranslate nohighlight">
