@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bilancio di energia del campo elettromagnetico &#8212; My sample book</title>
+    <title>Bilancio di energia del campo elettromagnetico &#8212; Elettromagnetismo ed elettrotecnica</title>
   
   
   
@@ -155,8 +155,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Elettromagnetismo ed elettrotecnica - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Elettromagnetismo ed elettrotecnica - Home"/>`);</script>
   
   
 </a></div>
@@ -415,10 +415,10 @@ document.write(`
 <p class="sd-p-0 sd-m-0">basics</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Nov 09, 2024</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Nov 13, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>2 min read</p>
 </div>
 </div>
 </div>
@@ -465,12 +465,74 @@ document.write(`
 <p>che permette di scrivere l’equazione del bilancio di energia elettromagnetica come,</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial u }{\partial t} + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j} \ ,\]</div>
-<p>dove è stato definito il <strong>vettore di Poynting</strong>, o meglio il campo vettoriale di Poynting</p>
+<p>dove è stato definito il <strong>vettore di Poynting</strong>, o meglio il campo vettoriale di Poynting,</p>
 <div class="math notranslate nohighlight">
-\[\mathbf{s}(\mathbf{r},t) := - \mathbf{e}(\mathbf{r},t) \times \mathbf{h}(\mathbf{r},t) \ ,\]</div>
+\[\mathbf{s}(\mathbf{r},t) := \mathbf{e}(\mathbf{r},t) \times \mathbf{h}(\mathbf{r},t) \ ,\]</div>
 <p>che può essere identificato come un flusso di potenza per unità di superficie, comparendo sotto l’operatore di divergenza nel bilnacio di energia.</p>
 <p><strong>todo.</strong> Rimandare a una sezione in cui si mostra questa ultima affermazione passando dal bilancio differenziale al bilancio integrale e si usa il teorema della divergenza, <span class="math notranslate nohighlight">\(\int_V \nabla \cdot \mathbf{s} = \oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}}\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Procedimento alternativo (e più generale?)<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>todo</strong> <em>In caso questo procedimento sia più generale, o più corretto, sostituire il procedimento precedente.</em></p>
+<p class="sd-card-text">La carica elementare in un volumetto <span class="math notranslate nohighlight">\(\Delta V\)</span> è data da dal prodotto tra il volume e la densità volumetrica di carica, <span class="math notranslate nohighlight">\(\rho \Delta V\)</span>; la velocità media locale della carica elettrica è <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>; la forza agente sulla carica elementare immersa in un campo elettromagnetico è determinata dalla formula di Lorentz, <span class="math notranslate nohighlight">\(\mathbf{f} \Delta V = \Delta V \rho \left( \mathbf{e} - \mathbf{b} \times \mathbf{v} \right)\)</span>. La potenza di questa forza è il prodotto scalare con la velocità media delle cariche, <span class="math notranslate nohighlight">\(\Delta V \mathbf{f} \cdot \mathbf{v}\)</span></p>
+<p class="sd-card-text">La potenza del campo elettromagnetico sul moto della carica elettrica per unità di volume è quindi</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{v} \cdot \mathbf{f} = \rho \mathbf{v} \cdot \left( \mathbf{e} - \mathbf{b} \times \mathbf{v} \right) = \rho \mathbf{v} \cdot \mathbf{e} = \mathbf{j} \cdot \mathbf{e} \ .\]</div>
+<p class="sd-card-text"><strong>todo</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">discutere questo termine del bilancio di energia cinetica nel moto della carica elettrica</p></li>
+<li><p class="sd-card-text">questo termine compare con segno opposto nel bilancio dell’energia elettromagnetica del sistema</p></li>
+<li><p class="sd-card-text">dove compare la non-conservatività del problema in presenza di materiali dissipativi (come resistenza elettrica con <span class="math notranslate nohighlight">\(\mathbf{e} = \rho_R \mathbf{j}\)</span>?</p></li>
+</ul>
+<p class="sd-card-text">Il termine <span class="math notranslate nohighlight">\(\mathbf{e} \cdot \mathbf{j}\)</span> può essere manipolato usando le equazioni di Maxwell, e le relazioni</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \mathbf{d} = \varepsilon_0 \mathbf{e} + \mathbf{p} \\
+  \mathbf{h} = \frac{\mathbf{b}}{\mu_0} - \mathbf{m} \\
+\end{cases}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{e} \cdot \mathbf{j} 
+    &amp; = \mathbf{e} \cdot \left( \nabla \times \mathbf{h} - \partial_t \mathbf{d} \right) = \\
+    &amp; = - \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) + \mathbf{h} \cdot \nabla \times \mathbf{e} - \mathbf{e} \cdot \partial_t \mathbf{d} = \\
+    &amp; = - \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) - \mathbf{h} \cdot \partial_t \mathbf{b} - \mathbf{e} \cdot \partial_t \mathbf{d} 
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Gli ultimi due termini possono essere manipolati in diverse maniere,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{e} \cdot \partial_t \mathbf{d}
+    = \mathbf{e} \cdot \partial_t \left( \varepsilon_0 \mathbf{e} + \mathbf{p} \right) 
+  &amp; = \partial_t \left( \frac{1}{2} \varepsilon_0 \mathbf{e} \cdot \mathbf{e} \right) + \mathbf{e} \cdot \partial_t \mathbf{p} \\
+  &amp; = \partial_t \left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} \right) + \frac{1}{2} \left( \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} \right) \\
+  &amp; = \partial_t \left( \frac{1}{2 \varepsilon_0} \mathbf{d} \cdot \mathbf{d} \right) - \frac{\mathbf{p}}{\varepsilon_0} \cdot \partial_t \mathbf{d} \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{h} \cdot \partial_t \mathbf{b}
+    = \mathbf{h} \cdot \partial_t \left( \mu_0 \mathbf{h} + \mu_0 \mathbf{m} \right) 
+  &amp; = \partial_t \left( \frac{1}{2} \mu_0 \mathbf{h} \cdot \mathbf{h} \right) + \mu_0 \mathbf{h} \cdot \partial_t \mathbf{m} \\
+  &amp; = \partial_t \left( \frac{1}{2} \mathbf{b} \cdot \mathbf{h} \right) + \frac{1}{2} \mu_0 \left( \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \\
+  &amp; = \partial_t \left( \frac{1}{2 \mu_0} \mathbf{b} \cdot \mathbf{b} \right) - \mathbf{m} \cdot \partial_t \mathbf{b} \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Nel vuoto o in mezzi lineari <span class="math notranslate nohighlight">\(\mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} = \mathbf{0}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} = \mathbf{0}\)</span>. Usando le seconde espressioni, si può riscrivere l’equazione dell’energia del campo elettromagnetico come</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial_t \left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} + \frac{1}{2} \mathbf{b} \cdot \mathbf{h} \right) + \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) &amp; = - \ \mathbf{e} \cdot \mathbf{j} \ + \\
+   &amp; \quad - \frac{1}{2} \left[ \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} + \mu_0 \left(  \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \right]
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">o, usando le definizioni di densità di energia elettromagnetica <span class="math notranslate nohighlight">\(u\)</span> e vettore di Poynting <span class="math notranslate nohighlight">\(\mathbf{s}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+  \partial_t u + \nabla \cdot \mathbf{s} =
+    - \ \mathbf{e} \cdot \mathbf{j} \
+    - \frac{1}{2} \left[ \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} + \mu_0 \left(  \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \right]
+\]</div>
 </div>
+</details></div>
 
     <script type="text/x-thebe-config">
     {
