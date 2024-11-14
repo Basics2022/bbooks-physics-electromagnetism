@@ -410,7 +410,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione">Polarizzazione</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetizzazione">Magnetizzazione</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#formula-di-biot-savart">Formula di Biot-Savart</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#momento-magnetico">Momento magnetico</a></li>
 </ul>
 </li>
 </ul>
@@ -527,13 +526,29 @@ $$\frac{\mathbf{r}}{|\mathbf{r}|^3} = \frac{\mathbf{r}_0 + \delta \mathbf{r}}$$
  &amp; = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \pi R^2 \frac{ \hat{\mathbf{n}} - 3 \hat{\mathbf{n}} \cdot \hat{\mathbf{r}} \, \hat{\mathbf{r}} }{r^3} = \\
  &amp; = \frac{\mu}{4 \pi} i(\mathbf{r}_0) \pi R^2 \frac{ 3 \hat{\mathbf{n}} \cdot \hat{\mathbf{r}} \, \hat{\mathbf{r}} - \hat{\mathbf{n}} }{r^3} = \\
 \end{aligned}\end{split}\]</div>
-<p>e definendo il momento magnetico <span class="math notranslate nohighlight">\(\mathbf{m}(\mathbf{r}_0) := \hat{\mathbf{n}} \, i(\mathbf{r}_0) \pi R^2 = \hat{\mathbf{n}} \, i(\mathbf{r}_0) \, A \)</span>, si ottiene l’espressione del campo magnetico generato <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> dal <strong>dipolo magnetico</strong> in <span class="math notranslate nohighlight">\(\mathbf{r}_0\)</span>,</p>
+<p>e definendo il <strong>momento magnetico</strong> <span class="math notranslate nohighlight">\(\mathbf{m}(\mathbf{r}_0) := \hat{\mathbf{n}} \, i(\mathbf{r}_0) \pi R^2 = \hat{\mathbf{n}} \, i(\mathbf{r}_0) \, A \)</span>, si ottiene l’espressione del campo magnetico generato <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> dal <strong>dipolo magnetico</strong> in <span class="math notranslate nohighlight">\(\mathbf{r}_0\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{b}(\mathbf{r}) = \frac{\mu}{4 \pi} \left[ 3 \mathbf{m} \cdot \frac{(\mathbf{r}- \mathbf{r}_0) (\mathbf{r}- \mathbf{r}_0)}{|\mathbf{r}- \mathbf{r}_0|^5} - \frac{\mathbf{m} }{|\mathbf{r}- \mathbf{r}_0|^3} \right]\]</div>
-<p>\mathbf{b}(\mathbf{r}_0)</p>
-</div>
-<div class="section" id="momento-magnetico">
-<h4>Momento magnetico<a class="headerlink" href="#momento-magnetico" title="Permalink to this heading">#</a></h4>
+<p>Data una densità di momento magnetico <span class="math notranslate nohighlight">\(\mathbf{m}\)</span> tale che il momento magnetico elementare <span class="math notranslate nohighlight">\(d \mathbf{M}\)</span> di un volume elementare <span class="math notranslate nohighlight">\(d V\)</span></p>
+<div class="math notranslate nohighlight">
+\[d \mathbf{M}(\mathbf{r}_0) = \mathbf{m}(\mathbf{r}_0) \, dV(\mathbf{r}_0) \ ,\]</div>
+<p>il campo magnetico generato nel punto <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> è</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mathbf{b}(\mathbf{r})
+  &amp; = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \left[ 3 \frac{(\mathbf{r} - \mathbf{r}_0)(\mathbf{r} - \mathbf{r}_0)}{|\mathbf{r} - \mathbf{r}_0|^5} \cdot \mathbf{m}(\mathbf{r}_0) - \frac{\mathbf{m}(\mathbf{r}_0)}{|\mathbf{r} - \mathbf{r}_0|^3} \right] \, dV_{\mathbf{r}_0} = \\
+  &amp; = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \cdot \mathbf{m}(\mathbf{r}_0) \, dV_{\mathbf{r}_0}
+\end{aligned}\end{split}\]</div>
+<p>e usando la regola della derivata del prodotto,</p>
+<div class="math notranslate nohighlight">
+\[\partial_i \left( \frac{r_k}{|r|^3} \right) \, m_i = \partial_i \left( \frac{r_k \, m_i}{r^3} \right) - \frac{r_k}{r^3} \partial_i m_i \ ,\]</div>
+<p>e la regola di integrazione per parti (o il teorema della divergenza…)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{b}(\mathbf{r})
+  &amp; = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \cdot \mathbf{m}(\mathbf{r}_0) \, dV_{\mathbf{r}_0} = \\
+  &amp; = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \left[- \nabla_{\mathbf{r}_0} \cdot \left( \frac{\mathbf{m}(\mathbf{r}_0) \cdot (\mathbf{r} - \mathbf{r}_0)}{|\mathbf{r} - \mathbf{r}_0|^5} \right) +  \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \nabla_{\mathbf{r}_0} \cdot \mathbf{m}(\mathbf{r}_0) \right] \, dV_{\mathbf{r}_0}
+\end{aligned}\end{split}\]</div>
 </div>
 </div>
 </div>
@@ -615,7 +630,6 @@ $$\frac{\mathbf{r}}{|\mathbf{r}|^3} = \frac{\mathbf{r}_0 + \delta \mathbf{r}}$$
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione">Polarizzazione</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetizzazione">Magnetizzazione</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#formula-di-biot-savart">Formula di Biot-Savart</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#momento-magnetico">Momento magnetico</a></li>
 </ul>
 </li>
 </ul>

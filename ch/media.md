@@ -83,13 +83,35 @@ $$\begin{aligned}
  & = \frac{\mu}{4 \pi} i(\mathbf{r}_0) \pi R^2 \frac{ 3 \hat{\mathbf{n}} \cdot \hat{\mathbf{r}} \, \hat{\mathbf{r}} - \hat{\mathbf{n}} }{r^3} = \\
 \end{aligned}$$
 
-e definendo il momento magnetico $\mathbf{m}(\mathbf{r}_0) := \hat{\mathbf{n}} \, i(\mathbf{r}_0) \pi R^2 = \hat{\mathbf{n}} \, i(\mathbf{r}_0) \, A $, si ottiene l'espressione del campo magnetico generato $\mathbf{r}$ dal **dipolo magnetico** in $\mathbf{r}_0$,
+e definendo il **momento magnetico** $\mathbf{m}(\mathbf{r}_0) := \hat{\mathbf{n}} \, i(\mathbf{r}_0) \pi R^2 = \hat{\mathbf{n}} \, i(\mathbf{r}_0) \, A $, si ottiene l'espressione del campo magnetico generato $\mathbf{r}$ dal **dipolo magnetico** in $\mathbf{r}_0$,
 
 $$\mathbf{b}(\mathbf{r}) = \frac{\mu}{4 \pi} \left[ 3 \mathbf{m} \cdot \frac{(\mathbf{r}- \mathbf{r}_0) (\mathbf{r}- \mathbf{r}_0)}{|\mathbf{r}- \mathbf{r}_0|^5} - \frac{\mathbf{m} }{|\mathbf{r}- \mathbf{r}_0|^3} \right]$$
 
+Data una densità di momento magnetico $\mathbf{m}$ tale che il momento magnetico elementare $d \mathbf{M}$ di un volume elementare $d V$
+
+$$d \mathbf{M}(\mathbf{r}_0) = \mathbf{m}(\mathbf{r}_0) \, dV(\mathbf{r}_0) \ ,$$
+
+il campo magnetico generato nel punto $\mathbf{r}$ è
+
+$$\begin{aligned}
+\mathbf{b}(\mathbf{r})
+  & = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \left[ 3 \frac{(\mathbf{r} - \mathbf{r}_0)(\mathbf{r} - \mathbf{r}_0)}{|\mathbf{r} - \mathbf{r}_0|^5} \cdot \mathbf{m}(\mathbf{r}_0) - \frac{\mathbf{m}(\mathbf{r}_0)}{|\mathbf{r} - \mathbf{r}_0|^3} \right] \, dV_{\mathbf{r}_0} = \\
+  & = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \cdot \mathbf{m}(\mathbf{r}_0) \, dV_{\mathbf{r}_0}
+\end{aligned}$$
+
+e usando la regola della derivata del prodotto,
+
+$$\partial_i \left( \frac{r_k}{|r|^3} \right) \, m_i = \partial_i \left( \frac{r_k \, m_i}{r^3} \right) - \frac{r_k}{r^3} \partial_i m_i \ ,$$
+
+e la regola di integrazione per parti (o il teorema della divergenza...)
+
+$$\begin{aligned}
+  \mathbf{b}(\mathbf{r})
+  & = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \cdot \mathbf{m}(\mathbf{r}_0) \, dV_{\mathbf{r}_0} = \\
+  & = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \left[- \nabla_{\mathbf{r}_0} \cdot \left( \frac{\mathbf{m}(\mathbf{r}_0) \cdot (\mathbf{r} - \mathbf{r}_0)}{|\mathbf{r} - \mathbf{r}_0|^5} \right) +  \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \nabla_{\mathbf{r}_0} \cdot \mathbf{m}(\mathbf{r}_0) \right] \, dV_{\mathbf{r}_0}
+\end{aligned}$$
 
 
-#### Momento magnetico
 
 
 
