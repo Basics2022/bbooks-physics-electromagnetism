@@ -58,6 +58,24 @@ che può essere identificato come un flusso di potenza per unità di superficie,
 
 **todo.** Rimandare a una sezione in cui si mostra questa ultima affermazione passando dal bilancio differenziale al bilancio integrale e si usa il teorema della divergenza, $\int_V \nabla \cdot \mathbf{s} = \oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}}$.
 
+
+```{dropdown} Bilancio di energia di cariche nel vuoto, o i materiali senza polarizzazione o magnetizzazione
+:open:
+
+**Moto di cariche puntiformi.**
+L'equazione del moto di carica puntiforme $q_k$ nella posizione $\mathbf{r}_k(t)$ al tempo $t$ è
+
+$$m_k \ddot{\mathbf{r}}_k = \mathbf{f}_k + \mathbf{f}_k^{em} \ ,$$
+
+avendo riconosciuto i contributi di forza dovuti al campo elettromagnetico come $\mathbf{f}_k^{em}$ dagli altri. L'espressione della forza dovuta al campo elettromagnetico sulla carica $k$ è data dalla forza di Lorentz,
+
+$$\mathbf{f}_k^{em}(t) = q_k \left( \mathbf{e}(\mathbf{r_k}(t), t) - \mathbf{b}(\mathbf{r}_k(t), t) \times \dot{\mathbf{r}}_k(t) \right)$$
+
+```
+
+
+
+
 ```{dropdown} Procedimento alternativo (e più generale?)
 :open:
 
