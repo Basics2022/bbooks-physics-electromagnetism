@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leggi costitutive &#8212; Elettromagnetismo ed elettrotecnica</title>
+    <title>Elettromagnetismo nella materia &#8212; Elettromagnetismo ed elettrotecnica</title>
   
   
   
@@ -175,7 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Prime esperienze</a></li>
 <li class="toctree-l1"><a class="reference internal" href="principles.html">Princìpi dell’elettromagnetismo classico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="potentials.html">Potenziali elettromagnetici</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Leggi costitutive</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Elettromagnetismo nella materia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="energy.html">Bilancio di energia del campo elettromagnetico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">Equazioni dell’elettromagnetismo e relatività galileiana</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">Onde elettromagnetiche</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -394,7 +394,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Leggi costitutive</h1>
+    <h1>Elettromagnetismo nella materia</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -406,8 +406,20 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vuoto">Vuoto</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mezzi-continui">Mezzi continui</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione">Polarizzazione</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#singolo-dipolo-elettrico">Singolo dipolo elettrico</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuzione-continua-di-dipoli">Distribuzione continua di dipoli</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#riformulazione-delle-equazioni-di-maxwell-e-della-continuita-della-carica">Riformulazione delle equazioni di Maxwell e della continuità della carica</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momento-magnetico">Momento magnetico</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#singolo-momento-magnetico-limite-di-una-spira-elementare">Singolo momento magnetico (limite di una spira elementare)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuzione-continua-di-momento-magnetico">Distribuzione continua di momento magnetico</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Riformulazione delle equazioni di Maxwell e della continuità della carica</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione-e-magnetizzazione-dei-mezzi">Polarizzazione e Magnetizzazione dei mezzi</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione">Polarizzazione</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Polarizzazione</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetizzazione">Magnetizzazione</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#formula-di-biot-savart">Formula di Biot-Savart</a></li>
 </ul>
@@ -435,41 +447,254 @@ document.write(`
 <p class="sd-p-0 sd-m-0">basics</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Nov 14, 2024</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Nov 15, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>4 min read</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="leggi-costitutive">
-<span id="classical-electromagnetism-media"></span><h1>Leggi costitutive<a class="headerlink" href="#leggi-costitutive" title="Permalink to this heading">#</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="elettromagnetismo-nella-materia">
+<span id="classical-electromagnetism-media"></span><h1>Elettromagnetismo nella materia<a class="headerlink" href="#elettromagnetismo-nella-materia" title="Permalink to this heading">#</a></h1>
 <p><strong>todo</strong></p>
 <div class="section" id="vuoto">
 <h2>Vuoto<a class="headerlink" href="#vuoto" title="Permalink to this heading">#</a></h2>
-<p>“vuoto di materia, ma non di proprietà fisiche”</p>
+<p>I fenomeni elettromagnetici nel vuoto sono governati dalle equazioni di Maxwell nel vuoto,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+\nabla \cdot \mathbf{e} = \frac{\rho}{\varepsilon_0} \\
+\nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\
+\nabla \cdot \mathbf{b} = 0 \\
+\nabla \times \mathbf{b} - \mu_0 \varepsilon_0 \partial_t \mathbf{e} = \mu_0 \mathbf{j}
+\end{cases}\end{split}\]</div>
+<p>e dall’equazione della continuità della carica elettrica,</p>
+<div class="math notranslate nohighlight">
+\[\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ .\]</div>
 </div>
 <div class="section" id="mezzi-continui">
 <h2>Mezzi continui<a class="headerlink" href="#mezzi-continui" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>leggi costitutive generali</p></li>
-<li><p>mezzi lineari non disperivi:</p>
-<ul>
-<li><p>e isotropi</p></li>
-</ul>
-</li>
-</ul>
+<p>In generale, alcuni materiali rispondono a un campo elettromagnetico “esterno” imposto, con una polarizzazione e una magnetizzazione. In particolare, la polarizzazione elettrica di un materiale corrisponde a una separazione locale delle cariche elettriche dal punto di vista macroscopico equivalente a una densità di volume di dipoli, <span class="math notranslate nohighlight">\(\mathbf{p}(\mathbf{r}_0)\)</span>; la magnetizzazione corrisponde a un orientamento degli assi delle spire delle correnti amperiane dal punto di vista macroscopico equivalente a una densità di momento magnetico <span class="math notranslate nohighlight">\(\mathbf{m}(\mathbf{r}_0)\)</span>.</p>
+</div>
+<div class="section" id="polarizzazione">
+<h2>Polarizzazione<a class="headerlink" href="#polarizzazione" title="Permalink to this heading">#</a></h2>
+<div class="section" id="singolo-dipolo-elettrico">
+<h3>Singolo dipolo elettrico<a class="headerlink" href="#singolo-dipolo-elettrico" title="Permalink to this heading">#</a></h3>
+<p>Un dipolo elettrico discreto è formato da due cariche elettriche uguali e opposte <span class="math notranslate nohighlight">\(q\)</span>, <span class="math notranslate nohighlight">\(-q\)</span>, nei punti <span class="math notranslate nohighlight">\(P_+\)</span>, <span class="math notranslate nohighlight">\(P_- = P_+ \mathbf{l}\)</span>, nel limite <span class="math notranslate nohighlight">\(q \rightarrow +\infty\)</span>, <span class="math notranslate nohighlight">\(|\mathbf{l}| \rightarrow 0\)</span> con <span class="math notranslate nohighlight">\(q |\mathbf{e}|\)</span> finito.</p>
+<p>Il campo elettrico (stazioario <strong>todo</strong> <em>controllare cosa succede nel caso non stazionario. Magari dopo aver derivato la soluzione generale del problema, come soluzione delle equazioni delle onde  in termini dei potenziali EM</em>) generato nel punto dello spazio <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> da un dipolo elettrico nel punto <span class="math notranslate nohighlight">\(\mathbf{r}_0\)</span> viene calcolato come limite del campo elettrico generato da due cariche uguali e opposte <span class="math notranslate nohighlight">\(q^{\mp}\)</span> nei punti <span class="math notranslate nohighlight">\(\mathbf{r}_0 \mp \frac{\mathbf{l}}{2}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{e}(\mathbf{r}) = -\frac{q}{4 \pi \varepsilon_0} \frac{\mathbf{r} - \left( \mathbf{r}_0 - \frac{\mathbf{l}}{2} \right)}{\left|\mathbf{r} - \left( \mathbf{r}_0 - \frac{\mathbf{l}}{2} \right)\right|^3} + \frac{q}{4 \pi \varepsilon_0} \frac{\mathbf{r} - \left( \mathbf{r}_0 + \frac{\mathbf{l}}{2} \right)}{\left|\mathbf{r} - \left( \mathbf{r}_0 + \frac{\mathbf{l}}{2} \right)\right|^3} \ .\]</div>
+<p>Usando la formula per la derivata dei termini</p>
+<div class="math notranslate nohighlight">
+\[\partial_{\ell_k} \frac{x_i \pm \frac{\ell_i}{2}}{\left|\mathbf{x} \pm \frac{\mathbf{l}}{2} \right|^3} = \frac{1}{2} \left[ \pm \frac{\delta_{ik}}{r^3} - 3 r^{-4} \left( \pm \frac{x_k \pm \frac{\ell_k}{2}}{r} \right) \right]\]</div>
+<div class="math notranslate nohighlight">
+\[\left. \partial_{\ell_k} \frac{x_i \pm \frac{\ell_i}{2}}{\left|\mathbf{x} \pm \frac{\mathbf{l}}{2} \right|^3} \right|_{\mathbf{l} = \mathbf{0}} = \mp \frac{1}{2} \left[ - \frac{\delta_{ik}}{|\mathbf{x}|^3} + 3 \left( \frac{x_k}{r^5} \right) \right] = \mp \frac{1}{2} \partial_{r_{0 k}} \frac{r_i - r_{0 i}}{|\mathbf{r} - \mathbf{r}_0|^3} = \mp \frac{1}{2} \nabla_{\mathbf{r}_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \]</div>
+<p>si ricava l’apporssimazione al primo ordine in <span class="math notranslate nohighlight">\(\mathbf{l}\)</span> dei due termini</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \frac{\mathbf{r} - \left( \mathbf{r}_0 \mp \frac{\mathbf{l}}{2} \right)}{\left|\mathbf{r} - \left( \mathbf{r}_0 \mp \frac{\mathbf{l}}{2} \right)\right|^3} 
+  &amp; = \frac{\mathbf{r} - \mathbf{r}_0 }{\left|\mathbf{r} - \mathbf{r}_0 \right|^3} \pm \mathbf{l} \cdot \frac{1}{2} \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) + o(|\mathbf{l}|)\\
+\end{aligned}\end{split}\]</div>
+<p>e, definendo l’intensità del dipolo <span class="math notranslate nohighlight">\(\mathbf{P}_0 := q \mathbf{l}\)</span> e facendo tendere le grandezze al limite desiderato, quella del campo elettrico</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{e}(\mathbf{r})
+  &amp; = - \frac{1}{4\pi \varepsilon_0} \, \mathbf{P}_0 \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right)   = \\
+  &amp; = - \frac{1}{4\pi \varepsilon_0} \left[ \frac{(\mathbf{r}-\mathbf{r}_0)(\mathbf{r}-\mathbf{r}_0)}{|\mathbf{r}-\mathbf{r}_0|^5} \cdot \mathbf{P}_0 - \frac{\mathbf{P}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \right] = \\
+  &amp; = - \frac{1}{4\pi \varepsilon_0} \left[ \frac{(\mathbf{r}-\mathbf{r}_0) \otimes (\mathbf{r}-\mathbf{r}_0)}{|\mathbf{r}-\mathbf{r}_0|^5} - \frac{\mathbb{I}}{|\mathbf{r}-\mathbf{r}_0|^3} \right] \cdot \mathbf{P}_0 \ .
+\end{aligned}\end{split}\]</div>
+<p><strong>todo</strong> nel caso generale sarebbe necessario prestare attenzione all’ordine dei fattori nel prodotto tra vettori e tensori, ma in questo caso si può sfruttare la simmetria del tensore del secondo ordine (o delle operazioni).</p>
+</div>
+<div class="section" id="distribuzione-continua-di-dipoli">
+<h3>Distribuzione continua di dipoli<a class="headerlink" href="#distribuzione-continua-di-dipoli" title="Permalink to this heading">#</a></h3>
+<p>Una distribuzione di dipoli con densità di volume <span class="math notranslate nohighlight">\(\mathbf{p}(\mathbf{r_0})\)</span>, che produce il dipolo elementare <span class="math notranslate nohighlight">\(\Delta \mathbf{P}(\mathbf{r}_0) = \mathbf{p}(\mathbf{r}_0) dV_0\)</span> nel volume <span class="math notranslate nohighlight">\(d V_0\)</span>, produce il campo elettrico</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{e}(\mathbf{r}) = \int_{\mathbf{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \mathbf{p}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \ , \]</div>
+<p>la cui espressione può essere riscritta usando le regole di integrazione per parti</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mathbf{e}(\mathbf{r})
+  &amp; = \int_{\mathbf{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \mathbf{p}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
+  &amp; = \oint_{\mathbf{r}_0 \in \partial V_0} \frac{1}{4 \pi \varepsilon_0}  \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \underbrace{ \hat{\mathbf{n}}(\mathbf{r}_0) \cdot \mathbf{p}(\mathbf{r}_0) }_{ =: \sigma_P(\mathbf{r}_0)}  + \int_{\mathbf{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \underbrace{ \left( - \nabla_{\mathbf{r}_0} \cdot \mathbf{p}(\mathbf{r}_0) \right)}_{ =: \rho_P(\mathbf{r}_0) } \ , \\
+\end{aligned}\end{split}\]</div>
+<p>avendo definito le densità di carica di polarizzazione superficiale <span class="math notranslate nohighlight">\(\sigma_P\)</span> e di volume <span class="math notranslate nohighlight">\(\rho_P\)</span> come le intensità delle sorgenti distribuite di campo elettrico, in analogia con l’espressione della legge di Coulomb.</p>
+</div>
+<div class="section" id="riformulazione-delle-equazioni-di-maxwell-e-della-continuita-della-carica">
+<h3>Riformulazione delle equazioni di Maxwell e della continuità della carica<a class="headerlink" href="#riformulazione-delle-equazioni-di-maxwell-e-della-continuita-della-carica" title="Permalink to this heading">#</a></h3>
+<p>L’equazione di Gauss determina la densità di flusso nel volume del campo elettrico <span class="math notranslate nohighlight">\(\mathbf{e}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot \mathbf{e} = \frac{\rho}{\varepsilon_0} \ .\]</div>
+<p>Scomponendo la densità di carica come somma delle <strong>cariche libere</strong> <span class="math notranslate nohighlight">\(\rho_f\)</span> e delle <strong>cariche di polarizzazione</strong> <span class="math notranslate nohighlight">\(\rho_P := - \nabla \cdot \mathbf{p}\)</span>, si può rielaborare l’equazione di Gauss,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ &amp; \nabla \cdot \mathbf{e} = \frac{\rho_f + \rho_P}{\varepsilon_0} \\
+ &amp; \nabla \cdot \left( \varepsilon_0 \mathbf{e} + \mathbf{p} \right) = \rho_f \\ \\
+ &amp; \nabla \cdot \mathbf{d} = \rho_f \ ,
+\end{aligned}\end{split}\]</div>
+<p>avendo introdotto il <strong>campo di spostamento</strong>, <span class="math notranslate nohighlight">\(\mathbf{d} := \varepsilon_0 \mathbf{e} + \mathbf{p}\)</span>.</p>
+<p>La scomposizione della corrente elettrica come somma <span class="math notranslate nohighlight">\(\mathbf{j} = \mathbf{j}_f + \mathbf{j}_P\)</span> della corrente libera <span class="math notranslate nohighlight">\(\mathbf{j}_f\)</span> e corrente di polarizzazione <span class="math notranslate nohighlight">\(\mathbf{j}_P\)</span>, permette di rielaborare l’equazione della continuità della carica elettrica</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 &amp; = \partial_t \rho + \nabla \cdot \mathbf{j} = \\
+    &amp; = \partial_t (\rho_f + \rho_P) + \nabla \cdot \left( \mathbf{j}_f + \mathbf{j}_P \right) = \\
+    &amp; = \partial_t \rho_f + \nabla \cdot  \mathbf{j}_f + \partial_t \rho_P + \nabla \cdot \mathbf{j}_P \ ,
+\end{aligned}\end{split}\]</div>
+<p>e scrivere le equazioni di continuità per le due distribuzioni di carica (di natura diversa, si suppone che entrambe devono soddisfare la continuità della carica in maniera indipendente, se le cariche libere rimangono libere e le cariche di polarizzazione rimangono di polarizzazione),</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  &amp; \partial_t \rho_f + \nabla \cdot \mathbf{j}_f = 0 \\
+  &amp; \partial_t \rho_P + \nabla \cdot \mathbf{j}_P = 0 \qquad \rightarrow \qquad 0 = \nabla \cdot (-\partial_t \mathbf{p} + \mathbf{j}_P) \qquad \rightarrow \qquad \mathbf{j}_P = \partial_t \mathbf{p}
+\end{aligned}\end{split}\]</div>
+<p><strong>todo</strong> <em>giustificare assenza di campo costante</em></p>
+</div>
+</div>
+<div class="section" id="momento-magnetico">
+<h2>Momento magnetico<a class="headerlink" href="#momento-magnetico" title="Permalink to this heading">#</a></h2>
+<div class="section" id="singolo-momento-magnetico-limite-di-una-spira-elementare">
+<h3>Singolo momento magnetico (limite di una spira elementare)<a class="headerlink" href="#singolo-momento-magnetico-limite-di-una-spira-elementare" title="Permalink to this heading">#</a></h3>
+<p>Usando la legge di Biot-Savart, specializzato a un conduttore percorso da corrente <span class="math notranslate nohighlight">\(i(\mathbf{r}_0)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d \mathbf{b}(\mathbf{r})
+  &amp; = - \frac{\mu}{4 \pi} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \mathbf{j}(\mathbf{r}_0) d V_0 = \\
+  &amp; = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \hat{\mathbf{t}}(\mathbf{r}_0) d \ell_0 \ ,
+\end{aligned}\end{split}\]</div>
+<p>si può calcolare il campo magnetico generato da una spira con percorso <span class="math notranslate nohighlight">\(\ell_0 = \partial S_0\)</span> sfruttando il PSCE</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{b}(\mathbf{r})
+  &amp; = \oint_{\ell_0} d \mathbf{b}(\mathbf{r}_0) = \\
+  &amp; = - \frac{\mu}{4 \pi} i_0 \oint_{\mathbf{r}_0 \in \ell_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \hat{\mathbf{t}}(\mathbf{r}_0)  = \\
+  &amp; =   \frac{\mu}{4 \pi} i_0 \int_{\mathbf{r}_0 \in S_0} \hat{\mathbf{n}}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right)
+\end{aligned}\end{split}\]</div>
+<p>Il campo generato da spira elementare di superficie <span class="math notranslate nohighlight">\(S_0\)</span> con normale <span class="math notranslate nohighlight">\(\hat{\mathbf{n}}_0\)</span>, usando il teorema della media, è</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{b}(\mathbf{r}) = \frac{\mu}{4 \pi} i_0 S_0 \hat{\mathbf{n}}_0 \cdot \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) + o(S_0)\]</div>
+<p>e al tendere di <span class="math notranslate nohighlight">\(i_0 \rightarrow \infty\)</span>, <span class="math notranslate nohighlight">\(S_0 \rightarrow 0\)</span> in modo tale da avere <span class="math notranslate nohighlight">\(\mathbf{M}_0 := i_0 S_0 \hat{\mathbf{n}}_0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \mathbf{b}(\mathbf{r}) 
+  &amp; = \frac{\mu}{4 \pi} \mathbf{M}_0 \cdot \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \\
+  &amp; = - \frac{\mu_0}{4\pi} \left[ \frac{(\mathbf{r}-\mathbf{r}_0)(\mathbf{r}-\mathbf{r}_0)}{|\mathbf{r}-\mathbf{r}_0|^5} \cdot \mathbf{M}_0 - \frac{\mathbf{M}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \right] = \\
+  &amp; = - \frac{\mu_0}{4\pi} \left[ \frac{(\mathbf{r}-\mathbf{r}_0) \otimes (\mathbf{r}-\mathbf{r}_0)}{|\mathbf{r}-\mathbf{r}_0|^5} - \frac{\mathbb{I}}{|\mathbf{r}-\mathbf{r}_0|^3} \right] \cdot \mathbf{M}_0 \ .
+\end{aligned}\end{split}\]</div>
+<p><strong>todo</strong> Analogia con il campo elettrico prodotto da una distribuzione di dipoli.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Dettagli<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\oint_{\partial S} A \, t_i = \int_S \varepsilon_{ijk} \, n_j \, \partial_k A
+\qquad , \qquad 
+  \oint_{\partial S} A \, \hat{\mathbf{t}} = \int_S \hat{\mathbf{n}} \times \nabla A\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\oint_{\mathbf{r}_0 \in \ell_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \hat{\mathbf{t}}(\mathbf{r}_0) d \ell_0 
+  &amp; = \oint_{\mathbf{r}_0 \in \ell_0} \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \ t_k = \\
+  &amp; = \int_{\mathbf{r}_0 \in S_0} \varepsilon_{krs} n_r \partial^0_s \left( \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
+  &amp; = \int_{\mathbf{r}_0 \in S_0} \left( \delta_{ir} \delta_{js} - \delta_{is} \delta_{jr} \right) n_r \partial^0_s \left( \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
+  &amp; = \int_{\mathbf{r}_0 \in S_0} \left\{ n_i \underbrace{\partial^0_j \left( \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right)}_{=0} - n_j \partial^0_i \left( \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \right\} = \\
+  &amp; = - \int_{\mathbf{r}_0 \in S_0} n_j \partial^0_i \left( \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details></div>
+<div class="section" id="distribuzione-continua-di-momento-magnetico">
+<h3>Distribuzione continua di momento magnetico<a class="headerlink" href="#distribuzione-continua-di-momento-magnetico" title="Permalink to this heading">#</a></h3>
+<p>Per calcolare il campo magnetico generato da una distribuzione di volume di momento magnetico si può procedere in analogia con quanto fatto per calcolare il campo elettrico generato da una distribuzione di dipoli</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mathbf{b}(\mathbf{r})
+  &amp; = \int_{\mathbf{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \mathbf{m}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
+  &amp; = \oint_{\mathbf{r}_0 \in \partial V_0} \frac{\mu_0}{4 \pi}  \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \hat{\mathbf{n}}(\mathbf{r}_0) \cdot \mathbf{m}(\mathbf{r}_0) + \int_{\mathbf{r}_0 \in V_0} \frac{\mu_0}{4 \pi} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \,\left( - \nabla_{\mathbf{r}_0} \cdot \mathbf{m}(\mathbf{r}_0) \right) \ , \\
+\end{aligned}\end{split}\]</div>
+<p>ma senza ottenere un’analogia con l’espressione della legge di Biot-Savart che prevede il prodotto vettore tra il termine <span class="math notranslate nohighlight">\(\frac{\mathbf{r}- \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3}\)</span> con una densità di corrente <span class="math notranslate nohighlight">\(\mathbf{j}(\mathbf{r}_0)\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Dettagli<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Si può riscrivere</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \oint_{\mathbf{r}_0 \in \partial V_0} &amp; \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \left( \hat{\mathbf{n}}(\mathbf{r}_0) \times \mathbf{m}(\mathbf{r}_0) \right) \\
+  &amp; = \oint_{\mathbf{r}_0 \in \partial V_0} \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \varepsilon_{krs} n_r m_s = \\
+  &amp; = \int_{\mathbf{r}_0 \in V_0} \left( \delta_{ir} \delta_{js} - \delta_{is} \delta_{jr} \right) \partial^0_r \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_s \right) = \\
+  &amp; = \int_{\mathbf{r}_0 \in V_0} \left\{ \partial^0_i \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j \right) - \partial^0_j \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_i \right)  \right\} = \\
+  &amp; = \int_{\mathbf{r}_0 \in V_0}
+  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j 
+         + \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_i m_j
+         - \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_j m_i 
+         - \underbrace{ \partial^0_j \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3}}_{=0} m_i 
+  \right\} = \\
+  &amp; = \int_{\mathbf{r}_0 \in V_0}
+  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j 
+         + \varepsilon_{ijk} \varepsilon_{krs} \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_r m_s
+  \right\} = \\
+  &amp; = \int_{\mathbf{r}_0 \in V_0}
+  \left\{ \nabla_{\mathbf{r}_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \cdot \mathbf{m}(\mathbf{r}_0) 
+         + \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \times \left( \nabla_{\mathbf{r}_0} \times \mathbf{m}(\mathbf{r}_0) \right)
+  \right\} = \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">usando le identità del calcolo vettoriale,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{a} \times (\mathbf{b} \times \mathbf{c}) &amp; = \varepsilon_{ijk} a_j \varepsilon_{krs} b_r c_s = \\
+  &amp; = (\delta_{ir} \delta_{js} - \delta_{is} \delta_{jr}) a_j b_r c_s = \\
+  &amp; = a_j b_i c_j - c_i b_j a_j = \mathbf{b}(\mathbf{a} \cdot \mathbf{c}) - \mathbf{c} (\mathbf{a} \cdot \mathbf{b})
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ a_j \partial_i m_j - a_j \partial_j m_i
+ &amp; = (\delta_{ir} \delta_{js} - \delta_{is} \delta_{jr}) a_j \partial_r m_s = \\
+ &amp; = \varepsilon_{ijk} \varepsilon_{krs} a_j \partial_r m_s = \\
+ &amp; = \mathbf{a} \times \left( \nabla \times \mathbf{m} \right)
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Il campo magnetico generato da una distribuzione di momento magnetico può quindi essere riscritto come</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mathbf{b}(\mathbf{r})
+  &amp; = \int_{\mathbf{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \mathbf{m}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
+  &amp; = - \frac{\mu_0}{4\pi} \oint_{\mathbf{r}_0 \in \partial V_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \underbrace{ \left( - \hat{\mathbf{n}}(\mathbf{r}_0) \times \mathbf{m}(\mathbf{r}_0) \right) }_{\mathbf{j}^s_M}
+  - \frac{\mu_0}{4 \pi} \int_{\mathbf{r}_0 \in V_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \times \underbrace{ \left(\nabla_{\mathbf{r}_0} \times \mathbf{m}(\mathbf{r}_0) \right)}_{\mathbf{j}_M} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">avendo definito le densità di corrente di magnetizzazione superficiale <span class="math notranslate nohighlight">\(\mathbf{j}^s_M\)</span> e di colume <span class="math notranslate nohighlight">\(\mathbf{j}_M\)</span> come le intensità delle singolarità distribuite, in analogia con l’espressione della legge di Biot-Savart.</p>
+</div>
+</details></div>
+<div class="section" id="id1">
+<h3>Riformulazione delle equazioni di Maxwell e della continuità della carica<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>La legge di Ampére-Maxwell può essere riscritta</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ &amp; \nabla \times \mathbf{b} - \mu_0 \varepsilon_0 \partial_t \mathbf{e} = \mu_0 \mathbf{j} \\
+ &amp; \nabla \times \mathbf{b} - \mu_0 \partial_t \left( \mathbf{d} - \mathbf{p} \right) = \mu_0 \left( \mathbf{j}_f + \mathbf{j}_P + \mathbf{j}_M \right) \\
+ &amp; \nabla \times \underbrace{\left( \mathbf{b} - \mu_0 \mathbf{m} \right)}_{=: \mu_0 \mathbf{h}} - \mu_0 \partial_t \mathbf{d} + \mu_0 \underbrace{\left( \partial_t \mathbf{p} - \mathbf{j}_P \right)}_{= \mathbf{0}} = \mu_0 \mathbf{j}_f  \\ \\
+ &amp; \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j}_f
+\end{aligned}\end{split}\]</div>
+<p>Dalla legge di continuità della corrente elettrica,</p>
+<div class="math notranslate nohighlight">
+\[\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ ,\]</div>
+<p>si ricava l’equazione di continuità per le cariche di magnetizzazione</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 &amp; = \partial_t \rho_M + \nabla \cdot \mathbf{j}_M = \\
+    &amp; = \partial_t \rho_M + \underbrace{ \nabla \cdot \nabla \times \mathbf{m}}_{ \equiv \mathbf{0} } \ .
+\end{aligned}\end{split}\]</div>
+</div>
 </div>
 <div class="section" id="polarizzazione-e-magnetizzazione-dei-mezzi">
 <h2>Polarizzazione e Magnetizzazione dei mezzi<a class="headerlink" href="#polarizzazione-e-magnetizzazione-dei-mezzi" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>bounded/free charges and currents</p></li>
 </ul>
-<div class="section" id="polarizzazione">
-<h3>Polarizzazione<a class="headerlink" href="#polarizzazione" title="Permalink to this heading">#</a></h3>
+<div class="section" id="id2">
+<h3>Polarizzazione<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 </div>
 <div class="section" id="magnetizzazione">
 <h3>Magnetizzazione<a class="headerlink" href="#magnetizzazione" title="Permalink to this heading">#</a></h3>
@@ -626,8 +851,20 @@ $$\frac{\mathbf{r}}{|\mathbf{r}|^3} = \frac{\mathbf{r}_0 + \delta \mathbf{r}}$$
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vuoto">Vuoto</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mezzi-continui">Mezzi continui</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione">Polarizzazione</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#singolo-dipolo-elettrico">Singolo dipolo elettrico</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuzione-continua-di-dipoli">Distribuzione continua di dipoli</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#riformulazione-delle-equazioni-di-maxwell-e-della-continuita-della-carica">Riformulazione delle equazioni di Maxwell e della continuità della carica</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#momento-magnetico">Momento magnetico</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#singolo-momento-magnetico-limite-di-una-spira-elementare">Singolo momento magnetico (limite di una spira elementare)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuzione-continua-di-momento-magnetico">Distribuzione continua di momento magnetico</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Riformulazione delle equazioni di Maxwell e della continuità della carica</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione-e-magnetizzazione-dei-mezzi">Polarizzazione e Magnetizzazione dei mezzi</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione">Polarizzazione</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Polarizzazione</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetizzazione">Magnetizzazione</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#formula-di-biot-savart">Formula di Biot-Savart</a></li>
 </ul>
