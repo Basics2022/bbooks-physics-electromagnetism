@@ -141,8 +141,7 @@ If $t \ge t_0$, and $G(\mathbf{r}, t; \mathbf{r}_0, t_0)$ connects the past $t_0
 $$G(\mathbf{r},t; \mathbf{r}_0, t_0) = \frac{1}{4 \pi} \frac{ \delta \left( t - t_0 - \frac{|\mathbf{r}-\mathbf{r}_0|}{c} \right)}{|\mathbf{r} - \mathbf{r}_0|} \ .$$
 
 
-```{dropdown} Green's function
-:open:
+```{dropdown} Green's function of Helmholtz's equation
 
 $$\frac{s^2}{c^2} G - \nabla^2 G = \delta(r)$$
 
