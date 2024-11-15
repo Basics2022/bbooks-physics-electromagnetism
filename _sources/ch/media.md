@@ -110,7 +110,7 @@ $$\begin{aligned}
 
 **todo** *giustificare assenza di campo costante*
 
-## Momento magnetico
+## Magnetizzazione
 
 ### Singolo momento magnetico (limite di una spira elementare)
 Usando la legge di Biot-Savart, specializzato a un conduttore percorso da corrente $i(\mathbf{r}_0)$
