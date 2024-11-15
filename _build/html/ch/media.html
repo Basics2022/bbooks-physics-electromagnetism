@@ -418,14 +418,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Riformulazione delle equazioni di Maxwell e della continuità della carica</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione-e-magnetizzazione-dei-mezzi">Polarizzazione e Magnetizzazione dei mezzi</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Polarizzazione</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetizzazione">Magnetizzazione</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#formula-di-biot-savart">Formula di Biot-Savart</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esempi">Esempi</a></li>
 </ul>
             </nav>
@@ -450,7 +442,7 @@ document.write(`
 <p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Nov 15, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>4 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>3 min read</p>
 </div>
 </div>
 </div>
@@ -688,95 +680,6 @@ Dettagli<div class="sd-summary-down docutils">
 \end{aligned}\end{split}\]</div>
 </div>
 </div>
-<div class="section" id="polarizzazione-e-magnetizzazione-dei-mezzi">
-<h2>Polarizzazione e Magnetizzazione dei mezzi<a class="headerlink" href="#polarizzazione-e-magnetizzazione-dei-mezzi" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>bounded/free charges and currents</p></li>
-</ul>
-<div class="section" id="id2">
-<h3>Polarizzazione<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-</div>
-<div class="section" id="magnetizzazione">
-<h3>Magnetizzazione<a class="headerlink" href="#magnetizzazione" title="Permalink to this heading">#</a></h3>
-<div class="section" id="formula-di-biot-savart">
-<h4>Formula di Biot-Savart<a class="headerlink" href="#formula-di-biot-savart" title="Permalink to this heading">#</a></h4>
-<p>Per un tratto elementare <span class="math notranslate nohighlight">\(d \symbf{\ell}(\mathbf{r}_0)\)</span> di conduttore percorso da corrente elettrica <span class="math notranslate nohighlight">\(i(\mathbf{r}_0)\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[d \mathbf{b}(\mathbf{r}) = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \frac{\mathbf{r} - \mathbf{r}_0}{\left|\mathbf{r} - \mathbf{r}_0 \right|^3} \times d \symbf{\ell}(\mathbf{r}_0)\]</div>
-<div class="math notranslate nohighlight">
-\[\mathbf{b}(\mathbf{r}) = \oint_{\ell} \left\{ - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \frac{\mathbf{r}- \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \times \hat{\mathbf{t}}(\mathbf{r}_0) \right\} \]</div>
-<p>e facendo tendere <span class="math notranslate nohighlight">\(\ell \rightarrow 0\)</span> e <span class="math notranslate nohighlight">\(i \rightarrow \infty\)</span>, assumendo una spira circolare piana <strong>todo</strong> <em>rilassare questa ipotesi</em>, e approssimando l’integranda <span class="math notranslate nohighlight">\(\mathbf{r}_0 = \mathbf{r}^*_0 + O(|\delta \mathbf{r}_0|)\)</span>, con <span class="math notranslate nohighlight">\(\mathbf{r}^*_0\)</span> il centro (o un punto della spira),</p>
-<p>Incremento della funzione <span class="math notranslate nohighlight">\(\frac{r_i}{r}\)</span> in seguito a un incremento della variabile indipendente <span class="math notranslate nohighlight">\(r_i \rightarrow r_i + \delta r_i\)</span></p>
-<div class="math notranslate nohighlight">
-\[r^2 \sim r_0^2 + 2 r_{0,i} \, \delta r_i + \delta r^2\]</div>
-<div class="math notranslate nohighlight">
-\[r^2 = |\mathbf{r}|^2 = \mathbf{r} \cdot \mathbf{r}\]</div>
-<div class="math notranslate nohighlight">
-\[\partial_i r = \frac{r_i}{r}\]</div>
-<div class="math notranslate nohighlight">
-\[\partial_k \frac{r_i}{r^3} 
-  = \frac{\partial_k r_i}{r^3} - \frac{r_i \partial_k r^3}{r^6} 
-  = \frac{\partial_k r_i}{r^3} - \frac{r_i \, 3 r^2 \frac{r_k}{r}}{r^6}
-  = \frac{\delta_{ik}}{r^3} - 3 \frac{r_i r_k}{r^5}
-\]</div>
-<div class="math notranslate nohighlight">
-\[f(\mathbf{r}) = f(\mathbf{r}^* + \delta \mathbf{r}) \sim f(\mathbf{r}) + \delta \mathbf{r} \cdot \nabla f(\mathbf{r}^*) + o(|\delta \mathbf{r}|)\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3}
-  &amp; \sim \frac{\mathbf{r} - \mathbf{r}^*_0}{|\mathbf{r} - \mathbf{r}^*_0|^3} + \delta \mathbf{r}_0 \cdot \left[ - \frac{1}{|\mathbf{r} - \mathbf{r}^*_0|^3} \mathbb{I} + 3 \, \frac{(\mathbf{r} - \mathbf{r}^*_0) \otimes (\mathbf{r} - \mathbf{r}^*_0)}{|\mathbf{r} - \mathbf{r^*}_0|^5} \right] + o(|\delta \mathbf{r}_0|) = \\
-  &amp; \sim \frac{\mathbf{r} - \mathbf{r}^*_0}{|\mathbf{r} - \mathbf{r}^*_0|^3} - \frac{\delta \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}^*_0|^3} + 3 \, \frac{(\mathbf{r} - \mathbf{r}^*_0) }{|\mathbf{r} - \mathbf{r^*}_0|^5}(\mathbf{r} - \mathbf{r}^*_0) \cdot \delta \mathbf{r}_0 + o(|\delta \mathbf{r}_0|)
-\end{aligned}\end{split}\]</div>
-<!--
-$$\frac{\mathbf{r}}{|\mathbf{r}|^3} = \frac{\mathbf{r}_0 + \delta \mathbf{r}}$$
--->
-<div class="math notranslate nohighlight">
-\[\mathbf{b}(\mathbf{r}_0) = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \oint_{\ell(\mathbf{r}_0)} \left[ \frac{\mathbf{r} - \mathbf{r}^*_0}{|\mathbf{r} - \mathbf{r}^*_0|^3} - \frac{\delta \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}^*_0|^3} + 3 \, \frac{(\mathbf{r} - \mathbf{r}^*_0) }{|\mathbf{r} - \mathbf{r^*}_0|^5}(\mathbf{r} - \mathbf{r}^*_0) \cdot \delta \mathbf{r}_0 + o(|\delta \mathbf{r}_0|)  \right] \times \hat{\mathbf{t}}(\mathbf{r}_0) \]</div>
-<p>Nel caso di spira circolare piana con</p>
-<div class="math notranslate nohighlight">
-\[\delta \mathbf{r}_0 = R \hat{\mathbf{r}} = R (\cos \theta \hat{\mathbf{x}} + \sin \theta \hat{\mathbf{y}})\]</div>
-<div class="math notranslate nohighlight">
-\[\hat{\mathbf{t}}(\mathbf{r}_0) = \hat{\symbf{\theta}}(\mathbf{r}_0) = -\sin \theta \hat{\mathbf{x}} + \cos \theta \hat{\mathbf{y}}\]</div>
-<div class="math notranslate nohighlight">
-\[\hat{\mathbf{n}} := \hat{\mathbf{r}} \times \hat{\symbf{\theta}}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\mathbf{b}(\mathbf{r})
-  &amp; = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \oint_{\ell(\mathbf{r}_0)} \left[ \frac{(x \hat{\mathbf{x}} + y \hat{\mathbf{y}} + z \hat{\mathbf{n}}) \times (-\sin \theta \hat{\mathbf{x}} + \cos \theta \hat{\mathbf{y}} )}{r^3} \left( 1 + 3 \frac{(x \hat{\mathbf{x}} + y \hat{\mathbf{y}} + z \hat{\mathbf{n}}) \cdot R ( \cos \theta \hat{\mathbf{x}} + \sin \theta \hat{\mathbf{y}} )}{r^2}  \right) - \frac{R \hat{\mathbf{n}}}{r^3}\right] = \\
-   &amp; = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \oint_{\ell(\mathbf{r}_0)} \left[ \frac{\hat{\mathbf{x}}(-z \cos \theta) + \hat{\mathbf{y}}(-z \sin \theta) + \hat{\mathbf{n}}(x \cos \theta + y \sin \theta)}{r^3} \left( 1 + 3 R \frac{x \cos \theta + y \sin \theta}{r^2}  \right) - \frac{R \hat{\mathbf{n}}}{r^3}\right] = \\ 
- &amp; = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) R \left[ \hat{\mathbf{x}}\left( - 3 \frac{x z R}{r^5} \pi \right) + \hat{\mathbf{y}}\left(- 3 \frac{y z R}{r^5} \pi \right) + \hat{\mathbf{n}}\left( 3 R \frac{x^2 + y^2}{r^5} \pi - \frac{R}{r^3} 2 \pi \right)  \right] = \\ 
- &amp; = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) R \left[ \hat{\mathbf{x}}\left( - 3 \frac{x z R}{r^5} \pi \right) + \hat{\mathbf{y}}\left(- 3 \frac{y z R}{r^5} \pi \right) + \hat{\mathbf{n}}\left( 3 R \frac{r^2 - z^2}{r^5} \pi - \frac{R}{r^3} 2 \pi \right)  \right] = \\
- &amp; = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) R \left[ \hat{\mathbf{x}}\left( - 3 \frac{x z R}{r^5} \pi \right) + \hat{\mathbf{y}}\left(- 3 \frac{y z R}{r^5} \pi \right) + \hat{\mathbf{n}}\left( 3 R \frac{r^2 - z^2}{r^5} \pi - \frac{R}{r^3} 2 \pi \right)  \right] = \\
- &amp; = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) R \left[ - 3 \mathbf{r} \frac{z R}{r^5} \pi + \hat{\mathbf{n}} \frac{R}{r^3} \pi \right] = \\
- &amp; = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \pi R^2 \frac{ \hat{\mathbf{n}} - 3 \hat{\mathbf{n}} \cdot \hat{\mathbf{r}} \, \hat{\mathbf{r}} }{r^3} = \\
- &amp; = \frac{\mu}{4 \pi} i(\mathbf{r}_0) \pi R^2 \frac{ 3 \hat{\mathbf{n}} \cdot \hat{\mathbf{r}} \, \hat{\mathbf{r}} - \hat{\mathbf{n}} }{r^3} = \\
-\end{aligned}\end{split}\]</div>
-<p>e definendo il <strong>momento magnetico</strong> <span class="math notranslate nohighlight">\(\mathbf{m}(\mathbf{r}_0) := \hat{\mathbf{n}} \, i(\mathbf{r}_0) \pi R^2 = \hat{\mathbf{n}} \, i(\mathbf{r}_0) \, A \)</span>, si ottiene l’espressione del campo magnetico generato <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> dal <strong>dipolo magnetico</strong> in <span class="math notranslate nohighlight">\(\mathbf{r}_0\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{b}(\mathbf{r}) = \frac{\mu}{4 \pi} \left[ 3 \mathbf{m} \cdot \frac{(\mathbf{r}- \mathbf{r}_0) (\mathbf{r}- \mathbf{r}_0)}{|\mathbf{r}- \mathbf{r}_0|^5} - \frac{\mathbf{m} }{|\mathbf{r}- \mathbf{r}_0|^3} \right]\]</div>
-<p>Data una densità di momento magnetico <span class="math notranslate nohighlight">\(\mathbf{m}\)</span> tale che il momento magnetico elementare <span class="math notranslate nohighlight">\(d \mathbf{M}\)</span> di un volume elementare <span class="math notranslate nohighlight">\(d V\)</span></p>
-<div class="math notranslate nohighlight">
-\[d \mathbf{M}(\mathbf{r}_0) = \mathbf{m}(\mathbf{r}_0) \, dV(\mathbf{r}_0) \ ,\]</div>
-<p>il campo magnetico generato nel punto <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> è</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\mathbf{b}(\mathbf{r})
-  &amp; = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \left[ 3 \frac{(\mathbf{r} - \mathbf{r}_0)(\mathbf{r} - \mathbf{r}_0)}{|\mathbf{r} - \mathbf{r}_0|^5} \cdot \mathbf{m}(\mathbf{r}_0) - \frac{\mathbf{m}(\mathbf{r}_0)}{|\mathbf{r} - \mathbf{r}_0|^3} \right] \, dV_{\mathbf{r}_0} = \\
-  &amp; = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \cdot \mathbf{m}(\mathbf{r}_0) \, dV_{\mathbf{r}_0}
-\end{aligned}\end{split}\]</div>
-<p>e usando la regola della derivata del prodotto,</p>
-<div class="math notranslate nohighlight">
-\[\partial_i \left( \frac{r_k}{|r|^3} \right) \, m_i = \partial_i \left( \frac{r_k \, m_i}{r^3} \right) - \frac{r_k}{r^3} \partial_i m_i \ ,\]</div>
-<p>e la regola di integrazione per parti (o il teorema della divergenza…)</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \mathbf{b}(\mathbf{r})
-  &amp; = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \cdot \mathbf{m}(\mathbf{r}_0) \, dV_{\mathbf{r}_0} = \\
-  &amp; = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \left[- \nabla_{\mathbf{r}_0} \cdot \left( \frac{\mathbf{m}(\mathbf{r}_0) \cdot (\mathbf{r} - \mathbf{r}_0)}{|\mathbf{r} - \mathbf{r}_0|^5} \right) +  \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \nabla_{\mathbf{r}_0} \cdot \mathbf{m}(\mathbf{r}_0) \right] \, dV_{\mathbf{r}_0}
-\end{aligned}\end{split}\]</div>
-</div>
-</div>
-</div>
 <div class="section" id="esempi">
 <h2>Esempi<a class="headerlink" href="#esempi" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
@@ -861,14 +764,6 @@ $$\frac{\mathbf{r}}{|\mathbf{r}|^3} = \frac{\mathbf{r}_0 + \delta \mathbf{r}}$$
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#singolo-momento-magnetico-limite-di-una-spira-elementare">Singolo momento magnetico (limite di una spira elementare)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribuzione-continua-di-momento-magnetico">Distribuzione continua di momento magnetico</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Riformulazione delle equazioni di Maxwell e della continuità della carica</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarizzazione-e-magnetizzazione-dei-mezzi">Polarizzazione e Magnetizzazione dei mezzi</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Polarizzazione</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetizzazione">Magnetizzazione</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#formula-di-biot-savart">Formula di Biot-Savart</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esempi">Esempi</a></li>
