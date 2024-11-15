@@ -519,7 +519,7 @@ document.write(`
   &amp; = \int_{\mathbf{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \mathbf{p}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
   &amp; = \oint_{\mathbf{r}_0 \in \partial V_0} \frac{1}{4 \pi \varepsilon_0}  \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \underbrace{ \hat{\mathbf{n}}(\mathbf{r}_0) \cdot \mathbf{p}(\mathbf{r}_0) }_{ =: \sigma_P(\mathbf{r}_0)}  + \int_{\mathbf{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \underbrace{ \left( - \nabla_{\mathbf{r}_0} \cdot \mathbf{p}(\mathbf{r}_0) \right)}_{ =: \rho_P(\mathbf{r}_0) } \ , \\
 \end{aligned}\end{split}\]</div>
-<p>avendo definito le densità di carica di polarizzazione superficiale <span class="math notranslate nohighlight">\(\sigma_P\)</span> e di colume <span class="math notranslate nohighlight">\(\rho_P\)</span> come le intensità delle sorgenti distribuite di campo elettrico, in analogia con la forma della legge di Coulomb.</p>
+<p>avendo definito le densità di carica di polarizzazione superficiale <span class="math notranslate nohighlight">\(\sigma_P\)</span> e di volume <span class="math notranslate nohighlight">\(\rho_P\)</span> come le intensità delle sorgenti distribuite di campo elettrico, in analogia con l’espressione della legge di Coulomb.</p>
 </div>
 <div class="section" id="riformulazione-delle-equazioni-di-maxwell-e-della-continuita-della-carica">
 <h3>Riformulazione delle equazioni di Maxwell e della continuità della carica<a class="headerlink" href="#riformulazione-delle-equazioni-di-maxwell-e-della-continuita-della-carica" title="Permalink to this heading">#</a></h3>
@@ -583,7 +583,7 @@ document.write(`
 <p><strong>todo</strong> Analogia con il campo elettrico prodotto da una distribuzione di dipoli.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M6 12a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z"></path></svg><div class="sd-summary-down docutils">
+Dettagli<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -612,18 +612,80 @@ document.write(`
   &amp; = \int_{\mathbf{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \mathbf{m}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
   &amp; = \oint_{\mathbf{r}_0 \in \partial V_0} \frac{\mu_0}{4 \pi}  \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \hat{\mathbf{n}}(\mathbf{r}_0) \cdot \mathbf{m}(\mathbf{r}_0) + \int_{\mathbf{r}_0 \in V_0} \frac{\mu_0}{4 \pi} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \,\left( - \nabla_{\mathbf{r}_0} \cdot \mathbf{m}(\mathbf{r}_0) \right) \ , \\
 \end{aligned}\end{split}\]</div>
-<p>ma senza ottenere un’analogia con l’espressione della legge di Biot-Savart che prevede il prodotto vettore tra il termine <span class="math notranslate nohighlight">\(\frac{\mathbf{r}- \mathbf{r}_0}{|\mathbf{r}- \mathbf{r}_0|^3}\)</span> con una densità di corrente <span class="math notranslate nohighlight">\(\mathbf{j}(\mathbf{r}_0)\)</span>.</p>
+<p>ma senza ottenere un’analogia con l’espressione della legge di Biot-Savart che prevede il prodotto vettore tra il termine <span class="math notranslate nohighlight">\(\frac{\mathbf{r}- \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3}\)</span> con una densità di corrente <span class="math notranslate nohighlight">\(\mathbf{j}(\mathbf{r}_0)\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M6 12a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z"></path></svg><div class="sd-summary-down docutils">
+Dettagli<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Si può riscrivere</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \oint_{\mathbf{r}_0 \in \partial V_0} &amp; \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \left( \hat{\mathbf{n}}(\mathbf{r}_0) \times \mathbf{m}(\mathbf{r}_0) \right) \\
+  &amp; = \oint_{\mathbf{r}_0 \in \partial V_0} \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \varepsilon_{krs} n_r m_s = \\
+  &amp; = \int_{\mathbf{r}_0 \in V_0} \left( \delta_{ir} \delta_{js} - \delta_{is} \delta_{jr} \right) \partial^0_r \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_s \right) = \\
+  &amp; = \int_{\mathbf{r}_0 \in V_0} \left\{ \partial^0_i \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j \right) - \partial^0_j \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_i \right)  \right\} = \\
+  &amp; = \int_{\mathbf{r}_0 \in V_0}
+  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j 
+         + \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_i m_j
+         - \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_j m_i 
+         - \underbrace{ \partial^0_j \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3}}_{=0} m_i 
+  \right\} = \\
+  &amp; = \int_{\mathbf{r}_0 \in V_0}
+  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j 
+         + \varepsilon_{ijk} \varepsilon_{krs} \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_r m_s
+  \right\} = \\
+  &amp; = \int_{\mathbf{r}_0 \in V_0}
+  \left\{ \nabla_{\mathbf{r}_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \cdot \mathbf{m}(\mathbf{r}_0) 
+         + \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \times \left( \nabla_{\mathbf{r}_0} \times \mathbf{m}(\mathbf{r}_0) \right)
+  \right\} = \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">usando le identità del calcolo vettoriale,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{a} \times (\mathbf{b} \times \mathbf{c}) &amp; = \varepsilon_{ijk} a_j \varepsilon_{krs} b_r c_s = \\
+  &amp; = (\delta_{ir} \delta_{js} - \delta_{is} \delta_{jr}) a_j b_r c_s = \\
+  &amp; = a_j b_i c_j - c_i b_j a_j = \mathbf{b}(\mathbf{a} \cdot \mathbf{c}) - \mathbf{c} (\mathbf{a} \cdot \mathbf{b})
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ a_j \partial_i m_j - a_j \partial_j m_i
+ &amp; = (\delta_{ir} \delta_{js} - \delta_{is} \delta_{jr}) a_j \partial_r m_s = \\
+ &amp; = \varepsilon_{ijk} \varepsilon_{krs} a_j \partial_r m_s = \\
+ &amp; = \mathbf{a} \times \left( \nabla \times \mathbf{m} \right)
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Il campo magnetico generato da una distribuzione di momento magnetico può quindi essere riscritto come</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mathbf{b}(\mathbf{r})
+  &amp; = \int_{\mathbf{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \mathbf{m}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
+  &amp; = - \frac{\mu_0}{4\pi} \oint_{\mathbf{r}_0 \in \partial V_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \underbrace{ \left( - \hat{\mathbf{n}}(\mathbf{r}_0) \times \mathbf{m}(\mathbf{r}_0) \right) }_{\mathbf{j}^s_M}
+  - \frac{\mu_0}{4 \pi} \int_{\mathbf{r}_0 \in V_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \times \underbrace{ \left(\nabla_{\mathbf{r}_0} \times \mathbf{m}(\mathbf{r}_0) \right)}_{\mathbf{j}_M} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">avendo definito le densità di corrente di magnetizzazione superficiale <span class="math notranslate nohighlight">\(\mathbf{j}^s_M\)</span> e di colume <span class="math notranslate nohighlight">\(\mathbf{j}_M\)</span> come le intensità delle singolarità distribuite, in analogia con l’espressione della legge di Biot-Savart.</p>
 </div>
 </details></div>
 <div class="section" id="id1">
 <h3>Riformulazione delle equazioni di Maxwell e della continuità della carica<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>La legge di Ampére-Maxwell può essere riscritta</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ &amp; \nabla \times \mathbf{b} - \mu_0 \varepsilon_0 \partial_t \mathbf{e} = \mu_0 \mathbf{j} \\
+ &amp; \nabla \times \mathbf{b} - \mu_0 \partial_t \left( \mathbf{d} - \mathbf{p} \right) = \mu_0 \left( \mathbf{j}_f + \mathbf{j}_P + \mathbf{j}_M \right) \\
+ &amp; \nabla \times \underbrace{\left( \mathbf{b} - \mu_0 \mathbf{m} \right)}_{=: \mu_0 \mathbf{h}} - \mu_0 \partial_t \mathbf{d} + \mu_0 \underbrace{\left( \partial_t \mathbf{p} - \mathbf{j}_P \right)}_{= \mathbf{0}} = \mu_0 \mathbf{j}_f  \\ \\
+ &amp; \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j}_f
+\end{aligned}\end{split}\]</div>
+<p>Dalla legge di continuità della corrente elettrica,</p>
+<div class="math notranslate nohighlight">
+\[\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ ,\]</div>
+<p>si ricava l’equazione di continuità per le cariche di magnetizzazione</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 &amp; = \partial_t \rho_M + \nabla \cdot \mathbf{j}_M = \\
+    &amp; = \partial_t \rho_M + \underbrace{ \nabla \cdot \nabla \times \mathbf{m}}_{ \equiv \mathbf{0} } = \\
+\end{aligned}\end{split}\]</div>
 </div>
 </div>
 <div class="section" id="polarizzazione-e-magnetizzazione-dei-mezzi">

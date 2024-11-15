@@ -75,7 +75,7 @@ $$\begin{aligned}
   & = \oint_{\mathbf{r}_0 \in \partial V_0} \frac{1}{4 \pi \varepsilon_0}  \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \underbrace{ \hat{\mathbf{n}}(\mathbf{r}_0) \cdot \mathbf{p}(\mathbf{r}_0) }_{ =: \sigma_P(\mathbf{r}_0)}  + \int_{\mathbf{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \underbrace{ \left( - \nabla_{\mathbf{r}_0} \cdot \mathbf{p}(\mathbf{r}_0) \right)}_{ =: \rho_P(\mathbf{r}_0) } \ , \\
 \end{aligned}$$
 
-avendo definito le densità di carica di polarizzazione superficiale $\sigma_P$ e di colume $\rho_P$ come le intensità delle sorgenti distribuite di campo elettrico, in analogia con la forma della legge di Coulomb.
+avendo definito le densità di carica di polarizzazione superficiale $\sigma_P$ e di volume $\rho_P$ come le intensità delle sorgenti distribuite di campo elettrico, in analogia con l'espressione della legge di Coulomb.
 
 ### Riformulazione delle equazioni di Maxwell e della continuità della carica
 
@@ -145,7 +145,7 @@ $$\begin{aligned}
 
 **todo** Analogia con il campo elettrico prodotto da una distribuzione di dipoli.
 
-```{dropdown} 
+```{dropdown} Dettagli 
 $$\oint_{\partial S} A \, t_i = \int_S \varepsilon_{ijk} \, n_j \, \partial_k A
 \qquad , \qquad 
   \oint_{\partial S} A \, \hat{\mathbf{t}} = \int_S \hat{\mathbf{n}} \times \nabla A$$
@@ -170,13 +170,81 @@ $$\begin{aligned}
   & = \oint_{\mathbf{r}_0 \in \partial V_0} \frac{\mu_0}{4 \pi}  \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \hat{\mathbf{n}}(\mathbf{r}_0) \cdot \mathbf{m}(\mathbf{r}_0) + \int_{\mathbf{r}_0 \in V_0} \frac{\mu_0}{4 \pi} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \,\left( - \nabla_{\mathbf{r}_0} \cdot \mathbf{m}(\mathbf{r}_0) \right) \ , \\
 \end{aligned}$$
 
-ma senza ottenere un'analogia con l'espressione della legge di Biot-Savart che prevede il prodotto vettore tra il termine $\frac{\mathbf{r}- \mathbf{r}_0}{|\mathbf{r}- \mathbf{r}_0|^3}$ con una densità di corrente $\mathbf{j}(\mathbf{r}_0)$.
+ma senza ottenere un'analogia con l'espressione della legge di Biot-Savart che prevede il prodotto vettore tra il termine $\frac{\mathbf{r}- \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3}$ con una densità di corrente $\mathbf{j}(\mathbf{r}_0)$.
 
-```{dropdown}
+```{dropdown} Dettagli
+
+Si può riscrivere
+
+$$\begin{aligned}
+  \oint_{\mathbf{r}_0 \in \partial V_0} & \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \left( \hat{\mathbf{n}}(\mathbf{r}_0) \times \mathbf{m}(\mathbf{r}_0) \right) \\
+  & = \oint_{\mathbf{r}_0 \in \partial V_0} \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \varepsilon_{krs} n_r m_s = \\
+  & = \int_{\mathbf{r}_0 \in V_0} \left( \delta_{ir} \delta_{js} - \delta_{is} \delta_{jr} \right) \partial^0_r \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_s \right) = \\
+  & = \int_{\mathbf{r}_0 \in V_0} \left\{ \partial^0_i \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j \right) - \partial^0_j \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_i \right)  \right\} = \\
+  & = \int_{\mathbf{r}_0 \in V_0}
+  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j 
+         + \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_i m_j
+         - \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_j m_i 
+         - \underbrace{ \partial^0_j \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3}}_{=0} m_i 
+  \right\} = \\
+  & = \int_{\mathbf{r}_0 \in V_0}
+  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j 
+         + \varepsilon_{ijk} \varepsilon_{krs} \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_r m_s
+  \right\} = \\
+  & = \int_{\mathbf{r}_0 \in V_0}
+  \left\{ \nabla_{\mathbf{r}_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \cdot \mathbf{m}(\mathbf{r}_0) 
+         + \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \times \left( \nabla_{\mathbf{r}_0} \times \mathbf{m}(\mathbf{r}_0) \right)
+  \right\} = \\
+\end{aligned}$$
+
+usando le identità del calcolo vettoriale,
+
+$$\begin{aligned}
+  \mathbf{a} \times (\mathbf{b} \times \mathbf{c}) & = \varepsilon_{ijk} a_j \varepsilon_{krs} b_r c_s = \\
+  & = (\delta_{ir} \delta_{js} - \delta_{is} \delta_{jr}) a_j b_r c_s = \\
+  & = a_j b_i c_j - c_i b_j a_j = \mathbf{b}(\mathbf{a} \cdot \mathbf{c}) - \mathbf{c} (\mathbf{a} \cdot \mathbf{b})
+\end{aligned}$$
+
+$$\begin{aligned}
+ a_j \partial_i m_j - a_j \partial_j m_i
+ & = (\delta_{ir} \delta_{js} - \delta_{is} \delta_{jr}) a_j \partial_r m_s = \\
+ & = \varepsilon_{ijk} \varepsilon_{krs} a_j \partial_r m_s = \\
+ & = \mathbf{a} \times \left( \nabla \times \mathbf{m} \right)
+\end{aligned}$$
+
+Il campo magnetico generato da una distribuzione di momento magnetico può quindi essere riscritto come
+
+$$\begin{aligned}
+\mathbf{b}(\mathbf{r})
+  & = \int_{\mathbf{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \mathbf{m}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
+  & = - \frac{\mu_0}{4\pi} \oint_{\mathbf{r}_0 \in \partial V_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \underbrace{ \left( - \hat{\mathbf{n}}(\mathbf{r}_0) \times \mathbf{m}(\mathbf{r}_0) \right) }_{\mathbf{j}^s_M}
+  - \frac{\mu_0}{4 \pi} \int_{\mathbf{r}_0 \in V_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \times \underbrace{ \left(\nabla_{\mathbf{r}_0} \times \mathbf{m}(\mathbf{r}_0) \right)}_{\mathbf{j}_M} \ ,
+\end{aligned}$$
+avendo definito le densità di corrente di magnetizzazione superficiale $\mathbf{j}^s_M$ e di colume $\mathbf{j}_M$ come le intensità delle singolarità distribuite, in analogia con l'espressione della legge di Biot-Savart.
+
 ```
 
 ### Riformulazione delle equazioni di Maxwell e della continuità della carica
 
+La legge di Ampére-Maxwell può essere riscritta
+
+$$\begin{aligned}
+ & \nabla \times \mathbf{b} - \mu_0 \varepsilon_0 \partial_t \mathbf{e} = \mu_0 \mathbf{j} \\
+ & \nabla \times \mathbf{b} - \mu_0 \partial_t \left( \mathbf{d} - \mathbf{p} \right) = \mu_0 \left( \mathbf{j}_f + \mathbf{j}_P + \mathbf{j}_M \right) \\
+ & \nabla \times \underbrace{\left( \mathbf{b} - \mu_0 \mathbf{m} \right)}_{=: \mu_0 \mathbf{h}} - \mu_0 \partial_t \mathbf{d} + \mu_0 \underbrace{\left( \partial_t \mathbf{p} - \mathbf{j}_P \right)}_{= \mathbf{0}} = \mu_0 \mathbf{j}_f  \\ \\
+ & \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j}_f
+\end{aligned}$$
+
+Dalla legge di continuità della corrente elettrica,
+
+$$\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ ,$$
+
+si ricava l'equazione di continuità per le cariche di magnetizzazione
+
+$$\begin{aligned}
+  0 & = \partial_t \rho_M + \nabla \cdot \mathbf{j}_M = \\
+    & = \partial_t \rho_M + \underbrace{ \nabla \cdot \nabla \times \mathbf{m}}_{ \equiv \mathbf{0} } \ .
+\end{aligned}$$
 
 ## Polarizzazione e Magnetizzazione dei mezzi
 - bounded/free charges and currents
