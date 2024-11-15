@@ -623,6 +623,24 @@ Green’s function of Helmholtz’s equation<div class="sd-summary-down docutils
   \text{+ b.c.} \\
   \text{+ i.c.} \\
 \end{cases}\end{split}\]</div>
+<p>Green’s problem of the wave equation</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{c^2} \partial_{tt} G(\mathbf{r},t;\mathbf{r}_0,t_0) - \nabla_{\mathbf{r}}^2 G(\mathbf{r},t;\mathbf{r}_0,t_0) = \delta(\mathbf{r}-\mathbf{r}_0) \delta(t-t_0)\]</div>
+<p>Integration by parts</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  E(\mathbf{r}_{\alpha}, t_{\alpha}) \mathbf{u}(\mathbf{r}_{\alpha},t_{\alpha}) &amp; = \int_{t \in T} \int_{\mathbf{r} \in V} \delta(t-t_{\alpha}) \delta(\mathbf{r}-\mathbf{r}_{\alpha}) \mathbf{u}(\mathbf{r},t) = \\
+  &amp; = \int_{t \in T} \int_{\mathbf{r} \in V} \left\{ \frac{1}{c^2} \partial_{tt} G - \nabla^2_{\mathbf{r}} G \right\} \mathbf{u} = \\
+  &amp; = \int_{t \in T} \int_{\mathbf{r} \in V} \left\{ \frac{1}{c^2} \left[ \partial_t \left( \mathbf{u} \partial_t G - G \partial_t \mathbf{u} \right) + G \partial_{tt} \mathbf{u} \right] - \nabla_{\mathbf{r}} \cdot \left( \nabla_{\mathbf{r}} G \, \mathbf{u} - G \nabla_{\mathbf{r}} \mathbf{u} \right) - G \, \nabla^2_{\mathbf{r}} \mathbf{u} \right\} = \\
+  &amp; = \int_{\mathbf{r} \in V} \frac{1}{c^2} \left[ \mathbf{u}(\mathbf{r},t) \partial_t G(\mathbf{r},t; \mathbf{r}_{\alpha},t_{\alpha}) - G(\mathbf{r},t; \mathbf{r}_{\alpha},t_{\alpha}) \partial_t \mathbf{u}(\mathbf{r},t) \right] \bigg|_{t_0}^{t_1} + \\
+  &amp; \quad + \int_{t \in T} \oint_{\mathbf{r} \in \partial V} \left\{ - \hat{\mathbf{n}}(\mathbf{r},t) \cdot \nabla_{\mathbf{r}} G(\mathbf{r},t; \mathbf{r}_{\alpha},t_{\alpha}) \, \mathbf{u}(\mathbf{r},t) + G(\mathbf{r},t; \mathbf{r}_{\alpha},t_{\alpha}) \, \hat{\mathbf{n}}(\mathbf{r},t) \cdot \nabla_{\mathbf{r}} \mathbf{u}(\mathbf{r},t) \right\} + \\
+  &amp; \quad + \int_{t \in T}  \int_{\mathbf{r} \in V} G(\mathbf{r},t; \mathbf{r}_{\alpha},t_{\alpha}) \underbrace{ \left\{ \frac{1}{c^2} \partial_{tt} \mathbf{u}(\mathbf{r},t) - \nabla^2_{\mathbf{r}} \mathbf{u}(\mathbf{r},t) \right\}}_{= \mathbf{f}(\mathbf{r},t)} \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \int_{t \in T} \int_{\mathbf{r} \in V} \frac{1}{4 \pi}\frac{\delta\left( t-t_{\alpha} + \frac{|\mathbf{r} - \mathbf{r}_{\alpha}|}{c} \right)}{|\mathbf{r} - \mathbf{r}_{\alpha}|} \, \mathbf{f}(\mathbf{r},t) 
+  &amp; = \int_{\mathbf{r} \in V \cap B_{|\mathbf{r} - \mathbf{r}_{\alpha}| \le c (t_\alpha - t)}} \frac{1}{4 \pi |\mathbf{r} - \mathbf{r}_{\alpha}|} \mathbf{f}\left(\mathbf{r}, t_{\alpha} - \frac{|\mathbf{r}-\mathbf{r}_{\alpha}|}{c}\right)
+\end{aligned}\]</div>
 </div>
 </div>
 
