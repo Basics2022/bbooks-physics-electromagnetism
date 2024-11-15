@@ -32,6 +32,7 @@ parts:
     - file: ch/circuits-electromechanic
 - caption: Metodi numerici
   chapters:
+  - file: ch/green-function
   - file: ch/numerical-methods
 - caption: Appendici
   chapters:
