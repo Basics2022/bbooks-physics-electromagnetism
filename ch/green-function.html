@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bilancio di energia del campo elettromagnetico &#8212; Elettromagnetismo ed elettrotecnica</title>
+    <title>Green’s function method &#8212; Elettromagnetismo ed elettrotecnica</title>
   
   
   
@@ -64,11 +64,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/energy';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/green-function';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Equazioni dell’elettromagnetismo e relatività galileiana" href="low-speed-relativity.html" />
-    <link rel="prev" title="Elettromagnetismo nella materia" href="media.html" />
+    <link rel="next" title="Metodi numerici" href="numerical-methods.html" />
+    <link rel="prev" title="Circuiti elettromeccanici" href="circuits-electromechanic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,12 +171,12 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Elettromagnetismo</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Prime esperienze</a></li>
 <li class="toctree-l1"><a class="reference internal" href="principles.html">Princìpi dell’elettromagnetismo classico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="potentials.html">Potenziali elettromagnetici</a></li>
 <li class="toctree-l1"><a class="reference internal" href="media.html">Elettromagnetismo nella materia</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Bilancio di energia del campo elettromagnetico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="energy.html">Bilancio di energia del campo elettromagnetico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">Equazioni dell’elettromagnetismo e relatività galileiana</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">Onde elettromagnetiche</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="waves-equation.html">Equazioni delle onde in elettromagnetismo</a></li>
@@ -203,8 +203,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Metodi numerici</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="green-function.html">Metodo della funzione di Green</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Green’s function method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numerical-methods.html">Metodi numerici</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendici</span></p>
@@ -281,7 +281,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch/energy.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch/green-function.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -311,7 +311,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/energy.md" target="_blank"
+      <li><a href="../_sources/ch/green-function.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -382,7 +382,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -393,11 +395,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Bilancio di energia del campo elettromagnetico</h1>
+    <h1>Green’s function method</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#poisson-equation">Poisson equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helmholtz-equation">Helmholtz equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wave-equation">Wave equation</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -419,148 +431,200 @@ document.write(`
 <p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>Nov 15, 2024</p>
 </div>
 <div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>2 min read</p>
+<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="bilancio-di-energia-del-campo-elettromagnetico">
-<span id="classical-electromagnetism-energy"></span><h1>Bilancio di energia del campo elettromagnetico<a class="headerlink" href="#bilancio-di-energia-del-campo-elettromagnetico" title="Permalink to this heading">#</a></h1>
-<p>Ispirati dalle dimensioni fisiche dei campi elettromagnetici,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\left[\mathbf{e}\right] = \frac{\text{force}}{\text{charge}} \qquad &amp; , \qquad
-[\mathbf{d}] = \frac{\text{charge}}{\text{length}^2} \\
-[\mathbf{b}] = \frac{\text{force}\cdot\text{time}}{\text{charge}\cdot\text{length}} \qquad &amp; , \qquad
-[\mathbf{h}] = \frac{\text{charge}}{\text{time} \cdot \text{length}}
-\end{aligned}\end{split}\]</div>
-<!--$$[\varepsilon] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
-<!--$$[\mu] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\left[\mathbf{e} \cdot \mathbf{d}\right] &amp; = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u] \\
-[\mathbf{b} \cdot \mathbf{h}] &amp; = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u]
-\end{aligned}\end{split}\]</div>
-<p>si può costruire la densità di volume di energia  (<strong>todo</strong> trovare motivazioni più convincenti, non basandosi solo sull’analisi dimensionale ma sul lavoro)</p>
-<div class="math notranslate nohighlight">
-\[u = \frac{1}{2} \left( \mathbf{e} \cdot \mathbf{d} + \mathbf{b} \cdot \mathbf{h} \right) \ .\]</div>
-<p>Si può calcolare la derivata parziale nel tempo della densità di energia, <span class="math notranslate nohighlight">\(u\)</span>, e usare le equazioni di Maxwell per ottenere un’equazione di bilancio dell’energia del campo elettromagnetico. Per un mezzo isotropo lineare, per il quale valgono le equazioni costitutive <span class="math notranslate nohighlight">\(\mathbf{d} = \varepsilon \mathbf{e}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{b} = \mu \mathbf{h}\)</span>, la derivata parziale nel tempo dell’energia elettromagnetica può essere riscritta sfuttando la regola di derivazione del prodotto e le equazioni di Faraday-Lenz-Neumann e Ampére-Maxwell,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\dfrac{\partial u}{\partial t} &amp; = \dfrac{\partial}{\partial t}\left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} + \mathbf{b} \cdot \mathbf{h} \right) =  \qquad (...) \\
-&amp; = \mathbf{e} \cdot \partial_t \mathbf{d} + \mathbf{h} \cdot \partial_t \mathbf{b} = \\
-&amp; = \mathbf{e} \cdot (\nabla \times \mathbf{h} - \mathbf{j}) - \mathbf{h} \cdot \nabla \times \mathbf{e} \ .
-\end{aligned}\end{split}\]</div>
-<p>L’ultimo termine può essere ulteriormente manipolato, usando l’identità vettoriale</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\mathbf{e} \cdot \nabla \times \mathbf{h} - \mathbf{h} \cdot \nabla \times \mathbf{e} &amp; = e_i \varepsilon_{ijk} \partial_j h_k - h_i \varepsilon_{ijk} \partial_j e_k = \qquad (i \rightarrow k, k \rightarrow i)\\
-&amp; = e_i \varepsilon_{ijk} \partial_j h_k - h_k \varepsilon_{kji} \partial_j e_i = \\
-&amp; = e_i \varepsilon_{ijk} \partial_j h_k + h_k \varepsilon_{ijk} \partial_j e_i = \\
-&amp; =  \partial_j (\varepsilon_{ijk} e_i  h_k ) = \\
-&amp; =  \partial_j (\varepsilon_{jki} e_i  h_k ) = \\
-&amp; = \nabla \cdot (\mathbf{h} \times \mathbf{e}) = - \nabla \cdot (\mathbf{e} \times \mathbf{h})
-\end{aligned}\end{split}\]</div>
-<p>che permette di scrivere l’equazione del bilancio di energia elettromagnetica come,</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial u }{\partial t} + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j} \ ,\]</div>
-<p>dove è stato definito il <strong>vettore di Poynting</strong>, o meglio il campo vettoriale di Poynting,</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{s}(\mathbf{r},t) := \mathbf{e}(\mathbf{r},t) \times \mathbf{h}(\mathbf{r},t) \ ,\]</div>
-<p>che può essere identificato come un flusso di potenza per unità di superficie, comparendo sotto l’operatore di divergenza nel bilnacio di energia.</p>
-<p><strong>todo.</strong> Rimandare a una sezione in cui si mostra questa ultima affermazione passando dal bilancio differenziale al bilancio integrale e si usa il teorema della divergenza, <span class="math notranslate nohighlight">\(\int_V \nabla \cdot \mathbf{s} = \oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}}\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
-<summary class="sd-summary-title sd-card-header">
-Bilancio di energia di cariche nel vuoto, o i materiali senza polarizzazione o magnetizzazione<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>Moto di cariche puntiformi.</strong>
-L’equazione del moto di carica puntiforme <span class="math notranslate nohighlight">\(q_k\)</span> nella posizione <span class="math notranslate nohighlight">\(\mathbf{r}_k(t)\)</span> al tempo <span class="math notranslate nohighlight">\(t\)</span> è</p>
-<div class="math notranslate nohighlight">
-\[m_k \ddot{\mathbf{r}}_k = \mathbf{f}_k + \mathbf{f}_k^{em} \ ,\]</div>
-<p class="sd-card-text">avendo riconosciuto i contributi di forza dovuti al campo elettromagnetico come <span class="math notranslate nohighlight">\(\mathbf{f}_k^{em}\)</span> dagli altri. L’espressione della forza dovuta al campo elettromagnetico sulla carica <span class="math notranslate nohighlight">\(k\)</span> è data dalla forza di Lorentz,</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{f}_k^{em}(t) = q_k \left[ \mathbf{e}(\mathbf{r_k}(t), t) - \mathbf{b}(\mathbf{r}_k(t), t) \times \dot{\mathbf{r}}_k(t) \right]\]</div>
-<p class="sd-card-text"><strong>Continuità della carica elettrica.</strong> La densità di carica e di corrente elettrica di un insieme di cariche libere puntiformi macroscopiche può essere scritta come</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \rho(\mathbf{r},t) &amp; = \sum_k q_k \delta(\mathbf{r} - \mathbf{r}_k(t)) \\
-  \mathbf{j}(\mathbf{r},t) &amp; = \sum_k q_k \dot{\mathbf{r}}_k(t) \delta(\mathbf{r} - \mathbf{r}_k(t)) \ .
-\end{aligned}\end{split}\]</div>
-<p class="sd-card-text">L’equazione di continuità della carica, <span class="math notranslate nohighlight">\(\partial_t \rho + \nabla \cdot \mathbf{j} = 0\)</span>, risulta quindi soddisfatta,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \partial_t \rho &amp;  = - \sum_k q_k \, \partial_i \delta(\mathbf{r} - \mathbf{r}_k(t)) \, \dot{r}_{k,i} \\
-  \partial_i j_i  &amp;  =   \sum_k q_k \, \dot{r}_{k,i} \, \partial_i \delta(\mathbf{r} - \mathbf{r}_k(t)) \\
-\end{aligned}\end{split}\]</div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Procedimento alternativo (e più generale?)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>todo</strong> <em>In caso questo procedimento sia più generale, o più corretto, sostituire il procedimento precedente.</em></p>
-<p class="sd-card-text">La carica elementare in un volumetto <span class="math notranslate nohighlight">\(\Delta V\)</span> è data da dal prodotto tra il volume e la densità volumetrica di carica, <span class="math notranslate nohighlight">\(\rho \Delta V\)</span>; la velocità media locale della carica elettrica è <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>; la forza agente sulla carica elementare immersa in un campo elettromagnetico è determinata dalla formula di Lorentz, <span class="math notranslate nohighlight">\(\mathbf{f} \Delta V = \Delta V \rho \left( \mathbf{e} - \mathbf{b} \times \mathbf{v} \right)\)</span>. La potenza di questa forza è il prodotto scalare con la velocità media delle cariche, <span class="math notranslate nohighlight">\(\Delta V \mathbf{f} \cdot \mathbf{v}\)</span></p>
-<p class="sd-card-text">La potenza del campo elettromagnetico sul moto della carica elettrica per unità di volume è quindi</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{v} \cdot \mathbf{f} = \rho \mathbf{v} \cdot \left( \mathbf{e} - \mathbf{b} \times \mathbf{v} \right) = \rho \mathbf{v} \cdot \mathbf{e} = \mathbf{j} \cdot \mathbf{e} \ .\]</div>
-<p class="sd-card-text"><strong>todo</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">discutere questo termine del bilancio di energia cinetica nel moto della carica elettrica</p></li>
-<li><p class="sd-card-text">questo termine compare con segno opposto nel bilancio dell’energia elettromagnetica del sistema</p></li>
-<li><p class="sd-card-text">dove compare la non-conservatività del problema in presenza di materiali dissipativi (come resistenza elettrica con <span class="math notranslate nohighlight">\(\mathbf{e} = \rho_R \mathbf{j}\)</span>?</p></li>
-</ul>
-<p class="sd-card-text">Il termine <span class="math notranslate nohighlight">\(\mathbf{e} \cdot \mathbf{j}\)</span> può essere manipolato usando le equazioni di Maxwell, e le relazioni</p>
+<div class="tex2jax_ignore mathjax_ignore section" id="green-s-function-method">
+<span id="classical-electromagnetism-green-function"></span><h1>Green’s function method<a class="headerlink" href="#green-s-function-method" title="Permalink to this heading">#</a></h1>
+<div class="section" id="poisson-equation">
+<h2>Poisson equation<a class="headerlink" href="#poisson-equation" title="Permalink to this heading">#</a></h2>
+<p>General Poisson’s problem</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
-  \mathbf{d} = \varepsilon_0 \mathbf{e} + \mathbf{p} \\
-  \mathbf{h} = \frac{\mathbf{b}}{\mu_0} - \mathbf{m} \\
+  - \nabla^2 \mathbf{u}(\mathbf{r}, t) = \mathbf{f}(\mathbf{r},t) \\
+  \text{+ b.c.}
 \end{cases}\end{split}\]</div>
+<p>with common boundary conditions</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+\mathbf{u} = \mathbf{g} &amp; \quad \text{on $S_D$} \\
+\hat{\mathbf{n}} \cdot \nabla \mathbf{u} = \mathbf{h} &amp; \quad \text{on $S_N$}
+\end{cases}\end{split}\]</div>
+<p>over Dirichlet and Neumann regions of the boundary.</p>
+<p>Poisson’s problem for Green’s function, in infinite domain</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  - \nabla_{\mathbf{r}}^2 G(\mathbf{r}; \mathbf{r}_0) = \delta(\mathbf{r} - \mathbf{r}_0) \\
+\end{split}\]</div>
+<p>Green’s function method</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \mathbf{e} \cdot \mathbf{j} 
-    &amp; = \mathbf{e} \cdot \left( \nabla \times \mathbf{h} - \partial_t \mathbf{d} \right) = \\
-    &amp; = - \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) + \mathbf{h} \cdot \nabla \times \mathbf{e} - \mathbf{e} \cdot \partial_t \mathbf{d} = \\
-    &amp; = - \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) - \mathbf{h} \cdot \partial_t \mathbf{b} - \mathbf{e} \cdot \partial_t \mathbf{d} 
+  E(\mathbf{r}_0, t) u_i(\mathbf{r}_0, t) 
+  &amp; =   \int_{\mathbf{r} \in \Omega} u_i(\mathbf{r},t) \delta(\mathbf{r}-\mathbf{r}_0) = \\
+  &amp; = - \int_{\mathbf{r} \in \Omega} u_i(\mathbf{r},t) \nabla_{\mathbf{r}}^2 G(\mathbf{r}-\mathbf{r}_0) = \\
+  &amp; = - \int_{\mathbf{r} \in \Omega} \nabla_{\mathbf{r}} \cdot ( u_i \nabla_{\mathbf{r}} G - G \nabla_{\mathbf{r}} u_i) - \int_{\mathbf{r} \in \Omega} G \nabla^2 u_i= \\
+  &amp; = - \oint_{\mathbf{r} \in \partial \Omega} \hat{\mathbf{n}} \cdot ( u_i \nabla_{\mathbf{r}} G - G \nabla_{\mathbf{r}} u_i) + \int_{\mathbf{r} \in \Omega} G(\mathbf{r}-\mathbf{r}_0) f_i(\mathbf{r}, t) . \\
 \end{aligned}\end{split}\]</div>
-<p class="sd-card-text">Gli ultimi due termini possono essere manipolati in diverse maniere,</p>
+<p>An integro-differential boundary problem can be written using boundary conditions. As an example, using Dirichlet and Neumann boundary conditions, the integro-differential problem reads</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \mathbf{e} \cdot \partial_t \mathbf{d}
-    = \mathbf{e} \cdot \partial_t \left( \varepsilon_0 \mathbf{e} + \mathbf{p} \right) 
-  &amp; = \partial_t \left( \frac{1}{2} \varepsilon_0 \mathbf{e} \cdot \mathbf{e} \right) + \mathbf{e} \cdot \partial_t \mathbf{p} \\
-  &amp; = \partial_t \left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} \right) + \frac{1}{2} \left( \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} \right) \\
-  &amp; = \partial_t \left( \frac{1}{2 \varepsilon_0} \mathbf{d} \cdot \mathbf{d} \right) - \frac{\mathbf{p}}{\varepsilon_0} \cdot \partial_t \mathbf{d} \\
+&amp;  E(\mathbf{r}_0, t) \mathbf{u}(\mathbf{r}_0, t) 
++ \int_{\mathbf{r} \in S_N} \mathbf{u}(\mathbf{r},t) \, \hat{\mathbf{n}} \cdot \nabla_{\mathbf{r}} G(\mathbf{r}-\mathbf{r}_0)
+- \int_{\mathbf{r} \in S_D} G(\mathbf{r}-\mathbf{r}_0) \, \hat{\mathbf{n}} \cdot \nabla_{\mathbf{r}} \mathbf{u}(\mathbf{r},t) = \\ 
+&amp; =
+- \int_{\mathbf{r} \in S_D} \mathbf{g}(\mathbf{r},t) \, \hat{\mathbf{n}} \cdot \nabla_{\mathbf{r}} G(\mathbf{r}-\mathbf{r}_0)
++ \int_{\mathbf{r} \in S_N} G(\mathbf{r}-\mathbf{r}_0) \, \mathbf{h}(\mathbf{r},t)  
++ \int_{\mathbf{r} \in \Omega} G(\mathbf{r}-\mathbf{r}_0) \, \mathbf{f}(\mathbf{r}, t) . \\
 \end{aligned}\end{split}\]</div>
+<p>Green’s function of the Poisson-Laplace equation reads</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \mathbf{h} \cdot \partial_t \mathbf{b}
-    = \mathbf{h} \cdot \partial_t \left( \mu_0 \mathbf{h} + \mu_0 \mathbf{m} \right) 
-  &amp; = \partial_t \left( \frac{1}{2} \mu_0 \mathbf{h} \cdot \mathbf{h} \right) + \mu_0 \mathbf{h} \cdot \partial_t \mathbf{m} \\
-  &amp; = \partial_t \left( \frac{1}{2} \mathbf{b} \cdot \mathbf{h} \right) + \frac{1}{2} \mu_0 \left( \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \\
-  &amp; = \partial_t \left( \frac{1}{2 \mu_0} \mathbf{b} \cdot \mathbf{b} \right) - \mathbf{m} \cdot \partial_t \mathbf{b} \\
-\end{aligned}\end{split}\]</div>
-<p class="sd-card-text">Nel vuoto o in mezzi lineari <span class="math notranslate nohighlight">\(\mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} = \mathbf{0}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} = \mathbf{0}\)</span>. Usando le seconde espressioni, si può riscrivere l’equazione dell’energia del campo elettromagnetico come</p>
+\[G(\mathbf{r};\mathbf{r}_0) = \frac{1}{4 \pi} \frac{1}{\left| \mathbf{r}-\mathbf{r}_0 \right|} \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Green’s function of the Laplace equation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \partial_t \left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} + \frac{1}{2} \mathbf{b} \cdot \mathbf{h} \right) + \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) &amp; = - \ \mathbf{e} \cdot \mathbf{j} \ + \\
-   &amp; \quad - \frac{1}{2} \left[ \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} + \mu_0 \left(  \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \right]
-\end{aligned}\end{split}\]</div>
-<p class="sd-card-text">o, usando le definizioni di densità di energia elettromagnetica <span class="math notranslate nohighlight">\(u\)</span> e vettore di Poynting <span class="math notranslate nohighlight">\(\mathbf{s}\)</span>,</p>
+\[-\nabla^2 G = 0 \qquad \text{for $\mathbf{r} \ne \mathbf{r}_0$}\]</div>
+<p class="sd-card-text">Solutions with spherical symmetry,</p>
 <div class="math notranslate nohighlight">
-\[
-  \partial_t u + \nabla \cdot \mathbf{s} =
-    - \ \mathbf{e} \cdot \mathbf{j} \
-    - \frac{1}{2} \left[ \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} + \mu_0 \left(  \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \right]
+\[0 = \nabla^2 G = \frac{1}{r^2} \left( r^2 G' \right)'
+\quad \rightarrow \quad
+G'(r) = \frac{A}{r^2} \quad \rightarrow \quad G(r) = - \frac{A}{r} + B
 \]</div>
+<p class="sd-card-text">Choosing <span class="math notranslate nohighlight">\(B = 0\)</span> s.t. <span class="math notranslate nohighlight">\(G(r) \rightarrow 0\)</span> as <span class="math notranslate nohighlight">\(r \rightarrow \infty\)</span>, and integrating over a sphere centered in <span class="math notranslate nohighlight">\(r=0\)</span> to get <span class="math notranslate nohighlight">\(A = -\frac{1}{4 \pi}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[1 = \int_{V} \delta(r) = - \int_{V} \nabla^2 G = - \oint_{\partial V} \hat{\mathbf{n}} \cdot \nabla G
+= -\oint_{\partial V} \hat{\mathbf{r}} \cdot \hat{\mathbf{r}} \frac{A}{r^2} = - 4 \pi \, A \]</div>
 </div>
 </details></div>
+<div class="section" id="helmholtz-equation">
+<h2>Helmholtz equation<a class="headerlink" href="#helmholtz-equation" title="Permalink to this heading">#</a></h2>
+<p><strong>todo</strong> from Fourier to Laplace trasnform in the first lines of this section</p>
+<p>A Helmholtz’s equation can be thouoght as the time Fourier transform of a wave equation,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \dfrac{1}{c^2} \partial_{tt} \mathbf{u}(\mathbf{r},t) - \nabla^2 \mathbf{u}(\mathbf{r},t) = \mathbf{f}(\mathbf{r},t) \\
+  \text{+ b.c.} \\
+  \text{+ i.c.} \ ,
+\end{cases}\end{split}\]</div>
+<p>Fourier transform in time of field <span class="math notranslate nohighlight">\(\mathbf{u}(\mathbf{r},t)\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[\tilde{\mathbf{u}}(\mathbf{r}, \omega) = \mathscr{F}\{ \mathbf{u}(\mathbf{r},t) \} = \int_{t=-\infty}^{+\infty} \mathbf{u}(\mathbf{r},t) e^{-i \omega t} \, d \omega\]</div>
+<p>and, if <span class="math notranslate nohighlight">\(\mathbf{u}(\mathbf{r},t)\)</span> is compact in time, Fourier transform of its time partial derivatives read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathscr{F}\{ \dot{\mathbf{u}}(\mathbf{r},t) \} 
+  &amp; = \int_{t=-\infty}^{+\infty} \dot{\mathbf{u}}(\mathbf{r},t) e^{-i \omega t} \, d \omega = \\
+  &amp; = \mathbf{u}(\mathbf{r},t) e^{-i \omega t} \big|_{t=-\infty}^{+\infty} + i \omega \int_{t=-\infty}^{+\infty} \mathbf{u}(\mathbf{r},t) e^{-i \omega t} \, d \omega = \\
+  &amp; = i \omega \mathscr{F}\{  \mathbf{u}(\mathbf{r},t) \}
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\mathscr{F}\{ \partial_t^n \mathbf{u}(\mathbf{r},t) \} = (i \omega)^n \tilde{\mathbf{u}} \ .\]</div>
+<p>The differential problem in the transformed domain thus reads</p>
+<div class="math notranslate nohighlight">
+\[- \frac{\omega^2}{c^2} \tilde{\mathbf{u}} - \nabla^2 \tilde{\mathbf{u}} = \tilde{\mathbf{f}}\]</div>
+<p>Green’s function of Helmholtz’e equation reads</p>
+<div class="math notranslate nohighlight">
+\[G(\mathbf{r}, s) =
+  \alpha^+ \frac{e^{ \frac{s|\mathbf{r} - \mathbf{r}_0|}{c}}}{|\mathbf{r} - \mathbf{r}_0|} +
+  \alpha^- \frac{e^{-\frac{s|\mathbf{r} - \mathbf{r}_0|}{c}}}{|\mathbf{r} - \mathbf{r}_0|}
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(\alpha^+ + \alpha^- = \frac{1}{4 \pi}\)</span>.</p>
+<p>Being the Laplace transform,</p>
+<div class="math notranslate nohighlight">
+\[\mathscr{L}\{ f(t) \} = \int_{t=0^-}^{+\infty} f(t) e^{-st} dt \ ,\]</div>
+<p>the Laplace transform of a causal function with time delay <span class="math notranslate nohighlight">\(\tau \ge 0\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[\mathscr{L}\{ f(t-\tau) \} = \int_{t=0^-}^{+\infty} f(t-\tau) e^{-st} dt = \int_{z = - \tau}^{+\infty} f(z) e^{-s(z+\tau)} \, dz = e^{-s\tau} \, \int_{z = 0}^{+\infty} f(z) e^{-s z} \, dz = e^{-s \tau} \, \mathscr{L}\{ f(t) \}\]</div>
+<p>having used causality <span class="math notranslate nohighlight">\(f(t) = 0\)</span> for <span class="math notranslate nohighlight">\(t &lt; 0\)</span>. Laplace transform of Dirac’s delta <span class="math notranslate nohighlight">\(\delta(t)\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[\mathscr{L}\{ \delta(t) \} = \int_{t=0^-}^{+\infty} \delta(t) \, dt = 1 \ ,\]</div>
+<p>so that <span class="math notranslate nohighlight">\(e^{-s \tau} = e^{- s \tau} \, 1 = \mathscr{L}\{ \delta(t-\tau) \}\)</span>.</p>
+<p>Thus, Green’s function for the wave equation reads</p>
+<div class="math notranslate nohighlight">
+\[G(\mathbf{r},t; \mathbf{r}_0, t_0) = 
+  \alpha^+ \frac{ \delta \left( t - t_0 + \frac{|\mathbf{r}-\mathbf{r}_0|}{c} \right)}{|\mathbf{r} - \mathbf{r}_0|} +
+  \alpha^- \frac{ \delta \left( t - t_0 - \frac{|\mathbf{r}-\mathbf{r}_0|}{c} \right)}{|\mathbf{r} - \mathbf{r}_0|}
+\]</div>
+<p>If <span class="math notranslate nohighlight">\(t \ge t_0\)</span>, and <span class="math notranslate nohighlight">\(G(\mathbf{r}, t; \mathbf{r}_0, t_0)\)</span> connects the past <span class="math notranslate nohighlight">\(t_0\)</span> with the future <span class="math notranslate nohighlight">\(t\)</span>, the first term is not causal, and thus <span class="math notranslate nohighlight">\(\alpha^+ = 0\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[G(\mathbf{r},t; \mathbf{r}_0, t_0) = \frac{1}{4 \pi} \frac{ \delta \left( t - t_0 - \frac{|\mathbf{r}-\mathbf{r}_0|}{c} \right)}{|\mathbf{r} - \mathbf{r}_0|} \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Green’s function<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\frac{s^2}{c^2} G - \nabla^2 G = \delta(r)\]</div>
+<div class="math notranslate nohighlight">
+\[G(r) = \frac{\alpha e^{k r} + \beta e^{-kr}}{r}\]</div>
+<p class="sd-card-text">Proof:</p>
+<ul>
+<li><p class="sd-card-text">Gradient</p>
+<div class="math notranslate nohighlight">
+\[\nabla G(r) = \hat{\mathbf{r}} \partial_r G = \hat{\mathbf{r}} \frac{\alpha (k r - 1) e^{kr} + \beta(-k r - 1)e^{-kr}}{r^2}\]</div>
+</li>
+<li><p class="sd-card-text">Laplacian</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \nabla^2 G(r) &amp; = \frac{1}{r^2} \left( r^2 G'(r) \right)' = \\
+    &amp; = \frac{1}{r^2} \left(  \alpha (k r - 1) e^{kr} + \beta(-k r - 1)e^{-kr}\right)' = \\
+    &amp; = \frac{1}{r^2} \left( \alpha k e^{kr} + \alpha k^2 r  e^{kr} - \alpha k e^{kr} - \beta k e^{-kr} + \beta k^2 r e^{-kr} + \beta k e^{-kr}  \right) = \\
+    &amp; = \frac{1}{r} \left( \alpha e^{kr} + \beta e^{-kr} \right) k^2 = k^2 G(r) \ .
+  \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and thus <span class="math notranslate nohighlight">\(k^2 G(r) - \nabla^2 G = 0\)</span>, for <span class="math notranslate nohighlight">\(r \ne 0\)</span>;</p>
+</li>
+<li><p class="sd-card-text">Unity</p>
+<div class="math notranslate nohighlight">
+\[1 = \int_{V} \delta(r) = \int_V \left( k^2 G - \nabla^2 G \right) = \int_V k^2 G - \oint_{\partial V} \hat{\mathbf{n}} \cdot \nabla G \]</div>
+<p class="sd-card-text">the second term is the sum of two contributions of the form</p>
+<div class="math notranslate nohighlight">
+\[\oint_{\partial V} \hat{\mathbf{n}} \cdot \nabla G^{\pm} = \oint_{\partial V} \frac{\alpha^{\pm}(\pm k r - 1) e^{\pm k r}}{r^2} = 4 \pi \alpha^{\pm} (\pm k r - 1) e^{\pm k r}\]</div>
+<p class="sd-card-text">the first term is the sum of two contributions of the form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    k^2 \int_{V} G(r)
+      &amp; = k^2 \int_{V} \frac{\alpha^{\pm} e^{\pm k r}}{r} = \\
+      &amp; = k^2 \alpha^{\pm} \int_{R = 0}^{r} \int_{\phi=0}^{\pi} \int_{\theta=0}^{2 \pi} \frac{e^{\pm k R}}{R} R^2 \sin \phi \, dR \, d \phi \, d \theta = \\
+      &amp; = k^2 \alpha^{\pm} \, 4 \pi \int_{R = 0}^{r} R \, e^{\pm k R} \, dR \ .
+  \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">the last integral can be evaluated with integration by parts</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \int_{R = 0}^{r} R \, e^{\pm k R} \, dR
+    &amp; = \left.\left[ \frac{1}{\pm k} e^{\pm k R } R \right]\right|_{R=0}^{r} \mp \frac{1}{k} \int_{R=0}^{r} e^{\pm k R} \, dR = \\
+    &amp; = \frac{1}{\pm k} e^{\pm k r } r  - \frac{1}{k^2} e^{\pm k R} + \frac{1}{k^2} = \\
+  \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Thus summing everything together,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    1 &amp; = \alpha^+ \left[ 4 \pi k^2 \left( \frac{r}{k} e^{k r} - \frac{1}{k^2} e^{kr} + \frac{1}{k^2} \right) - 4 \pi \left( k r - 1 \right) e^{kr} \right] + \alpha^- \left[ \dots \right] = \\
+      &amp; = 4 \pi \left( \alpha^+ + \alpha^- \right) \ .
+  \end{aligned}\end{split}\]</div>
+</li>
+</ul>
+</div>
+</details></div>
+<div class="section" id="wave-equation">
+<h2>Wave equation<a class="headerlink" href="#wave-equation" title="Permalink to this heading">#</a></h2>
+<p>Wave equation general problem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \dfrac{1}{c^2} \partial_{tt} \mathbf{u}(\mathbf{r},t) - \nabla^2 \mathbf{u}(\mathbf{r},t) = \mathbf{f}(\mathbf{r},t) \\
+  \text{+ b.c.} \\
+  \text{+ i.c.} \\
+\end{cases}\end{split}\]</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -593,20 +657,20 @@ Procedimento alternativo (e più generale?)<div class="sd-summary-down docutils"
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="media.html"
+       href="circuits-electromechanic.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Elettromagnetismo nella materia</p>
+        <p class="prev-next-title">Circuiti elettromeccanici</p>
       </div>
     </a>
     <a class="right-next"
-       href="low-speed-relativity.html"
+       href="numerical-methods.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Equazioni dell’elettromagnetismo e relatività galileiana</p>
+        <p class="prev-next-title">Metodi numerici</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -616,6 +680,22 @@ Procedimento alternativo (e più generale?)<div class="sd-summary-down docutils"
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#poisson-equation">Poisson equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helmholtz-equation">Helmholtz equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wave-equation">Wave equation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

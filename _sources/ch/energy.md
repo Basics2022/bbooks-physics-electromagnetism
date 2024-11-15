@@ -69,7 +69,21 @@ $$m_k \ddot{\mathbf{r}}_k = \mathbf{f}_k + \mathbf{f}_k^{em} \ ,$$
 
 avendo riconosciuto i contributi di forza dovuti al campo elettromagnetico come $\mathbf{f}_k^{em}$ dagli altri. L'espressione della forza dovuta al campo elettromagnetico sulla carica $k$ è data dalla forza di Lorentz,
 
-$$\mathbf{f}_k^{em}(t) = q_k \left( \mathbf{e}(\mathbf{r_k}(t), t) - \mathbf{b}(\mathbf{r}_k(t), t) \times \dot{\mathbf{r}}_k(t) \right)$$
+$$\mathbf{f}_k^{em}(t) = q_k \left[ \mathbf{e}(\mathbf{r_k}(t), t) - \mathbf{b}(\mathbf{r}_k(t), t) \times \dot{\mathbf{r}}_k(t) \right]$$
+
+**Continuità della carica elettrica.** La densità di carica e di corrente elettrica di un insieme di cariche libere puntiformi macroscopiche può essere scritta come
+
+$$\begin{aligned}
+  \rho(\mathbf{r},t) & = \sum_k q_k \delta(\mathbf{r} - \mathbf{r}_k(t)) \\
+  \mathbf{j}(\mathbf{r},t) & = \sum_k q_k \dot{\mathbf{r}}_k(t) \delta(\mathbf{r} - \mathbf{r}_k(t)) \ .
+\end{aligned}$$
+
+L'equazione di continuità della carica, $\partial_t \rho + \nabla \cdot \mathbf{j} = 0$, risulta quindi soddisfatta,
+
+$$\begin{aligned}
+  \partial_t \rho &  = - \sum_k q_k \, \partial_i \delta(\mathbf{r} - \mathbf{r}_k(t)) \, \dot{r}_{k,i} \\
+  \partial_i j_i  &  =   \sum_k q_k \, \dot{r}_{k,i} \, \partial_i \delta(\mathbf{r} - \mathbf{r}_k(t)) \\
+\end{aligned}$$
 
 ```
 
@@ -77,7 +91,6 @@ $$\mathbf{f}_k^{em}(t) = q_k \left( \mathbf{e}(\mathbf{r_k}(t), t) - \mathbf{b}(
 
 
 ```{dropdown} Procedimento alternativo (e più generale?)
-:open:
 
 **todo** *In caso questo procedimento sia più generale, o più corretto, sostituire il procedimento precedente.*
 
