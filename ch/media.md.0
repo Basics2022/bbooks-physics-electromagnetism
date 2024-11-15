@@ -1,0 +1,121 @@
+```{article-info}
+:author: basics
+:date: "{sub-ref}`today`"
+:read-time: "{sub-ref}`wordcount-minutes` min read"
+```
+
+(classical-electromagnetism:media)=
+# Elettromagnetismo nella materia
+
+**todo**
+
+## Vuoto
+
+"vuoto di materia, ma non di proprietà fisiche"
+
+## Mezzi continui
+
+- leggi costitutive generali
+- mezzi lineari non disperivi:
+  - e isotropi
+
+## Polarizzazione e Magnetizzazione dei mezzi
+- bounded/free charges and currents
+
+### Polarizzazione
+
+### Magnetizzazione
+
+#### Formula di Biot-Savart
+
+Per un tratto elementare $d \symbf{\ell}(\mathbf{r}_0)$ di conduttore percorso da corrente elettrica $i(\mathbf{r}_0)$,
+
+$$d \mathbf{b}(\mathbf{r}) = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \frac{\mathbf{r} - \mathbf{r}_0}{\left|\mathbf{r} - \mathbf{r}_0 \right|^3} \times d \symbf{\ell}(\mathbf{r}_0)$$
+
+$$\mathbf{b}(\mathbf{r}) = \oint_{\ell} \left\{ - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \frac{\mathbf{r}- \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \times \hat{\mathbf{t}}(\mathbf{r}_0) \right\} $$
+
+e facendo tendere $\ell \rightarrow 0$ e $i \rightarrow \infty$, assumendo una spira circolare piana **todo** *rilassare questa ipotesi*, e approssimando l'integranda $\mathbf{r}_0 = \mathbf{r}^*_0 + O(|\delta \mathbf{r}_0|)$, con $\mathbf{r}^*_0$ il centro (o un punto della spira),
+
+Incremento della funzione $\frac{r_i}{r}$ in seguito a un incremento della variabile indipendente $r_i \rightarrow r_i + \delta r_i$
+
+$$r^2 \sim r_0^2 + 2 r_{0,i} \, \delta r_i + \delta r^2$$
+
+$$r^2 = |\mathbf{r}|^2 = \mathbf{r} \cdot \mathbf{r}$$
+
+$$\partial_i r = \frac{r_i}{r}$$
+
+$$\partial_k \frac{r_i}{r^3} 
+  = \frac{\partial_k r_i}{r^3} - \frac{r_i \partial_k r^3}{r^6} 
+  = \frac{\partial_k r_i}{r^3} - \frac{r_i \, 3 r^2 \frac{r_k}{r}}{r^6}
+  = \frac{\delta_{ik}}{r^3} - 3 \frac{r_i r_k}{r^5}
+$$
+
+$$f(\mathbf{r}) = f(\mathbf{r}^* + \delta \mathbf{r}) \sim f(\mathbf{r}) + \delta \mathbf{r} \cdot \nabla f(\mathbf{r}^*) + o(|\delta \mathbf{r}|)$$
+
+$$\begin{aligned}
+\frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3}
+  & \sim \frac{\mathbf{r} - \mathbf{r}^*_0}{|\mathbf{r} - \mathbf{r}^*_0|^3} + \delta \mathbf{r}_0 \cdot \left[ - \frac{1}{|\mathbf{r} - \mathbf{r}^*_0|^3} \mathbb{I} + 3 \, \frac{(\mathbf{r} - \mathbf{r}^*_0) \otimes (\mathbf{r} - \mathbf{r}^*_0)}{|\mathbf{r} - \mathbf{r^*}_0|^5} \right] + o(|\delta \mathbf{r}_0|) = \\
+  & \sim \frac{\mathbf{r} - \mathbf{r}^*_0}{|\mathbf{r} - \mathbf{r}^*_0|^3} - \frac{\delta \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}^*_0|^3} + 3 \, \frac{(\mathbf{r} - \mathbf{r}^*_0) }{|\mathbf{r} - \mathbf{r^*}_0|^5}(\mathbf{r} - \mathbf{r}^*_0) \cdot \delta \mathbf{r}_0 + o(|\delta \mathbf{r}_0|)
+\end{aligned}$$
+
+
+<!--
+$$\frac{\mathbf{r}}{|\mathbf{r}|^3} = \frac{\mathbf{r}_0 + \delta \mathbf{r}}$$
+-->
+
+$$\mathbf{b}(\mathbf{r}_0) = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \oint_{\ell(\mathbf{r}_0)} \left[ \frac{\mathbf{r} - \mathbf{r}^*_0}{|\mathbf{r} - \mathbf{r}^*_0|^3} - \frac{\delta \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}^*_0|^3} + 3 \, \frac{(\mathbf{r} - \mathbf{r}^*_0) }{|\mathbf{r} - \mathbf{r^*}_0|^5}(\mathbf{r} - \mathbf{r}^*_0) \cdot \delta \mathbf{r}_0 + o(|\delta \mathbf{r}_0|)  \right] \times \hat{\mathbf{t}}(\mathbf{r}_0) $$
+
+Nel caso di spira circolare piana con
+
+$$\delta \mathbf{r}_0 = R \hat{\mathbf{r}} = R (\cos \theta \hat{\mathbf{x}} + \sin \theta \hat{\mathbf{y}})$$
+$$\hat{\mathbf{t}}(\mathbf{r}_0) = \hat{\symbf{\theta}}(\mathbf{r}_0) = -\sin \theta \hat{\mathbf{x}} + \cos \theta \hat{\mathbf{y}}$$
+$$\hat{\mathbf{n}} := \hat{\mathbf{r}} \times \hat{\symbf{\theta}}$$
+
+$$\begin{aligned}
+\mathbf{b}(\mathbf{r})
+  & = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \oint_{\ell(\mathbf{r}_0)} \left[ \frac{(x \hat{\mathbf{x}} + y \hat{\mathbf{y}} + z \hat{\mathbf{n}}) \times (-\sin \theta \hat{\mathbf{x}} + \cos \theta \hat{\mathbf{y}} )}{r^3} \left( 1 + 3 \frac{(x \hat{\mathbf{x}} + y \hat{\mathbf{y}} + z \hat{\mathbf{n}}) \cdot R ( \cos \theta \hat{\mathbf{x}} + \sin \theta \hat{\mathbf{y}} )}{r^2}  \right) - \frac{R \hat{\mathbf{n}}}{r^3}\right] = \\
+   & = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \oint_{\ell(\mathbf{r}_0)} \left[ \frac{\hat{\mathbf{x}}(-z \cos \theta) + \hat{\mathbf{y}}(-z \sin \theta) + \hat{\mathbf{n}}(x \cos \theta + y \sin \theta)}{r^3} \left( 1 + 3 R \frac{x \cos \theta + y \sin \theta}{r^2}  \right) - \frac{R \hat{\mathbf{n}}}{r^3}\right] = \\ 
+ & = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) R \left[ \hat{\mathbf{x}}\left( - 3 \frac{x z R}{r^5} \pi \right) + \hat{\mathbf{y}}\left(- 3 \frac{y z R}{r^5} \pi \right) + \hat{\mathbf{n}}\left( 3 R \frac{x^2 + y^2}{r^5} \pi - \frac{R}{r^3} 2 \pi \right)  \right] = \\ 
+ & = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) R \left[ \hat{\mathbf{x}}\left( - 3 \frac{x z R}{r^5} \pi \right) + \hat{\mathbf{y}}\left(- 3 \frac{y z R}{r^5} \pi \right) + \hat{\mathbf{n}}\left( 3 R \frac{r^2 - z^2}{r^5} \pi - \frac{R}{r^3} 2 \pi \right)  \right] = \\
+ & = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) R \left[ \hat{\mathbf{x}}\left( - 3 \frac{x z R}{r^5} \pi \right) + \hat{\mathbf{y}}\left(- 3 \frac{y z R}{r^5} \pi \right) + \hat{\mathbf{n}}\left( 3 R \frac{r^2 - z^2}{r^5} \pi - \frac{R}{r^3} 2 \pi \right)  \right] = \\
+ & = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) R \left[ - 3 \mathbf{r} \frac{z R}{r^5} \pi + \hat{\mathbf{n}} \frac{R}{r^3} \pi \right] = \\
+ & = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \pi R^2 \frac{ \hat{\mathbf{n}} - 3 \hat{\mathbf{n}} \cdot \hat{\mathbf{r}} \, \hat{\mathbf{r}} }{r^3} = \\
+ & = \frac{\mu}{4 \pi} i(\mathbf{r}_0) \pi R^2 \frac{ 3 \hat{\mathbf{n}} \cdot \hat{\mathbf{r}} \, \hat{\mathbf{r}} - \hat{\mathbf{n}} }{r^3} = \\
+\end{aligned}$$
+
+e definendo il **momento magnetico** $\mathbf{m}(\mathbf{r}_0) := \hat{\mathbf{n}} \, i(\mathbf{r}_0) \pi R^2 = \hat{\mathbf{n}} \, i(\mathbf{r}_0) \, A $, si ottiene l'espressione del campo magnetico generato $\mathbf{r}$ dal **dipolo magnetico** in $\mathbf{r}_0$,
+
+$$\mathbf{b}(\mathbf{r}) = \frac{\mu}{4 \pi} \left[ 3 \mathbf{m} \cdot \frac{(\mathbf{r}- \mathbf{r}_0) (\mathbf{r}- \mathbf{r}_0)}{|\mathbf{r}- \mathbf{r}_0|^5} - \frac{\mathbf{m} }{|\mathbf{r}- \mathbf{r}_0|^3} \right]$$
+
+Data una densità di momento magnetico $\mathbf{m}$ tale che il momento magnetico elementare $d \mathbf{M}$ di un volume elementare $d V$
+
+$$d \mathbf{M}(\mathbf{r}_0) = \mathbf{m}(\mathbf{r}_0) \, dV(\mathbf{r}_0) \ ,$$
+
+il campo magnetico generato nel punto $\mathbf{r}$ è
+
+$$\begin{aligned}
+\mathbf{b}(\mathbf{r})
+  & = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \left[ 3 \frac{(\mathbf{r} - \mathbf{r}_0)(\mathbf{r} - \mathbf{r}_0)}{|\mathbf{r} - \mathbf{r}_0|^5} \cdot \mathbf{m}(\mathbf{r}_0) - \frac{\mathbf{m}(\mathbf{r}_0)}{|\mathbf{r} - \mathbf{r}_0|^3} \right] \, dV_{\mathbf{r}_0} = \\
+  & = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \cdot \mathbf{m}(\mathbf{r}_0) \, dV_{\mathbf{r}_0}
+\end{aligned}$$
+
+e usando la regola della derivata del prodotto,
+
+$$\partial_i \left( \frac{r_k}{|r|^3} \right) \, m_i = \partial_i \left( \frac{r_k \, m_i}{r^3} \right) - \frac{r_k}{r^3} \partial_i m_i \ ,$$
+
+e la regola di integrazione per parti (o il teorema della divergenza...)
+
+$$\begin{aligned}
+  \mathbf{b}(\mathbf{r})
+  & = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \cdot \mathbf{m}(\mathbf{r}_0) \, dV_{\mathbf{r}_0} = \\
+  & = \int_{V(\mathbf{r}_0)} \frac{\mu}{4 \pi} \left[- \nabla_{\mathbf{r}_0} \cdot \left( \frac{\mathbf{m}(\mathbf{r}_0) \cdot (\mathbf{r} - \mathbf{r}_0)}{|\mathbf{r} - \mathbf{r}_0|^5} \right) +  \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \nabla_{\mathbf{r}_0} \cdot \mathbf{m}(\mathbf{r}_0) \right] \, dV_{\mathbf{r}_0}
+\end{aligned}$$
+
+
+
+
+
+## Esempi
+- conduttori
+- ferromagentici e magnetismo debole (para-, dia-, anti-)
+
