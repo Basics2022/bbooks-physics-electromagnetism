@@ -243,7 +243,7 @@ si ricava l'equazione di continuità per le cariche di magnetizzazione
 
 $$\begin{aligned}
   0 & = \partial_t \rho_M + \nabla \cdot \mathbf{j}_M = \\
-    & = \partial_t \rho_M + \underbrace{ \nabla \cdot \nabla \times \mathbf{m}}_{ \equiv \mathbf{0} } = \\
+    & = \partial_t \rho_M + \underbrace{ \nabla \cdot \nabla \times \mathbf{m}}_{ \equiv \mathbf{0} } \ .
 \end{aligned}$$
 
 ## Polarizzazione e Magnetizzazione dei mezzi
