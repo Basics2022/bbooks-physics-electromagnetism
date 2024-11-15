@@ -533,17 +533,29 @@ G'(r) = \frac{A}{r^2} \quad \rightarrow \quad G(r) = - \frac{A}{r} + B
 <p>Green’s function of Helmholtz’e equation reads</p>
 <div class="math notranslate nohighlight">
 \[G(\mathbf{r}, s) =
-  \alpha^+ \frac{e^{\frac{ s|\mathbf{r}-\mathbf{r}_0|}{c}}}{|\mathbf{r}- \mathbf{r}_0|} +
-  \alpha^- \frac{e^{\frac{-s|\mathbf{r}-\mathbf{r}_0|}{c}}}{|\mathbf{r}- \mathbf{r}_0|}
+  \alpha^+ \frac{e^{ \frac{s|\mathbf{r} - \mathbf{r}_0|}{c}}}{|\mathbf{r} - \mathbf{r}_0|} +
+  \alpha^- \frac{e^{-\frac{s|\mathbf{r} - \mathbf{r}_0|}{c}}}{|\mathbf{r} - \mathbf{r}_0|}
 \]</div>
 <p>with <span class="math notranslate nohighlight">\(\alpha^+ + \alpha^- = \frac{1}{4 \pi}\)</span>.</p>
 <p>Being the Laplace transform,</p>
 <div class="math notranslate nohighlight">
-\[\mathscr{L}\{ f(t) \} = \int_{t=0}^{+\infty} f(t) e^{-st} dt \ ,\]</div>
-<p>and</p>
+\[\mathscr{L}\{ f(t) \} = \int_{t=0^-}^{+\infty} f(t) e^{-st} dt \ ,\]</div>
+<p>the Laplace transform of a causal function with time delay <span class="math notranslate nohighlight">\(\tau \ge 0\)</span> reads</p>
 <div class="math notranslate nohighlight">
-\[\mathscr{L}\{ f(t-\tau) \} = \int_{t=0}^{+\infty} f(t-\tau) e^{-st} dt = \int_{z = - \tau}^{+\infty} f(z) e^{-s(z+\tau)} \, dz = e^{-s \tau} \, \mathscr{L}\{ f(t) \}\]</div>
-<p>having used causality <span class="math notranslate nohighlight">\(f(t) = 0\)</span> for <span class="math notranslate nohighlight">\(t &lt; 0\)</span>.</p>
+\[\mathscr{L}\{ f(t-\tau) \} = \int_{t=0^-}^{+\infty} f(t-\tau) e^{-st} dt = \int_{z = - \tau}^{+\infty} f(z) e^{-s(z+\tau)} \, dz = e^{-s\tau} \, \int_{z = 0}^{+\infty} f(z) e^{-s z} \, dz = e^{-s \tau} \, \mathscr{L}\{ f(t) \}\]</div>
+<p>having used causality <span class="math notranslate nohighlight">\(f(t) = 0\)</span> for <span class="math notranslate nohighlight">\(t &lt; 0\)</span>. Laplace transform of Dirac’s delta <span class="math notranslate nohighlight">\(\delta(t)\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[\mathscr{L}\{ \delta(t) \} = \int_{t=0^-}^{+\infty} \delta(t) \, dt = 1 \ ,\]</div>
+<p>so that <span class="math notranslate nohighlight">\(e^{-s \tau} = e^{- s \tau} \, 1 = \mathscr{L}\{ \delta(t-\tau) \}\)</span>.</p>
+<p>Thus, Green’s function for the wave equation reads</p>
+<div class="math notranslate nohighlight">
+\[G(\mathbf{r},t; \mathbf{r}_0, t_0) = 
+  \alpha^+ \frac{ \delta \left( t - t_0 + \frac{|\mathbf{r}-\mathbf{r}_0|}{c} \right)}{|\mathbf{r} - \mathbf{r}_0|} +
+  \alpha^- \frac{ \delta \left( t - t_0 - \frac{|\mathbf{r}-\mathbf{r}_0|}{c} \right)}{|\mathbf{r} - \mathbf{r}_0|}
+\]</div>
+<p>If <span class="math notranslate nohighlight">\(t \ge t_0\)</span>, and <span class="math notranslate nohighlight">\(G(\mathbf{r}, t; \mathbf{r}_0, t_0)\)</span> connects the past <span class="math notranslate nohighlight">\(t_0\)</span> with the future <span class="math notranslate nohighlight">\(t\)</span>, the first term is not causal, and thus <span class="math notranslate nohighlight">\(\alpha^+ = 0\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[G(\mathbf{r},t; \mathbf{r}_0, t_0) = \frac{1}{4 \pi} \frac{ \delta \left( t - t_0 - \frac{|\mathbf{r}-\mathbf{r}_0|}{c} \right)}{|\mathbf{r} - \mathbf{r}_0|} \ .\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Green’s function<div class="sd-summary-down docutils">

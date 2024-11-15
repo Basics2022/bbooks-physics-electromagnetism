@@ -109,24 +109,36 @@ $$- \frac{\omega^2}{c^2} \tilde{\mathbf{u}} - \nabla^2 \tilde{\mathbf{u}} = \til
 Green's function of Helmholtz'e equation reads
 
 $$G(\mathbf{r}, s) =
-  \alpha^+ \frac{e^{\frac{ s|\mathbf{r}-\mathbf{r}_0|}{c}}}{|\mathbf{r}- \mathbf{r}_0|} +
-  \alpha^- \frac{e^{\frac{-s|\mathbf{r}-\mathbf{r}_0|}{c}}}{|\mathbf{r}- \mathbf{r}_0|}
+  \alpha^+ \frac{e^{ \frac{s|\mathbf{r} - \mathbf{r}_0|}{c}}}{|\mathbf{r} - \mathbf{r}_0|} +
+  \alpha^- \frac{e^{-\frac{s|\mathbf{r} - \mathbf{r}_0|}{c}}}{|\mathbf{r} - \mathbf{r}_0|}
 $$
 
 with $\alpha^+ + \alpha^- = \frac{1}{4 \pi}$.
 
 Being the Laplace transform,
 
-$$\mathscr{L}\{ f(t) \} = \int_{t=0}^{+\infty} f(t) e^{-st} dt \ ,$$
+$$\mathscr{L}\{ f(t) \} = \int_{t=0^-}^{+\infty} f(t) e^{-st} dt \ ,$$
 
 the Laplace transform of a causal function with time delay $\tau \ge 0$ reads
 
-$$\mathscr{L}\{ f(t-\tau) \} = \int_{t=0}^{+\infty} f(t-\tau) e^{-st} dt = \int_{z = - \tau}^{+\infty} f(z) e^{-s(z+\tau)} \, dz = e^{-s \tau} \, \mathscr{L}\{ f(t) \}$$
+$$\mathscr{L}\{ f(t-\tau) \} = \int_{t=0^-}^{+\infty} f(t-\tau) e^{-st} dt = \int_{z = - \tau}^{+\infty} f(z) e^{-s(z+\tau)} \, dz = e^{-s\tau} \, \int_{z = 0}^{+\infty} f(z) e^{-s z} \, dz = e^{-s \tau} \, \mathscr{L}\{ f(t) \}$$
 
-having used causality $f(t) = 0$ for $t < 0$. Thus, Green's function for the wave equation reads
+having used causality $f(t) = 0$ for $t < 0$. Laplace transform of Dirac's delta $\delta(t)$ reads
 
-$$G(\mathbf{r},t; \mathbf{r}_0, t_0) =$$
+$$\mathscr{L}\{ \delta(t) \} = \int_{t=0^-}^{+\infty} \delta(t) \, dt = 1 \ ,$$
 
+so that $e^{-s \tau} = e^{- s \tau} \, 1 = \mathscr{L}\{ \delta(t-\tau) \}$.
+
+Thus, Green's function for the wave equation reads
+
+$$G(\mathbf{r},t; \mathbf{r}_0, t_0) = 
+  \alpha^+ \frac{ \delta \left( t - t_0 + \frac{|\mathbf{r}-\mathbf{r}_0|}{c} \right)}{|\mathbf{r} - \mathbf{r}_0|} +
+  \alpha^- \frac{ \delta \left( t - t_0 - \frac{|\mathbf{r}-\mathbf{r}_0|}{c} \right)}{|\mathbf{r} - \mathbf{r}_0|}
+$$
+
+If $t \ge t_0$, and $G(\mathbf{r}, t; \mathbf{r}_0, t_0)$ connects the past $t_0$ with the future $t$, the first term is not causal, and thus $\alpha^+ = 0$ and
+
+$$G(\mathbf{r},t; \mathbf{r}_0, t_0) = \frac{1}{4 \pi} \frac{ \delta \left( t - t_0 - \frac{|\mathbf{r}-\mathbf{r}_0|}{c} \right)}{|\mathbf{r} - \mathbf{r}_0|} \ .$$
 
 
 ```{dropdown} Green's function
