@@ -1,4 +1,4 @@
-\selectlanguage *{english}
+\selectlanguage *{italian}
 \contentsline {part}{I\hspace {1em}Elettromagnetismo}{3}{part.1}%
 \contentsline {chapter}{\numberline {1}Prime esperienze}{7}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Princìpi dell’elettromagnetismo classico}{9}{chapter.2}%
@@ -8,45 +8,56 @@
 \contentsline {subsection}{\numberline {2.2.2}Forma integrale su volumi arbitrari}{10}{subsection.2.2.2}%
 \contentsline {chapter}{\numberline {3}Potenziali elettromagnetici}{13}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Potenziale vettore e potenziale scalare}{13}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Condizioni di gauge}{13}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Leggi costitutive}{15}{chapter.4}%
+\contentsline {section}{\numberline {3.2}Condizioni di gauge}{14}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Elettromagnetismo nella materia}{15}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Vuoto}{15}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Mezzi continui}{15}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Polarizzazione e Magnetizzazione dei mezzi}{15}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Esempi}{15}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Bilancio di energia del campo elettromagnetico}{17}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Equazioni dell’elettromagnetismo e relatività galileiana}{19}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Onde elettromagnetiche}{21}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Equazioni delle onde in elettromagnetismo}{21}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Potenziali elettromagnetici}{21}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Campo elettrico e campo magnetico}{22}{subsection.7.1.2}%
-\contentsline {section}{\numberline {7.2}Onde elettromagnetiche piane}{23}{section.7.2}%
-\contentsline {part}{II\hspace {1em}Elettrotecnica}{25}{part.2}%
-\contentsline {chapter}{\numberline {8}Approssimazione circuitale}{29}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Circuiti elettrici}{29}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Validità dell’approccio circuitale}{29}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Induzione elettromagnetica nell’approssimazione circuitale}{30}{subsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.1.3}Componenti elementari dei circuiti elettrici}{31}{subsection.8.1.3}%
-\contentsline {subsubsection}{Resistore ohmico}{31}{subsubsection*.3}%
-\contentsline {subsection}{\numberline {8.1.4}Regimi di funzionamento in circuiti elettrici}{32}{subsection.8.1.4}%
-\contentsline {section}{\numberline {8.2}Circuiti elettromagnetici}{32}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Trasformatore}{33}{subsection.8.2.1}%
-\contentsline {subsubsection}{Trasformatore ideale}{33}{subsubsection*.4}%
-\contentsline {subsubsection}{Trasformatore con flussi dispersi}{34}{subsubsection*.5}%
-\contentsline {subsubsection}{Trasformatore con flussi dispersi e riluttanza \(\mittheta _{Fe}\) nel traferro}{34}{subsubsection*.6}%
-\contentsline {section}{\numberline {8.3}Circuiti elettromeccanici}{34}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Sistemi elettromeccanici conservativi}{35}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Equazioni di governo}{36}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Bilancio energetico}{36}{subsection.8.3.3}%
-\contentsline {subsubsection}{Energia meccanica macroscopica}{36}{subsubsection*.7}%
-\contentsline {subsubsection}{Energia cinetica}{36}{subsubsection*.8}%
-\contentsline {subsubsection}{Energia totale}{36}{subsubsection*.9}%
-\contentsline {subsubsection}{Energia interna}{36}{subsubsection*.10}%
-\contentsline {subsubsection}{Energia interna termica (microscopica)}{37}{subsubsection*.11}%
-\contentsline {part}{III\hspace {1em}Metodi numerici}{39}{part.3}%
-\contentsline {chapter}{\numberline {9}Metodi numerici}{43}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Elettrostatica}{43}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}Sorgente}{43}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}Dipolo}{43}{subsection.9.1.2}%
-\contentsline {part}{IV\hspace {1em}Appendici}{45}{part.4}%
-\contentsline {chapter}{\numberline {10}Ottica}{49}{chapter.10}%
+\contentsline {section}{\numberline {4.3}Polarizzazione}{16}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Singolo dipolo elettrico}{16}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Distribuzione continua di dipoli}{16}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Riformulazione delle equazioni di Maxwell e della continuità della carica}{17}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Magnetizzazione}{17}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Singolo momento magnetico (limite di una spira elementare)}{17}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Distribuzione continua di momento magnetico}{18}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Riformulazione delle equazioni di Maxwell e della continuità della carica}{19}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Esempi}{20}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Bilancio di energia del campo elettromagnetico}{21}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Equazioni dell’elettromagnetismo e relatività galileiana}{25}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Onde elettromagnetiche}{27}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Equazioni delle onde in elettromagnetismo}{27}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Potenziali elettromagnetici}{28}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Campo elettrico e campo magnetico}{29}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2}Onde elettromagnetiche piane}{29}{section.7.2}%
+\contentsline {part}{II\hspace {1em}Elettrotecnica}{31}{part.2}%
+\contentsline {chapter}{\numberline {8}Approssimazione circuitale}{35}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Circuiti elettrici}{35}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Validità dell’approccio circuitale}{36}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Induzione elettromagnetica nell’approssimazione circuitale}{37}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}Componenti elementari dei circuiti elettrici}{37}{subsection.8.1.3}%
+\contentsline {subsubsection}{Resistore ohmico}{37}{subsubsection*.3}%
+\contentsline {subsection}{\numberline {8.1.4}Regimi di funzionamento in circuiti elettrici}{38}{subsection.8.1.4}%
+\contentsline {section}{\numberline {8.2}Circuiti elettromagnetici}{38}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Trasformatore}{39}{subsection.8.2.1}%
+\contentsline {subsubsection}{Trasformatore ideale}{40}{subsubsection*.4}%
+\contentsline {subsubsection}{Trasformatore con flussi dispersi}{40}{subsubsection*.5}%
+\contentsline {subsubsection}{Trasformatore con flussi dispersi e riluttanza \(\mittheta _{Fe}\) nel traferro}{40}{subsubsection*.6}%
+\contentsline {section}{\numberline {8.3}Circuiti elettromeccanici}{41}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Sistemi elettromeccanici conservativi}{41}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Equazioni di governo}{42}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Bilancio energetico}{42}{subsection.8.3.3}%
+\contentsline {subsubsection}{Energia meccanica macroscopica}{42}{subsubsection*.7}%
+\contentsline {subsubsection}{Energia cinetica}{42}{subsubsection*.8}%
+\contentsline {subsubsection}{Energia totale}{43}{subsubsection*.9}%
+\contentsline {subsubsection}{Energia interna}{43}{subsubsection*.10}%
+\contentsline {subsubsection}{Energia interna termica (microscopica)}{43}{subsubsection*.11}%
+\contentsline {part}{III\hspace {1em}Metodi numerici}{45}{part.3}%
+\contentsline {chapter}{\numberline {9}Green’s function method}{49}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Poisson equation}{49}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Helmholtz equation}{50}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Wave equation}{52}{section.9.3}%
+\contentsline {chapter}{\numberline {10}Metodi numerici}{55}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Elettrostatica}{55}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Sorgente}{55}{subsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.1.2}Dipolo}{56}{subsection.10.1.2}%
+\contentsline {part}{IV\hspace {1em}Appendici}{59}{part.4}%
+\contentsline {chapter}{\numberline {11}Ottica}{63}{chapter.11}%

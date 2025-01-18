@@ -1,5 +1,7 @@
 (book:classical-electromagnetism)=
-# Elettromagnetismo classico
+# Classical Electromagnetism
+
+This material is part of the [**basics-books project**](https://basics2022.github.io/bbooks). It is also available as a [.pdf document](_build/latex/book.pdf).
 
 **Introduzione.**
 
