@@ -77,7 +77,21 @@ $$\begin{aligned}
 
 ### Force, moment and power on a magnetic dipole
 
+On an elementary magnetic dipole, modeled as a "small" circuit with current $i$ enclosing area $S$ and center $C$, with $S \rightarrow 0$, $i \rightarrow + \infty$ so that $i S \hat{n} := \vec{m}$ finite
 
+**Force.**
+
+$$\dots$$
+$$\vec{F} = \nabla \vec{b}(C) \cdot \vec{m}$$
+
+**Moment.**
+
+$$\dots$$
+$$\vec{M}_C = \vec{m} \times \vec{b}(C)$$
+
+**Power.**
+
+$$P = \vec{v}_C \cdot \nabla \vec{b}(C) \cdot \vec{m} + \vec{\omega} \cdot \vec{m} \times \vec{b}(C) \ .$$
 
 
 ## Energy balance
