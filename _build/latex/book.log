@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  23 JAN 2025 01:29
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  24 JAN 2025 00:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1669,245 +1669,253 @@ LaTeX Info: Redefining \ttfamily on input line 151.
  [2
 
 ] [3] [4]
-LaTeX Info: Redefining \rmfamily on input line 233.
-LaTeX Info: Redefining \sffamily on input line 233.
-LaTeX Info: Redefining \ttfamily on input line 233.
- [5]
-LaTeX Info: Redefining \rmfamily on input line 233.
-LaTeX Info: Redefining \sffamily on input line 233.
-LaTeX Info: Redefining \ttfamily on input line 233.
+Capitolo 1.
+[5
+
+]
+LaTeX Info: Redefining \rmfamily on input line 165.
+LaTeX Info: Redefining \sffamily on input line 165.
+LaTeX Info: Redefining \ttfamily on input line 165.
  [6
 
 ]
-Capitolo 1.
-[7]
-LaTeX Info: Redefining \rmfamily on input line 315.
-LaTeX Info: Redefining \sffamily on input line 315.
-LaTeX Info: Redefining \ttfamily on input line 315.
- [8
-
-]
 Capitolo 2.
-[9]
-LaTeX Info: Redefining \rmfamily on input line 426.
-LaTeX Info: Redefining \sffamily on input line 426.
-LaTeX Info: Redefining \ttfamily on input line 426.
+[7]
+LaTeX Info: Redefining \rmfamily on input line 276.
+LaTeX Info: Redefining \sffamily on input line 276.
+LaTeX Info: Redefining \ttfamily on input line 276.
+ [8]
+LaTeX Info: Redefining \rmfamily on input line 373.
+LaTeX Info: Redefining \sffamily on input line 373.
+LaTeX Info: Redefining \ttfamily on input line 373.
+ [9]
+LaTeX Info: Redefining \rmfamily on input line 425.
+LaTeX Info: Redefining \sffamily on input line 425.
+LaTeX Info: Redefining \ttfamily on input line 425.
  [10]
-LaTeX Info: Redefining \rmfamily on input line 523.
-LaTeX Info: Redefining \sffamily on input line 523.
-LaTeX Info: Redefining \ttfamily on input line 523.
- [11]
-LaTeX Info: Redefining \rmfamily on input line 575.
-LaTeX Info: Redefining \sffamily on input line 575.
-LaTeX Info: Redefining \ttfamily on input line 575.
- [12]
 Capitolo 3.
 
-Underfull \hbox (badness 6316) in paragraph at lines 589--592
+Underfull \hbox (badness 6316) in paragraph at lines 439--442
 \TU/FreeSerif(0)/m/n/10 poiché la divergenza di un rotore è identicamente nulla
 . Introducendo questa relazione nell’equazione di
  []
 
+[11
+
+]
+LaTeX Info: Redefining \rmfamily on input line 552.
+LaTeX Info: Redefining \sffamily on input line 552.
+LaTeX Info: Redefining \ttfamily on input line 552.
+ [12]
+Capitolo 4.
 [13
 
 ]
-LaTeX Info: Redefining \rmfamily on input line 702.
-LaTeX Info: Redefining \sffamily on input line 702.
-LaTeX Info: Redefining \ttfamily on input line 702.
+LaTeX Info: Redefining \rmfamily on input line 644.
+LaTeX Info: Redefining \sffamily on input line 644.
+LaTeX Info: Redefining \ttfamily on input line 644.
  [14]
-Capitolo 4.
-[15
-
-]
-LaTeX Info: Redefining \rmfamily on input line 794.
-LaTeX Info: Redefining \sffamily on input line 794.
-LaTeX Info: Redefining \ttfamily on input line 794.
+LaTeX Info: Redefining \rmfamily on input line 712.
+LaTeX Info: Redefining \sffamily on input line 712.
+LaTeX Info: Redefining \ttfamily on input line 712.
+ [15]
+LaTeX Info: Redefining \rmfamily on input line 754.
+LaTeX Info: Redefining \sffamily on input line 754.
+LaTeX Info: Redefining \ttfamily on input line 754.
  [16]
-LaTeX Info: Redefining \rmfamily on input line 862.
-LaTeX Info: Redefining \sffamily on input line 862.
-LaTeX Info: Redefining \ttfamily on input line 862.
+LaTeX Info: Redefining \rmfamily on input line 826.
+LaTeX Info: Redefining \sffamily on input line 826.
+LaTeX Info: Redefining \ttfamily on input line 826.
  [17]
-LaTeX Info: Redefining \rmfamily on input line 904.
-LaTeX Info: Redefining \sffamily on input line 904.
-LaTeX Info: Redefining \ttfamily on input line 904.
+LaTeX Info: Redefining \rmfamily on input line 853.
+LaTeX Info: Redefining \sffamily on input line 853.
+LaTeX Info: Redefining \ttfamily on input line 853.
  [18]
-LaTeX Info: Redefining \rmfamily on input line 976.
-LaTeX Info: Redefining \sffamily on input line 976.
-LaTeX Info: Redefining \ttfamily on input line 976.
- [19]
-LaTeX Info: Redefining \rmfamily on input line 1003.
-LaTeX Info: Redefining \sffamily on input line 1003.
-LaTeX Info: Redefining \ttfamily on input line 1003.
- [20]
 Capitolo 5.
-[21
+[19
 
 ]
-LaTeX Info: Redefining \rmfamily on input line 1115.
-LaTeX Info: Redefining \sffamily on input line 1115.
-LaTeX Info: Redefining \ttfamily on input line 1115.
+LaTeX Info: Redefining \rmfamily on input line 962.
+LaTeX Info: Redefining \sffamily on input line 962.
+LaTeX Info: Redefining \ttfamily on input line 962.
+ [20]
+LaTeX Info: Redefining \rmfamily on input line 1029.
+LaTeX Info: Redefining \sffamily on input line 1029.
+LaTeX Info: Redefining \ttfamily on input line 1029.
+ [21]
+LaTeX Info: Redefining \rmfamily on input line 1094.
+LaTeX Info: Redefining \sffamily on input line 1094.
+LaTeX Info: Redefining \ttfamily on input line 1094.
  [22]
-LaTeX Info: Redefining \rmfamily on input line 1177.
-LaTeX Info: Redefining \sffamily on input line 1177.
-LaTeX Info: Redefining \ttfamily on input line 1177.
+LaTeX Info: Redefining \rmfamily on input line 1141.
+LaTeX Info: Redefining \sffamily on input line 1141.
+LaTeX Info: Redefining \ttfamily on input line 1141.
  [23]
-LaTeX Info: Redefining \rmfamily on input line 1251.
-LaTeX Info: Redefining \sffamily on input line 1251.
-LaTeX Info: Redefining \ttfamily on input line 1251.
- [24]
-LaTeX Info: Redefining \rmfamily on input line 1346.
-LaTeX Info: Redefining \sffamily on input line 1346.
-LaTeX Info: Redefining \ttfamily on input line 1346.
- [25]
-LaTeX Info: Redefining \rmfamily on input line 1346.
-LaTeX Info: Redefining \sffamily on input line 1346.
-LaTeX Info: Redefining \ttfamily on input line 1346.
- [26
+LaTeX Info: Redefining \rmfamily on input line 1141.
+LaTeX Info: Redefining \sffamily on input line 1141.
+LaTeX Info: Redefining \ttfamily on input line 1141.
+ [24
 
 ]
 Capitolo 6.
-[27]
-LaTeX Info: Redefining \rmfamily on input line 1428.
-LaTeX Info: Redefining \sffamily on input line 1428.
-LaTeX Info: Redefining \ttfamily on input line 1428.
+[25]
+LaTeX Info: Redefining \rmfamily on input line 1239.
+LaTeX Info: Redefining \sffamily on input line 1239.
+LaTeX Info: Redefining \ttfamily on input line 1239.
+ [26]
+LaTeX Info: Redefining \rmfamily on input line 1250.
+LaTeX Info: Redefining \sffamily on input line 1250.
+LaTeX Info: Redefining \ttfamily on input line 1250.
+ [27]
+LaTeX Info: Redefining \rmfamily on input line 1250.
+LaTeX Info: Redefining \sffamily on input line 1250.
+LaTeX Info: Redefining \ttfamily on input line 1250.
  [28
 
 ]
 Capitolo 7.
 [29]
-LaTeX Info: Redefining \rmfamily on input line 1595.
-LaTeX Info: Redefining \sffamily on input line 1595.
-LaTeX Info: Redefining \ttfamily on input line 1595.
- [30]
-LaTeX Info: Redefining \rmfamily on input line 1703.
-LaTeX Info: Redefining \sffamily on input line 1703.
-LaTeX Info: Redefining \ttfamily on input line 1703.
- [31]
-LaTeX Info: Redefining \rmfamily on input line 1703.
-LaTeX Info: Redefining \sffamily on input line 1703.
-LaTeX Info: Redefining \ttfamily on input line 1703.
- [32
-
-] [33] [34]
-LaTeX Info: Redefining \rmfamily on input line 1785.
-LaTeX Info: Redefining \sffamily on input line 1785.
-LaTeX Info: Redefining \ttfamily on input line 1785.
- [35]
-LaTeX Info: Redefining \rmfamily on input line 1785.
-LaTeX Info: Redefining \sffamily on input line 1785.
-LaTeX Info: Redefining \ttfamily on input line 1785.
- [36
+LaTeX Info: Redefining \rmfamily on input line 1332.
+LaTeX Info: Redefining \sffamily on input line 1332.
+LaTeX Info: Redefining \ttfamily on input line 1332.
+ [30
 
 ]
 Capitolo 8.
-[37]
-LaTeX Info: Redefining \rmfamily on input line 2091.
-LaTeX Info: Redefining \sffamily on input line 2091.
-LaTeX Info: Redefining \ttfamily on input line 2091.
- [38]
-LaTeX Info: Redefining \rmfamily on input line 2227.
-LaTeX Info: Redefining \sffamily on input line 2227.
-LaTeX Info: Redefining \ttfamily on input line 2227.
- [39]
-LaTeX Info: Redefining \rmfamily on input line 2448.
-LaTeX Info: Redefining \sffamily on input line 2448.
-LaTeX Info: Redefining \ttfamily on input line 2448.
- [40]
-LaTeX Info: Redefining \rmfamily on input line 2590.
-LaTeX Info: Redefining \sffamily on input line 2590.
-LaTeX Info: Redefining \ttfamily on input line 2590.
- [41]
+[31]
+LaTeX Info: Redefining \rmfamily on input line 1499.
+LaTeX Info: Redefining \sffamily on input line 1499.
+LaTeX Info: Redefining \ttfamily on input line 1499.
+ [32]
+LaTeX Info: Redefining \rmfamily on input line 1607.
+LaTeX Info: Redefining \sffamily on input line 1607.
+LaTeX Info: Redefining \ttfamily on input line 1607.
+ [33]
+LaTeX Info: Redefining \rmfamily on input line 1607.
+LaTeX Info: Redefining \sffamily on input line 1607.
+LaTeX Info: Redefining \ttfamily on input line 1607.
+ [34
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2631.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2631.
-
-LaTeX Info: Redefining \rmfamily on input line 2726.
-LaTeX Info: Redefining \sffamily on input line 2726.
-LaTeX Info: Redefining \ttfamily on input line 2726.
-[42]
-LaTeX Info: Redefining \rmfamily on input line 2792.
-LaTeX Info: Redefining \sffamily on input line 2792.
-LaTeX Info: Redefining \ttfamily on input line 2792.
- [43]
-LaTeX Info: Redefining \rmfamily on input line 2844.
-LaTeX Info: Redefining \sffamily on input line 2844.
-LaTeX Info: Redefining \ttfamily on input line 2844.
- [44]
-LaTeX Info: Redefining \rmfamily on input line 2916.
-LaTeX Info: Redefining \sffamily on input line 2916.
-LaTeX Info: Redefining \ttfamily on input line 2916.
- [45]
-LaTeX Info: Redefining \rmfamily on input line 2922.
-LaTeX Info: Redefining \sffamily on input line 2922.
-LaTeX Info: Redefining \ttfamily on input line 2922.
- [46] [47
-
-] [48]
-LaTeX Info: Redefining \rmfamily on input line 3004.
-LaTeX Info: Redefining \sffamily on input line 3004.
-LaTeX Info: Redefining \ttfamily on input line 3004.
- [49]
-LaTeX Info: Redefining \rmfamily on input line 3004.
-LaTeX Info: Redefining \sffamily on input line 3004.
-LaTeX Info: Redefining \ttfamily on input line 3004.
- [50
+] [35] [36]
+LaTeX Info: Redefining \rmfamily on input line 1689.
+LaTeX Info: Redefining \sffamily on input line 1689.
+LaTeX Info: Redefining \ttfamily on input line 1689.
+ [37]
+LaTeX Info: Redefining \rmfamily on input line 1689.
+LaTeX Info: Redefining \sffamily on input line 1689.
+LaTeX Info: Redefining \ttfamily on input line 1689.
+ [38
 
 ]
 Capitolo 9.
-[51]
-LaTeX Info: Redefining \rmfamily on input line 3125.
-LaTeX Info: Redefining \sffamily on input line 3125.
-LaTeX Info: Redefining \ttfamily on input line 3125.
- [52]
-LaTeX Info: Redefining \rmfamily on input line 3184.
-LaTeX Info: Redefining \sffamily on input line 3184.
-LaTeX Info: Redefining \ttfamily on input line 3184.
- [53]
-LaTeX Info: Redefining \rmfamily on input line 3256.
-LaTeX Info: Redefining \sffamily on input line 3256.
-LaTeX Info: Redefining \ttfamily on input line 3256.
- [54]
-LaTeX Info: Redefining \rmfamily on input line 3342.
-LaTeX Info: Redefining \sffamily on input line 3342.
-LaTeX Info: Redefining \ttfamily on input line 3342.
- [55]
-LaTeX Info: Redefining \rmfamily on input line 3342.
-LaTeX Info: Redefining \sffamily on input line 3342.
-LaTeX Info: Redefining \ttfamily on input line 3342.
- [56
+[39]
+LaTeX Info: Redefining \rmfamily on input line 1995.
+LaTeX Info: Redefining \sffamily on input line 1995.
+LaTeX Info: Redefining \ttfamily on input line 1995.
+ [40]
+LaTeX Info: Redefining \rmfamily on input line 2131.
+LaTeX Info: Redefining \sffamily on input line 2131.
+LaTeX Info: Redefining \ttfamily on input line 2131.
+ [41]
+LaTeX Info: Redefining \rmfamily on input line 2352.
+LaTeX Info: Redefining \sffamily on input line 2352.
+LaTeX Info: Redefining \ttfamily on input line 2352.
+ [42]
+LaTeX Info: Redefining \rmfamily on input line 2494.
+LaTeX Info: Redefining \sffamily on input line 2494.
+LaTeX Info: Redefining \ttfamily on input line 2494.
+ [43]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2535.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 2535.
+
+LaTeX Info: Redefining \rmfamily on input line 2630.
+LaTeX Info: Redefining \sffamily on input line 2630.
+LaTeX Info: Redefining \ttfamily on input line 2630.
+[44]
+LaTeX Info: Redefining \rmfamily on input line 2696.
+LaTeX Info: Redefining \sffamily on input line 2696.
+LaTeX Info: Redefining \ttfamily on input line 2696.
+ [45]
+LaTeX Info: Redefining \rmfamily on input line 2748.
+LaTeX Info: Redefining \sffamily on input line 2748.
+LaTeX Info: Redefining \ttfamily on input line 2748.
+ [46]
+LaTeX Info: Redefining \rmfamily on input line 2820.
+LaTeX Info: Redefining \sffamily on input line 2820.
+LaTeX Info: Redefining \ttfamily on input line 2820.
+ [47]
+LaTeX Info: Redefining \rmfamily on input line 2826.
+LaTeX Info: Redefining \sffamily on input line 2826.
+LaTeX Info: Redefining \ttfamily on input line 2826.
+ [48] [49
+
+] [50]
+LaTeX Info: Redefining \rmfamily on input line 2908.
+LaTeX Info: Redefining \sffamily on input line 2908.
+LaTeX Info: Redefining \ttfamily on input line 2908.
+ [51]
+LaTeX Info: Redefining \rmfamily on input line 2908.
+LaTeX Info: Redefining \sffamily on input line 2908.
+LaTeX Info: Redefining \ttfamily on input line 2908.
+ [52
 
 ]
 Capitolo 10.
-[57]
-LaTeX Info: Redefining \rmfamily on input line 3450.
-LaTeX Info: Redefining \sffamily on input line 3450.
-LaTeX Info: Redefining \ttfamily on input line 3450.
- [58]
-LaTeX Info: Redefining \rmfamily on input line 3454.
-LaTeX Info: Redefining \sffamily on input line 3454.
-LaTeX Info: Redefining \ttfamily on input line 3454.
- [59]
-LaTeX Info: Redefining \rmfamily on input line 3454.
-LaTeX Info: Redefining \sffamily on input line 3454.
-LaTeX Info: Redefining \ttfamily on input line 3454.
- [60
-
-] [61] [62]
-LaTeX Info: Redefining \rmfamily on input line 3536.
-LaTeX Info: Redefining \sffamily on input line 3536.
-LaTeX Info: Redefining \ttfamily on input line 3536.
- [63]
-LaTeX Info: Redefining \rmfamily on input line 3536.
-LaTeX Info: Redefining \sffamily on input line 3536.
-LaTeX Info: Redefining \ttfamily on input line 3536.
- [64
+[53]
+LaTeX Info: Redefining \rmfamily on input line 3029.
+LaTeX Info: Redefining \sffamily on input line 3029.
+LaTeX Info: Redefining \ttfamily on input line 3029.
+ [54]
+LaTeX Info: Redefining \rmfamily on input line 3088.
+LaTeX Info: Redefining \sffamily on input line 3088.
+LaTeX Info: Redefining \ttfamily on input line 3088.
+ [55]
+LaTeX Info: Redefining \rmfamily on input line 3160.
+LaTeX Info: Redefining \sffamily on input line 3160.
+LaTeX Info: Redefining \ttfamily on input line 3160.
+ [56]
+LaTeX Info: Redefining \rmfamily on input line 3246.
+LaTeX Info: Redefining \sffamily on input line 3246.
+LaTeX Info: Redefining \ttfamily on input line 3246.
+ [57]
+LaTeX Info: Redefining \rmfamily on input line 3246.
+LaTeX Info: Redefining \sffamily on input line 3246.
+LaTeX Info: Redefining \ttfamily on input line 3246.
+ [58
 
 ]
 Capitolo 11.
+[59]
+LaTeX Info: Redefining \rmfamily on input line 3354.
+LaTeX Info: Redefining \sffamily on input line 3354.
+LaTeX Info: Redefining \ttfamily on input line 3354.
+ [60]
+LaTeX Info: Redefining \rmfamily on input line 3358.
+LaTeX Info: Redefining \sffamily on input line 3358.
+LaTeX Info: Redefining \ttfamily on input line 3358.
+ [61]
+LaTeX Info: Redefining \rmfamily on input line 3358.
+LaTeX Info: Redefining \sffamily on input line 3358.
+LaTeX Info: Redefining \ttfamily on input line 3358.
+ [62
+
+] [63] [64]
+LaTeX Info: Redefining \rmfamily on input line 3440.
+LaTeX Info: Redefining \sffamily on input line 3440.
+LaTeX Info: Redefining \ttfamily on input line 3440.
+ [65]
+LaTeX Info: Redefining \rmfamily on input line 3440.
+LaTeX Info: Redefining \sffamily on input line 3440.
+LaTeX Info: Redefining \ttfamily on input line 3440.
+ [66
+
+]
+Capitolo 12.
 (./book.ind)
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
@@ -1943,27 +1951,27 @@ braces):
 >  {italian/babelname}  =>  {italian}
 >  {italian/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {italian/Localnumeral}  =>  {polyglossia@C@localnumeral}.
- [65]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3546.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3546.
+ [67]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3450.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3450.
  (./book.aux
 LaTeX Info: Redefining \rmfamily on input line 20.
 LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3546.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3546.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3450.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3450.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 3B4ABB98F641D6C63762FF01C3B9299D;5660.
+(rerunfilecheck)             Checksum: 303C9CE4B26B5DACE811A143156AEEEF;5998.
  ) 
 Here is how much of TeX's memory you used:
- 42187 strings out of 481789
- 950105 string characters out of 5937152
- 1643691 words of memory out of 5000000
- 58378 multiletter control sequences out of 15000+600000
+ 42193 strings out of 481789
+ 950380 string characters out of 5937152
+ 1645690 words of memory out of 5000000
+ 58384 multiletter control sequences out of 15000+600000
  537822 words of font info for 104 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
  71i,26n,109p,820b,2278s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.pdf (69 pages).
+Output written on book.pdf (71 pages).

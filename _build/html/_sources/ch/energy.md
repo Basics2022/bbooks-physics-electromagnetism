@@ -1,11 +1,102 @@
+<!--
 ```{article-info}
 :author: basics
 :date: "{sub-ref}`today`"
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
+-->
 
 (classical-electromagnetism:energy)=
-# Bilancio di energia del campo elettromagnetico
+# Energy balance in electromagnetism
+
+## Force, moment, and power on elementary components
+
+### Force, moment and power on a point electric charge
+
+Point electric charge with charge $q$ in a point $\vec{r}_P(t)$ at time $t$ where electromagnetic field is $\vec{e}(\vec{r},t)$, $\vec{b}(\vec{r},t)$:
+- Lorentz's force
+
+   $$\vec{F} = q \left( \vec{e}(\vec{r}_P(t), t) - \vec{b}(\vec{r}_P(t),t) \times \vec{v}_P(t) \right) \ ,$$
+
+- zero moment, since it has no dimension (and assumed uniform or symmetric or... distribution of electric charge)
+
+- power
+
+   $$\begin{aligned}
+     P & = \vec{v}_P(t) \cdot \vec{F} = \\
+       & = \vec{v}_P(t) \cdot \, q \, \left( \vec{e}(\vec{r}_P(t), t) - \vec{b}(\vec{r}_P(t), t) \times \vec{v}_P(t) \right) = q \, \vec{v}_P(t) \cdot \vec{e}(\vec{r}_P(t),t) \ .
+   \end{aligned}$$
+
+### Force, moment and power on a electric dipole
+
+Electric dipole with center $\vec{r}_C(t)$, axis $\vec{\ell}$, so that the positive charge $q$ is in $P_+ = C + \dfrac{\vec{\ell}}{2}$ and the negative charge is in $P_- = C - \dfrac{\vec{\ell}}{2}$, with $q \rightarrow +\infty$, $|\vec{\ell}| \rightarrow 0$, s.t. $q|\vec{\ell}| = |\vec{d}|$ finite.
+
+**Kinematics and expansion of the field**
+
+$$\vec{v}_{\pm} = \vec{v}_C \pm \vec{\omega} \times \frac{\vec{\ell}}{2}$$
+
+$$\vec{e}(P_{\pm}) = \vec{e}\left( C \pm \dfrac{\vec{\ell}}{2} \right) = \vec{e}(C) \pm \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}(C) + o(|\vec{\ell}|)$$
+
+$$\vec{b}(P_{\pm}) = \vec{b}\left( C \pm \dfrac{\vec{\ell}}{2} \right) = \vec{b}(C) \pm \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}(C) + o(|\vec{\ell}|)$$
+
+**Net force.**
+
+$$\begin{aligned}
+  \vec{F} & = \vec{F}_+ + \vec{F}_- = \\
+   & = q \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+} \right] - q \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-} \right] = \\
+   & = q \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] + \\ 
+   & - q \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] = \\
+   & = q \vec{\ell} \cdot \nabla \vec{e}(C) - \left( q \vec{\ell} \cdot \nabla \vec{b}(C) \right) \times \vec{v}_C + \vec{b}(C) \times \left(  \vec{\omega} \times q \vec{\ell} \right) + o(|\vec{\ell}|)
+\end{aligned}$$
+
+**Net moment, w.r.t. $C$.**
+
+$$\begin{aligned}
+  \vec{M}_C
+   & = \frac{\vec{\ell}}{2} \times \vec{F}_+ - \frac{\vec{\ell}}{2} \times \vec{F}_- = \\
+   & = q \frac{\vec{\ell}}{2} \times \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+} \right] + q \frac{\vec{\ell}}{2} \times \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-} \right] = \\
+   & = q \frac{\vec{\ell}}{2} \times \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] + \\ 
+   & + q \frac{\vec{\ell}}{2} \times \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] = \\
+   & = q \vec{\ell} \times \left[ \vec{e}_C - \vec{b}_C \times \vec{v}_C \right] + o(|\vec{\ell}|) \ .
+\end{aligned}$$
+
+**Power.**
+
+$$\begin{aligned}
+  P & = P_+ + P_- = \\
+  & = \vec{F}_+ \cdot \vec{v}_+ + \vec{F}_- \cdot \vec{v}_- = \\
+  & = q \, \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+}  \right] \cdot \vec{v}_{+} 
+    - q \, \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-}  \right] \cdot \vec{v}_{-} = \\
+  & = q \, \vec{e}(P_+) \cdot \vec{v}_{+} 
+    - q \, \vec{e}(P_-) \cdot \vec{v}_{-} = \\
+  & = q \, \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] 
+    - q \, \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] = \\
+  & = \vec{e}_C \cdot \left( \vec{\omega} \times q \vec{\ell} \right) + \left( q \vec{\ell} \cdot \nabla \vec{e}_C \right) \cdot \vec{v}_C + o(|\vec{\ell}|^2) \ .
+\end{aligned}$$
+
+
+### Force, moment and power on a magnetic dipole
+
+On an elementary magnetic dipole, modeled as a "small" circuit with current $i$ enclosing area $S$ and center $C$, with $S \rightarrow 0$, $i \rightarrow + \infty$ so that $i S \hat{n} := \vec{m}$ finite
+
+**Force.**
+
+$$\dots$$
+$$\vec{F} = \nabla \vec{b}(C) \cdot \vec{m}$$
+
+**Moment.**
+
+$$\dots$$
+$$\vec{M}_C = \vec{m} \times \vec{b}(C)$$
+
+**Power.**
+
+$$P = \vec{v}_C \cdot \nabla \vec{b}(C) \cdot \vec{m} + \vec{\omega} \cdot \vec{m} \times \vec{b}(C) \ .$$
+
+
+## Energy balance
+
+**todo** *Check and put charges, currents, and dipoles together with the electromagnetic field*
 
 Ispirati dalle dimensioni fisiche dei campi elettromagnetici,
 

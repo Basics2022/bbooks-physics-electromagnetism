@@ -11,6 +11,7 @@ parts:
   - file: ch/potentials
   - file: ch/media
   - file: ch/energy
+  - file: ch/energy-linear
   - file: ch/low-speed-relativity
   - file: ch/waves
     sections:

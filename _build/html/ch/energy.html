@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bilancio di energia del campo elettromagnetico &#8212; electromagnetism</title>
+    <title>Energy balance in electromagnetism &#8212; electromagnetism</title>
   
   
   
@@ -172,7 +172,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="principles.html">Princìpi dell’elettromagnetismo classico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="potentials.html">Potenziali elettromagnetici</a></li>
 <li class="toctree-l1"><a class="reference internal" href="media.html">Elettromagnetismo nella materia</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Bilancio di energia del campo elettromagnetico</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Energy balance in electromagnetism</a></li>
 <li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">Equazioni dell’elettromagnetismo e relatività galileiana</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">Onde elettromagnetiche</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="waves-equation.html">Equazioni delle onde in elettromagnetismo</a></li>
@@ -331,7 +331,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -342,11 +344,25 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Bilancio di energia del campo elettromagnetico</h1>
+    <h1>Energy balance in electromagnetism</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenuti </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-elementary-components">Force, moment, and power on elementary components</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-a-point-electric-charge">Force, moment and power on a point electric charge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-a-electric-dipole">Force, moment and power on a electric dipole</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-a-magnetic-dipole">Force, moment and power on a magnetic dipole</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">Energy balance</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -356,27 +372,99 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
-<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
-<div class="sd-container-fluid sd-sphinx-override docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0">basics</p>
+  <!--
+```{article-info}
+:author: basics
+:date: "{sub-ref}`today`"
+:read-time: "{sub-ref}`wordcount-minutes` min read"
+```
+-->
+<div class="tex2jax_ignore mathjax_ignore section" id="energy-balance-in-electromagnetism">
+<span id="classical-electromagnetism-energy"></span><h1>Energy balance in electromagnetism<a class="headerlink" href="#energy-balance-in-electromagnetism" title="Permalink to this heading">#</a></h1>
+<div class="section" id="force-moment-and-power-on-elementary-components">
+<h2>Force, moment, and power on elementary components<a class="headerlink" href="#force-moment-and-power-on-elementary-components" title="Permalink to this heading">#</a></h2>
+<div class="section" id="force-moment-and-power-on-a-point-electric-charge">
+<h3>Force, moment and power on a point electric charge<a class="headerlink" href="#force-moment-and-power-on-a-point-electric-charge" title="Permalink to this heading">#</a></h3>
+<p>Point electric charge with charge <span class="math notranslate nohighlight">\(q\)</span> in a point <span class="math notranslate nohighlight">\(\vec{r}_P(t)\)</span> at time <span class="math notranslate nohighlight">\(t\)</span> where electromagnetic field is <span class="math notranslate nohighlight">\(\vec{e}(\vec{r},t)\)</span>, <span class="math notranslate nohighlight">\(\vec{b}(\vec{r},t)\)</span>:</p>
+<ul>
+<li><p>Lorentz’s force</p>
+<div class="math notranslate nohighlight">
+\[\vec{F} = q \left( \vec{e}(\vec{r}_P(t), t) - \vec{b}(\vec{r}_P(t),t) \times \vec{v}_P(t) \right) \ ,\]</div>
+</li>
+<li><p>zero moment, since it has no dimension (and assumed uniform or symmetric or… distribution of electric charge)</p></li>
+<li><p>power</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     P &amp; = \vec{v}_P(t) \cdot \vec{F} = \\
+       &amp; = \vec{v}_P(t) \cdot \, q \, \left( \vec{e}(\vec{r}_P(t), t) - \vec{b}(\vec{r}_P(t), t) \times \vec{v}_P(t) \right) = q \, \vec{v}_P(t) \cdot \vec{e}(\vec{r}_P(t),t) \ .
+   \end{aligned}\end{split}\]</div>
+</li>
+</ul>
 </div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>20 nov 2024</p>
+<div class="section" id="force-moment-and-power-on-a-electric-dipole">
+<h3>Force, moment and power on a electric dipole<a class="headerlink" href="#force-moment-and-power-on-a-electric-dipole" title="Permalink to this heading">#</a></h3>
+<p>Electric dipole with center <span class="math notranslate nohighlight">\(\vec{r}_C(t)\)</span>, axis <span class="math notranslate nohighlight">\(\vec{\ell}\)</span>, so that the positive charge <span class="math notranslate nohighlight">\(q\)</span> is in <span class="math notranslate nohighlight">\(P_+ = C + \dfrac{\vec{\ell}}{2}\)</span> and the negative charge is in <span class="math notranslate nohighlight">\(P_- = C - \dfrac{\vec{\ell}}{2}\)</span>, with <span class="math notranslate nohighlight">\(q \rightarrow +\infty\)</span>, <span class="math notranslate nohighlight">\(|\vec{\ell}| \rightarrow 0\)</span>, s.t. <span class="math notranslate nohighlight">\(q|\vec{\ell}| = |\vec{d}|\)</span> finite.</p>
+<p><strong>Kinematics and expansion of the field</strong></p>
+<div class="math notranslate nohighlight">
+\[\vec{v}_{\pm} = \vec{v}_C \pm \vec{\omega} \times \frac{\vec{\ell}}{2}\]</div>
+<div class="math notranslate nohighlight">
+\[\vec{e}(P_{\pm}) = \vec{e}\left( C \pm \dfrac{\vec{\ell}}{2} \right) = \vec{e}(C) \pm \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}(C) + o(|\vec{\ell}|)\]</div>
+<div class="math notranslate nohighlight">
+\[\vec{b}(P_{\pm}) = \vec{b}\left( C \pm \dfrac{\vec{\ell}}{2} \right) = \vec{b}(C) \pm \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}(C) + o(|\vec{\ell}|)\]</div>
+<p><strong>Net force.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{F} &amp; = \vec{F}_+ + \vec{F}_- = \\
+   &amp; = q \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+} \right] - q \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-} \right] = \\
+   &amp; = q \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] + \\ 
+   &amp; - q \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] = \\
+   &amp; = q \vec{\ell} \cdot \nabla \vec{e}(C) - \left( q \vec{\ell} \cdot \nabla \vec{b}(C) \right) \times \vec{v}_C + \vec{b}(C) \times \left(  \vec{\omega} \times q \vec{\ell} \right) + o(|\vec{\ell}|)
+\end{aligned}\end{split}\]</div>
+<p><strong>Net moment, w.r.t. <span class="math notranslate nohighlight">\(C\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{M}_C
+   &amp; = \frac{\vec{\ell}}{2} \times \vec{F}_+ - \frac{\vec{\ell}}{2} \times \vec{F}_- = \\
+   &amp; = q \frac{\vec{\ell}}{2} \times \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+} \right] + q \frac{\vec{\ell}}{2} \times \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-} \right] = \\
+   &amp; = q \frac{\vec{\ell}}{2} \times \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] + \\ 
+   &amp; + q \frac{\vec{\ell}}{2} \times \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] = \\
+   &amp; = q \vec{\ell} \times \left[ \vec{e}_C - \vec{b}_C \times \vec{v}_C \right] + o(|\vec{\ell}|) \ .
+\end{aligned}\end{split}\]</div>
+<p><strong>Power.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  P &amp; = P_+ + P_- = \\
+  &amp; = \vec{F}_+ \cdot \vec{v}_+ + \vec{F}_- \cdot \vec{v}_- = \\
+  &amp; = q \, \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+}  \right] \cdot \vec{v}_{+} 
+    - q \, \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-}  \right] \cdot \vec{v}_{-} = \\
+  &amp; = q \, \vec{e}(P_+) \cdot \vec{v}_{+} 
+    - q \, \vec{e}(P_-) \cdot \vec{v}_{-} = \\
+  &amp; = q \, \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] 
+    - q \, \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] = \\
+  &amp; = \vec{e}_C \cdot \left( \vec{\omega} \times q \vec{\ell} \right) + \left( q \vec{\ell} \cdot \nabla \vec{e}_C \right) \cdot \vec{v}_C + o(|\vec{\ell}|^2) \ .
+\end{aligned}\end{split}\]</div>
 </div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>2 min read</p>
+<div class="section" id="force-moment-and-power-on-a-magnetic-dipole">
+<h3>Force, moment and power on a magnetic dipole<a class="headerlink" href="#force-moment-and-power-on-a-magnetic-dipole" title="Permalink to this heading">#</a></h3>
+<p>On an elementary magnetic dipole, modeled as a «small» circuit with current <span class="math notranslate nohighlight">\(i\)</span> enclosing area <span class="math notranslate nohighlight">\(S\)</span> and center <span class="math notranslate nohighlight">\(C\)</span>, with <span class="math notranslate nohighlight">\(S \rightarrow 0\)</span>, <span class="math notranslate nohighlight">\(i \rightarrow + \infty\)</span> so that <span class="math notranslate nohighlight">\(i S \hat{n} := \vec{m}\)</span> finite</p>
+<p><strong>Force.</strong></p>
+<div class="math notranslate nohighlight">
+\[\dots\]</div>
+<div class="math notranslate nohighlight">
+\[\vec{F} = \nabla \vec{b}(C) \cdot \vec{m}\]</div>
+<p><strong>Moment.</strong></p>
+<div class="math notranslate nohighlight">
+\[\dots\]</div>
+<div class="math notranslate nohighlight">
+\[\vec{M}_C = \vec{m} \times \vec{b}(C)\]</div>
+<p><strong>Power.</strong></p>
+<div class="math notranslate nohighlight">
+\[P = \vec{v}_C \cdot \nabla \vec{b}(C) \cdot \vec{m} + \vec{\omega} \cdot \vec{m} \times \vec{b}(C) \ .\]</div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="bilancio-di-energia-del-campo-elettromagnetico">
-<span id="classical-electromagnetism-energy"></span><h1>Bilancio di energia del campo elettromagnetico<a class="headerlink" href="#bilancio-di-energia-del-campo-elettromagnetico" title="Permalink to this heading">#</a></h1>
+<div class="section" id="energy-balance">
+<h2>Energy balance<a class="headerlink" href="#energy-balance" title="Permalink to this heading">#</a></h2>
+<p><strong>todo</strong> <em>Check and put charges, currents, and dipoles together with the electromagnetic field</em></p>
 <p>Ispirati dalle dimensioni fisiche dei campi elettromagnetici,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -510,6 +598,7 @@ Procedimento alternativo (e più generale?)<div class="sd-summary-down docutils"
 \]</div>
 </div>
 </details></div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -565,6 +654,26 @@ Procedimento alternativo (e più generale?)<div class="sd-summary-down docutils"
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenuti
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-elementary-components">Force, moment, and power on elementary components</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-a-point-electric-charge">Force, moment and power on a point electric charge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-a-electric-dipole">Force, moment and power on a electric dipole</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-a-magnetic-dipole">Force, moment and power on a magnetic dipole</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">Energy balance</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
