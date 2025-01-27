@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Equazioni dell’elettromagnetismo e relatività galileiana &#8212; electromagnetism</title>
+    <title>Energy and momentum balance in linear, local, isotropic, non-dispersive media &#8212; electromagnetism</title>
   
   
   
@@ -65,12 +65,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/low-speed-relativity';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/energy-linear';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="Onde elettromagnetiche" href="waves.html" />
-    <link rel="prev" title="Energy and momentum balance in linear, local, isotropic, non-dispersive media" href="energy-linear.html" />
+    <link rel="next" title="Equazioni dell’elettromagnetismo e relatività galileiana" href="low-speed-relativity.html" />
+    <link rel="prev" title="Energy balance in electromagnetism" href="energy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
   </head>
@@ -171,8 +173,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="potentials.html">Potenziali elettromagnetici</a></li>
 <li class="toctree-l1"><a class="reference internal" href="media.html">Elettromagnetismo nella materia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="energy.html">Energy balance in electromagnetism</a></li>
-<li class="toctree-l1"><a class="reference internal" href="energy-linear.html">Energy and momentum balance in linear, local, isotropic, non-dispersive media</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Equazioni dell’elettromagnetismo e relatività galileiana</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Energy and momentum balance in linear, local, isotropic, non-dispersive media</a></li>
+<li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">Equazioni dell’elettromagnetismo e relatività galileiana</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">Onde elettromagnetiche</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="waves-equation.html">Equazioni delle onde in elettromagnetismo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="waves-plane.html">Onde elettromagnetiche piane</a></li>
@@ -259,7 +261,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/low-speed-relativity.md" target="_blank"
+      <li><a href="../_sources/ch/energy-linear.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Scarica il file sorgente"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -330,7 +332,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -341,11 +345,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Equazioni dell’elettromagnetismo e relatività galileiana</h1>
+    <h1>Energy and momentum balance in linear, local, isotropic, non-dispersive media</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenuti </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-media-energy">Linear media - energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-media-momentum">Linear media - momentum</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -355,15 +368,91 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-<div class="tex2jax_ignore mathjax_ignore section" id="equazioni-dell-elettromagnetismo-e-relativita-galileiana">
-<span id="classical-electromagnetism-low-speed-relativity"></span><h1>Equazioni dell’elettromagnetismo e relatività galileiana<a class="headerlink" href="#equazioni-dell-elettromagnetismo-e-relativita-galileiana" title="Permalink to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="energy-and-momentum-balance-in-linear-local-isotropic-non-dispersive-media">
+<span id="classical-electromagnetism-energy"></span><h1>Energy and momentum balance in linear, local, isotropic, non-dispersive media<a class="headerlink" href="#energy-and-momentum-balance-in-linear-local-isotropic-non-dispersive-media" title="Permalink to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \mathbf{d} = \varepsilon_0 \mathbf{e} + \mathbf{p} \\
+  \mathbf{h} = \dfrac{1}{\mu_0} \mathbf{b} - \mathbf{m} \ .
+\end{cases}\end{split}\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{d} = \varepsilon \mathbf{e} \qquad , \qquad \mathbf{h} = \dfrac{\mathbf{b}}{\mu}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(r\)</span> be mass density, and <span class="math notranslate nohighlight">\(\vec{v}\)</span> be charge velocity field, the equation of motion - momentum equation - of electric charges reads</p>
+<div class="math notranslate nohighlight">
+\[r \frac{D \mathbf{v}}{D t} = \mathbf{f} \ ,\]</div>
+<p>and the kinetic energy equation becomes</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{v} \cdot \mathbf{f} = r \mathbf{v} \cdot \frac{D \mathbf{v}}{D t} = r \dfrac{D}{Dt} \dfrac{|\mathbf{v}|^2}{2} \ ,\]</div>
+<p>or using continuity equation for <span class="math notranslate nohighlight">\(r\)</span>, it can be recast in conservative form. The same term can be recast using the expression of Lorentz’s force on electric charges in electromagnetic field (<strong>is this the right way to evaluate power of bounded charges and currents? check it!</strong>)</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{v} \cdot \mathbf{f} = \mathbf{v} \cdot \left[ \rho ( \mathbf{e} - \mathbf{b} \times \mathbf{v} ) \right] = \rho \mathbf{v} \cdot \mathbf{e} = \mathbf{e} \cdot \mathbf{j} \ ,\]</div>
+<p>and furthered manipulated writing <span class="math notranslate nohighlight">\(\mathbf{j} = \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m\)</span> and using Maxwell’s equations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{e} \cdot \mathbf{j} 
+  &amp; = \mathbf{e} \cdot \left( \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m \right) = \\
+  &amp; = \mathbf{e} \cdot \left( \nabla \times \mathbf{h} - \partial_t \mathbf{d} \right) + \mathbf{e} \cdot \partial_t \mathbf{p} + \mathbf{e} \cdot \nabla \times \mathbf{m} = \\
+  &amp; = \mathbf{e} \cdot \nabla \times \left( \mathbf{h} + \mathbf{m} \right) - \mathbf{e} \cdot \partial_t \left( \mathbf{d} - \mathbf{p} \right)  = \\
+  &amp; = \dfrac{1}{\mu_0} \mathbf{e} \cdot \nabla \times \mathbf{b} - \varepsilon_0 \mathbf{e} \cdot \partial_t \mathbf{e} = \\
+  &amp; = - \dfrac{1}{\mu_0} \nabla \cdot \left( \mathbf{e} \times \mathbf{b} \right) - \dfrac{\mathbf{b}}{\mu_0} \cdot \partial_t \mathbf{b} - \varepsilon_0 \mathbf{e} \cdot \partial_t \mathbf{e} = \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\mathbf{e} \cdot \nabla \times \mathbf{h} = e_i \varepsilon_{ijk} \partial_j h_k = \partial_j \left( \varepsilon_{jki} h_k e_i \right) - \varepsilon_{ijk} h_k \partial_j e_i = - \nabla \cdot (\mathbf{e} \times \mathbf{h} ) + \mathbf{h} \cdot \nabla \times \mathbf{e} = - \nabla \cdot (\mathbf{e} \times \mathbf{h} ) - \mathbf{h} \cdot \partial_t \mathbf{b}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \mathbf{e} \cdot \mathbf{j}_f &amp; = - \nabla \cdot ( \mathbf{e} \times \mathbf{h} ) - \mathbf{e} \cdot \partial_t \mathbf{d} - \mathbf{h} \cdot \partial_t \mathbf{b}
+\end{aligned}\]</div>
+<div class="section" id="linear-media-energy">
+<h2>Linear media - energy<a class="headerlink" href="#linear-media-energy" title="Permalink to this heading">#</a></h2>
+<p>For linear media, the energy of the electromagnetic field per unit volume reads</p>
+<div class="math notranslate nohighlight">
+\[u = \dfrac{1}{2} \left( \mathbf{e} \cdot \mathbf{d} + \mathbf{h} \cdot \mathbf{b} \right)\]</div>
+<p>so that the differential balance equation for the eneergy of the electromagnetic field becomes</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+ \partial_t u + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j} \ ,
+\end{aligned}\]</div>
+<p>with Poynting vector <span class="math notranslate nohighlight">\(\mathbf{s} := \mathbf{e} \times \mathbf{h}\)</span>, namely the momentum density of the electromagnetic field.</p>
+</div>
+<div class="section" id="linear-media-momentum">
+<h2>Linear media - momentum<a class="headerlink" href="#linear-media-momentum" title="Permalink to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\partial_t \mathbf{s} = \partial_t s_i = \partial_t \left( \varepsilon_{ijk} e_j h_k \right)\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \varepsilon_{ijk} \partial_t e_j h_k
+  &amp; = \dfrac{1}{\varepsilon} \varepsilon_{ijk} \partial_t d_j h_k \\
+  &amp; = \dfrac{1}{\varepsilon} \varepsilon_{ijk} \left(\varepsilon_{jlm} \partial_l h_m - j^f_j \right) h_k \\
+  &amp; = - \dfrac{1}{\varepsilon} \varepsilon_{ijk} \, j^f_j \, h_k + \dfrac{1}{\varepsilon} \varepsilon_{ijk} \varepsilon_{jlm} h_k \partial_l h_m \\
+  &amp; = - \dfrac{1}{\varepsilon} \varepsilon_{ijk} \, j^f_j \, h_k + \dfrac{1}{\varepsilon} \left( \delta_{im} \delta_{kl} - \delta_{il} \delta_{km} \right) h_k \partial_l h_m =  \\
+  &amp; = - \dfrac{1}{\varepsilon} \varepsilon_{ijk} \, j^f_j \, h_k + \dfrac{1}{\varepsilon} \left( h_m \partial_m h_i - h_m \partial_i h_m \right) =  \\
+  &amp; = - \dfrac{1}{\varepsilon} \varepsilon_{ijk} \, j^f_j \, h_k + \dfrac{1}{\varepsilon} \left[ \partial_m ( h_m  h_i ) - \partial_m h_m \, h_i - \partial_i \left( \frac{h_m h_m}{2} \right) \right] =  \\
+  &amp; = \dfrac{1}{\varepsilon \mu} \varepsilon_{ijk} \, b_j \, j^f_k + \dfrac{1}{\varepsilon \mu} \left[ \partial_m ( b_m  h_i ) - \underbrace{\partial_m b_m}_{=0} \, h_i - \partial_i \left( \frac{h_m b_m}{2} \right) \right] =  \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \varepsilon_{ijk} e_j \partial_t h_k
+  &amp; =   \dfrac{1}{\mu} \varepsilon_{ijk} e_j \partial_t b_k = \\
+  &amp; = - \dfrac{1}{\mu} \varepsilon_{ijk} e_j \left( \varepsilon_{klm} \partial_l e_m \right) = \\
+  &amp; = - \dfrac{1}{\mu} \left( \delta_{il} \delta_{jm} - \delta_{im} \delta_{jl} \right) e_j \partial_l e_m =  \\
+  &amp; = - \dfrac{1}{\mu} \left( e_m \partial_i e_m - e_m \partial_m e_i \right) =  \\
+  &amp; = - \dfrac{1}{\mu} \left[ \partial_i \left(\frac{e_m e_m}{2}\right) -  \partial_m \left( e_m e_i \right) + \partial_m e_m \, e_i \right] = \\
+  &amp; = - \dfrac{1}{\varepsilon \mu} \left[ \partial_i \left(\frac{d_m e_m}{2}\right) - \partial_m \left( d_m e_i \right) + \rho^f \, e_i \right] \ .
+\end{aligned}\end{split}\]</div>
+<p>so that</p>
+<div class="math notranslate nohighlight">
+\[\partial_t s_i + c^2 \partial_m \left[ \dfrac{1}{2}\left( d_n e_n + h_n b_n \right) \delta_{mi} - \left( h_m b_i + d_m e_i \right) \right] = - c^2 \rho^f e_i + c^2 \varepsilon_{ijk} b_j j_k^f \]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\partial_t \mathbf{s} + c^2 \nabla \cdot \left[ \, \dfrac{1}{2} \left( \mathbf{d} \cdot \mathbf{e} + \mathbf{h} \cdot \mathbf{b} \right) \mathbb{I} - \left( \mathbf{d} \otimes \mathbf{e} + \mathbf{h} \otimes \mathbf{b} \right) \, \right] = - c^2 \left( \rho^f \mathbf{e} - \mathbf{b} \times \mathbf{j}^f \right)\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+&amp; \partial_t u + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j}^f \\
+&amp; \partial_t \mathbf{s} + c^2 \nabla \cdot \left[ \, u \mathbb{I} - \left( \mathbf{d} \otimes \mathbf{e} + \mathbf{h} \otimes \mathbf{b} \right) \, \right] = - c^2 \left( \mathbf{e} \, \rho^f - \mathbf{b} \times \mathbf{j}^f \right)
+\end{cases}\end{split}\]</div>
+<p><strong>todo</strong> <em>use this system to derive the 4-d formulation of special relativity in modern physics</em></p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -397,20 +486,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="energy-linear.html"
+       href="energy.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">precedente</p>
-        <p class="prev-next-title">Energy and momentum balance in linear, local, isotropic, non-dispersive media</p>
+        <p class="prev-next-title">Energy balance in electromagnetism</p>
       </div>
     </a>
     <a class="right-next"
-       href="waves.html"
+       href="low-speed-relativity.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">successivo</p>
-        <p class="prev-next-title">Onde elettromagnetiche</p>
+        <p class="prev-next-title">Equazioni dell’elettromagnetismo e relatività galileiana</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -420,6 +509,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenuti
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-media-energy">Linear media - energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-media-momentum">Linear media - momentum</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
