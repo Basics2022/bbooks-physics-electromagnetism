@@ -376,25 +376,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
-<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
-<div class="sd-container-fluid sd-sphinx-override docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0">basics</p>
-</div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>27 gen 2025</p>
-</div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>2 min read</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <!--
+```{article-info}
+:author: basics
+:date: "{sub-ref}`today`"
+:read-time: "{sub-ref}`wordcount-minutes` min read"
+```
+-->
 <div class="tex2jax_ignore mathjax_ignore section" id="circuiti-elettromeccanici">
 <span id="classical-electromagnetism-circuits-electromechanic"></span><h1>Circuiti elettromeccanici<a class="headerlink" href="#circuiti-elettromeccanici" title="Permalink to this heading">#</a></h1>
 <p>Alcuni sistemi di interesse e di enorme diffusione nella società moderna sfruttano le interazioni tra componenti fenomeni elettromagnetici e meccanici: un esempio fondamentale sono le macchine elettriche, alcune delle quali possono operare sia come motore (con la potenza fornita dal sistema elettrico e convertita in potenza meccanica) sia come generatore di energia elettrica (convertendo potenza meccanica in potenza elettrica).</p>
@@ -413,7 +401,78 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\mathbf{v}(t) = \dfrac{d}{dt} \Big( \mathbf{L}(\mathbf{x}(t)) \, \mathbf{i}(t) \Big) \ .\]</div>
 <p>La matrice di induttanza <span class="math notranslate nohighlight">\(\mathbf{L}\)</span> è simmetrica <strong>todo</strong> <em>Dimostrazione</em></p>
-<div class="section" id="sistemi-elettromeccanici-conservativi">
+<div class="proof example admonition" id="example-0">
+<p class="admonition-title"><span class="caption-number">Example 1 </span></p>
+<div class="example-content section" id="proof-content">
+<p>Given an constant and uniform magnetic field <span class="math notranslate nohighlight">\(\mathbf{b}(r) = \mathbf{B}\)</span> in a region of space where a simple electric circuit is placed. The electric circuit consists in a simple circuit with a resistance <span class="math notranslate nohighlight">\(R\)</span> as a lumped load, and has a rectangular shape. Three sides are fixed, and the distance between the pair of parallel fixed sides is <span class="math notranslate nohighlight">\(\ell\)</span>; the fourth side can move and its distance between the parallel fixed side is <span class="math notranslate nohighlight">\(x\)</span>. The unit vector orthogonal to the rectangular surface enclosed in the circuit is <span class="math notranslate nohighlight">\(\hat{\mathbf{n}}\)</span>.</p>
+<p>A mechanical system provides the prescribed motion <span class="math notranslate nohighlight">\(x(t) = x_0 + \Delta x \sin(\Omega t)\)</span> to the moving side. It’s asked to evaluate and discuss:</p>
+<ul class="simple">
+<li><p>voltage at the electric port of the load</p></li>
+<li><p>energy balance</p></li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><img alt="" src="../_images/ex-00-loop.jpg" /></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Without considering the inductance of the simple circuit.</strong> Faraday’s law</p>
+<div class="math notranslate nohighlight">
+\[\Gamma_{\partial s_t}(\mathbf{e}) + \dot{\Phi}_{s_t}(\mathbf{b}) = 0 \ ,\]</div>
+<p>provides the relation between the time derivative of the magnetic flux though two points of the electric circuit on opposite sides of the moving side of the circuit, corresponding to the voltage at the electric port of the load</p>
+<div class="math notranslate nohighlight">
+\[v = - \int_{\ell_0} \mathbf{e} \cdot \hat{t} = - \dot{\Phi}_{s_t}(\mathbf{b}) = - \dfrac{d}{dt} \left( N B A \right) = - B \ell \dot{x} \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(N = 1\)</span>, and <span class="math notranslate nohighlight">\(B\)</span> constant and uniform if self-inductance is not considered.
+If the inductance of the circuit is neglected, from the constitutive equation of the resistance, <span class="math notranslate nohighlight">\(v = R i\)</span>, and voltage Kirchhoff law, it follows that the current in the simple circuit is</p>
+<div class="math notranslate nohighlight">
+\[i = \frac{v}{R} = - \dot{\Phi}_{s_t}(\mathbf{b}) = - \frac{B_n \dot{A}}{R} = - \frac{B_n \, \ell \dot{x}}{R} = - \frac{B_n \, \ell \, \Delta x}{R} \, \Omega \cos(\Omega t) \ .\]</div>
+<p>The force acting on a wire conducting electric current <span class="math notranslate nohighlight">\(i\)</span> in a uniform magnetic field <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{F} = - i \mathbf{B} \times \mathbf{l} \ .\]</div>
+<p>Calling <span class="math notranslate nohighlight">\(y\)</span> the «positive» direction of the moving side, and assuming <span class="math notranslate nohighlight">\(\mathbf{B} = B \hat{\mathbf{z}}\)</span>, with <span class="math notranslate nohighlight">\(\hat{\mathbf{z}} = \hat{\mathbf{x}} \times \hat{\mathbf{y}}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{F} = i B \ell \hat{\mathbf{x}} \ .\]</div>
+<p>Assuming negligible mass of the moving wire, the second principle of dynamics reduces to force equilibrium, so that the external force provided to the wire must be opposite to the force acting on the wire due to the EM field</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{F}^e = - \mathbf{F} \ ,\]</div>
+<p>and the external power reads</p>
+<div class="math notranslate nohighlight">
+\[P^e = \dot{\mathbf{x}} \cdot \mathbf{F}^e = - i B \ell \dot{x} = \frac{B^2 \ell^2 \dot{x}^2}{R} = \frac{B^2 \ell^2 \left(\Delta x\right)^2}{R} \Omega^2 \cos^2(\Omega t) \ .\]</div>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><img alt="" src="../_images/ex-00-circuit.jpg" /></p></td>
+<td><p><img alt="" src="../_images/ex-00-force-em.jpg" /></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Considering the inductance of the circuit and inertia of the wire.</strong> Considering the self-induced magnetic flux <span class="math notranslate nohighlight">\(\phi\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[v = - \dfrac{d}{dt} \left( N \left( \phi + B A \right) \right) \ ,\]</div>
+<p>with <span class="math notranslate nohighlight">\(\phi = \dfrac{m}{\theta} = \dfrac{N}{\theta} i\)</span>. The expression of the voltage a the port of the circuit can be recast as</p>
+<div class="math notranslate nohighlight">
+\[v = - \dfrac{d}{dt} \left( N B A \right) - \dfrac{d}{dt} \left( \frac{N^2}{\theta} i \right) = - \dfrac{d}{dt} \left( N B \ell x \right) - \dfrac{d}{dt} \left( L i \right) \ .\]</div>
+<p>Now, assuming everything constant except for the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(i\)</span>, and connecting this circuit to the load with constitutive equation, <span class="math notranslate nohighlight">\(v = R i\)</span>, the dynamical equation of the electric circuit becomes</p>
+<div class="math notranslate nohighlight">
+\[L \dfrac{d i}{d t} + R i = - N B \ell \dfrac{d x}{d t} \ .\]</div>
+<p>The dynamical equation of the wire is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ m \dfrac{d^2 x}{d t^2} 
+ &amp; = F^{ext} + F^{EM} = \\
+ &amp; = F^{ext} + i B \ell \ .
+\end{aligned}\end{split}\]</div>
+<p><strong>Energy balance</strong> immidiately follows after multiplying the circuit equation by <span class="math notranslate nohighlight">\(i\)</span>, the dynamical equation by <span class="math notranslate nohighlight">\(\dot{x}\)</span> and summing,</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{d}{dt} \underbrace{\left( \dfrac{1}{2} m |\dot{x}|^2 + \dfrac{1}{2} L i^2 \right)}_{\text{energy: kin.+em.}} + \underbrace{R i^2}_{\text{dissipation}} = \underbrace{F^{ext} \dot{x}}_{\text{ext. power done on the sys}} \ .\]</div>
+</div>
+</div><div class="section" id="sistemi-elettromeccanici-conservativi">
 <h2>Sistemi elettromeccanici conservativi<a class="headerlink" href="#sistemi-elettromeccanici-conservativi" title="Permalink to this heading">#</a></h2>
 <p>Le equazioni che governano il sistema elettromeccanico, senza condensatori, in generale possono essere scritte come</p>
 <div class="math notranslate nohighlight">

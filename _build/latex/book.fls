@@ -449,6 +449,14 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 OUTPUT book.toc
+INPUT ex-00-loop.jpg
+INPUT ex-00-loop.jpg
+INPUT ex-00-loop.jpg
+INPUT ex-00-loop.jpg
+INPUT ex-00-circuit.jpg
+INPUT ex-00-circuit.jpg
+INPUT ex-00-force-em.jpg
+INPUT ex-00-force-em.jpg
 INPUT book.ind
 INPUT book.ind
 INPUT book.aux

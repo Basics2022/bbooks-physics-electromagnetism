@@ -50,22 +50,23 @@
 \contentsline {subsubsection}{Trasformatore con flussi dispersi}{44}{subsubsection*.5}%
 \contentsline {subsubsection}{Trasformatore con flussi dispersi e riluttanza \(\mittheta _{Fe}\) nel traferro}{44}{subsubsection*.6}%
 \contentsline {section}{\numberline {9.3}Circuiti elettromeccanici}{45}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Sistemi elettromeccanici conservativi}{45}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Equazioni di governo}{46}{subsection.9.3.2}%
-\contentsline {subsection}{\numberline {9.3.3}Bilancio energetico}{46}{subsection.9.3.3}%
-\contentsline {subsubsection}{Energia meccanica macroscopica}{46}{subsubsection*.7}%
-\contentsline {subsubsection}{Energia cinetica}{46}{subsubsection*.8}%
-\contentsline {subsubsection}{Energia totale}{47}{subsubsection*.9}%
-\contentsline {subsubsection}{Energia interna}{47}{subsubsection*.10}%
-\contentsline {subsubsection}{Energia interna termica (microscopica)}{47}{subsubsection*.11}%
-\contentsline {part}{III\hspace {1em}Metodi numerici}{49}{part.3}%
-\contentsline {chapter}{\numberline {10}Green’s function method}{53}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Poisson equation}{53}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Helmholtz equation}{54}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Wave equation}{56}{section.10.3}%
-\contentsline {chapter}{\numberline {11}Metodi numerici}{59}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Elettrostatica}{59}{section.11.1}%
-\contentsline {subsection}{\numberline {11.1.1}Sorgente}{59}{subsection.11.1.1}%
-\contentsline {subsection}{\numberline {11.1.2}Dipolo}{60}{subsection.11.1.2}%
-\contentsline {part}{IV\hspace {1em}Appendici}{63}{part.4}%
-\contentsline {chapter}{\numberline {12}Ottica}{67}{chapter.12}%
+\contentsline {subsection}{\numberline {9.3.1}Sistemi elettromeccanici conservativi}{47}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Equazioni di governo}{48}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Bilancio energetico}{48}{subsection.9.3.3}%
+\contentsline {subsubsection}{Energia meccanica macroscopica}{48}{subsubsection*.7}%
+\contentsline {subsubsection}{Energia cinetica}{49}{subsubsection*.8}%
+\contentsline {subsubsection}{Energia totale}{49}{subsubsection*.9}%
+\contentsline {subsubsection}{Energia interna}{49}{subsubsection*.10}%
+\contentsline {subsubsection}{Energia interna termica (microscopica)}{49}{subsubsection*.11}%
+\contentsline {part}{III\hspace {1em}Metodi numerici}{51}{part.3}%
+\contentsline {chapter}{\numberline {10}Green’s function method}{55}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Poisson equation}{55}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Helmholtz equation}{56}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Wave equation}{58}{section.10.3}%
+\contentsline {chapter}{\numberline {11}Metodi numerici}{61}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Elettrostatica}{61}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Sorgente}{61}{subsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.1.2}Dipolo}{62}{subsection.11.1.2}%
+\contentsline {part}{IV\hspace {1em}Appendici}{65}{part.4}%
+\contentsline {chapter}{\numberline {12}Ottica}{69}{chapter.12}%
+\contentsline {chapter}{Proof Index}{71}{section*.12}%

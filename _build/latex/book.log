@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  27 JAN 2025 21:17
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  28 JAN 2025 19:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1833,90 +1833,115 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 2538.
 
-LaTeX Info: Redefining \rmfamily on input line 2633.
-LaTeX Info: Redefining \sffamily on input line 2633.
-LaTeX Info: Redefining \ttfamily on input line 2633.
+LaTeX Info: Redefining \rmfamily on input line 2558.
+LaTeX Info: Redefining \sffamily on input line 2558.
+LaTeX Info: Redefining \ttfamily on input line 2558.
 [44]
-LaTeX Info: Redefining \rmfamily on input line 2699.
-LaTeX Info: Redefining \sffamily on input line 2699.
-LaTeX Info: Redefining \ttfamily on input line 2699.
+File: ex-00-loop.jpg Graphic file (type bmp)
+<ex-00-loop.jpg>
+File: ex-00-loop.jpg Graphic file (type bmp)
+<ex-00-loop.jpg>
+LaTeX Info: Redefining \rmfamily on input line 2621.
+LaTeX Info: Redefining \sffamily on input line 2621.
+LaTeX Info: Redefining \ttfamily on input line 2621.
  [45]
-LaTeX Info: Redefining \rmfamily on input line 2751.
-LaTeX Info: Redefining \sffamily on input line 2751.
-LaTeX Info: Redefining \ttfamily on input line 2751.
+File: ex-00-circuit.jpg Graphic file (type bmp)
+<ex-00-circuit.jpg>
+File: ex-00-force-em.jpg Graphic file (type bmp)
+<ex-00-force-em.jpg>
+LaTeX Info: Redefining \rmfamily on input line 2674.
+LaTeX Info: Redefining \sffamily on input line 2674.
+LaTeX Info: Redefining \ttfamily on input line 2674.
  [46]
-LaTeX Info: Redefining \rmfamily on input line 2823.
-LaTeX Info: Redefining \sffamily on input line 2823.
-LaTeX Info: Redefining \ttfamily on input line 2823.
+LaTeX Info: Redefining \rmfamily on input line 2732.
+LaTeX Info: Redefining \sffamily on input line 2732.
+LaTeX Info: Redefining \ttfamily on input line 2732.
  [47]
-LaTeX Info: Redefining \rmfamily on input line 2829.
-LaTeX Info: Redefining \sffamily on input line 2829.
-LaTeX Info: Redefining \ttfamily on input line 2829.
- [48] [49
+LaTeX Info: Redefining \rmfamily on input line 2783.
+LaTeX Info: Redefining \sffamily on input line 2783.
+LaTeX Info: Redefining \ttfamily on input line 2783.
+ [48]
+LaTeX Info: Redefining \rmfamily on input line 2834.
+LaTeX Info: Redefining \sffamily on input line 2834.
+LaTeX Info: Redefining \ttfamily on input line 2834.
+ [49]
+LaTeX Info: Redefining \rmfamily on input line 2871.
+LaTeX Info: Redefining \sffamily on input line 2871.
+LaTeX Info: Redefining \ttfamily on input line 2871.
+ [50] [51
 
-] [50]
-LaTeX Info: Redefining \rmfamily on input line 2911.
-LaTeX Info: Redefining \sffamily on input line 2911.
-LaTeX Info: Redefining \ttfamily on input line 2911.
- [51]
-LaTeX Info: Redefining \rmfamily on input line 2911.
-LaTeX Info: Redefining \sffamily on input line 2911.
-LaTeX Info: Redefining \ttfamily on input line 2911.
- [52
+] [52]
+LaTeX Info: Redefining \rmfamily on input line 2953.
+LaTeX Info: Redefining \sffamily on input line 2953.
+LaTeX Info: Redefining \ttfamily on input line 2953.
+ [53]
+LaTeX Info: Redefining \rmfamily on input line 2953.
+LaTeX Info: Redefining \sffamily on input line 2953.
+LaTeX Info: Redefining \ttfamily on input line 2953.
+ [54
 
 ]
 Capitolo 10.
-[53]
-LaTeX Info: Redefining \rmfamily on input line 3032.
-LaTeX Info: Redefining \sffamily on input line 3032.
-LaTeX Info: Redefining \ttfamily on input line 3032.
- [54]
-LaTeX Info: Redefining \rmfamily on input line 3091.
-LaTeX Info: Redefining \sffamily on input line 3091.
-LaTeX Info: Redefining \ttfamily on input line 3091.
- [55]
-LaTeX Info: Redefining \rmfamily on input line 3163.
-LaTeX Info: Redefining \sffamily on input line 3163.
-LaTeX Info: Redefining \ttfamily on input line 3163.
+[55]
+LaTeX Info: Redefining \rmfamily on input line 3074.
+LaTeX Info: Redefining \sffamily on input line 3074.
+LaTeX Info: Redefining \ttfamily on input line 3074.
  [56]
-LaTeX Info: Redefining \rmfamily on input line 3249.
-LaTeX Info: Redefining \sffamily on input line 3249.
-LaTeX Info: Redefining \ttfamily on input line 3249.
+LaTeX Info: Redefining \rmfamily on input line 3133.
+LaTeX Info: Redefining \sffamily on input line 3133.
+LaTeX Info: Redefining \ttfamily on input line 3133.
  [57]
-LaTeX Info: Redefining \rmfamily on input line 3249.
-LaTeX Info: Redefining \sffamily on input line 3249.
-LaTeX Info: Redefining \ttfamily on input line 3249.
- [58
+LaTeX Info: Redefining \rmfamily on input line 3205.
+LaTeX Info: Redefining \sffamily on input line 3205.
+LaTeX Info: Redefining \ttfamily on input line 3205.
+ [58]
+LaTeX Info: Redefining \rmfamily on input line 3291.
+LaTeX Info: Redefining \sffamily on input line 3291.
+LaTeX Info: Redefining \ttfamily on input line 3291.
+ [59]
+LaTeX Info: Redefining \rmfamily on input line 3291.
+LaTeX Info: Redefining \sffamily on input line 3291.
+LaTeX Info: Redefining \ttfamily on input line 3291.
+ [60
 
 ]
 Capitolo 11.
-[59]
-LaTeX Info: Redefining \rmfamily on input line 3357.
-LaTeX Info: Redefining \sffamily on input line 3357.
-LaTeX Info: Redefining \ttfamily on input line 3357.
- [60]
-LaTeX Info: Redefining \rmfamily on input line 3361.
-LaTeX Info: Redefining \sffamily on input line 3361.
-LaTeX Info: Redefining \ttfamily on input line 3361.
- [61]
-LaTeX Info: Redefining \rmfamily on input line 3361.
-LaTeX Info: Redefining \sffamily on input line 3361.
-LaTeX Info: Redefining \ttfamily on input line 3361.
- [62
+[61]
+LaTeX Info: Redefining \rmfamily on input line 3399.
+LaTeX Info: Redefining \sffamily on input line 3399.
+LaTeX Info: Redefining \ttfamily on input line 3399.
+ [62]
+LaTeX Info: Redefining \rmfamily on input line 3403.
+LaTeX Info: Redefining \sffamily on input line 3403.
+LaTeX Info: Redefining \ttfamily on input line 3403.
+ [63]
+LaTeX Info: Redefining \rmfamily on input line 3403.
+LaTeX Info: Redefining \sffamily on input line 3403.
+LaTeX Info: Redefining \ttfamily on input line 3403.
+ [64
 
-] [63] [64]
-LaTeX Info: Redefining \rmfamily on input line 3443.
-LaTeX Info: Redefining \sffamily on input line 3443.
-LaTeX Info: Redefining \ttfamily on input line 3443.
- [65]
-LaTeX Info: Redefining \rmfamily on input line 3443.
-LaTeX Info: Redefining \sffamily on input line 3443.
-LaTeX Info: Redefining \ttfamily on input line 3443.
- [66
+] [65] [66]
+LaTeX Info: Redefining \rmfamily on input line 3485.
+LaTeX Info: Redefining \sffamily on input line 3485.
+LaTeX Info: Redefining \ttfamily on input line 3485.
+ [67]
+LaTeX Info: Redefining \rmfamily on input line 3485.
+LaTeX Info: Redefining \sffamily on input line 3485.
+LaTeX Info: Redefining \ttfamily on input line 3485.
+ [68
 
 ]
 Capitolo 12.
-(./book.ind)
+[69]
+LaTeX Info: Redefining \rmfamily on input line 3493.
+LaTeX Info: Redefining \sffamily on input line 3493.
+LaTeX Info: Redefining \ttfamily on input line 3493.
+ [70
+
+] [71
+
+
+] (./book.ind)
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -1951,27 +1976,26 @@ braces):
 >  {italian/babelname}  =>  {italian}
 >  {italian/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {italian/Localnumeral}  =>  {polyglossia@C@localnumeral}.
- [67]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3453.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3453.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3501.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3501.
  (./book.aux
 LaTeX Info: Redefining \rmfamily on input line 20.
 LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3453.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3453.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3501.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3501.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 303C9CE4B26B5DACE811A143156AEEEF;5998.
+(rerunfilecheck)             Checksum: 4AEAC4078DC961CC86A84E7959BB7298;6056.
  ) 
 Here is how much of TeX's memory you used:
- 42193 strings out of 481789
- 950380 string characters out of 5937152
- 1645692 words of memory out of 5000000
- 58384 multiletter control sequences out of 15000+600000
- 537822 words of font info for 104 fonts, out of 8000000 for 9000
+ 42222 strings out of 481789
+ 950899 string characters out of 5937152
+ 1646692 words of memory out of 5000000
+ 58407 multiletter control sequences out of 15000+600000
+ 537830 words of font info for 105 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
  71i,26n,109p,820b,2278s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.pdf (71 pages).
+Output written on book.pdf (75 pages).

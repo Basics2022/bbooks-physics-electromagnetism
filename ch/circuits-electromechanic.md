@@ -1,8 +1,10 @@
+<!--
 ```{article-info}
 :author: basics
 :date: "{sub-ref}`today`"
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
+-->
 
 (classical-electromagnetism:circuits-electromechanic)=
 # Circuiti elettromeccanici
@@ -28,6 +30,84 @@ $$v_i = \sum_k \frac{d}{dt} \left( \frac{N_i \, N_k}{\theta_{ik}(\mathbf{x})} i_
 $$\mathbf{v}(t) = \dfrac{d}{dt} \Big( \mathbf{L}(\mathbf{x}(t)) \, \mathbf{i}(t) \Big) \ .$$
 
 La matrice di induttanza $\mathbf{L}$ è simmetrica **todo** *Dimostrazione*
+
+
+````{prf:example} 
+
+Given an constant and uniform magnetic field $\mathbf{b}(r) = \mathbf{B}$ in a region of space where a simple electric circuit is placed. The electric circuit consists in a simple circuit with a resistance $R$ as a lumped load, and has a rectangular shape. Three sides are fixed, and the distance between the pair of parallel fixed sides is $\ell$; the fourth side can move and its distance between the parallel fixed side is $x$. The unit vector orthogonal to the rectangular surface enclosed in the circuit is $\hat{\mathbf{n}}$.
+
+A mechanical system provides the prescribed motion $x(t) = x_0 + \Delta x \sin(\Omega t)$ to the moving side. It's asked to evaluate and discuss:
+- voltage at the electric port of the load
+- energy balance
+
+```{list-table}
+:header-rows: 0
+* - ![](../media/electromechanical/ex-00-loop.jpg)
+```
+
+**Without considering the inductance of the simple circuit.** Faraday's law
+
+$$\Gamma_{\partial s_t}(\mathbf{e}) + \dot{\Phi}_{s_t}(\mathbf{b}) = 0 \ ,$$
+
+provides the relation between the time derivative of the magnetic flux though two points of the electric circuit on opposite sides of the moving side of the circuit, corresponding to the voltage at the electric port of the load
+
+$$v = - \int_{\ell_0} \mathbf{e} \cdot \hat{t} = - \dot{\Phi}_{s_t}(\mathbf{b}) = - \dfrac{d}{dt} \left( N B A \right) = - B \ell \dot{x} \ ,$$
+
+being $N = 1$, and $B$ constant and uniform if self-inductance is not considered.
+If the inductance of the circuit is neglected, from the constitutive equation of the resistance, $v = R i$, and voltage Kirchhoff law, it follows that the current in the simple circuit is
+
+$$i = \frac{v}{R} = - \dot{\Phi}_{s_t}(\mathbf{b}) = - \frac{B_n \dot{A}}{R} = - \frac{B_n \, \ell \dot{x}}{R} = - \frac{B_n \, \ell \, \Delta x}{R} \, \Omega \cos(\Omega t) \ .$$
+
+The force acting on a wire conducting electric current $i$ in a uniform magnetic field $\mathbf{B}$ is
+
+$$\mathbf{F} = - i \mathbf{B} \times \mathbf{l} \ .$$
+
+Calling $y$ the "positive" direction of the moving side, and assuming $\mathbf{B} = B \hat{\mathbf{z}}$, with $\hat{\mathbf{z}} = \hat{\mathbf{x}} \times \hat{\mathbf{y}}$,
+
+$$\mathbf{F} = i B \ell \hat{\mathbf{x}} \ .$$
+
+Assuming negligible mass of the moving wire, the second principle of dynamics reduces to force equilibrium, so that the external force provided to the wire must be opposite to the force acting on the wire due to the EM field
+
+$$\mathbf{F}^e = - \mathbf{F} \ ,$$
+
+and the external power reads
+
+$$P^e = \dot{\mathbf{x}} \cdot \mathbf{F}^e = - i B \ell \dot{x} = \frac{B^2 \ell^2 \dot{x}^2}{R} = \frac{B^2 \ell^2 \left(\Delta x\right)^2}{R} \Omega^2 \cos^2(\Omega t) \ .$$
+
+```{list-table}
+:header-rows: 0
+:widths: 38 62
+* - ![](../media/electromechanical/ex-00-circuit.jpg)
+  - ![](../media/electromechanical/ex-00-force-em.jpg)
+```
+
+**Considering the inductance of the circuit and inertia of the wire.** Considering the self-induced magnetic flux $\phi$, 
+
+$$v = - \dfrac{d}{dt} \left( N \left( \phi + B A \right) \right) \ ,$$
+
+with $\phi = \dfrac{m}{\theta} = \dfrac{N}{\theta} i$. The expression of the voltage a the port of the circuit can be recast as
+
+$$v = - \dfrac{d}{dt} \left( N B A \right) - \dfrac{d}{dt} \left( \frac{N^2}{\theta} i \right) = - \dfrac{d}{dt} \left( N B \ell x \right) - \dfrac{d}{dt} \left( L i \right) \ .$$
+
+Now, assuming everything constant except for the $x$ and $i$, and connecting this circuit to the load with constitutive equation, $v = R i$, the dynamical equation of the electric circuit becomes
+
+$$L \dfrac{d i}{d t} + R i = - N B \ell \dfrac{d x}{d t} \ .$$
+
+The dynamical equation of the wire is
+
+$$\begin{aligned}
+ m \dfrac{d^2 x}{d t^2} 
+ & = F^{ext} + F^{EM} = \\
+ & = F^{ext} + i B \ell \ .
+\end{aligned}$$
+
+**Energy balance** immidiately follows after multiplying the circuit equation by $i$, the dynamical equation by $\dot{x}$ and summing,
+
+$$\dfrac{d}{dt} \underbrace{\left( \dfrac{1}{2} m |\dot{x}|^2 + \dfrac{1}{2} L i^2 \right)}_{\text{energy: kin.+em.}} + \underbrace{R i^2}_{\text{dissipation}} = \underbrace{F^{ext} \dot{x}}_{\text{ext. power done on the sys}} \ .$$
+
+````
+
+
 
 ## Sistemi elettromeccanici conservativi
 Le equazioni che governano il sistema elettromeccanico, senza condensatori, in generale possono essere scritte come
