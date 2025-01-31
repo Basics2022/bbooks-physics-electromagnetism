@@ -487,7 +487,7 @@ If the inductance of the circuit is neglected, from the constitutive equation of
 \]</div>
 <p>Nel caso di matrici di massa, smorzamento e rigidzza costanti, e usando la derivata del prodotto per ottenere un termine di derivata dell’energia degli induttori sfruttando la simmetria di <span class="math notranslate nohighlight">\(\mathbf{L}\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-classical-electromagnetism-circuits-electromechanic-energy-mech-0">
-<span class="eqno">(1)<a class="headerlink" href="#equation-classical-electromagnetism-circuits-electromechanic-energy-mech-0" title="Permalink a questa equazione">#</a></span>\[\begin{split} \begin{aligned}
+<span class="eqno">(3)<a class="headerlink" href="#equation-classical-electromagnetism-circuits-electromechanic-energy-mech-0" title="Permalink a questa equazione">#</a></span>\[\begin{split} \begin{aligned}
 \dfrac{d}{dt} \left[ \frac{1}{2} \mathbf{i}^T \mathbf{L} \mathbf{i} \right] 
   &amp; = \mathbf{i}^T \dfrac{d}{dt} \left( \mathbf{L} \, \mathbf{i} \right) + \frac{1}{2} \mathbf{i}^T \dfrac{d \mathbf{L}}{dt} \mathbf{i} = \\
   &amp; = \mathbf{i}^T \dfrac{d}{dt} \left( \mathbf{L} \, \mathbf{i} \right) + \sum_{a} \frac{1}{2} \mathbf{i}^T \dfrac{\partial \mathbf{L}}{\partial x_a} \mathbf{i} \, \dot{x}_a = \\
@@ -502,11 +502,11 @@ If the inductance of the circuit is neglected, from the constitutive equation of
 \end{split}\]</div>
 <p>Nell’ipotesi che il processo sia conservativo, si ricava la forma delle forze dovute ai fenomeni elettromagnetici,</p>
 <div class="math notranslate nohighlight" id="equation-classical-electromagnetism-circuits-electromechanic-f-em">
-<span class="eqno">(2)<a class="headerlink" href="#equation-classical-electromagnetism-circuits-electromechanic-f-em" title="Permalink a questa equazione">#</a></span>\[\mathbf{f}^{em} = \nabla_{\mathbf{x}} E^{ind}(\mathbf{x}, \mathbf{i}) \ .\]</div>
+<span class="eqno">(4)<a class="headerlink" href="#equation-classical-electromagnetism-circuits-electromechanic-f-em" title="Permalink a questa equazione">#</a></span>\[\mathbf{f}^{em} = \nabla_{\mathbf{x}} E^{ind}(\mathbf{x}, \mathbf{i}) \ .\]</div>
 </div>
 <div class="section" id="equazioni-di-governo">
 <h2>Equazioni di governo<a class="headerlink" href="#equazioni-di-governo" title="Permalink to this heading">#</a></h2>
-<p>Usando l’espressione <a class="reference internal" href="#equation-classical-electromagnetism-circuits-electromechanic-f-em">(2)</a> delle azioni meccaniche dovute agli effetti elettromagnetici, del sistema sono</p>
+<p>Usando l’espressione <a class="reference internal" href="#equation-classical-electromagnetism-circuits-electromechanic-f-em">(4)</a> delle azioni meccaniche dovute agli effetti elettromagnetici, del sistema sono</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
   \mathbf{M} \ddot{\mathbf{x}} + \mathbf{D} \dot{\mathbf{x}} + \mathbf{K} \mathbf{x} - \nabla_{\mathbf{x}} E^{ind}(\mathbf{x}, \mathbf{i})  = \mathbf{f}^{ext} \\
@@ -523,7 +523,7 @@ If the inductance of the circuit is neglected, from the constitutive equation of
 <h2>Bilancio energetico<a class="headerlink" href="#bilancio-energetico" title="Permalink to this heading">#</a></h2>
 <div class="section" id="energia-meccanica-macroscopica">
 <h3>Energia meccanica macroscopica<a class="headerlink" href="#energia-meccanica-macroscopica" title="Permalink to this heading">#</a></h3>
-<p>Usando l’espressione <a class="reference internal" href="#equation-classical-electromagnetism-circuits-electromechanic-f-em">(2)</a> delle azioni meccaniche dovute ai fenomeni elettromagnetici, si può riscrivere la relazione <a class="reference internal" href="#equation-classical-electromagnetism-circuits-electromechanic-energy-mech-0">(1)</a>, come un bilancio di energia meccanica macroscopica del sistema,</p>
+<p>Usando l’espressione <a class="reference internal" href="#equation-classical-electromagnetism-circuits-electromechanic-f-em">(4)</a> delle azioni meccaniche dovute ai fenomeni elettromagnetici, si può riscrivere la relazione <a class="reference internal" href="#equation-classical-electromagnetism-circuits-electromechanic-energy-mech-0">(3)</a>, come un bilancio di energia meccanica macroscopica del sistema,</p>
 <div class="math notranslate nohighlight">
 \[\dfrac{d}{dt} \left[ \dfrac{1}{2} \dot{\mathbf{x}}^T \mathbf{M} \dot{\mathbf{x}} + \dfrac{1}{2} \mathbf{x}^T \mathbf{K} \mathbf{x} + \dfrac{1}{2} \mathbf{i}^T \mathbf{L} \mathbf{i} \right] = \dot{\mathbf{x}}^T \mathbf{f}^{ext} + \mathbf{i}^T \mathbf{e} - \dot{\mathbf{x}}^T \mathbf{D} \dot{\mathbf{x}} - \mathbf{i}^T \mathbf{R} \mathbf{i} \ , \]</div>
 <p>e quindi</p>
