@@ -1,8 +1,10 @@
+<!--
 ```{article-info}
 :author: basics
 :date: "{sub-ref}`today`"
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
+-->
 
 (classical-electromagnetism:media)=
 # Elettromagnetismo nella materia
@@ -250,4 +252,63 @@ $$\begin{aligned}
 ## Esempi
 - conduttori
 - ferromagentici e magnetismo debole (para-, dia-, anti-)
+
+(classical-electromagnetism:media:jump)=
+## Jump conditions
+Differential form of Maxwell's equations
+
+$$\begin{cases}
+ \nabla \cdot \mathbf{d} = \rho_f \\
+ \nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\
+ \nabla \cdot \mathbf{b} = 0 \\
+ \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j}_f
+\end{cases}$$
+
+Integral form of Maxwell's equations
+
+$$\begin{cases}
+ \displaystyle \oint_{\partial V} \mathbf{d} \cdot \hat{\mathbf{n}} = \int_{V} \rho_f \\
+ \displaystyle \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_S \mathbf{b} \cdot \hat{\mathbf{n}} = 0 \\
+ \displaystyle \oint_{\partial V} \mathbf{b} \cdot \hat{\mathbf{n}} = 0 \\
+ \displaystyle \oint_{\partial S} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_S \mathbf{d} \cdot \hat{\mathbf{n}} = \int_{S} \mathbf{j}_f \cdot \hat{\mathbf{n}} \\
+\end{cases}$$
+
+Letting $V$ and $S$ "collapsing on a discontinuity"...
+
+$$\begin{cases}
+  [ d_n ] = \sigma_f \\
+  [ e_t ] = 0 \\
+  [ b_n ] = 0 \\
+  [ h_t ] = \iota_f \ ,
+\end{cases}$$ (eq:em-jump)
+
+being $\sigma_f$ and $\iota_f$ surface charge and current density, with physical dimension $\frac{\text{charge}}{\text{surface}}$, and $\frac{\text{current}}{\text{surface}}$ respectively. These contributions can be thought as Dirac delta contributions in volume density, namely
+
+$$\rho(\mathbf{r},t) = \rho_0(\mathbf{r},t) + \sigma(\mathbf{r}_s,t) \delta_{1}(\mathbf{r}-\mathbf{r}_s) \ ,$$
+
+being $\rho(\mathbf{r},t)$ the regular part of the volume density in all the points of the domain $\mathbf{r} \in V$, $\sigma(\mathbf{r}_s,t)$ the surface density on 2-dimensional surfaces $\mathbf{r}_s \in S$, $\delta_1()$ the Dirac's delta with physical dimension $\frac{1}{\text{length}}$.
+
+If there's no free surface charge and currents, jump conditions form linear media become
+
+$$\begin{cases}
+  [ d_n ] = 0 \\
+  [ e_t ] = 0 \\
+  [ b_n ] = 0 \\
+  [ h_t ] = 0 \ ,
+\end{cases}
+\qquad \rightarrow \qquad
+\begin{cases}
+  d_{n,1} = d_{n,2}  \quad \rightarrow \quad \varepsilon_1 e_{n,1} = \varepsilon_2 e_{n,2} \\
+  e_{t,1} = e_{t,2}  \\
+  b_{n,1} = b_{n,2}  \\
+  h_{t,1} = h_{t,2}  \quad \rightarrow \quad \frac{1}{\mu_1} b_{t,1} = \frac{1}{\mu_2} b_{t,2} \\
+\end{cases}
+$$ (eq:em-jump:no-surf-density)
+
+
+
+
+
+
+
 

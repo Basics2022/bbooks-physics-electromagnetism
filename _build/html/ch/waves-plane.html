@@ -65,6 +65,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/waves-plane';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Indice" href="../genindex.html" />
@@ -330,7 +332,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -346,6 +350,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenuti </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#snell-s-law-at-an-interface">Snell’s law at an interface</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -355,27 +367,289 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
-<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
-<div class="sd-container-fluid sd-sphinx-override docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0">basics</p>
-</div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>28 gen 2025</p>
-</div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>0 min read</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <!--
+```{article-info}
+:author: basics
+:date: "{sub-ref}`today`"
+:read-time: "{sub-ref}`wordcount-minutes` min read"
+```
+-->
 <div class="tex2jax_ignore mathjax_ignore section" id="onde-elettromagnetiche-piane">
 <span id="classical-electromagnetism-waves-plane-waves"></span><h1>Onde elettromagnetiche piane<a class="headerlink" href="#onde-elettromagnetiche-piane" title="Permalink to this heading">#</a></h1>
+<p>Harmonic decomposition of the electromagnetic field. EM field can be written as the superposition of plane waves (Fourier decomposition)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{e}(\mathbf{r},t) &amp; = \mathbf{E} e^{i(\mathbf{k} \cdot \mathbf{r} - \omega t)} \\
+  \mathbf{b}(\mathbf{r},t) &amp; = \mathbf{B} e^{i(\mathbf{k} \cdot \mathbf{r} - \omega t)} \\
+\end{aligned}\end{split}\]</div>
+<p>Introudcing this decomposiiton in Maxwell’s equations with no free charge and current</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+ \nabla \cdot \mathbf{d} = 0 \\
+ \nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\
+ \nabla \cdot \mathbf{b} = 0 \\
+ \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{0}
+\end{cases}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+ i \mathbf{k} \cdot \mathbf{D} = 0 \\
+ i \mathbf{k} \times \mathbf{E} - i \omega \mathbf{B} = \mathbf{0} \\
+ i \mathbf{k} \cdot \mathbf{B} = 0 \\
+ i \mathbf{k} \times \mathbf{H} + i \omega \mathbf{D} = \mathbf{0}
+\end{cases}
+\quad \rightarrow \quad
+\begin{cases}
+ i \varepsilon \mathbf{k} \cdot \mathbf{E} = 0 \\
+ i \mathbf{k} \times \mathbf{E} - i \omega \mathbf{B} = \mathbf{0} \\
+ i \mathbf{k} \cdot \mathbf{B} = 0 \\
+ i \dfrac{1}{\mu} \mathbf{k} \times \mathbf{B} + i \omega \varepsilon \mathbf{E} = \mathbf{0}
+\end{cases}
+\end{split}\]</div>
+<ul>
+<li><p>From Gauss” equations for the electric and the magnetic field</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{k} \perp \mathbf{E} \quad , \quad \mathbf{k} \perp \mathbf{B}\]</div>
+</li>
+<li><p>From Faraday and Ampére-Maxwell equations</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{B} = \dfrac{\mathbf{k}}{\omega} \times \mathbf{E}\]</div>
+<div class="math notranslate nohighlight">
+\[\mathbf{E} = - \dfrac{1}{\mu \varepsilon}\dfrac{\mathbf{k}}{\omega} \times \mathbf{B}\]</div>
+</li>
+</ul>
+<p>It follows that:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{k}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{E}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{B}\)</span> are orthogonal «RHS» set of vectors</p></li>
+<li><p>Relations between <span class="math notranslate nohighlight">\(\mathbf{E}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{k}\)</span> and the speed of light</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+      \mathbf{B} &amp; = \dfrac{1}{c} \, \hat{\mathbf{k}} \times \mathbf{E} \\
+      \mathbf{E} &amp; = - c \, \hat{\mathbf{k}} \times \mathbf{B} \\
+    \end{aligned}\end{split}\]</div>
+<p>hold, with speed of light <span class="math notranslate nohighlight">\(c = \dfrac{1}{\sqrt{\mu \varepsilon}} = \dfrac{\omega}{|\mathbf{k}|}\)</span>, and unit vector <span class="math notranslate nohighlight">\(\hat{\mathbf{k}} = \dfrac{\mathbf{k}}{|\mathbf{k}|}\)</span>.</p>
+</li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof using vector algebra identity<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Recalling <span class="math notranslate nohighlight">\(c^2 = \frac{1}{\mu \varepsilon}\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{B} = \dfrac{\mathbf{k}}{\omega} \times \mathbf{E} = \dfrac{\mathbf{k}}{\omega} \times \left[ - c^2 \dfrac{\mathbf{k}}{\omega} \times \mathbf{B} \right] = - \dfrac{c^2 |\mathbf{k}|^2}{\omega^2} \hat{\mathbf{k}} \times \left( \hat{\mathbf{k}} \times \mathbf{B} \right)\]</div>
+<p class="sd-card-text">Vector identity</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) = \varepsilon_{ijk} a_j \varepsilon_{klm} b_l c_m = \left( \delta_{il} \delta_{jm} - \delta_{im} \delta_{jl} \right) a_j \, b_l \, c_m = b_i a_m c_m - c_i a_m b_m = (\mathbf{a} \cdot \mathbf{c}) \mathbf{b} - (\mathbf{a} \cdot \mathbf{b}) \mathbf{c}\]</div>
+<p class="sd-card-text">applied to <span class="math notranslate nohighlight">\(\hat{\mathbf{k}} \times \left( \hat{\mathbf{k}} \times \mathbf{B} \right)\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[
+  \hat{\mathbf{k}} \times \left( \hat{\mathbf{k}} \times \mathbf{B} \right) = \underbrace{\left( \hat{\mathbf{k}} \dot \mathbf{B} \right)}_{=0 \text{ since $\mathbf{k} \perp \mathbf{B}$}} \hat{\mathbf{k}} - \underbrace{\left( \hat{\mathbf{k}} \cdot \hat{\mathbf{k}} \right)}_{= 1} \mathbf{B} = - \mathbf{B} \ , 
+\]</div>
+<p class="sd-card-text">and the original relation gives</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{B} = \mathbf{B} \dfrac{c^2 |\mathbf{k}|^2}{\omega^2} \ ,\]</div>
+<p class="sd-card-text">and the relation between pulsation <span class="math notranslate nohighlight">\(\omega\)</span>, wave vector <span class="math notranslate nohighlight">\(\mathbf{k}\)</span> and speed of light (EM radiation) <span class="math notranslate nohighlight">\(c\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[c = \dfrac{\omega}{|\mathbf{k}|} \ .\]</div>
+</div>
+</details><div class="section" id="snell-s-law-at-an-interface">
+<span id="classical-electromagnetism-waves-plane-waves-snell"></span><h2>Snell’s law at an interface<a class="headerlink" href="#snell-s-law-at-an-interface" title="Permalink to this heading">#</a></h2>
+<p>Snell’s law is derived here assuming isotrpoic linear media, so that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \mathbf{d}(\mathbf{r},t) = \varepsilon \mathbf{e}(\mathbf{r},t) \\
+  \mathbf{b}(\mathbf{r},t) = \mu         \mathbf{h}(\mathbf{r},t)
+\end{cases}\end{split}\]</div>
+<p>and for harmonic plane EM waves</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ \mathbf{e}(\mathbf{r}, t) = \mathbf{E}_{a} \, e^{i \left( \mathbf{k}_a \cdot \mathbf{r} - \omega t \right)} \\
+ \mathbf{b}(\mathbf{r}, t) = \mathbf{B}_{a} \, e^{i \left( \mathbf{k}_a \cdot \mathbf{r} - \omega t \right)} \\
+\end{cases}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{B}_a &amp; = \dfrac{1}{c} \, \hat{\mathbf{k}}_a \times \mathbf{E}_a \\
+  \mathbf{E}_a &amp; = - c \, \hat{\mathbf{k}}_a \times \mathbf{B}_a \\
+\end{aligned}\end{split}\]</div>
+<p>being index <span class="math notranslate nohighlight">\(a\)</span> representing the media involved: <span class="math notranslate nohighlight">\(a = 1\)</span> for the medium with incident and reflected waves, <span class="math notranslate nohighlight">\(a = 2\)</span> for the medium withthe refracted wave.</p>
+<p><a class="reference internal" href="media.html#classical-electromagnetism-media-jump"><span class="std std-ref">Jump conditions of electromagnetic field at an interface</span></a> with no charge or current surface density are given by conditions <a class="reference internal" href="media.html#equation-eq-em-jump-no-surf-density">(2)</a>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \varepsilon_1 e_{n,1} = \varepsilon_2 e_{n,2} \\
+  e_{t_{\alpha},1} = e_{t_{\alpha},2}                                    &amp; \quad , \quad \alpha=1:2 \\
+  b_{n,1} = b_{n,2}  \\
+  \dfrac{1}{\mu_1} b_{t_{\alpha},1} = \dfrac{1}{\mu_2} b_{t_{\alpha},2}  &amp; \quad , \quad \alpha=1:2 \\
+\end{cases}\end{split}\]</div>
+<p>Definition of some vectors: <span class="math notranslate nohighlight">\(\hat{\mathbf{n}}\)</span> unit normal vector, <span class="math notranslate nohighlight">\(\mathbf{k}\)</span> wave vector, <span class="math notranslate nohighlight">\(\hat{\mathbf{b}} = \dfrac{\hat{\mathbf{n}} \times \mathbf{k}}{|\hat{\mathbf{n}} \times \mathbf{k}|}\)</span> (singular only for normal incident ray), <span class="math notranslate nohighlight">\(\hat{\mathbf{c}} = \dfrac{\hat{\mathbf{b}} \times \mathbf{k}}{|\hat{\mathbf{b}} \times \mathbf{k}|}\)</span>, <span class="math notranslate nohighlight">\(\hat{\mathbf{t}} = \dfrac{\hat{\mathbf{b}} \times \hat{\mathbf{n}}}{|\hat{\mathbf{b}} \times \hat{\mathbf{n}}|}\)</span></p>
+<p>Incindent angle <span class="math notranslate nohighlight">\(\theta_{1,i}\)</span> is the angle between <span class="math notranslate nohighlight">\(\hat{\mathbf{n}}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k}\)</span>, s.t. <span class="math notranslate nohighlight">\(\hat{\mathbf{n}} \times \mathbf{k} = \hat{\mathbf{b}} \, k \, \sin \theta_{1,i}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  \hat{\mathbf{k}} = \quad \cos \theta_{1,i} \hat{\mathbf{n}} + \sin \theta_{1,i} \hat{\mathbf{t}} \\
+  \hat{\mathbf{c}} =      -\sin \theta_{1,i} \hat{\mathbf{n}} + \cos \theta_{1,i} \hat{\mathbf{t}}
+\end{cases}
+\quad , \quad
+\begin{cases}
+  \hat{\mathbf{n}} = \cos \theta_{1,i} \hat{\mathbf{k}} - \sin \theta_{1,i} \hat{\mathbf{c}} \\
+  \hat{\mathbf{t}} = \sin \theta_{1,i} \hat{\mathbf{k}} + \cos \theta_{1,i} \hat{\mathbf{c}}
+\end{cases}\end{split}\]</div>
+<p>The electromagnetic field can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{E} &amp; = E_b \hat{\mathbf{b}} + E_c \hat{\mathbf{c}} = \\
+             &amp; = E_b \hat{\mathbf{b}} - E_c \sin \theta_{1,i} \hat{\mathbf{n}} + E_c \cos \theta_{1,i} \hat{\mathbf{t}} \\
+  \mathbf{B} &amp; = B_b \hat{\mathbf{b}} + B_c \hat{\mathbf{c}} = \\
+             &amp; = \frac{E_c}{c} \hat{\mathbf{b}} - \frac{E_b}{c} \hat{\mathbf{c}} = \\
+             &amp; = \frac{E_c}{c} \hat{\mathbf{b}} + \frac{E_b}{c} \sin \theta_{1,i} \hat{\mathbf{n}} - \frac{E_b}{c} \cos \theta_{1,i} \hat{\mathbf{t}} \ .
+\end{aligned}\end{split}\]</div>
+<p>so that jump relations become</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  b: &amp; \quad E_{b,1} = E_{b,2} \\
+  n: &amp; \quad \dots \\
+  t: &amp; \quad \dots \\
+\end{cases}
+\quad , \quad
+\begin{cases}
+  b: &amp; \quad \dots \\
+  n: &amp; \quad \frac{E_{b,1}}{c_1} \sin \theta_{1,i} = \frac{E_{b,2}}{c_2} \sin \theta_{2,i}  \\
+  t: &amp; \quad \dots \\
+\end{cases}\end{split}\]</div>
+<p>thus <strong>Snell’s law</strong> follows</p>
+<div class="math notranslate nohighlight">
+\[\frac{\sin \theta_{1,i}}{\sin \theta_{2,t}} = \frac{c_2}{c_1} = \frac{n_1}{n_2} \ .\]</div>
+<p><strong>Incident, relfected and refracted wave.</strong> Wave at interface in medium 1 ha the contribution of the incoming incident wave, and the reflected one.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\mathbf{e}_1(\mathbf{r},t) 
+&amp; = \mathbf{e}_i(\mathbf{r},t) + \mathbf{e}_r(\mathbf{r},t) = \\
+&amp; = \mathbf{E}_{i} e^{i \left( \mathbf{k}_i \cdot \mathbf{r} - \omega t \right)} + \mathbf{E}_{r} e^{i \left( \mathbf{k}_r \cdot \mathbf{r} - \omega t \right)} = \\
+&amp; = \left( \mathbf{E}_{i} e^{i \mathbf{k}_i \cdot \mathbf{r}} + \mathbf{E}_{r} e^{i \mathbf{k}_r \cdot \mathbf{r} } \right) e^{-i \omega t} 
+\end{aligned}\end{split}\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{k}_i &amp; = k_{i,n} \hat{\mathbf{n}} + k_{i,t} \hat{\mathbf{t}} \\
+  \mathbf{k}_r &amp; = k_{r,n} \hat{\mathbf{n}} + k_{r,t} \hat{\mathbf{t}} \\
+\end{aligned}\end{split}\]</div>
+<p>At the interface, <span class="math notranslate nohighlight">\(\mathbf{r}_s \cdot \hat{\mathbf{n}} = 0\)</span>, and thus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{e}_1(\mathbf{r}_s, t) &amp; = \left( \mathbf{E}_i e^{i k_{i,t} x_t} + \mathbf{E}_r e^{i k_{r,t} x_t} \right) e^{-i\omega t} \\
+  \mathbf{e}_2(\mathbf{r}_s, t) &amp; =        \mathbf{E}_t e^{i k_{t,t} x_t} e^{-i \omega t} \\
+\end{aligned}\end{split}\]</div>
+<p>In order for the boundary conditions to be satisfied at all the points of the interface at each time,</p>
+<div class="math notranslate nohighlight">
+\[k_{i,t} = k_{r,t} = k_{t,t} \ .\]</div>
+<p>Exploiting the relation between the pulsation, the wave-length and the speed of light in media, <span class="math notranslate nohighlight">\(c_a = \frac{\omega}{|\mathbf{k}_a|} = \frac{c}{n_a}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[|\mathbf{k}_i| = |\mathbf{k}_r| \qquad \rightarrow \qquad k_{r,n} = - k_{i,n}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{|\mathbf{k}_2|}{|\mathbf{k}_1|} = \frac{c_1}{c_2}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{k_{t,t}^2 + k_{t,n}^2}{k_{i,t}^2 + k_{i,n}^2} = \frac{c_1^2}{c_2^2}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  k_{i,n} &amp; = \ \ \ |\mathbf{k}_i| \, \cos \theta_i \\
+  k_{r,n} &amp; = -     |\mathbf{k}_r| \, \cos \theta_r \\
+  k_{t,n} &amp; = \ \ \ |\mathbf{k}_t| \, \cos \theta_t \\
+\end{aligned}
+\quad , \quad 
+\begin{aligned}
+  k_{i,t} &amp; = \ \ \ |\mathbf{k}_i| \, \sin \theta_i \\
+  k_{r,t} &amp; = \ \ \ |\mathbf{k}_r| \, \sin \theta_r \\
+  k_{t,t} &amp; = \ \ \ |\mathbf{k}_t| \, \sin \theta_t \\
+\end{aligned}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ E_n: &amp; \quad \varepsilon_1   \left( E_{i,c} \sin \theta_i + E_{r,c} \sin \theta_r \right) = \varepsilon_2   E_{t,c} \sin \theta_{t} \\
+ E_t: &amp; \quad                        E_{i,c} \cos \theta_i - E_{r,c} \cos \theta_r         =                 E_{t,c} \cos \theta_{t} \\
+ E_b: &amp; \quad                        E_{i,b}               + E_{r,b}                       =                 E_{t,b}                 \\
+ B_n: &amp; \quad                        B_{i,c} \sin \theta_i + B_{r,c} \sin \theta_r         =                 B_{t,c} \sin \theta_{t} \\
+ B_t: &amp; \quad \frac{1}{\mu_1} \left( B_{i,c} \cos \theta_i - B_{r,c} \cos \theta_r \right) = \frac{1}{\mu_2} B_{t,c} \cos \theta_{t} \\
+ B_b: &amp; \quad \frac{1}{\mu_1} \left( B_{i,b}               + B_{r,b}               \right) = \frac{1}{\mu_2} B_{t,b}                 \\
+\end{cases}\end{split}\]</div>
+<p>Writing the magnetic field as a function of the wave-vector and the magnetic field, it’s possible to write 2 decoupled systems of equations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ E_n: &amp; \quad \varepsilon_1   \left( E_{i,c} \sin \theta_i + E_{r,c} \sin \theta_r \right) = \varepsilon_2   E_{t,c} \sin \theta_{t} \\
+ E_t: &amp; \quad                        E_{i,c} \cos \theta_i - E_{r,c} \cos \theta_r         =                 E_{t,c} \cos \theta_{t} \\
+ B_b: &amp; \quad \frac{1}{\mu_1} \left( \frac{E_{i,c}}{c_1}   + \frac{E_{r,c}}{c_1}   \right) = \frac{1}{\mu_2} \frac{E_{t,c}}{c_2}     \\
+\end{cases}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ E_b: &amp; \quad                        E_{i,b}               + E_{r,b}                       =                 E_{t,b}                 \\
+ B_n: &amp; \quad                        \frac{E_{i,b}}{c_1} \sin \theta_i + \frac{E_{r,b}}{c_1} \sin \theta_r         =                 \frac{E_{t,b}}{c_2} \sin \theta_{t} \\
+ B_t: &amp; \quad \frac{1}{\mu_1} \left( \frac{E_{i,b}}{c_1} \cos \theta_i - \frac{E_{r,b}}{c_1} \cos \theta_r \right) = \frac{1}{\mu_2} \frac{E_{t,b}}{c_2} \cos \theta_{t} \\
+\end{cases}\end{split}\]</div>
+<p>The equations <span class="math notranslate nohighlight">\(E_n\)</span> and <span class="math notranslate nohighlight">\(B_b\)</span> are equivalent; <span class="math notranslate nohighlight">\(E_b\)</span> and <span class="math notranslate nohighlight">\(B_n\)</span> are equivalent as well, because of Snell’s law. Thus, defining</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  r_c &amp; := \dfrac{E_{r,c}}{E_{i,c}} \\
+  t_c &amp; := \dfrac{E_{t,c}}{E_{i,c}} \\
+\end{aligned}
+\quad , \quad
+\begin{aligned}
+  r_b &amp; := \dfrac{E_{r,b}}{E_{i,b}} \\
+  t_b &amp; := \dfrac{E_{t,b}}{E_{i,b}} \\
+\end{aligned}
+\end{split}\]</div>
+<p>and <span class="math notranslate nohighlight">\(\alpha_i := \frac{1}{\mu_i c_i}\)</span></p>
+<p>(for P-polarization <strong>todo</strong> <em>change index from <span class="math notranslate nohighlight">\(c\)</span> to <span class="math notranslate nohighlight">\(p\)</span></em>; for S-polarization <strong>todo</strong> <em>change index from <span class="math notranslate nohighlight">\(b\)</span> to <span class="math notranslate nohighlight">\(s\)</span></em>)</p>
+<p>the systems of equations become</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ E_t: &amp; \quad  \cos \theta_i -  \cos \theta_r \, r_c = \cos \theta_{t} \, t_c \\
+ B_b: &amp; \quad  \alpha_1      +  \alpha_1      \, r_c =  \alpha_2       \, t_c \\
+\end{cases}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ E_b: &amp; \quad                          1 +                   r_b =  t_b \\
+ B_t: &amp; \quad  \alpha_1 \, \cos \theta_i -  \alpha_1 \, \cos \theta_r \, r_b = \alpha_2 \, \cos \theta_{t} \, t_b \\
+\end{cases}\end{split}\]</div>
+<p>Calling <span class="math notranslate nohighlight">\(\theta_i = \theta_r = \theta_1\)</span>, <span class="math notranslate nohighlight">\(\theta_2 = \theta_t\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 1 &amp; \frac{\cos \theta_2}{\cos \theta_1} \\ -1 &amp; \frac{\alpha_2}{\alpha_1} \end{bmatrix}
+ \begin{bmatrix} r_c \\ t_c \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\qquad \rightarrow \qquad
+\begin{bmatrix} r_c \\ t_c \end{bmatrix} = \dfrac{1}{\frac{\alpha_2}{\alpha_1} + \frac{\cos \theta_2}{\cos \theta_1}} \begin{bmatrix} \frac{\alpha_2}{\alpha_1} &amp; - \frac{\cos \theta_2}{\cos \theta_1} \\ 1 &amp; 1  \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} 
+= \begin{bmatrix} \frac{\alpha_2 \cos \theta_1 - \alpha_1 \cos \theta_2}{\alpha_2 \cos \theta_1 + \alpha_1 \cos \theta_2} \\ \frac{2 \alpha_1 \cos \theta_1}{\alpha_2 \cos \theta_1 + \alpha_1 \cos \theta_2} \end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} -1 &amp; 1 \\ 1 &amp; \frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} \end{bmatrix}
+ \begin{bmatrix} r_b \\ t_b \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\qquad \rightarrow \qquad
+\begin{bmatrix} r_b \\ t_b \end{bmatrix} = \dfrac{1}{-\frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} - 1} \begin{bmatrix}  \frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} &amp; -1 \\ -1 &amp; -1  \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} 
+= \begin{bmatrix} \frac{\alpha_1 \cos \theta_1 - \alpha_2 \cos \theta_2}{\alpha_1 \cos \theta_1 + \alpha_2 \cos \theta_2} \\ \frac{2 \alpha_1 \cos \theta_1}{\alpha_1 \cos \theta_1 + \alpha_2 \cos \theta_2} \end{bmatrix}
+\end{split}\]</div>
+<!--
+that can be recast using Snell's law
+
+$$\sin \theta_2 = \sin \theta_1 \frac{n_2}{n_1}$$
+
+$$\cos \theta_2 = \sqrt{1 - \sin^2 \theta_2} = \sqrt{1 - \sin^2 \theta_1 \left( \frac{n_2}{n_1} \right)^2}$$
+-->
+<p>that can be recast with the wave impedance <span class="math notranslate nohighlight">\(Z\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\alpha_1 = \frac{1}{\mu_1 c_1} = \frac{\sqrt{\mu_1 \varepsilon_1}}{\mu_1} = \sqrt{\dfrac{\varepsilon_1}{\mu_1}} =: \frac{1}{Z_1} \ ,\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} r_c \\ t_c \end{bmatrix} = \begin{bmatrix} \frac{Z_1 \cos \theta_1 - Z_2 \cos \theta_2}{Z_1 \cos \theta_1 + Z_2 \cos \theta_2} \\ \frac{2 Z_2 \cos \theta_1}{Z_1 \cos \theta_1 + Z_2 \cos \theta_2} \end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} r_b \\ t_b \end{bmatrix} = \begin{bmatrix} \frac{Z_2 \cos \theta_1 - Z_1 \cos \theta_2}{Z_2 \cos \theta_1 + Z_1 \cos \theta_2} \\ \frac{2 Z_2 \cos \theta_1}{Z_2 \cos \theta_1 + Z_1 \cos \theta_2} \end{bmatrix}
+\end{split}\]</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -432,6 +706,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenuti
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#snell-s-law-at-an-interface">Snell’s law at an interface</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
