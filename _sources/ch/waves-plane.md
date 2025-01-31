@@ -302,3 +302,14 @@ $$
 $$
 \begin{bmatrix} r_b \\ t_b \end{bmatrix} = \begin{bmatrix} \frac{Z_2 \cos \theta_1 - Z_1 \cos \theta_2}{Z_2 \cos \theta_1 + Z_1 \cos \theta_2} \\ \frac{2 Z_2 \cos \theta_1}{Z_2 \cos \theta_1 + Z_1 \cos \theta_2} \end{bmatrix}
 $$
+
+**Energy balance.** Energy balance for a domain collapsing on the interface reduces to power flux balance, namely
+
+$$\oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}} = 0 \ ,$$
+
+with $\mathbf{s} = \mathbf{e} \times \mathbf{h}$ the Poynting vector. For harmonic plane waves,
+
+$$\mathbf{s}(\mathbf{r},t) = \mathbf{e}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t)$$
+
+
+
