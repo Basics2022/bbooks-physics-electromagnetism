@@ -235,6 +235,70 @@ $$\begin{cases}
  B_t: & \quad \frac{1}{\mu_1} \left( \frac{E_{i,b}}{c_1} \cos \theta_i - \frac{E_{r,b}}{c_1} \cos \theta_r \right) = \frac{1}{\mu_2} \frac{E_{t,b}}{c_2} \cos \theta_{t} \\
 \end{cases}$$
 
-The equations $E_n$ and $B_b$ are equivalent; $E_b$ and $B_n$ are equivalent as well, because of Snell's law.
+The equations $E_n$ and $B_b$ are equivalent; $E_b$ and $B_n$ are equivalent as well, because of Snell's law. Thus, defining
 
-Thus
+$$
+\begin{aligned}
+  r_c & := \dfrac{E_{r,c}}{E_{i,c}} \\
+  t_c & := \dfrac{E_{t,c}}{E_{i,c}} \\
+\end{aligned}
+\quad , \quad
+\begin{aligned}
+  r_b & := \dfrac{E_{r,b}}{E_{i,b}} \\
+  t_b & := \dfrac{E_{t,b}}{E_{i,b}} \\
+\end{aligned}
+$$
+
+and $\alpha_i := \frac{1}{\mu_i c_i}$
+
+(for P-polarization **todo** *change index from $c$ to $p$*; for S-polarization **todo** *change index from $b$ to $s$*)
+
+the systems of equations become
+
+$$\begin{cases}
+ E_t: & \quad  \cos \theta_i -  \cos \theta_r \, r_c = \cos \theta_{t} \, t_c \\
+ B_b: & \quad  \alpha_1      +  \alpha_1      \, r_c =  \alpha_2       \, t_c \\
+\end{cases}$$
+
+$$\begin{cases}
+ E_b: & \quad                          1 +                   r_b =  t_b \\
+ B_t: & \quad  \alpha_1 \, \cos \theta_i -  \alpha_1 \, \cos \theta_r \, r_b = \alpha_2 \, \cos \theta_{t} \, t_b \\
+\end{cases}$$
+
+Calling $\theta_i = \theta_r = \theta_1$, $\theta_2 = \theta_t$,
+
+$$
+\begin{bmatrix} 1 & \frac{\cos \theta_2}{\cos \theta_1} \\ -1 & \frac{\alpha_2}{\alpha_1} \end{bmatrix}
+ \begin{bmatrix} r_c \\ t_c \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\qquad \rightarrow \qquad
+\begin{bmatrix} r_c \\ t_c \end{bmatrix} = \dfrac{1}{\frac{\alpha_2}{\alpha_1} + \frac{\cos \theta_2}{\cos \theta_1}} \begin{bmatrix} \frac{\alpha_2}{\alpha_1} & - \frac{\cos \theta_2}{\cos \theta_1} \\ 1 & 1  \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} 
+= \begin{bmatrix} \frac{\alpha_2 \cos \theta_1 - \alpha_1 \cos \theta_2}{\alpha_2 \cos \theta_1 + \alpha_1 \cos \theta_2} \\ \frac{2 \alpha_1 \cos \theta_1}{\alpha_2 \cos \theta_1 + \alpha_1 \cos \theta_2} \end{bmatrix}
+$$
+
+$$
+\begin{bmatrix} -1 & 1 \\ 1 & \frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} \end{bmatrix}
+ \begin{bmatrix} r_b \\ t_b \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\qquad \rightarrow \qquad
+\begin{bmatrix} r_b \\ t_b \end{bmatrix} = \dfrac{1}{-\frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} - 1} \begin{bmatrix}  \frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} & -1 \\ -1 & -1  \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} 
+= \begin{bmatrix} \frac{\alpha_1 \cos \theta_1 - \alpha_2 \cos \theta_2}{\alpha_1 \cos \theta_1 + \alpha_2 \cos \theta_2} \\ \frac{2 \alpha_1 \cos \theta_1}{\alpha_1 \cos \theta_1 + \alpha_2 \cos \theta_2} \end{bmatrix}
+$$
+
+<!--
+that can be recast using Snell's law
+
+$$\sin \theta_2 = \sin \theta_1 \frac{n_2}{n_1}$$
+
+$$\cos \theta_2 = \sqrt{1 - \sin^2 \theta_2} = \sqrt{1 - \sin^2 \theta_1 \left( \frac{n_2}{n_1} \right)^2}$$
+-->
+
+that can be recast with the wave impedance $Z$,
+
+$$\alpha_1 = \frac{1}{\mu_1 c_1} = \frac{\sqrt{\mu_1 \varepsilon_1}}{\mu_1} = \sqrt{\dfrac{\varepsilon_1}{\mu_1}} =: \frac{1}{Z_1} \ ,$$
+
+$$
+\begin{bmatrix} r_c \\ t_c \end{bmatrix} = \begin{bmatrix} \frac{Z_1 \cos \theta_1 - Z_2 \cos \theta_2}{Z_1 \cos \theta_1 + Z_2 \cos \theta_2} \\ \frac{2 Z_2 \cos \theta_1}{Z_1 \cos \theta_1 + Z_2 \cos \theta_2} \end{bmatrix}
+$$
+
+$$
+\begin{bmatrix} r_b \\ t_b \end{bmatrix} = \begin{bmatrix} \frac{Z_2 \cos \theta_1 - Z_1 \cos \theta_2}{Z_2 \cos \theta_1 + Z_1 \cos \theta_2} \\ \frac{2 Z_2 \cos \theta_1}{Z_2 \cos \theta_1 + Z_1 \cos \theta_2} \end{bmatrix}
+$$

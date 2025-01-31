@@ -588,8 +588,67 @@ Proof using vector algebra identity<div class="sd-summary-down docutils">
  B_n: &amp; \quad                        \frac{E_{i,b}}{c_1} \sin \theta_i + \frac{E_{r,b}}{c_1} \sin \theta_r         =                 \frac{E_{t,b}}{c_2} \sin \theta_{t} \\
  B_t: &amp; \quad \frac{1}{\mu_1} \left( \frac{E_{i,b}}{c_1} \cos \theta_i - \frac{E_{r,b}}{c_1} \cos \theta_r \right) = \frac{1}{\mu_2} \frac{E_{t,b}}{c_2} \cos \theta_{t} \\
 \end{cases}\end{split}\]</div>
-<p>The equations <span class="math notranslate nohighlight">\(E_n\)</span> and <span class="math notranslate nohighlight">\(B_b\)</span> are equivalent; <span class="math notranslate nohighlight">\(E_b\)</span> and <span class="math notranslate nohighlight">\(B_n\)</span> are equivalent as well, because of Snell’s law.</p>
-<p>Thus</p>
+<p>The equations <span class="math notranslate nohighlight">\(E_n\)</span> and <span class="math notranslate nohighlight">\(B_b\)</span> are equivalent; <span class="math notranslate nohighlight">\(E_b\)</span> and <span class="math notranslate nohighlight">\(B_n\)</span> are equivalent as well, because of Snell’s law. Thus, defining</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+  r_c &amp; := \dfrac{E_{r,c}}{E_{i,c}} \\
+  t_c &amp; := \dfrac{E_{t,c}}{E_{i,c}} \\
+\end{aligned}
+\quad , \quad
+\begin{aligned}
+  r_b &amp; := \dfrac{E_{r,b}}{E_{i,b}} \\
+  t_b &amp; := \dfrac{E_{t,b}}{E_{i,b}} \\
+\end{aligned}
+\end{split}\]</div>
+<p>and <span class="math notranslate nohighlight">\(\alpha_i := \frac{1}{\mu_i c_i}\)</span></p>
+<p>(for P-polarization <strong>todo</strong> <em>change index from <span class="math notranslate nohighlight">\(c\)</span> to <span class="math notranslate nohighlight">\(p\)</span></em>; for S-polarization <strong>todo</strong> <em>change index from <span class="math notranslate nohighlight">\(b\)</span> to <span class="math notranslate nohighlight">\(s\)</span></em>)</p>
+<p>the systems of equations become</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ E_t: &amp; \quad  \cos \theta_i -  \cos \theta_r \, r_c = \cos \theta_{t} \, t_c \\
+ B_b: &amp; \quad  \alpha_1      +  \alpha_1      \, r_c =  \alpha_2       \, t_c \\
+\end{cases}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ E_b: &amp; \quad                          1 +                   r_b =  t_b \\
+ B_t: &amp; \quad  \alpha_1 \, \cos \theta_i -  \alpha_1 \, \cos \theta_r \, r_b = \alpha_2 \, \cos \theta_{t} \, t_b \\
+\end{cases}\end{split}\]</div>
+<p>Calling <span class="math notranslate nohighlight">\(\theta_i = \theta_r = \theta_1\)</span>, <span class="math notranslate nohighlight">\(\theta_2 = \theta_t\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 1 &amp; \frac{\cos \theta_2}{\cos \theta_1} \\ -1 &amp; \frac{\alpha_2}{\alpha_1} \end{bmatrix}
+ \begin{bmatrix} r_c \\ t_c \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\qquad \rightarrow \qquad
+\begin{bmatrix} r_c \\ t_c \end{bmatrix} = \dfrac{1}{\frac{\alpha_2}{\alpha_1} + \frac{\cos \theta_2}{\cos \theta_1}} \begin{bmatrix} \frac{\alpha_2}{\alpha_1} &amp; - \frac{\cos \theta_2}{\cos \theta_1} \\ 1 &amp; 1  \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} 
+= \begin{bmatrix} \frac{\alpha_2 \cos \theta_1 - \alpha_1 \cos \theta_2}{\alpha_2 \cos \theta_1 + \alpha_1 \cos \theta_2} \\ \frac{2 \alpha_1 \cos \theta_1}{\alpha_2 \cos \theta_1 + \alpha_1 \cos \theta_2} \end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} -1 &amp; 1 \\ 1 &amp; \frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} \end{bmatrix}
+ \begin{bmatrix} r_b \\ t_b \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\qquad \rightarrow \qquad
+\begin{bmatrix} r_b \\ t_b \end{bmatrix} = \dfrac{1}{-\frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} - 1} \begin{bmatrix}  \frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} &amp; -1 \\ -1 &amp; -1  \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} 
+= \begin{bmatrix} \frac{\alpha_1 \cos \theta_1 - \alpha_2 \cos \theta_2}{\alpha_1 \cos \theta_1 + \alpha_2 \cos \theta_2} \\ \frac{2 \alpha_1 \cos \theta_1}{\alpha_1 \cos \theta_1 + \alpha_2 \cos \theta_2} \end{bmatrix}
+\end{split}\]</div>
+<!--
+that can be recast using Snell's law
+
+$$\sin \theta_2 = \sin \theta_1 \frac{n_2}{n_1}$$
+
+$$\cos \theta_2 = \sqrt{1 - \sin^2 \theta_2} = \sqrt{1 - \sin^2 \theta_1 \left( \frac{n_2}{n_1} \right)^2}$$
+-->
+<p>that can be recast with the wave impedance <span class="math notranslate nohighlight">\(Z\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\alpha_1 = \frac{1}{\mu_1 c_1} = \frac{\sqrt{\mu_1 \varepsilon_1}}{\mu_1} = \sqrt{\dfrac{\varepsilon_1}{\mu_1}} =: \frac{1}{Z_1} \ ,\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} r_c \\ t_c \end{bmatrix} = \begin{bmatrix} \frac{Z_1 \cos \theta_1 - Z_2 \cos \theta_2}{Z_1 \cos \theta_1 + Z_2 \cos \theta_2} \\ \frac{2 Z_2 \cos \theta_1}{Z_1 \cos \theta_1 + Z_2 \cos \theta_2} \end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} r_b \\ t_b \end{bmatrix} = \begin{bmatrix} \frac{Z_2 \cos \theta_1 - Z_1 \cos \theta_2}{Z_2 \cos \theta_1 + Z_1 \cos \theta_2} \\ \frac{2 Z_2 \cos \theta_1}{Z_2 \cos \theta_1 + Z_1 \cos \theta_2} \end{bmatrix}
+\end{split}\]</div>
 </div>
 </div>
 
