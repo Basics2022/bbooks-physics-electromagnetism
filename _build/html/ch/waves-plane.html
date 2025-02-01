@@ -649,13 +649,43 @@ $$\cos \theta_2 = \sqrt{1 - \sin^2 \theta_2} = \sqrt{1 - \sin^2 \theta_1 \left( 
 \[\begin{split}
 \begin{bmatrix} r_b \\ t_b \end{bmatrix} = \begin{bmatrix} \frac{Z_2 \cos \theta_1 - Z_1 \cos \theta_2}{Z_2 \cos \theta_1 + Z_1 \cos \theta_2} \\ \frac{2 Z_2 \cos \theta_1}{Z_2 \cos \theta_1 + Z_1 \cos \theta_2} \end{bmatrix}
 \end{split}\]</div>
-<p><strong>Energy balance.</strong> Energy balance for a domain collapsing on the interface reduces to power flux balance, namely</p>
+<p><strong>Energy balance and transmission coefficients.</strong> Energy balance for a domain collapsing on the interface reduces to power flux balance, namely</p>
 <div class="math notranslate nohighlight">
 \[\oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}} = 0 \ ,\]</div>
 <p>with <span class="math notranslate nohighlight">\(\mathbf{s} = \mathbf{e} \times \mathbf{h}\)</span> the Poynting vector. For harmonic plane waves,</p>
 <div class="math notranslate nohighlight">
-\[\mathbf{s}(\mathbf{r},t) = \mathbf{e}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t)\]</div>
+\[\begin{split}\begin{aligned}
+  \mathbf{s}(\mathbf{r},t) 
+  &amp; = \mathbf{e}(\mathbf{r},t) \times \mathbf{h}(\mathbf{r},t) = \\
+  &amp; = \frac{1}{\mu} \left[ \mathbf{E} e^{i(\mathbf{k} \cdot \mathbf{r} - \omega t)} + \mathbf{E}^* e^{-i(\mathbf{k} \cdot \mathbf{r} - \omega t)} \right] \times \left[ \mathbf{B} e^{i(\mathbf{k} \cdot \mathbf{r} - \omega t)} + \mathbf{B}^* e^{-i(\mathbf{k} \cdot \mathbf{r} - \omega t)}  \right] = \\
+  &amp; = \frac{1}{\mu} \left[ \, \mathbf{E} \times \mathbf{B} \, e^{i 2(\mathbf{k} \cdot \mathbf{r} - \omega t)} + c.c. \, \right] + \frac{1}{\mu} \left[ \, \mathbf{E} \times \mathbf{B}^* + c.c. \, \right] = \\
+  &amp; = \dots + \frac{1}{\mu} \mathbf{E} \times \left( \frac{1}{c} \hat{\mathbf{k}} \times \mathbf{E} \right)^* = \\
+  &amp; = \dots + \frac{1}{\mu c} \left( \mathbf{E} \cdot \mathbf{E}^* \right) \hat{\mathbf{k}} = \\
+  &amp; = \dots + \frac{1}{\mu c} | \mathbf{E} |^2 \hat{\mathbf{k}} \ .
+  &amp; = \dots + \alpha | \mathbf{E} |^2 \hat{\mathbf{k}} \ .
+\end{aligned}\end{split}\]</div>
+<p>For each one of the two polarizations, the following holds (<span class="math notranslate nohighlight">\(\cos \theta\)</span> comes from the doct product <span class="math notranslate nohighlight">\(\hat{k} \cdot \hat{n}\)</span> appearing in the surface integral),</p>
+<div class="math notranslate nohighlight">
+\[\alpha_1 \cos \theta_1 = \alpha_1 r_x^2 \, \cos \theta_1 + \alpha_2 t_x^2 \, \cos \theta_2 \ ,\]</div>
+<p>i.e. the sum of reflected and transmitted power equals the incident power.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof of the power balance, for P-polarization<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>todo</strong> Here <span class="math notranslate nohighlight">\(P\)</span> is index <span class="math notranslate nohighlight">\(c\)</span></p>
+<p class="sd-card-text">Dividing by <span class="math notranslate nohighlight">\(\alpha_1 \cos  \theta_1\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ &amp; \frac{1}{\alpha_1 \cos \theta_1} \left( \alpha_1 r_p^2 \, \cos \theta_1 + \alpha_2 t_p^2 \, \cos \theta_2 \right) = \\
+ &amp; = \frac{\left(\alpha_1 \cos \theta_1 - \alpha_2 \cos \theta_2\right)^2}{\left(\alpha_1 \cos \theta_1 + \alpha_2 \cos \theta_2\right)^2} + \frac{\alpha_2 \cos \theta_2}{\alpha_1 \cos \theta_1} \frac{\left( 2 \alpha_1 \cos \theta_1 \right)^2}{\left( \alpha_1 \cos \theta_1 + \alpha_2 \cos \theta_2 \right)^2} = \\
+  &amp; = \dfrac{1}{\left( \alpha_1 \cos \theta_1 + \alpha_2 \cos \theta_2 \right)^2} \left[ \alpha_1^2 \cos^2 \theta_1 - 2 \alpha_1 \alpha_2 \cos \theta_1 \cos \theta_2 + \alpha_2^2 \cos^2 \theta_2 + 4 \alpha_1 \alpha_2 \cos \theta_1 \cos \theta_2 \right] = \\
+  &amp; = 1 \ .
+\end{aligned}\end{split}\]</div>
 </div>
+</details></div>
 </div>
 
     <script type="text/x-thebe-config">
