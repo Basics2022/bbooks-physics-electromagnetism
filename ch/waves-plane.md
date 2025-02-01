@@ -302,3 +302,43 @@ $$
 $$
 \begin{bmatrix} r_b \\ t_b \end{bmatrix} = \begin{bmatrix} \frac{Z_2 \cos \theta_1 - Z_1 \cos \theta_2}{Z_2 \cos \theta_1 + Z_1 \cos \theta_2} \\ \frac{2 Z_2 \cos \theta_1}{Z_2 \cos \theta_1 + Z_1 \cos \theta_2} \end{bmatrix}
 $$
+
+**Energy balance and transmission coefficients.** Energy balance for a domain collapsing on the interface reduces to power flux balance, namely
+
+$$\oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}} = 0 \ ,$$
+
+with $\mathbf{s} = \mathbf{e} \times \mathbf{h}$ the Poynting vector. For harmonic plane waves,
+
+$$\begin{aligned}
+  \mathbf{s}(\mathbf{r},t) 
+  & = \mathbf{e}(\mathbf{r},t) \times \mathbf{h}(\mathbf{r},t) = \\
+  & = \frac{1}{\mu} \left[ \mathbf{E} e^{i(\mathbf{k} \cdot \mathbf{r} - \omega t)} + \mathbf{E}^* e^{-i(\mathbf{k} \cdot \mathbf{r} - \omega t)} \right] \times \left[ \mathbf{B} e^{i(\mathbf{k} \cdot \mathbf{r} - \omega t)} + \mathbf{B}^* e^{-i(\mathbf{k} \cdot \mathbf{r} - \omega t)}  \right] = \\
+  & = \frac{1}{\mu} \left[ \, \mathbf{E} \times \mathbf{B} \, e^{i 2(\mathbf{k} \cdot \mathbf{r} - \omega t)} + c.c. \, \right] + \frac{1}{\mu} \left[ \, \mathbf{E} \times \mathbf{B}^* + c.c. \, \right] = \\
+  & = \dots + \frac{1}{\mu} \mathbf{E} \times \left( \frac{1}{c} \hat{\mathbf{k}} \times \mathbf{E} \right)^* = \\
+  & = \dots + \frac{1}{\mu c} \left( \mathbf{E} \cdot \mathbf{E}^* \right) \hat{\mathbf{k}} = \\
+  & = \dots + \frac{1}{\mu c} | \mathbf{E} |^2 \hat{\mathbf{k}} \ .
+  & = \dots + \alpha | \mathbf{E} |^2 \hat{\mathbf{k}} \ .
+\end{aligned}$$
+
+For each one of the two polarizations, the following holds ($\cos \theta$ comes from the doct product $\hat{k} \cdot \hat{n}$ appearing in the surface integral),
+
+$$\alpha_1 \cos \theta_1 = \alpha_1 r_x^2 \, \cos \theta_1 + \alpha_2 t_x^2 \, \cos \theta_2 \ ,$$
+
+i.e. the sum of reflected and transmitted power equals the incident power.
+
+```{dropdown} Proof of the power balance, for P-polarization
+
+**todo** Here $P$ is index $c$
+
+Dividing by $\alpha_1 \cos  \theta_1$
+
+$$\begin{aligned}
+ & \frac{1}{\alpha_1 \cos \theta_1} \left( \alpha_1 r_p^2 \, \cos \theta_1 + \alpha_2 t_p^2 \, \cos \theta_2 \right) = \\
+ & = \frac{\left(\alpha_1 \cos \theta_1 - \alpha_2 \cos \theta_2\right)^2}{\left(\alpha_1 \cos \theta_1 + \alpha_2 \cos \theta_2\right)^2} + \frac{\alpha_2 \cos \theta_2}{\alpha_1 \cos \theta_1} \frac{\left( 2 \alpha_1 \cos \theta_1 \right)^2}{\left( \alpha_1 \cos \theta_1 + \alpha_2 \cos \theta_2 \right)^2} = \\
+  & = \dfrac{1}{\left( \alpha_1 \cos \theta_1 + \alpha_2 \cos \theta_2 \right)^2} \left[ \alpha_1^2 \cos^2 \theta_1 - 2 \alpha_1 \alpha_2 \cos \theta_1 \cos \theta_2 + \alpha_2^2 \cos^2 \theta_2 + 4 \alpha_1 \alpha_2 \cos \theta_1 \cos \theta_2 \right] = \\
+  & = 1 \ .
+\end{aligned}$$
+
+```
+
+
