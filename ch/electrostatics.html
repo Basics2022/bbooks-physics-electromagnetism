@@ -71,6 +71,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
+    <link rel="next" title="Energy balance in electromagnetism" href="energy.html" />
+    <link rel="prev" title="Elettromagnetismo nella materia" href="media.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
   </head>
@@ -165,11 +167,12 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Elettromagnetismo</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Brief history of Electromagnetism</a></li>
 <li class="toctree-l1"><a class="reference internal" href="principles.html">Principles of Classical Electromagnetism</a></li>
 <li class="toctree-l1"><a class="reference internal" href="potentials.html">Potenziali elettromagnetici</a></li>
 <li class="toctree-l1"><a class="reference internal" href="media.html">Elettromagnetismo nella materia</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Electrostatics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="energy.html">Energy balance in electromagnetism</a></li>
 <li class="toctree-l1"><a class="reference internal" href="energy-linear.html">Energy and momentum balance in linear, local, isotropic, non-dispersive media</a></li>
 <li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">Equazioni dell’elettromagnetismo e relatività galileiana</a></li>
@@ -386,10 +389,39 @@ document.write(`
   \partial_t \rho_f
   &amp; = - \nabla \cdot \vec{j}_f = \\
   &amp; = - \nabla \cdot \left( \frac{1}{\rho_R} \vec{e} \right) = \\
-  &amp; = - \frac{1}{\rho_R \varepsilon} \nabla \cdot \left( \vec{d} \right) = \\
-  &amp; = - \frac{1}{\rho_R \varepsilon} \rho_f
+  &amp; = - \frac{1}{\rho_R \varepsilon} \nabla \cdot \vec{d} = \\
+  &amp; = - \frac{1}{\rho_R \varepsilon} \rho_f \ ,
 \end{aligned}\end{split}\]</div>
+<p>having assumed uniform properties. The differential equation in the volume of the conductor provides the evolution of the electric charge in the volume <span class="math notranslate nohighlight">\(\rho(\mathbf{r},t)\)</span>, given the initial condition <span class="math notranslate nohighlight">\(\rho(\mathbf{r},0) = \rho_{f,0}(\mathbf{r})\)</span></p>
+<div class="math notranslate nohighlight">
+\[\partial_t \rho_f = - \frac{1}{\rho_R \varepsilon} \rho_f\]</div>
+<div class="math notranslate nohighlight">
+\[\rho_f(\mathbf{r},t) = \rho_{f,0}(\mathbf{r}) \exp\left[ - \dfrac{t}{\rho_R \varepsilon} \right] \ .\]</div>
+<p>For a conductor:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varepsilon \sim \varepsilon_0 = 8.85 \cdot 10^{-12} \text{F} \text{m}^-1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho_R \sim 10^{-7}  \Omega \, \text{m}\)</span></p></li>
+</ul>
+<p>so that the time constant (that can be thought as a characteristic time) of the process is</p>
+<div class="math notranslate nohighlight">
+\[\tau = \rho_R \varepsilon \sim 8.85 \cdot 10^{-19} \, \text{s} \ , \]</div>
+<p>and thus, after a very short period of time the volume charge density is approximately zero everywhere in the volume: it accumulates in a very thin surface layer.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\partial_t \left( \rho_f e^{\frac{t}{\rho_R \varepsilon}} \right) = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\rho_f(\mathbf{r},t) e^{\frac{r}{\rho_R \varepsilon}} = a(\mathbf{r})\]</div>
+<p class="sd-card-text">and appylying initial conditions in all the points of the domain, <span class="math notranslate nohighlight">\(\rho_{f}(\mathbf{r},0) = \rho_{f,0}(\mathbf{r})\)</span>, function <span class="math notranslate nohighlight">\(a(\mathbf{r})\)</span> must be equal to <span class="math notranslate nohighlight">\(\rho_{f,0}(\mathbf{r})\)</span> and the solution reads</p>
+<div class="math notranslate nohighlight">
+\[\rho_f(\mathbf{r},t) = \rho_{f,0}(\mathbf{r}) \exp \left[ -\dfrac{t}{\rho_R \varepsilon} \right]\]</div>
 </div>
+</details></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -422,6 +454,24 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="media.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">precedente</p>
+        <p class="prev-next-title">Elettromagnetismo nella materia</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="energy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">successivo</p>
+        <p class="prev-next-title">Energy balance in electromagnetism</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
