@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Validità dell’approccio circuitale &#8212; electromagnetism</title>
+    <title>Electrostatics &#8212; electromagnetism</title>
   
   
   
@@ -67,12 +67,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/circuits-electric-approximation';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/electrostatics';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="Induzione elettromagnetica nell’approssimazione circuitale" href="circuits-electric-induction.html" />
-    <link rel="prev" title="Circuiti elettrici" href="circuits-electric.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
   </head>
@@ -182,10 +180,10 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Elettrotecnica</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="circuits.html">Approssimazione circuitale</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="circuits-electric.html">Circuiti elettrici</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Validità dell’approccio circuitale</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="circuits.html">Approssimazione circuitale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-approximation.html">Validità dell’approccio circuitale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">Induzione elettromagnetica nell’approssimazione circuitale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-components.html">Componenti elementari dei circuiti elettrici</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">Regimi di funzionamento in circuiti elettrici</a></li>
@@ -261,7 +259,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/circuits-electric-approximation.md" target="_blank"
+      <li><a href="../_sources/ch/electrostatics.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Scarica il file sorgente"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -332,7 +330,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -343,11 +343,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Validità dell’approccio circuitale</h1>
+    <h1>Electrostatics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenuti </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-electric-field-inside-a-conductor">Zero electric field inside a conductor</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -357,40 +365,31 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-<div class="tex2jax_ignore mathjax_ignore section" id="validita-dell-approccio-circuitale">
-<span id="classical-electromagnetism-circuits-electric-approximation"></span><h1>Validità dell’approccio circuitale<a class="headerlink" href="#validita-dell-approccio-circuitale" title="Permalink to this heading">#</a></h1>
-<p>L’approccio circuitale consente di ridurre il problema elettromagnetico, in generale un problema di campo che richiede la soluzione di PDE, a un approccio «ai morsetti» <strong>todo</strong>, che richiede la soluzione di ODE.</p>
-<p>Una rivisitazione dell”<a class="reference internal" href="energy-linear.html#classical-electromagnetism-energy"><span class="std std-ref">equazione dell’energia</span></a> permette di valutare i regimi in cui è possibile usare un approccio circuitale a un sistema elettromagnetico.</p>
-<p>In particolare, nell’equazione di bilancio dell’energia elettromagnetica</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="electrostatics">
+<span id="classical-electromagnetism-electrostatics"></span><h1>Electrostatics<a class="headerlink" href="#electrostatics" title="Permalink to this heading">#</a></h1>
+<div class="section" id="zero-electric-field-inside-a-conductor">
+<h2>Zero electric field inside a conductor<a class="headerlink" href="#zero-electric-field-inside-a-conductor" title="Permalink to this heading">#</a></h2>
+<p>Studying the transient of the electric charge distribution inside a conductor,</p>
 <div class="math notranslate nohighlight">
-\[\dfrac{d}{dt} \int_V u = \oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}} - \int_V \mathbf{j} \cdot \mathbf{e} \ ,\]</div>
-<p>viene indagato il termine di flusso alla frontiera, ricordando la definizione di vettore di Poynting <span class="math notranslate nohighlight">\(\mathbf{s} := \mathbf{e} \times \mathbf{h}\)</span>, e riscrivendo i campi elettrico e magnetico in funzione dei potenziali elettromagnetici, <span class="math notranslate nohighlight">\(\mathbf{b} = \nabla \times \mathbf{a}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{e} = - \nabla \varphi - \partial_t \mathbf{a} \ ,\)</span></p>
+\[\vec{e} = \rho_R \vec{j} \ ,\]</div>
+<p>whose constitutive equation is</p>
+<div class="math notranslate nohighlight">
+\[\vec{d} = \varepsilon \vec{e} \ ,\]</div>
+<p>with free electric charge continuity equation</p>
+<div class="math notranslate nohighlight">
+\[\partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \ ,\]</div>
+<p>and Gauss equation for the displacement field</p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot \vec{d} = \rho_f \ .\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  - \oint_{\partial V} \mathbf{s} \cdot \mathbf{\hat{n}}
-  &amp; = - \oint_{\partial V} \left(\mathbf{e} \times \mathbf{h} \right) \cdot \mathbf{\hat{n}} = \\
-  &amp; =   \oint_{\partial V} \left(\nabla \varphi + \partial_t \mathbf{a} \right) \times \mathbf{h}  \cdot \mathbf{\hat{n}} = \\
-  &amp; = ... \\
-  &amp; = \underbrace{\oint_{\partial V} \hat{\mathbf{n}} \cdot \nabla \times ( \varphi \mathbf{h} )}_{=0 \text{ (Stokes'thm **todo** check)}} - \oint_{\partial V} \varphi \hat{\mathbf{n}} \cdot \underbrace{\nabla \times \mathbf{h}}_{\partial_t \mathbf{d} + \mathbf{j}} + \oint_{\partial V} \hat{\mathbf{n}} \cdot \partial_t \mathbf{a} \times \mathbf{h} = \\
-  &amp; = - \oint_{\partial V} \varphi \mathbf{j} \cdot \hat{\mathbf{n}} - \oint_{\partial V} \hat{\mathbf{n}} \cdot \left( \partial_t \mathbf{d} + \mathbf{h} \times \partial_t \mathbf{a} \right) \ , 
+  \partial_t \rho_f
+  &amp; = - \nabla \cdot \vec{j}_f = \\
+  &amp; = - \nabla \cdot \left( \frac{1}{\rho_R} \vec{e} \right) = \\
+  &amp; = - \frac{1}{\rho_R \varepsilon} \nabla \cdot \left( \vec{d} \right) = \\
+  &amp; = - \frac{1}{\rho_R \varepsilon} \rho_f
 \end{aligned}\end{split}\]</div>
-<p>e assumendo che il flusso di carica elettrica avvenga solo in corrispondenza di un numero finito di sezioni <span class="math notranslate nohighlight">\(S_k \in \partial V\)</span> equipotenziali a potenziale <span class="math notranslate nohighlight">\(v_k = -\varphi_k\)</span>, costante sulle sezioni, e riconoscento il flusso di carica elettrica attraverso la sezione <span class="math notranslate nohighlight">\(S_k\)</span> come la corrente <span class="math notranslate nohighlight">\(i_k = \int_{S_k} \mathbf{j} \cdot \hat{\mathbf{n}}\)</span>, si può scrivere</p>
-<div class="math notranslate nohighlight">
-\[- \oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}} = \sum_k v_k \, i_k - \oint_{\partial V} \hat{\mathbf{n}} \cdot \left( \partial_t \mathbf{d} + \mathbf{h} \times \partial_t \mathbf{a} \right) \ .\]</div>
-<p>Il bilancio di energia elettromagnetica del sistema può quindi essere riscritto come</p>
-<div class="math notranslate nohighlight">
-\[\frac{d}{dt} \int_V u = \sum_k v_k \, i_k - \int_{V} \mathbf{j} \cdot \mathbf{e} - \oint_{\partial V} \hat{\mathbf{n}} \cdot \left( \partial_t \mathbf{d} + \mathbf{h} \times \partial_t \mathbf{a} \right) \ .\]</div>
-<p>Nelle condizioni in cui l’ultimo termine è nullo o trascurabile (<strong>todo</strong> <em>quali? Spendere due parole sulla validità dell’approssimazione, con analisi dimensionale? Fare esempio in cui l’approssimazione non funziona</em>), la variazione di energia interna al sistema è dovuta alla differenza della potenza in ingresso ai morsetti, e la dissipazione all’interno del volume (ad esempio dovuta alla conduzione non ideale in conduttori con resistività finita),</p>
-<div class="math notranslate nohighlight">
-\[\dot{E}^{em} = P^{ext, vi} - \dot{D} \ ,\]</div>
-<p>con <span class="math notranslate nohighlight">\(\dot{D} \ge 0\)</span> per il secondo principio della termodinamica <strong>todo</strong> <em>aggiungere riferimento, e discussione.</em></p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -423,30 +422,26 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="circuits-electric.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">precedente</p>
-        <p class="prev-next-title">Circuiti elettrici</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="circuits-electric-induction.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">successivo</p>
-        <p class="prev-next-title">Induzione elettromagnetica nell’approssimazione circuitale</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenuti
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-electric-field-inside-a-conductor">Zero electric field inside a conductor</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
