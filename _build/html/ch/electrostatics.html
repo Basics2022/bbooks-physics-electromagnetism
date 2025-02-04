@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Circuiti elettromagnetici &#8212; electromagnetism</title>
+    <title>Electrostatics &#8212; electromagnetism</title>
   
   
   
@@ -67,12 +67,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/circuits-electromagnetic';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/electrostatics';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="Trasformatore" href="circuits-electromagnetic-transformer.html" />
-    <link rel="prev" title="Regimi di funzionamento in circuiti elettrici" href="circuits-electric-regimes.html" />
+    <link rel="next" title="Energy balance in electromagnetism" href="energy.html" />
+    <link rel="prev" title="Elettromagnetismo nella materia" href="media.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
   </head>
@@ -167,12 +167,12 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Elettromagnetismo</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">Brief history of Electromagnetism</a></li>
 <li class="toctree-l1"><a class="reference internal" href="principles.html">Principles of Classical Electromagnetism</a></li>
 <li class="toctree-l1"><a class="reference internal" href="potentials.html">Potenziali elettromagnetici</a></li>
 <li class="toctree-l1"><a class="reference internal" href="media.html">Elettromagnetismo nella materia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="electrostatics.html">Electrostatics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Electrostatics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="energy.html">Energy balance in electromagnetism</a></li>
 <li class="toctree-l1"><a class="reference internal" href="energy-linear.html">Energy and momentum balance in linear, local, isotropic, non-dispersive media</a></li>
 <li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">Equazioni dell’elettromagnetismo e relatività galileiana</a></li>
@@ -183,8 +183,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Elettrotecnica</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="circuits.html">Approssimazione circuitale</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="circuits.html">Approssimazione circuitale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-approximation.html">Validità dell’approccio circuitale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">Induzione elettromagnetica nell’approssimazione circuitale</a></li>
@@ -192,7 +192,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">Regimi di funzionamento in circuiti elettrici</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Circuiti elettromagnetici</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electromagnetic.html">Circuiti elettromagnetici</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electromagnetic-transformer.html">Trasformatore</a></li>
 </ul>
 </li>
@@ -262,7 +262,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/circuits-electromagnetic.md" target="_blank"
+      <li><a href="../_sources/ch/electrostatics.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Scarica il file sorgente"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -333,7 +333,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -344,11 +346,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Circuiti elettromagnetici</h1>
+    <h1>Electrostatics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenuti </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-electric-field-inside-a-conductor">Zero electric field inside a conductor</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -358,74 +368,60 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="sd-container-fluid sd-sphinx-override sd-p-0 sd-mt-2 sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-gx-2 sd-gy-1 docutils">
-<div class="sd-col sd-d-flex-row sd-align-minor-center docutils">
-<div class="sd-container-fluid sd-sphinx-override docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-gx-3 sd-gy-1 docutils">
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0">basics</p>
-</div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-calendar" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.75 0a.75.75 0 01.75.75V2h5V.75a.75.75 0 011.5 0V2h1.25c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 16H2.75A1.75 1.75 0 011 14.25V3.75C1 2.784 1.784 2 2.75 2H4V.75A.75.75 0 014.75 0zm0 3.5h8.5a.25.25 0 01.25.25V6h-11V3.75a.25.25 0 01.25-.25h2zm-2.25 4v6.75c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V7.5h-11z"></path></svg></span>04 feb 2025</p>
-</div>
-<div class="sd-col sd-col-auto sd-d-flex-row sd-align-minor-center docutils">
-<p class="sd-p-0 sd-m-0"><span class="sd-pr-2"><svg version="1.1" width="16.0px" height="16.0px" class="sd-octicon sd-octicon-clock" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg></span>1 min read</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="circuiti-elettromagnetici">
-<span id="classical-electromagnetism-circuits-electromagnetic"></span><h1>Circuiti elettromagnetici<a class="headerlink" href="#circuiti-elettromagnetici" title="Permalink to this heading">#</a></h1>
-<p>Sotto opportune ipotesi è possibile usare un modello circuitale anche per sistemi elettromagnetici, come ad esempio i trasformatori, o i motori elettrici.</p>
-<ul>
-<li><p>legge di Gauss per il campo magnetico</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="electrostatics">
+<span id="classical-electromagnetism-electrostatics"></span><h1>Electrostatics<a class="headerlink" href="#electrostatics" title="Permalink to this heading">#</a></h1>
+<div class="section" id="zero-electric-field-inside-a-conductor">
+<h2>Zero electric field inside a conductor<a class="headerlink" href="#zero-electric-field-inside-a-conductor" title="Permalink to this heading">#</a></h2>
+<p>Studying the transient of the electric charge distribution inside a conductor,</p>
 <div class="math notranslate nohighlight">
-\[\nabla \cdot \mathbf{b} = 0\]</div>
-</li>
-<li><p>legge di Ampére-Maxwell</p>
+\[\vec{e} = \rho_R \vec{j} \ ,\]</div>
+<p>whose constitutive equation is</p>
 <div class="math notranslate nohighlight">
-\[\nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j}\]</div>
-</li>
-</ul>
-<p>Si aggiungono le seguenti ipotesi:</p>
-<ul class="simple">
-<li><p>materiali lineari non-dissipativi e non-dispersivi <span class="math notranslate nohighlight">\(\mathbf{b} = \mu \mathbf{h}\)</span> <span style="color:red"><strong>todo</strong> discutere questa ipotesi, insieme a isteresi materiali, cicli di magnetizzazione,…</span>.</p></li>
-<li><p>variazioni del campo <span class="math notranslate nohighlight">\(\mathbf{d}\)</span> nel tempo trascurabili, <span class="math notranslate nohighlight">\(\partial_t \mathbf{d} = \mathbf{0}\)</span>.</p></li>
-</ul>
-<p>La legge di Gauss del campo magnetico in forma integrale permette di scrivere la <strong>legge ai nodi</strong> del flusso del campo magnetico per i circuiti magnetici,</p>
+\[\vec{d} = \varepsilon \vec{e} \ ,\]</div>
+<p>with free electric charge continuity equation</p>
 <div class="math notranslate nohighlight">
-\[0 = \oint_{\partial V} \mathbf{b} \cdot \hat{\mathbf{n}} = \sum_k \phi_k \ .\]</div>
-<p>La legge di Ampére-Maxwell in forma integrale considerando:</p>
-<ul>
-<li><p>un percorso incatenato con il solo induttore</p>
+\[\partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \ ,\]</div>
+<p>and Gauss equation for the displacement field</p>
 <div class="math notranslate nohighlight">
-\[\int_{\ell_{ind}} \mathbf{h} \cdot \hat{\mathbf{t}} + \int_{\ell_{12}} \mathbf{h} \cdot \hat{\mathbf{t}} = \oint_{\ell_{1}} \mathbf{h} \cdot \hat{\mathbf{t}} = \int_{S^{ind}} \mathbf{j} \cdot \hat{\mathbf{n}} =  N i =: m\]</div>
-</li>
-<li><p>un percorso incatenato con il traferro, aggirando l’induttore</p>
-<div class="math notranslate nohighlight">
-\[0 = \int_{\ell_{traf}} \mathbf{h} \cdot \hat{\mathbf{t}} + \int_{\ell_{21}} \hat{h} \cdot \hat{\mathbf{t}} = \sum_{k} h_k \ell_k + \int_{\ell_{21}} \hat{h} \cdot \hat{\mathbf{t}}\]</div>
-</li>
-</ul>
-<p>e sommando le due equazioni, riconoscendo che i due integrali di linea sullo stesso percorsoin versi opposti si annullano, si ottiene la <strong>legge alle maglie</strong> per i circuiti magnetici</p>
+\[\nabla \cdot \vec{d} = \rho_f \ .\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  m &amp; = \int_{\ell_{ind}} \mathbf{h} \cdot \hat{\mathbf{t}} + \int_{\ell_{traf}} \mathbf{h} \cdot \hat{\mathbf{t}} = \\
-    &amp; \approx \sum_{k \in \ell} h_k \, \ell_k 
-      = \sum_{k \in \ell} \frac{b_k}{\mu_k} \, \ell_k 
-      = \sum_{k \in \ell} \frac{\ell_k}{\mu_k \, A_k} \, \phi_k  \ .
+  \partial_t \rho_f
+  &amp; = - \nabla \cdot \vec{j}_f = \\
+  &amp; = - \nabla \cdot \left( \frac{1}{\rho_R} \vec{e} \right) = \\
+  &amp; = - \frac{1}{\rho_R \varepsilon} \nabla \cdot \vec{d} = \\
+  &amp; = - \frac{1}{\rho_R \varepsilon} \rho_f \ ,
 \end{aligned}\end{split}\]</div>
-<p>Le leggi di Kirchhoff per i circuiti magnetici sono quindi</p>
+<p>having assumed uniform properties. The differential equation in the volume of the conductor provides the evolution of the electric charge in the volume <span class="math notranslate nohighlight">\(\rho(\mathbf{r},t)\)</span>, given the initial condition <span class="math notranslate nohighlight">\(\rho(\mathbf{r},0) = \rho_{f,0}(\mathbf{r})\)</span></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
-  \sum_{k \in N_j} \phi_k = 0 \\ \\
-  m_{\ell_i} = \sum_{k \in \ell_i} \theta_k \phi_k \ ,
-\end{cases}\end{split}\]</div>
-<p>avendo introdotto la riluttanza <span class="math notranslate nohighlight">\(\theta_k = \frac{\ell_k}{\mu_k \, A_k}\)</span>, l’inverso della permeanza <span class="math notranslate nohighlight">\(\Lambda_k = \theta_k^{-1}\)</span>.</p>
-<div class="toctree-wrapper compound">
+\[\partial_t \rho_f = - \frac{1}{\rho_R \varepsilon} \rho_f\]</div>
+<div class="math notranslate nohighlight">
+\[\rho_f(\mathbf{r},t) = \rho_{f,0}(\mathbf{r}) \exp\left[ - \dfrac{t}{\rho_R \varepsilon} \right] \ .\]</div>
+<p>For a conductor:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varepsilon \sim \varepsilon_0 = 8.85 \cdot 10^{-12} \text{F} \text{m}^-1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho_R \sim 10^{-7}  \Omega \, \text{m}\)</span></p></li>
+</ul>
+<p>so that the time constant (that can be thought as a characteristic time) of the process is</p>
+<div class="math notranslate nohighlight">
+\[\tau = \rho_R \varepsilon \sim 8.85 \cdot 10^{-19} \, \text{s} \ , \]</div>
+<p>and thus, after a very short period of time the volume charge density is approximately zero everywhere in the volume: it accumulates in a very thin surface layer.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Proof<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\partial_t \left( \rho_f e^{\frac{t}{\rho_R \varepsilon}} \right) = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\rho_f(\mathbf{r},t) e^{\frac{r}{\rho_R \varepsilon}} = a(\mathbf{r})\]</div>
+<p class="sd-card-text">and appylying initial conditions in all the points of the domain, <span class="math notranslate nohighlight">\(\rho_{f}(\mathbf{r},0) = \rho_{f,0}(\mathbf{r})\)</span>, function <span class="math notranslate nohighlight">\(a(\mathbf{r})\)</span> must be equal to <span class="math notranslate nohighlight">\(\rho_{f,0}(\mathbf{r})\)</span> and the solution reads</p>
+<div class="math notranslate nohighlight">
+\[\rho_f(\mathbf{r},t) = \rho_{f,0}(\mathbf{r}) \exp \left[ -\dfrac{t}{\rho_R \varepsilon} \right]\]</div>
 </div>
+</details></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -459,20 +455,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="circuits-electric-regimes.html"
+       href="media.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">precedente</p>
-        <p class="prev-next-title">Regimi di funzionamento in circuiti elettrici</p>
+        <p class="prev-next-title">Elettromagnetismo nella materia</p>
       </div>
     </a>
     <a class="right-next"
-       href="circuits-electromagnetic-transformer.html"
+       href="energy.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">successivo</p>
-        <p class="prev-next-title">Trasformatore</p>
+        <p class="prev-next-title">Energy balance in electromagnetism</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -482,6 +478,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenuti
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-electric-field-inside-a-conductor">Zero electric field inside a conductor</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

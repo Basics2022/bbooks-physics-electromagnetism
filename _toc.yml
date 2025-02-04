@@ -10,6 +10,7 @@ parts:
   - file: ch/principles
   - file: ch/potentials
   - file: ch/media
+  - file: ch/electrostatics
   - file: ch/energy
   - file: ch/energy-linear
   - file: ch/low-speed-relativity

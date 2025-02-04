@@ -87,7 +87,7 @@
         
 
 \title{electromagnetism}
-\date{01 feb 2025}
+\date{04 feb 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -382,7 +382,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-01 feb 2025
+04 feb 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -829,6 +829,80 @@ If there’s no free surface charge and currents, jump conditions form linear me
 \end{cases}
 \end{split}
 \end{equation}
+\sphinxstepscope
+
+
+\chapter{Electrostatics}
+\label{\detokenize{ch/electrostatics:electrostatics}}\label{\detokenize{ch/electrostatics:classical-electromagnetism-electrostatics}}\label{\detokenize{ch/electrostatics::doc}}
+
+\section{Zero electric field inside a conductor}
+\label{\detokenize{ch/electrostatics:zero-electric-field-inside-a-conductor}}
+\sphinxAtStartPar
+Studying the transient of the electric charge distribution inside a conductor,
+\begin{equation*}
+\begin{split}\vec{e} = \rho_R \vec{j} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose constitutive equation is
+\begin{equation*}
+\begin{split}\vec{d} = \varepsilon \vec{e} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with free electric charge continuity equation
+\begin{equation*}
+\begin{split}\partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and Gauss equation for the displacement field
+\begin{equation*}
+\begin{split}\nabla \cdot \vec{d} = \rho_f \ .\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_t \rho_f
+  & = - \nabla \cdot \vec{j}_f = \\
+  & = - \nabla \cdot \left( \frac{1}{\rho_R} \vec{e} \right) = \\
+  & = - \frac{1}{\rho_R \varepsilon} \nabla \cdot \vec{d} = \\
+  & = - \frac{1}{\rho_R \varepsilon} \rho_f \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having assumed uniform properties. The differential equation in the volume of the conductor provides the evolution of the electric charge in the volume \(\rho(\mathbf{r},t)\), given the initial condition \(\rho(\mathbf{r},0) = \rho_{f,0}(\mathbf{r})\)
+\begin{equation*}
+\begin{split}\partial_t \rho_f = - \frac{1}{\rho_R \varepsilon} \rho_f\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\rho_f(\mathbf{r},t) = \rho_{f,0}(\mathbf{r}) \exp\left[ - \dfrac{t}{\rho_R \varepsilon} \right] \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+For a conductor:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(\varepsilon \sim \varepsilon_0 = 8.85 \cdot 10^{-12} \text{F} \text{m}^-1\)
+
+\item {} 
+\sphinxAtStartPar
+\(\rho_R \sim 10^{-7}  \Omega \, \text{m}\)
+
+\end{itemize}
+
+\sphinxAtStartPar
+so that the time constant (that can be thought as a characteristic time) of the process is
+\begin{equation*}
+\begin{split}\tau = \rho_R \varepsilon \sim 8.85 \cdot 10^{-19} \, \text{s} \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus, after a very short period of time the volume charge density is approximately zero everywhere in the volume: it accumulates in a very thin surface layer.
+\subsubsection*{Proof}
+\begin{equation*}
+\begin{split}\partial_t \left( \rho_f e^{\frac{t}{\rho_R \varepsilon}} \right) = 0\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\rho_f(\mathbf{r},t) e^{\frac{r}{\rho_R \varepsilon}} = a(\mathbf{r})\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and appylying initial conditions in all the points of the domain, \(\rho_{f}(\mathbf{r},0) = \rho_{f,0}(\mathbf{r})\), function \(a(\mathbf{r})\) must be equal to \(\rho_{f,0}(\mathbf{r})\) and the solution reads
+\begin{equation*}
+\begin{split}\rho_f(\mathbf{r},t) = \rho_{f,0}(\mathbf{r}) \exp \left[ -\dfrac{t}{\rho_R \varepsilon} \right]\end{split}
+\end{equation*}
 \sphinxstepscope
 
 
@@ -1283,7 +1357,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-01 feb 2025
+04 feb 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -1855,7 +1929,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-01 feb 2025
+04 feb 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -1946,7 +2020,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-01 feb 2025
+04 feb 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -2000,83 +2074,8 @@ Quando possibile, cioè quando capace di descrivere adeguatamente il comportamen
 
 \sphinxstepscope
 
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-p-0}
-\begin{sphinxuseclass}{sd-mt-2}
-\begin{sphinxuseclass}{sd-mb-4}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-gx-2}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\begin{sphinxuseclass}{sd-container-fluid}
-\begin{sphinxuseclass}{sd-sphinx-override}
-\begin{sphinxuseclass}{sd-row}
-\begin{sphinxuseclass}{sd-row-cols-2}
-\begin{sphinxuseclass}{sd-row-cols-xs-2}
-\begin{sphinxuseclass}{sd-row-cols-sm-3}
-\begin{sphinxuseclass}{sd-row-cols-md-3}
-\begin{sphinxuseclass}{sd-row-cols-lg-3}
-\begin{sphinxuseclass}{sd-gx-3}
-\begin{sphinxuseclass}{sd-gy-1}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-basics
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-01 feb 2025
 
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\begin{sphinxuseclass}{sd-col}
-\begin{sphinxuseclass}{sd-col-auto}
-\begin{sphinxuseclass}{sd-d-flex-row}
-\begin{sphinxuseclass}{sd-align-minor-center}
-\sphinxAtStartPar
-1 min read
-
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
-\end{sphinxuseclass}
 
 \subsection{Validità dell’approccio circuitale}
 \label{\detokenize{ch/circuits-electric-approximation:validita-dell-approccio-circuitale}}\label{\detokenize{ch/circuits-electric-approximation:classical-electromagnetism-circuits-electric-approximation}}\label{\detokenize{ch/circuits-electric-approximation::doc}}
@@ -2161,7 +2160,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-01 feb 2025
+04 feb 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -2261,7 +2260,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-01 feb 2025
+04 feb 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -2400,7 +2399,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-01 feb 2025
+04 feb 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -2482,7 +2481,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-01 feb 2025
+04 feb 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -2637,7 +2636,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-01 feb 2025
+04 feb 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -3116,7 +3115,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-01 feb 2025
+04 feb 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -3454,7 +3453,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-01 feb 2025
+04 feb 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -3648,7 +3647,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-01 feb 2025
+04 feb 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}

@@ -30,6 +30,7 @@ $$\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ .$$
 
 In generale, alcuni materiali rispondono a un campo elettromagnetico "esterno" imposto, con una polarizzazione e una magnetizzazione. In particolare, la polarizzazione elettrica di un materiale corrisponde a una separazione locale delle cariche elettriche dal punto di vista macroscopico equivalente a una densità di volume di dipoli, $\mathbf{p}(\mathbf{r}_0)$; la magnetizzazione corrisponde a un orientamento degli assi delle spire delle correnti amperiane dal punto di vista macroscopico equivalente a una densità di momento magnetico $\mathbf{m}(\mathbf{r}_0)$.
 
+
 ## Polarizzazione
 
 ### Singolo dipolo elettrico
@@ -304,7 +305,6 @@ $$\begin{cases}
   h_{t,1} = h_{t,2}  \quad \rightarrow \quad \frac{1}{\mu_1} b_{t,1} = \frac{1}{\mu_2} b_{t,2} \\
 \end{cases}
 $$ (eq:em-jump:no-surf-density)
-
 
 
 
