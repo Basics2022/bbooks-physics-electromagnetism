@@ -602,28 +602,37 @@ Proof using vector algebra identity<div class="sd-summary-down docutils">
   t_b &amp; := \dfrac{E_{t,b}}{E_{i,b}} \\
 \end{aligned}
 \end{split}\]</div>
-<p>and <span class="math notranslate nohighlight">\(\alpha_i := \frac{1}{\mu_i c_i}\)</span></p>
+<p>and <span class="math notranslate nohighlight">\(\alpha_i := \frac{1}{\mu_i c_i}\)</span>. These system of equations can be written as two uncoupled linear systems of equations,</p>
 <p>(for P-polarization <strong>todo</strong> <em>change index from <span class="math notranslate nohighlight">\(c\)</span> to <span class="math notranslate nohighlight">\(p\)</span></em>; for S-polarization <strong>todo</strong> <em>change index from <span class="math notranslate nohighlight">\(b\)</span> to <span class="math notranslate nohighlight">\(s\)</span></em>)</p>
-<p>the systems of equations become</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
- E_t: &amp; \quad  \cos \theta_i -  \cos \theta_r \, r_c = \cos \theta_{t} \, t_c \\
- B_b: &amp; \quad  \alpha_1      +  \alpha_1      \, r_c =  \alpha_2       \, t_c \\
-\end{cases}\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
- E_b: &amp; \quad                          1 +                   r_b =  t_b \\
- B_t: &amp; \quad  \alpha_1 \, \cos \theta_i -  \alpha_1 \, \cos \theta_r \, r_b = \alpha_2 \, \cos \theta_{t} \, t_b \\
-\end{cases}\end{split}\]</div>
-<p>Calling <span class="math notranslate nohighlight">\(\theta_i = \theta_r = \theta_1\)</span>, <span class="math notranslate nohighlight">\(\theta_2 = \theta_t\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
+&amp; \begin{cases}
+ E_t: &amp; \quad  \cos \theta_i -  \cos \theta_r \, r_c = \cos \theta_{t} \, t_c \\
+ B_b: &amp; \quad  \alpha_1      +  \alpha_1      \, r_c =  \alpha_2       \, t_c \\
+\end{cases}
+\\
+&amp; \begin{cases}
+ E_b: &amp; \quad                          1 +                   r_b =  t_b \\
+ B_t: &amp; \quad  \alpha_1 \, \cos \theta_i -  \alpha_1 \, \cos \theta_r \, r_b = \alpha_2 \, \cos \theta_{t} \, t_b \\
+\end{cases}
+\end{split}\]</div>
+<p>Calling <span class="math notranslate nohighlight">\(\theta_i = \theta_r = \theta_1\)</span>, <span class="math notranslate nohighlight">\(\theta_2 = \theta_t\)</span>, these linear systems can be written using matrix formalism,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+&amp; \begin{bmatrix} -1 &amp; 1 \\ 1 &amp; \frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} \end{bmatrix}
+ \begin{bmatrix} r_b \\ t_b \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\\
+&amp; \begin{bmatrix} 1 &amp; \frac{\cos \theta_2}{\cos \theta_1} \\ -1 &amp; \frac{\alpha_2}{\alpha_1} \end{bmatrix}
+ \begin{bmatrix} r_c \\ t_c \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p><strong>todo</strong> <em>Analysis of the total reflection, forcing <span class="math notranslate nohighlight">\(t_x = 0\)</span>. Check signs before</em>
+$<span class="math notranslate nohighlight">\(
 \begin{bmatrix} 1 &amp; \frac{\cos \theta_2}{\cos \theta_1} \\ -1 &amp; \frac{\alpha_2}{\alpha_1} \end{bmatrix}
  \begin{bmatrix} r_c \\ t_c \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
 \qquad \rightarrow \qquad
 \begin{bmatrix} r_c \\ t_c \end{bmatrix} = \dfrac{1}{\frac{\alpha_2}{\alpha_1} + \frac{\cos \theta_2}{\cos \theta_1}} \begin{bmatrix} \frac{\alpha_2}{\alpha_1} &amp; - \frac{\cos \theta_2}{\cos \theta_1} \\ 1 &amp; 1  \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} 
 = \begin{bmatrix} \frac{\alpha_2 \cos \theta_1 - \alpha_1 \cos \theta_2}{\alpha_2 \cos \theta_1 + \alpha_1 \cos \theta_2} \\ \frac{2 \alpha_1 \cos \theta_1}{\alpha_2 \cos \theta_1 + \alpha_1 \cos \theta_2} \end{bmatrix}
-\end{split}\]</div>
+\)</span>$</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{bmatrix} -1 &amp; 1 \\ 1 &amp; \frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} \end{bmatrix}

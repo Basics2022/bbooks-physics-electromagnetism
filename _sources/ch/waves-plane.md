@@ -249,24 +249,33 @@ $$
 \end{aligned}
 $$
 
-and $\alpha_i := \frac{1}{\mu_i c_i}$
+and $\alpha_i := \frac{1}{\mu_i c_i}$. These system of equations can be written as two uncoupled linear systems of equations,
 
 (for P-polarization **todo** *change index from $c$ to $p$*; for S-polarization **todo** *change index from $b$ to $s$*)
 
-the systems of equations become
-
-$$\begin{cases}
+$$
+& \begin{cases}
  E_t: & \quad  \cos \theta_i -  \cos \theta_r \, r_c = \cos \theta_{t} \, t_c \\
  B_b: & \quad  \alpha_1      +  \alpha_1      \, r_c =  \alpha_2       \, t_c \\
-\end{cases}$$
-
-$$\begin{cases}
+\end{cases}
+\\
+& \begin{cases}
  E_b: & \quad                          1 +                   r_b =  t_b \\
  B_t: & \quad  \alpha_1 \, \cos \theta_i -  \alpha_1 \, \cos \theta_r \, r_b = \alpha_2 \, \cos \theta_{t} \, t_b \\
-\end{cases}$$
+\end{cases}
+$$
 
-Calling $\theta_i = \theta_r = \theta_1$, $\theta_2 = \theta_t$,
+Calling $\theta_i = \theta_r = \theta_1$, $\theta_2 = \theta_t$, these linear systems can be written using matrix formalism,
 
+$$
+& \begin{bmatrix} -1 & 1 \\ 1 & \frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} \end{bmatrix}
+ \begin{bmatrix} r_b \\ t_b \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\\
+& \begin{bmatrix} 1 & \frac{\cos \theta_2}{\cos \theta_1} \\ -1 & \frac{\alpha_2}{\alpha_1} \end{bmatrix}
+ \begin{bmatrix} r_c \\ t_c \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+$$
+
+**todo** *Analysis of the total reflection, forcing $t_x = 0$. Check signs before*
 $$
 \begin{bmatrix} 1 & \frac{\cos \theta_2}{\cos \theta_1} \\ -1 & \frac{\alpha_2}{\alpha_1} \end{bmatrix}
  \begin{bmatrix} r_c \\ t_c \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
