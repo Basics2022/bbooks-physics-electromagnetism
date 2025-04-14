@@ -365,10 +365,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prinicipi-in-forma-differenziale">Prinicipi in forma differenziale</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-integrale-su-volumi-di-controllo">Forma integrale su volumi di controllo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-integrale-su-volumi-arbitrari">Forma integrale su volumi arbitrari</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principles-in-differential-form">Principles in Differential Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principles-in-integral-form-electromagnetic-equations-and-galilean-relativity">Principles in Integral Form: Electromagnetic Equations and Galilean Relativity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-form-on-control-volumes">Integral Form on Control Volumes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-form-on-arbitrary-volumes">Integral Form on Arbitrary Volumes</a></li>
 </ul>
 </li>
 </ul>
@@ -391,14 +391,14 @@ document.write(`
 -->
 <div class="tex2jax_ignore mathjax_ignore section" id="principles-of-classical-electromagnetism">
 <span id="classical-electromagnetism-principles"></span><h1>Principles of Classical Electromagnetism<a class="headerlink" href="#principles-of-classical-electromagnetism" title="Permalink to this heading">#</a></h1>
-<p>I progressi nello studio dei fenomeni elettromagnetici nel XIX secolo, permisero a James Clerk Maxwell di formulare quelle che oggi sono note con il nome di <em>equazioni di Maxwell</em> e possono essere considerate la prima formulazione consistente dei principi dell’elettromagnetismo classico, insieme alla legge di bilancio della carica e all’espressione della forza di Lorentz su una carica elettrica immersa in un campo elettromagnetico.</p>
-<p>I principi in forma differenziale possono essere ricavati dai principi in forma integrale, più generici, se i campi soddisfano le necessarie condizioni di regolarità minima, che qualitativamente si possono enunciare come «tutte le operazioni svolte devono avere senso».</p>
-<div class="section" id="prinicipi-in-forma-differenziale">
-<h2>Prinicipi in forma differenziale<a class="headerlink" href="#prinicipi-in-forma-differenziale" title="Permalink to this heading">#</a></h2>
-<p><strong>Conservazione della carica elettrica.</strong></p>
+<p>The progress in the study of electromagnetic phenomena during the 19th century allowed James Clerk Maxwell to formulate what are now known as <em>Maxwell’s equations</em>, which can be considered the first consistent formulation of the principles of classical electromagnetism, together with the charge conservation law and the expression for the Lorentz force on an electric charge immersed in an electromagnetic field.</p>
+<p>The principles in differential form can be derived from the more general integral form, provided the fields satisfy the necessary minimal regularity conditions, which can be qualitatively stated as «all operations must make sense.»</p>
+<div class="section" id="principles-in-differential-form">
+<span id="classical-electromagnetism-principles-differential"></span><h2>Principles in Differential Form<a class="headerlink" href="#principles-in-differential-form" title="Permalink to this heading">#</a></h2>
+<p><strong>Conservation of Electric Charge.</strong></p>
 <div class="math notranslate nohighlight">
 \[\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ .\]</div>
-<p><strong>Equazioni di Maxwell.</strong></p>
+<p><strong>Maxwell’s Equations.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
  \nabla \cdot \mathbf{d} = \rho \\
@@ -406,58 +406,58 @@ document.write(`
  \nabla \cdot \mathbf{b} = 0 \\
  \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j} \\
 \end{cases}\end{split}\]</div>
-<p>con la necessità di definire delle equazioni costitutive <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{e}, \mathbf{b})\)</span>, <span class="math notranslate nohighlight">\(\mathbf{h}(\mathbf{e}, \mathbf{b})\)</span>.</p>
-<p><strong>Forza di Lorentz.</strong> La forza per unità di volume agente sulla carica elettrica presente in un punto <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> nello spazio è</p>
+<p>with the need to define constitutive equations <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{e}, \mathbf{b})\)</span>, <span class="math notranslate nohighlight">\(\mathbf{h}(\mathbf{e}, \mathbf{b})\)</span>.</p>
+<p><strong>Lorentz Force.</strong> The force per unit volume acting on the electric charge present at a point <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> in space is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \mathbf{f}(\mathbf{r},t) &amp; = \rho(\mathbf{r},t) \, \mathbf{e}(\mathbf{r},t) + \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
                            &amp; = \rho(\mathbf{r},t) \left[ \mathbf{e}(\mathbf{r}) + \mathbf{v}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) \right] =  \\
                            &amp; = \rho(\mathbf{r},t) \, \mathbf{e}^*(\mathbf{r},t) 
 \end{aligned}\end{split}\]</div>
-<p>avendo definito <span class="math notranslate nohighlight">\(\mathbf{e}^*\)</span> il campo elettrico <strong>visto dalla carica in movimento</strong>.*</p>
+<p>having defined <span class="math notranslate nohighlight">\(\mathbf{e}^*\)</span> as the electric field <strong>seen by the moving charge</strong>.</p>
 </div>
-<div class="section" id="principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">
-<h2>Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana<a class="headerlink" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana" title="Permalink to this heading">#</a></h2>
-<div class="section" id="forma-integrale-su-volumi-di-controllo">
-<h3>Forma integrale su volumi di controllo<a class="headerlink" href="#forma-integrale-su-volumi-di-controllo" title="Permalink to this heading">#</a></h3>
-<p>La forma integrale dei principi dell’elettromagnetismo per volumi <span class="math notranslate nohighlight">\(V\)</span> e superfici <span class="math notranslate nohighlight">\(S\)</span> fissi nello spazio viene ricavata integrando le equazioni differenziali sui domini e usando il teorema della divergenza per ottenere termini di flusso, e il teorema del rotore per ottenere termini di circuitazione.</p>
-<p><strong>Continuità della carica elettrica.</strong></p>
+<div class="section" id="principles-in-integral-form-electromagnetic-equations-and-galilean-relativity">
+<span id="classical-electromagnetism-principles-integral"></span><h2>Principles in Integral Form: Electromagnetic Equations and Galilean Relativity<a class="headerlink" href="#principles-in-integral-form-electromagnetic-equations-and-galilean-relativity" title="Permalink to this heading">#</a></h2>
+<div class="section" id="integral-form-on-control-volumes">
+<span id="classical-electromagnetism-principles-integral-control-volume"></span><h3>Integral Form on Control Volumes<a class="headerlink" href="#integral-form-on-control-volumes" title="Permalink to this heading">#</a></h3>
+<p>The integral form of the principles of electromagnetism for fixed volumes <span class="math notranslate nohighlight">\(V\)</span> and surfaces <span class="math notranslate nohighlight">\(S\)</span> in space is obtained by integrating the differential equations over the domains and using the divergence theorem to obtain flux terms, and Stokes” theorem to obtain circulation terms.</p>
+<p><strong>Continuity of Electric Charge.</strong></p>
 <div class="math notranslate nohighlight">
 \[
     \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \mathbf{j} \cdot \hat{\mathbf{n}} = 0
 \]</div>
-<p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{r},t)\)</span>.</strong></p>
+<p><strong>Gauss’s Law for the Field <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{r},t)\)</span>.</strong></p>
 <div class="math notranslate nohighlight">
 \[
     \oint_{\partial V} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{V} \rho
 \]</div>
-<p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{b}(\mathbf{r},t)\)</span>.</strong></p>
+<p><strong>Gauss’s Law for the Field <span class="math notranslate nohighlight">\(\mathbf{b}(\mathbf{r},t)\)</span>.</strong></p>
 <div class="math notranslate nohighlight">
 \[
     \oint_{\partial V} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
 \]</div>
-<p><strong>Legge di Faraday-Neumann-Lenz, per l’induzione elettromagnetica.</strong></p>
+<p><strong>Faraday–Neumann–Lenz Law for Electromagnetic Induction.</strong></p>
 <div class="math notranslate nohighlight">
 \[
     \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \mathbf{0}
 \]</div>
-<p><strong>Legge di Ampére-Maxwell.</strong></p>
+<p><strong>Ampère–Maxwell Law.</strong></p>
 <div class="math notranslate nohighlight">
 \[
     \oint_{\partial S} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{S} \mathbf{d} \cdot \hat{\mathbf{n}} = \int_{S} \mathbf{j} \cdot \hat{\mathbf{n}} \ .
 \]</div>
 </div>
-<div class="section" id="forma-integrale-su-volumi-arbitrari">
-<h3>Forma integrale su volumi arbitrari<a class="headerlink" href="#forma-integrale-su-volumi-arbitrari" title="Permalink to this heading">#</a></h3>
-<p>Per la loro importanza in applicazioni fondamentali come i motori elettrici, e per evitare confusione e voli pindarici quando si tratta il fenomeno dell’induzione elettromagnetica, risulta di primaria importanza fornire l’espressione corretta dei principi dell’elettromagnetismo quando sono coinvolti volumi mobili nello spazio. Non viene solo mostrata la forma di questi principi, ma anche il procedimento corretto per ricavarli partendo dalla loro forma valida per volumi di controllo fermi nello spazio: per fare questo, vengono usate le regole di derivazione nel tempo di integrali fondamentali su domini mobili, come l’integrale su un volume di una funzione densità, il flusso di un campo vettoriale attraverso una superficie o una circuitazione lungo una curva.</p>
-<p>Queste tre regole di derivazione recitano <strong>todo</strong> Iniziare il bbook di calcolo vettoriale, e aggiungere riferimento</p>
+<div class="section" id="integral-form-on-arbitrary-volumes">
+<span id="classical-electromagnetism-principles-integral-arbitrary-volume"></span><h3>Integral Form on Arbitrary Volumes<a class="headerlink" href="#integral-form-on-arbitrary-volumes" title="Permalink to this heading">#</a></h3>
+<p>Due to their importance in fundamental applications such as electric motors, and to avoid confusion or leaps in logic when dealing with electromagnetic induction, it is crucial to provide the correct expression of the electromagnetic principles when moving volumes are involved in space. Not only is the form of these principles shown, but also the correct procedure to derive them starting from the fixed-control-volume version. This is done using time derivative rules for fundamental integrals over moving domains, such as the integral of a density function over a volume, the flux of a vector field through a surface, or the circulation along a curve.</p>
+<p>These three derivative rules are <strong>todo</strong> Start the vector calculus bbook, and add reference</p>
 <div class="math notranslate nohighlight">
 \[\dfrac{d}{dt} \int_{v_t} f = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \mathbf{u}_b \cdot \hat{\mathbf{n}}\]</div>
 <div class="math notranslate nohighlight">
 \[\dfrac{d}{dt} \int_{s_t} \mathbf{f} \cdot \hat{\mathbf{n}} = \int_{s_t} \dfrac{\partial \mathbf{f}}{\partial t} \cdot \hat{\mathbf{n}} + \int_{s_t} \nabla \cdot \mathbf{f} \, \mathbf{u}_b \cdot \hat{\mathbf{n}} - \oint_{\partial s_t} \mathbf{u}_b \times \mathbf{f} \cdot \hat{\mathbf{t}}\]</div>
 <div class="math notranslate nohighlight">
 \[\dfrac{d}{dt} \int_{\ell_t} \mathbf{f} \cdot \hat{\mathbf{t}} = \int_{\ell_t} \dfrac{\partial \mathbf{f}}{\partial t} \cdot \hat{\mathbf{t}} + \int_{\ell_t} \nabla \times \mathbf{f} \, \cdot \, \mathbf{u}_b \times \hat{\mathbf{t}} + \mathbf{f}_B \cdot \mathbf{u}_B - \mathbf{f}_A \cdot \mathbf{u}_A\]</div>
-<p><strong>Continuità della carica elettrica.</strong></p>
+<p><strong>Continuity of Electric Charge.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
    0 &amp; = \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \mathbf{j} \cdot \hat{\mathbf{n}} = \\
@@ -467,17 +467,17 @@ document.write(`
 \[
     \dfrac{d}{dt} \int_{v_t} \rho + \oint_{\partial v_t} \underbrace{\rho (\mathbf{u} - \mathbf{u}_b)}_{\mathbf{j}^*} \cdot \hat{\mathbf{n}} 
 \]</div>
-<p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{r},t)\)</span>.</strong></p>
+<p><strong>Gauss’s Law for the Field <span class="math notranslate nohighlight">\(\mathbf{d}(\mathbf{r},t)\)</span>.</strong></p>
 <div class="math notranslate nohighlight">
 \[
     \oint_{\partial v_t} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{v_t} \rho
 \]</div>
-<p><strong>Legge di Gauss per il campo <span class="math notranslate nohighlight">\(\mathbf{b}(\mathbf{r},t)\)</span>.</strong></p>
+<p><strong>Gauss’s Law for the Field <span class="math notranslate nohighlight">\(\mathbf{b}(\mathbf{r},t)\)</span>.</strong></p>
 <div class="math notranslate nohighlight">
 \[
     \oint_{\partial v_t} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
 \]</div>
-<p><strong>Legge di Faraday-Neumann-Lenz, per l’induzione elettromagnetica.</strong></p>
+<p><strong>Faraday–Neumann–Lenz Law for Electromagnetic Induction.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
    \mathbf{0} &amp; = \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \\
@@ -487,8 +487,8 @@ document.write(`
 \[
     \oint_{\partial s_t} \mathbf{e}^* \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} \ ,
 \]</div>
-<p>con la definizione <span class="math notranslate nohighlight">\(\mathbf{e}^* := \mathbf{e} + \mathbf{u}_b \cdot \mathbf{b}\)</span>, già usata nell’espressione della legge di Lorentz.</p>
-<p><strong>Legge di Ampére-Maxwell.</strong></p>
+<p>with the definition <span class="math notranslate nohighlight">\(\mathbf{e}^* := \mathbf{e} + \mathbf{u}_b \cdot \mathbf{b}\)</span>, already used in the expression of the Lorentz force law.</p>
+<p><strong>Ampère–Maxwell Law.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
     \mathbf{0} &amp; = \oint_{\partial s_t} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{d} \cdot \hat{\mathbf{n}} - \int_{s_t} \mathbf{j} \cdot \hat{\mathbf{n}} = \\
@@ -498,23 +498,23 @@ document.write(`
 \[
     \oint_{\partial s_t} \mathbf{h}^* \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} = \int_{s_t} \mathbf{j}^* \cdot \hat{\mathbf{n}} \ ,
 \]</div>
-<p>avendo definito <span class="math notranslate nohighlight">\(\mathbf{h}^* := \mathbf{h} - \mathbf{u}_b \times \mathbf{d}\)</span>, e usato la definizione già introdotta in precedenza <span class="math notranslate nohighlight">\(\mathbf{j}^* := \mathbf{j} - \rho \mathbf{u}_b\)</span>.</p>
-<p>Aggiungendo le definizioni</p>
+<p>having defined <span class="math notranslate nohighlight">\(\mathbf{h}^* := \mathbf{h} - \mathbf{u}_b \times \mathbf{d}\)</span>, and using the previously introduced definition <span class="math notranslate nohighlight">\(\mathbf{j}^* := \mathbf{j} - \rho \mathbf{u}_b\)</span>.</p>
+<p>Adding the definitions:</p>
 <div class="math notranslate nohighlight">
 \[\rho^* = \rho\]</div>
 <div class="math notranslate nohighlight">
 \[\mathbf{d}^* = \mathbf{d}\]</div>
 <div class="math notranslate nohighlight">
 \[\mathbf{b}^* = \mathbf{b}\]</div>
-<p>si ottengono delle equazioni che hanno la stessa forma delle equazioni scritte per domini fermi nello spazio, ma che possono essere applicati a domini mobili. Le definizioni</p>
+<p>one obtains equations having the same form as those written for stationary domains in space, but which can be applied to moving domains. The definitions:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 \rho^* = \rho \qquad &amp; , \qquad \mathbf{j}^* = \mathbf{j} - \rho \mathbf{u}_b \\
 \mathbf{d}^* = \mathbf{d} \qquad &amp; , \qquad \mathbf{e}^* = \mathbf{e} + \mathbf{u}_b \times \mathbf{b} \\
 \mathbf{b}^* = \mathbf{b} \qquad &amp; , \qquad \mathbf{h}^* = \mathbf{h} - \mathbf{u}_b \times \mathbf{d} \\
 \end{aligned}\end{split}\]</div>
-<p>non rappresentano altro che la trasformazione dei campi per due osservatori in moto relativo, e corrispondono al limite delle trasformazioni di Lorentz della relatività speciale per velocità <span class="math notranslate nohighlight">\(|\mathbf{u}_b| \ll c\)</span>: in questo procedimento vengono ottenute le trasformazioni per basse velocità relative, poiché non è stata considerata nessuna trasformazione delle dimensioni spaziali e temporali, come prevede la teoria della relatività di Einstein.</p>
-<p><strong>todo</strong> riferimento alle trasformazioni galileiane e di Lorentz per la relatività nell’elettromagnetismo.</p>
+<p>are nothing more than the transformation of the fields for two observers in relative motion, and correspond to the low-speed limit of Lorentz transformations from special relativity for velocities <span class="math notranslate nohighlight">\(|\mathbf{u}_b| \ll c\)</span>: in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein’s theory of relativity.</p>
+<p><strong>todo</strong> Reference Galilean and Lorentz transformations for relativity in electromagnetism.</p>
 </div>
 </div>
 </div>
@@ -582,10 +582,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prinicipi-in-forma-differenziale">Prinicipi in forma differenziale</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principi-in-forma-integrale-equazioni-dell-elettromagnetismo-e-relativita-galileiana">Principi in forma integrale: equazioni dell’elettromagnetismo e relatività galileiana</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-integrale-su-volumi-di-controllo">Forma integrale su volumi di controllo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forma-integrale-su-volumi-arbitrari">Forma integrale su volumi arbitrari</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principles-in-differential-form">Principles in Differential Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principles-in-integral-form-electromagnetic-equations-and-galilean-relativity">Principles in Integral Form: Electromagnetic Equations and Galilean Relativity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-form-on-control-volumes">Integral Form on Control Volumes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-form-on-arbitrary-volumes">Integral Form on Arbitrary Volumes</a></li>
 </ul>
 </li>
 </ul>
