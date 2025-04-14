@@ -82,9 +82,9 @@ $$
 (classical-electromagnetism:principles:integral:arbitrary-volume)=
 ### Integral Form on Arbitrary Volumes
 
-Due to their importance in fundamental applications such as electric motors, and to avoid confusion or leaps in logic when dealing with electromagnetic induction, it is crucial to provide the correct expression of the electromagnetic principles when moving volumes are involved in space. Not only is the form of these principles shown, but also the correct procedure to derive them starting from the fixed-control-volume version. This is done using time derivative rules for fundamental integrals over moving domains, such as the integral of a density function over a volume, the flux of a vector field through a surface, or the circulation along a curve.
+Due to their importance in fundamental applications such as electric motors, and to avoid confusion or leaps in logic when dealing with electromagnetic induction, it is crucial to provide the correct expression of the electromagnetic principles when moving volumes are involved in space. Not only is the form of these principles shown, but also the correct procedure to derive them starting from the fixed-control-volume version. This is done using rules for [time derivative for fundamental integrals over moving domains](https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html), such as the integral of a density function over a volume, the flux of a vector field through a surface, or the circulation along a curve.
 
-These three derivative rules are **todo** Start the vector calculus bbook, and add reference
+These three derivative rules are listed here and proved in the material about [Mathematics](https://basics2022.github.io/bbooks-math-miscellanea/intro.html):Vector and Tensor Algebra and Calculus:[Time derivatives of integrals over moving domains](https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html)
 
 $$\dfrac{d}{dt} \int_{v_t} f = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \mathbf{u}_b \cdot \hat{\mathbf{n}}$$
 

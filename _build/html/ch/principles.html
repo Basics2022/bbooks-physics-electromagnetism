@@ -76,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X6MNXBVGKF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-X6MNXBVGKF');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -449,8 +440,8 @@ document.write(`
 </div>
 <div class="section" id="integral-form-on-arbitrary-volumes">
 <span id="classical-electromagnetism-principles-integral-arbitrary-volume"></span><h3>Integral Form on Arbitrary Volumes<a class="headerlink" href="#integral-form-on-arbitrary-volumes" title="Permalink to this heading">#</a></h3>
-<p>Due to their importance in fundamental applications such as electric motors, and to avoid confusion or leaps in logic when dealing with electromagnetic induction, it is crucial to provide the correct expression of the electromagnetic principles when moving volumes are involved in space. Not only is the form of these principles shown, but also the correct procedure to derive them starting from the fixed-control-volume version. This is done using time derivative rules for fundamental integrals over moving domains, such as the integral of a density function over a volume, the flux of a vector field through a surface, or the circulation along a curve.</p>
-<p>These three derivative rules are <strong>todo</strong> Start the vector calculus bbook, and add reference</p>
+<p>Due to their importance in fundamental applications such as electric motors, and to avoid confusion or leaps in logic when dealing with electromagnetic induction, it is crucial to provide the correct expression of the electromagnetic principles when moving volumes are involved in space. Not only is the form of these principles shown, but also the correct procedure to derive them starting from the fixed-control-volume version. This is done using rules for <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html">time derivative for fundamental integrals over moving domains</a>, such as the integral of a density function over a volume, the flux of a vector field through a surface, or the circulation along a curve.</p>
+<p>These three derivative rules are listed here and proved in the material about <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/intro.html">Mathematics</a>:Vector and Tensor Algebra and Calculus:<a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html">Time derivatives of integrals over moving domains</a></p>
 <div class="math notranslate nohighlight">
 \[\dfrac{d}{dt} \int_{v_t} f = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \mathbf{u}_b \cdot \hat{\mathbf{n}}\]</div>
 <div class="math notranslate nohighlight">
