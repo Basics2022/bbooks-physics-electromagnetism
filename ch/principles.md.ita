@@ -9,18 +9,16 @@
 (classical-electromagnetism:principles)=
 # Principles of Classical Electromagnetism
 
-The progress in the study of electromagnetic phenomena during the 19th century allowed James Clerk Maxwell to formulate what are now known as *Maxwell's equations*, which can be considered the first consistent formulation of the principles of classical electromagnetism, together with the charge conservation law and the expression for the Lorentz force on an electric charge immersed in an electromagnetic field.
+I progressi nello studio dei fenomeni elettromagnetici nel XIX secolo, permisero a James Clerk Maxwell di formulare quelle che oggi sono note con il nome di *equazioni di Maxwell* e possono essere considerate la prima formulazione consistente dei principi dell'elettromagnetismo classico, insieme alla legge di bilancio della carica e all'espressione della forza di Lorentz su una carica elettrica immersa in un campo elettromagnetico.
 
-The principles in differential form can be derived from the more general integral form, provided the fields satisfy the necessary minimal regularity conditions, which can be qualitatively stated as "all operations must make sense."
+I principi in forma differenziale possono essere ricavati dai principi in forma integrale, più generici, se i campi soddisfano le necessarie condizioni di regolarità minima, che qualitativamente si possono enunciare come "tutte le operazioni svolte devono avere senso".
 
-(classical-electromagnetism:principles:differential)=
-## Principles in Differential Form
-
-**Conservation of Electric Charge.**
+## Prinicipi in forma differenziale
+**Conservazione della carica elettrica.**
 
 $$\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ .$$
 
-**Maxwell's Equations.**
+**Equazioni di Maxwell.**
 
 $$\begin{cases}
  \nabla \cdot \mathbf{d} = \rho \\
@@ -29,9 +27,9 @@ $$\begin{cases}
  \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j} \\
 \end{cases}$$
 
-with the need to define constitutive equations $\mathbf{d}(\mathbf{e}, \mathbf{b})$, $\mathbf{h}(\mathbf{e}, \mathbf{b})$.
+con la necessità di definire delle equazioni costitutive $\mathbf{d}(\mathbf{e}, \mathbf{b})$, $\mathbf{h}(\mathbf{e}, \mathbf{b})$.
 
-**Lorentz Force.** The force per unit volume acting on the electric charge present at a point $\mathbf{r}$ in space is
+**Forza di Lorentz.** La forza per unità di volume agente sulla carica elettrica presente in un punto $\mathbf{r}$ nello spazio è
 
 $$\begin{aligned}
   \mathbf{f}(\mathbf{r},t) & = \rho(\mathbf{r},t) \, \mathbf{e}(\mathbf{r},t) + \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
@@ -39,52 +37,52 @@ $$\begin{aligned}
                            & = \rho(\mathbf{r},t) \, \mathbf{e}^*(\mathbf{r},t) 
 \end{aligned}$$
 
-having defined $\mathbf{e}^*$ as the electric field **seen by the moving charge**.
+avendo definito $\mathbf{e}^*$ il campo elettrico **visto dalla carica in movimento**.* 
 
-(classical-electromagnetism:principles:integral)=
-## Principles in Integral Form: Electromagnetic Equations and Galilean Relativity
+## Principi in forma integrale: equazioni dell'elettromagnetismo e relatività galileiana
 
-(classical-electromagnetism:principles:integral:control-volume)=
-### Integral Form on Control Volumes
 
-The integral form of the principles of electromagnetism for fixed volumes $V$ and surfaces $S$ in space is obtained by integrating the differential equations over the domains and using the divergence theorem to obtain flux terms, and Stokes' theorem to obtain circulation terms.
 
-**Continuity of Electric Charge.**
+### Forma integrale su volumi di controllo
+
+La forma integrale dei principi dell'elettromagnetismo per volumi $V$ e superfici $S$ fissi nello spazio viene ricavata integrando le equazioni differenziali sui domini e usando il teorema della divergenza per ottenere termini di flusso, e il teorema del rotore per ottenere termini di circuitazione.
+
+**Continuità della carica elettrica.**
 
 $$
     \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \mathbf{j} \cdot \hat{\mathbf{n}} = 0
 $$
 
-**Gauss's Law for the Field $\mathbf{d}(\mathbf{r},t)$.**
+**Legge di Gauss per il campo $\mathbf{d}(\mathbf{r},t)$.**
 
 $$
     \oint_{\partial V} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{V} \rho
 $$
 
-**Gauss's Law for the Field $\mathbf{b}(\mathbf{r},t)$.**
+**Legge di Gauss per il campo $\mathbf{b}(\mathbf{r},t)$.**
 
 $$
     \oint_{\partial V} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
 $$
 
-**Faraday–Neumann–Lenz Law for Electromagnetic Induction.**
+**Legge di Faraday-Neumann-Lenz, per l'induzione elettromagnetica.**
 
 $$
     \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \mathbf{0}
 $$
 
-**Ampère–Maxwell Law.**
+**Legge di Ampére-Maxwell.**
 
 $$
     \oint_{\partial S} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{S} \mathbf{d} \cdot \hat{\mathbf{n}} = \int_{S} \mathbf{j} \cdot \hat{\mathbf{n}} \ .
 $$
 
-(classical-electromagnetism:principles:integral:arbitrary-volume)=
-### Integral Form on Arbitrary Volumes
 
-Due to their importance in fundamental applications such as electric motors, and to avoid confusion or leaps in logic when dealing with electromagnetic induction, it is crucial to provide the correct expression of the electromagnetic principles when moving volumes are involved in space. Not only is the form of these principles shown, but also the correct procedure to derive them starting from the fixed-control-volume version. This is done using time derivative rules for fundamental integrals over moving domains, such as the integral of a density function over a volume, the flux of a vector field through a surface, or the circulation along a curve.
+### Forma integrale su volumi arbitrari
 
-These three derivative rules are **todo** Start the vector calculus bbook, and add reference
+Per la loro importanza in applicazioni fondamentali come i motori elettrici, e per evitare confusione e voli pindarici quando si tratta il fenomeno dell'induzione elettromagnetica, risulta di primaria importanza fornire l'espressione corretta dei principi dell'elettromagnetismo quando sono coinvolti volumi mobili nello spazio. Non viene solo mostrata la forma di questi principi, ma anche il procedimento corretto per ricavarli partendo dalla loro forma valida per volumi di controllo fermi nello spazio: per fare questo, vengono usate le regole di derivazione nel tempo di integrali fondamentali su domini mobili, come l'integrale su un volume di una funzione densità, il flusso di un campo vettoriale attraverso una superficie o una circuitazione lungo una curva.
+
+Queste tre regole di derivazione recitano **todo** Iniziare il bbook di calcolo vettoriale, e aggiungere riferimento
 
 $$\dfrac{d}{dt} \int_{v_t} f = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \mathbf{u}_b \cdot \hat{\mathbf{n}}$$
 
@@ -92,7 +90,7 @@ $$\dfrac{d}{dt} \int_{s_t} \mathbf{f} \cdot \hat{\mathbf{n}} = \int_{s_t} \dfrac
 
 $$\dfrac{d}{dt} \int_{\ell_t} \mathbf{f} \cdot \hat{\mathbf{t}} = \int_{\ell_t} \dfrac{\partial \mathbf{f}}{\partial t} \cdot \hat{\mathbf{t}} + \int_{\ell_t} \nabla \times \mathbf{f} \, \cdot \, \mathbf{u}_b \times \hat{\mathbf{t}} + \mathbf{f}_B \cdot \mathbf{u}_B - \mathbf{f}_A \cdot \mathbf{u}_A$$
 
-**Continuity of Electric Charge.**
+**Continuità della carica elettrica.**
 
 $$\begin{aligned}
    0 & = \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \mathbf{j} \cdot \hat{\mathbf{n}} = \\
@@ -103,19 +101,19 @@ $$
     \dfrac{d}{dt} \int_{v_t} \rho + \oint_{\partial v_t} \underbrace{\rho (\mathbf{u} - \mathbf{u}_b)}_{\mathbf{j}^*} \cdot \hat{\mathbf{n}} 
 $$
 
-**Gauss's Law for the Field $\mathbf{d}(\mathbf{r},t)$.**
+**Legge di Gauss per il campo $\mathbf{d}(\mathbf{r},t)$.**
 
 $$
     \oint_{\partial v_t} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{v_t} \rho
 $$
 
-**Gauss's Law for the Field $\mathbf{b}(\mathbf{r},t)$.**
+**Legge di Gauss per il campo $\mathbf{b}(\mathbf{r},t)$.**
 
 $$
     \oint_{\partial v_t} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
 $$
 
-**Faraday–Neumann–Lenz Law for Electromagnetic Induction.**
+**Legge di Faraday-Neumann-Lenz, per l'induzione elettromagnetica.**
 
 $$\begin{aligned}
    \mathbf{0} & = \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \\
@@ -125,9 +123,9 @@ $$\begin{aligned}
 $$
     \oint_{\partial s_t} \mathbf{e}^* \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} \ ,
 $$
-with the definition $\mathbf{e}^* := \mathbf{e} + \mathbf{u}_b \cdot \mathbf{b}$, already used in the expression of the Lorentz force law.
+con la definizione $\mathbf{e}^* := \mathbf{e} + \mathbf{u}_b \cdot \mathbf{b}$, già usata nell'espressione della legge di Lorentz.
 
-**Ampère–Maxwell Law.**
+**Legge di Ampére-Maxwell.**
 
 $$\begin{aligned}
     \mathbf{0} & = \oint_{\partial s_t} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{d} \cdot \hat{\mathbf{n}} - \int_{s_t} \mathbf{j} \cdot \hat{\mathbf{n}} = \\
@@ -138,15 +136,15 @@ $$
     \oint_{\partial s_t} \mathbf{h}^* \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} = \int_{s_t} \mathbf{j}^* \cdot \hat{\mathbf{n}} \ ,
 $$
 
-having defined $\mathbf{h}^* := \mathbf{h} - \mathbf{u}_b \times \mathbf{d}$, and using the previously introduced definition $\mathbf{j}^* := \mathbf{j} - \rho \mathbf{u}_b$.
+avendo definito $\mathbf{h}^* := \mathbf{h} - \mathbf{u}_b \times \mathbf{d}$, e usato la definizione già introdotta in precedenza $\mathbf{j}^* := \mathbf{j} - \rho \mathbf{u}_b$.
 
-Adding the definitions:
+Aggiungendo le definizioni
 
-$$\rho^* = \rho$$  
-$$\mathbf{d}^* = \mathbf{d}$$  
+$$\rho^* = \rho$$
+$$\mathbf{d}^* = \mathbf{d}$$
 $$\mathbf{b}^* = \mathbf{b}$$
 
-one obtains equations having the same form as those written for stationary domains in space, but which can be applied to moving domains. The definitions:
+si ottengono delle equazioni che hanno la stessa forma delle equazioni scritte per domini fermi nello spazio, ma che possono essere applicati a domini mobili. Le definizioni
 
 $$\begin{aligned}
 \rho^* = \rho \qquad & , \qquad \mathbf{j}^* = \mathbf{j} - \rho \mathbf{u}_b \\
@@ -154,7 +152,8 @@ $$\begin{aligned}
 \mathbf{b}^* = \mathbf{b} \qquad & , \qquad \mathbf{h}^* = \mathbf{h} - \mathbf{u}_b \times \mathbf{d} \\
 \end{aligned}$$
 
-are nothing more than the transformation of the fields for two observers in relative motion, and correspond to the low-speed limit of Lorentz transformations from special relativity for velocities $|\mathbf{u}_b| \ll c$: in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein's theory of relativity.
+non rappresentano altro che la trasformazione dei campi per due osservatori in moto relativo, e corrispondono al limite delle trasformazioni di Lorentz della relatività speciale per velocità $|\mathbf{u}_b| \ll c$: in questo procedimento vengono ottenute le trasformazioni per basse velocità relative, poiché non è stata considerata nessuna trasformazione delle dimensioni spaziali e temporali, come prevede la teoria della relatività di Einstein. 
 
-**todo** Reference Galilean and Lorentz transformations for relativity in electromagnetism.
+**todo** riferimento alle trasformazioni galileiane e di Lorentz per la relatività nell'elettromagnetismo.
+
 
