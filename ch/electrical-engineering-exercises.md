@@ -1,14 +1,37 @@
-(classical-electromagnetism:circuits-electric:approximation)=
+(classical-electromagnetism:electrical-engineering-exercises)=
 # Exercises
 
 **Topics**: Thevenin and Norton equivalent;...
 
 
 **Electric circuits**:
-- transient dynamics of systems with 1 dynamic component (either capacitor or inductor);
-- harmonic dynamics of linear systems: phasor algebra, complex power,...
+- Type a: transient dynamics of systems with 1 dynamic component (either capacitor or inductor);
+- Type b: harmonic dynamics of linear systems: phasor algebra, complex power,...
+- Type c: three-phase circuits, triangles and stars,...
 
-**Electromagnetic circuits**: circuit approximation of magnetic circuit,...
+**Electromagnetic circuits**: 
+- Type d: circuit approximation of magnetic circuit,...
 
-**Tri-phase circuits**: star and stars,...
 
+**Exams.**
+
+```{dropdown} 2025-02-11
+1. Type a. {ref}`exam-25-02-11-exe-01`
+2. Type b. {ref}`exam-25-02-11-exe-02`
+3. Type b. {ref}`exam-25-02-11-exe-03`
+4. Theory: electrical line. Electro-thermal model of the cable,...
+```
+
+```{dropdown} 2025-01-22
+1. Type a. {ref}`exam-25-01-22-exe-01`
+2. Type b. {ref}`exam-25-01-22-exe-02`
+3. Type d. {ref}`exam-25-01-22-exe-03`
+4. Theory: transformer
+```
+
+```{dropdown} 2024-09-06
+1. Type a. {ref}`exam-24-09-06-exe-01`
+2. Type b. {ref}`exam-24-09-06-exe-02`
+3. Type c. {ref}`exam-24-09-06-exe-03`
+4. Theory: overload in cables
+```

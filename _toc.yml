@@ -3,8 +3,11 @@
 
 format: jb-book
 root: intro
+options:
+  numbered: True
 parts:
 - caption: Elettromagnetismo
+  numbered: true
   chapters:
   - file: ch/experiments
   - file: ch/principles
@@ -19,6 +22,7 @@ parts:
     - file: ch/waves-equation
     - file: ch/waves-plane
 - caption: Elettrotecnica
+  numbered: true
   chapters:
   - file: ch/circuits
     sections:
@@ -33,10 +37,17 @@ parts:
       - file: ch/circuits-electromagnetic-transformer
     - file: ch/circuits-electromechanic
     - file: ch/electrical-engineering-exercises
+      sections:
+      - file: ch/electrical-engineering-exercises-transient-1-dynamic
+      - file: ch/electrical-engineering-exercises-harmonic
+      - file: ch/electrical-engineering-exercises-three-phase
+      - file: ch/electrical-engineering-exercises-electromagnetic
 - caption: Metodi numerici
+  numbered: true
   chapters:
   - file: ch/green-function
   - file: ch/numerical-methods
 - caption: Appendici
+  numbered: true
   chapters:
   - file: ch/optics
