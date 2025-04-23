@@ -388,12 +388,15 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="network-analysis-of-linear-circuits-harmonic-regime">
 <span id="classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic"></span><h1><span class="section-number">10.5. </span>Network analysis of linear circuits - harmonic regime<a class="headerlink" href="#network-analysis-of-linear-circuits-harmonic-regime" title="Permalink to this heading">#</a></h1>
-<p>The harmonic dynamics of a linear circuit can be evaluated in Fourier domain, or using complex numbers to represent harmonic functions. Using voltage signal as a reference for time phase,</p>
+<p>The harmonic dynamics of a linear circuit can be evaluated in Fourier domain, or using complex numbers to represent harmonic functions,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  v(t) &amp; = V_{max} \cos (\Omega t) = \text{re} \{ V_{max} e^{i \Omega t} \} \\
-  i(t) &amp; = I_{max} \cos (\Omega t - \varphi_i) = \text{re} \{ I_{max} e^{i ( \Omega t + \varphi_i )} \} \\
+  v(t) &amp; = V_{max} \cos (\Omega t + \varphi_v) = \text{re} \{ V_{max} e^{i (\Omega t + \varphi_v)} \} = \\
+       &amp; = \sqrt{2} V \cos (\Omega t + \varphi_v) = \sqrt{2} \, \text{re} \{ V e^{i (\Omega t + \varphi_v)} \} = \sqrt{2} \, \text{re} \{ v e^{i \Omega t} \} \\
+  i(t) &amp; = I_{max} \cos (\Omega t + \varphi_i) = \text{re} \{ I_{max} e^{j (\Omega t + \varphi_i)} \} = \\
+       &amp; = \sqrt{2} I \cos (\Omega t + \varphi_i) = \sqrt{2} \, \text{re} \{ I e^{j (\Omega t + \varphi_i)} \} = \sqrt{2} \, \text{re} \{ i e^{j \Omega t} \} \\
 \end{aligned}\end{split}\]</div>
+<p>having anticipated the definition <a class="reference internal" href="#harmonic:effective-values">Definition 10.1</a> of effective tension <span class="math notranslate nohighlight">\(V\)</span> and current <span class="math notranslate nohighlight">\(I\)</span>.</p>
 <div class="section" id="power">
 <span id="classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic-power"></span><h2><span class="section-number">10.5.1. </span>Power<a class="headerlink" href="#power" title="Permalink to this heading">#</a></h2>
 <p><strong>Instantaneous power.</strong></p>
@@ -411,15 +414,21 @@ document.write(`
 <p><strong>Average power on a period.</strong> Over a period <span class="math notranslate nohighlight">\(T = \frac{1}{f} = \frac{2 \pi}{\Omega}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\overline{P} = \frac{1}{T} \int_{t=t_0}^{t_0+T} P(t) \, dt = \frac{V_{max} I_{max}}{2} = V I\ ,\]</div>
-<p>as the integral of the harmonic term with period <span class="math notranslate nohighlight">\(\frac{T}{2}\)</span> of the instantaneous power <a class="reference internal" href="#equation-eq-harmonic-power-instantaneous">(10.3)</a> is identically zero, and with the definition of the <strong>effective voltage and current</strong>,</p>
+<p>as the integral of the harmonic term with period <span class="math notranslate nohighlight">\(\frac{T}{2}\)</span> of the instantaneous power <a class="reference internal" href="#equation-eq-harmonic-power-instantaneous">(10.3)</a> is identically zero, and with the definition of the <strong>effective voltage and current</strong></p>
+<div class="proof definition admonition" id="harmonic:effective-values">
+<p class="admonition-title"><span class="caption-number">Definition 10.1 </span> (Effective voltage and current in AC)</p>
+<div class="definition-content section" id="proof-content">
+<p>Effective voltage and currents</p>
 <div class="math notranslate nohighlight">
-\[V := \frac{V_{max}}{\sqrt{2}} \quad , \quad I := \frac{I_{max}}{\sqrt{2}} \ . \]</div>
-<p><strong>Complex power.</strong> Complex power of a dipole with impedence <span class="math notranslate nohighlight">\(Z\)</span>, <span class="math notranslate nohighlight">\(V =  Z I\)</span></p>
+\[V := \frac{V_{max}}{\sqrt{2}} \quad , \quad I := \frac{I_{max}}{\sqrt{2}} \ , \]</div>
+<p>are defined as those voltage and current in DC providing the same value of average power.</p>
+</div>
+</div><p><strong>Complex power.</strong> Complex power of a dipole with impedence <span class="math notranslate nohighlight">\(Z\)</span>, <span class="math notranslate nohighlight">\(v =  Z i\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   S 
-  &amp; := V I^* = |V|e^{i \varphi_V} |I| e^{-i \varphi_I} = |V| |I| e^{i(\varphi_V - \varphi_I)} = \\
-  &amp; = Z I I^* = Z |I|^2 = (R + i X ) |I|^2 = |Z||I|^2 e^{i \varphi_Z} = P + i Q \ ,
+  &amp; := v i^* = |v|e^{j \varphi_v} |i| e^{-j \varphi_i} = |v| |i| e^{j(\varphi_v - \varphi_i)} = \\
+  &amp; = Z i i^* = Z |i|^2 = (R + j X ) |i|^2 = |Z||i|^2 e^{j \varphi_Z} = P + j Q \ ,
 \end{aligned}\end{split}\]</div>
 <p>with the active power <span class="math notranslate nohighlight">\(P\)</span> and the reactive power <span class="math notranslate nohighlight">\(Q\)</span></p>
 <div class="math notranslate nohighlight">
