@@ -352,6 +352,14 @@ $$\tau = R_{eq} C = 6.8 \, \Omega \cdot 5 \cdot 10^{-4} \, F = 3.4 \cdot 10^{-3}
                 & =  1.72 \, A + 0.0 \, A + 2.36 \, A = \\
    \end{aligned}$$
 
+**Energy stored in the capacitor.**
+
+$$E_C(t) = \frac{1}{2} C v_A^2(t) \ ,$$
+
+and for $t = \tau$, $v_A(\tau) = -18.63 \, V$
+
+$$E_C(\tau) = 0.5 \cdot 5 \cdot 10^{-4} \, F \cdot ( 18.63 \, V )^2 = 8.68 \cdot 10^{-2} \, J$$
+
 ````
 
 `````
