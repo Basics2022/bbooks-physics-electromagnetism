@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>10.4.2. Harmonic regime of linear electrical grids &#8212; electromagnetism</title>
+    <title>10.6.2. Harmonic regime of linear electrical grids &#8212; electromagnetism</title>
   
   
   
@@ -65,12 +65,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/electrical-engineering-exercises-harmonic';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="10.4.3. Three-phase electrical circuits in harmonic regime" href="electrical-engineering-exercises-three-phase.html" />
-    <link rel="prev" title="10.4.1. Transient dynamics of linear electrical grids with one dynamic component" href="electrical-engineering-exercises-transient-1-dynamic.html" />
+    <link rel="next" title="10.6.3. Three-phase electrical circuits in harmonic regime" href="electrical-engineering-exercises-three-phase.html" />
+    <link rel="prev" title="10.6.1. Transient dynamics of linear electrical grids with one dynamic component" href="electrical-engineering-exercises-transient-1-dynamic.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
   </head>
@@ -204,11 +206,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="circuits-electromechanic.html">10.3. Circuiti elettromeccanici</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="electrical-engineering-exercises.html">10.4. Exercises</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-transient-1-dynamic.html">10.4.1. Transient dynamics of linear electrical grids with one dynamic component</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">10.4.2. Harmonic regime of linear electrical grids</a></li>
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-three-phase.html">10.4.3. Three-phase electrical circuits in harmonic regime</a></li>
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-electromagnetic.html">10.4.4. Electromagnetic circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks.html">10.4. Network analysis of linear circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks-harmonic.html">10.5. Network analysis of linear circuits - harmonic regime</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="electrical-engineering-exercises.html">10.6. Exercises</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-transient-1-dynamic.html">10.6.1. Transient dynamics of linear electrical grids with one dynamic component</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">10.6.2. Harmonic regime of linear electrical grids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-three-phase.html">10.6.3. Three-phase electrical circuits in harmonic regime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-electromagnetic.html">10.6.4. Electromagnetic circuits</a></li>
 </ul>
 </li>
 </ul>
@@ -373,7 +377,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="harmonic-regime-of-linear-electrical-grids">
-<span id="classical-electromagnetism-electrical-engineering-exercises-harmonic"></span><h1><span class="section-number">10.4.2. </span>Harmonic regime of linear electrical grids<a class="headerlink" href="#harmonic-regime-of-linear-electrical-grids" title="Permalink to this heading">#</a></h1>
+<span id="classical-electromagnetism-electrical-engineering-exercises-harmonic"></span><h1><span class="section-number">10.6.2. </span>Harmonic regime of linear electrical grids<a class="headerlink" href="#harmonic-regime-of-linear-electrical-grids" title="Permalink to this heading">#</a></h1>
 <div class="exercise admonition" id="exam-25-02-11-exe-02">
 
 <p class="admonition-title"><span class="caption-number">Exercise 10.4 </span> (Exam 2025-02-11, Exercise 2.)</p>
@@ -381,7 +385,77 @@ document.write(`
 <div class="figure align-default">
 <img alt="../_images/exam-2025-02-11-ese-02.png" src="../_images/exam-2025-02-11-ese-02.png" />
 </div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="xref myst">One-port equivalent Thevenin circuit</span> of the circuit with port <span class="math notranslate nohighlight">\(A-B\)</span> has</p>
+<div class="math notranslate nohighlight">
+\[V_{Th} = \]</div>
+<div class="math notranslate nohighlight">
+\[Z_{Th} = \]</div>
+<p class="sd-card-text"><strong>Thevenin equivalent: voltage.</strong> With open circuit in <span class="math notranslate nohighlight">\(A-B\)</span>, current <span class="math notranslate nohighlight">\(a\)</span> flows in the lower branch and in impedence <span class="math notranslate nohighlight">\(Z_1\)</span>. Clockwise loop currents <span class="math notranslate nohighlight">\(i_1\)</span> and <span class="math notranslate nohighlight">\(i_2\)</span> flows in the left and right loop respectively. Kirchhoff voltage laws in the left and right loops give</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 &amp; = e_1 - Z_L (i_1 + a) - (R_1 + Z_C) i_1 \\
+  0 &amp; = -e_2 - Z_2 (i_2 + a) - Z_3 i_2 \\
+\end{aligned}
+\quad \rightarrow \quad
+\begin{aligned}
+  i_1 &amp; = \frac{e_1 - Z_L a}{Z_L + Z_C + R_1} \\
+  i_2 &amp; = -\frac{e_2 + Z_2 a}{Z_2 + Z_3} \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and thus using Kirchhoff voltage law on the loop with nodes <span class="math notranslate nohighlight">\(A-B\)</span> and closing through <span class="math notranslate nohighlight">\(Z_1\)</span> and <span class="math notranslate nohighlight">\(R_1\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[V_{Th} = R_1 i_1 + Z_1 a = \dots\]</div>
+<p class="sd-card-text"><strong>Thevenin equivalent: impedence.</strong> Opening circuit at the current generator, and replace tension generators with short circuits, the equivalent impedence is</p>
+<div class="math notranslate nohighlight">
+\[Z_{Th} = ( (Z_C + Z_L) \parallel R_1) + Z_1 \ .\]</div>
+<p class="sd-card-text"><strong>Equivalent circuit.</strong> Kirchhoff voltage law on the equivalent circuit reads</p>
+<div class="math notranslate nohighlight">
+\[0 = V_{Th} - Z_{Th} i - Z_{x} i = 0 \ ,\]</div>
+<p class="sd-card-text">and thus</p>
+<div class="math notranslate nohighlight">
+\[I = \frac{V_{Th}}{Z_{Th} + Z_{x}} = \dots\]</div>
+<p class="sd-card-text"><strong>Power.</strong> Complex power reads</p>
+<div class="math notranslate nohighlight">
+\[S = V I^* = Z_x |I|^2 = \frac{Z_x}{|Z_{Th} + Z_x|^2} |V_{th}|^2 \ ,\]</div>
+<p class="sd-card-text">Writing the impedence as <span class="math notranslate nohighlight">\(Z_x = R_x + i X_x\)</span>, the active power reads</p>
+<div class="math notranslate nohighlight">
+\[P = \frac{ R_x }{ (R_{Th} + R_x)^2 + (X_{Th} + X_x)^2} |V_{Th}|^2 \ .\]</div>
+<p class="sd-card-text">With the physical constraints <span class="math notranslate nohighlight">\(R \ge 0\)</span>, the problem is a constrained optimization problem of finding the maximum value of the function <span class="math notranslate nohighlight">\(P(R_x, X_x)\)</span> subject to the constraint <span class="math notranslate nohighlight">\(R_x \ge 0\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\text{find } \ \max_{R_x, X_x} P(R_x, X_x) \qquad \text{s.t.} \qquad R_x \ge 0 \ .\]</div>
+<p class="sd-card-text">The denominator is the sum of two non negative terms, one function of <span class="math notranslate nohighlight">\(R_x\)</span> and one function of <span class="math notranslate nohighlight">\(X_x\)</span>. The independent variable <span class="math notranslate nohighlight">\(X_x\)</span> only appears in this term at the denominator, so that this term must vanish at the solution of the optimization problem, and thus</p>
+<div class="math notranslate nohighlight">
+\[\widetilde{X}_x = - X_{Th} \ .\]</div>
+<p class="sd-card-text">The remaining term is a function of <span class="math notranslate nohighlight">\(R_x\)</span> only and proportional to</p>
+<div class="math notranslate nohighlight">
+\[f(R_x) = \frac{R_x}{(R_{Th} + R_x)^2} \ .\]</div>
+<p class="sd-card-text">Local extremes of this function is attained where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 = f'(R_x) 
+  &amp; = \frac{(R_{Th} + R_x)^2 - 2 R_x (R_{Th} + R_x))}{(R_{Th} + R_x)^4} = \\
+  &amp; = \frac{R_{Th}^2 - R_x^2 }{(R_{Th} + R_x)^4} \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and thus, within the physical limit of the problem, the local and global maximum of the function (check that <span class="math notranslate nohighlight">\(f''(\widetilde{R}_x) &lt; 0\)</span>), is attained for</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \widetilde{R}_{x} &amp; = R_{Th} \\
+  \widetilde{Z}_{x} &amp; = R_{Th} - i X_{Th}
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and the maximum active power is</p>
+<div class="math notranslate nohighlight">
+\[P_{max} = P(\widetilde{Z}_x) = \frac{|V_{Th}|^2}{4 R_{Th} } \ .\]</div>
+<p class="sd-card-text">while the reactive power in this condition reads</p>
+<div class="math notranslate nohighlight">
+\[Q = - \frac{ X_{Th} }{4 R^2_{Th}} |V_{Th}|^2 \ .\]</div>
 </div>
+</details></div>
 </div>
 <div class="exercise admonition" id="exam-25-02-11-exe-03">
 
@@ -390,7 +464,40 @@ document.write(`
 <div class="figure align-default">
 <img alt="../_images/exam-2025-02-11-ese-03.png" src="../_images/exam-2025-02-11-ese-03.png" />
 </div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Load impedence <span class="math notranslate nohighlight">\(Z_L\)</span></strong>. Load impedence appears in the load constitutive equation <span class="math notranslate nohighlight">\(V_L = Z_L I_L\)</span>, and can be evalauted from data about complex power,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   S_L  &amp; = |S_L| e^{i \phi_L} = V_L I_L^* = Z_L |I|^2 = \frac{1}{Z_L^*} |V_L|^2 \\ 
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[Z_L = \frac{|V_L|^2}{|S_L|} e^{i \varphi_L}\]</div>
+<p class="sd-card-text"><strong>Current <span class="math notranslate nohighlight">\(I_s\)</span>.</strong> From data of load power, it’s possible to evaluate the current <span class="math notranslate nohighlight">\(I_s\)</span>. The current <span class="math notranslate nohighlight">\(I_L\)</span> through the load reads</p>
+<div class="math notranslate nohighlight">
+\[S_L = V_L I_L^* \qquad \rightarrow \qquad I_L = \frac{S_L^*}{V_L^*} = \frac{|S_L|}{|V_L|} e^{i(-\phi_L + \phi_V)}\]</div>
+<p class="sd-card-text">The three parallel sides act as current divider so that</p>
+<div class="math notranslate nohighlight">
+\[I_L = \frac{(R_3+Z_L)^{-1}}{(R_3+Z_L)^{-1} + ( (i X_1 ) \parallel (R_2 + i X_2) )^{-1}} I_s\]</div>
+<p class="sd-card-text">and thus</p>
+<div class="math notranslate nohighlight">
+\[I_s = |I_s| e^{i \varphi_{I_s}} = \dots\]</div>
+<p class="sd-card-text"><strong>Equivalent circuit.</strong> The impedence of the circuit powered by the tension generatore is</p>
+<div class="math notranslate nohighlight">
+\[Z_{eq} = R_1 + ( i X_1 \parallel (R_2 + i X_2) \parallel (R_3 + Z_L) ) \ .\]</div>
+<p class="sd-card-text">Given the equivalent impedance, and the current <span class="math notranslate nohighlight">\(I_s\)</span> the voltage across the tension generator is</p>
+<div class="math notranslate nohighlight">
+\[E_s = Z_{eq} I_s = |E_s| e^{i \varphi_{E_s}} \dots \ .\]</div>
+<p class="sd-card-text">and the power factor is <span class="math notranslate nohighlight">\(\cos \varphi_s = \dots\)</span>, where</p>
+<div class="math notranslate nohighlight">
+\[\varphi_s = \varphi_{E_s} - \varphi_{I_s} = \dots \ . \]</div>
 </div>
+</details></div>
 </div>
 <div class="exercise admonition" id="exam-25-01-22-exe-02">
 
@@ -399,16 +506,66 @@ document.write(`
 <div class="figure align-default">
 <img alt="../_images/exam-2025-01-22-ese-02.png" src="../_images/exam-2025-01-22-ese-02.png" />
 </div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Thevenin equivalent: voltage.</strong> With an open circuit, the network can be split into two parts: the triangle in the upper-left side and the section in the right part.</p>
+<p class="sd-card-text">In the triangular part, a current <span class="math notranslate nohighlight">\(I_{a}\)</span> flows in counter-clockwise direction, while current <span class="math notranslate nohighlight">\(I_b\)</span> flows in the right part in clockwise direction,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  I_a &amp; = \frac{E_1}{Z_1 + Z_2} \\
+  I_b &amp; = \frac{E_2 + i \Omega L_5 A_2}{Z_4 + Z_5 + Z_3} \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">as</p>
+<div class="math notranslate nohighlight">
+\[E_2 + \bigg( Z_4 + Z_3 \underbrace{- i \frac{1}{\Omega C_5} + i \Omega L_5}_{=Z_5} \bigg) I_b + i \Omega L_5 A_2 = 0 \ . \]</div>
+<p class="sd-card-text">with <span class="math notranslate nohighlight">\(Z_k\)</span> being the impedence of the <span class="math notranslate nohighlight">\(k\)</span>-th side. Thevenin voltage thus reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  V_{Th} &amp; = E_2 - Z_3 I_b + Z_2 I_a \\ 
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Thevenin equivalent: impedence.</strong> Equivalent impedence reads</p>
+<div class="math notranslate nohighlight">
+\[Z_{Th} = (Z_1 \parallel Z_2 + ( Z_3 \parallel (Z_4 + Z_5)))\]</div>
+<p class="sd-card-text"><strong>Equivalent circuit.</strong> Prescribed current <span class="math notranslate nohighlight">\(A_1\)</span> flows in the equivalent circuit, and the voltage across the current generator is evaluated with Krichhoff voltage law</p>
+<div class="math notranslate nohighlight">
+\[V_{A_1} - V_{Th} - Z_{Th} A_1 = 0 \ ,\]</div>
+<div class="math notranslate nohighlight">
+\[V_{A_1} = V_{Th} + Z_{Th} A_1 = |V_A| e^{i \varphi_{V_{A_1}}} \ .\]</div>
+<p class="sd-card-text">Signal in time is reconstructed using using the relation between effective and maximum amplitude of the oscillation and evaluating the real part of the signal <span class="math notranslate nohighlight">\(|V_{A_1}| e^{i(\Omega t + \varphi_{V_{A_1}})}\)</span></p>
+<div class="math notranslate nohighlight">
+\[v_{A_1}(t) = \sqrt{2} |V_{A_1}| \cos(\Omega t + \varphi_{V_{A_1}}) \ .\]</div>
+<p class="sd-card-text"><strong>Poer.</strong> Using definitions of <a class="reference internal" href="electrical-engineering-networks-harmonic.html#classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic-power"><span class="std std-ref">power in circuits in harmonic regime</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+   S_{A_1}  &amp; = V_{A_1} I_{A_1}^* \\
+  |S_{A_1}| &amp; = |V_{A_1}| |I_{A_1}| \\
+   P_{A_1}  &amp; = \text{re} \{ S_{A_1} \} \\
+   Q_{A_1}  &amp; = \text{im} \{ S_{A_1} \} \\
+\end{aligned}\end{split}\]</div>
 </div>
+</details></div>
 </div>
 <div class="exercise admonition" id="exam-24-09-06-exe-02">
 
 <p class="admonition-title"><span class="caption-number">Exercise 10.7 </span> (Exam 2024-09-06, Exercise 2.)</p>
 <div class="section" id="exercise-content">
 <div class="figure align-default">
-<img alt="media/exam-2024-09-06-ese-02.png" src="media/exam-2024-09-06-ese-02.png" />
+<img alt="../_images/exam-2024-09-06-ese-02.png" src="../_images/exam-2024-09-06-ese-02.png" />
 </div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Solution<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 </div>
+</details></div>
 </div>
 </div>
 
@@ -448,7 +605,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">precedente</p>
-        <p class="prev-next-title"><span class="section-number">10.4.1. </span>Transient dynamics of linear electrical grids with one dynamic component</p>
+        <p class="prev-next-title"><span class="section-number">10.6.1. </span>Transient dynamics of linear electrical grids with one dynamic component</p>
       </div>
     </a>
     <a class="right-next"
@@ -456,7 +613,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">successivo</p>
-        <p class="prev-next-title"><span class="section-number">10.4.3. </span>Three-phase electrical circuits in harmonic regime</p>
+        <p class="prev-next-title"><span class="section-number">10.6.3. </span>Three-phase electrical circuits in harmonic regime</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>9. Onde elettromagnetiche &#8212; electromagnetism</title>
+    <title>10.5. Network analysis of linear circuits - harmonic regime &#8212; electromagnetism</title>
   
   
   
@@ -65,12 +65,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/waves';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/electrical-engineering-networks-harmonic';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="9.1. Equazioni delle onde in elettromagnetismo" href="waves-equation.html" />
-    <link rel="prev" title="8. Equazioni dell’elettromagnetismo e relatività galileiana" href="low-speed-relativity.html" />
+    <link rel="next" title="10.6. Exercises" href="electrical-engineering-exercises.html" />
+    <link rel="prev" title="10.4. Network analysis of linear circuits" href="electrical-engineering-networks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
   </head>
@@ -174,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Elettromagnetismo</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">1. Brief history of Electromagnetism</a></li>
 <li class="toctree-l1"><a class="reference internal" href="principles.html">2. Principles of Classical Electromagnetism</a></li>
 <li class="toctree-l1"><a class="reference internal" href="potentials.html">3. Potenziali elettromagnetici</a></li>
@@ -183,15 +185,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="energy.html">6. Energy balance in electromagnetism</a></li>
 <li class="toctree-l1"><a class="reference internal" href="energy-linear.html">7. Energy and momentum balance in linear, local, isotropic, non-dispersive media</a></li>
 <li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">8. Equazioni dell’elettromagnetismo e relatività galileiana</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">9. Onde elettromagnetiche</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">9. Onde elettromagnetiche</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="waves-equation.html">9.1. Equazioni delle onde in elettromagnetismo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="waves-plane.html">9.2. Onde elettromagnetiche piane</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Elettrotecnica</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="circuits.html">10. Approssimazione circuitale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="circuits.html">10. Approssimazione circuitale</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">10.1. Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-approximation.html">10.1.1. Validità dell’approccio circuitale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">10.1.2. Induzione elettromagnetica nell’approssimazione circuitale</a></li>
@@ -204,11 +206,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="circuits-electromechanic.html">10.3. Circuiti elettromeccanici</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="electrical-engineering-exercises.html">10.4. Exercises</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-transient-1-dynamic.html">10.4.1. Transient dynamics of linear electrical grids with one dynamic component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-harmonic.html">10.4.2. Harmonic regime of linear electrical grids</a></li>
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-three-phase.html">10.4.3. Three-phase electrical circuits in harmonic regime</a></li>
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-electromagnetic.html">10.4.4. Electromagnetic circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks.html">10.4. Network analysis of linear circuits</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">10.5. Network analysis of linear circuits - harmonic regime</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="electrical-engineering-exercises.html">10.6. Exercises</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-transient-1-dynamic.html">10.6.1. Transient dynamics of linear electrical grids with one dynamic component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-harmonic.html">10.6.2. Harmonic regime of linear electrical grids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-three-phase.html">10.6.3. Three-phase electrical circuits in harmonic regime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-electromagnetic.html">10.6.4. Electromagnetic circuits</a></li>
 </ul>
 </li>
 </ul>
@@ -276,7 +280,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/waves.md" target="_blank"
+      <li><a href="../_sources/ch/electrical-engineering-networks-harmonic.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Scarica il file sorgente"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -347,7 +351,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -358,11 +364,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Onde elettromagnetiche</h1>
+    <h1>Network analysis of linear circuits - harmonic regime</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenuti </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power">10.5.1. Power</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -372,16 +386,55 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
+  <div class="tex2jax_ignore mathjax_ignore section" id="network-analysis-of-linear-circuits-harmonic-regime">
+<span id="classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic"></span><h1><span class="section-number">10.5. </span>Network analysis of linear circuits - harmonic regime<a class="headerlink" href="#network-analysis-of-linear-circuits-harmonic-regime" title="Permalink to this heading">#</a></h1>
+<p>The harmonic dynamics of a linear circuit can be evaluated in Fourier domain, or using complex numbers to represent harmonic functions. Using voltage signal as a reference for time phase,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  v(t) &amp; = V_{max} \cos (\Omega t) = \text{re} \{ V_{max} e^{i \Omega t} \} \\
+  i(t) &amp; = I_{max} \cos (\Omega t - \varphi_i) = \text{re} \{ I_{max} e^{i ( \Omega t + \varphi_i )} \} \\
+\end{aligned}\end{split}\]</div>
+<div class="section" id="power">
+<span id="classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic-power"></span><h2><span class="section-number">10.5.1. </span>Power<a class="headerlink" href="#power" title="Permalink to this heading">#</a></h2>
+<p><strong>Instantaneous power.</strong></p>
+<div class="math notranslate nohighlight" id="equation-eq-harmonic-power-instantaneous">
+<span class="eqno">(10.3)<a class="headerlink" href="#equation-eq-harmonic-power-instantaneous" title="Permalink a questa equazione">#</a></span>\[\begin{split}\begin{aligned}
+  P(t) 
+  &amp; = v(t) i(t) = \\
+  &amp; = V_{max} I_{max}  \cos (\Omega t )  \cos (\Omega t - \varphi_i) = \\ 
+  &amp; = \frac{1}{2} V_{max} I_{max} \left[ \cos \varphi_i +  \cos ( 2 \Omega t ) \right]  \\ 
+\end{aligned}\end{split}\]</div>
+<p>having used <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea-hs/ch/trigonometry.html#werner">Werner’s formula</a>,</p>
+<div class="math notranslate nohighlight">
+\[\cos x \cos y = \frac{1}{2} \left[ \cos(x-y) + \cos(x+y) \right] \ .\]</div>
+<p>and the property <span class="math notranslate nohighlight">\(\cos(-x) = \cos x\)</span>.</p>
+<p><strong>Average power on a period.</strong> Over a period <span class="math notranslate nohighlight">\(T = \frac{1}{f} = \frac{2 \pi}{\Omega}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\overline{P} = \frac{1}{T} \int_{t=t_0}^{t_0+T} P(t) \, dt = \frac{V_{max} I_{max}}{2} = V I\ ,\]</div>
+<p>as the integral of the harmonic term with period <span class="math notranslate nohighlight">\(\frac{T}{2}\)</span> of the instantaneous power <a class="reference internal" href="#equation-eq-harmonic-power-instantaneous">(10.3)</a> is identically zero, and with the definition of the <strong>effective voltage and current</strong>,</p>
+<div class="math notranslate nohighlight">
+\[V := \frac{V_{max}}{\sqrt{2}} \quad , \quad I := \frac{I_{max}}{\sqrt{2}} \ . \]</div>
+<p><strong>Complex power.</strong> Complex power of a dipole with impedence <span class="math notranslate nohighlight">\(Z\)</span>, <span class="math notranslate nohighlight">\(V =  Z I\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  S 
+  &amp; := V I^* = |V|e^{i \varphi_V} |I| e^{-i \varphi_I} = |V| |I| e^{i(\varphi_V - \varphi_I)} = \\
+  &amp; = Z I I^* = Z |I|^2 = (R + i X ) |I|^2 = |Z||I|^2 e^{i \varphi_Z} = P + i Q \ ,
+\end{aligned}\end{split}\]</div>
+<p>with the active power <span class="math notranslate nohighlight">\(P\)</span> and the reactive power <span class="math notranslate nohighlight">\(Q\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  P &amp; = \text{re}\{ S \} &amp;&amp; = &amp;&amp; |S| \cos \varphi_Z &amp;&amp; = &amp;&amp; \dots \\
+  Q &amp; = \text{im}\{ S \} &amp;&amp; = &amp;&amp; |S| \sin \varphi_Z &amp;&amp; = &amp;&amp; \dots \\
+\end{aligned}\end{split}\]</div>
+<!--
+Or with time-varying signal in the complex domain
+
+$$\begin{aligned}
+  V(t) & = V e^{i\omega t} \\
+  I(t) & = I e^{i\omega t} \\
+\end{aligned}$$
 -->
-<div class="tex2jax_ignore mathjax_ignore section" id="onde-elettromagnetiche">
-<span id="classical-electromagnetism-waves"></span><h1><span class="section-number">9. </span>Onde elettromagnetiche<a class="headerlink" href="#onde-elettromagnetiche" title="Permalink to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -416,20 +469,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="low-speed-relativity.html"
+       href="electrical-engineering-networks.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">precedente</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Equazioni dell’elettromagnetismo e relatività galileiana</p>
+        <p class="prev-next-title"><span class="section-number">10.4. </span>Network analysis of linear circuits</p>
       </div>
     </a>
     <a class="right-next"
-       href="waves-equation.html"
+       href="electrical-engineering-exercises.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">successivo</p>
-        <p class="prev-next-title"><span class="section-number">9.1. </span>Equazioni delle onde in elettromagnetismo</p>
+        <p class="prev-next-title"><span class="section-number">10.6. </span>Exercises</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -439,6 +492,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenuti
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power">10.5.1. Power</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
