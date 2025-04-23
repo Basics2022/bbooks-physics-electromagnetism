@@ -76,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X6MNXBVGKF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-X6MNXBVGKF');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -506,15 +497,17 @@ Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Following the <strong>guidelines for the solution</strong>, a <a class="reference internal" href="electrical-engineering-networks.html#classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-n-port"><span class="std std-ref">many-port Thevenin equivalent circuit</span></a> of the resistive part of the circuit is found, with two ports for interfacing with the capacitor (A) and with the switch. The dynamical equation of the system is written in state-space representation, writing the voltage at the ports and the unknown variable <span class="math notranslate nohighlight">\(i(t)\)</span> as outputs; the capacitor contitutive equation is used to find the time evolution of the system once the switch is closed</p>
-<table class="table">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../_images/exam-2025-01-22-ese-01-c.png" /></p></td>
-</tr>
-</tbody>
-</table>
+<!--
+```{list-table}
+:header-rows: 0
+
+* - ![](../media/exam-2025-01-22-ese-01-c.png) 
+
+```
+-->
+<div class="figure align-default">
+<img alt="../_images/exam-2025-01-22-ese-01-b.png" src="../_images/exam-2025-01-22-ese-01-b.png" />
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Internal generators on, open circuit<div class="sd-summary-down docutils">
@@ -547,7 +540,10 @@ Internal generators on, open circuit<div class="sd-summary-down docutils">
    i_{0} &amp; = 1.72 \, A \\
 \end{cases}\end{split}\]</div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+</details><div class="figure align-default">
+<img alt="../_images/exam-2025-01-22-ese-01-c.png" src="../_images/exam-2025-01-22-ese-01-c.png" />
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Internal generators off, current generators at the ports<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -595,7 +591,10 @@ i_2 = \frac{R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A
    i_{,B}&amp; = i_{/i_B} \, i_B &amp; =   0.897 \, i_B \\
 \end{cases}\end{split}\]</div>
 </div>
-</details><p class="sd-card-text">The equations of the equivalent algebraic system are</p>
+</details><div class="figure align-default">
+<img alt="../_images/exam-2025-01-22-ese-01-a.png" src="../_images/exam-2025-01-22-ese-01-a.png" />
+</div>
+<p class="sd-card-text">The equations of the equivalent algebraic system are</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
  v_A &amp; = v_{A,0} + R_{AA}   \, i_A + R_{AB}   \, i_B \\

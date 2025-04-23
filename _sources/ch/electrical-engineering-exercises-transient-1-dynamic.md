@@ -138,11 +138,16 @@ Following the **guidelines for the solution**, a [many-port Thevenin equivalent 
 
 Following the **guidelines for the solution**, a [many-port Thevenin equivalent circuit](classical-electromagnetism:electrical-engineering:newtork-analysis:thevenin:n-port) of the resistive part of the circuit is found, with two ports for interfacing with the capacitor (A) and with the switch. The dynamical equation of the system is written in state-space representation, writing the voltage at the ports and the unknown variable $i(t)$ as outputs; the capacitor contitutive equation is used to find the time evolution of the system once the switch is closed
 
+<!--
 ```{list-table}
 :header-rows: 0
 
 * - ![](../media/exam-2025-01-22-ese-01-c.png) 
 
+```
+-->
+
+```{figure} ../media/exam-2025-01-22-ese-01-b.png
 ```
 
 ```{dropdown} Internal generators on, open circuit
@@ -172,6 +177,10 @@ $$\begin{cases}
  v_{B,0} & =  17.91 \, V \\
    i_{0} & = 1.72 \, A \\
 \end{cases}$$
+```
+
+
+```{figure} ../media/exam-2025-01-22-ese-01-c.png
 ```
 
 ```{dropdown} Internal generators off, current generators at the ports
@@ -220,6 +229,9 @@ $$\begin{cases}
    i_{,B}& = i_{/i_B} \, i_B & =   0.897 \, i_B \\
 \end{cases}$$
 
+```
+
+```{figure} ../media/exam-2025-01-22-ese-01-a.png
 ```
 
 The equations of the equivalent algebraic system are
