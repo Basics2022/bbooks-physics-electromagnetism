@@ -8,13 +8,8 @@
 ```
 
 ```{dropdown} Solution
-:open:
 
-[One-port equivalent Thevenin circuit]() of the circuit with port $A-B$ has
-
-$$V_{Th} = $$
-
-$$Z_{Th} = $$
+First [one-port equivalent Thevenin circuit](classical-electromagnetism:electrical-engineering:newtork-analysis:thevenin:1-port) of the circuit with port $A-B$ is evaluated, then [power flow in harmonic regime](classical-electromagnetism:electrical-engineering:newtork-analysis:harmonic:power) is discussed.
 
 **Thevenin equivalent: voltage.** With open circuit in $A-B$, current $a$ flows in the lower branch and in impedence $Z_1$. Clockwise loop currents $i_1$ and $i_2$ flows in the left and right loop respectively. Kirchhoff voltage laws in the left and right loops give
 
@@ -100,7 +95,8 @@ $$Q = - \frac{ X_{Th} }{4 R^2_{Th}} |V_{Th}|^2 \ .$$
 ```
 
 ```{dropdown} Solution
-:open:
+
+First [power flow in harmonic regime](classical-electromagnetism:electrical-engineering:newtork-analysis:harmonic:power) is used to calculate load impedence, then the electrical circuit is solved, and the power on the tension generator is computed.
 
 **Load impedence $Z_L$**. Load impedence appears in the load constitutive equation $V_L = Z_L I_L$, and can be evalauted from data about complex power,
 
@@ -148,7 +144,8 @@ $$\varphi_s = \varphi_{E_s} - \varphi_{I_s} = \dots \ . $$
 ```
 
 ```{dropdown} Solution
-:open:
+
+First [one-port equivalent Thevenin circuit](classical-electromagnetism:electrical-engineering:newtork-analysis:thevenin:1-port) of the circuit with port $A-B$ is evaluated, then the equivalent circuit is solved to find the tension $v(t)$ across the current generator, and [power flow in harmonic regime](classical-electromagnetism:electrical-engineering:newtork-analysis:harmonic:power) is discussed.
 
 **Thevenin equivalent: voltage.** With an open circuit, the network can be split into two parts: the triangle in the upper-left side and the section in the right part.
 
