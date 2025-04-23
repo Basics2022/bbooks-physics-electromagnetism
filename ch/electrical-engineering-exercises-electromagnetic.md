@@ -1,4 +1,4 @@
-(classical-electromagnetism:electrical-engineering-exercises:electromagnetic)=
+1classical-electromagnetism:electrical-engineering-exercises:electromagnetic)=
 # Electromagnetic circuits
 
 ````{exercise} Exam 2025-01-22, Exercise 3.

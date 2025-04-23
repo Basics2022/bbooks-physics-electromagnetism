@@ -36,6 +36,8 @@ parts:
       sections:
       - file: ch/circuits-electromagnetic-transformer
     - file: ch/circuits-electromechanic
+    - file: ch/electrical-engineering-networks
+    - file: ch/electrical-engineering-networks-harmonic
     - file: ch/electrical-engineering-exercises
       sections:
       - file: ch/electrical-engineering-exercises-transient-1-dynamic
