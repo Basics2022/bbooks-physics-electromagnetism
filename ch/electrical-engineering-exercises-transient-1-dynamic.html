@@ -705,23 +705,26 @@ Internal generators on, open circuit<div class="sd-summary-down docutils">
   0 &amp; = e_2 - (R_7+R_8+R_1+R_4+R_6) i_{2,0} \\
   0 &amp; = e_1 - (R_2+R_3) i_{1,0} \\
 \end{aligned}
-\quad \rightarrow \quad
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
-  i_{2,0} &amp; = \dfrac{e_2}{R_7+R_8+R_1+R_4+R_6} \\
-  i_{1,0} &amp; = \dfrac{e_1}{R_2+R_3} \\
+  i_{2,0} &amp; = \dfrac{1}{R_{14678}} \, e_2 \\
+  i_{1,0} &amp; = \dfrac{1}{R_{23}} \, e_1 \\
 \end{aligned}\end{split}\]</div>
-<p class="sd-card-text">so that the desired variables read</p>
+<p class="sd-card-text">with <span class="math notranslate nohighlight">\(R_{14678} = R_1+R_4+R_6+R_7+R_8\)</span>, and <span class="math notranslate nohighlight">\(R_{23} = R_2 + R_3\)</span>. The desired physical quantities are</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
-  v_{A,0} &amp; = - R_8 i_{2,0} = -\dfrac{R_8}{R_7+R_8+R_1+R_4+R_6} e_2 \\ 
-  v_{B,0} &amp; = - R_4 i_{2,0} + R_3 i_{1,0} = - \dfrac{R_4}{R_7+R_8+R_1+R_4+R_6} e_2 + \dfrac{R_3}{R_2+R_3} e_1 \\
-  i_{0} &amp; = - i_{2,0} = - \dfrac{e_2}{R_7+R_8+R_1+R_4+R_6} 
+  v_{A,0} &amp; = - R_8 i_{2,0} = -\dfrac{R_8}{R_{14678}} e_2 \\ 
+  v_{B,0} &amp; = - R_4 i_{2,0} + R_3 i_{1,0} = - \dfrac{R_4}{R_{14678}} e_2 + \dfrac{R_3}{R_{23}} e_1 \\
+  i_{0} &amp; = - i_{2,0} = - \dfrac{1}{R_{14678}} e_2
 \end{cases}\end{split}\]</div>
+<p class="sd-card-text">and their values</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
- v_{A,0} &amp; =     - 20.69 \, V \\
- v_{B,0} &amp; = \ \ \ 17.91 \, V \\
-   i_{0} &amp; = \ \ \  1.72 \, A \\
+ v_{A,0} &amp; =     - 20.6900 \, V \\
+ v_{B,0} &amp; = \ \ \ 12.4750 \, V \\
+   i_{0} &amp; = \    - 1.7241 \, A \\
 \end{cases}\end{split}\]</div>
 </div>
 </details><div class="figure align-default">
@@ -738,21 +741,21 @@ Internal generators off, current generators at the ports<div class="sd-summary-d
 <p class="sd-card-text"><em>Powering A</em></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  0 &amp; = (i_2 - i_A) R_8 + i_2 (R_1 + R_4 + R_6 + R_7) \\
+  0 &amp; = (i_2 - i_A) R_8 + i_2 (R_{14678}) \\
 \rightarrow \quad 
- i_2 &amp; = \frac{R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A
+ i_2 &amp; = \frac{R_8}{R_{14678}} i_A
 \end{aligned}\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
-  v_{A,A} &amp; =  -R_8 ( i_2 - i_A ) &amp; = \dfrac{R_8(R_1+R_4+R_6+R_7)}{R_1 + R_4 + R_6 + R_7 + R_8} i_A \\
-  v_{B,A} &amp; = - R_4 i_2 &amp; = - \dfrac{R_4 R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A \\
-    i_{,A}&amp; = - i_2 &amp; = - \dfrac{R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A \\
+  v_{A,A} &amp; =  -R_8 ( i_2 - i_A ) &amp; = \dfrac{R_8 R_{1467}}{R_{14678}} i_A \\
+  v_{B,A} &amp; = - R_4 i_2 &amp; = - \dfrac{R_4 R_8}{R_{14678}} i_A \\
+    i_{,A}&amp; = - i_2 &amp; = - \dfrac{R_8}{R_{14678}} i_A \\
 \end{cases}\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
- v_{A,A} &amp; = R_{AA}   \, i_A &amp; = \ \ \ 7.03  \, \Omega \, i_A \\ 
- v_{B,A} &amp; = R_{BA}   \, i_A &amp; = - 1.24  \, \Omega \, i_A \\
-   i_{,A} &amp; = i_{/i_A}\, i_A &amp; = - 0.414 \ \  i_A \\
+ v_{A,A} &amp; = R_{AA}   \, i_A &amp; = \ \ \ 7.0345  \, \Omega \, i_A \\ 
+ v_{B,A} &amp; = R_{BA}   \, i_A &amp; = - 1.2414  \, \Omega \, i_A \\
+   i_{,A} &amp; = i_{/i_A}\, i_A &amp; = - 0.4138 \ \  i_A \\
 \end{cases}\end{split}\]</div>
 <p class="sd-card-text"><em>Powering B.</em></p>
 <!-- The equivalent circuit seen by the port $B$ has equivalent resistence
@@ -762,21 +765,21 @@ $$R_{eq} = \big( (R_6 + R_7 + R_8 + R_1) \parallel (R_4)  \big) + \big(R_2 \para
 <p class="sd-card-text">Currents in the two parallel branches in the upper part of the circuit (current dividers) read</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  i_{2,B} &amp; = \frac{R_4}{R_1+R_4+R_6+R_7+R_8} i_B \\
-  i_{3,B} &amp; = \frac{R_2}{R_2+R_3} i_B \\
+  i_{2,B} &amp; = \frac{R_4}{R_{14678}} i_B \\
+  i_{3,B} &amp; = \frac{R_2}{R_{23}} i_B \\
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">and the desired variables</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
-  i_{,B}  &amp; = i_{4,B} &amp; = \dfrac{R_1+R_6+R_7+R_8}{R_1+R_4+R_6+R_7+R_8} i_B \\
-  v_{A,B} &amp; = - R_8 i_{2,B} &amp; = - \dfrac{R_4 R_8}{R_1+R_4+R_6+R_7+R_8} i_B  \\
-  v_{B,B} &amp; = R_4 i_{4,B} + R_3 i_{3,B} &amp; = \left[ \dfrac{R_4(R_1+R_6+R_7+R_8)}{R_1+R_4+R_6+R_7+R_8} + \dfrac{R_2 R_3}{R_2+R_3} \right] i_B \\
+  i_{,B}  &amp; = i_{4,B} &amp; = \dfrac{R_{1678}}{R_{14678}} i_B \\
+  v_{A,B} &amp; = - R_8 i_{2,B} &amp; = - \dfrac{R_4 R_8}{R_{14678}} i_B  \\
+  v_{B,B} &amp; = R_4 i_{4,B} + R_3 i_{3,B} &amp; = \left[ \dfrac{R_4(R_{1678})}{R_{14678}} + \dfrac{R_2 R_3}{R_{23}} \right] i_B \\
 \end{cases}\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
- v_{A,B} &amp; = R_{AB}   \, i_B &amp; =     - 1.24  \, \Omega \, i_B \\ 
- v_{B,B} &amp; = R_{BB}   \, i_B &amp; = \ \ \ 6.81  \, \Omega \, i_B \\
-   i_{,B}&amp; = i_{/i_B} \, i_B &amp; = \ \ \ 0.897 \ \          i_B \\
+ v_{A,B} &amp; = R_{AB}   \, i_B &amp; =     - 1.2414  \, \Omega \, i_B \\ 
+ v_{B,B} &amp; = R_{BB}   \, i_B &amp; = \ \ \ 6.8073  \, \Omega \, i_B \\
+   i_{,B}&amp; = i_{/i_B} \, i_B &amp; = \ \ \ 0.8966 \ \          i_B \\
 \end{cases}\end{split}\]</div>
 </div>
 </details><div class="figure align-default">
@@ -789,129 +792,170 @@ $$R_{eq} = \big( (R_6 + R_7 + R_8 + R_1) \parallel (R_4)  \big) + \big(R_2 \para
  v_B &amp; = v_{B,0} + R_{BA}   \, i_A + R_{BB}   \, i_B \\
  i   &amp; = i_{ ,0} + i_{/i_A} \, i_A + i_{/i_B} \, i_B \\
 \end{cases}\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
- v_A &amp; =       - 20.69 \, V  + 7.03  \, \Omega \, i_A - 1.24  \, \Omega \, i_B \\
- v_B &amp; =  \ \ \  17.91 \, V  - 1.24  \, \Omega \, i_A + 6.81  \, \Omega \, i_B \\
- i   &amp; =\ \ \ \ \ 1.72 \, A  - 0.414 \ \       \, i_A + 0.897 \ \          i_B \\
-\end{cases}\end{split}\]</div>
-<p class="sd-card-text">so that</p>
-<div class="math notranslate nohighlight">
-\[i_A = \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \delta v_A - R_{AB} \, \delta v_B \right) \ .\]</div>
-<p class="sd-card-text">The constitutive equation of the capacitor reads</p>
+<!--
+$$\begin{cases}
+ v_A & =       - 20.69 \, V  + 7.03  \, \Omega \, i_A - 1.24  \, \Omega \, i_B \\
+ v_B & =  \ \ \  17.91 \, V  - 1.24  \, \Omega \, i_A + 6.81  \, \Omega \, i_B \\
+ i   & =\ \ \ \ \ 1.72 \, A  - 0.414 \ \       \, i_A + 0.897 \ \          i_B \\
+\end{cases}$$
+-->
+<p class="sd-card-text">and they can be used to write the currents as a function of the tensions</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  0 &amp; = C \dfrac{d v_A}{d t} + i_A = \\
-    &amp; = C \dfrac{d v_A}{d t} + \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \delta v_A - R_{AB} \, \delta v_B \right)  \\ \\
-    &amp;   R_{eq} C \dfrac{d v_A}{d t} + \delta v_A = \frac{ R_{AB} }{ R_{BB} } \, \delta v_B   \ .
+  i_A &amp; = \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \Delta v_A(t) - R_{AB} \, \Delta v_B(t) \right) \\
+  i_B &amp; = \dfrac{1}{\det \mathbf{R}} \left(-R_{BA} \, \Delta v_A(t) + R_{AA} \, \Delta v_B(t) \right) \\
 \end{aligned}\end{split}\]</div>
+<!--
+The constitutive equation of the capacitor reads
+
+$$\begin{aligned}
+  0 & = C \dfrac{d \Delta v_A}{d t} + i_A = \\
+    & = C \dfrac{d \Delta v_A}{d t} + \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \Delta v_A - R_{AB} \, \Delta v_B \right)  \\ \\
+    &   R_{eq} C \dfrac{d \Delta v_A}{d t} + \Delta v_A = \frac{ R_{AB} }{ R_{BB} } \, \Delta v_B   \ ,
+\end{aligned}$$
+
+with 
+
+$$\begin{aligned}
+  \det \mathbf{R} & = 46.345 \, \Omega^2 \\
+  R_{eq} & = \frac{\det \mathbf{R}}{R_{BB}} = 6.8081 \, \Omega \\
+  \tau & = R_{eq} C = 3.4041 \cdot 10^{-3} \, s \ .
+\end{aligned}$$
+-->
 <p class="sd-card-text">The switch command is off for <span class="math notranslate nohighlight">\(t \le 0^-\)</span>, on for <span class="math notranslate nohighlight">\(t &gt; 0\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[i_B(t \le 0^{-}) = 0 \qquad , \qquad v_B (t \ge 0^+) = 0 \ .\]</div>
 <p class="sd-card-text"><strong>Steady solution for <span class="math notranslate nohighlight">\(t \le 0^-\)</span>.</strong> With switch open <span class="math notranslate nohighlight">\(i_B = 0\)</span> and steady conditions <span class="math notranslate nohighlight">\(i_A = C \dot{v}_A = 0\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
-  v_A(0^-) &amp; = v_{A,0} &amp; =       - 20.69 \, V \\
-  v_B(0^-) &amp; = v_{B,0} &amp; = \ \ \   17.91 \, V \\
-    i(0^-) &amp; = i_{ ,0} &amp; = \quad \  1.72 \, A \\
+  v_A(0^-) &amp; = v_{A,0} &amp; =     - 20.6900 \, V \\
+  v_B(0^-) &amp; = v_{B,0} &amp; = \ \ \ 12.4750 \, V \\
+    i(0^-) &amp; = i_{ ,0} &amp; = \    - 1.7241 \, A \\
 \end{cases}\end{split}\]</div>
-<p class="sd-card-text"><strong>Transient dynamics</strong>, when the switch closes</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\mathbf{R} = \begin{bmatrix} R_{AA} &amp; R_{AB} \\ R_{BA} &amp; R_{BB} \end{bmatrix} = \begin{bmatrix} 7.03 &amp; -1.24 \\ -1.24 &amp; 6.81 \end{bmatrix} \, \Omega\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[R_{eq} = \frac{\det \mathbf{R}}{R_{BB}} = \frac{46.34 \, \Omega^2}{ 6.81 \, \Omega} = 6.80 \, \Omega \ .\]</div>
-<div class="math notranslate nohighlight">
-\[\tau = R_{eq} C = 6.8 \, \Omega \cdot 5 \cdot 10^{-4} \, F = 3.4 \cdot 10^{-3} \, s \ . \]</div>
+<p class="sd-card-text"><strong>Transient dynamics</strong>. For <span class="math notranslate nohighlight">\(t \ge 0\)</span>, the switch is closed and thus <span class="math notranslate nohighlight">\(v_B(t\ge 0^+) = 0\)</span>.</p>
 <ul>
-<li><p class="sd-card-text"><strong>Tension across the switch</strong></p>
+<li><p class="sd-card-text"><strong>Tension across the switch</strong> as a function of time</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-     v_{B}(t) &amp; = v_{B,0} \, h(-t) \\
-     v_{B}(t) - v_{B,0} &amp; = v_{B,0} \, h(t) \ . 
+     v_{B}(t) &amp; = v_{B,0} \, h(-t) = v_{B,0} ( 1 - h(t) ) \\
+     \Delta v_B(t) &amp; = v_{B}(t) - v_{B,0} = - v_{B,0} \,  h(t) \ . 
    \end{aligned}\end{split}\]</div>
 </li>
-<li><p class="sd-card-text"><strong>Tension across the capacitor.</strong> The dynamical equation for the difference of the state variable reads</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
-     R_{eq} C \delta \dot{v}_A + \delta v_{A} = \dfrac{R_{AB}}{R_{BB}} \delta v_{B}(t) = - \dfrac{R_{AB}}{R_{BB}} v_{0,B} \, h(t) \\
-     \delta v_A(0^-) = 0 \ .
-   \end{cases}\end{split}\]</div>
+<li><p class="sd-card-text"><strong>Tension across the capacitor.</strong> Writing <span class="math notranslate nohighlight">\(i_A\)</span> across the capacitor as a function of the tensions, the constitutive equation of the capacitor becomes</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-     \delta v_A(t)
-     &amp; = -\frac{R_{AB}}{R_{BB}} v_{0,B} \, \left[ 1 - \exp\left( - \dfrac{t}{RC} \right) \right] \, h(t) = \\
-     &amp; = \frac{1.24}{6.81} \, 17.91 \, V \, \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) = \\
-     &amp; = 3.26 \, V \, \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) = \\
-     &amp; = \Delta V \, \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) \ .
+  0 &amp; = C \dfrac{d \Delta v_A}{d t} + i_A = \\
+    &amp; = C \dfrac{d \Delta v_A}{d t} + \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \Delta v_A - R_{AB} \, \Delta v_B \right)  \\ \\
    \end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+      R_{eq} C \dfrac{d \Delta v_A}{d t} + \Delta v_A = \dfrac{ R_{AB} }{ R_{BB} } \, \Delta v_B(t) = - \dfrac{ R_{AB} }{ R_{BB} } v_{B,0} \, h(t)  \\ \\
+      \Delta v_A(0) = 0 \ ,
+   \end{cases}\end{split}\]</div>
+<p class="sd-card-text">with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     R_{eq} &amp; = \frac{\det \mathbf{R}}{R_{BB}} = 6.8081 \, \Omega \\
+     \tau &amp; = R_{eq} C = 3.4041 \cdot 10^{-3} \, s \\
+     \det \mathbf{R} &amp; = 46.345 \, \Omega^2 \\
+   \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">The solution of the differential equation provides the difference of the tension through the capacitor w.r.t. the initial steady condition</p>
+<div class="math notranslate nohighlight">
+\[\Delta v_A(t) = \Delta v_{A,+\infty} \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t) \ ,\]</div>
+<p class="sd-card-text">with <span class="math notranslate nohighlight">\(\Delta v_{A,+\infty} = -\frac{R_{AB}}{R_{BB}} v_{B,0} = 2.2742 \, V\)</span>. The voltage across the capacitor as a function of time <span class="math notranslate nohighlight">\(t\)</span> thus reads</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
      v_A(t) 
-     &amp; = v_{A,0} + \delta v_A(t) = \\
-     &amp; = v_{A,0} + \Delta V \, \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) \ , 
+     &amp; = v_{A,0} + \Delta v_A(t) = \\
+     &amp; = v_{A,0} + \Delta v_{A,+\infty} \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t) \ ,
    \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">so that the values</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned} 
      v_A(0^+) &amp; = v_{A,0}  &amp;&amp; = -20.69 \, V \\
-     v_A(+\infty) &amp; = v_{A,0} + \Delta V = -20.69 \, V + 3.26 \, V &amp;&amp; = -17.43 \, V
+     v_A(+\infty) &amp; = v_{A,0} + \Delta V = -20.69 \, V + 2.2742 \, V &amp;&amp; = -18.4158 \, V
    \end{aligned}\end{split}\]</div>
 </li>
 <li><p class="sd-card-text"><strong>Current through the capacitor.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-     i_A(t)
-     &amp; = - C \dfrac{d v_A}{d t}(t) = \\
-     &amp; = - \frac{\Delta V}{R_{eq}} \exp \left( - \frac{t}{\tau} \right) \, h(t) = \\
-     &amp; = I_A \, \exp \left( - \frac{t}{\tau} \right) \, h(t) \ , 
+      i_A(t)
+      &amp; = \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \Delta v_A(t) - R_{AB} \, \Delta v_B(t) \right) = \\
+      &amp; = \dfrac{1}{\det \mathbf{R}} \left[ R_{BB} \, \left( -\frac{R_{AB}}{R_{BB}} v_{B,0} \right) \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t)  + R_{AB} \, v_{B,0} \, h(t) \right] = \\
+      &amp; = \frac{R_{AB}}{\det \mathbf{R}} v_{B,0} e^{-\frac{t}{\tau}} \, h(t) \ .
    \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">so that the values</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-     i_A(0^+) &amp; = I_{A} &amp;&amp; = - 0.48 \, A \\
-     i_A(+\infty) &amp;     &amp;&amp; = 0 \, A
+\[\begin{split}\begin{aligned} 
+     i_A(0^+) &amp; = \frac{R_{AB}}{\det \mathbf{R}} v_{B,0} = \frac{-1.2414 \, \Omega}{46.908 \, \Omega^2} \, 12.475 \, V = -0.334 \, A \\
+     i_A(+\infty) &amp; = v_{A,0} + \Delta V = -20.69 \, V + 2.2742 \, V &amp;&amp; = 0.0 \, A
    \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">or with <span class="math notranslate nohighlight">\(i_A = - C \frac{d \Delta v_A}{dt}\)</span>…</p>
 </li>
 <li><p class="sd-card-text"><strong>Current across the switch</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
      i_B(t) 
      &amp; = \frac{1}{R_{BB}} \bigg[ v_B(t) - v_{B,0} - R_{BA} i_A(t) \bigg] = \\
-     &amp; = \left[ \frac{v_{B,0}}{R_{BB}} - \frac{R_{BA}}{R_{BB}} I_A \, \exp \left( - \frac{t}{\tau} \right) \right] \, h(t) \ . 
+     &amp; = \frac{1}{R_{BB}} \bigg[ - v_{B,0} - R_{BA} \frac{R_{AB}}{\det \mathbf{R}} v_{B,0} e^{-\frac{t}{\tau}} \bigg] \, h(t) = \\
+     &amp; = - \frac{v_{B,0}}{R_{BB}} \bigg[ 1 + \frac{R_{BA} R_{AB}}{\det \mathbf{R}} \, e^{-\frac{t}{\tau}} \bigg] \, h(t) \ .
    \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">so that the values</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-     i_B(0^+) &amp; = \frac{v_{B,0}}{R_{BB}} - \frac{R_{BA}}{R_{BB}} I_A =  \frac{17.91 \, V}{6.81 \, \Omega} - \frac{-1.24}{6.81} \, ( - 0.48 \, A )  &amp;&amp; = 2.54 \, A  \\
-     i_B(+\infty) &amp; = \frac{v_{B,0}}{R_{BB}} = \frac{17.91 \, V}{6.81 \, \Omega} &amp;&amp; = 2.63 \, A
+     i_B(0^+)     &amp; = -\frac{v_{B,0}}{R_{BB}} \left[ 1 + \frac{R_{BA} R_{AB}}{\det \mathbf{R}} \right] = -\frac{v_{B,0} R_{AA}}{\det \mathbf{R}} =  - \frac{7.0345 \, \Omega}{46.345 \, \Omega^2} \, 12.475 \, V = - 1.8929 \, A \\
+     i_B(+\infty) &amp; = -\frac{v_{B,0}}{R_{BB}} = - \dfrac{12.475 \, V}{6.8073 \, \Omega} = -1.8320 \, A \ .
    \end{aligned}\end{split}\]</div>
 </li>
 <li><p class="sd-card-text"><strong>Current <span class="math notranslate nohighlight">\(i(t)\)</span></strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-     i(t) 
-     &amp; = i_{,0} + i_{/i_A} \, i_A(t) + i_{/i_B} \, i_B(t) = \\
-     &amp; = i_{,0} + \left\{ i_{/i_A} \, I_A \, \exp \left( - \frac{t}{\tau} \right) + i_{/i_B} \left[ \frac{v_{B,0}}{R_{BB}} - \frac{R_{BA}}{R_{BB}} I_A \, \exp \left( - \frac{t}{\tau} \right) \right] \right\} \, h(t) = \\
-     &amp; = i_{,0} + i_{/i_B} \frac{v_{B,0}}{R_{BB}} h(t) + \left( i_{/i_A} - i_{/i_B} \frac{R_{BA}}{R_{BB}} \right) \, I_A \, \exp \left( - \frac{t}{\tau} \right) \, h(t) \ .
+     i(t)
+     &amp; = i_{0} - 0.4138 \, i_A(t) + 0.8966 \, i_B(t) = \\
+     &amp; = i_{0} + \left[ - 0.4138 \, i_{A,0^+} e^{-\frac{t}{\tau}}  + 0.8966 \, \left( i_{B,+\infty} + (i_{B,0^+} - i_{B,+\infty}) e^{-\frac{t}{\tau}} \right) \right] \, h(t) \ ,
    \end{aligned}\end{split}\]</div>
-<p class="sd-card-text">so that the values</p>
+<p class="sd-card-text">so that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-     i(0^+)     &amp; =  i_{,0}    + i_{/i_A} \, i_A(0^+    ) + i_{/i_B} \, i_B(0^+    )  = \\
-                &amp; =  1.72 \, A - 0.414    \, i_A(0^+    ) + 0.897    \, i_B(0^+    )  = \\
-                &amp; =  1.72 \, A - 0.20 \, A + 2.44 \, A = \\ \\
-     i(+\infty) &amp; =  i_{,0}    + i_{/i_A} \, i_A(+\infty) + i_{/i_B} \, i_B(+\infty)  = \\
-                &amp; =  1.72 \, A - 0.414    \, i_A(+\infty) + 0.897    \, i_B(+\infty)  = \\
-                &amp; =  1.72 \, A - 0.0 \, A + 2.36 \, A = \\
+     i(0^+)     &amp; = i_{0} - 0.4138 \, i_{A,0^+} + 0.8966 \, i_{B,0^+} = \\
+                &amp; = -1.7214 \, A - 0.4138 \, (-0.334 \, A) + 0.8966 \, (-1.8929 \, A) = -3.2831 \, A \\
+     i(+\infty) &amp; = i_{0} + 0.8966 \, i_{B,+\infty} = \\ 
+                &amp; = -1.7214 \, A + 0.8966 \, (-1.8320 \, A) = - 3.3671 \, A 
    \end{aligned}\end{split}\]</div>
 </li>
 </ul>
+<!--
+   $$\begin{aligned}
+     i(t) 
+     & = i_{,0} + i_{/i_A} \, i_A(t) + i_{/i_B} \, i_B(t) = \\
+     & = i_{,0} + \left\{ i_{/i_A} \, I_A \, \exp \left( - \frac{t}{\tau} \right) + i_{/i_B} \left[ \frac{v_{B,0}}{R_{BB}} - \frac{R_{BA}}{R_{BB}} I_A \, \exp \left( - \frac{t}{\tau} \right) \right] \right\} \, h(t) = \\
+     & = i_{,0} + i_{/i_B} \frac{v_{B,0}}{R_{BB}} h(t) + \left( i_{/i_A} - i_{/i_B} \frac{R_{BA}}{R_{BB}} \right) \, I_A \, \exp \left( - \frac{t}{\tau} \right) \, h(t) \ .
+   \end{aligned}$$
+
+   so that the values
+
+   $$\begin{aligned}
+     i(0^+)     & =  i_{,0}    + i_{/i_A} \, i_A(0^+    ) + i_{/i_B} \, i_B(0^+    )  = \\
+                & =  1.72 \, A - 0.414    \, i_A(0^+    ) + 0.897    \, i_B(0^+    )  = \\
+                & =  1.72 \, A - 0.20 \, A + 2.44 \, A = \\ \\
+     i(+\infty) & =  i_{,0}    + i_{/i_A} \, i_A(+\infty) + i_{/i_B} \, i_B(+\infty)  = \\
+                & =  1.72 \, A - 0.414    \, i_A(+\infty) + 0.897    \, i_B(+\infty)  = \\
+                & =  1.72 \, A - 0.0 \, A + 2.36 \, A = \\
+   \end{aligned}$$
+-->
 <p class="sd-card-text"><strong>Energy stored in the capacitor.</strong></p>
 <div class="math notranslate nohighlight">
 \[E_C(t) = \frac{1}{2} C v_A^2(t) \ ,\]</div>
-<p class="sd-card-text">and for <span class="math notranslate nohighlight">\(t = \tau\)</span>, <span class="math notranslate nohighlight">\(v_A(\tau) = -18.63 \, V\)</span></p>
+<p class="sd-card-text">and for <span class="math notranslate nohighlight">\(t = \tau\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[E_C(\tau) = 0.5 \cdot 5 \cdot 10^{-4} \, F \cdot ( 18.63 \, V )^2 = 8.68 \cdot 10^{-2} \, J\]</div>
+\[\begin{split}\begin{aligned}
+  v_A(t)
+  &amp; = v_{A,0} + \Delta v_{A,+\infty} \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t) = \\
+  &amp; = -20.69 \, V + 2.2742 \, V \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t) \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and thus <span class="math notranslate nohighlight">\(v_A(\tau) = -19.25 \, V\)</span></p>
+<div class="math notranslate nohighlight">
+\[E_C(\tau) = 0.5 \cdot 5 \cdot 10^{-4} \, F \cdot ( 19.25 \, V )^2 = 9.26 \cdot 10^{-2} \, J \ .\]</div>
 </div>
 </details></div>
 </div>
