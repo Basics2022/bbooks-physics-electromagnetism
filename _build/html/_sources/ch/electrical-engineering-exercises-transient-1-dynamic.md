@@ -344,24 +344,27 @@ $$\begin{aligned}
   0 & = e_2 - (R_7+R_8+R_1+R_4+R_6) i_{2,0} \\
   0 & = e_1 - (R_2+R_3) i_{1,0} \\
 \end{aligned}
-\quad \rightarrow \quad
+$$
+$$
 \begin{aligned}
-  i_{2,0} & = \dfrac{e_2}{R_7+R_8+R_1+R_4+R_6} \\
-  i_{1,0} & = \dfrac{e_1}{R_2+R_3} \\
+  i_{2,0} & = \dfrac{1}{R_{14678}} \, e_2 \\
+  i_{1,0} & = \dfrac{1}{R_{23}} \, e_1 \\
 \end{aligned}$$
 
-so that the desired variables read
+with $R_{14678} = R_1+R_4+R_6+R_7+R_8$, and $R_{23} = R_2 + R_3$. The desired physical quantities are
 
 $$\begin{cases}
-  v_{A,0} & = - R_8 i_{2,0} = -\dfrac{R_8}{R_7+R_8+R_1+R_4+R_6} e_2 \\ 
-  v_{B,0} & = - R_4 i_{2,0} + R_3 i_{1,0} = - \dfrac{R_4}{R_7+R_8+R_1+R_4+R_6} e_2 + \dfrac{R_3}{R_2+R_3} e_1 \\
-  i_{0} & = - i_{2,0} = - \dfrac{e_2}{R_7+R_8+R_1+R_4+R_6} 
+  v_{A,0} & = - R_8 i_{2,0} = -\dfrac{R_8}{R_{14678}} e_2 \\ 
+  v_{B,0} & = - R_4 i_{2,0} + R_3 i_{1,0} = - \dfrac{R_4}{R_{14678}} e_2 + \dfrac{R_3}{R_{23}} e_1 \\
+  i_{0} & = - i_{2,0} = - \dfrac{1}{R_{14678}} e_2
 \end{cases}$$
 
+and their values
+
 $$\begin{cases}
- v_{A,0} & =     - 20.69 \, V \\
- v_{B,0} & = \ \ \ 17.91 \, V \\
-   i_{0} & = \ \ \  1.72 \, A \\
+ v_{A,0} & =     - 20.6900 \, V \\
+ v_{B,0} & = \ \ \ 12.4750 \, V \\
+   i_{0} & = \    - 1.7241 \, A \\
 \end{cases}$$
 ```
 
@@ -377,21 +380,21 @@ Callling $i_A$ and $i_B$ the current passing through the current generators conn
 *Powering A*
 
 $$\begin{aligned}
-  0 & = (i_2 - i_A) R_8 + i_2 (R_1 + R_4 + R_6 + R_7) \\
+  0 & = (i_2 - i_A) R_8 + i_2 (R_{14678}) \\
 \rightarrow \quad 
- i_2 & = \frac{R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A
+ i_2 & = \frac{R_8}{R_{14678}} i_A
 \end{aligned}$$
 
 $$\begin{cases}
-  v_{A,A} & =  -R_8 ( i_2 - i_A ) & = \dfrac{R_8(R_1+R_4+R_6+R_7)}{R_1 + R_4 + R_6 + R_7 + R_8} i_A \\
-  v_{B,A} & = - R_4 i_2 & = - \dfrac{R_4 R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A \\
-    i_{,A}& = - i_2 & = - \dfrac{R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A \\
+  v_{A,A} & =  -R_8 ( i_2 - i_A ) & = \dfrac{R_8 R_{1467}}{R_{14678}} i_A \\
+  v_{B,A} & = - R_4 i_2 & = - \dfrac{R_4 R_8}{R_{14678}} i_A \\
+    i_{,A}& = - i_2 & = - \dfrac{R_8}{R_{14678}} i_A \\
 \end{cases}$$
 
 $$\begin{cases}
- v_{A,A} & = R_{AA}   \, i_A & = \ \ \ 7.03  \, \Omega \, i_A \\ 
- v_{B,A} & = R_{BA}   \, i_A & = - 1.24  \, \Omega \, i_A \\
-   i_{,A} & = i_{/i_A}\, i_A & = - 0.414 \ \  i_A \\
+ v_{A,A} & = R_{AA}   \, i_A & = \ \ \ 7.0345  \, \Omega \, i_A \\ 
+ v_{B,A} & = R_{BA}   \, i_A & = - 1.2414  \, \Omega \, i_A \\
+   i_{,A} & = i_{/i_A}\, i_A & = - 0.4138 \ \  i_A \\
 \end{cases}$$
 
 *Powering B.* 
@@ -404,22 +407,22 @@ $$R_{eq} = \big( (R_6 + R_7 + R_8 + R_1) \parallel (R_4)  \big) + \big(R_2 \para
 Currents in the two parallel branches in the upper part of the circuit (current dividers) read
 
 $$\begin{aligned}
-  i_{2,B} & = \frac{R_4}{R_1+R_4+R_6+R_7+R_8} i_B \\
-  i_{3,B} & = \frac{R_2}{R_2+R_3} i_B \\
+  i_{2,B} & = \frac{R_4}{R_{14678}} i_B \\
+  i_{3,B} & = \frac{R_2}{R_{23}} i_B \\
 \end{aligned}$$
 
 and the desired variables
 
 $$\begin{cases}
-  i_{,B}  & = i_{4,B} & = \dfrac{R_1+R_6+R_7+R_8}{R_1+R_4+R_6+R_7+R_8} i_B \\
-  v_{A,B} & = - R_8 i_{2,B} & = - \dfrac{R_4 R_8}{R_1+R_4+R_6+R_7+R_8} i_B  \\
-  v_{B,B} & = R_4 i_{4,B} + R_3 i_{3,B} & = \left[ \dfrac{R_4(R_1+R_6+R_7+R_8)}{R_1+R_4+R_6+R_7+R_8} + \dfrac{R_2 R_3}{R_2+R_3} \right] i_B \\
+  i_{,B}  & = i_{4,B} & = \dfrac{R_{1678}}{R_{14678}} i_B \\
+  v_{A,B} & = - R_8 i_{2,B} & = - \dfrac{R_4 R_8}{R_{14678}} i_B  \\
+  v_{B,B} & = R_4 i_{4,B} + R_3 i_{3,B} & = \left[ \dfrac{R_4(R_{1678})}{R_{14678}} + \dfrac{R_2 R_3}{R_{23}} \right] i_B \\
 \end{cases}$$
 
 $$\begin{cases}
- v_{A,B} & = R_{AB}   \, i_B & =     - 1.24  \, \Omega \, i_B \\ 
- v_{B,B} & = R_{BB}   \, i_B & = \ \ \ 6.81  \, \Omega \, i_B \\
-   i_{,B}& = i_{/i_B} \, i_B & = \ \ \ 0.897 \ \          i_B \\
+ v_{A,B} & = R_{AB}   \, i_B & =     - 1.2414  \, \Omega \, i_B \\ 
+ v_{B,B} & = R_{BB}   \, i_B & = \ \ \ 6.8073  \, \Omega \, i_B \\
+   i_{,B}& = i_{/i_B} \, i_B & = \ \ \ 0.8966 \ \          i_B \\
 \end{cases}$$
 
 ```
@@ -435,23 +438,39 @@ $$\begin{cases}
  i   & = i_{ ,0} + i_{/i_A} \, i_A + i_{/i_B} \, i_B \\
 \end{cases}$$
 
+<!--
 $$\begin{cases}
  v_A & =       - 20.69 \, V  + 7.03  \, \Omega \, i_A - 1.24  \, \Omega \, i_B \\
  v_B & =  \ \ \  17.91 \, V  - 1.24  \, \Omega \, i_A + 6.81  \, \Omega \, i_B \\
  i   & =\ \ \ \ \ 1.72 \, A  - 0.414 \ \       \, i_A + 0.897 \ \          i_B \\
 \end{cases}$$
+-->
 
-so that
+and they can be used to write the currents as a function of the tensions 
 
-$$i_A = \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \delta v_A - R_{AB} \, \delta v_B \right) \ .$$
+$$\begin{aligned}
+  i_A & = \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \Delta v_A(t) - R_{AB} \, \Delta v_B(t) \right) \\
+  i_B & = \dfrac{1}{\det \mathbf{R}} \left(-R_{BA} \, \Delta v_A(t) + R_{AA} \, \Delta v_B(t) \right) \\
+\end{aligned}$$
 
+<!--
 The constitutive equation of the capacitor reads
 
 $$\begin{aligned}
-  0 & = C \dfrac{d v_A}{d t} + i_A = \\
-    & = C \dfrac{d v_A}{d t} + \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \delta v_A - R_{AB} \, \delta v_B \right)  \\ \\
-    &   R_{eq} C \dfrac{d v_A}{d t} + \delta v_A = \frac{ R_{AB} }{ R_{BB} } \, \delta v_B   \ .
+  0 & = C \dfrac{d \Delta v_A}{d t} + i_A = \\
+    & = C \dfrac{d \Delta v_A}{d t} + \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \Delta v_A - R_{AB} \, \Delta v_B \right)  \\ \\
+    &   R_{eq} C \dfrac{d \Delta v_A}{d t} + \Delta v_A = \frac{ R_{AB} }{ R_{BB} } \, \Delta v_B   \ ,
 \end{aligned}$$
+
+with 
+
+$$\begin{aligned}
+  \det \mathbf{R} & = 46.345 \, \Omega^2 \\
+  R_{eq} & = \frac{\det \mathbf{R}}{R_{BB}} = 6.8081 \, \Omega \\
+  \tau & = R_{eq} C = 3.4041 \cdot 10^{-3} \, s \ .
+\end{aligned}$$
+-->
+
 
 The switch command is off for $t \le 0^-$, on for $t > 0$,
 
@@ -460,87 +479,111 @@ $$i_B(t \le 0^{-}) = 0 \qquad , \qquad v_B (t \ge 0^+) = 0 \ .$$
 **Steady solution for $t \le 0^-$.** With switch open $i_B = 0$ and steady conditions $i_A = C \dot{v}_A = 0$,
 
 $$\begin{cases}
-  v_A(0^-) & = v_{A,0} & =       - 20.69 \, V \\
-  v_B(0^-) & = v_{B,0} & = \ \ \   17.91 \, V \\
-    i(0^-) & = i_{ ,0} & = \quad \  1.72 \, A \\
+  v_A(0^-) & = v_{A,0} & =     - 20.6900 \, V \\
+  v_B(0^-) & = v_{B,0} & = \ \ \ 12.4750 \, V \\
+    i(0^-) & = i_{ ,0} & = \    - 1.7241 \, A \\
 \end{cases}$$
 
-**Transient dynamics**, when the switch closes
+**Transient dynamics**. For $t \ge 0$, the switch is closed and thus $v_B(t\ge 0^+) = 0$.
 
-$$\mathbf{R} = \begin{bmatrix} R_{AA} & R_{AB} \\ R_{BA} & R_{BB} \end{bmatrix} = \begin{bmatrix} 7.03 & -1.24 \\ -1.24 & 6.81 \end{bmatrix} \, \Omega$$
-
-$$R_{eq} = \frac{\det \mathbf{R}}{R_{BB}} = \frac{46.34 \, \Omega^2}{ 6.81 \, \Omega} = 6.80 \, \Omega \ .$$
-
-$$\tau = R_{eq} C = 6.8 \, \Omega \cdot 5 \cdot 10^{-4} \, F = 3.4 \cdot 10^{-3} \, s \ . $$
-
-- **Tension across the switch**
+- **Tension across the switch** as a function of time
 
    $$\begin{aligned}
-     v_{B}(t) & = v_{B,0} \, h(-t) \\
-     v_{B}(t) - v_{B,0} & = v_{B,0} \, h(t) \ . 
+     v_{B}(t) & = v_{B,0} \, h(-t) = v_{B,0} ( 1 - h(t) ) \\
+     \Delta v_B(t) & = v_{B}(t) - v_{B,0} = - v_{B,0} \,  h(t) \ . 
    \end{aligned}$$
 
-- **Tension across the capacitor.** The dynamical equation for the difference of the state variable reads
+- **Tension across the capacitor.** Writing $i_A$ across the capacitor as a function of the tensions, the constitutive equation of the capacitor becomes
+
+   $$\begin{aligned}
+  0 & = C \dfrac{d \Delta v_A}{d t} + i_A = \\
+    & = C \dfrac{d \Delta v_A}{d t} + \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \Delta v_A - R_{AB} \, \Delta v_B \right)  \\ \\
+   \end{aligned}$$
 
    $$\begin{cases}
-     R_{eq} C \delta \dot{v}_A + \delta v_{A} = \dfrac{R_{AB}}{R_{BB}} \delta v_{B}(t) = - \dfrac{R_{AB}}{R_{BB}} v_{0,B} \, h(t) \\
-     \delta v_A(0^-) = 0 \ .
+      R_{eq} C \dfrac{d \Delta v_A}{d t} + \Delta v_A = \dfrac{ R_{AB} }{ R_{BB} } \, \Delta v_B(t) = - \dfrac{ R_{AB} }{ R_{BB} } v_{B,0} \, h(t)  \\ \\
+      \Delta v_A(0) = 0 \ ,
    \end{cases}$$
+
+   with 
    
    $$\begin{aligned}
-     \delta v_A(t)
-     & = -\frac{R_{AB}}{R_{BB}} v_{0,B} \, \left[ 1 - \exp\left( - \dfrac{t}{RC} \right) \right] \, h(t) = \\
-     & = \frac{1.24}{6.81} \, 17.91 \, V \, \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) = \\
-     & = 3.26 \, V \, \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) = \\
-     & = \Delta V \, \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) \ .
+     R_{eq} & = \frac{\det \mathbf{R}}{R_{BB}} = 6.8081 \, \Omega \\
+     \tau & = R_{eq} C = 3.4041 \cdot 10^{-3} \, s \\
+     \det \mathbf{R} & = 46.345 \, \Omega^2 \\
    \end{aligned}$$
-   
+
+   The solution of the differential equation provides the difference of the tension through the capacitor w.r.t. the initial steady condition
+
+   $$\Delta v_A(t) = \Delta v_{A,+\infty} \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t) \ ,$$
+
+   with $\Delta v_{A,+\infty} = -\frac{R_{AB}}{R_{BB}} v_{B,0} = 2.2742 \, V$. The voltage across the capacitor as a function of time $t$ thus reads
+
    $$\begin{aligned}
      v_A(t) 
-     & = v_{A,0} + \delta v_A(t) = \\
-     & = v_{A,0} + \Delta V \, \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) \ , 
+     & = v_{A,0} + \Delta v_A(t) = \\
+     & = v_{A,0} + \Delta v_{A,+\infty} \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t) \ ,
    \end{aligned}$$
 
    so that the values
 
    $$\begin{aligned} 
      v_A(0^+) & = v_{A,0}  && = -20.69 \, V \\
-     v_A(+\infty) & = v_{A,0} + \Delta V = -20.69 \, V + 3.26 \, V && = -17.43 \, V
+     v_A(+\infty) & = v_{A,0} + \Delta V = -20.69 \, V + 2.2742 \, V && = -18.4158 \, V
    \end{aligned}$$
 
 - **Current through the capacitor.**
 
    $$\begin{aligned}
-     i_A(t)
-     & = - C \dfrac{d v_A}{d t}(t) = \\
-     & = - \frac{\Delta V}{R_{eq}} \exp \left( - \frac{t}{\tau} \right) \, h(t) = \\
-     & = I_A \, \exp \left( - \frac{t}{\tau} \right) \, h(t) \ , 
+      i_A(t)
+      & = \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \Delta v_A(t) - R_{AB} \, \Delta v_B(t) \right) = \\
+      & = \dfrac{1}{\det \mathbf{R}} \left[ R_{BB} \, \left( -\frac{R_{AB}}{R_{BB}} v_{B,0} \right) \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t)  + R_{AB} \, v_{B,0} \, h(t) \right] = \\
+      & = \frac{R_{AB}}{\det \mathbf{R}} v_{B,0} e^{-\frac{t}{\tau}} \, h(t) \ .
    \end{aligned}$$
 
-   so that the values 
+   so that the values
 
-   $$\begin{aligned}
-     i_A(0^+) & = I_{A} && = - 0.48 \, A \\
-     i_A(+\infty) &     && = 0 \, A
+   $$\begin{aligned} 
+     i_A(0^+) & = \frac{R_{AB}}{\det \mathbf{R}} v_{B,0} = \frac{-1.2414 \, \Omega}{46.908 \, \Omega^2} \, 12.475 \, V = -0.334 \, A \\
+     i_A(+\infty) & = v_{A,0} + \Delta V = -20.69 \, V + 2.2742 \, V && = 0.0 \, A
    \end{aligned}$$
+
+   or with $i_A = - C \frac{d \Delta v_A}{dt}$...
 
 - **Current across the switch**
 
    $$\begin{aligned}
      i_B(t) 
      & = \frac{1}{R_{BB}} \bigg[ v_B(t) - v_{B,0} - R_{BA} i_A(t) \bigg] = \\
-     & = \left[ \frac{v_{B,0}}{R_{BB}} - \frac{R_{BA}}{R_{BB}} I_A \, \exp \left( - \frac{t}{\tau} \right) \right] \, h(t) \ . 
+     & = \frac{1}{R_{BB}} \bigg[ - v_{B,0} - R_{BA} \frac{R_{AB}}{\det \mathbf{R}} v_{B,0} e^{-\frac{t}{\tau}} \bigg] \, h(t) = \\
+     & = - \frac{v_{B,0}}{R_{BB}} \bigg[ 1 + \frac{R_{BA} R_{AB}}{\det \mathbf{R}} \, e^{-\frac{t}{\tau}} \bigg] \, h(t) \ .
    \end{aligned}$$
 
    so that the values
 
    $$\begin{aligned}
-     i_B(0^+) & = \frac{v_{B,0}}{R_{BB}} - \frac{R_{BA}}{R_{BB}} I_A =  \frac{17.91 \, V}{6.81 \, \Omega} - \frac{-1.24}{6.81} \, ( - 0.48 \, A )  && = 2.54 \, A  \\
-     i_B(+\infty) & = \frac{v_{B,0}}{R_{BB}} = \frac{17.91 \, V}{6.81 \, \Omega} && = 2.63 \, A
+     i_B(0^+)     & = -\frac{v_{B,0}}{R_{BB}} \left[ 1 + \frac{R_{BA} R_{AB}}{\det \mathbf{R}} \right] = -\frac{v_{B,0} R_{AA}}{\det \mathbf{R}} =  - \frac{7.0345 \, \Omega}{46.345 \, \Omega^2} \, 12.475 \, V = - 1.8929 \, A \\
+     i_B(+\infty) & = -\frac{v_{B,0}}{R_{BB}} = - \dfrac{12.475 \, V}{6.8073 \, \Omega} = -1.8320 \, A \ .
    \end{aligned}$$
 
 - **Current $i(t)$**
 
+   $$\begin{aligned}
+     i(t)
+     & = i_{0} - 0.4138 \, i_A(t) + 0.8966 \, i_B(t) = \\
+     & = i_{0} + \left[ - 0.4138 \, i_{A,0^+} e^{-\frac{t}{\tau}}  + 0.8966 \, \left( i_{B,+\infty} + (i_{B,0^+} - i_{B,+\infty}) e^{-\frac{t}{\tau}} \right) \right] \, h(t) \ ,
+   \end{aligned}$$
+
+   so that
+
+   $$\begin{aligned}
+     i(0^+)     & = i_{0} - 0.4138 \, i_{A,0^+} + 0.8966 \, i_{B,0^+} = \\
+                & = -1.7214 \, A - 0.4138 \, (-0.334 \, A) + 0.8966 \, (-1.8929 \, A) = -3.2831 \, A \\
+     i(+\infty) & = i_{0} + 0.8966 \, i_{B,+\infty} = \\ 
+                & = -1.7214 \, A + 0.8966 \, (-1.8320 \, A) = - 3.3671 \, A 
+   \end{aligned}$$
+
+<!--
    $$\begin{aligned}
      i(t) 
      & = i_{,0} + i_{/i_A} \, i_A(t) + i_{/i_B} \, i_B(t) = \\
@@ -558,14 +601,23 @@ $$\tau = R_{eq} C = 6.8 \, \Omega \cdot 5 \cdot 10^{-4} \, F = 3.4 \cdot 10^{-3}
                 & =  1.72 \, A - 0.414    \, i_A(+\infty) + 0.897    \, i_B(+\infty)  = \\
                 & =  1.72 \, A - 0.0 \, A + 2.36 \, A = \\
    \end{aligned}$$
+-->
 
 **Energy stored in the capacitor.**
 
 $$E_C(t) = \frac{1}{2} C v_A^2(t) \ ,$$
 
-and for $t = \tau$, $v_A(\tau) = -18.63 \, V$
+and for $t = \tau$,
 
-$$E_C(\tau) = 0.5 \cdot 5 \cdot 10^{-4} \, F \cdot ( 18.63 \, V )^2 = 8.68 \cdot 10^{-2} \, J$$
+$$\begin{aligned}
+  v_A(t)
+  & = v_{A,0} + \Delta v_{A,+\infty} \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t) = \\
+  & = -20.69 \, V + 2.2742 \, V \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t) \ ,
+\end{aligned}$$
+
+and thus $v_A(\tau) = -19.25 \, V$
+
+$$E_C(\tau) = 0.5 \cdot 5 \cdot 10^{-4} \, F \cdot ( 19.25 \, V )^2 = 9.26 \cdot 10^{-2} \, J \ .$$
 
 ````
 
