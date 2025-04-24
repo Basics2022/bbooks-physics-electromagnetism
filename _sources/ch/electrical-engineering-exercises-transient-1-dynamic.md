@@ -275,7 +275,7 @@ $$i_A(t) = \dfrac{R_3 + R_4}{\det \mathbf{R}} \Delta v_A(t) + \dfrac{R_3}{\det \
      i_A(t)
      & = \dfrac{R_3+R_4}{\det \mathbf{R}} \Delta v_A(t) + \dfrac{R_3}{\det \mathbf{R}} \Delta v_B(t) = \\
      & = \dfrac{R_3+R_4}{\det \mathbf{R}} \frac{R_3}{R_3 + R_4} v_{B,0} \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) - \dfrac{R_3}{\det \mathbf{R}} v_{B,0} \, h(t) = \\
-     & = - \dfrac{R_3}{\det \mathbf{R}} v_{B,0} \exp\left( - \dfrac{t}{\tau} \right) \, h(t) \ .
+     & = - \dfrac{R_3}{\det \mathbf{R}} v_{B,0} \exp\left( - \dfrac{t}{\tau} \right) \, h(t) \\
      & = 2.34 \, A \, \exp\left( - \dfrac{t}{\tau} \right) \, h(t) \ .
    \end{aligned}$$
 
