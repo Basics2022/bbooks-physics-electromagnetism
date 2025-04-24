@@ -76,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X6MNXBVGKF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-X6MNXBVGKF');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -473,6 +464,7 @@ document.write(`
 </li>
 </ul>
 </div>
+<!-- ######################################################################## -->
 <div class="exercise admonition" id="exam-25-02-11-exe-01">
 
 <p class="admonition-title"><span class="caption-number">Exercise 10.1 </span> (Exam 2025-02-11, Exercise 1.)</p>
@@ -480,7 +472,7 @@ document.write(`
 <div class="figure align-default">
 <img alt="../_images/exam-2025-02-11-ese-01.png" src="../_images/exam-2025-02-11-ese-01.png" />
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -488,9 +480,183 @@ Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Following the <strong>guidelines for the solution</strong>, a <a class="reference internal" href="electrical-engineering-networks.html#classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-n-port"><span class="std std-ref">many-port Thevenin equivalent circuit</span></a> of the resistive part of the circuit is found, with two ports for interfacing with the capacitor (A) and with the switch. The dynamical equation of the system is written in state-space representation, writing the voltage at the ports and the unknown variable <span class="math notranslate nohighlight">\(i(t)\)</span> as outputs; the capacitor contitutive equation is used to find the time evolution of the system once the switch is closed</p>
+<div class="figure align-default">
+<img alt="../_images/exam-2025-02-11-ese-01-b.png" src="../_images/exam-2025-02-11-ese-01-b.png" />
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Internal generators on, open circuit<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Solution using two loop currents, <span class="math notranslate nohighlight">\(i_1\)</span> in the upper part of the circuit and <span class="math notranslate nohighlight">\(i_2\)</span> in the lower triangle. Using KVL</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 &amp; = e_1 - R_2 i_{1,0} - R_1 (a + i_{1,0}) \\
+  \rightarrow \quad i_{1,0} &amp; = \dfrac{1}{R_1+R_2} e_1 - \frac{R_1}{R_1 + R_2} a \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">so that the desired variables read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  v_{A,0} &amp; = R_3 a - R_2 i_{1,0} = \left[ R_3 + \dfrac{R_1 R_2}{R_1 + R_2} \right] a - \dfrac{R_2}{R_1+R_2} e_1 \\
+  v_{B,0} &amp; = e_2 - (R_3 + R_4) a \\
+  i_{0} &amp; = a
+\end{cases}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ v_{A,0} &amp; = \quad\ 7.67 \, V \\
+ v_{B,0} &amp; =      -13.00 \, V \\
+   i_{0} &amp; = \quad\ 3.00 \, A \\
+\end{cases}\end{split}\]</div>
+</div>
+</details><div class="figure align-default">
+<img alt="../_images/exam-2025-02-11-ese-01-c.png" src="../_images/exam-2025-02-11-ese-01-c.png" />
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Internal generators off, current generators at the ports<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Callling <span class="math notranslate nohighlight">\(i_A\)</span> and <span class="math notranslate nohighlight">\(i_B\)</span> the current passing through the current generators connected at the ports. The solution is found powering one generation at a time and then exploiting PSCE</p>
+<p class="sd-card-text"><em>Powering A</em> …</p>
+<p class="sd-card-text"><em>Powering B.</em> …</p>
+<!-- The equivalent circuit seen by the port $B$ has equivalent resistence
+
+$$R_{eq} = \big( (R_6 + R_7 + R_8 + R_1) \parallel (R_4)  \big) + \big(R_2 \parallel R_3 \big)$$
+-->
+<p class="sd-card-text">Currents in the two parallel branches in the upper part of the circuit (current dividers) read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  i   &amp; = i_A \\
+  v_A &amp; = \left[ R_3 + \dfrac{R_1 R_2}{R_1 + R_2} \right] \, i_A - R_3 \, i_B \\
+  v_B &amp; = -R_3 \, i_A + (R_3 + R_4) \, i_B
+\end{cases}\end{split}\]</div>
+</div>
+</details><div class="figure align-default">
+<img alt="../_images/exam-2025-02-11-ese-01-a.png" src="../_images/exam-2025-02-11-ese-01-a.png" />
+</div>
+<p class="sd-card-text">The equations of the equivalent algebraic system are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ v_A &amp; = v_{A,0} + R_{AA}   \, i_A + R_{AB}   \, i_B \\
+ v_B &amp; = v_{B,0} + R_{BA}   \, i_A + R_{BB}   \, i_B \\
+ i   &amp; = i_{ ,0} + i_{/i_A} \, i_A + i_{/i_B} \, i_B \\
+\end{cases}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} v_A(t) \\ v_B(t) \end{bmatrix} &amp; =
+\begin{bmatrix} v_{A0} \\ v_{B0} \end{bmatrix} + 
+\begin{bmatrix}
+  R_3 + \frac{R_1 R_2}{R_1 + R_2} &amp; -R_3 \\ -R_3 &amp; R_3 + R_4
+\end{bmatrix}
+\begin{bmatrix} i_A(t) \\ i_B(t) \end{bmatrix} \\
+i(t) &amp; = i_0 + i_A(t)
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \det \mathbf{R}
+  &amp; = \left( R_3 + \frac{R_1 R_2}{R_1 + R_2}  \right) \left( R_3 + R_4 \right) - R_3^2 = \\
+  &amp; = ( R_3 + R_4 ) \left( R_3 + \frac{R_1 R_2}{R_1 + R_2} - \dfrac{R_3^2}{R_3 + R_4} \right) = \\
+  &amp; = ( R_3 + R_4 ) \left( \frac{R_1 R_2}{R_1 + R_2} + \dfrac{R_3 R_4}{R_3 + R_4} \right) \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Steady solution for <span class="math notranslate nohighlight">\(t \le 0^-\)</span>.</strong> With switch open <span class="math notranslate nohighlight">\(i_B = 0\)</span> and steady conditions <span class="math notranslate nohighlight">\(i_A = C \dot{v}_A = 0\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+  v_A(0^-) &amp; = v_{A,0} &amp; = \quad\ 7.67 \, V \\
+  v_B(0^-) &amp; = v_{B,0} &amp; =      -13.00 \, V \\
+    i(0^-) &amp; = i_{ ,0} &amp; = \quad\ 3.00 \, A \\
+\end{cases}\end{split}\]</div>
+<p class="sd-card-text"><strong>Transient dynamics</strong>, when the switch closes <span class="math notranslate nohighlight">\(v_B(t \ge 0^+) = 0\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[i_A(t) = \dfrac{R_3 + R_4}{\det \mathbf{R}} \Delta v_A(t) + \dfrac{R_3}{\det \mathbf{R}} \Delta v_B(t)\]</div>
+<ul>
+<li><p class="sd-card-text"><strong>Tension across the switch</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     v_{B}(t) &amp; = v_{B,0} \, h(-t) \\
+     \Delta v_{B}(t) &amp; = v_B(t) - v_{B,0} = - v_{B,0} \, h(t) \ . 
+   \end{aligned}\end{split}\]</div>
+</li>
+<li><p class="sd-card-text"><strong>Tension across the capacitor.</strong> The dynamical equation for the difference of the state variable reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     0 &amp; = i_A + C \dot{v}_A = \\
+       &amp; = \dfrac{R_3 + R_4}{\det \mathbf{R}} \Delta v_A(t) + \dfrac{R_3}{\det \mathbf{R}} \Delta v_B(t) + C \dot{v}_A \ .
+   \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">As <span class="math notranslate nohighlight">\(v_{A}(t=0) = v_{A,0}\)</span> (no jump in state variables without impulsive forcing), <span class="math notranslate nohighlight">\(\Delta v_A = v_A - v_{A,0}\)</span>, and <span class="math notranslate nohighlight">\(\frac{d}{dt} \Delta v_A = \frac{d}{dt} v_A\)</span>, the dynamical equation reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+     \dfrac{\det \mathbf{R}}{R_3 + R_4} C  \dfrac{d}{dt}\Delta v_A + \Delta v_{A} = - \dfrac{R_3}{R_3 + R_4} \Delta v_{B}(t) = \dfrac{R_3}{R_3 + R_4} \, v_{B,0} \, h(t) \\ \\
+     \Delta v_A(0^-) = 0 \ .
+   \end{cases}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+     \Delta v_A(t)
+     &amp; = \frac{R_3}{R_3 + R_4} v_{B,0} \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) \ ,
+   \end{aligned}\]</div>
+<p class="sd-card-text">having defined the time constant and the equivalent reistence seen by the capacitor</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     R_{eq} &amp; := \dfrac{\det \mathbf{R}}{R_3+R_4} = \dfrac{R_1 R_2}{R_1 + R_2} + \dfrac{R_3 R_4}{R_3 + R_4} = \frac{50}{21} \, V = 2.381 \, V  \\ \\
+     \tau   &amp; := R_{eq} C = 1.1905 \, s 
+   \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Tension through the capacitor reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     v_A(t) 
+     &amp; = v_{A,0} + \delta v_A(t) = \\
+     &amp; = v_{A,0} + \Delta v_{A,+\infty} \, \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) \ , 
+   \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">so that the values</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned} 
+     v_A(0^+)     &amp; = v_{A,0} = 7.67 \, V \\
+     v_A(+\infty) &amp; = v_{A,0} + \Delta v_{A,+\infty} = ( 7.667 - 5.571 ) \, V = 2.095 \, V \ .
+   \end{aligned}\end{split}\]</div>
+</li>
+<li><p class="sd-card-text"><strong>Current through the capacitor.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     i_A(t)
+     &amp; = \dfrac{R_3+R_4}{\det \mathbf{R}} \Delta v_A(t) + \dfrac{R_3}{\det \mathbf{R}} \Delta v_B(t) = \\
+     &amp; = \dfrac{R_3+R_4}{\det \mathbf{R}} \frac{R_3}{R_3 + R_4} v_{B,0} \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) - \dfrac{R_3}{\det \mathbf{R}} v_{B,0} \, h(t) = \\
+     &amp; = - \dfrac{R_3}{\det \mathbf{R}} v_{B,0} \exp\left( - \dfrac{t}{\tau} \right) \, h(t) \ .
+     &amp; = 2.34 \, A \, \exp\left( - \dfrac{t}{\tau} \right) \, h(t) \ .
+   \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">so that the values</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     i_A(0^+)     &amp; = 2.34 \, A \\
+     i_A(+\infty) &amp; = 0.00 \, A
+   \end{aligned}\end{split}\]</div>
+</li>
+<li><p class="sd-card-text"><strong>Current <span class="math notranslate nohighlight">\(i(t)\)</span></strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     i(t) 
+     &amp; = i_{,0} + i_A(t) = \\
+     &amp; = a - \dfrac{R_3}{\det \mathbf{R}} v_{B,0} \exp\left( - \dfrac{t}{\tau} \right) \, h(t) \\
+     &amp; = 3.00 \, A + 2.34 \, A \, e^{-\frac{t}{\tau}} h(t) \ ,
+   \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">so that the values</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     i(0^+)     &amp; = 5.35 \, A \\
+     i(+\infty) &amp; = 3.00 \, A
+   \end{aligned}\end{split}\]</div>
+</li>
+</ul>
+<p class="sd-card-text"><strong>Energy stored in the capacitor at <span class="math notranslate nohighlight">\(t = 0\)</span>.</strong> Energy in the capacitor reads</p>
+<div class="math notranslate nohighlight">
+\[E_C(t) = \dfrac{1}{2} C v_A^2(t) \ .\]</div>
+<p class="sd-card-text">At <span class="math notranslate nohighlight">\(t = 0\)</span>, <span class="math notranslate nohighlight">\(v_A(0) = 7.667 \, V\)</span> and <span class="math notranslate nohighlight">\(E_C(0) = 14.694 \, J \)</span>.</p>
 </div>
 </details></div>
 </div>
+<!-- ######################################################################## -->
 <div class="exercise admonition" id="exam-25-01-22-exe-01">
 
 <p class="admonition-title"><span class="caption-number">Exercise 10.2 </span> (Exam 2025-01-22, Exercise 1.)</p>
@@ -544,15 +710,15 @@ Internal generators on, open circuit<div class="sd-summary-down docutils">
 \end{cases}\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
- v_{A,0} &amp; = - 20.69 \, V \\
- v_{B,0} &amp; =  17.91 \, V \\
-   i_{0} &amp; = 1.72 \, A \\
+ v_{A,0} &amp; =     - 20.69 \, V \\
+ v_{B,0} &amp; = \ \ \ 17.91 \, V \\
+   i_{0} &amp; = \ \ \  1.72 \, A \\
 \end{cases}\end{split}\]</div>
 </div>
 </details><div class="figure align-default">
 <img alt="../_images/exam-2025-01-22-ese-01-c.png" src="../_images/exam-2025-01-22-ese-01-c.png" />
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Internal generators off, current generators at the ports<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
@@ -562,31 +728,35 @@ Internal generators off, current generators at the ports<div class="sd-summary-d
 <p class="sd-card-text">Callling <span class="math notranslate nohighlight">\(i_A\)</span> and <span class="math notranslate nohighlight">\(i_B\)</span> the current passing through the current generators connected at the ports. The solution is found powering one generation at a time and then exploiting PSCE</p>
 <p class="sd-card-text"><em>Powering A</em></p>
 <div class="math notranslate nohighlight">
-\[0 = (i_2 - i_A) R_8 + i_2 (R_1 + R_4 + R_6 + R_7)
-\quad \rightarrow \quad
-i_2 = \frac{R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A
-\]</div>
+\[\begin{split}\begin{aligned}
+  0 &amp; = (i_2 - i_A) R_8 + i_2 (R_1 + R_4 + R_6 + R_7) \\
+\rightarrow \quad 
+ i_2 &amp; = \frac{R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A
+\end{aligned}\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
-  v_{A,A} &amp; =   R_8 ( i_2 - i_A ) &amp; = - \dfrac{R_8(R_1+R_4+R_6+R_7)}{R_1 + R_4 + R_6 + R_7 + R_8} i_A \\
+  v_{A,A} &amp; =  -R_8 ( i_2 - i_A ) &amp; = \dfrac{R_8(R_1+R_4+R_6+R_7)}{R_1 + R_4 + R_6 + R_7 + R_8} i_A \\
   v_{B,A} &amp; = - R_4 i_2 &amp; = - \dfrac{R_4 R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A \\
-    i_{,A}&amp; = i_2 &amp; = \dfrac{R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A \\
+    i_{,A}&amp; = - i_2 &amp; = - \dfrac{R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A \\
 \end{cases}\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
- v_{A,A} &amp; = R_{AA}   \, i_A &amp; =   7.03  \, \Omega \, i_A \\ 
+ v_{A,A} &amp; = R_{AA}   \, i_A &amp; = \ \ \ 7.03  \, \Omega \, i_A \\ 
  v_{B,A} &amp; = R_{BA}   \, i_A &amp; = - 1.24  \, \Omega \, i_A \\
-   i_{,A} &amp; = i_{/i_A} \, i_A &amp; =   0.414 \, i_A \\
+   i_{,A} &amp; = i_{/i_A}\, i_A &amp; = - 0.414 \ \  i_A \\
 \end{cases}\end{split}\]</div>
-<p class="sd-card-text"><em>Powering B.</em> The equivalent circuit seen by the port <span class="math notranslate nohighlight">\(B\)</span> has equivalent resistence</p>
-<div class="math notranslate nohighlight">
-\[R_{eq} = \big( (R_6 + R_7 + R_8 + R_1) \parallel (R_4)  \big) + \big(R_2 \parallel R_3 \big)\]</div>
-<p class="sd-card-text">Currents in the two parallel branches in the upper part of the circuit (current divider) read and the voltages across the generators</p>
+<p class="sd-card-text"><em>Powering B.</em></p>
+<!-- The equivalent circuit seen by the port $B$ has equivalent resistence
+
+$$R_{eq} = \big( (R_6 + R_7 + R_8 + R_1) \parallel (R_4)  \big) + \big(R_2 \parallel R_3 \big)$$
+-->
+<p class="sd-card-text">Currents in the two parallel branches in the upper part of the circuit (current dividers) read</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   i_{2,B} &amp; = \frac{R_4}{R_1+R_4+R_6+R_7+R_8} i_B \\
   i_{3,B} &amp; = \frac{R_2}{R_2+R_3} i_B \\
 \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and the desired variables</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
   i_{,B}  &amp; = i_{4,B} &amp; = \dfrac{R_1+R_6+R_7+R_8}{R_1+R_4+R_6+R_7+R_8} i_B \\
@@ -595,9 +765,9 @@ i_2 = \frac{R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A
 \end{cases}\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
- v_{A,B} &amp; = R_{AB}   \, i_B &amp; = - 1.24  \, \Omega \, i_B \\ 
- v_{B,B} &amp; = R_{BB}   \, i_B &amp; =   6.81  \, \Omega \, i_B \\
-   i_{,B}&amp; = i_{/i_B} \, i_B &amp; =   0.897 \, i_B \\
+ v_{A,B} &amp; = R_{AB}   \, i_B &amp; =     - 1.24  \, \Omega \, i_B \\ 
+ v_{B,B} &amp; = R_{BB}   \, i_B &amp; = \ \ \ 6.81  \, \Omega \, i_B \\
+   i_{,B}&amp; = i_{/i_B} \, i_B &amp; = \ \ \ 0.897 \ \          i_B \\
 \end{cases}\end{split}\]</div>
 </div>
 </details><div class="figure align-default">
@@ -610,9 +780,22 @@ i_2 = \frac{R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A
  v_B &amp; = v_{B,0} + R_{BA}   \, i_A + R_{BB}   \, i_B \\
  i   &amp; = i_{ ,0} + i_{/i_A} \, i_A + i_{/i_B} \, i_B \\
 \end{cases}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+ v_A &amp; =       - 20.69 \, V  + 7.03  \, \Omega \, i_A - 1.24  \, \Omega \, i_B \\
+ v_B &amp; =  \ \ \  17.91 \, V  - 1.24  \, \Omega \, i_A + 6.81  \, \Omega \, i_B \\
+ i   &amp; =\ \ \ \ \ 1.72 \, A  - 0.414 \ \       \, i_A + 0.897 \ \          i_B \\
+\end{cases}\end{split}\]</div>
+<p class="sd-card-text">so that</p>
+<div class="math notranslate nohighlight">
+\[i_A = \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \delta v_A - R_{AB} \, \delta v_B \right) \ .\]</div>
 <p class="sd-card-text">The constitutive equation of the capacitor reads</p>
 <div class="math notranslate nohighlight">
-\[i_A = C \dfrac{d v_A}{d t} \ .\]</div>
+\[\begin{split}\begin{aligned}
+  0 &amp; = C \dfrac{d v_A}{d t} + i_A = \\
+    &amp; = C \dfrac{d v_A}{d t} + \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \delta v_A - R_{AB} \, \delta v_B \right)  \\ \\
+    &amp;   R_{eq} C \dfrac{d v_A}{d t} + \delta v_A = \frac{ R_{AB} }{ R_{BB} } \, \delta v_B   \ .
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text">The switch command is off for <span class="math notranslate nohighlight">\(t \le 0^-\)</span>, on for <span class="math notranslate nohighlight">\(t &gt; 0\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[i_B(t \le 0^{-}) = 0 \qquad , \qquad v_B (t \ge 0^+) = 0 \ .\]</div>
@@ -669,14 +852,14 @@ i_2 = \frac{R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
      i_A(t)
-     &amp; = C \dfrac{d v_A}{d t}(t) = \\
-     &amp; = \frac{\Delta V}{R_{eq}} \exp \left( - \frac{t}{\tau} \right) \, h(t) = \\
+     &amp; = - C \dfrac{d v_A}{d t}(t) = \\
+     &amp; = - \frac{\Delta V}{R_{eq}} \exp \left( - \frac{t}{\tau} \right) \, h(t) = \\
      &amp; = I_A \, \exp \left( - \frac{t}{\tau} \right) \, h(t) \ , 
    \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">so that the values</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-     i_A(0^+) &amp; = I_{A} &amp;&amp; = 0.48 \, A \\
+     i_A(0^+) &amp; = I_{A} &amp;&amp; = - 0.48 \, A \\
      i_A(+\infty) &amp;     &amp;&amp; = 0 \, A
    \end{aligned}\end{split}\]</div>
 </li>
@@ -690,7 +873,7 @@ i_2 = \frac{R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A
 <p class="sd-card-text">so that the values</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-     i_B(0^+) &amp; = \frac{v_{B,0}}{R_{BB}} - \frac{R_{BA}}{R_{BB}} I_A =  \frac{17.91 \, V}{6.81 \, \Omega} - \frac{-1.24}{6.81} \, 0.48 \, A  &amp;&amp; = 2.72 \, A  \\
+     i_B(0^+) &amp; = \frac{v_{B,0}}{R_{BB}} - \frac{R_{BA}}{R_{BB}} I_A =  \frac{17.91 \, V}{6.81 \, \Omega} - \frac{-1.24}{6.81} \, ( - 0.48 \, A )  &amp;&amp; = 2.54 \, A  \\
      i_B(+\infty) &amp; = \frac{v_{B,0}}{R_{BB}} = \frac{17.91 \, V}{6.81 \, \Omega} &amp;&amp; = 2.63 \, A
    \end{aligned}\end{split}\]</div>
 </li>
@@ -706,11 +889,11 @@ i_2 = \frac{R_8}{R_1 + R_4 + R_6 + R_7 + R_8} i_A
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
      i(0^+)     &amp; =  i_{,0}    + i_{/i_A} \, i_A(0^+    ) + i_{/i_B} \, i_B(0^+    )  = \\
-                &amp; =  1.72 \, A + 0.414    \, i_A(0^+    ) + 0.897    \, i_B(0^+    )  = \\
-                &amp; =  1.72 \, A + 0.20 \, A + 2.44 \, A = \\ \\
+                &amp; =  1.72 \, A - 0.414    \, i_A(0^+    ) + 0.897    \, i_B(0^+    )  = \\
+                &amp; =  1.72 \, A - 0.20 \, A + 2.44 \, A = \\ \\
      i(+\infty) &amp; =  i_{,0}    + i_{/i_A} \, i_A(+\infty) + i_{/i_B} \, i_B(+\infty)  = \\
-                &amp; =  1.72 \, A + 0.414    \, i_A(+\infty) + 0.897    \, i_B(+\infty)  = \\
-                &amp; =  1.72 \, A + 0.0 \, A + 2.36 \, A = \\
+                &amp; =  1.72 \, A - 0.414    \, i_A(+\infty) + 0.897    \, i_B(+\infty)  = \\
+                &amp; =  1.72 \, A - 0.0 \, A + 2.36 \, A = \\
    \end{aligned}\end{split}\]</div>
 </li>
 </ul>
