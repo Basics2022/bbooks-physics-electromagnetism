@@ -87,7 +87,7 @@
         
 
 \title{electromagnetism}
-\date{23 apr 2025}
+\date{25 apr 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -104,7 +104,7 @@
 
 
 \sphinxAtStartPar
-This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,myst}{.pdf document}.
+This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,download,myst}{.pdf document}.
 
 \sphinxAtStartPar
 \sphinxstylestrong{Introduzione.}
@@ -382,7 +382,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-23 apr 2025
+25 apr 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -1357,7 +1357,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-23 apr 2025
+25 apr 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -2692,13 +2692,18 @@ having recast it as Thevenin’s theorem defining the voltage \(v_{Th}\) and the
 \section{Network analysis of linear circuits \sphinxhyphen{} harmonic regime}
 \label{\detokenize{ch/electrical-engineering-networks-harmonic:network-analysis-of-linear-circuits-harmonic-regime}}\label{\detokenize{ch/electrical-engineering-networks-harmonic:classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic}}\label{\detokenize{ch/electrical-engineering-networks-harmonic::doc}}
 \sphinxAtStartPar
-The harmonic dynamics of a linear circuit can be evaluated in Fourier domain, or using complex numbers to represent harmonic functions. Using voltage signal as a reference for time phase,
+The harmonic dynamics of a linear circuit can be evaluated in Fourier domain, or using complex numbers to represent harmonic functions,
 \begin{equation*}
 \begin{split}\begin{aligned}
-  v(t) & = V_{max} \cos (\Omega t) = \text{re} \{ V_{max} e^{i \Omega t} \} \\
-  i(t) & = I_{max} \cos (\Omega t - \varphi_i) = \text{re} \{ I_{max} e^{i ( \Omega t + \varphi_i )} \} \\
+  v(t) & = V_{max} \cos (\Omega t + \varphi_v) = \text{re} \{ V_{max} e^{i (\Omega t + \varphi_v)} \} = \\
+       & = \sqrt{2} V \cos (\Omega t + \varphi_v) = \sqrt{2} \, \text{re} \{ V e^{i (\Omega t + \varphi_v)} \} = \sqrt{2} \, \text{re} \{ v e^{i \Omega t} \} \\
+  i(t) & = I_{max} \cos (\Omega t + \varphi_i) = \text{re} \{ I_{max} e^{j (\Omega t + \varphi_i)} \} = \\
+       & = \sqrt{2} I \cos (\Omega t + \varphi_i) = \sqrt{2} \, \text{re} \{ I e^{j (\Omega t + \varphi_i)} \} = \sqrt{2} \, \text{re} \{ i e^{j \Omega t} \} \\
 \end{aligned}\end{split}
 \end{equation*}
+\sphinxAtStartPar
+having anticipated the definition {\hyperref[\detokenize{ch/electrical-engineering-networks-harmonic:harmonic:effective-values}]{\sphinxcrossref{Definition 10.5.1}}} of effective tension \(V\) and current \(I\).
+
 
 \subsection{Power}
 \label{\detokenize{ch/electrical-engineering-networks-harmonic:power}}\label{\detokenize{ch/electrical-engineering-networks-harmonic:classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic-power}}
@@ -2726,17 +2731,28 @@ and the property \(\cos(-x) = \cos x\).
 \begin{split}\overline{P} = \frac{1}{T} \int_{t=t_0}^{t_0+T} P(t) \, dt = \frac{V_{max} I_{max}}{2} = V I\ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-as the integral of the harmonic term with period \(\frac{T}{2}\) of the instantaneous power \eqref{equation:ch/electrical-engineering-networks-harmonic:eq:harmonic:power:instantaneous} is identically zero, and with the definition of the \sphinxstylestrong{effective voltage and current},
+as the integral of the harmonic term with period \(\frac{T}{2}\) of the instantaneous power \eqref{equation:ch/electrical-engineering-networks-harmonic:eq:harmonic:power:instantaneous} is identically zero, and with the definition of the \sphinxstylestrong{effective voltage and current}
+\label{ch/electrical-engineering-networks-harmonic:harmonic:effective-values}
+\begin{sphinxadmonition}{note}{Definition 10.5.1 (Effective voltage and current in AC)}
+
+
+
+\sphinxAtStartPar
+Effective voltage and currents
 \begin{equation*}
-\begin{split}V := \frac{V_{max}}{\sqrt{2}} \quad , \quad I := \frac{I_{max}}{\sqrt{2}} \ . \end{split}
+\begin{split}V := \frac{V_{max}}{\sqrt{2}} \quad , \quad I := \frac{I_{max}}{\sqrt{2}} \ , \end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Complex power.} Complex power of a dipole with impedence \(Z\), \(V =  Z I\)
+are defined as those voltage and current in DC providing the same value of average power.
+\end{sphinxadmonition}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Complex power.} Complex power of a dipole with impedence \(Z\), \(v =  Z i\)
 \begin{equation*}
 \begin{split}\begin{aligned}
   S 
-  & := V I^* = |V|e^{i \varphi_V} |I| e^{-i \varphi_I} = |V| |I| e^{i(\varphi_V - \varphi_I)} = \\
-  & = Z I I^* = Z |I|^2 = (R + i X ) |I|^2 = |Z||I|^2 e^{i \varphi_Z} = P + i Q \ ,
+  & := v i^* = |v|e^{j \varphi_v} |i| e^{-j \varphi_i} = |v| |i| e^{j(\varphi_v - \varphi_i)} = \\
+  & = Z i i^* = Z |i|^2 = (R + j X ) |i|^2 = |Z||i|^2 e^{j \varphi_Z} = P + j Q \ ,
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
@@ -2850,7 +2866,140 @@ Theory: overload in cables
 
 
 \subsection{Transient dynamics of linear electrical grids with one dynamic component}
-\label{\detokenize{ch/electrical-engineering-exercises-transient-1-dynamic:transient-dynamics-of-linear-electrical-grids-with-one-dynamic-component}}\label{\detokenize{ch/electrical-engineering-exercises-transient-1-dynamic:classical-electromagnetism-electrical-engineering-exercises-transient-1-dynamic}}\label{\detokenize{ch/electrical-engineering-exercises-transient-1-dynamic::doc}}\phantomsection \label{exercise:exam-25-02-11-exe-01}
+\label{\detokenize{ch/electrical-engineering-exercises-transient-1-dynamic:transient-dynamics-of-linear-electrical-grids-with-one-dynamic-component}}\label{\detokenize{ch/electrical-engineering-exercises-transient-1-dynamic:classical-electromagnetism-electrical-engineering-exercises-transient-1-dynamic}}\label{\detokenize{ch/electrical-engineering-exercises-transient-1-dynamic::doc}}
+\begin{sphinxadmonition}{note}{Guidelines for solution}
+
+\sphinxAtStartPar
+A many\sphinxhyphen{}port Thevenin equivalent circuit of the resistive part of the circuit is found, with two ports for interfacing with the dynamical component (A) and with the switch (B), exploiting PSCE,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  v_A & = v_{0,A}(\mathbf{e},\mathbf{a}) + R_{AA} i_A + R_{AB} i_B \\
+  v_B & = v_{0,B}(\mathbf{e},\mathbf{a}) + R_{BA} i_A + R_{BB} i_B \\
+  i   & =   i_{0}(\mathbf{e},\mathbf{a}) + i_{/i_A} i_A + i_{/i_B} i_B
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The constitutive equation of the dynamical equation is used to evaluate the time evolution of the system, given the initial conditions \sphinxhyphen{} usually steady conditions with switches open. If the dynamical element is a capacitor,
+\begin{equation*}
+\begin{split}i_A = - C \dfrac{d v_A}{dt} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Typically, (1) the generators provides steady inputs, (2) for \(t = 0^{-}\) the switch is open, and closes at \(t = 0\). At \(t=0\) an impulsive forcing, and thus a jump, in some physical quantity may occur.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Steady conditions for \(t \le 0^-\).} Steady conditions with the switch is open imply
+\begin{equation*}
+\begin{split}\begin{aligned}
+       i_B & = 0 && \text{open switch} \\
+       i_A & = 0 && \text{steady conditions and $i_A = C \dot{v}_A = 0$} \\
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Transient dynamics.} At \(t = 0\) the switch closes, so that the tension at the switch immediately goes from the steady value evaluated for \(t \le 0^-\) to the value
+\begin{equation*}
+\begin{split}v_B(t) = 0 \qquad , \qquad \text{for $t > 0$} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus, its value and its time derivative w.r.t. time, \(t \in (-\infty, +\infty)\) can be written as
+\begin{equation*}
+\begin{split}\begin{aligned}
+        v_B  (t) & = v_B(0^-) h(-t) \\
+    \dot{v}_B(t) & = - v_B(0^-) \delta(t) \ ,
+  \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having used the step function \(h(t)\) and Dirac’s delta \(\delta(t)\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Method 1. Dynamical equation for the state variable, here \(v_A\).} Writing the dynamical equation for the state variable should give a dynamical equation with no impulsive forcing and thus no jump in the physical quantity. Using the equations of the equivalent model, it’s possible to write \(v_A\) as a function of \(i_A\), \(v_B\) and the constant tensions \(v_{0,A}\), \(v_{0,B}\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  v_A(t) 
+  & = v_{0,A} + R_{AA} i_A + \frac{R_{AB}}{R_{BB}} \left[ v_B(t) - v_{0,B} - R_{BA} i_A  \right] = \\
+  & = v_{0,A} - \frac{R_{AB}}{R_{BB}} v_{0,B} + \frac{R_{AB}}{R_{BB}} v_{B}(t) + \left[ R_{AA} - \frac{R_{BA} R_{AB}}{R_{BB}} \right] i_A(t)  = \\
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}i_A(t) = \frac{R_{BB}}{\text{det} \mathbf{R}} v_A(t) - \frac{R_{BB} v_{0,A} - R_{AB} ( v_{0,B}- v_{B}(t) ) }{\text{det} \mathbf{R}} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the dynamical equation for \(v_A(t)\) reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 
+  & = C \frac{d v_A}{dt} + i_A = \\
+  & = C \frac{d v_A}{dt} + \frac{R_{BB}}{\det \mathbf{R}} v_A(t) - \frac{R_{BB} v_{0,A} - R_{AB} ( v_{0,B}- v_{B}(t) ) }{\det \mathbf{R}} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}R_{eq} C \frac{d v_A}{dt} + v_A(t) =  v_{0,A} - \frac{R_{AB}}{R_{BB}} ( v_{0,B}- v_{B}(t) )  \end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(R_{eq} := \dfrac{\det \mathbf{R}}{R_{BB}}\). If \(i_A(0^-) = i_B(0^-) = 0\), then
+\begin{equation*}
+\begin{split}\begin{aligned}
+  v_{B}(t) & = v_{0,B} h(-t) \\
+  v_{0,B} - v_{B}(t) & = v_{0,B} h(t)  \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+With the initial conditions \(v_{A}(0^-) = v_{0,A}\), and defining the difference with the initial steady conditions, \(\delta v_A(t) := v_A(t) - v_{0,A}\), \(\delta v_B(t) = v_B(t) - v_{0,B}\), the initial condition for the difference reads \(\delta v_{A}(0^-) = 0\), so that the Cauchy problem to be solved reads
+\begin{equation*}
+\begin{split}\begin{cases}
+  RC \delta \dot{v}_A + \delta v_{A} = \dfrac{R_{AB}}{R_{BB}} \delta v_{B}(t) = - \dfrac{R_{AB}}{R_{BB}} v_{0,B} h(t) \\
+  \delta v_A(0^-) = 0 \ .
+\end{cases}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\delta v_A(t) = -\frac{R_{AB}}{R_{BB}} v_{0,B} \, \left[ 1 - \exp\left( - \dfrac{t}{RC} \right) \right] \, h(t) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Once the solution \(\delta v_A(t)\) is found,
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+voltage across the capacitor reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+     v_A(t)
+     & = \delta v_A(t) + v_{A,0} = \\
+     & = v_{A,0} - \frac{R_{AB}}{R_{BB}} v_{0,B} \, \left[ 1 - \exp\left( - \dfrac{t}{RC} \right) \right] \, h(t) \ ,
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+current through the capacitor reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+     i_A(t) 
+     & = C \dfrac{d v_A}{dt}(t) = \\
+     & = \frac{R_{AB}}{\det \mathbf{R}} \exp\left( - \dfrac{t}{RC}  \right) \, h(t) \ ,
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+as \(R = \frac{\det \mathbf{R}}{R_{BB}}\);
+
+\item {} 
+\sphinxAtStartPar
+current through the switch reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+     i_B(t)
+     & = \frac{1}{R_{BB}} \left[ v_B(t) - v_{0,B} - R_{BA} i_A(t) \right] = \\
+     & = - \frac{v_{0,B}}{R_{BB}} \, h(t) - \frac{R_{BA} R_{AB}}{R_{BB} \det \mathbf{R} } \exp \left( -\dfrac{t}{RC} \right) \, h(t) \ .
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+the desired current reads
+\begin{equation*}
+\begin{split}i(t) = i_0(\mathbf{e}, \mathbf{a}) + i_{/i_A} i_A(t) + i_{/i_B} i_B(t) \ .\end{split}
+\end{equation*}
+\end{itemize}
+\end{sphinxadmonition}
+
+
+\phantomsection \label{exercise:exam-25-02-11-exe-01}
 
 \begin{sphinxadmonition}{note}{Exercise 10.6.1 (Exam 2025\sphinxhyphen{}02\sphinxhyphen{}11, Exercise 1.)}
 
@@ -2861,7 +3010,221 @@ Theory: overload in cables
 
 \noindent\sphinxincludegraphics{{exam-2025-02-11-ese-01}.png}
 \end{figure}
+\subsubsection*{Solution}
+
+\sphinxAtStartPar
+Following the \sphinxstylestrong{guidelines for the solution}, a {\hyperref[\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-n-port}]{\sphinxcrossref{\DUrole{std,std-ref}{many\sphinxhyphen{}port Thevenin equivalent circuit}}}} of the resistive part of the circuit is found, with two ports for interfacing with the capacitor (A) and with the switch. The dynamical equation of the system is written in state\sphinxhyphen{}space representation, writing the voltage at the ports and the unknown variable \(i(t)\) as outputs; the capacitor contitutive equation is used to find the time evolution of the system once the switch is closed
+
+\begin{figure}[htbp]
+\centering
+
+\noindent\sphinxincludegraphics{{exam-2025-02-11-ese-01-b}.png}
+\end{figure}
+\subsubsection*{Internal generators on, open circuit}
+
+\sphinxAtStartPar
+Solution using two loop currents, \(i_1\) in the upper part of the circuit and \(i_2\) in the lower triangle. Using KVL
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 & = e_1 - R_2 i_{1,0} - R_1 (a + i_{1,0}) \\
+  \rightarrow \quad i_{1,0} & = \dfrac{1}{R_1+R_2} e_1 - \frac{R_1}{R_1 + R_2} a \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the desired variables read
+\begin{equation*}
+\begin{split}\begin{cases}
+  v_{A,0} & = R_3 a - R_2 i_{1,0} = \left[ R_3 + \dfrac{R_1 R_2}{R_1 + R_2} \right] a - \dfrac{R_2}{R_1+R_2} e_1 \\
+  v_{B,0} & = e_2 - (R_3 + R_4) a \\
+  i_{0} & = a
+\end{cases}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{cases}
+ v_{A,0} & = \quad\ 7.67 \, V \\
+ v_{B,0} & =      -13.00 \, V \\
+   i_{0} & = \quad\ 3.00 \, A \\
+\end{cases}\end{split}
+\end{equation*}
+\begin{figure}[htbp]
+\centering
+
+\noindent\sphinxincludegraphics{{exam-2025-02-11-ese-01-c}.png}
+\end{figure}
+\subsubsection*{Internal generators off, current generators at the ports}
+
+\sphinxAtStartPar
+Callling \(i_A\) and \(i_B\) the current passing through the current generators connected at the ports. The solution is found powering one generation at a time and then exploiting PSCE
+
+\sphinxAtStartPar
+\sphinxstyleemphasis{Powering A} …
+
+\sphinxAtStartPar
+\sphinxstyleemphasis{Powering B.} …
+
+
+
+\sphinxAtStartPar
+Currents in the two parallel branches in the upper part of the circuit (current dividers) read
+\begin{equation*}
+\begin{split}\begin{cases}
+  i   & = i_A \\
+  v_A & = \left[ R_3 + \dfrac{R_1 R_2}{R_1 + R_2} \right] \, i_A - R_3 \, i_B \\
+  v_B & = -R_3 \, i_A + (R_3 + R_4) \, i_B
+\end{cases}\end{split}
+\end{equation*}
+\begin{figure}[htbp]
+\centering
+
+\noindent\sphinxincludegraphics{{exam-2025-02-11-ese-01-a}.png}
+\end{figure}
+
+\sphinxAtStartPar
+The equations of the equivalent algebraic system are
+\begin{equation*}
+\begin{split}\begin{cases}
+ v_A & = v_{A,0} + R_{AA}   \, i_A + R_{AB}   \, i_B \\
+ v_B & = v_{B,0} + R_{BA}   \, i_A + R_{BB}   \, i_B \\
+ i   & = i_{ ,0} + i_{/i_A} \, i_A + i_{/i_B} \, i_B \\
+\end{cases}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+\begin{bmatrix} v_A(t) \\ v_B(t) \end{bmatrix} & =
+\begin{bmatrix} v_{A0} \\ v_{B0} \end{bmatrix} + 
+\begin{bmatrix}
+  R_3 + \frac{R_1 R_2}{R_1 + R_2} & -R_3 \\ -R_3 & R_3 + R_4
+\end{bmatrix}
+\begin{bmatrix} i_A(t) \\ i_B(t) \end{bmatrix} \\
+i(t) & = i_0 + i_A(t)
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \det \mathbf{R}
+  & = \left( R_3 + \frac{R_1 R_2}{R_1 + R_2}  \right) \left( R_3 + R_4 \right) - R_3^2 = \\
+  & = ( R_3 + R_4 ) \left( R_3 + \frac{R_1 R_2}{R_1 + R_2} - \dfrac{R_3^2}{R_3 + R_4} \right) = \\
+  & = ( R_3 + R_4 ) \left( \frac{R_1 R_2}{R_1 + R_2} + \dfrac{R_3 R_4}{R_3 + R_4} \right) \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Steady solution for \(t \le 0^-\).} With switch open \(i_B = 0\) and steady conditions \(i_A = C \dot{v}_A = 0\),
+\begin{equation*}
+\begin{split}\begin{cases}
+  v_A(0^-) & = v_{A,0} & = \quad\ 7.67 \, V \\
+  v_B(0^-) & = v_{B,0} & =      -13.00 \, V \\
+    i(0^-) & = i_{ ,0} & = \quad\ 3.00 \, A \\
+\end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Transient dynamics}, when the switch closes \(v_B(t \ge 0^+) = 0\),
+\begin{equation*}
+\begin{split}i_A(t) = \dfrac{R_3 + R_4}{\det \mathbf{R}} \Delta v_A(t) + \dfrac{R_3}{\det \mathbf{R}} \Delta v_B(t)\end{split}
+\end{equation*}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Tension across the switch}
+\begin{equation*}
+\begin{split}\begin{aligned}
+     v_{B}(t) & = v_{B,0} \, h(-t) \\
+     \Delta v_{B}(t) & = v_B(t) - v_{B,0} = - v_{B,0} \, h(t) \ . 
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Tension across the capacitor.} The dynamical equation for the difference of the state variable reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+     0 & = i_A + C \dot{v}_A = \\
+       & = \dfrac{R_3 + R_4}{\det \mathbf{R}} \Delta v_A(t) + \dfrac{R_3}{\det \mathbf{R}} \Delta v_B(t) + C \dot{v}_A \ .
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As \(v_{A}(t=0) = v_{A,0}\) (no jump in state variables without impulsive forcing), \(\Delta v_A = v_A - v_{A,0}\), and \(\frac{d}{dt} \Delta v_A = \frac{d}{dt} v_A\), the dynamical equation reads
+\begin{equation*}
+\begin{split}\begin{cases}
+     \dfrac{\det \mathbf{R}}{R_3 + R_4} C  \dfrac{d}{dt}\Delta v_A + \Delta v_{A} = - \dfrac{R_3}{R_3 + R_4} \Delta v_{B}(t) = \dfrac{R_3}{R_3 + R_4} \, v_{B,0} \, h(t) \\ \\
+     \Delta v_A(0^-) = 0 \ .
+   \end{cases}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+     \Delta v_A(t)
+     & = \frac{R_3}{R_3 + R_4} v_{B,0} \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) \ ,
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having defined the time constant and the equivalent reistence seen by the capacitor
+\begin{equation*}
+\begin{split}\begin{aligned}
+     R_{eq} & := \dfrac{\det \mathbf{R}}{R_3+R_4} = \dfrac{R_1 R_2}{R_1 + R_2} + \dfrac{R_3 R_4}{R_3 + R_4} = \frac{50}{21} \, V = 2.381 \, V  \\ \\
+     \tau   & := R_{eq} C = 1.1905 \, s 
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Tension through the capacitor reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+     v_A(t) 
+     & = v_{A,0} + \delta v_A(t) = \\
+     & = v_{A,0} + \Delta v_{A,+\infty} \, \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) \ , 
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the values
+\begin{equation*}
+\begin{split}\begin{aligned} 
+     v_A(0^+)     & = v_{A,0} = 7.67 \, V \\
+     v_A(+\infty) & = v_{A,0} + \Delta v_{A,+\infty} = ( 7.667 - 5.571 ) \, V = 2.095 \, V \ .
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Current through the capacitor.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+     i_A(t)
+     & = \dfrac{R_3+R_4}{\det \mathbf{R}} \Delta v_A(t) + \dfrac{R_3}{\det \mathbf{R}} \Delta v_B(t) = \\
+     & = \dfrac{R_3+R_4}{\det \mathbf{R}} \frac{R_3}{R_3 + R_4} v_{B,0} \left[ 1 - \exp\left( - \dfrac{t}{\tau} \right) \right] \, h(t) - \dfrac{R_3}{\det \mathbf{R}} v_{B,0} \, h(t) = \\
+     & = - \dfrac{R_3}{\det \mathbf{R}} v_{B,0} \exp\left( - \dfrac{t}{\tau} \right) \, h(t) \\
+     & = 2.34 \, A \, \exp\left( - \dfrac{t}{\tau} \right) \, h(t) \ .
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the values
+\begin{equation*}
+\begin{split}\begin{aligned}
+     i_A(0^+)     & = 2.34 \, A \\
+     i_A(+\infty) & = 0.00 \, A
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Current \(i(t)\)}
+\begin{equation*}
+\begin{split}\begin{aligned}
+     i(t) 
+     & = i_{,0} + i_A(t) = \\
+     & = a - \dfrac{R_3}{\det \mathbf{R}} v_{B,0} \exp\left( - \dfrac{t}{\tau} \right) \, h(t) \\
+     & = 3.00 \, A + 2.34 \, A \, e^{-\frac{t}{\tau}} h(t) \ ,
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the values
+\begin{equation*}
+\begin{split}\begin{aligned}
+     i(0^+)     & = 5.35 \, A \\
+     i(+\infty) & = 3.00 \, A
+   \end{aligned}\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Energy stored in the capacitor at \(t = 0\).} Energy in the capacitor reads
+\begin{equation*}
+\begin{split}E_C(t) = \dfrac{1}{2} C v_A^2(t) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+At \(t = 0\), \(v_A(0) = 7.667 \, V\) and \(E_C(0) = 14.694 \, J \).
 \end{sphinxadmonition}
+
+
 \phantomsection \label{exercise:exam-25-01-22-exe-01}
 
 \begin{sphinxadmonition}{note}{Exercise 10.6.2 (Exam 2025\sphinxhyphen{}01\sphinxhyphen{}22, Exercise 1.)}
@@ -2873,7 +3236,294 @@ Theory: overload in cables
 
 \noindent\sphinxincludegraphics{{exam-2025-01-22-ese-01}.png}
 \end{figure}
-\end{sphinxadmonition}
+\subsubsection*{Solution}
+
+\sphinxAtStartPar
+Following the \sphinxstylestrong{guidelines for the solution}, a {\hyperref[\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-n-port}]{\sphinxcrossref{\DUrole{std,std-ref}{many\sphinxhyphen{}port Thevenin equivalent circuit}}}} of the resistive part of the circuit is found, with two ports for interfacing with the capacitor (A) and with the switch. The dynamical equation of the system is written in state\sphinxhyphen{}space representation, writing the voltage at the ports and the unknown variable \(i(t)\) as outputs; the capacitor contitutive equation is used to find the time evolution of the system once the switch is closed
+
+
+
+\begin{figure}[htbp]
+\centering
+
+\noindent\sphinxincludegraphics{{exam-2025-01-22-ese-01-b}.png}
+\end{figure}
+\subsubsection*{Internal generators on, open circuit}
+
+\sphinxAtStartPar
+Solution using two loop currents, \(i_1\) in the upper part of the circuit and \(i_2\) in the lower triangle. Using KVL
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 & = e_2 - (R_7+R_8+R_1+R_4+R_6) i_{2,0} \\
+  0 & = e_1 - (R_2+R_3) i_{1,0} \\
+\end{aligned}
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+\begin{aligned}
+  i_{2,0} & = \dfrac{1}{R_{14678}} \, e_2 \\
+  i_{1,0} & = \dfrac{1}{R_{23}} \, e_1 \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(R_{14678} = R_1+R_4+R_6+R_7+R_8\), and \(R_{23} = R_2 + R_3\). The desired physical quantities are
+\begin{equation*}
+\begin{split}\begin{cases}
+  v_{A,0} & = - R_8 i_{2,0} = -\dfrac{R_8}{R_{14678}} e_2 \\ 
+  v_{B,0} & = - R_4 i_{2,0} + R_3 i_{1,0} = - \dfrac{R_4}{R_{14678}} e_2 + \dfrac{R_3}{R_{23}} e_1 \\
+  i_{0} & = - i_{2,0} = - \dfrac{1}{R_{14678}} e_2
+\end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and their values
+\begin{equation*}
+\begin{split}\begin{cases}
+ v_{A,0} & =     - 20.6900 \, V \\
+ v_{B,0} & = \ \ \ 12.4750 \, V \\
+   i_{0} & = \    - 1.7241 \, A \\
+\end{cases}\end{split}
+\end{equation*}
+\begin{figure}[htbp]
+\centering
+
+\noindent\sphinxincludegraphics{{exam-2025-01-22-ese-01-c}.png}
+\end{figure}
+\subsubsection*{Internal generators off, current generators at the ports}
+
+\sphinxAtStartPar
+Callling \(i_A\) and \(i_B\) the current passing through the current generators connected at the ports. The solution is found powering one generation at a time and then exploiting PSCE
+
+\sphinxAtStartPar
+\sphinxstyleemphasis{Powering A}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 & = (i_2 - i_A) R_8 + i_2 (R_{14678}) \\
+\rightarrow \quad 
+ i_2 & = \frac{R_8}{R_{14678}} i_A
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{cases}
+  v_{A,A} & =  -R_8 ( i_2 - i_A ) & = \dfrac{R_8 R_{1467}}{R_{14678}} i_A \\
+  v_{B,A} & = - R_4 i_2 & = - \dfrac{R_4 R_8}{R_{14678}} i_A \\
+    i_{,A}& = - i_2 & = - \dfrac{R_8}{R_{14678}} i_A \\
+\end{cases}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{cases}
+ v_{A,A} & = R_{AA}   \, i_A & = \ \ \ 7.0345  \, \Omega \, i_A \\ 
+ v_{B,A} & = R_{BA}   \, i_A & = - 1.2414  \, \Omega \, i_A \\
+   i_{,A} & = i_{/i_A}\, i_A & = - 0.4138 \ \  i_A \\
+\end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstyleemphasis{Powering B.}
+
+
+
+\sphinxAtStartPar
+Currents in the two parallel branches in the upper part of the circuit (current dividers) read
+\begin{equation*}
+\begin{split}\begin{aligned}
+  i_{2,B} & = \frac{R_4}{R_{14678}} i_B \\
+  i_{3,B} & = \frac{R_2}{R_{23}} i_B \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the desired variables
+\begin{equation*}
+\begin{split}\begin{cases}
+  i_{,B}  & = i_{4,B} & = \dfrac{R_{1678}}{R_{14678}} i_B \\
+  v_{A,B} & = - R_8 i_{2,B} & = - \dfrac{R_4 R_8}{R_{14678}} i_B  \\
+  v_{B,B} & = R_4 i_{4,B} + R_3 i_{3,B} & = \left[ \dfrac{R_4(R_{1678})}{R_{14678}} + \dfrac{R_2 R_3}{R_{23}} \right] i_B \\
+\end{cases}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{cases}
+ v_{A,B} & = R_{AB}   \, i_B & =     - 1.2414  \, \Omega \, i_B \\ 
+ v_{B,B} & = R_{BB}   \, i_B & = \ \ \ 6.8073  \, \Omega \, i_B \\
+   i_{,B}& = i_{/i_B} \, i_B & = \ \ \ 0.8966 \ \          i_B \\
+\end{cases}\end{split}
+\end{equation*}
+\begin{figure}[htbp]
+\centering
+
+\noindent\sphinxincludegraphics{{exam-2025-01-22-ese-01-a}.png}
+\end{figure}
+
+\sphinxAtStartPar
+The equations of the equivalent algebraic system are
+\begin{equation*}
+\begin{split}\begin{cases}
+ v_A & = v_{A,0} + R_{AA}   \, i_A + R_{AB}   \, i_B \\
+ v_B & = v_{B,0} + R_{BA}   \, i_A + R_{BB}   \, i_B \\
+ i   & = i_{ ,0} + i_{/i_A} \, i_A + i_{/i_B} \, i_B \\
+\end{cases}\end{split}
+\end{equation*}
+
+
+\sphinxAtStartPar
+and they can be used to write the currents as a function of the tensions
+\begin{equation*}
+\begin{split}\begin{aligned}
+  i_A & = \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \Delta v_A(t) - R_{AB} \, \Delta v_B(t) \right) \\
+  i_B & = \dfrac{1}{\det \mathbf{R}} \left(-R_{BA} \, \Delta v_A(t) + R_{AA} \, \Delta v_B(t) \right) \\
+\end{aligned}\end{split}
+\end{equation*}
+
+
+\sphinxAtStartPar
+The switch command is off for \(t \le 0^-\), on for \(t > 0\),
+\begin{equation*}
+\begin{split}i_B(t \le 0^{-}) = 0 \qquad , \qquad v_B (t \ge 0^+) = 0 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Steady solution for \(t \le 0^-\).} With switch open \(i_B = 0\) and steady conditions \(i_A = C \dot{v}_A = 0\),
+\begin{equation*}
+\begin{split}\begin{cases}
+  v_A(0^-) & = v_{A,0} & =     - 20.6900 \, V \\
+  v_B(0^-) & = v_{B,0} & = \ \ \ 12.4750 \, V \\
+    i(0^-) & = i_{ ,0} & = \    - 1.7241 \, A \\
+\end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Transient dynamics}. For \(t \ge 0\), the switch is closed and thus \(v_B(t\ge 0^+) = 0\).
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Tension across the switch} as a function of time
+\begin{equation*}
+\begin{split}\begin{aligned}
+     v_{B}(t) & = v_{B,0} \, h(-t) = v_{B,0} ( 1 - h(t) ) \\
+     \Delta v_B(t) & = v_{B}(t) - v_{B,0} = - v_{B,0} \,  h(t) \ . 
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Tension across the capacitor.} Writing \(i_A\) across the capacitor as a function of the tensions, the constitutive equation of the capacitor becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 & = C \dfrac{d \Delta v_A}{d t} + i_A = \\
+    & = C \dfrac{d \Delta v_A}{d t} + \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \Delta v_A - R_{AB} \, \Delta v_B \right)  \\ \\
+   \end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{cases}
+      R_{eq} C \dfrac{d \Delta v_A}{d t} + \Delta v_A = \dfrac{ R_{AB} }{ R_{BB} } \, \Delta v_B(t) = - \dfrac{ R_{AB} }{ R_{BB} } v_{B,0} \, h(t)  \\ \\
+      \Delta v_A(0) = 0 \ ,
+   \end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with
+\begin{equation*}
+\begin{split}\begin{aligned}
+     R_{eq} & = \frac{\det \mathbf{R}}{R_{BB}} = 6.8081 \, \Omega \\
+     \tau & = R_{eq} C = 3.4041 \cdot 10^{-3} \, s \\
+     \det \mathbf{R} & = 46.345 \, \Omega^2 \\
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The solution of the differential equation provides the difference of the tension through the capacitor w.r.t. the initial steady condition
+\begin{equation*}
+\begin{split}\Delta v_A(t) = \Delta v_{A,+\infty} \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\Delta v_{A,+\infty} = -\frac{R_{AB}}{R_{BB}} v_{B,0} = 2.2742 \, V\). The voltage across the capacitor as a function of time \(t\) thus reads
+\begin{equation*}
+\begin{split}\begin{aligned}
+     v_A(t) 
+     & = v_{A,0} + \Delta v_A(t) = \\
+     & = v_{A,0} + \Delta v_{A,+\infty} \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t) \ ,
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the values
+\begin{equation*}
+\begin{split}\begin{aligned} 
+     v_A(0^+) & = v_{A,0}  && = -20.69 \, V \\
+     v_A(+\infty) & = v_{A,0} + \Delta V = -20.69 \, V + 2.2742 \, V && = -18.4158 \, V
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Current through the capacitor.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+      i_A(t)
+      & = \dfrac{1}{\det \mathbf{R}} \left( R_{BB} \, \Delta v_A(t) - R_{AB} \, \Delta v_B(t) \right) = \\
+      & = \dfrac{1}{\det \mathbf{R}} \left[ R_{BB} \, \left( -\frac{R_{AB}}{R_{BB}} v_{B,0} \right) \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t)  + R_{AB} \, v_{B,0} \, h(t) \right] = \\
+      & = \frac{R_{AB}}{\det \mathbf{R}} v_{B,0} e^{-\frac{t}{\tau}} \, h(t) \ .
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the values
+\begin{equation*}
+\begin{split}\begin{aligned} 
+     i_A(0^+) & = \frac{R_{AB}}{\det \mathbf{R}} v_{B,0} = \frac{-1.2414 \, \Omega}{46.908 \, \Omega^2} \, 12.475 \, V = -0.334 \, A \\
+     i_A(+\infty) & = v_{A,0} + \Delta V = -20.69 \, V + 2.2742 \, V && = 0.0 \, A
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or with \(i_A = - C \frac{d \Delta v_A}{dt}\)…
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Current across the switch}
+\begin{equation*}
+\begin{split}\begin{aligned}
+     i_B(t) 
+     & = \frac{1}{R_{BB}} \bigg[ v_B(t) - v_{B,0} - R_{BA} i_A(t) \bigg] = \\
+     & = \frac{1}{R_{BB}} \bigg[ - v_{B,0} - R_{BA} \frac{R_{AB}}{\det \mathbf{R}} v_{B,0} e^{-\frac{t}{\tau}} \bigg] \, h(t) = \\
+     & = - \frac{v_{B,0}}{R_{BB}} \bigg[ 1 + \frac{R_{BA} R_{AB}}{\det \mathbf{R}} \, e^{-\frac{t}{\tau}} \bigg] \, h(t) \ .
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the values
+\begin{equation*}
+\begin{split}\begin{aligned}
+     i_B(0^+)     & = -\frac{v_{B,0}}{R_{BB}} \left[ 1 + \frac{R_{BA} R_{AB}}{\det \mathbf{R}} \right] = -\frac{v_{B,0} R_{AA}}{\det \mathbf{R}} =  - \frac{7.0345 \, \Omega}{46.345 \, \Omega^2} \, 12.475 \, V = - 1.8929 \, A \\
+     i_B(+\infty) & = -\frac{v_{B,0}}{R_{BB}} = - \dfrac{12.475 \, V}{6.8073 \, \Omega} = -1.8320 \, A \ .
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Current \(i(t)\)}
+\begin{equation*}
+\begin{split}\begin{aligned}
+     i(t)
+     & = i_{0} - 0.4138 \, i_A(t) + 0.8966 \, i_B(t) = \\
+     & = i_{0} + \left[ - 0.4138 \, i_{A,0^+} e^{-\frac{t}{\tau}}  + 0.8966 \, \left( i_{B,+\infty} + (i_{B,0^+} - i_{B,+\infty}) e^{-\frac{t}{\tau}} \right) \right] \, h(t) \ ,
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that
+\begin{equation*}
+\begin{split}\begin{aligned}
+     i(0^+)     & = i_{0} - 0.4138 \, i_{A,0^+} + 0.8966 \, i_{B,0^+} = \\
+                & = -1.7214 \, A - 0.4138 \, (-0.334 \, A) + 0.8966 \, (-1.8929 \, A) = -3.2831 \, A \\
+     i(+\infty) & = i_{0} + 0.8966 \, i_{B,+\infty} = \\ 
+                & = -1.7214 \, A + 0.8966 \, (-1.8320 \, A) = - 3.3671 \, A 
+   \end{aligned}\end{split}
+\end{equation*}
+\end{itemize}
+
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{Energy stored in the capacitor.}
+\begin{equation*}
+\begin{split}E_C(t) = \frac{1}{2} C v_A^2(t) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and for \(t = \tau\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  v_A(t)
+  & = v_{A,0} + \Delta v_{A,+\infty} \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t) = \\
+  & = -20.69 \, V + 2.2742 \, V \left( 1 - e^{-\frac{t}{\tau}} \right) \, h(t) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus \(v_A(\tau) = -19.25 \, V\)
+\begin{equation*}
+\begin{split}E_C(\tau) = 0.5 \cdot 5 \cdot 10^{-4} \, F \cdot ( 19.25 \, V )^2 = 9.26 \cdot 10^{-2} \, J \ .\end{split}
+\end{equation*}\end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-09-06-exe-01}
 
 \begin{sphinxadmonition}{note}{Exercise 10.6.3 (Exam 2024\sphinxhyphen{}09\sphinxhyphen{}06, Exercise 1.)}
@@ -2905,12 +3555,8 @@ Theory: overload in cables
 \subsubsection*{Solution}
 
 \sphinxAtStartPar
-\DUrole{xref,myst}{One\sphinxhyphen{}port equivalent Thevenin circuit} of the circuit with port \(A-B\) has
-\begin{equation*}
-\begin{split}V_{Th} = \end{split}
-\end{equation*}\begin{equation*}
-\begin{split}Z_{Th} = \end{split}
-\end{equation*}
+First {\hyperref[\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-1-port}]{\sphinxcrossref{\DUrole{std,std-ref}{one\sphinxhyphen{}port equivalent Thevenin circuit}}}} of the circuit with port \(A-B\) is evaluated, then {\hyperref[\detokenize{ch/electrical-engineering-networks-harmonic:classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic-power}]{\sphinxcrossref{\DUrole{std,std-ref}{power flow in harmonic regime}}}} is discussed.
+
 \sphinxAtStartPar
 \sphinxstylestrong{Thevenin equivalent: voltage.} With open circuit in \(A-B\), current \(a\) flows in the lower branch and in impedence \(Z_1\). Clockwise loop currents \(i_1\) and \(i_2\) flows in the left and right loop respectively. Kirchhoff voltage laws in the left and right loops give
 \begin{equation*}
@@ -3010,6 +3656,9 @@ while the reactive power in this condition reads
 \subsubsection*{Solution}
 
 \sphinxAtStartPar
+First {\hyperref[\detokenize{ch/electrical-engineering-networks-harmonic:classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic-power}]{\sphinxcrossref{\DUrole{std,std-ref}{power flow in harmonic regime}}}} is used to calculate load impedence, then the electrical circuit is solved, and the power on the tension generator is computed.
+
+\sphinxAtStartPar
 \sphinxstylestrong{Load impedence \(Z_L\)}. Load impedence appears in the load constitutive equation \(V_L = Z_L I_L\), and can be evalauted from data about complex power,
 \begin{equation*}
 \begin{split}
@@ -3060,6 +3709,9 @@ and the power factor is \(\cos \varphi_s = \dots\), where
 \noindent\sphinxincludegraphics{{exam-2025-01-22-ese-02}.png}
 \end{figure}
 \subsubsection*{Solution}
+
+\sphinxAtStartPar
+First {\hyperref[\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-1-port}]{\sphinxcrossref{\DUrole{std,std-ref}{one\sphinxhyphen{}port equivalent Thevenin circuit}}}} of the circuit with port \(A-B\) is evaluated, then the equivalent circuit is solved to find the tension \(v(t)\) across the current generator, and {\hyperref[\detokenize{ch/electrical-engineering-networks-harmonic:classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic-power}]{\sphinxcrossref{\DUrole{std,std-ref}{power flow in harmonic regime}}}} is discussed.
 
 \sphinxAtStartPar
 \sphinxstylestrong{Thevenin equivalent: voltage.} With an open circuit, the network can be split into two parts: the triangle in the upper\sphinxhyphen{}left side and the section in the right part.
@@ -3207,7 +3859,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-23 apr 2025
+25 apr 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -3545,7 +4197,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-23 apr 2025
+25 apr 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -3739,7 +4391,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-23 apr 2025
+25 apr 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -3791,6 +4443,9 @@ basics
 \let\bigletter\sphinxstyleindexlettergroup
 \bigletter{example\sphinxhyphen{}0}
 \item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/circuits\sphinxhyphen{}electromechanic}\sphinxstyleindexpageref{ch/circuits-electromechanic:\detokenize{example-0}}
+\indexspace
+\bigletter{harmonic:effective\sphinxhyphen{}values}
+\item\relax\sphinxstyleindexentry{harmonic:effective\sphinxhyphen{}values}\sphinxstyleindexextra{ch/electrical\sphinxhyphen{}engineering\sphinxhyphen{}networks\sphinxhyphen{}harmonic}\sphinxstyleindexpageref{ch/electrical-engineering-networks-harmonic:\detokenize{harmonic:effective-values}}
 \end{sphinxtheindex}
 
 \renewcommand{\indexname}{Indice}

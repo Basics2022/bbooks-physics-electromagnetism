@@ -479,9 +479,9 @@ $$i_B(t \le 0^{-}) = 0 \qquad , \qquad v_B (t \ge 0^+) = 0 \ .$$
 **Steady solution for $t \le 0^-$.** With switch open $i_B = 0$ and steady conditions $i_A = C \dot{v}_A = 0$,
 
 $$\begin{cases}
-  v_A(0^-) & = v_{A,0} & =     - 20.6900 \, V \\
-  v_B(0^-) & = v_{B,0} & = \ \ \ 12.4750 \, V \\
-    i(0^-) & = i_{ ,0} & = \    - 1.7241 \, A \\
+  v_A(0^-) & = v_{A,0} =     - 20.6900 \, V \\
+  v_B(0^-) & = v_{B,0} = \ \ \ 12.4750 \, V \\
+    i(0^-) & = i_{ ,0} = \    - 1.7241 \, A \\
 \end{cases}$$
 
 **Transient dynamics**. For $t \ge 0$, the switch is closed and thus $v_B(t\ge 0^+) = 0$.
