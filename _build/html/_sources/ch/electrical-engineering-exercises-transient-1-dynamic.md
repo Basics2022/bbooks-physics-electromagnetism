@@ -624,10 +624,37 @@ $$E_C(\tau) = 0.5 \cdot 5 \cdot 10^{-4} \, F \cdot ( 19.25 \, V )^2 = 9.26 \cdot
 `````
 
 
-````{exercise} Exam 2024-09-06, Exercise 1.
+`````{exercise} Exam 2024-09-06, Exercise 1.
 :label: exam-24-09-06-exe-01
 
 ```{figure} ../media/exam-2024-09-06-ese-01.png
 ```
 
+````{dropdown} Solution
 ````
+
+`````
+
+`````{exercise} Exam 2024-07-22, Exercise 1.
+:label: exam-24-07-22-exe-01
+
+```{figure} ../media/exam-2024-07-22-ese-01.png
+```
+
+````{dropdown} Solution
+````
+
+`````
+
+`````{exercise} Exam 2024-02-13, Exercise 1.
+:label: exam-24-02-13-exe-01-b
+
+```{figure} ../media/exam-2024-02-13-ese-01-b.png
+```
+
+````{dropdown} Solution
+````
+
+`````
+
+

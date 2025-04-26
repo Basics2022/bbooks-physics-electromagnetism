@@ -210,3 +210,18 @@ $$\begin{aligned}
 
 ````
 
+````{exercise} Exam 2024-07-22, Exercise 2.
+:label: exam-24-07-22-exe-02
+
+```{figure} ../media/exam-2024-07-22-ese-02.png
+```
+
+```{dropdown} Solution
+:open:
+
+
+
+```
+
+````
+
