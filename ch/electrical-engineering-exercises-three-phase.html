@@ -65,6 +65,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/electrical-engineering-exercises-three-phase';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Indice" href="../genindex.html" />
@@ -377,6 +379,17 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="three-phase-electrical-circuits-in-harmonic-regime">
 <span id="classical-electromagnetism-electrical-engineering-exercises-three-phase"></span><h1><span class="section-number">10.7.3. </span>Three-phase electrical circuits in harmonic regime<a class="headerlink" href="#three-phase-electrical-circuits-in-harmonic-regime" title="Permalink to this heading">#</a></h1>
+<div class="tip admonition">
+<p class="admonition-title">Guidelines for solution</p>
+<p>Analyze the network as a standard configuration of a three-phase network (<a class="reference internal" href="electrical-engineering-three-phase.html#classical-electromagnetism-electrical-engineering-three-phase-star-star"><span class="std std-ref">star-star</span></a>,…) and rely on results derived for <a class="reference internal" href="electrical-engineering-three-phase.html#classical-electromagnetism-electrical-engineering-three-phase"><span class="std std-ref">three-phase circuits</span></a>.</p>
+<p>As an example, for a <strong>star-star configuration</strong>:</p>
+<ol class="arabic simple">
+<li><p>evaluate load impedances, impedances in parallel with the generators, interconnections between phases</p></li>
+<li><p>evaluate voltage difference across the centers of the stars, <span class="math notranslate nohighlight">\(v_{AB}\)</span></p></li>
+<li><p>once <span class="math notranslate nohighlight">\(v_{AB}\)</span> is known, it should be easier to evaluate currents and voltages in the grid with KCL and KVL</p></li>
+<li><p>use relations of <a class="reference internal" href="electrical-engineering-networks-harmonic.html#classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic-power"><span class="std std-ref">power in harmonic regime</span></a>, to answer the questions about power: just remember the difference between maximum and effective values, and that a wattmeter measures the active power</p></li>
+</ol>
+</div>
 <div class="exercise admonition" id="exam-24-09-06-exe-03">
 
 <p class="admonition-title"><span class="caption-number">Exercise 10.11 </span> (Exam 2024-09-06, Exercise 3.)</p>
@@ -384,13 +397,57 @@ document.write(`
 <div class="figure align-default">
 <img alt="../_images/exam-2024-09-06-ese-03.png" src="../_images/exam-2024-09-06-ese-03.png" />
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This network is a star-star connection with impedances</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  Z_g &amp; = ( R_1 + s L_1 ) \parallel \frac{1}{s C_1} \qquad g = 1:3 \\
+  Z_4 &amp; = R_2 + \frac{1}{s C_2}
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and inter-connection between phases <span class="math notranslate nohighlight">\(2\)</span> and <span class="math notranslate nohighlight">\(3\)</span> with impedance <span class="math notranslate nohighlight">\(Z_4\)</span>.</p>
+<!--
+With $s = j \Omega = j \frac{f}{2 \pi}$, $\Omega = 2 \pi f = 314.16 \, \text{Hz}$
+
+$$\begin{aligned}
+  Y_k = Z_k^{-1} 
+   & = \frac{1}{R_1 + j \Omega L_1} + j \Omega C_1 = \\
+   & = \frac{1}{25 \, \Omega + j \, 3.14 \cdot 10^2 \text{Hz} \cdot 5 \cdot 10^{-2} \text{H} } + j \, 3.14 \cdot 10^{2} \text{Hz} \cdot 10^{-4} \, \text{F} = \\
+  Z_4 & = 2 \, k\Omega - j \frac{1}{3.14 \cdot 10^{2} \text{Hz} \cdot 10^{3} \, \text{F}} = 
+\end{aligned}$$
+-->
+<p class="sd-card-text"><strong>Voltage <span class="math notranslate nohighlight">\(v_{AB}\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[v_{AB} = \dfrac{ \sum_{g=1}^{3} Y_g \, e_g }{\sum_{k=1}^{4} Y_4}\]</div>
+<p class="sd-card-text">Generation and loads are equilibrated, and thus <span class="math notranslate nohighlight">\(\sum_{g=1}^{3} Y_g \, e_g = 0\)</span>, and <span class="math notranslate nohighlight">\(v_{AB} = 0\)</span>.</p>
+<p class="sd-card-text"><strong>Current <span class="math notranslate nohighlight">\(i_{Z_2}\)</span>.</strong> As <span class="math notranslate nohighlight">\(v_{AB}=0\)</span>, then <span class="math notranslate nohighlight">\(i_{Z_2} = 0\)</span>, as in general it whould be <span class="math notranslate nohighlight">\(i_{Z_2} = \frac{v_{AB}}{R_2 + \frac{1}{sC_2}}\)</span>.</p>
+<p class="sd-card-text"><strong>Current <span class="math notranslate nohighlight">\(i_{Z_4}\)</span>.</strong> With KVL on the loop with the two tension generators <span class="math notranslate nohighlight">\(e_2\)</span>, <span class="math notranslate nohighlight">\(e_3\)</span> closed with <span class="math notranslate nohighlight">\(Z_4\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 &amp; = e_3 + Z_4 i_{Z_4} - e_2 \\
+  \rightarrow \quad i_{Z_4} &amp; = \frac{e_2 - e_3}{Z_4}
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Currents <span class="math notranslate nohighlight">\(i_{e_2}\)</span>.</strong> Current <span class="math notranslate nohighlight">\(i_{e_2}\)</span> through the generator are evaluated through KVL between the centers of the stars,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0
+  &amp; = e_2 - \dfrac{1}{\frac{1}{R_1 + s L_1} + s C_1 } i_{e_2} - v_{AB} \\
+  \rightarrow \quad i_{e_2} &amp; = \left[ \frac{1}{R_1 + s L_1} + s C_1 \right] e_2 \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Powers of generator <span class="math notranslate nohighlight">\(2\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  S_2 &amp; = V_2 I_2^* \\
+  A_2 &amp; = |S_2| \\
+  P_2 &amp; = \text{re} \{ S_2 \} \\
+  Q_2 &amp; = \text{im} \{ S_2 \} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">using the effective values of tension and current <span class="math notranslate nohighlight">\(V_2\)</span>, <span class="math notranslate nohighlight">\(I_2\)</span>.</p>
 </div>
 </details></div>
 </div>
@@ -401,13 +458,57 @@ Solution<div class="sd-summary-down docutils">
 <div class="figure align-default">
 <img alt="../_images/exam-2024-07-22-ese-03.png" src="../_images/exam-2024-07-22-ese-03.png" />
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This network is a star-star connection with impedances</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  Z_1 &amp; = ( R_1 + j X_{C_1} ) \parallel R_2 \\
+  Z_2 &amp; = 0 \\
+  Z_3 &amp; = ( R_3 + j X_{L_2} ) \parallel j X_{L_1} \\
+  Z_4 &amp; = j X_{C_2}
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and inter-connection between phase <span class="math notranslate nohighlight">\(3\)</span> and the netural with <strong>resistance <span class="math notranslate nohighlight">\(R_4\)</span></strong>, before <span class="math notranslate nohighlight">\(Z_4\)</span>, and thus <strong>in parallel with the generator <span class="math notranslate nohighlight">\(3\)</span></strong>.</p>
+<p class="sd-card-text"><strong>Voltage <span class="math notranslate nohighlight">\(v_{AB}\)</span>.</strong> As <span class="math notranslate nohighlight">\(Z_2 = 0\)</span>, it’s not possible to directly use</p>
+<div class="math notranslate nohighlight">
+\[v_{AB} = \dfrac{ \sum_{g=1}^{3} Y_g \, e_g }{\sum_{k=1}^{4} Y_4} \ ,\]</div>
+<p class="sd-card-text">or this must be used with the limit <span class="math notranslate nohighlight">\(Y_2 \rightarrow + \infty\)</span>, and thus</p>
+<div class="math notranslate nohighlight">
+\[v_{AB} = e_2 \ .\]</div>
+<p class="sd-card-text"><strong>Wattmeter tension <span class="math notranslate nohighlight">\(v_W\)</span>.</strong> KVL with the generators <span class="math notranslate nohighlight">\(2\)</span> and <span class="math notranslate nohighlight">\(3\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[v_W = e_2 - e_3 \ .\]</div>
+<p class="sd-card-text"><strong>Wattmeter current <span class="math notranslate nohighlight">\(i_w = i_{e_2}\)</span>.</strong> KCL on the center of generation star, <span class="math notranslate nohighlight">\(0 = i_{e_1} + i_{e_2} + i_{3} + i_{4}\)</span>, with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  i_{e_1} &amp; =  \frac{1}{Z_1} ( e_1 - v_{AB} ) \\
+  i_{3}   &amp; =  \frac{1}{Z_3} ( e_3 - v_{AB} ) \\
+  i_{4}   &amp; = -\frac{1}{Z_4}   v_{AB}   \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">being <span class="math notranslate nohighlight">\(i_3 = i_{e_3} + i_{R_4}\)</span> the sum of the current in the parallel connection on the branch <span class="math notranslate nohighlight">\(3\)</span> of the generation. Thus, current <span class="math notranslate nohighlight">\(i_{e_2}\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  i_{e_2} 
+  &amp; = - i_{e_1} - i_{3} - i_{4} = \\
+  &amp; = - \frac{e_1}{Z_1} - \frac{e_3}{Z_3} + \left(  \frac{1}{Z_1} + \frac{1}{Z_3} + \frac{1}{Z_4}  \right) v_{AB}
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Wattmeter.</strong> Wattmeter reading provides the active power</p>
+<div class="math notranslate nohighlight">
+\[P_w = \text{re} \{ S_w \} = \text{re} \{ v_w i_w^* \} \ .\]</div>
+<p class="sd-card-text"><strong>Power on <span class="math notranslate nohighlight">\(C_2\)</span>.</strong> Current and voltage across <span class="math notranslate nohighlight">\(C_2\)</span> are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  i_{C_2} &amp; = i_4 \\
+  v_{C_2} &amp; = Z_{C_2} i_{C_2} = \frac{1}{s C_2} i_{C_2} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">and the complex power is</p>
+<div class="math notranslate nohighlight">
+\[s = V_{C_2} I_{C_2}^* \ .\]</div>
 </div>
 </details></div>
 </div>
@@ -418,13 +519,47 @@ Solution<div class="sd-summary-down docutils">
 <div class="figure align-default">
 <img alt="../_images/exam-2024-06-19-ese-01.png" src="../_images/exam-2024-06-19-ese-01.png" />
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This network is a star-star connection with impedances</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  Z_1 &amp; = ( R_2 + j X_{L_2} ) \parallel ( j X_{C_1} ) \\
+  Z_2 &amp; = ( R_1 \parallel 0 ) \\
+  Z_3 &amp; = ( R_3 + j X_{C_2} ) \parallel j X_{L_1} \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">with <span class="math notranslate nohighlight">\(L_2\)</span> and <span class="math notranslate nohighlight">\(R_4\)</span> in parallel with generator <span class="math notranslate nohighlight">\(e_2\)</span>. As <span class="math notranslate nohighlight">\(R_1\)</span> is in parallel with a short-circuit in <span class="math notranslate nohighlight">\(Z_2\)</span>, this impedance is zero and as it is the current through <span class="math notranslate nohighlight">\(R_1\)</span>. There’s no neutral.</p>
+<p class="sd-card-text"><strong>Voltage <span class="math notranslate nohighlight">\(v_{AB}\)</span>.</strong> As <span class="math notranslate nohighlight">\(Z_2 = 0\)</span> (see previous exercise), the voltage between the centers of the stars is</p>
+<div class="math notranslate nohighlight">
+\[v_{AB} = e_2 \ .\]</div>
+<p class="sd-card-text"><strong>Wattmeter tension <span class="math notranslate nohighlight">\(v_W\)</span>.</strong> KVL with the generators <span class="math notranslate nohighlight">\(2\)</span> and <span class="math notranslate nohighlight">\(3\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[v_W = e_1 - e_3 \ .\]</div>
+<p class="sd-card-text"><strong>Wattmeter current <span class="math notranslate nohighlight">\(i_w = i_{2}\)</span>.</strong> KCL on the center of generation star, <span class="math notranslate nohighlight">\(0 = i_{e_1} + i_{2} + i_{e_3}\)</span>, with</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  i_{e_1} &amp; =  \frac{1}{Z_1} ( e_1 - e_2 ) \\
+  i_{e_3} &amp; =  \frac{1}{Z_3} ( e_3 - e_2 ) \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">being <span class="math notranslate nohighlight">\(i_2 = i_{e_2} + i_{L_1} + i_{R_4}\)</span> the sum of the current in the parallel connection on the branch <span class="math notranslate nohighlight">\(2\)</span> of the generation. Thus, current <span class="math notranslate nohighlight">\(i_{w}\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  i_w = i_{2} 
+  &amp; = - i_{e_1} - i_{e_3} = \\
+  &amp; = \frac{1}{Z_1} ( e_2 - e_1 ) + \frac{1}{Z_3} ( e_2 - e_3 ) \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Wattmeter.</strong> Wattmeter reading provides the active power</p>
+<div class="math notranslate nohighlight">
+\[P_w = \text{re} \{ S_w \} = \text{re} \{ v_w i_w^* \} \ .\]</div>
+<p class="sd-card-text"><strong>Power of tension generator <span class="math notranslate nohighlight">\(e_1\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[s_{e_1} = e_{2} i_{e_2}^* \ .\]</div>
+<p class="sd-card-text">…</p>
 </div>
 </details></div>
 </div>
@@ -435,7 +570,7 @@ Solution<div class="sd-summary-down docutils">
 <div class="figure align-default">
 <img alt="../_images/exam-2024-02-13-ese-02.png" src="../_images/exam-2024-02-13-ese-02.png" />
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
 Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>

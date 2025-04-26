@@ -212,9 +212,9 @@ $$\begin{aligned}
 **Steady solution for $t \le 0^-$.** With switch open $i_B = 0$ and steady conditions $i_A = C \dot{v}_A = 0$,
 
 $$\begin{cases}
-  v_A(0^-) & = v_{A,0} & = \quad\ 7.67 \, V \\
-  v_B(0^-) & = v_{B,0} & =      -13.00 \, V \\
-    i(0^-) & = i_{ ,0} & = \quad\ 3.00 \, A \\
+  v_A(0^-) & = v_{A,0} = \quad\ 7.67 \, V \\
+  v_B(0^-) & = v_{B,0} =      -13.00 \, V \\
+    i(0^-) & = i_{ ,0} = \quad\ 3.00 \, A \\
 \end{cases}$$
 
 **Transient dynamics**, when the switch closes $v_B(t \ge 0^+) = 0$,
@@ -385,17 +385,17 @@ $$\begin{aligned}
  i_2 & = \frac{R_8}{R_{14678}} i_A
 \end{aligned}$$
 
-$$\begin{cases}
+$$\begin{aligned}
   v_{A,A} & =  -R_8 ( i_2 - i_A ) & = \dfrac{R_8 R_{1467}}{R_{14678}} i_A \\
   v_{B,A} & = - R_4 i_2 & = - \dfrac{R_4 R_8}{R_{14678}} i_A \\
     i_{,A}& = - i_2 & = - \dfrac{R_8}{R_{14678}} i_A \\
-\end{cases}$$
+\end{aligned}$$
 
-$$\begin{cases}
- v_{A,A} & = R_{AA}   \, i_A & = \ \ \ 7.0345  \, \Omega \, i_A \\ 
- v_{B,A} & = R_{BA}   \, i_A & = - 1.2414  \, \Omega \, i_A \\
-   i_{,A} & = i_{/i_A}\, i_A & = - 0.4138 \ \  i_A \\
-\end{cases}$$
+$$\begin{aligned}
+ v_{A,A} & = R_{AA}   \, i_A && = \ \ \ 7.0345  \, \Omega \, i_A \\ 
+ v_{B,A} & = R_{BA}   \, i_A && = - 1.2414  \, \Omega \, i_A \\
+   i_{,A} & = i_{/i_A}\, i_A && = - 0.4138 \ \  i_A \\
+\end{aligned}$$
 
 *Powering B.* 
 
@@ -413,17 +413,17 @@ $$\begin{aligned}
 
 and the desired variables
 
-$$\begin{cases}
+$$\begin{aligned}
   i_{,B}  & = i_{4,B} & = \dfrac{R_{1678}}{R_{14678}} i_B \\
   v_{A,B} & = - R_8 i_{2,B} & = - \dfrac{R_4 R_8}{R_{14678}} i_B  \\
   v_{B,B} & = R_4 i_{4,B} + R_3 i_{3,B} & = \left[ \dfrac{R_4(R_{1678})}{R_{14678}} + \dfrac{R_2 R_3}{R_{23}} \right] i_B \\
-\end{cases}$$
+\end{aligned}$$
 
-$$\begin{cases}
+$$\begin{aligned}
  v_{A,B} & = R_{AB}   \, i_B & =     - 1.2414  \, \Omega \, i_B \\ 
  v_{B,B} & = R_{BB}   \, i_B & = \ \ \ 6.8073  \, \Omega \, i_B \\
    i_{,B}& = i_{/i_B} \, i_B & = \ \ \ 0.8966 \ \          i_B \\
-\end{cases}$$
+\end{aligned}$$
 
 ```
 
