@@ -575,9 +575,9 @@ i(t) &amp; = i_0 + i_A(t)
 <p class="sd-card-text"><strong>Steady solution for <span class="math notranslate nohighlight">\(t \le 0^-\)</span>.</strong> With switch open <span class="math notranslate nohighlight">\(i_B = 0\)</span> and steady conditions <span class="math notranslate nohighlight">\(i_A = C \dot{v}_A = 0\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
-  v_A(0^-) &amp; = v_{A,0} &amp; = \quad\ 7.67 \, V \\
-  v_B(0^-) &amp; = v_{B,0} &amp; =      -13.00 \, V \\
-    i(0^-) &amp; = i_{ ,0} &amp; = \quad\ 3.00 \, A \\
+  v_A(0^-) &amp; = v_{A,0} = \quad\ 7.67 \, V \\
+  v_B(0^-) &amp; = v_{B,0} =      -13.00 \, V \\
+    i(0^-) &amp; = i_{ ,0} = \quad\ 3.00 \, A \\
 \end{cases}\end{split}\]</div>
 <p class="sd-card-text"><strong>Transient dynamics</strong>, when the switch closes <span class="math notranslate nohighlight">\(v_B(t \ge 0^+) = 0\)</span>,</p>
 <div class="math notranslate nohighlight">
@@ -747,17 +747,17 @@ Internal generators off, current generators at the ports<div class="sd-summary-d
  i_2 &amp; = \frac{R_8}{R_{14678}} i_A
 \end{aligned}\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
+\[\begin{split}\begin{aligned}
   v_{A,A} &amp; =  -R_8 ( i_2 - i_A ) &amp; = \dfrac{R_8 R_{1467}}{R_{14678}} i_A \\
   v_{B,A} &amp; = - R_4 i_2 &amp; = - \dfrac{R_4 R_8}{R_{14678}} i_A \\
     i_{,A}&amp; = - i_2 &amp; = - \dfrac{R_8}{R_{14678}} i_A \\
-\end{cases}\end{split}\]</div>
+\end{aligned}\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
- v_{A,A} &amp; = R_{AA}   \, i_A &amp; = \ \ \ 7.0345  \, \Omega \, i_A \\ 
- v_{B,A} &amp; = R_{BA}   \, i_A &amp; = - 1.2414  \, \Omega \, i_A \\
-   i_{,A} &amp; = i_{/i_A}\, i_A &amp; = - 0.4138 \ \  i_A \\
-\end{cases}\end{split}\]</div>
+\[\begin{split}\begin{aligned}
+ v_{A,A} &amp; = R_{AA}   \, i_A &amp;&amp; = \ \ \ 7.0345  \, \Omega \, i_A \\ 
+ v_{B,A} &amp; = R_{BA}   \, i_A &amp;&amp; = - 1.2414  \, \Omega \, i_A \\
+   i_{,A} &amp; = i_{/i_A}\, i_A &amp;&amp; = - 0.4138 \ \  i_A \\
+\end{aligned}\end{split}\]</div>
 <p class="sd-card-text"><em>Powering B.</em></p>
 <!-- The equivalent circuit seen by the port $B$ has equivalent resistence
 
@@ -771,17 +771,17 @@ $$R_{eq} = \big( (R_6 + R_7 + R_8 + R_1) \parallel (R_4)  \big) + \big(R_2 \para
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">and the desired variables</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
+\[\begin{split}\begin{aligned}
   i_{,B}  &amp; = i_{4,B} &amp; = \dfrac{R_{1678}}{R_{14678}} i_B \\
   v_{A,B} &amp; = - R_8 i_{2,B} &amp; = - \dfrac{R_4 R_8}{R_{14678}} i_B  \\
   v_{B,B} &amp; = R_4 i_{4,B} + R_3 i_{3,B} &amp; = \left[ \dfrac{R_4(R_{1678})}{R_{14678}} + \dfrac{R_2 R_3}{R_{23}} \right] i_B \\
-\end{cases}\end{split}\]</div>
+\end{aligned}\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
+\[\begin{split}\begin{aligned}
  v_{A,B} &amp; = R_{AB}   \, i_B &amp; =     - 1.2414  \, \Omega \, i_B \\ 
  v_{B,B} &amp; = R_{BB}   \, i_B &amp; = \ \ \ 6.8073  \, \Omega \, i_B \\
    i_{,B}&amp; = i_{/i_B} \, i_B &amp; = \ \ \ 0.8966 \ \          i_B \\
-\end{cases}\end{split}\]</div>
+\end{aligned}\end{split}\]</div>
 </div>
 </details><div class="figure align-default">
 <img alt="../_images/exam-2025-01-22-ese-01-a.png" src="../_images/exam-2025-01-22-ese-01-a.png" />

@@ -69,20 +69,27 @@
 \contentsline {subsection}{\numberline {10.4.2}Norton equivalent}{57}{subsection.10.4.2}%
 \contentsline {section}{\numberline {10.5}Network analysis of linear circuits \sphinxhyphen {} harmonic regime}{57}{section.10.5}%
 \contentsline {subsection}{\numberline {10.5.1}Power}{57}{subsection.10.5.1}%
-\contentsline {section}{\numberline {10.6}Exercises}{58}{section.10.6}%
-\contentsline {subsection}{\numberline {10.6.1}Transient dynamics of linear electrical grids with one dynamic component}{59}{subsection.10.6.1}%
-\contentsline {subsection}{\numberline {10.6.2}Harmonic regime of linear electrical grids}{71}{subsection.10.6.2}%
-\contentsline {subsection}{\numberline {10.6.3}Three\sphinxhyphen {}phase electrical circuits in harmonic regime}{77}{subsection.10.6.3}%
-\contentsline {subsection}{\numberline {10.6.4}Electromagnetic circuits}{78}{subsection.10.6.4}%
-\contentsline {part}{III\hspace {1em}Metodi numerici}{79}{part.3}%
-\contentsline {chapter}{\numberline {11}Green’s function method}{83}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Poisson equation}{83}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Helmholtz equation}{84}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Wave equation}{86}{section.11.3}%
-\contentsline {chapter}{\numberline {12}Metodi numerici}{89}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Elettrostatica}{89}{section.12.1}%
-\contentsline {subsection}{\numberline {12.1.1}Sorgente}{89}{subsection.12.1.1}%
-\contentsline {subsection}{\numberline {12.1.2}Dipolo}{90}{subsection.12.1.2}%
-\contentsline {part}{IV\hspace {1em}Appendici}{93}{part.4}%
-\contentsline {chapter}{\numberline {13}Ottica}{97}{chapter.13}%
-\contentsline {chapter}{Proof Index}{99}{section*.23}%
+\contentsline {section}{\numberline {10.6}Three\sphinxhyphen {}phase circuits}{58}{section.10.6}%
+\contentsline {subsection}{\numberline {10.6.1}Star\sphinxhyphen {}star network}{58}{subsection.10.6.1}%
+\contentsline {subsubsection}{General solution}{58}{subsubsection*.14}%
+\contentsline {subsubsection}{Equilibrated generation and loads}{60}{subsubsection*.15}%
+\contentsline {subsubsection}{Extra connections}{60}{subsubsection*.16}%
+\contentsline {paragraph}{Phase\sphinxhyphen {}neutral connections}{60}{paragraph*.17}%
+\contentsline {paragraph}{Phase\sphinxhyphen {}phase connections}{60}{paragraph*.18}%
+\contentsline {section}{\numberline {10.7}Exercises}{60}{section.10.7}%
+\contentsline {subsection}{\numberline {10.7.1}Transient dynamics of linear electrical grids with one dynamic component}{62}{subsection.10.7.1}%
+\contentsline {subsection}{\numberline {10.7.2}Harmonic regime of linear electrical grids}{76}{subsection.10.7.2}%
+\contentsline {subsection}{\numberline {10.7.3}Three\sphinxhyphen {}phase electrical circuits in harmonic regime}{81}{subsection.10.7.3}%
+\contentsline {subsection}{\numberline {10.7.4}Electromagnetic circuits}{86}{subsection.10.7.4}%
+\contentsline {part}{III\hspace {1em}Metodi numerici}{89}{part.3}%
+\contentsline {chapter}{\numberline {11}Green’s function method}{93}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Poisson equation}{93}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Helmholtz equation}{94}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Wave equation}{96}{section.11.3}%
+\contentsline {chapter}{\numberline {12}Metodi numerici}{99}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Elettrostatica}{99}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}Sorgente}{99}{subsection.12.1.1}%
+\contentsline {subsection}{\numberline {12.1.2}Dipolo}{100}{subsection.12.1.2}%
+\contentsline {part}{IV\hspace {1em}Appendici}{103}{part.4}%
+\contentsline {chapter}{\numberline {13}Ottica}{107}{chapter.13}%
+\contentsline {chapter}{Proof Index}{109}{section*.36}%
