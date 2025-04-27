@@ -4,7 +4,7 @@
 ```{admonition} Guidelines for solution
 :class: tip
 
-Analyze the network as a standard configuration of a three-phase network ([star-star](classical-electromagnetism:electrical-engineering:three-phase:star-star),...) and rely on results derived for [three-phase circuits](classical-electromagnetism:electrical-engineering:three-phase).
+Analyse the network as a standard configuration of a three-phase network ([star-star](classical-electromagnetism:electrical-engineering:three-phase:star-star),...) and rely on results derived for [three-phase circuits](classical-electromagnetism:electrical-engineering:three-phase).
 
 As an example, for a **star-star configuration**:
 1. evaluate load impedances, impedances in parallel with the generators, interconnections between phases

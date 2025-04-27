@@ -175,23 +175,23 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Elettromagnetismo</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Electromagnetism</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">1. Brief history of Electromagnetism</a></li>
 <li class="toctree-l1"><a class="reference internal" href="principles.html">2. Principles of Classical Electromagnetism</a></li>
-<li class="toctree-l1"><a class="reference internal" href="potentials.html">3. Potenziali elettromagnetici</a></li>
-<li class="toctree-l1"><a class="reference internal" href="media.html">4. Elettromagnetismo nella materia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="potentials.html">3. Electromagnetic Potentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="media.html">4. Electromagnetism in Matter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="electrostatics.html">5. Electrostatics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="energy.html">6. Energy balance in electromagnetism</a></li>
 <li class="toctree-l1"><a class="reference internal" href="energy-linear.html">7. Energy and momentum balance in linear, local, isotropic, non-dispersive media</a></li>
-<li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">8. Equazioni dell’elettromagnetismo e relatività galileiana</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">9. Onde elettromagnetiche</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">9.1. Equazioni delle onde in elettromagnetismo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">9.2. Onde elettromagnetiche piane</a></li>
+<li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">8. Relativity in electromagnetism</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">9. Electromagnetic waves</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">9.1. Wave Equations in Electromagnetism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">9.2. Plane Electromagnetic Waves</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Elettrotecnica</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Electric Engineering</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="circuits.html">10. Approssimazione circuitale</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">10.1. Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -219,14 +219,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Metodi numerici</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Numerical Methods</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="green-function.html">11. Green’s function method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numerical-methods.html">12. Metodi numerici</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendici</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="optics.html">13. Ottica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix-list.html">13. todo: appendices</a></li>
 </ul>
 
     </div>
@@ -379,100 +379,145 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="transient-dynamics-of-linear-electrical-grids-with-one-dynamic-component">
 <span id="classical-electromagnetism-electrical-engineering-exercises-transient-1-dynamic"></span><h1><span class="section-number">10.7.1. </span>Transient dynamics of linear electrical grids with one dynamic component<a class="headerlink" href="#transient-dynamics-of-linear-electrical-grids-with-one-dynamic-component" title="Permalink to this heading">#</a></h1>
-<div class="dropdown tip admonition">
+<div class="tip admonition">
 <p class="admonition-title">Guidelines for solution</p>
-<p>A many-port Thevenin equivalent circuit of the resistive part of the circuit is found, with two ports for interfacing with the dynamical component (A) and with the switch (B), exploiting PSCE,</p>
+<p>Breaking down the solution:</p>
+<ol class="arabic">
+<li><p>Find the <strong>many-port equivalent</strong> of the <strong>linear algebraic part of the network</strong> (resistor, and prescribed generators), using PSCE. Find the relation between port voltage and currents and all the required variables of the network,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  v_A &amp; = v_{0,A}(\mathbf{e},\mathbf{a}) + R_{AA} i_A + R_{AB} i_B \\
-  v_B &amp; = v_{0,B}(\mathbf{e},\mathbf{a}) + R_{BA} i_A + R_{BB} i_B \\
-  i   &amp; =   i_{0}(\mathbf{e},\mathbf{a}) + i_{/i_A} i_A + i_{/i_B} i_B
-\end{aligned}\end{split}\]</div>
-<p>The constitutive equation of the dynamical equation is used to evaluate the time evolution of the system, given the initial conditions - usually steady conditions with switches open. If the dynamical element is a capacitor,</p>
-<div class="math notranslate nohighlight">
-\[i_A = - C \dfrac{d v_A}{dt} \ .\]</div>
-<p>Typically, (1) the generators provides steady inputs, (2) for <span class="math notranslate nohighlight">\(t = 0^{-}\)</span> the switch is open, and closes at <span class="math notranslate nohighlight">\(t = 0\)</span>. At <span class="math notranslate nohighlight">\(t=0\)</span> an impulsive forcing, and thus a jump, in some physical quantity may occur.</p>
-<p><strong>Steady conditions for <span class="math notranslate nohighlight">\(t \le 0^-\)</span>.</strong> Steady conditions with the switch is open imply</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-       i_B &amp; = 0 &amp;&amp; \text{open switch} \\
-       i_A &amp; = 0 &amp;&amp; \text{steady conditions and $i_A = C \dot{v}_A = 0$} \\
+     \mathbf{v}_{port} &amp; = \mathbf{v}_0(\mathbf{e}, \mathbf{a}) + \mathbf{R} \mathbf{i}_{port} \\
+     \mathbf{z}        &amp; = \mathbf{z}_0(\mathbf{e}, \mathbf{a}) + \mathbf{z}_{/i_{port}} \mathbf{i}_{port}
    \end{aligned}\end{split}\]</div>
-<p><strong>Transient dynamics.</strong> At <span class="math notranslate nohighlight">\(t = 0\)</span> the switch closes, so that the tension at the switch immediately goes from the steady value evaluated for <span class="math notranslate nohighlight">\(t \le 0^-\)</span> to the value</p>
-<div class="math notranslate nohighlight">
-\[v_B(t) = 0 \qquad , \qquad \text{for $t &gt; 0$} \ ,\]</div>
-<p>and thus, its value and its time derivative w.r.t. time, <span class="math notranslate nohighlight">\(t \in (-\infty, +\infty)\)</span> can be written as</p>
+<p>If 2 ports exist and port <span class="math notranslate nohighlight">\(A\)</span> is connected to a dynamical linear component and port <span class="math notranslate nohighlight">\(B\)</span> is connected to an ideal switch, the equations become to</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-        v_B  (t) &amp; = v_B(0^-) h(-t) \\
-    \dot{v}_B(t) &amp; = - v_B(0^-) \delta(t) \ ,
-  \end{aligned}\end{split}\]</div>
-<p>having used the step function <span class="math notranslate nohighlight">\(h(t)\)</span> and Dirac’s delta <span class="math notranslate nohighlight">\(\delta(t)\)</span>.</p>
-<p><strong>Method 1. Dynamical equation for the state variable, here <span class="math notranslate nohighlight">\(v_A\)</span>.</strong> Writing the dynamical equation for the state variable should give a dynamical equation with no impulsive forcing and thus no jump in the physical quantity. Using the equations of the equivalent model, it’s possible to write <span class="math notranslate nohighlight">\(v_A\)</span> as a function of <span class="math notranslate nohighlight">\(i_A\)</span>, <span class="math notranslate nohighlight">\(v_B\)</span> and the constant tensions <span class="math notranslate nohighlight">\(v_{0,A}\)</span>, <span class="math notranslate nohighlight">\(v_{0,B}\)</span></p>
+     v_A &amp; = v_{0,A}(\mathbf{e},\mathbf{a}) + R_{AA} i_A + R_{AB} i_B \\
+     v_B &amp; = v_{0,B}(\mathbf{e},\mathbf{a}) + R_{BA} i_A + R_{BB} i_B \\
+     \mathbf{z} &amp; = \mathbf{z}_0(\mathbf{e}, \mathbf{a}) + \mathbf{z}_{/i_{port}} \mathbf{i}_{port}
+   \end{aligned}\end{split}\]</div>
+</li>
+<li><p>Evaluate the <strong>steady conditions</strong> for <span class="math notranslate nohighlight">\(t \le 0^-\)</span>, with the given state of the switch (<span class="math notranslate nohighlight">\(i_B = 0\)</span> if it’s open, <span class="math notranslate nohighlight">\(v_B = 0\)</span> if it’s closed), and using the constitutive equation of the dynamical element (a capacitor acts as an open circuit in steady conditions, <span class="math notranslate nohighlight">\(i_A = 0\)</span> as <span class="math notranslate nohighlight">\(i_A = C \frac{d v_A}{dt}\)</span>; an inductor acts as a short-circuit in steady conditions, <span class="math notranslate nohighlight">\(v_A = 0\)</span>, as <span class="math notranslate nohighlight">\(v_A = L \frac{d i_A}{d t}\)</span>).</p>
+<p>In the first two equations of the system, two of the four varaibles <span class="math notranslate nohighlight">\(i_{A,B}\)</span>, <span class="math notranslate nohighlight">\(v_{A,B}\)</span> are thus known, and this system can be solved to find the other two quantities. Once <span class="math notranslate nohighlight">\(\mathbf{i}_{port}\)</span> is known, grid variables <span class="math notranslate nohighlight">\(\mathbf{z}\)</span> can be evaluated.</p>
+</li>
+<li><p><strong>Transient dynamics</strong> is then evaluated using the change of state in the switch</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
+     \text{open to close: } &amp; \begin{cases} v_{A}(t) = ( 1 - h(t) ) \, v_{A,0^-} \\
+                                            i_{A}(t) =  h(t) \, i_{A,t\ge 0}(t) \end{cases} \\ \\
+     \text{close to open: } &amp; \begin{cases} v_{A}(t) = h(t) \, v_{A,t\ge 0}(t) \\
+                                            i_{A}(t) = ( 1 - h(t) ) \, i_{A,0^-} \end{cases} \\ \\
+   \end{aligned}\end{split}\]</div>
+<p>and using the conditions for <span class="math notranslate nohighlight">\(t \ge 0\)</span> in the equations of the equivalent network to find the equivalent resistance <span class="math notranslate nohighlight">\(R_{eq}\)</span> of the algebraic part of the network to be used in the constitutive equations of the dynamical component,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     \text{capacitor} &amp;: &amp;&amp; 0 = i_A +  C \frac{d v_A}{d t} &amp;&amp; \rightarrow \quad  f(\mathbf{x}_{B}) = v_A + R_{eq} C \frac{d v_A}{d t} \\
+     \text{inductor } &amp;: &amp;&amp; 0 = v_A +  L \frac{d i_A}{d t} &amp;&amp; \rightarrow \quad  f(\mathbf{x}_{B}) = i_A + R_{eq} L \frac{d i_A}{d t} \\
+   \end{aligned}\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(f(\mathbf{x}_{B})\)</span> a forcing term depending on the state of the switch, and the initial conditions for the state variable of the dynamical components equal to the steady conditions, as there’s no jump in state variables without impulsive forces.</p>
+</li>
+<li><p>Once the state variables of the dynamical equations are known. it’s possible to evaluate all the other required variables.</p></li>
+</ol>
+<!--
+...
+
+The constitutive equation of the dynamical equation is used to evaluate the time evolution of the system, given the initial conditions - usually steady conditions with switches open. If the dynamical element is a capacitor,
+
+$$i_A = - C \dfrac{d v_A}{dt} \ .$$
+
+Typically, (1) the generators provides steady inputs, (2) for $t = 0^{-}$ the switch is open, and closes at $t = 0$. At $t=0$ an impulsive forcing, and thus a jump, in some physical quantity may occur.
+
+**Steady conditions for $t \le 0^-$.** Steady conditions with the switch is open imply
+  
+   $$\begin{aligned}
+       i_B & = 0 && \text{open switch} \\
+       i_A & = 0 && \text{steady conditions and $i_A = C \dot{v}_A = 0$} \\
+   \end{aligned}$$
+
+**Transient dynamics.** At $t = 0$ the switch closes, so that the tension at the switch immediately goes from the steady value evaluated for $t \le 0^-$ to the value
+    
+  $$v_B(t) = 0 \qquad , \qquad \text{for $t > 0$} \ ,$$
+
+and thus, its value and its time derivative w.r.t. time, $t \in (-\infty, +\infty)$ can be written as
+
+  $$\begin{aligned}
+        v_B  (t) & = v_B(0^-) h(-t) \\
+    \dot{v}_B(t) & = - v_B(0^-) \delta(t) \ ,
+  \end{aligned}$$
+
+having used the step function $h(t)$ and Dirac's delta $\delta(t)$.
+
+**Method 1. Dynamical equation for the state variable, here $v_A$.** Writing the dynamical equation for the state variable should give a dynamical equation with no impulsive forcing and thus no jump in the physical quantity. Using the equations of the equivalent model, it's possible to write $v_A$ as a function of $i_A$, $v_B$ and the constant tensions $v_{0,A}$, $v_{0,B}$
+
+$$\begin{aligned}
   v_A(t) 
-  &amp; = v_{0,A} + R_{AA} i_A + \frac{R_{AB}}{R_{BB}} \left[ v_B(t) - v_{0,B} - R_{BA} i_A  \right] = \\
-  &amp; = v_{0,A} - \frac{R_{AB}}{R_{BB}} v_{0,B} + \frac{R_{AB}}{R_{BB}} v_{B}(t) + \left[ R_{AA} - \frac{R_{BA} R_{AB}}{R_{BB}} \right] i_A(t)  = \\
-\end{aligned}\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[i_A(t) = \frac{R_{BB}}{\text{det} \mathbf{R}} v_A(t) - \frac{R_{BB} v_{0,A} - R_{AB} ( v_{0,B}- v_{B}(t) ) }{\text{det} \mathbf{R}} \]</div>
-<p>so that the dynamical equation for <span class="math notranslate nohighlight">\(v_A(t)\)</span> reads</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+  & = v_{0,A} + R_{AA} i_A + \frac{R_{AB}}{R_{BB}} \left[ v_B(t) - v_{0,B} - R_{BA} i_A  \right] = \\
+  & = v_{0,A} - \frac{R_{AB}}{R_{BB}} v_{0,B} + \frac{R_{AB}}{R_{BB}} v_{B}(t) + \left[ R_{AA} - \frac{R_{BA} R_{AB}}{R_{BB}} \right] i_A(t)  = \\
+\end{aligned}$$
+
+$$i_A(t) = \frac{R_{BB}}{\text{det} \mathbf{R}} v_A(t) - \frac{R_{BB} v_{0,A} - R_{AB} ( v_{0,B}- v_{B}(t) ) }{\text{det} \mathbf{R}} $$
+
+so that the dynamical equation for $v_A(t)$ reads
+
+$$\begin{aligned}
   0 
-  &amp; = C \frac{d v_A}{dt} + i_A = \\
-  &amp; = C \frac{d v_A}{dt} + \frac{R_{BB}}{\det \mathbf{R}} v_A(t) - \frac{R_{BB} v_{0,A} - R_{AB} ( v_{0,B}- v_{B}(t) ) }{\det \mathbf{R}} \ ,
-\end{aligned}\end{split}\]</div>
-<p>and thus</p>
-<div class="math notranslate nohighlight">
-\[R_{eq} C \frac{d v_A}{dt} + v_A(t) =  v_{0,A} - \frac{R_{AB}}{R_{BB}} ( v_{0,B}- v_{B}(t) )  \]</div>
-<p>with <span class="math notranslate nohighlight">\(R_{eq} := \dfrac{\det \mathbf{R}}{R_{BB}}\)</span>. If <span class="math notranslate nohighlight">\(i_A(0^-) = i_B(0^-) = 0\)</span>, then</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  v_{B}(t) &amp; = v_{0,B} h(-t) \\
-  v_{0,B} - v_{B}(t) &amp; = v_{0,B} h(t)  \\
-\end{aligned}\end{split}\]</div>
-<p>With the initial conditions <span class="math notranslate nohighlight">\(v_{A}(0^-) = v_{0,A}\)</span>, and defining the difference with the initial steady conditions, <span class="math notranslate nohighlight">\(\delta v_A(t) := v_A(t) - v_{0,A}\)</span>, <span class="math notranslate nohighlight">\(\delta v_B(t) = v_B(t) - v_{0,B}\)</span>, the initial condition for the difference reads <span class="math notranslate nohighlight">\(\delta v_{A}(0^-) = 0\)</span>, so that the Cauchy problem to be solved reads</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
+  & = C \frac{d v_A}{dt} + i_A = \\
+  & = C \frac{d v_A}{dt} + \frac{R_{BB}}{\det \mathbf{R}} v_A(t) - \frac{R_{BB} v_{0,A} - R_{AB} ( v_{0,B}- v_{B}(t) ) }{\det \mathbf{R}} \ ,
+\end{aligned}$$
+
+and thus
+
+$$R_{eq} C \frac{d v_A}{dt} + v_A(t) =  v_{0,A} - \frac{R_{AB}}{R_{BB}} ( v_{0,B}- v_{B}(t) )  $$
+
+with $R_{eq} := \dfrac{\det \mathbf{R}}{R_{BB}}$. If $i_A(0^-) = i_B(0^-) = 0$, then
+
+$$\begin{aligned}
+  v_{B}(t) & = v_{0,B} h(-t) \\
+  v_{0,B} - v_{B}(t) & = v_{0,B} h(t)  \\
+\end{aligned}$$
+
+With the initial conditions $v_{A}(0^-) = v_{0,A}$, and defining the difference with the initial steady conditions, $\delta v_A(t) := v_A(t) - v_{0,A}$, $\delta v_B(t) = v_B(t) - v_{0,B}$, the initial condition for the difference reads $\delta v_{A}(0^-) = 0$, so that the Cauchy problem to be solved reads
+
+$$\begin{cases}
   RC \delta \dot{v}_A + \delta v_{A} = \dfrac{R_{AB}}{R_{BB}} \delta v_{B}(t) = - \dfrac{R_{AB}}{R_{BB}} v_{0,B} h(t) \\
   \delta v_A(0^-) = 0 \ .
-\end{cases}\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\delta v_A(t) = -\frac{R_{AB}}{R_{BB}} v_{0,B} \, \left[ 1 - \exp\left( - \dfrac{t}{RC} \right) \right] \, h(t) \ .\]</div>
-<p>Once the solution <span class="math notranslate nohighlight">\(\delta v_A(t)\)</span> is found,</p>
-<ul>
-<li><p>voltage across the capacitor reads</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+\end{cases}$$
+
+$$\delta v_A(t) = -\frac{R_{AB}}{R_{BB}} v_{0,B} \, \left[ 1 - \exp\left( - \dfrac{t}{RC} \right) \right] \, h(t) \ .$$
+
+Once the solution $\delta v_A(t)$ is found,
+
+- voltage across the capacitor reads 
+
+   $$\begin{aligned}
      v_A(t)
-     &amp; = \delta v_A(t) + v_{A,0} = \\
-     &amp; = v_{A,0} - \frac{R_{AB}}{R_{BB}} v_{0,B} \, \left[ 1 - \exp\left( - \dfrac{t}{RC} \right) \right] \, h(t) \ ,
-   \end{aligned}\end{split}\]</div>
-</li>
-<li><p>current through the capacitor reads</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+     & = \delta v_A(t) + v_{A,0} = \\
+     & = v_{A,0} - \frac{R_{AB}}{R_{BB}} v_{0,B} \, \left[ 1 - \exp\left( - \dfrac{t}{RC} \right) \right] \, h(t) \ ,
+   \end{aligned}$$
+
+- current through the capacitor reads 
+
+   $$\begin{aligned}
      i_A(t) 
-     &amp; = C \dfrac{d v_A}{dt}(t) = \\
-     &amp; = \frac{R_{AB}}{\det \mathbf{R}} \exp\left( - \dfrac{t}{RC}  \right) \, h(t) \ ,
-   \end{aligned}\end{split}\]</div>
-<p>as <span class="math notranslate nohighlight">\(R = \frac{\det \mathbf{R}}{R_{BB}}\)</span>;</p>
-</li>
-<li><p>current through the switch reads</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+     & = C \dfrac{d v_A}{dt}(t) = \\
+     & = \frac{R_{AB}}{\det \mathbf{R}} \exp\left( - \dfrac{t}{RC}  \right) \, h(t) \ ,
+   \end{aligned}$$
+
+   as $R = \frac{\det \mathbf{R}}{R_{BB}}$;
+
+- current through the switch reads 
+   
+   $$\begin{aligned}
      i_B(t)
-     &amp; = \frac{1}{R_{BB}} \left[ v_B(t) - v_{0,B} - R_{BA} i_A(t) \right] = \\
-     &amp; = - \frac{v_{0,B}}{R_{BB}} \, h(t) - \frac{R_{BA} R_{AB}}{R_{BB} \det \mathbf{R} } \exp \left( -\dfrac{t}{RC} \right) \, h(t) \ .
-   \end{aligned}\end{split}\]</div>
-</li>
-<li><p>the desired current reads</p>
-<div class="math notranslate nohighlight">
-\[i(t) = i_0(\mathbf{e}, \mathbf{a}) + i_{/i_A} i_A(t) + i_{/i_B} i_B(t) \ .\]</div>
-</li>
-</ul>
+     & = \frac{1}{R_{BB}} \left[ v_B(t) - v_{0,B} - R_{BA} i_A(t) \right] = \\
+     & = - \frac{v_{0,B}}{R_{BB}} \, h(t) - \frac{R_{BA} R_{AB}}{R_{BB} \det \mathbf{R} } \exp \left( -\dfrac{t}{RC} \right) \, h(t) \ .
+   \end{aligned}$$
+
+- the desired current reads
+
+   $$i(t) = i_0(\mathbf{e}, \mathbf{a}) + i_{/i_A} i_A(t) + i_{/i_B} i_B(t) \ .$$
+
+-->
 </div>
 <!-- ######################################################################## -->
 <div class="exercise admonition" id="exam-25-02-11-exe-01">
