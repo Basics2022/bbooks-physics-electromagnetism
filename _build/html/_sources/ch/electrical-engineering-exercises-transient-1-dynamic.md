@@ -2,15 +2,50 @@
 # Transient dynamics of linear electrical grids with one dynamic component
 
 ```{admonition} Guidelines for solution
-:class: dropdown, tip
+:class: tip
 
-A many-port Thevenin equivalent circuit of the resistive part of the circuit is found, with two ports for interfacing with the dynamical component (A) and with the switch (B), exploiting PSCE,
+Breaking down the solution:
+1. Find the **many-port equivalent** of the **linear algebraic part of the network** (resistor, and prescribed generators), using PSCE. Find the relation between port voltage and currents and all the required variables of the network,
 
-$$\begin{aligned}
-  v_A & = v_{0,A}(\mathbf{e},\mathbf{a}) + R_{AA} i_A + R_{AB} i_B \\
-  v_B & = v_{0,B}(\mathbf{e},\mathbf{a}) + R_{BA} i_A + R_{BB} i_B \\
-  i   & =   i_{0}(\mathbf{e},\mathbf{a}) + i_{/i_A} i_A + i_{/i_B} i_B
-\end{aligned}$$
+   $$\begin{aligned}
+     \mathbf{v}_{port} & = \mathbf{v}_0(\mathbf{e}, \mathbf{a}) + \mathbf{R} \mathbf{i}_{port} \\
+     \mathbf{z}        & = \mathbf{z}_0(\mathbf{e}, \mathbf{a}) + \mathbf{z}_{/i_{port}} \mathbf{i}_{port}
+   \end{aligned}$$
+
+   If 2 ports exist and port $A$ is connected to a dynamical linear component and port $B$ is connected to an ideal switch, the equations become to
+
+   $$\begin{aligned}
+     v_A & = v_{0,A}(\mathbf{e},\mathbf{a}) + R_{AA} i_A + R_{AB} i_B \\
+     v_B & = v_{0,B}(\mathbf{e},\mathbf{a}) + R_{BA} i_A + R_{BB} i_B \\
+     \mathbf{z} & = \mathbf{z}_0(\mathbf{e}, \mathbf{a}) + \mathbf{z}_{/i_{port}} \mathbf{i}_{port}
+   \end{aligned}$$
+
+2. Evaluate the **steady conditions** for $t \le 0^-$, with the given state of the switch ($i_B = 0$ if it's open, $v_B = 0$ if it's closed), and using the constitutive equation of the dynamical element (a capacitor acts as an open circuit in steady conditions, $i_A = 0$ as $i_A = C \frac{d v_A}{dt}$; an inductor acts as a short-circuit in steady conditions, $v_A = 0$, as $v_A = L \frac{d i_A}{d t}$).
+
+    In the first two equations of the system, two of the four varaibles $i_{A,B}$, $v_{A,B}$ are thus known, and this system can be solved to find the other two quantities. Once $\mathbf{i}_{port}$ is known, grid variables $\mathbf{z}$ can be evaluated.
+
+3. **Transient dynamics** is then evaluated using the change of state in the switch
+   
+   $$\begin{aligned}
+     \text{open to close: } & \begin{cases} v_{A}(t) = ( 1 - h(t) ) \, v_{A,0^-} \\
+                                            i_{A}(t) =  h(t) \, i_{A,t\ge 0}(t) \end{cases} \\ \\
+     \text{close to open: } & \begin{cases} v_{A}(t) = h(t) \, v_{A,t\ge 0}(t) \\
+                                            i_{A}(t) = ( 1 - h(t) ) \, i_{A,0^-} \end{cases} \\ \\
+   \end{aligned}$$
+
+   and using the conditions for $t \ge 0$ in the equations of the equivalent network to find the equivalent resistance $R_{eq}$ of the algebraic part of the network to be used in the constitutive equations of the dynamical component,
+
+   $$\begin{aligned}
+     \text{capacitor} &: && 0 = i_A +  C \frac{d v_A}{d t} && \rightarrow \quad  f(\mathbf{x}_{B}) = v_A + R_{eq} C \frac{d v_A}{d t} \\
+     \text{inductor } &: && 0 = v_A +  L \frac{d i_A}{d t} && \rightarrow \quad  f(\mathbf{x}_{B}) = i_A + R_{eq} L \frac{d i_A}{d t} \\
+   \end{aligned}$$
+
+   with $f(\mathbf{x}_{B})$ a forcing term depending on the state of the switch, and the initial conditions for the state variable of the dynamical components equal to the steady conditions, as there's no jump in state variables without impulsive forces.
+
+4. Once the state variables of the dynamical equations are known. it's possible to evaluate all the other required variables.
+
+<!--
+...
 
 The constitutive equation of the dynamical equation is used to evaluate the time evolution of the system, given the initial conditions - usually steady conditions with switches open. If the dynamical element is a capacitor,
 
@@ -107,6 +142,9 @@ Once the solution $\delta v_A(t)$ is found,
 - the desired current reads
 
    $$i(t) = i_0(\mathbf{e}, \mathbf{a}) + i_{/i_A} i_A(t) + i_{/i_B} i_B(t) \ .$$
+
+-->
+
 
 ```
 
