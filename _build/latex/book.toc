@@ -1,27 +1,27 @@
 \selectlanguage *{italian}
-\contentsline {part}{I\hspace {1em}Elettromagnetismo}{3}{part.1}%
+\contentsline {part}{I\hspace {1em}Electromagnetism}{3}{part.1}%
 \contentsline {chapter}{\numberline {1}Brief history of Electromagnetism}{5}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Principles of Classical Electromagnetism}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Principles in Differential Form}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Principles in Integral Form: Electromagnetic Equations and Galilean Relativity}{8}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Integral Form on Control Volumes}{8}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Integral Form on Arbitrary Volumes}{8}{subsection.2.2.2}%
-\contentsline {chapter}{\numberline {3}Potenziali elettromagnetici}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Potenziale vettore e potenziale scalare}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Condizioni di gauge}{12}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Elettromagnetismo nella materia}{13}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Vuoto}{13}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Mezzi continui}{13}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Polarizzazione}{14}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Singolo dipolo elettrico}{14}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Distribuzione continua di dipoli}{14}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Riformulazione delle equazioni di Maxwell e della continuità della carica}{15}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Magnetizzazione}{15}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Singolo momento magnetico (limite di una spira elementare)}{15}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Distribuzione continua di momento magnetico}{16}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Riformulazione delle equazioni di Maxwell e della continuità della carica}{17}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Esempi}{18}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Jump conditions}{18}{section.4.6}%
+\contentsline {chapter}{\numberline {3}Electromagnetic Potentials}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Vector Potential and Scalar Potential}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Gauge Conditions}{12}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Electromagnetism in Matter}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Vacuum}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Continuous Media}{13}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Polarization}{14}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Single Electric Dipole}{14}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Continuous Distribution of Dipoles}{14}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Reformulation of Maxwell’s Equations and Charge Continuity}{15}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Magnetization}{15}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Single Magnetic Moment (Limit of an Elementary Loop)}{15}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Continuous Distribution of Magnetic Moment}{16}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Reformulation of Maxwell’s Equations and Charge Continuity}{17}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Examples}{18}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Jump Conditions}{18}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Electrostatics}{21}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Zero electric field inside a conductor}{21}{section.5.1}%
 \contentsline {chapter}{\numberline {6}Energy balance in electromagnetism}{23}{chapter.6}%
@@ -33,14 +33,14 @@
 \contentsline {chapter}{\numberline {7}Energy and momentum balance in linear, local, isotropic, non\sphinxhyphen {}dispersive media}{29}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Linear media \sphinxhyphen {} energy}{30}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Linear media \sphinxhyphen {} momentum}{30}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Equazioni dell’elettromagnetismo e relatività galileiana}{33}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Onde elettromagnetiche}{35}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Equazioni delle onde in elettromagnetismo}{35}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}Potenziali elettromagnetici}{36}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}Campo elettrico e campo magnetico}{37}{subsection.9.1.2}%
-\contentsline {section}{\numberline {9.2}Onde elettromagnetiche piane}{37}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Snell’s law at an interface}{38}{subsection.9.2.1}%
-\contentsline {part}{II\hspace {1em}Elettrotecnica}{43}{part.2}%
+\contentsline {chapter}{\numberline {8}Relativity in electromagnetism}{33}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Electromagnetic waves}{35}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Wave Equations in Electromagnetism}{35}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Electromagnetic Potentials}{35}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Electric Field and Magnetic Field}{36}{subsection.9.1.2}%
+\contentsline {section}{\numberline {9.2}Plane Electromagnetic Waves}{37}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Snell’s Law at an Interface}{38}{subsection.9.2.1}%
+\contentsline {part}{II\hspace {1em}Electric Engineering}{43}{part.2}%
 \contentsline {chapter}{\numberline {10}Approssimazione circuitale}{45}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Circuiti elettrici}{45}{section.10.1}%
 \contentsline {subsection}{\numberline {10.1.1}Validità dell’approccio circuitale}{45}{subsection.10.1.1}%
@@ -78,18 +78,18 @@
 \contentsline {paragraph}{Phase\sphinxhyphen {}phase connections}{60}{paragraph*.18}%
 \contentsline {section}{\numberline {10.7}Exercises}{60}{section.10.7}%
 \contentsline {subsection}{\numberline {10.7.1}Transient dynamics of linear electrical grids with one dynamic component}{62}{subsection.10.7.1}%
-\contentsline {subsection}{\numberline {10.7.2}Harmonic regime of linear electrical grids}{76}{subsection.10.7.2}%
-\contentsline {subsection}{\numberline {10.7.3}Three\sphinxhyphen {}phase electrical circuits in harmonic regime}{81}{subsection.10.7.3}%
-\contentsline {subsection}{\numberline {10.7.4}Electromagnetic circuits}{86}{subsection.10.7.4}%
-\contentsline {part}{III\hspace {1em}Metodi numerici}{89}{part.3}%
-\contentsline {chapter}{\numberline {11}Green’s function method}{93}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Poisson equation}{93}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Helmholtz equation}{94}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Wave equation}{96}{section.11.3}%
-\contentsline {chapter}{\numberline {12}Metodi numerici}{99}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Elettrostatica}{99}{section.12.1}%
-\contentsline {subsection}{\numberline {12.1.1}Sorgente}{99}{subsection.12.1.1}%
-\contentsline {subsection}{\numberline {12.1.2}Dipolo}{100}{subsection.12.1.2}%
-\contentsline {part}{IV\hspace {1em}Appendici}{103}{part.4}%
-\contentsline {chapter}{\numberline {13}Ottica}{107}{chapter.13}%
-\contentsline {chapter}{Proof Index}{109}{section*.36}%
+\contentsline {subsection}{\numberline {10.7.2}Harmonic regime of linear electrical grids}{75}{subsection.10.7.2}%
+\contentsline {subsection}{\numberline {10.7.3}Three\sphinxhyphen {}phase electrical circuits in harmonic regime}{80}{subsection.10.7.3}%
+\contentsline {subsection}{\numberline {10.7.4}Electromagnetic circuits}{85}{subsection.10.7.4}%
+\contentsline {part}{III\hspace {1em}Numerical Methods}{87}{part.3}%
+\contentsline {chapter}{\numberline {11}Green’s function method}{91}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Poisson equation}{91}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Helmholtz equation}{92}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Wave equation}{94}{section.11.3}%
+\contentsline {chapter}{\numberline {12}Metodi numerici}{97}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Elettrostatica}{97}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}Sorgente}{97}{subsection.12.1.1}%
+\contentsline {subsection}{\numberline {12.1.2}Dipolo}{98}{subsection.12.1.2}%
+\contentsline {part}{IV\hspace {1em}Appendices}{101}{part.4}%
+\contentsline {chapter}{\numberline {13}todo: appendices}{103}{chapter.13}%
+\contentsline {chapter}{Proof Index}{105}{section*.36}%

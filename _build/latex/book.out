@@ -1,26 +1,26 @@
-\BOOKMARK [-1][-]{part.1}{I\040Elettromagnetismo}{}% 1
+\BOOKMARK [-1][-]{part.1}{I\040Electromagnetism}{}% 1
 \BOOKMARK [0][-]{chapter.1}{Brief\040history\040of\040Electromagnetism}{part.1}% 2
 \BOOKMARK [0][-]{chapter.2}{Principles\040of\040Classical\040Electromagnetism}{part.1}% 3
 \BOOKMARK [1][-]{section.2.1}{Principles\040in\040Differential\040Form}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.2}{Principles\040in\040Integral\040Form:\040Electromagnetic\040Equations\040and\040Galilean\040Relativity}{chapter.2}% 5
 \BOOKMARK [2][-]{subsection.2.2.1}{Integral\040Form\040on\040Control\040Volumes}{section.2.2}% 6
 \BOOKMARK [2][-]{subsection.2.2.2}{Integral\040Form\040on\040Arbitrary\040Volumes}{section.2.2}% 7
-\BOOKMARK [0][-]{chapter.3}{Potenziali\040elettromagnetici}{part.1}% 8
-\BOOKMARK [1][-]{section.3.1}{Potenziale\040vettore\040e\040potenziale\040scalare}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.2}{Condizioni\040di\040gauge}{chapter.3}% 10
-\BOOKMARK [0][-]{chapter.4}{Elettromagnetismo\040nella\040materia}{part.1}% 11
-\BOOKMARK [1][-]{section.4.1}{Vuoto}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.2}{Mezzi\040continui}{chapter.4}% 13
-\BOOKMARK [1][-]{section.4.3}{Polarizzazione}{chapter.4}% 14
-\BOOKMARK [2][-]{subsection.4.3.1}{Singolo\040dipolo\040elettrico}{section.4.3}% 15
-\BOOKMARK [2][-]{subsection.4.3.2}{Distribuzione\040continua\040di\040dipoli}{section.4.3}% 16
-\BOOKMARK [2][-]{subsection.4.3.3}{Riformulazione delle equazioni di Maxwell e della continuità della carica}{section.4.3}% 17
-\BOOKMARK [1][-]{section.4.4}{Magnetizzazione}{chapter.4}% 18
-\BOOKMARK [2][-]{subsection.4.4.1}{Singolo\040momento\040magnetico\040\(limite\040di\040una\040spira\040elementare\)}{section.4.4}% 19
-\BOOKMARK [2][-]{subsection.4.4.2}{Distribuzione\040continua\040di\040momento\040magnetico}{section.4.4}% 20
-\BOOKMARK [2][-]{subsection.4.4.3}{Riformulazione delle equazioni di Maxwell e della continuità della carica}{section.4.4}% 21
-\BOOKMARK [1][-]{section.4.5}{Esempi}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.6}{Jump\040conditions}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.3}{Electromagnetic\040Potentials}{part.1}% 8
+\BOOKMARK [1][-]{section.3.1}{Vector\040Potential\040and\040Scalar\040Potential}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.2}{Gauge\040Conditions}{chapter.3}% 10
+\BOOKMARK [0][-]{chapter.4}{Electromagnetism\040in\040Matter}{part.1}% 11
+\BOOKMARK [1][-]{section.4.1}{Vacuum}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.2}{Continuous\040Media}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.3}{Polarization}{chapter.4}% 14
+\BOOKMARK [2][-]{subsection.4.3.1}{Single\040Electric\040Dipole}{section.4.3}% 15
+\BOOKMARK [2][-]{subsection.4.3.2}{Continuous\040Distribution\040of\040Dipoles}{section.4.3}% 16
+\BOOKMARK [2][-]{subsection.4.3.3}{Reformulation of Maxwell’s Equations and Charge Continuity}{section.4.3}% 17
+\BOOKMARK [1][-]{section.4.4}{Magnetization}{chapter.4}% 18
+\BOOKMARK [2][-]{subsection.4.4.1}{Single\040Magnetic\040Moment\040\(Limit\040of\040an\040Elementary\040Loop\)}{section.4.4}% 19
+\BOOKMARK [2][-]{subsection.4.4.2}{Continuous\040Distribution\040of\040Magnetic\040Moment}{section.4.4}% 20
+\BOOKMARK [2][-]{subsection.4.4.3}{Reformulation of Maxwell’s Equations and Charge Continuity}{section.4.4}% 21
+\BOOKMARK [1][-]{section.4.5}{Examples}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.6}{Jump\040Conditions}{chapter.4}% 23
 \BOOKMARK [0][-]{chapter.5}{Electrostatics}{part.1}% 24
 \BOOKMARK [1][-]{section.5.1}{Zero\040electric\040field\040inside\040a\040conductor}{chapter.5}% 25
 \BOOKMARK [0][-]{chapter.6}{Energy\040balance\040in\040electromagnetism}{part.1}% 26
@@ -32,14 +32,14 @@
 \BOOKMARK [0][-]{chapter.7}{Energy\040and\040momentum\040balance\040in\040linear,\040local,\040isotropic,\040non-dispersive\040media}{part.1}% 32
 \BOOKMARK [1][-]{section.7.1}{Linear\040media\040-\040energy}{chapter.7}% 33
 \BOOKMARK [1][-]{section.7.2}{Linear\040media\040-\040momentum}{chapter.7}% 34
-\BOOKMARK [0][-]{chapter.8}{Equazioni dell’elettromagnetismo e relatività galileiana}{part.1}% 35
-\BOOKMARK [0][-]{chapter.9}{Onde\040elettromagnetiche}{part.1}% 36
-\BOOKMARK [1][-]{section.9.1}{Equazioni\040delle\040onde\040in\040elettromagnetismo}{chapter.9}% 37
-\BOOKMARK [2][-]{subsection.9.1.1}{Potenziali\040elettromagnetici}{section.9.1}% 38
-\BOOKMARK [2][-]{subsection.9.1.2}{Campo\040elettrico\040e\040campo\040magnetico}{section.9.1}% 39
-\BOOKMARK [1][-]{section.9.2}{Onde\040elettromagnetiche\040piane}{chapter.9}% 40
-\BOOKMARK [2][-]{subsection.9.2.1}{Snell’s law at an interface}{section.9.2}% 41
-\BOOKMARK [-1][-]{part.2}{II\040Elettrotecnica}{}% 42
+\BOOKMARK [0][-]{chapter.8}{Relativity\040in\040electromagnetism}{part.1}% 35
+\BOOKMARK [0][-]{chapter.9}{Electromagnetic\040waves}{part.1}% 36
+\BOOKMARK [1][-]{section.9.1}{Wave\040Equations\040in\040Electromagnetism}{chapter.9}% 37
+\BOOKMARK [2][-]{subsection.9.1.1}{Electromagnetic\040Potentials}{section.9.1}% 38
+\BOOKMARK [2][-]{subsection.9.1.2}{Electric\040Field\040and\040Magnetic\040Field}{section.9.1}% 39
+\BOOKMARK [1][-]{section.9.2}{Plane\040Electromagnetic\040Waves}{chapter.9}% 40
+\BOOKMARK [2][-]{subsection.9.2.1}{Snell’s Law at an Interface}{section.9.2}% 41
+\BOOKMARK [-1][-]{part.2}{II\040Electric\040Engineering}{}% 42
 \BOOKMARK [0][-]{chapter.10}{Approssimazione\040circuitale}{part.2}% 43
 \BOOKMARK [1][-]{section.10.1}{Circuiti\040elettrici}{chapter.10}% 44
 \BOOKMARK [2][-]{subsection.10.1.1}{Validità dell’approccio circuitale}{section.10.1}% 45
@@ -80,7 +80,7 @@
 \BOOKMARK [2][-]{subsection.10.7.2}{Harmonic\040regime\040of\040linear\040electrical\040grids}{section.10.7}% 80
 \BOOKMARK [2][-]{subsection.10.7.3}{Three-phase\040electrical\040circuits\040in\040harmonic\040regime}{section.10.7}% 81
 \BOOKMARK [2][-]{subsection.10.7.4}{Electromagnetic\040circuits}{section.10.7}% 82
-\BOOKMARK [-1][-]{part.3}{III\040Metodi\040numerici}{}% 83
+\BOOKMARK [-1][-]{part.3}{III\040Numerical\040Methods}{}% 83
 \BOOKMARK [0][-]{chapter.11}{Green’s function method}{part.3}% 84
 \BOOKMARK [1][-]{section.11.1}{Poisson\040equation}{chapter.11}% 85
 \BOOKMARK [1][-]{section.11.2}{Helmholtz\040equation}{chapter.11}% 86
@@ -89,6 +89,6 @@
 \BOOKMARK [1][-]{section.12.1}{Elettrostatica}{chapter.12}% 89
 \BOOKMARK [2][-]{subsection.12.1.1}{Sorgente}{section.12.1}% 90
 \BOOKMARK [2][-]{subsection.12.1.2}{Dipolo}{section.12.1}% 91
-\BOOKMARK [-1][-]{part.4}{IV\040Appendici}{}% 92
-\BOOKMARK [0][-]{chapter.13}{Ottica}{part.4}% 93
+\BOOKMARK [-1][-]{part.4}{IV\040Appendices}{}% 92
+\BOOKMARK [0][-]{chapter.13}{todo:\040appendices}{part.4}% 93
 \BOOKMARK [0][-]{section*.36}{Proof\040Index}{part.4}% 94
