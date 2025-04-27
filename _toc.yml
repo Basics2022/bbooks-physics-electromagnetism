@@ -6,7 +6,7 @@ root: intro
 options:
   numbered: True
 parts:
-- caption: Elettromagnetismo
+- caption: Electromagnetism
   numbered: true
   chapters:
   - file: ch/experiments
@@ -21,7 +21,7 @@ parts:
     sections:
     - file: ch/waves-equation
     - file: ch/waves-plane
-- caption: Elettrotecnica
+- caption: Electric Engineering
   numbered: true
   chapters:
   - file: ch/circuits
@@ -45,12 +45,12 @@ parts:
       - file: ch/electrical-engineering-exercises-harmonic
       - file: ch/electrical-engineering-exercises-three-phase
       - file: ch/electrical-engineering-exercises-electromagnetic
-- caption: Metodi numerici
+- caption: Numerical Methods
   numbered: true
   chapters:
   - file: ch/green-function
   - file: ch/numerical-methods
-- caption: Appendici
+- caption: Appendices
   numbered: true
   chapters:
-  - file: ch/optics
+  - file: ch/appendix-list

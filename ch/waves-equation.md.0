@@ -6,14 +6,14 @@
 ```
 -->
 
-(classical-electromagnetism\:waves\:wave-equation)=
-# Wave Equations in Electromagnetism
+(classical-electromagnetism:waves:wave-equation)=
+# Wave equations in electromagnetism
 
-**Vector Identity.**
+**Identità vettoriale.**
 
 $$\Delta \mathbf{v} = \nabla ( \nabla \cdot \mathbf{v} ) - \nabla \times \nabla \times \mathbf{v}$$
 
-**Proof.**
+**Dim.**
 
 $$\begin{aligned}
  \nabla \times \nabla \times \mathbf{v} & = \varepsilon_{ijk} \partial_j ( \varepsilon_{klm} \partial_l v_m ) = \\
@@ -23,25 +23,25 @@ $$\begin{aligned}
  & = \nabla (\nabla \cdot \mathbf{v}) - \Delta \mathbf{v} \ ,
 \end{aligned}$$
 
-using the identity
+avendo utilizzato l'identità
 
 $$\varepsilon_{ijk} \varepsilon_{ilm} = \delta_{jl} \delta_{km} - \delta_{jm} \delta_{kl}$$
 
-## Electromagnetic Potentials
+## Potenziali elettromagnetici
 
-Starting from the definitions of electromagnetic potentials and Maxwell's equations, with the help of some vector identities, it is possible (**TODO** *list the necessary assumptions for the derivation*) to write wave equations for the vector potential and the scalar potential.
+Partendo dalle definizioni dei potenziali elettromagnetici e dalle equazioni di Maxwell, con l'aiuto di alcune identità vettoriali, è possibile (**TODO** *ipotesi, elencare quelle necessarie alla derivazione*) scrivere delle equazionin delle onde per il potenziale vettore e per il potenziale scalare.
 
 $$\begin{aligned}
  \mathbf{e} & = - \nabla \varphi - \partial_t \mathbf{a} \\
  \mathbf{b} & = \nabla \times \mathbf{a} \\
 \end{aligned}$$
 
-Using the constitutive equations
+Usando le equazioni costitutive
 
 $$\mathbf{d} = \varepsilon \ \mathbf{e} \qquad , \qquad
 \mathbf{b} = \mu \mathbf{h} $$
 
-**Vector Potential.**
+**Potenziale vettore.**
 
 $$\mathbf{b} = \nabla \times \mathbf{a}$$
 
@@ -54,19 +54,19 @@ $$\begin{aligned}
  & = - \Delta \mathbf{a} + \nabla(\nabla \cdot \mathbf{a})  + \frac{1}{c^2} \partial_t \nabla \varphi + \dfrac{1}{c^2} \partial_{tt} \mathbf{a} - \mu \mathbf{j}  \\
 \end{aligned}$$
 
-Using the Lorentz gauge condition
+Usando la condizione di gauge di Lorentz
 
 $$\nabla \cdot \mathbf{a} + \frac{1}{c^2} \partial_t  \varphi = 0 \ ,$$
 
-we obtain a wave equation for the vector potential
+si ottiene un'equazione delle onde per il potenziale vettore
 
 $$ \dfrac{1}{c^2} \partial_{tt} \mathbf{a} - \Delta \mathbf{a}  =  \mu \mathbf{j}  \ .$$
 
-**Scalar Potential.**
+**Potenziale scalare.**
 
 $$\mathbf{e} = \nabla \varphi - \partial_t \mathbf{a}$$
 
-Taking the time derivative of the Lorentz gauge condition
+Calcolando la derivata nel tempo della condizione di gauge di Lorentz
 
 $$\begin{aligned}
  0 & = \partial_t (\frac{1}{c^2} \partial_t \varphi + \nabla \cdot \mathbf{a}) = \\
@@ -75,15 +75,15 @@ $$\begin{aligned}
    & = \frac{1}{c^2} \partial_{tt} \varphi - \Delta \varphi - \frac{\rho}{\varepsilon} = \\
 \end{aligned}$$
 
-we arrive at the wave equation for the scalar potential,
+si arriva all'equazione delle onde per il potenziale scalare,
 
 $$ \frac{1}{c^2} \partial_{tt} \varphi - \Delta \varphi = \frac{\rho}{\varepsilon} \ .$$
 
-## Electric Field and Magnetic Field
+## Campo elettrico e campo magnetico
 
-Using the definitions of the physical fields in terms of the electromagnetic potentials and the linearity (**TODO** *everything must be linear, including the constitutive laws*) of the operations, starting from the wave equations for the potentials, we can derive the wave equations for the physical fields. **TODO** *Assuming constant and uniform properties*
+Usando le definizioni dei campi fisici in termini dei potenziali elettromagnetici e la linearità (**TODO** *tutto deve essere lineare, anche le leggi costitutive*) delle operazioni, partendo dalle equazioni delle onde per i potenziali, si possono ricavare le equazioni delle onde per i campi fisici. **TODO** *Nell'ipotesi di proprietà costanti e uniformi*
 
-**Electric Field.**
+**Campo elettrico.**
 
 $$\begin{aligned}
 \square \mathbf{e} & = \square ( -\nabla \varphi - \partial_t \mathbf{a}) = \\
@@ -91,12 +91,15 @@ $$\begin{aligned}
 & = - \nabla \dfrac{\rho}{\varepsilon} - \mu \partial_t \mathbf{j}  \ .
 \end{aligned}$$
 
-**Magnetic Field.**
+**Campo magnetico.**
 
 $$\begin{aligned}
  \square \mathbf{b} & = \square \nabla \times \mathbf{a} = \\
  & = \nabla \times \square \mathbf{a} = \\
  & = \mu \nabla \times \mathbf{j}
 \end{aligned}$$
-```
+
+
+
+
 

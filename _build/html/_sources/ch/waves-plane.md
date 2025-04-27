@@ -6,17 +6,17 @@
 ```
 -->
 
-(classical-electromagnetism:waves:plane-waves)=
-# Onde elettromagnetiche piane
+(classical-electromagnetism\:waves\:plane-waves)=
+# Plane Electromagnetic Waves
 
-Harmonic decomposition of the electromagnetic field. EM field can be written as the superposition of plane waves (Fourier decomposition)
+Harmonic decomposition of the electromagnetic field. The EM field can be written as the superposition of plane waves (Fourier decomposition)
 
 $$\begin{aligned}
   \mathbf{e}(\mathbf{r},t) & = \mathbf{E} e^{i(\mathbf{k} \cdot \mathbf{r} - \omega t)} \\
   \mathbf{b}(\mathbf{r},t) & = \mathbf{B} e^{i(\mathbf{k} \cdot \mathbf{r} - \omega t)} \\
 \end{aligned}$$
 
-Introudcing this decomposiiton in Maxwell's equations with no free charge and current
+Introducing this decomposition into Maxwell's equations with no free charge and current
 
 $$
 \begin{cases}
@@ -26,6 +26,9 @@ $$
  \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{0}
 \end{cases}
 $$
+
+we obtain
+
 $$
 \begin{cases}
  i \mathbf{k} \cdot \mathbf{D} = 0 \\
@@ -46,7 +49,7 @@ $$
 
    $$\mathbf{k} \perp \mathbf{E} \quad , \quad \mathbf{k} \perp \mathbf{B}$$
 
-- From Faraday and Ampére-Maxwell equations
+- From Faraday and Ampère-Maxwell equations
 
    $$\mathbf{B} = \dfrac{\mathbf{k}}{\omega} \times \mathbf{E}$$
    $$\mathbf{E} = - \dfrac{1}{\mu \varepsilon}\dfrac{\mathbf{k}}{\omega} \times \mathbf{B}$$
@@ -54,7 +57,7 @@ $$
 It follows that:
 
 - $\mathbf{k}$, $\mathbf{E}$, $\mathbf{B}$ are orthogonal "RHS" set of vectors
-- Relations between $\mathbf{E}$, $\mathbf{B}$, and $\mathbf{k}$ and the speed of light 
+- Relations between $\mathbf{E}$, $\mathbf{B}$, and $\mathbf{k}$ and the speed of light
 
     $$\begin{aligned}
       \mathbf{B} & = \dfrac{1}{c} \, \hat{\mathbf{k}} \times \mathbf{E} \\
@@ -64,7 +67,7 @@ It follows that:
     hold, with speed of light $c = \dfrac{1}{\sqrt{\mu \varepsilon}} = \dfrac{\omega}{|\mathbf{k}|}$, and unit vector $\hat{\mathbf{k}} = \dfrac{\mathbf{k}}{|\mathbf{k}|}$.
 
 ```{dropdown} Proof using vector algebra identity
-Recalling $c^2 = \frac{1}{\mu \varepsilon}$ and 
+Recalling $c^2 = \frac{1}{\mu \varepsilon}$ and
 
 $$\mathbf{B} = \dfrac{\mathbf{k}}{\omega} \times \mathbf{E} = \dfrac{\mathbf{k}}{\omega} \times \left[ - c^2 \dfrac{\mathbf{k}}{\omega} \times \mathbf{B} \right] = - \dfrac{c^2 |\mathbf{k}|^2}{\omega^2} \hat{\mathbf{k}} \times \left( \hat{\mathbf{k}} \times \mathbf{B} \right)$$
 
@@ -75,7 +78,7 @@ $$\mathbf{a} \times (\mathbf{b} \times \mathbf{c}) = \varepsilon_{ijk} a_j \vare
 applied to $\hat{\mathbf{k}} \times \left( \hat{\mathbf{k}} \times \mathbf{B} \right)$ gives
 
 $$
-  \hat{\mathbf{k}} \times \left( \hat{\mathbf{k}} \times \mathbf{B} \right) = \underbrace{\left( \hat{\mathbf{k}} \dot \mathbf{B} \right)}_{=0 \text{ since $\mathbf{k} \perp \mathbf{B}$}} \hat{\mathbf{k}} - \underbrace{\left( \hat{\mathbf{k}} \cdot \hat{\mathbf{k}} \right)}_{= 1} \mathbf{B} = - \mathbf{B} \ , 
+  \hat{\mathbf{k}} \times \left( \hat{\mathbf{k}} \times \mathbf{B} \right) = \underbrace{\left( \hat{\mathbf{k}} \dot \mathbf{B} \right)}_{=0 \text{ since $\mathbf{k} \perp \mathbf{B}$}} \hat{\mathbf{k}} - \underbrace{\left( \hat{\mathbf{k}} \cdot \hat{\mathbf{k}} \right)}_{= 1} \mathbf{B} = - \mathbf{B} \ ,
 $$
 
 and the original relation gives
@@ -86,12 +89,11 @@ and the relation between pulsation $\omega$, wave vector $\mathbf{k}$ and speed 
 
 $$c = \dfrac{\omega}{|\mathbf{k}|} \ .$$
 
-
 ```
 
-(classical-electromagnetism:waves:plane-waves:snell)=
-## Snell's law at an interface
-Snell's law is derived here assuming isotrpoic linear media, so that
+(classical-electromagnetism\:waves\:plane-waves\:snell)=
+## Snell's Law at an Interface
+Snell's law is derived here assuming isotropic linear media, so that
 
 $$\begin{cases}
   \mathbf{d}(\mathbf{r},t) = \varepsilon \mathbf{e}(\mathbf{r},t) \\
@@ -110,9 +112,9 @@ $$\begin{aligned}
   \mathbf{E}_a & = - c \, \hat{\mathbf{k}}_a \times \mathbf{B}_a \\
 \end{aligned}$$
 
-being index $a$ representing the media involved: $a = 1$ for the medium with incident and reflected waves, $a = 2$ for the medium withthe refracted wave.
+being index $a$ representing the media involved: $a = 1$ for the medium with incident and reflected waves, $a = 2$ for the medium with the refracted wave.
 
-[Jump conditions of electromagnetic field at an interface](classical-electromagnetism:media:jump) with no charge or current surface density are given by conditions {eq}`eq:em-jump:no-surf-density`,
+[Jump conditions of electromagnetic field at an interface](classical-electromagnetism\:media\:jump) with no charge or current surface density are given by conditions {eq}`eq:em-jump:no-surf-density`,
 
 $$\begin{cases}
   \varepsilon_1 e_{n,1} = \varepsilon_2 e_{n,2} \\
@@ -123,7 +125,7 @@ $$\begin{cases}
 
 Definition of some vectors: $\hat{\mathbf{n}}$ unit normal vector, $\mathbf{k}$ wave vector, $\hat{\mathbf{b}} = \dfrac{\hat{\mathbf{n}} \times \mathbf{k}}{|\hat{\mathbf{n}} \times \mathbf{k}|}$ (singular only for normal incident ray), $\hat{\mathbf{c}} = \dfrac{\hat{\mathbf{b}} \times \mathbf{k}}{|\hat{\mathbf{b}} \times \mathbf{k}|}$, $\hat{\mathbf{t}} = \dfrac{\hat{\mathbf{b}} \times \hat{\mathbf{n}}}{|\hat{\mathbf{b}} \times \hat{\mathbf{n}}|}$
 
-Incindent angle $\theta_{1,i}$ is the angle between $\hat{\mathbf{n}}$ and $\mathbf{k}$, s.t. $\hat{\mathbf{n}} \times \mathbf{k} = \hat{\mathbf{b}} \, k \, \sin \theta_{1,i}$.
+Incident angle $\theta_{1,i}$ is the angle between $\hat{\mathbf{n}}$ and $\mathbf{k}$, s.t. $\hat{\mathbf{n}} \times \mathbf{k} = \hat{\mathbf{b}} \, k \, \sin \theta_{1,i}$.
 
 $$\begin{cases}
   \hat{\mathbf{k}} = \quad \cos \theta_{1,i} \hat{\mathbf{n}} + \sin \theta_{1,i} \hat{\mathbf{t}} \\
@@ -163,16 +165,16 @@ thus **Snell's law** follows
 
 $$\frac{\sin \theta_{1,i}}{\sin \theta_{2,t}} = \frac{c_2}{c_1} = \frac{n_1}{n_2} \ .$$
 
-**Incident, relfected and refracted wave.** Wave at interface in medium 1 ha the contribution of the incoming incident wave, and the reflected one.
+**Incident, Reflected, and Refracted Wave.** The wave at the interface in medium 1 has the contribution of the incoming incident wave and the reflected one.
 
 $$\begin{aligned}
-\mathbf{e}_1(\mathbf{r},t) 
+\mathbf{e}_1(\mathbf{r},t)
 & = \mathbf{e}_i(\mathbf{r},t) + \mathbf{e}_r(\mathbf{r},t) = \\
 & = \mathbf{E}_{i} e^{i \left( \mathbf{k}_i \cdot \mathbf{r} - \omega t \right)} + \mathbf{E}_{r} e^{i \left( \mathbf{k}_r \cdot \mathbf{r} - \omega t \right)} = \\
-& = \left( \mathbf{E}_{i} e^{i \mathbf{k}_i \cdot \mathbf{r}} + \mathbf{E}_{r} e^{i \mathbf{k}_r \cdot \mathbf{r} } \right) e^{-i \omega t} 
+& = \left( \mathbf{E}_{i} e^{i \mathbf{k}_i \cdot \mathbf{r}} + \mathbf{E}_{r} e^{i \mathbf{k}_r \cdot \mathbf{r} } \right) e^{-i \omega t}
 \end{aligned}$$
 
-with 
+with
 
 $$\begin{aligned}
   \mathbf{k}_i & = k_{i,n} \hat{\mathbf{n}} + k_{i,t} \hat{\mathbf{t}} \\
@@ -190,7 +192,7 @@ In order for the boundary conditions to be satisfied at all the points of the in
 
   $$k_{i,t} = k_{r,t} = k_{t,t} \ .$$
 
-Exploiting the relation between the pulsation, the wave-length and the speed of light in media, $c_a = \frac{\omega}{|\mathbf{k}_a|} = \frac{c}{n_a}$,
+Exploiting the relation between the pulsation, the wave-length, and the speed of light in media, $c_a = \frac{\omega}{|\mathbf{k}_a|} = \frac{c}{n_a}$,
 
 $$|\mathbf{k}_i| = |\mathbf{k}_r| \qquad \rightarrow \qquad k_{r,n} = - k_{i,n}$$
 
@@ -204,7 +206,7 @@ $$
   k_{r,n} & = -     |\mathbf{k}_r| \, \cos \theta_r \\
   k_{t,n} & = \ \ \ |\mathbf{k}_t| \, \cos \theta_t \\
 \end{aligned}
-\quad , \quad 
+\quad , \quad
 \begin{aligned}
   k_{i,t} & = \ \ \ |\mathbf{k}_i| \, \sin \theta_i \\
   k_{r,t} & = \ \ \ |\mathbf{k}_r| \, \sin \theta_r \\
@@ -249,9 +251,9 @@ $$
 \end{aligned}
 $$
 
-and $\alpha_i := \frac{1}{\mu_i c_i}$. These system of equations can be written as two uncoupled linear systems of equations,
+and $\alpha_i := \frac{1}{\mu_i c_i}$. These systems of equations can be written as two uncoupled linear systems of equations,
 
-(for P-polarization **todo** *change index from $c$ to $p$*; for S-polarization **todo** *change index from $b$ to $s$*)
+(for P-polarization **todo** *change index from $c$ to $p$; for S-polarization **todo** *change index from $b$ to $s$*)
 
 $$
 & \begin{cases}
@@ -276,11 +278,12 @@ $$
 $$
 
 **todo** *Analysis of the total reflection, forcing $t_x = 0$. Check signs before*
+
 $$
 \begin{bmatrix} 1 & \frac{\cos \theta_2}{\cos \theta_1} \\ -1 & \frac{\alpha_2}{\alpha_1} \end{bmatrix}
  \begin{bmatrix} r_c \\ t_c \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
 \qquad \rightarrow \qquad
-\begin{bmatrix} r_c \\ t_c \end{bmatrix} = \dfrac{1}{\frac{\alpha_2}{\alpha_1} + \frac{\cos \theta_2}{\cos \theta_1}} \begin{bmatrix} \frac{\alpha_2}{\alpha_1} & - \frac{\cos \theta_2}{\cos \theta_1} \\ 1 & 1  \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} 
+\begin{bmatrix} r_c \\ t_c \end{bmatrix} = \dfrac{1}{\frac{\alpha_2}{\alpha_1} + \frac{\cos \theta_2}{\cos \theta_1}} \begin{bmatrix} \frac{\alpha_2}{\alpha_1} & - \frac{\cos \theta_2}{\cos \theta_1} \\ 1 & 1  \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix}
 = \begin{bmatrix} \frac{\alpha_2 \cos \theta_1 - \alpha_1 \cos \theta_2}{\alpha_2 \cos \theta_1 + \alpha_1 \cos \theta_2} \\ \frac{2 \alpha_1 \cos \theta_1}{\alpha_2 \cos \theta_1 + \alpha_1 \cos \theta_2} \end{bmatrix}
 $$
 
@@ -288,7 +291,7 @@ $$
 \begin{bmatrix} -1 & 1 \\ 1 & \frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} \end{bmatrix}
  \begin{bmatrix} r_b \\ t_b \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
 \qquad \rightarrow \qquad
-\begin{bmatrix} r_b \\ t_b \end{bmatrix} = \dfrac{1}{-\frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} - 1} \begin{bmatrix}  \frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} & -1 \\ -1 & -1  \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix} 
+\begin{bmatrix} r_b \\ t_b \end{bmatrix} = \dfrac{1}{-\frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} - 1} \begin{bmatrix}  \frac{\alpha_2}{\alpha_1} \frac{\cos \theta_2}{\cos \theta_1} & -1 \\ -1 & -1  \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix}
 = \begin{bmatrix} \frac{\alpha_1 \cos \theta_1 - \alpha_2 \cos \theta_2}{\alpha_1 \cos \theta_1 + \alpha_2 \cos \theta_2} \\ \frac{2 \alpha_1 \cos \theta_1}{\alpha_1 \cos \theta_1 + \alpha_2 \cos \theta_2} \end{bmatrix}
 $$
 
@@ -312,14 +315,14 @@ $$
 \begin{bmatrix} r_b \\ t_b \end{bmatrix} = \begin{bmatrix} \frac{Z_2 \cos \theta_1 - Z_1 \cos \theta_2}{Z_2 \cos \theta_1 + Z_1 \cos \theta_2} \\ \frac{2 Z_2 \cos \theta_1}{Z_2 \cos \theta_1 + Z_1 \cos \theta_2} \end{bmatrix}
 $$
 
-**Energy balance and transmission coefficients.** Energy balance for a domain collapsing on the interface reduces to power flux balance, namely
+**Energy Balance and Transmission Coefficients.** Energy balance for a domain collapsing on the interface reduces to power flux balance, namely
 
 $$\oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}} = 0 \ ,$$
 
 with $\mathbf{s} = \mathbf{e} \times \mathbf{h}$ the Poynting vector. For harmonic plane waves,
 
 $$\begin{aligned}
-  \mathbf{s}(\mathbf{r},t) 
+  \mathbf{s}(\mathbf{r},t)
   & = \mathbf{e}(\mathbf{r},t) \times \mathbf{h}(\mathbf{r},t) = \\
   & = \frac{1}{\mu} \left[ \mathbf{E} e^{i(\mathbf{k} \cdot \mathbf{r} - \omega t)} + \mathbf{E}^* e^{-i(\mathbf{k} \cdot \mathbf{r} - \omega t)} \right] \times \left[ \mathbf{B} e^{i(\mathbf{k} \cdot \mathbf{r} - \omega t)} + \mathbf{B}^* e^{-i(\mathbf{k} \cdot \mathbf{r} - \omega t)}  \right] = \\
   & = \frac{1}{\mu} \left[ \, \mathbf{E} \times \mathbf{B} \, e^{i 2(\mathbf{k} \cdot \mathbf{r} - \omega t)} + c.c. \, \right] + \frac{1}{\mu} \left[ \, \mathbf{E} \times \mathbf{B}^* + c.c. \, \right] = \\
@@ -329,11 +332,11 @@ $$\begin{aligned}
   & = \dots + \alpha | \mathbf{E} |^2 \hat{\mathbf{k}} \ .
 \end{aligned}$$
 
-For each one of the two polarizations, the following holds ($\cos \theta$ comes from the doct product $\hat{k} \cdot \hat{n}$ appearing in the surface integral),
+For each one of the two polarizations, the following holds ($\cos \theta$ comes from the dot product $\hat{k} \cdot \hat{n}$ appearing in the surface integral),
 
 $$\alpha_1 \cos \theta_1 = \alpha_1 r_x^2 \, \cos \theta_1 + \alpha_2 t_x^2 \, \cos \theta_2 \ ,$$
 
-i.e. the sum of reflected and transmitted power equals the incident power.
+i.e., the sum of reflected and transmitted power equals the incident power.
 
 ```{dropdown} Proof of the power balance, for P-polarization
 
@@ -349,5 +352,4 @@ $$\begin{aligned}
 \end{aligned}$$
 
 ```
-
 

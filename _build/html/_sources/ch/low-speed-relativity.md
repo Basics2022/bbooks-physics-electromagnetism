@@ -7,5 +7,5 @@
 -->
 
 (classical-electromagnetism:low-speed-relativity)=
-# Equazioni dell'elettromagnetismo e relatività galileiana
+# Relativity in electromagnetism
 
