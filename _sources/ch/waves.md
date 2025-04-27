@@ -7,6 +7,6 @@
 -->
 
 (classical-electromagnetism:waves)=
-# Onde elettromagnetiche
+# Electromagnetic waves
 
 

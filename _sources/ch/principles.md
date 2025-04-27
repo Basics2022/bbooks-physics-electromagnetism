@@ -11,10 +11,10 @@
 
 The progress in the study of electromagnetic phenomena during the 19th century allowed James Clerk Maxwell to formulate what are now known as *Maxwell's equations*, which can be considered the first consistent formulation of the principles of classical electromagnetism, together with the charge conservation law and the expression for the Lorentz force on an electric charge immersed in an electromagnetic field.
 
-The principles in differential form can be derived from the more general integral form, provided the fields satisfy the necessary minimal regularity conditions, which can be qualitatively stated as "all operations must make sense."
-
 (classical-electromagnetism:principles:differential)=
 ## Principles in Differential Form
+
+The principles in differential form can be derived from the more general [integral form](classical-electromagnetism:principles:integral), provided the fields satisfy the necessary minimal regularity conditions, which can be qualitatively stated as "all operations must make sense."
 
 **Conservation of Electric Charge.**
 
