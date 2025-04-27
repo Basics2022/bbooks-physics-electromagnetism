@@ -11,6 +11,8 @@
 
 The progress in the study of electromagnetic phenomena during the 19th century allowed James Clerk Maxwell to formulate what are now known as *Maxwell's equations*, which can be considered the first consistent formulation of the principles of classical electromagnetism, together with the charge conservation law and the expression for the Lorentz force on an electric charge immersed in an electromagnetic field.
 
+Principles are introduced here for total charges and the electric and the magnetic field, in the form that is known as **equations of electromagnetism in vacuum**. Equations of [electromagnetism in matter](classical-electromagnetism:media) (1) separate the contribution of free and bound charges and currents, and (2) introduce **polarization** and **magnetization** of matter in constitutive equations representing the macroscopic response of the media as a result of local microscopic charge distribution induced by "external" fields.
+
 (classical-electromagnetism:principles:differential)=
 ## Principles in Differential Form
 
