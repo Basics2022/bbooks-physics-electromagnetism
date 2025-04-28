@@ -6,7 +6,7 @@
 ```
 -->
 
-(classical-electromagnetism\:waves\:plane-waves)=
+(classical-electromagnetism:waves:plane-waves)=
 # Plane Electromagnetic Waves
 
 Harmonic decomposition of the electromagnetic field. The EM field can be written as the superposition of plane waves (Fourier decomposition)

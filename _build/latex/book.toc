@@ -1,99 +1,103 @@
-\selectlanguage *{italian}
+\selectlanguage *{english}
 \contentsline {part}{I\hspace {1em}Electromagnetism}{3}{part.1}%
 \contentsline {chapter}{\numberline {1}Brief history of Electromagnetism}{5}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Principles of Classical Electromagnetism}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Principles of Classical Electromagnetism in Free Space}{7}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Principles in Differential Form}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.1}Principles in Differential Form}{7}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Principles in Integral Form: Electromagnetic Equations and Galilean Relativity}{8}{subsection.2.1.2}%
 \contentsline {subsubsection}{Integral Form on Control Volumes}{8}{subsubsection*.4}%
-\contentsline {subsubsection}{Integral Form on Arbitrary Volumes}{10}{subsubsection*.5}%
-\contentsline {section}{\numberline {2.2}Electromagnetic Potentials}{11}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Vector Potential and Scalar Potential}{11}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Gauge Conditions}{12}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Electromagnetism in Matter}{12}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Equations of electromagnetism in matter}{12}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Continuous Media}{13}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Polarization}{13}{subsection.2.3.3}%
-\contentsline {subsubsection}{Single Electric Dipole}{13}{subsubsection*.6}%
-\contentsline {subsubsection}{Continuous Distribution of Dipoles}{14}{subsubsection*.7}%
-\contentsline {subsubsection}{Reformulation of Maxwell’s Equations and Charge Continuity}{15}{subsubsection*.8}%
-\contentsline {subsection}{\numberline {2.3.4}Magnetization}{15}{subsection.2.3.4}%
-\contentsline {subsubsection}{Single Magnetic Moment (Limit of an Elementary Loop)}{15}{subsubsection*.9}%
-\contentsline {subsubsection}{Continuous Distribution of Magnetic Moment}{16}{subsubsection*.10}%
-\contentsline {subsubsection}{Reformulation of Maxwell’s Equations and Charge Continuity}{18}{subsubsection*.11}%
-\contentsline {subsection}{\numberline {2.3.5}Examples}{18}{subsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.3.6}Jump Conditions}{18}{subsection.2.3.6}%
-\contentsline {section}{\numberline {2.4}Galileian relativity in electromagnetism}{19}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Electromagnetic waves}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Wave Equations in Electromagnetism}{21}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Electromagnetic Potentials}{21}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Electric Field and Magnetic Field}{22}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Plane Electromagnetic Waves}{23}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Snell’s Law at an Interface}{24}{subsection.3.2.1}%
-\contentsline {chapter}{\numberline {4}Force, moments, energy and momentum in electromagnetism}{29}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Energy and momentum balance in linear, local, isotropic, non\sphinxhyphen {}dispersive media}{29}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Linear media \sphinxhyphen {} energy}{30}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Linear media \sphinxhyphen {} momentum}{30}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Force, moment, and power on elementary charge distributions}{31}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Force, moment and power on a point electric charge}{31}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Force, moment and power on a electric dipole}{31}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Force, moment and power on a magnetic dipole}{32}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Energy balance}{33}{subsection.4.2.4}%
-\contentsline {chapter}{\numberline {5}Regimes in Electromagnetic systems}{37}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Electrostatics}{37}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Zero electric field inside a conductor}{37}{subsection.5.1.1}%
-\contentsline {section}{\numberline {5.2}Steady regime}{38}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Slow…}{38}{section.5.3}%
-\contentsline {part}{II\hspace {1em}Electric Engineering}{39}{part.2}%
-\contentsline {chapter}{\numberline {6}Approssimazione circuitale}{41}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Circuiti elettrici}{41}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Validità dell’approccio circuitale}{41}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Induzione elettromagnetica nell’approssimazione circuitale}{42}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Componenti elementari dei circuiti elettrici}{43}{subsection.6.1.3}%
-\contentsline {subsubsection}{Resistore ohmico}{43}{subsubsection*.12}%
-\contentsline {subsection}{\numberline {6.1.4}Regimi di funzionamento in circuiti elettrici}{44}{subsection.6.1.4}%
-\contentsline {section}{\numberline {6.2}Circuiti elettromagnetici}{44}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Trasformatore}{45}{subsection.6.2.1}%
-\contentsline {subsubsection}{Trasformatore ideale}{45}{subsubsection*.13}%
-\contentsline {subsubsection}{Trasformatore con flussi dispersi}{45}{subsubsection*.14}%
-\contentsline {subsubsection}{Trasformatore con flussi dispersi e riluttanza \(\mittheta _{Fe}\) nel traferro}{46}{subsubsection*.15}%
-\contentsline {section}{\numberline {6.3}Circuiti elettromeccanici}{46}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Sistemi elettromeccanici conservativi}{48}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Equazioni di governo}{49}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Bilancio energetico}{49}{subsection.6.3.3}%
-\contentsline {subsubsection}{Energia meccanica macroscopica}{49}{subsubsection*.16}%
-\contentsline {subsubsection}{Energia cinetica}{50}{subsubsection*.17}%
-\contentsline {subsubsection}{Energia totale}{50}{subsubsection*.18}%
-\contentsline {subsubsection}{Energia interna}{50}{subsubsection*.19}%
-\contentsline {subsubsection}{Energia interna termica (microscopica)}{50}{subsubsection*.20}%
-\contentsline {section}{\numberline {6.4}Network analysis of linear circuits}{51}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Thevenin equivalent}{52}{subsection.6.4.1}%
-\contentsline {subsubsection}{One\sphinxhyphen {}port circuit}{52}{subsubsection*.21}%
-\contentsline {subsubsection}{Many\sphinxhyphen {}port circuit}{53}{subsubsection*.22}%
-\contentsline {subsection}{\numberline {6.4.2}Norton equivalent}{53}{subsection.6.4.2}%
-\contentsline {section}{\numberline {6.5}Network analysis of linear circuits \sphinxhyphen {} harmonic regime}{53}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Power}{53}{subsection.6.5.1}%
-\contentsline {section}{\numberline {6.6}Three\sphinxhyphen {}phase circuits}{54}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Star\sphinxhyphen {}star network}{54}{subsection.6.6.1}%
-\contentsline {subsubsection}{General solution}{54}{subsubsection*.23}%
-\contentsline {subsubsection}{Equilibrated generation and loads}{56}{subsubsection*.24}%
-\contentsline {subsubsection}{Extra connections}{56}{subsubsection*.25}%
-\contentsline {paragraph}{Phase\sphinxhyphen {}neutral connections}{56}{paragraph*.26}%
-\contentsline {paragraph}{Phase\sphinxhyphen {}phase connections}{56}{paragraph*.27}%
-\contentsline {section}{\numberline {6.7}Exercises}{56}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Transient dynamics of linear electrical grids with one dynamic component}{58}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}Harmonic regime of linear electrical grids}{71}{subsection.6.7.2}%
-\contentsline {subsection}{\numberline {6.7.3}Three\sphinxhyphen {}phase electrical circuits in harmonic regime}{76}{subsection.6.7.3}%
-\contentsline {subsection}{\numberline {6.7.4}Electromagnetic circuits}{81}{subsection.6.7.4}%
-\contentsline {part}{III\hspace {1em}Numerical Methods}{83}{part.3}%
-\contentsline {chapter}{\numberline {7}Green’s function method}{87}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Poisson equation}{87}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Helmholtz equation}{88}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Wave equation}{90}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Metodi numerici}{93}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Elettrostatica}{93}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Sorgente}{93}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Dipolo}{94}{subsection.8.1.2}%
-\contentsline {part}{IV\hspace {1em}Appendices}{97}{part.4}%
-\contentsline {chapter}{\numberline {9}todo: appendices}{99}{chapter.9}%
-\contentsline {chapter}{Proof Index}{101}{section*.45}%
+\contentsline {subsubsection}{Integral Form on Arbitrary Volumes}{9}{subsubsection*.5}%
+\contentsline {section}{\numberline {2.2}Electromagnetism in Matter}{11}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Equations of electromagnetism in matter}{11}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Continuous Media}{12}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Polarization}{12}{subsection.2.2.3}%
+\contentsline {subsubsection}{Single Electric Dipole}{12}{subsubsection*.6}%
+\contentsline {subsubsection}{Continuous Distribution of Dipoles}{13}{subsubsection*.7}%
+\contentsline {subsubsection}{Reformulation of Maxwell’s Equations and Charge Continuity}{13}{subsubsection*.8}%
+\contentsline {subsection}{\numberline {2.2.4}Magnetization}{14}{subsection.2.2.4}%
+\contentsline {subsubsection}{Single Magnetic Moment (Limit of an Elementary Loop)}{14}{subsubsection*.9}%
+\contentsline {subsubsection}{Continuous Distribution of Magnetic Moment}{15}{subsubsection*.10}%
+\contentsline {subsubsection}{Reformulation of Maxwell’s Equations and Charge Continuity}{17}{subsubsection*.11}%
+\contentsline {subsection}{\numberline {2.2.5}Examples}{17}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Jump Conditions}{17}{subsection.2.2.6}%
+\contentsline {section}{\numberline {2.3}Galileian relativity in electromagnetism}{18}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Electromagnetic waves}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Electromagnetic Potentials}{19}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Vector Potential and Scalar Potential}{19}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Gauge Conditions}{19}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Wave Equations in Electromagnetism}{20}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Electromagnetic Potentials}{20}{subsection.3.2.1}%
+\contentsline {subsubsection}{Vector potential}{20}{subsubsection*.12}%
+\contentsline {subsubsection}{Scalar potential}{21}{subsubsection*.13}%
+\contentsline {subsection}{\numberline {3.2.2}Electric Field and Magnetic Field}{21}{subsection.3.2.2}%
+\contentsline {subsubsection}{Electric field}{21}{subsubsection*.14}%
+\contentsline {subsubsection}{Magnetic field}{21}{subsubsection*.15}%
+\contentsline {section}{\numberline {3.3}Plane Electromagnetic Waves}{22}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Snell’s Law at an Interface}{23}{subsection.3.3.1}%
+\contentsline {chapter}{\numberline {4}Force, moments, energy and momentum in electromagnetism}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Energy and momentum balance in linear, local, isotropic, non\sphinxhyphen {}dispersive media}{27}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Linear media \sphinxhyphen {} energy}{28}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Linear media \sphinxhyphen {} momentum}{28}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Force, moment, and power on elementary charge distributions}{29}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Force, moment and power on a point electric charge}{29}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Force, moment and power on a electric dipole}{29}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Force, moment and power on a magnetic dipole}{30}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Energy balance}{31}{subsection.4.2.4}%
+\contentsline {chapter}{\numberline {5}Regimes in Electromagnetic systems}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Electrostatics}{35}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Zero electric field inside a conductor}{35}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Steady regime}{36}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Slow…}{36}{section.5.3}%
+\contentsline {part}{II\hspace {1em}Electric Engineering}{37}{part.2}%
+\contentsline {chapter}{\numberline {6}Approssimazione circuitale}{39}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Circuiti elettrici}{39}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Validità dell’approccio circuitale}{39}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Induzione elettromagnetica nell’approssimazione circuitale}{40}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Componenti elementari dei circuiti elettrici}{41}{subsection.6.1.3}%
+\contentsline {subsubsection}{Resistore ohmico}{41}{subsubsection*.16}%
+\contentsline {subsection}{\numberline {6.1.4}Regimi di funzionamento in circuiti elettrici}{42}{subsection.6.1.4}%
+\contentsline {section}{\numberline {6.2}Circuiti elettromagnetici}{42}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Trasformatore}{43}{subsection.6.2.1}%
+\contentsline {subsubsection}{Trasformatore ideale}{43}{subsubsection*.17}%
+\contentsline {subsubsection}{Trasformatore con flussi dispersi}{43}{subsubsection*.18}%
+\contentsline {subsubsection}{Trasformatore con flussi dispersi e riluttanza \(\mittheta _{Fe}\) nel traferro}{44}{subsubsection*.19}%
+\contentsline {section}{\numberline {6.3}Circuiti elettromeccanici}{44}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Sistemi elettromeccanici conservativi}{46}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Equazioni di governo}{47}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Bilancio energetico}{47}{subsection.6.3.3}%
+\contentsline {subsubsection}{Energia meccanica macroscopica}{47}{subsubsection*.20}%
+\contentsline {subsubsection}{Energia cinetica}{48}{subsubsection*.21}%
+\contentsline {subsubsection}{Energia totale}{48}{subsubsection*.22}%
+\contentsline {subsubsection}{Energia interna}{48}{subsubsection*.23}%
+\contentsline {subsubsection}{Energia interna termica (microscopica)}{48}{subsubsection*.24}%
+\contentsline {section}{\numberline {6.4}Network analysis of linear circuits}{49}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Thevenin equivalent}{50}{subsection.6.4.1}%
+\contentsline {subsubsection}{One\sphinxhyphen {}port circuit}{50}{subsubsection*.25}%
+\contentsline {subsubsection}{Many\sphinxhyphen {}port circuit}{51}{subsubsection*.26}%
+\contentsline {subsection}{\numberline {6.4.2}Norton equivalent}{51}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.5}Network analysis of linear circuits \sphinxhyphen {} harmonic regime}{51}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Power}{51}{subsection.6.5.1}%
+\contentsline {section}{\numberline {6.6}Three\sphinxhyphen {}phase circuits}{52}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Star\sphinxhyphen {}star network}{52}{subsection.6.6.1}%
+\contentsline {subsubsection}{General solution}{52}{subsubsection*.27}%
+\contentsline {subsubsection}{Equilibrated generation and loads}{54}{subsubsection*.28}%
+\contentsline {subsubsection}{Extra connections}{54}{subsubsection*.29}%
+\contentsline {paragraph}{Phase\sphinxhyphen {}neutral connections}{54}{paragraph*.30}%
+\contentsline {paragraph}{Phase\sphinxhyphen {}phase connections}{54}{paragraph*.31}%
+\contentsline {section}{\numberline {6.7}Exercises}{54}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Transient dynamics of linear electrical grids with one dynamic component}{56}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Harmonic regime of linear electrical grids}{69}{subsection.6.7.2}%
+\contentsline {subsection}{\numberline {6.7.3}Three\sphinxhyphen {}phase electrical circuits in harmonic regime}{74}{subsection.6.7.3}%
+\contentsline {subsection}{\numberline {6.7.4}Electromagnetic circuits}{79}{subsection.6.7.4}%
+\contentsline {part}{III\hspace {1em}Numerical Methods}{81}{part.3}%
+\contentsline {chapter}{\numberline {7}Green’s function method}{85}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Poisson equation}{85}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Helmholtz equation}{86}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Wave equation}{88}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Metodi numerici}{91}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Elettrostatica}{91}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Sorgente}{91}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Dipolo}{91}{subsection.8.1.2}%
+\contentsline {part}{IV\hspace {1em}Appendices}{93}{part.4}%
+\contentsline {chapter}{\numberline {9}todo: appendices}{95}{chapter.9}%
+\contentsline {chapter}{Proof Index}{97}{section*.49}%

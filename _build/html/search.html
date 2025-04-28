@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="it" data-content_root="" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Cerca - electromagnetism</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Search - electromagnetism</title>
   
   
   
@@ -55,7 +55,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script src="_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -69,10 +68,10 @@ const thebe_selector_output = ".output, .cell_output"
   <script src="_static/language_data.js"></script>
   <script src="searchindex.js"></script>
     <link rel="shortcut icon" href="_static/favicon.svg"/>
-    <link rel="index" title="Indice" href="genindex.html" />
-    <link rel="search" title="Cerca" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="#" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="it"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6MNXBVGKF"></script>
@@ -178,19 +177,19 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="ch/experiments.html">1. Brief history of Electromagnetism</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="ch/principles.html">2. Principles of Classical Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="ch/principles-vacuum.html">2.1. Principles of Classical Electromagnetism in Free Space</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch/principles-potentials.html">2.2. Electromagnetic Potentials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch/principles-matter.html">2.3. Electromagnetism in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch/principles-relativity.html">2.4. Galileian relativity in electromagnetism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch/principles-matter.html">2.2. Electromagnetism in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch/principles-relativity.html">2.3. Galileian relativity in electromagnetism</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="ch/waves.html">3. Electromagnetic waves</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="ch/waves-equation.html">3.1. Wave Equations in Electromagnetism</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch/waves-plane.html">3.2. Plane Electromagnetic Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch/potentials.html">3.1. Electromagnetic Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch/waves-equation.html">3.2. Wave Equations in Electromagnetism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch/waves-plane.html">3.3. Plane Electromagnetic Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="ch/energy.html">4. Force, moments, energy and momentum in electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="ch/energy-momentum-balance.html">4.1. Energy and momentum balance in linear, local, isotropic, non-dispersive media</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ch/forces-moments-on-charges.html">4.2. Force, moment, and power on elementary charge distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch/forces-moments-on-charges.html">4.1. Force, moment, and power on elementary charge distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch/energy-momentum-balance.html">4.2. Energy and momentum balance in linear, local, isotropic, non-dispersive media</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="ch/regimes.html">5. Regimes in Electromagnetic systems</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -282,7 +281,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
-  title="Modalità schermo intero"
+  title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
@@ -308,7 +307,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Cerca" aria-label="Cerca" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -323,10 +322,10 @@ document.write(`
               
               
   <div class="bd-search-container">
-    <h1>Cerca</h1>
+    <h1>Search</h1>
     <noscript>
       <div class="admonition error">
-        <p class="admonition-title">Errore</p>
+        <p class="admonition-title">Error</p>
         <p>Please activate JavaScript to enable the search functionality.</p>
       </div>
     </noscript>
@@ -382,7 +381,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-Di basics
+By basics
 </p>
 
   </div>

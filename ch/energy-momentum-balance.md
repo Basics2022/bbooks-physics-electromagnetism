@@ -1,61 +1,157 @@
-(classical-electromagnetism:energy)=
+(classical-electromagnetism:energy-momentum)=
 # Energy and momentum balance in linear, local, isotropic, non-dispersive media
 
+In this section balance equations for the energy and the momentum of the system are derived for a linear, local, isotropic, homogeneous,... systems.
+
+Power per unit volume of the Lorentz' force per unit volume acting on a charge distribution $\rho(\vec{r},t)$ with electric current density $\vec{j}(\vec{r},t)$ is
+
+$$\begin{aligned}
+  p(\vec{r},t) 
+  & = \vec{f}(\vec{r},t) \cdot \vec{v}(\vec{r},t) = \\
+  & = \left[ \rho(\vec{r},t) \, \vec{e}(\vec{r},t) - \vec{b}(\vec{r},t) \times \vec{v}(\vec{r},t) \right] \cdot \vec{v}(\vec{r},t) = \\
+  & = \rho(\vec{r},t) \, \vec{e}(\vec{r},t) \cdot \vec{v}(\vec{r},t) = \\
+  & = \vec{j}(\vec{r},t) \cdot \vec{e}(\vec{r},t) \ .
+\end{aligned}$$
+
+**Total charge and current.** Energy equation for **total charge and current**
+
+<!--
+$$\begin{aligned}
+  \vec{j}_f \cdot \vec{e} & = && (1) \\
+  & = \left( \nabla \times \vec{h} - \partial_t \vec{d} \right) \cdot \vec{e} = && (2) \\
+  & = \nabla \cdot \left( \vec{h} \times \vec{e} \right) + \vec{h} \cdot \nabla \times \vec{e} - \partial_t \vec{d} \cdot \vec{e} = && (3) \\
+  & = - \nabla \cdot \vec{s} - \vec{h} \cdot \partial_t \vec{b} - \partial_t \vec{d} \cdot \vec{e} \ ,
+\end{aligned}$$
+-->
+
+$$\begin{aligned}
+  \vec{j} \cdot \vec{e} & = && (1) \\
+  & = \frac{1}{\mu_0} \left( \nabla \times \vec{b} - \varepsilon_0 \partial_t \vec{e} \right) \cdot \vec{e} = && (2) \\
+  & = \nabla \cdot \left( \frac{ \vec{b} \times \vec{e} }{\mu_0} \right) + \frac{1}{\mu_0} \vec{b} \cdot \nabla \times \vec{e} - \varepsilon_0 \partial_t \vec{e} \cdot \vec{e} = && (3) \\
+  & = - \nabla \cdot \vec{s} - \frac{1}{\mu_0} \vec{b} \cdot \partial_t \vec{b} - \varepsilon_0 \partial_t \vec{e} \cdot \vec{e} \ ,
+\end{aligned}$$ (eq:energy:1)
+
+using (1) Ampère-Maxwell's equation, (2) identity $\nabla \times \vec{b} \cdot \vec{e} =  \nabla \cdot \left( \vec{b} \times \vec{e} \right) + \vec{b} \cdot \nabla \times \vec{e}$[^poynting], (3) Faraday's law, and introducing the definition of the Poynting vector
+
+$$\vec{s} := \frac{ \vec{e} \times \vec{b} }{\mu_0} \ .$$ (eq:energy:poynting-vector)
+
+[^poynting]: $$\begin{aligned}
+  \nabla \times \vec{h} \cdot \vec{e}
+  & = e_i \varepsilon_{ijk} \partial_{j} h_k = \\
+  & = \varepsilon_{ijk} \partial_{j} \left( e_i  h_k \right) - h_k \varepsilon_{ijk} \partial_{j} e_i = \\
+  & = \partial_{j} \left( \varepsilon_{jki} h_k  e_i \right) + h_k \varepsilon_{kji} \partial_{j} e_i = \\
+  & = \nabla \cdot \left( \vec{h} \times \vec{e} \right) + \vec{h} \cdot \nabla \times \vec{e}  \ .
+\end{aligned}$$
+
+Using the identity, $\vec{v} \cdot \partial_t \vec{v} = \partial_t \frac{|\vec{v}|^2}{2}$, energy equation {eq}`eq:energy:1` becomes
+
+$$\partial_t u + \nabla \cdot \vec{s} = - \vec{j} \cdot \vec{e} \ ,$$ (eq:energy:2)
+
+with the energy volume density,
+
+$$ u := \frac{1}{2} \left( \varepsilon_0 \vec{e} \cdot \vec{e} + \frac{1}{\mu_0} \vec{b} \cdot \vec{b} \right) \ .$$ (eq:energy:density)
+
+```{dropdown} Polarization current.
+
+$$\begin{aligned}
+  \vec{j}_P \cdot \vec{e} & = \\
+  & = \partial_t \vec{p} \cdot \vec{e} \\
+\end{aligned}$$
+
+```
+
+```{dropdown} Magnetization current.
+
+$$\begin{aligned}
+  \vec{j}_M \cdot \vec{e} & = \\
+  & = \nabla \times \vec{m} \cdot \vec{e} \\
+  & = \nabla \cdot \left( \vec{m} \times \vec{e} \right) + \vec{m} \cdot \nabla \times \vec{e} \\
+  & = \nabla \cdot \left( \vec{m} \times \vec{e} \right) - \vec{m} \cdot \partial_t \vec{b} \\
+\end{aligned}$$
+
+```
+
+```{dropdown} Free current.
+
+$$\begin{aligned}
+  \vec{j}_f \cdot \vec{e} & = \\
+  & = \left( \nabla \times \vec{h} - \partial_t \vec{d} \right) \cdot \vec{e} \\
+  & = \nabla \cdot \left( \vec{h} \times \vec{e} \right) + \vec{h} \cdot \nabla \times \vec{e} - \partial_t \vec{d} \cdot \vec{e} =  \\
+  & = - \nabla \cdot \vec{S} - \vec{h} \cdot \partial_t \vec{b} - \partial_t \vec{d} \cdot \vec{e} \ 
+\end{aligned}$$ (eq:energy:free-current)
+
+```
+
+<!--
+Now, using the constitutive equations involving the definition of the polarization and magnetization field,
+
+$$\begin{aligned}
+  \vec{d} & = \varepsilon_0 \vec{e} + \vec{p} \\
+  \vec{b} & = \mu_0 \vec{h} - \mu_0 \vec{m} \\
+\end{aligned}$$
+
+equation {eq}`eq:energy:1` becomes
+
+$$\begin{aligned}
+ -  \vec{j}_f \cdot \vec{e} & = && \\
+  & = \nabla \cdot \vec{s} + \vec{h} \cdot \partial_t \vec{b} + \partial_t \vec{d} \cdot \vec{e} = \\ 
+  & = \nabla \cdot \vec{s} + ... + \varepsilon_0 \partial_t \vec{e} \cdot \vec{e} + \partial_t \vec{p} \cdot \vec{e} = \\ 
+\end{aligned}$$
+-->
+
+
+
+
+## Linear isotropic media 
+
+Using constitutive equations of a linear isotropic medium
+
+$$\begin{aligned}
+  \vec{d} & = \varepsilon_0 \vec{e} + \vec{p} && = \varepsilon \, \vec{e} \\
+  \vec{b} & = \mu_0 \vec{h} - \mu_0 \vec{m}   && = \mu         \, \vec{h} \ ,
+\end{aligned}$$
+
+it's possible to derive dynamical equations for the energy density and momentum due to free current only,
+
 $$\begin{cases}
-  \mathbf{d} = \varepsilon_0 \mathbf{e} + \mathbf{p} \\
-  \mathbf{h} = \dfrac{1}{\mu_0} \mathbf{b} - \mathbf{m} \ .
+& \partial_t U + \nabla \cdot \vec{S} = - \vec{e} \cdot \vec{j}^f \\
+& \partial_t \vec{S} + c^2 \nabla \cdot \left[ \, U \mathbb{I} - \left( \vec{d} \otimes \vec{e} + \vec{h} \otimes \vec{b} \right) \, \right] = - c^2 \left( \vec{e} \, \rho^f - \vec{b} \times \vec{j}^f \right)
 \end{cases}$$
 
-with 
+**todo** *use this system to derive the [4-d formulation of special relativity in modern physics](https://basics2022.github.io/bbooks-physics-modern/ch/relativity-special/notes.html#electromagnetism)*
 
-$$\mathbf{d} = \varepsilon \mathbf{e} \qquad , \qquad \mathbf{h} = \dfrac{\mathbf{b}}{\mu}$$
 
-Let $r$ be mass density, and $\vec{v}$ be charge velocity field, the equation of motion - momentum equation - of electric charges reads
+### Energy equation
 
-$$r \frac{D \mathbf{v}}{D t} = \mathbf{f} \ ,$$
-
-and the kinetic energy equation becomes
-
-$$\mathbf{v} \cdot \mathbf{f} = r \mathbf{v} \cdot \frac{D \mathbf{v}}{D t} = r \dfrac{D}{Dt} \dfrac{|\mathbf{v}|^2}{2} \ ,$$
-
-or using continuity equation for $r$, it can be recast in conservative form. The same term can be recast using the expression of Lorentz's force on electric charges in electromagnetic field (**is this the right way to evaluate power of bounded charges and currents? check it!**)
-
-$$\mathbf{v} \cdot \mathbf{f} = \mathbf{v} \cdot \left[ \rho ( \mathbf{e} - \mathbf{b} \times \mathbf{v} ) \right] = \rho \mathbf{v} \cdot \mathbf{e} = \mathbf{e} \cdot \mathbf{j} \ ,$$
-
-and furthered manipulated writing $\mathbf{j} = \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m$ and using Maxwell's equations
+The products in the power equation of free current {eq}`eq:energy:free-current` becomes
 
 $$\begin{aligned}
-  \mathbf{e} \cdot \mathbf{j} 
-  & = \mathbf{e} \cdot \left( \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m \right) = \\
-  & = \mathbf{e} \cdot \left( \nabla \times \mathbf{h} - \partial_t \mathbf{d} \right) + \mathbf{e} \cdot \partial_t \mathbf{p} + \mathbf{e} \cdot \nabla \times \mathbf{m} = \\
-  & = \mathbf{e} \cdot \nabla \times \left( \mathbf{h} + \mathbf{m} \right) - \mathbf{e} \cdot \partial_t \left( \mathbf{d} - \mathbf{p} \right)  = \\
-  & = \dfrac{1}{\mu_0} \mathbf{e} \cdot \nabla \times \mathbf{b} - \varepsilon_0 \mathbf{e} \cdot \partial_t \mathbf{e} = \\
-  & = - \dfrac{1}{\mu_0} \nabla \cdot \left( \mathbf{e} \times \mathbf{b} \right) - \dfrac{\mathbf{b}}{\mu_0} \cdot \partial_t \mathbf{b} - \varepsilon_0 \mathbf{e} \cdot \partial_t \mathbf{e} = \\
+  \vec{h} \cdot \partial_t \vec{b} + \partial_t \vec{d} \cdot \vec{e} 
+  & = \dfrac{1}{\mu} \, \vec{b} \cdot \partial_t \vec{b} + \varepsilon \partial_t \vec{e} \cdot \vec{e}  = \\
+  & = \partial_t \left[ \dfrac{1}{2} \left( \dfrac{1}{\mu} \, \vec{b} \cdot \vec{b} + \varepsilon \vec{e} \cdot \vec{e} \right) \right] = \\
+  & = \partial_t \left[ \dfrac{1}{2} \left( \vec{h} \cdot \vec{b} + \vec{e} \cdot \vec{d} \right) \right] = \partial_t U \ .
 \end{aligned}$$
 
-$$\mathbf{e} \cdot \nabla \times \mathbf{h} = e_i \varepsilon_{ijk} \partial_j h_k = \partial_j \left( \varepsilon_{jki} h_k e_i \right) - \varepsilon_{ijk} h_k \partial_j e_i = - \nabla \cdot (\mathbf{e} \times \mathbf{h} ) + \mathbf{h} \cdot \nabla \times \mathbf{e} = - \nabla \cdot (\mathbf{e} \times \mathbf{h} ) - \mathbf{h} \cdot \partial_t \mathbf{b}$$
+and $\vec{S} = \vec{e} \times \vec{h} = \frac{\vec{e} \times \vec{b}}{\mu}$.
+For linear media, the energy of the electromagnetic field per unit volume due to free current only thus reads
 
 $$\begin{aligned}
-  \mathbf{e} \cdot \mathbf{j}_f & = - \nabla \cdot ( \mathbf{e} \times \mathbf{h} ) - \mathbf{e} \cdot \partial_t \mathbf{d} - \mathbf{h} \cdot \partial_t \mathbf{b}
+ \partial_t U + \nabla \cdot \vec{S} = - \vec{e} \cdot \vec{j}_f \ .
 \end{aligned}$$
 
-## Linear media - energy
-For linear media, the energy of the electromagnetic field per unit volume reads
+### Momentum
 
-$$u = \dfrac{1}{2} \left( \mathbf{e} \cdot \mathbf{d} + \mathbf{h} \cdot \mathbf{b} \right)$$
-
-so that the differential balance equation for the eneergy of the electromagnetic field becomes
+Taking the time derivative of the Poynting vector,
 
 $$\begin{aligned}
- \partial_t u + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j} \ ,
+  \partial_t \vec{S} = \partial_t S_i 
+  & = \partial_t \left( \varepsilon_{ijk} e_j h_k \right) = \\
+  & = \varepsilon_{ijk} \, \partial_t e_j \, h_k + \varepsilon_{ijk} \, e_j \, \partial_t h_k  \ ,
 \end{aligned}$$
 
-with Poynting vector $\mathbf{s} := \mathbf{e} \times \mathbf{h}$, namely the momentum density of the electromagnetic field.
+and using the product rule to evaluate time derivative
 
-## Linear media - momentum
-
-$$\partial_t \mathbf{s} = \partial_t s_i = \partial_t \left( \varepsilon_{ijk} e_j h_k \right)$$
-
+```{dropdown} $\varepsilon_{ijk} \, \partial_t e_j \, h_k$
 $$\begin{aligned}
   \varepsilon_{ijk} \partial_t e_j h_k
   & = \dfrac{1}{\varepsilon} \varepsilon_{ijk} \partial_t d_j h_k \\
@@ -66,7 +162,9 @@ $$\begin{aligned}
   & = - \dfrac{1}{\varepsilon} \varepsilon_{ijk} \, j^f_j \, h_k + \dfrac{1}{\varepsilon} \left[ \partial_m ( h_m  h_i ) - \partial_m h_m \, h_i - \partial_i \left( \frac{h_m h_m}{2} \right) \right] =  \\
   & = \dfrac{1}{\varepsilon \mu} \varepsilon_{ijk} \, b_j \, j^f_k + \dfrac{1}{\varepsilon \mu} \left[ \partial_m ( b_m  h_i ) - \underbrace{\partial_m b_m}_{=0} \, h_i - \partial_i \left( \frac{h_m b_m}{2} \right) \right] =  \\
 \end{aligned}$$
+```
 
+```{dropdown} $\varepsilon_{ijk} \, e_j \, \partial_t h_k$
 $$\begin{aligned}
   \varepsilon_{ijk} e_j \partial_t h_k
   & =   \dfrac{1}{\mu} \varepsilon_{ijk} e_j \partial_t b_k = \\
@@ -76,21 +174,14 @@ $$\begin{aligned}
   & = - \dfrac{1}{\mu} \left[ \partial_i \left(\frac{e_m e_m}{2}\right) -  \partial_m \left( e_m e_i \right) + \partial_m e_m \, e_i \right] = \\
   & = - \dfrac{1}{\varepsilon \mu} \left[ \partial_i \left(\frac{d_m e_m}{2}\right) - \partial_m \left( d_m e_i \right) + \rho^f \, e_i \right] \ .
 \end{aligned}$$
+```
 
-so that
+the dynamical equation for the Poynting vector $\vec{S}$ reads
 
-$$\partial_t s_i + c^2 \partial_m \left[ \dfrac{1}{2}\left( d_n e_n + h_n b_n \right) \delta_{mi} - \left( h_m b_i + d_m e_i \right) \right] = - c^2 \rho^f e_i + c^2 \varepsilon_{ijk} b_j j_k^f $$
+$$\partial_t S_i + c^2 \partial_m \left[ \dfrac{1}{2}\left( d_n e_n + h_n b_n \right) \delta_{mi} - \left( h_m b_i + d_m e_i \right) \right] = - c^2 \rho^f e_i + c^2 \varepsilon_{ijk} b_j j_k^f $$
 
-or
+or with vector notation
 
-$$\partial_t \mathbf{s} + c^2 \nabla \cdot \left[ \, \dfrac{1}{2} \left( \mathbf{d} \cdot \mathbf{e} + \mathbf{h} \cdot \mathbf{b} \right) \mathbb{I} - \left( \mathbf{d} \otimes \mathbf{e} + \mathbf{h} \otimes \mathbf{b} \right) \, \right] = - c^2 \left( \rho^f \mathbf{e} - \mathbf{b} \times \mathbf{j}^f \right)$$
+$$\partial_t \vec{S} + c^2 \nabla \cdot \left[ \, \dfrac{1}{2} \left( \vec{d} \cdot \vec{e} + \vec{h} \cdot \vec{b} \right) \mathbb{I} - \left( \vec{d} \otimes \vec{e} + \vec{h} \otimes \vec{b} \right) \, \right] = - c^2 \left( \rho^f \vec{e} - \vec{b} \times \vec{j}^f \right) \ .$$
 
-
-
-$$\begin{cases}
-& \partial_t u + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j}^f \\
-& \partial_t \mathbf{s} + c^2 \nabla \cdot \left[ \, u \mathbb{I} - \left( \mathbf{d} \otimes \mathbf{e} + \mathbf{h} \otimes \mathbf{b} \right) \, \right] = - c^2 \left( \mathbf{e} \, \rho^f - \mathbf{b} \times \mathbf{j}^f \right)
-\end{cases}$$
-
-**todo** *use this system to derive the 4-d formulation of special relativity in modern physics*
 

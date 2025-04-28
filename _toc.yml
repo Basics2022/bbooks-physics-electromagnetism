@@ -13,17 +13,17 @@ parts:
   - file: ch/principles
     sections:
     - file: ch/principles-vacuum
-    - file: ch/principles-potentials
     - file: ch/principles-matter
     - file: ch/principles-relativity
   - file: ch/waves
     sections:
+    - file: ch/potentials
     - file: ch/waves-equation
     - file: ch/waves-plane
   - file: ch/energy
     sections:
-    - file: ch/energy-momentum-balance
     - file: ch/forces-moments-on-charges
+    - file: ch/energy-momentum-balance
 # - file: ch/energy-linear
   - file: ch/regimes
     sections:
