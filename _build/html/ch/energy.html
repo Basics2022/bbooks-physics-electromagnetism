@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. Energy balance in electromagnetism &#8212; electromagnetism</title>
+    <title>3. Force, moments, energy and momentum in electromagnetism &#8212; electromagnetism</title>
   
   
   
@@ -65,14 +65,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/energy';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="7. Energy and momentum balance in linear, local, isotropic, non-dispersive media" href="energy-linear.html" />
-    <link rel="prev" title="5. Electrostatics" href="electrostatics.html" />
+    <link rel="next" title="3.1. Energy and momentum balance in linear, local, isotropic, non-dispersive media" href="energy-momentum-balance.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="principles-relativity.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
   </head>
@@ -178,42 +176,52 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Electromagnetism</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">1. Brief history of Electromagnetism</a></li>
-<li class="toctree-l1"><a class="reference internal" href="principles.html">2. Principles of Classical Electromagnetism</a></li>
-<li class="toctree-l1"><a class="reference internal" href="potentials.html">3. Electromagnetic Potentials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="media.html">4. Electromagnetism in Matter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="electrostatics.html">5. Electrostatics</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Energy balance in electromagnetism</a></li>
-<li class="toctree-l1"><a class="reference internal" href="energy-linear.html">7. Energy and momentum balance in linear, local, isotropic, non-dispersive media</a></li>
-<li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">8. Relativity in electromagnetism</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">9. Electromagnetic waves</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">9.1. Wave Equations in Electromagnetism</a></li>
-<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">9.2. Plane Electromagnetic Waves</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="principles.html">2. Principles of Classical Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="principles-vacuum.html">2.1. Principles of Classical Electromagnetism in Free Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-potentials.html">2.2. Electromagnetic Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-matter.html">2.3. Electromagnetism in Matter</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">3. Force, moments, energy and momentum in electromagnetism</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="energy-momentum-balance.html">3.1. Energy and momentum balance in linear, local, isotropic, non-dispersive media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forces-moments-on-charges.html">3.2. Force, moment, and power on elementary charge distributions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="regimes.html">4. Regimes in Electromagnetic systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="regimes-electrostatics.html">4.1. Electrostatics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regimes-steady.html">4.2. Steady regime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regimes-slow.html">4.3. Slow…</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">5. Electromagnetic waves</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">5.1. Wave Equations in Electromagnetism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">5.2. Plane Electromagnetic Waves</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Electric Engineering</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="circuits.html">10. Approssimazione circuitale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">10.1. Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-approximation.html">10.1.1. Validità dell’approccio circuitale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">10.1.2. Induzione elettromagnetica nell’approssimazione circuitale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-components.html">10.1.3. Componenti elementari dei circuiti elettrici</a></li>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">10.1.4. Regimi di funzionamento in circuiti elettrici</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="circuits.html">6. Approssimazione circuitale</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">6.1. Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-approximation.html">6.1.1. Validità dell’approccio circuitale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">6.1.2. Induzione elettromagnetica nell’approssimazione circuitale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-components.html">6.1.3. Componenti elementari dei circuiti elettrici</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">6.1.4. Regimi di funzionamento in circuiti elettrici</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electromagnetic.html">10.2. Circuiti elettromagnetici</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electromagnetic-transformer.html">10.2.1. Trasformatore</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electromagnetic.html">6.2. Circuiti elettromagnetici</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electromagnetic-transformer.html">6.2.1. Trasformatore</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="circuits-electromechanic.html">10.3. Circuiti elettromeccanici</a></li>
-<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks.html">10.4. Network analysis of linear circuits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks-harmonic.html">10.5. Network analysis of linear circuits - harmonic regime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-three-phase.html">10.6. Three-phase circuits</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="electrical-engineering-exercises.html">10.7. Exercises</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-transient-1-dynamic.html">10.7.1. Transient dynamics of linear electrical grids with one dynamic component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-harmonic.html">10.7.2. Harmonic regime of linear electrical grids</a></li>
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-three-phase.html">10.7.3. Three-phase electrical circuits in harmonic regime</a></li>
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-electromagnetic.html">10.7.4. Electromagnetic circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuits-electromechanic.html">6.3. Circuiti elettromeccanici</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks.html">6.4. Network analysis of linear circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks-harmonic.html">6.5. Network analysis of linear circuits - harmonic regime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-three-phase.html">6.6. Three-phase circuits</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="electrical-engineering-exercises.html">6.7. Exercises</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-transient-1-dynamic.html">6.7.1. Transient dynamics of linear electrical grids with one dynamic component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-harmonic.html">6.7.2. Harmonic regime of linear electrical grids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-three-phase.html">6.7.3. Three-phase electrical circuits in harmonic regime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-electromagnetic.html">6.7.4. Electromagnetic circuits</a></li>
 </ul>
 </li>
 </ul>
@@ -221,12 +229,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Numerical Methods</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="green-function.html">11. Green’s function method</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numerical-methods.html">12. Metodi numerici</a></li>
+<li class="toctree-l1"><a class="reference internal" href="green-function.html">7. Green’s function method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numerical-methods.html">8. Metodi numerici</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="appendix-list.html">13. todo: appendices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix-list.html">9. todo: appendices</a></li>
 </ul>
 
     </div>
@@ -352,9 +360,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -365,25 +371,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Energy balance in electromagnetism</h1>
+    <h1>Force, moments, energy and momentum in electromagnetism</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contenuti </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-elementary-components">6.1. Force, moment, and power on elementary components</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-a-point-electric-charge">6.1.1. Force, moment and power on a point electric charge</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-a-electric-dipole">6.1.2. Force, moment and power on a electric dipole</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-a-magnetic-dipole">6.1.3. Force, moment and power on a magnetic dipole</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">6.2. Energy balance</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -393,232 +385,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-<div class="tex2jax_ignore mathjax_ignore section" id="energy-balance-in-electromagnetism">
-<span id="classical-electromagnetism-energy"></span><h1><span class="section-number">6. </span>Energy balance in electromagnetism<a class="headerlink" href="#energy-balance-in-electromagnetism" title="Permalink to this heading">#</a></h1>
-<div class="section" id="force-moment-and-power-on-elementary-components">
-<h2><span class="section-number">6.1. </span>Force, moment, and power on elementary components<a class="headerlink" href="#force-moment-and-power-on-elementary-components" title="Permalink to this heading">#</a></h2>
-<div class="section" id="force-moment-and-power-on-a-point-electric-charge">
-<h3><span class="section-number">6.1.1. </span>Force, moment and power on a point electric charge<a class="headerlink" href="#force-moment-and-power-on-a-point-electric-charge" title="Permalink to this heading">#</a></h3>
-<p>Point electric charge with charge <span class="math notranslate nohighlight">\(q\)</span> in a point <span class="math notranslate nohighlight">\(\vec{r}_P(t)\)</span> at time <span class="math notranslate nohighlight">\(t\)</span> where electromagnetic field is <span class="math notranslate nohighlight">\(\vec{e}(\vec{r},t)\)</span>, <span class="math notranslate nohighlight">\(\vec{b}(\vec{r},t)\)</span>:</p>
-<ul>
-<li><p>Lorentz’s force</p>
-<div class="math notranslate nohighlight">
-\[\vec{F} = q \left( \vec{e}(\vec{r}_P(t), t) - \vec{b}(\vec{r}_P(t),t) \times \vec{v}_P(t) \right) \ ,\]</div>
-</li>
-<li><p>zero moment, since it has no dimension (and assumed uniform or symmetric or… distribution of electric charge)</p></li>
-<li><p>power</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-     P &amp; = \vec{v}_P(t) \cdot \vec{F} = \\
-       &amp; = \vec{v}_P(t) \cdot \, q \, \left( \vec{e}(\vec{r}_P(t), t) - \vec{b}(\vec{r}_P(t), t) \times \vec{v}_P(t) \right) = q \, \vec{v}_P(t) \cdot \vec{e}(\vec{r}_P(t),t) \ .
-   \end{aligned}\end{split}\]</div>
-</li>
-</ul>
+  <div class="tex2jax_ignore mathjax_ignore section" id="force-moments-energy-and-momentum-in-electromagnetism">
+<span id="classical-electromagnetism-energy"></span><h1><span class="section-number">3. </span>Force, moments, energy and momentum in electromagnetism<a class="headerlink" href="#force-moments-energy-and-momentum-in-electromagnetism" title="Permalink to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
 </div>
-<div class="section" id="force-moment-and-power-on-a-electric-dipole">
-<h3><span class="section-number">6.1.2. </span>Force, moment and power on a electric dipole<a class="headerlink" href="#force-moment-and-power-on-a-electric-dipole" title="Permalink to this heading">#</a></h3>
-<p>Electric dipole with center <span class="math notranslate nohighlight">\(\vec{r}_C(t)\)</span>, axis <span class="math notranslate nohighlight">\(\vec{\ell}\)</span>, so that the positive charge <span class="math notranslate nohighlight">\(q\)</span> is in <span class="math notranslate nohighlight">\(P_+ = C + \dfrac{\vec{\ell}}{2}\)</span> and the negative charge is in <span class="math notranslate nohighlight">\(P_- = C - \dfrac{\vec{\ell}}{2}\)</span>, with <span class="math notranslate nohighlight">\(q \rightarrow +\infty\)</span>, <span class="math notranslate nohighlight">\(|\vec{\ell}| \rightarrow 0\)</span>, s.t. <span class="math notranslate nohighlight">\(q|\vec{\ell}| = |\vec{d}|\)</span> finite.</p>
-<p><strong>Kinematics and expansion of the field</strong></p>
-<div class="math notranslate nohighlight">
-\[\vec{v}_{\pm} = \vec{v}_C \pm \vec{\omega} \times \frac{\vec{\ell}}{2}\]</div>
-<div class="math notranslate nohighlight">
-\[\vec{e}(P_{\pm}) = \vec{e}\left( C \pm \dfrac{\vec{\ell}}{2} \right) = \vec{e}(C) \pm \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}(C) + o(|\vec{\ell}|)\]</div>
-<div class="math notranslate nohighlight">
-\[\vec{b}(P_{\pm}) = \vec{b}\left( C \pm \dfrac{\vec{\ell}}{2} \right) = \vec{b}(C) \pm \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}(C) + o(|\vec{\ell}|)\]</div>
-<p><strong>Net force.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \vec{F} &amp; = \vec{F}_+ + \vec{F}_- = \\
-   &amp; = q \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+} \right] - q \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-} \right] = \\
-   &amp; = q \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] + \\ 
-   &amp; - q \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] = \\
-   &amp; = q \vec{\ell} \cdot \nabla \vec{e}(C) - \left( q \vec{\ell} \cdot \nabla \vec{b}(C) \right) \times \vec{v}_C + \vec{b}(C) \times \left(  \vec{\omega} \times q \vec{\ell} \right) + o(|\vec{\ell}|)
-\end{aligned}\end{split}\]</div>
-<p><strong>Net moment, w.r.t. <span class="math notranslate nohighlight">\(C\)</span>.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \vec{M}_C
-   &amp; = \frac{\vec{\ell}}{2} \times \vec{F}_+ - \frac{\vec{\ell}}{2} \times \vec{F}_- = \\
-   &amp; = q \frac{\vec{\ell}}{2} \times \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+} \right] + q \frac{\vec{\ell}}{2} \times \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-} \right] = \\
-   &amp; = q \frac{\vec{\ell}}{2} \times \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] + \\ 
-   &amp; + q \frac{\vec{\ell}}{2} \times \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] = \\
-   &amp; = q \vec{\ell} \times \left[ \vec{e}_C - \vec{b}_C \times \vec{v}_C \right] + o(|\vec{\ell}|) \ .
-\end{aligned}\end{split}\]</div>
-<p><strong>Power.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  P &amp; = P_+ + P_- = \\
-  &amp; = \vec{F}_+ \cdot \vec{v}_+ + \vec{F}_- \cdot \vec{v}_- = \\
-  &amp; = q \, \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+}  \right] \cdot \vec{v}_{+} 
-    - q \, \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-}  \right] \cdot \vec{v}_{-} = \\
-  &amp; = q \, \vec{e}(P_+) \cdot \vec{v}_{+} 
-    - q \, \vec{e}(P_-) \cdot \vec{v}_{-} = \\
-  &amp; = q \, \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] 
-    - q \, \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] = \\
-  &amp; = \vec{e}_C \cdot \left( \vec{\omega} \times q \vec{\ell} \right) + \left( q \vec{\ell} \cdot \nabla \vec{e}_C \right) \cdot \vec{v}_C + o(|\vec{\ell}|^2) \ .
-\end{aligned}\end{split}\]</div>
-</div>
-<div class="section" id="force-moment-and-power-on-a-magnetic-dipole">
-<h3><span class="section-number">6.1.3. </span>Force, moment and power on a magnetic dipole<a class="headerlink" href="#force-moment-and-power-on-a-magnetic-dipole" title="Permalink to this heading">#</a></h3>
-<p>On an elementary magnetic dipole, modeled as a «small» circuit with current <span class="math notranslate nohighlight">\(i\)</span> enclosing area <span class="math notranslate nohighlight">\(S\)</span> and center <span class="math notranslate nohighlight">\(C\)</span>, with <span class="math notranslate nohighlight">\(S \rightarrow 0\)</span>, <span class="math notranslate nohighlight">\(i \rightarrow + \infty\)</span> so that <span class="math notranslate nohighlight">\(i S \hat{n} := \vec{m}\)</span> finite</p>
-<p><strong>Force.</strong></p>
-<div class="math notranslate nohighlight">
-\[\dots\]</div>
-<div class="math notranslate nohighlight">
-\[\vec{F} = \nabla \vec{b}(C) \cdot \vec{m}\]</div>
-<p><strong>Moment.</strong></p>
-<div class="math notranslate nohighlight">
-\[\dots\]</div>
-<div class="math notranslate nohighlight">
-\[\vec{M}_C = \vec{m} \times \vec{b}(C)\]</div>
-<p><strong>Power.</strong></p>
-<div class="math notranslate nohighlight">
-\[P = \vec{v}_C \cdot \nabla \vec{b}(C) \cdot \vec{m} + \vec{\omega} \cdot \vec{m} \times \vec{b}(C) \ .\]</div>
-</div>
-</div>
-<div class="section" id="energy-balance">
-<h2><span class="section-number">6.2. </span>Energy balance<a class="headerlink" href="#energy-balance" title="Permalink to this heading">#</a></h2>
-<p><strong>todo</strong> <em>Check and put charges, currents, and dipoles together with the electromagnetic field</em></p>
-<p>Ispirati dalle dimensioni fisiche dei campi elettromagnetici,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\left[\mathbf{e}\right] = \frac{\text{force}}{\text{charge}} \qquad &amp; , \qquad
-[\mathbf{d}] = \frac{\text{charge}}{\text{length}^2} \\
-[\mathbf{b}] = \frac{\text{force}\cdot\text{time}}{\text{charge}\cdot\text{length}} \qquad &amp; , \qquad
-[\mathbf{h}] = \frac{\text{charge}}{\text{time} \cdot \text{length}}
-\end{aligned}\end{split}\]</div>
-<!--$$[\varepsilon] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
-<!--$$[\mu] = \frac{\text{charge}^2}{\text{force} \cdot \text{length}^2} = \frac{C^2}{N \ m^2}$$-->
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\left[\mathbf{e} \cdot \mathbf{d}\right] &amp; = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u] \\
-[\mathbf{b} \cdot \mathbf{h}] &amp; = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u]
-\end{aligned}\end{split}\]</div>
-<p>si può costruire la densità di volume di energia  (<strong>todo</strong> trovare motivazioni più convincenti, non basandosi solo sull’analisi dimensionale ma sul lavoro)</p>
-<div class="math notranslate nohighlight">
-\[u = \frac{1}{2} \left( \mathbf{e} \cdot \mathbf{d} + \mathbf{b} \cdot \mathbf{h} \right) \ .\]</div>
-<p>Si può calcolare la derivata parziale nel tempo della densità di energia, <span class="math notranslate nohighlight">\(u\)</span>, e usare le equazioni di Maxwell per ottenere un’equazione di bilancio dell’energia del campo elettromagnetico. Per un mezzo isotropo lineare, per il quale valgono le equazioni costitutive <span class="math notranslate nohighlight">\(\mathbf{d} = \varepsilon \mathbf{e}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{b} = \mu \mathbf{h}\)</span>, la derivata parziale nel tempo dell’energia elettromagnetica può essere riscritta sfuttando la regola di derivazione del prodotto e le equazioni di Faraday-Lenz-Neumann e Ampére-Maxwell,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\dfrac{\partial u}{\partial t} &amp; = \dfrac{\partial}{\partial t}\left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} + \mathbf{b} \cdot \mathbf{h} \right) =  \qquad (...) \\
-&amp; = \mathbf{e} \cdot \partial_t \mathbf{d} + \mathbf{h} \cdot \partial_t \mathbf{b} = \\
-&amp; = \mathbf{e} \cdot (\nabla \times \mathbf{h} - \mathbf{j}) - \mathbf{h} \cdot \nabla \times \mathbf{e} \ .
-\end{aligned}\end{split}\]</div>
-<p>L’ultimo termine può essere ulteriormente manipolato, usando l’identità vettoriale</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\mathbf{e} \cdot \nabla \times \mathbf{h} - \mathbf{h} \cdot \nabla \times \mathbf{e} &amp; = e_i \varepsilon_{ijk} \partial_j h_k - h_i \varepsilon_{ijk} \partial_j e_k = \qquad (i \rightarrow k, k \rightarrow i)\\
-&amp; = e_i \varepsilon_{ijk} \partial_j h_k - h_k \varepsilon_{kji} \partial_j e_i = \\
-&amp; = e_i \varepsilon_{ijk} \partial_j h_k + h_k \varepsilon_{ijk} \partial_j e_i = \\
-&amp; =  \partial_j (\varepsilon_{ijk} e_i  h_k ) = \\
-&amp; =  \partial_j (\varepsilon_{jki} e_i  h_k ) = \\
-&amp; = \nabla \cdot (\mathbf{h} \times \mathbf{e}) = - \nabla \cdot (\mathbf{e} \times \mathbf{h})
-\end{aligned}\end{split}\]</div>
-<p>che permette di scrivere l’equazione del bilancio di energia elettromagnetica come,</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial u }{\partial t} + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j} \ ,\]</div>
-<p>dove è stato definito il <strong>vettore di Poynting</strong>, o meglio il campo vettoriale di Poynting,</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{s}(\mathbf{r},t) := \mathbf{e}(\mathbf{r},t) \times \mathbf{h}(\mathbf{r},t) \ ,\]</div>
-<p>che può essere identificato come un flusso di potenza per unità di superficie, comparendo sotto l’operatore di divergenza nel bilnacio di energia.</p>
-<p><strong>todo.</strong> Rimandare a una sezione in cui si mostra questa ultima affermazione passando dal bilancio differenziale al bilancio integrale e si usa il teorema della divergenza, <span class="math notranslate nohighlight">\(\int_V \nabla \cdot \mathbf{s} = \oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}}\)</span>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
-<summary class="sd-summary-title sd-card-header">
-Bilancio di energia di cariche nel vuoto, o i materiali senza polarizzazione o magnetizzazione<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>Moto di cariche puntiformi.</strong>
-L’equazione del moto di carica puntiforme <span class="math notranslate nohighlight">\(q_k\)</span> nella posizione <span class="math notranslate nohighlight">\(\mathbf{r}_k(t)\)</span> al tempo <span class="math notranslate nohighlight">\(t\)</span> è</p>
-<div class="math notranslate nohighlight">
-\[m_k \ddot{\mathbf{r}}_k = \mathbf{f}_k + \mathbf{f}_k^{em} \ ,\]</div>
-<p class="sd-card-text">avendo riconosciuto i contributi di forza dovuti al campo elettromagnetico come <span class="math notranslate nohighlight">\(\mathbf{f}_k^{em}\)</span> dagli altri. L’espressione della forza dovuta al campo elettromagnetico sulla carica <span class="math notranslate nohighlight">\(k\)</span> è data dalla forza di Lorentz,</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{f}_k^{em}(t) = q_k \left[ \mathbf{e}(\mathbf{r_k}(t), t) - \mathbf{b}(\mathbf{r}_k(t), t) \times \dot{\mathbf{r}}_k(t) \right]\]</div>
-<p class="sd-card-text"><strong>Continuità della carica elettrica.</strong> La densità di carica e di corrente elettrica di un insieme di cariche libere puntiformi macroscopiche può essere scritta come</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \rho(\mathbf{r},t) &amp; = \sum_k q_k \delta(\mathbf{r} - \mathbf{r}_k(t)) \\
-  \mathbf{j}(\mathbf{r},t) &amp; = \sum_k q_k \dot{\mathbf{r}}_k(t) \delta(\mathbf{r} - \mathbf{r}_k(t)) \ .
-\end{aligned}\end{split}\]</div>
-<p class="sd-card-text">L’equazione di continuità della carica, <span class="math notranslate nohighlight">\(\partial_t \rho + \nabla \cdot \mathbf{j} = 0\)</span>, risulta quindi soddisfatta,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \partial_t \rho &amp;  = - \sum_k q_k \, \partial_i \delta(\mathbf{r} - \mathbf{r}_k(t)) \, \dot{r}_{k,i} \\
-  \partial_i j_i  &amp;  =   \sum_k q_k \, \dot{r}_{k,i} \, \partial_i \delta(\mathbf{r} - \mathbf{r}_k(t)) \\
-\end{aligned}\end{split}\]</div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Procedimento alternativo (e più generale?)<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>todo</strong> <em>In caso questo procedimento sia più generale, o più corretto, sostituire il procedimento precedente.</em></p>
-<p class="sd-card-text">La carica elementare in un volumetto <span class="math notranslate nohighlight">\(\Delta V\)</span> è data da dal prodotto tra il volume e la densità volumetrica di carica, <span class="math notranslate nohighlight">\(\rho \Delta V\)</span>; la velocità media locale della carica elettrica è <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>; la forza agente sulla carica elementare immersa in un campo elettromagnetico è determinata dalla formula di Lorentz, <span class="math notranslate nohighlight">\(\mathbf{f} \Delta V = \Delta V \rho \left( \mathbf{e} - \mathbf{b} \times \mathbf{v} \right)\)</span>. La potenza di questa forza è il prodotto scalare con la velocità media delle cariche, <span class="math notranslate nohighlight">\(\Delta V \mathbf{f} \cdot \mathbf{v}\)</span></p>
-<p class="sd-card-text">La potenza del campo elettromagnetico sul moto della carica elettrica per unità di volume è quindi</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{v} \cdot \mathbf{f} = \rho \mathbf{v} \cdot \left( \mathbf{e} - \mathbf{b} \times \mathbf{v} \right) = \rho \mathbf{v} \cdot \mathbf{e} = \mathbf{j} \cdot \mathbf{e} \ .\]</div>
-<p class="sd-card-text"><strong>todo</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">discutere questo termine del bilancio di energia cinetica nel moto della carica elettrica</p></li>
-<li><p class="sd-card-text">questo termine compare con segno opposto nel bilancio dell’energia elettromagnetica del sistema</p></li>
-<li><p class="sd-card-text">dove compare la non-conservatività del problema in presenza di materiali dissipativi (come resistenza elettrica con <span class="math notranslate nohighlight">\(\mathbf{e} = \rho_R \mathbf{j}\)</span>?</p></li>
-</ul>
-<p class="sd-card-text">Il termine <span class="math notranslate nohighlight">\(\mathbf{e} \cdot \mathbf{j}\)</span> può essere manipolato usando le equazioni di Maxwell, e le relazioni</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
-  \mathbf{d} = \varepsilon_0 \mathbf{e} + \mathbf{p} \\
-  \mathbf{h} = \frac{\mathbf{b}}{\mu_0} - \mathbf{m} \\
-\end{cases}\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \mathbf{e} \cdot \mathbf{j} 
-    &amp; = \mathbf{e} \cdot \left( \nabla \times \mathbf{h} - \partial_t \mathbf{d} \right) = \\
-    &amp; = - \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) + \mathbf{h} \cdot \nabla \times \mathbf{e} - \mathbf{e} \cdot \partial_t \mathbf{d} = \\
-    &amp; = - \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) - \mathbf{h} \cdot \partial_t \mathbf{b} - \mathbf{e} \cdot \partial_t \mathbf{d} 
-\end{aligned}\end{split}\]</div>
-<p class="sd-card-text">Gli ultimi due termini possono essere manipolati in diverse maniere,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \mathbf{e} \cdot \partial_t \mathbf{d}
-    = \mathbf{e} \cdot \partial_t \left( \varepsilon_0 \mathbf{e} + \mathbf{p} \right) 
-  &amp; = \partial_t \left( \frac{1}{2} \varepsilon_0 \mathbf{e} \cdot \mathbf{e} \right) + \mathbf{e} \cdot \partial_t \mathbf{p} \\
-  &amp; = \partial_t \left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} \right) + \frac{1}{2} \left( \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} \right) \\
-  &amp; = \partial_t \left( \frac{1}{2 \varepsilon_0} \mathbf{d} \cdot \mathbf{d} \right) - \frac{\mathbf{p}}{\varepsilon_0} \cdot \partial_t \mathbf{d} \\
-\end{aligned}\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \mathbf{h} \cdot \partial_t \mathbf{b}
-    = \mathbf{h} \cdot \partial_t \left( \mu_0 \mathbf{h} + \mu_0 \mathbf{m} \right) 
-  &amp; = \partial_t \left( \frac{1}{2} \mu_0 \mathbf{h} \cdot \mathbf{h} \right) + \mu_0 \mathbf{h} \cdot \partial_t \mathbf{m} \\
-  &amp; = \partial_t \left( \frac{1}{2} \mathbf{b} \cdot \mathbf{h} \right) + \frac{1}{2} \mu_0 \left( \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \\
-  &amp; = \partial_t \left( \frac{1}{2 \mu_0} \mathbf{b} \cdot \mathbf{b} \right) - \mathbf{m} \cdot \partial_t \mathbf{b} \\
-\end{aligned}\end{split}\]</div>
-<p class="sd-card-text">Nel vuoto o in mezzi lineari <span class="math notranslate nohighlight">\(\mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} = \mathbf{0}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} = \mathbf{0}\)</span>. Usando le seconde espressioni, si può riscrivere l’equazione dell’energia del campo elettromagnetico come</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \partial_t \left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} + \frac{1}{2} \mathbf{b} \cdot \mathbf{h} \right) + \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) &amp; = - \ \mathbf{e} \cdot \mathbf{j} \ + \\
-   &amp; \quad - \frac{1}{2} \left[ \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} + \mu_0 \left(  \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \right]
-\end{aligned}\end{split}\]</div>
-<p class="sd-card-text">o, usando le definizioni di densità di energia elettromagnetica <span class="math notranslate nohighlight">\(u\)</span> e vettore di Poynting <span class="math notranslate nohighlight">\(\mathbf{s}\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[
-  \partial_t u + \nabla \cdot \mathbf{s} =
-    - \ \mathbf{e} \cdot \mathbf{j} \
-    - \frac{1}{2} \left[ \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} + \mu_0 \left(  \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \right]
-\]</div>
-</div>
-</details></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -652,20 +422,20 @@ Procedimento alternativo (e più generale?)<div class="sd-summary-down docutils"
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="electrostatics.html"
+       href="principles-relativity.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">precedente</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Electrostatics</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
       </div>
     </a>
     <a class="right-next"
-       href="energy-linear.html"
+       href="energy-momentum-balance.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">successivo</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Energy and momentum balance in linear, local, isotropic, non-dispersive media</p>
+        <p class="prev-next-title"><span class="section-number">3.1. </span>Energy and momentum balance in linear, local, isotropic, non-dispersive media</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -675,26 +445,6 @@ Procedimento alternativo (e più generale?)<div class="sd-summary-down docutils"
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contenuti
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-elementary-components">6.1. Force, moment, and power on elementary components</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-a-point-electric-charge">6.1.1. Force, moment and power on a point electric charge</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-a-electric-dipole">6.1.2. Force, moment and power on a electric dipole</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-moment-and-power-on-a-magnetic-dipole">6.1.3. Force, moment and power on a magnetic dipole</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">6.2. Energy balance</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

@@ -65,13 +65,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/principles';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Indice" href="../genindex.html" />
     <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="3. Electromagnetic Potentials" href="potentials.html" />
+    <link rel="next" title="2.1. Principles of Classical Electromagnetism in Free Space" href="principles-vacuum.html" />
     <link rel="prev" title="1. Brief history of Electromagnetism" href="experiments.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="it"/>
@@ -178,42 +176,53 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Electromagnetism</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">1. Brief history of Electromagnetism</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Principles of Classical Electromagnetism</a></li>
-<li class="toctree-l1"><a class="reference internal" href="potentials.html">3. Electromagnetic Potentials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="media.html">4. Electromagnetism in Matter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="electrostatics.html">5. Electrostatics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="energy.html">6. Energy balance in electromagnetism</a></li>
-<li class="toctree-l1"><a class="reference internal" href="energy-linear.html">7. Energy and momentum balance in linear, local, isotropic, non-dispersive media</a></li>
-<li class="toctree-l1"><a class="reference internal" href="low-speed-relativity.html">8. Relativity in electromagnetism</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">9. Electromagnetic waves</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">9.1. Wave Equations in Electromagnetism</a></li>
-<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">9.2. Plane Electromagnetic Waves</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. Principles of Classical Electromagnetism</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="principles-vacuum.html">2.1. Principles of Classical Electromagnetism in Free Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-potentials.html">2.2. Electromagnetic Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-matter.html">2.3. Electromagnetism in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-relativity.html">2.4. Galileian relativity in electromagnetism</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="energy.html">3. Force, moments, energy and momentum in electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="energy-momentum-balance.html">3.1. Energy and momentum balance in linear, local, isotropic, non-dispersive media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forces-moments-on-charges.html">3.2. Force, moment, and power on elementary charge distributions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="regimes.html">4. Regimes in Electromagnetic systems</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="regimes-electrostatics.html">4.1. Electrostatics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regimes-steady.html">4.2. Steady regime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regimes-slow.html">4.3. Slow…</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">5. Electromagnetic waves</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">5.1. Wave Equations in Electromagnetism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">5.2. Plane Electromagnetic Waves</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Electric Engineering</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="circuits.html">10. Approssimazione circuitale</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">10.1. Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-approximation.html">10.1.1. Validità dell’approccio circuitale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">10.1.2. Induzione elettromagnetica nell’approssimazione circuitale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-components.html">10.1.3. Componenti elementari dei circuiti elettrici</a></li>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">10.1.4. Regimi di funzionamento in circuiti elettrici</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="circuits.html">6. Approssimazione circuitale</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">6.1. Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-approximation.html">6.1.1. Validità dell’approccio circuitale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">6.1.2. Induzione elettromagnetica nell’approssimazione circuitale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-components.html">6.1.3. Componenti elementari dei circuiti elettrici</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">6.1.4. Regimi di funzionamento in circuiti elettrici</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electromagnetic.html">10.2. Circuiti elettromagnetici</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electromagnetic-transformer.html">10.2.1. Trasformatore</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electromagnetic.html">6.2. Circuiti elettromagnetici</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electromagnetic-transformer.html">6.2.1. Trasformatore</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="circuits-electromechanic.html">10.3. Circuiti elettromeccanici</a></li>
-<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks.html">10.4. Network analysis of linear circuits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks-harmonic.html">10.5. Network analysis of linear circuits - harmonic regime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-three-phase.html">10.6. Three-phase circuits</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="electrical-engineering-exercises.html">10.7. Exercises</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-transient-1-dynamic.html">10.7.1. Transient dynamics of linear electrical grids with one dynamic component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-harmonic.html">10.7.2. Harmonic regime of linear electrical grids</a></li>
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-three-phase.html">10.7.3. Three-phase electrical circuits in harmonic regime</a></li>
-<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-electromagnetic.html">10.7.4. Electromagnetic circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuits-electromechanic.html">6.3. Circuiti elettromeccanici</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks.html">6.4. Network analysis of linear circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks-harmonic.html">6.5. Network analysis of linear circuits - harmonic regime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-three-phase.html">6.6. Three-phase circuits</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="electrical-engineering-exercises.html">6.7. Exercises</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-transient-1-dynamic.html">6.7.1. Transient dynamics of linear electrical grids with one dynamic component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-harmonic.html">6.7.2. Harmonic regime of linear electrical grids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-three-phase.html">6.7.3. Three-phase electrical circuits in harmonic regime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-electromagnetic.html">6.7.4. Electromagnetic circuits</a></li>
 </ul>
 </li>
 </ul>
@@ -221,12 +230,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Numerical Methods</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="green-function.html">11. Green’s function method</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numerical-methods.html">12. Metodi numerici</a></li>
+<li class="toctree-l1"><a class="reference internal" href="green-function.html">7. Green’s function method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numerical-methods.html">8. Metodi numerici</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="appendix-list.html">13. todo: appendices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix-list.html">9. todo: appendices</a></li>
 </ul>
 
     </div>
@@ -352,9 +361,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -370,19 +377,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contenuti </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principles-in-differential-form">2.1. Principles in Differential Form</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principles-in-integral-form-electromagnetic-equations-and-galilean-relativity">2.2. Principles in Integral Form: Electromagnetic Equations and Galilean Relativity</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-form-on-control-volumes">2.2.1. Integral Form on Control Volumes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-form-on-arbitrary-volumes">2.2.2. Integral Form on Arbitrary Volumes</a></li>
-</ul>
-</li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -392,174 +386,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-<div class="tex2jax_ignore mathjax_ignore section" id="principles-of-classical-electromagnetism">
+  <div class="tex2jax_ignore mathjax_ignore section" id="principles-of-classical-electromagnetism">
 <span id="classical-electromagnetism-principles"></span><h1><span class="section-number">2. </span>Principles of Classical Electromagnetism<a class="headerlink" href="#principles-of-classical-electromagnetism" title="Permalink to this heading">#</a></h1>
-<p>The progress in the study of electromagnetic phenomena during the 19th century allowed James Clerk Maxwell to formulate what are now known as <em>Maxwell’s equations</em>, which can be considered the first consistent formulation of the principles of classical electromagnetism, together with the charge conservation law and the expression for the Lorentz force on an electric charge immersed in an electromagnetic field.</p>
-<p>Principles are introduced here for total charges and the electric and the magnetic field, in the form that is known as <strong>equations of electromagnetism in vacuum</strong>. Equations of <a class="reference internal" href="media.html#classical-electromagnetism-media"><span class="std std-ref">electromagnetism in matter</span></a> (1) separate the contribution of free and bound charges and currents, and (2) introduce <strong>polarization</strong> and <strong>magnetization</strong> of matter in constitutive equations representing the macroscopic response of the media as a result of local microscopic charge distribution induced by «external» fields.</p>
-<p>Here principles of electromagnetism are first shown in their <a class="reference internal" href="#classical-electromagnetism-principles-differential"><span class="std std-ref">differential form</span></a>: (1) continuity equation of electric charge describes the conservation of electric charge, (2) Maxwell’s equations govern the generation of the electromagnteic field by electric charge and currents, while (3) the differential form of Lorentz’s force gives the expression of the force per unit volume acting on a distribution of electric charge and currents immersed in an electromagnetic field. Then, the more general <a class="reference internal" href="#classical-electromagnetism-principles-integral"><span class="std std-ref">integral form</span></a><a class="footnote-reference brackets" href="#integral-to-differential" id="id1">1</a> is presented for <a class="reference internal" href="#classical-electromagnetism-principles-integral-control-volume"><span class="std std-ref">control volume</span></a>, at rest w.r.t. the observer - an inertial one? - and then derived form <a class="reference internal" href="#classical-electromagnetism-principles-integral-arbitrary-volume"><span class="std std-ref">arbitrary domains</span></a>, using the <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html">rules for time derivatives of integrals over moving domains</a>, and this description is used to have a first discussion about relativity in electromagnetism.</p>
-<div class="section" id="principles-in-differential-form">
-<span id="classical-electromagnetism-principles-differential"></span><h2><span class="section-number">2.1. </span>Principles in Differential Form<a class="headerlink" href="#principles-in-differential-form" title="Permalink to this heading">#</a></h2>
-<p>The principles in differential form can be derived from the more general <a class="reference internal" href="#classical-electromagnetism-principles-integral"><span class="std std-ref">integral form</span></a>, provided the fields satisfy the necessary minimal regularity conditions, which can be qualitatively stated as «all operations must make sense.»</p>
-<p><strong>Conservation of Electric Charge.</strong> Differential form of conservation of electric charge is described by a continuity equation for the electric charge density <span class="math notranslate nohighlight">\(\rho(\vec{r},t)\)</span>, with electric current <span class="math notranslate nohighlight">\(\vec{j} = \rho \vec{v}\)</span> as the flux - where <span class="math notranslate nohighlight">\(\vec{v}(\vec{r},t)\)</span> is the average velocity of the charges in the point <span class="math notranslate nohighlight">\(\vec{r}\)</span> of space at time <span class="math notranslate nohighlight">\(t\)</span></p>
-<div class="math notranslate nohighlight">
-\[\partial_t \rho + \nabla \cdot \vec{j} = 0 \ .\]</div>
-<p><strong>Maxwell’s Equations.</strong> Maxwell’s equations give the relations between the electric charge and current densities, with the electromagnetic field <span class="math notranslate nohighlight">\(\vec{e}(\vec{r}, t)\)</span>, <span class="math notranslate nohighlight">\(\vec{b}(\vec{r},t)\)</span>,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
- \nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
- \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\ 
- \nabla \cdot \vec{b} = 0 \\
- \nabla \times \vec{b} - \varepsilon_0 \mu_0 \, \partial_t \vec{e} = \mu_0 \vec{j}  \ ,\\
-\end{cases}\end{split}\]</div>
-<p>with the <strong>permittivity of free space</strong> - or the <strong>dielectric constant of free space</strong> - <span class="math notranslate nohighlight">\(\varepsilon_0\)</span> and the <strong>permeability of the free space</strong>, <span class="math notranslate nohighlight">\(\mu_0\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \varepsilon_0 &amp; = 8.85 \cdot 10^{-12} \, \text{F}\, \text{m}^{-1} \\
-          \mu_0 &amp; = 4 \pi \cdot 10^{-7} \, \text{N}\, \text{A}^{-2} \\
-\end{aligned}\end{split}\]</div>
-<!--
-with the need to define constitutive equations $\vec{d}(\vec{e}, \vec{b})$, $\vec{h}(\vec{e}, \vec{b})$.
--->
-<p><strong>Lorentz Force.</strong> The force per unit volume acting on the electric charges at point <span class="math notranslate nohighlight">\(\vec{r}\)</span> and time <span class="math notranslate nohighlight">\(t\)</span> is governed by differential form of Lorent’z force</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \vec{f}(\vec{r},t) &amp; = \rho(\vec{r},t) \, \vec{e}(\vec{r},t) + \vec{j}(\vec{r},t) \times \vec{b}(\vec{r},t) = \\
-                           &amp; = \rho(\vec{r},t) \left[ \vec{e}(\vec{r}) + \vec{v}(\vec{r},t) \times \vec{b}(\vec{r},t) \right] =  \\
-                           &amp; = \rho^*(\vec{r},t) \, \vec{e}^*(\vec{r},t) 
-\end{aligned}\end{split}\]</div>
-<p>having defined <span class="math notranslate nohighlight">\(\rho^*{(\vec{r}), t}\)</span> <span class="math notranslate nohighlight">\(\vec{e}^*(\vec{r}, t)\)</span> as the current desntiy and the electric field <strong>as seen by the moving charge</strong></p>
-</div>
-<div class="section" id="principles-in-integral-form-electromagnetic-equations-and-galilean-relativity">
-<span id="classical-electromagnetism-principles-integral"></span><h2><span class="section-number">2.2. </span>Principles in Integral Form: Electromagnetic Equations and Galilean Relativity<a class="headerlink" href="#principles-in-integral-form-electromagnetic-equations-and-galilean-relativity" title="Permalink to this heading">#</a></h2>
-<div class="section" id="integral-form-on-control-volumes">
-<span id="classical-electromagnetism-principles-integral-control-volume"></span><h3><span class="section-number">2.2.1. </span>Integral Form on Control Volumes<a class="headerlink" href="#integral-form-on-control-volumes" title="Permalink to this heading">#</a></h3>
-<p>The integral form of the principles of electromagnetism for fixed volumes <span class="math notranslate nohighlight">\(V\)</span> and surfaces <span class="math notranslate nohighlight">\(S\)</span> in space is obtained by integrating the differential equations over the domains and using the divergence theorem to obtain flux terms, and Stokes” theorem to obtain circulation terms.</p>
-<p><strong>Continuity of Electric Charge.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-    \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \vec{j} \cdot \hat{n} &amp; = 0 \\ \\
-    \dfrac{d}{dt} Q_V + \Phi_{\partial V}\left( \vec{j} \right) &amp; = 0
-\end{aligned}\end{split}\]</div>
-<p><strong>Gauss’s Law for the Field <span class="math notranslate nohighlight">\(\vec{e}(\vec{r},t)\)</span>.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-    \oint_{\partial V} \vec{e} \cdot \hat{n} &amp; = \int_{V} \frac{\rho}{\varepsilon_0} \\ \\
-    \Phi_{\partial V}(\vec{e}) &amp; = \frac{Q_V}{\varepsilon_0}
-\end{aligned}\end{split}\]</div>
-<p><strong>Gauss’s Law for the Field <span class="math notranslate nohighlight">\(\vec{b}(\vec{r},t)\)</span>.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-    \oint_{\partial V} \vec{b} \cdot \hat{n} &amp; = 0 \\  \\
-    \Phi_{\partial V}\left( \vec{b} \right) &amp; = 0
-\end{aligned}\end{split}\]</div>
-<p><strong>Faraday–Neumann–Lenz Law for Electromagnetic Induction.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-    \oint_{\partial S} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_{S} \vec{b} \cdot \hat{n} &amp; = 0 \\  \\
-    \Gamma_{S} \left( \vec{e} \right) + \dfrac{d}{dt} \Phi_{S} \left( \vec{b} \right) &amp; = 0
-\end{aligned}\end{split}\]</div>
-<p><strong>Ampère–Maxwell Law.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-    \oint_{\partial S} \vec{b} \cdot \hat{t} - \dfrac{d}{dt} \int_{S} \varepsilon_0 \mu_0 \, \vec{e} \cdot \hat{n} &amp; = \int_{S} \mu_0 \, \vec{j} \cdot \hat{n} \\ \\
-    \Gamma_{\partial S} \left( \vec{b} \right) - \frac{1}{c_0^2} \dfrac{d}{dt} \Phi_{S} \left( \vec{e} \right) &amp; = \mu_0 \Phi_{S} \left( \vec{j} \right) \ ,
-\end{aligned}\end{split}\]</div>
-<p>having introduced the speed of velocity in free space, <span class="math notranslate nohighlight">\(c_0 = \dfrac{1}{\sqrt{\varepsilon_0 \mu_0}}\)</span>.</p>
-<div class="tip admonition">
-<p class="admonition-title">Maxwell’s equations and continuity equation of electric charge are overdetermined</p>
-<p>Introducing (1) the time derivative of Gauss law of the electric field <span class="math notranslate nohighlight">\(\vec{e}(\vec{r},t)\)</span> and (2) the Ampére-Maxwell law in the continuity equation of the electric charge</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  0 &amp; = \dot{Q}_V + \Phi_{\partial V}\big( \vec{j} \big) = &amp;&amp; (1) \\
-    &amp; = \varepsilon_0 \dot{\Phi}_{\partial V}\big( \vec{e} \big) + \Phi_{\partial V}\big( \vec{j} \big) =\\
-    &amp; = \frac{1}{\mu_0} \left[ \mu_0 \varepsilon_0 \dot{\Phi}_{\partial V}\big( \vec{e} \big) + \mu_0 \Phi_{\partial V}\big( \vec{j} \big)\right] =  &amp;&amp; (2) \\
-    &amp; = \frac{1}{\mu_0} \Gamma_{\partial \partial V} \big( \vec{b} \big) = 0 \ ,
-\end{aligned}\end{split}\]</div>
-<p>an identity appears as the contour <span class="math notranslate nohighlight">\(\partial S\)</span> of a closed surface <span class="math notranslate nohighlight">\(S = \partial V\)</span> has zero dimension. Thus, these equations are not linearly independent and the system is over-determined.</p>
-</div>
-</div>
-<div class="section" id="integral-form-on-arbitrary-volumes">
-<span id="classical-electromagnetism-principles-integral-arbitrary-volume"></span><h3><span class="section-number">2.2.2. </span>Integral Form on Arbitrary Volumes<a class="headerlink" href="#integral-form-on-arbitrary-volumes" title="Permalink to this heading">#</a></h3>
-<p>Due to their importance in fundamental applications such as electric motors, and to avoid confusion or leaps in logic when dealing with electromagnetic induction, it is crucial to provide the correct expression of the electromagnetic principles when moving volumes are involved in space. Not only is the form of these principles shown, but also the correct procedure to derive them starting from the fixed-control-volume version. This is done using rules for <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html">time derivative for fundamental integrals over moving domains</a>, such as the integral of a density function over a volume, the flux of a vector field through a surface, or the circulation along a curve.</p>
-<p>These three derivative rules are listed here and proved in the material about <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/intro.html">Mathematics</a>:Vector and Tensor Algebra and Calculus:<a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html">Time derivatives of integrals over moving domains</a></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \dfrac{d}{dt} \int_{v_t} f &amp; = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \vec{v}_b \cdot \hat{n} &amp;&amp; \text{(density)} \\
-  \dfrac{d}{dt} \int_{s_t} \vec{f} \cdot \hat{n} &amp; = \int_{s_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{n} + \int_{s_t} \nabla \cdot \vec{f} \, \vec{v}_b \cdot \hat{n} - \oint_{\partial s_t} \vec{v}_b \times \vec{f} \cdot \hat{t} &amp;&amp; \text{(flux)} \\
-  \dfrac{d}{dt} \int_{\ell_t} \vec{f} \cdot \hat{t} &amp; = \int_{\ell_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{t} + \int_{\ell_t} \nabla \times \vec{f} \, \cdot \, \vec{v}_b \times \hat{t} + \vec{f}_B \cdot \vec{v}_B - \vec{f}_A \cdot \vec{v}_A &amp;&amp; \text{(circulation)}
-\end{aligned}\end{split}\]</div>
-<p><strong>Continuity of Electric Charge.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-   0 &amp; = \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \vec{j} \cdot \hat{n} = \\
-   &amp; = \dfrac{d}{dt} \int_{v_t} \rho - \oint_{\partial v_t } \rho \vec{v}_b \cdot \hat{n} + \oint_{\partial v_t} \vec{j} \cdot \hat{n} 
-\end{aligned}\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[
-    \dfrac{d}{dt} \int_{v_t} \rho + \oint_{\partial v_t} \underbrace{\rho (\vec{v} - \vec{v}_b)}_{\vec{j}^*} \cdot \hat{n} 
-\]</div>
-<p><strong>Gauss’s Law for the Field <span class="math notranslate nohighlight">\(\vec{d}(\vec{r},t)\)</span>.</strong></p>
-<div class="math notranslate nohighlight">
-\[
-    \oint_{\partial v_t} \vec{d} \cdot \hat{n} = \int_{v_t} \rho
-\]</div>
-<p><strong>Gauss’s Law for the Field <span class="math notranslate nohighlight">\(\vec{b}(\vec{r},t)\)</span>.</strong></p>
-<div class="math notranslate nohighlight">
-\[
-    \oint_{\partial v_t} \vec{b} \cdot \hat{n} = 0
-\]</div>
-<p><strong>Faraday–Neumann–Lenz Law for Electromagnetic Induction.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-   \vec{0} &amp; = \oint_{\partial S} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_{S} \vec{b} \cdot \hat{n} = \\
-    &amp; = \oint_{\partial s_t} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} - \int_{s_t} \underbrace{\nabla \cdot \vec{b}}_{=0} \, \vec{v}_b \cdot \hat{n} + \oint_{s_t} \vec{v}_b \times \vec{b} \cdot \hat{t} =  \\
-\end{aligned}\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[
-    \oint_{\partial s_t} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} \ ,
-\]</div>
-<p>with the definition <span class="math notranslate nohighlight">\(\vec{e}^* := \vec{e} + \vec{v}_b \cdot \vec{b}\)</span>, already used in the expression of the Lorentz force law.</p>
-<p><strong>Ampère–Maxwell Law.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-    \vec{0} &amp; = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} - \int_{s_t} \vec{j} \cdot \hat{n} = \\
-    &amp; = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} + \int_{s_t} \underbrace{\nabla \cdot \vec{d}}_{=\rho} \, \vec{v}_b \cdot \hat{n} - \oint_{s_t} \vec{v}_b \times \vec{d} \cdot \hat{t} - \int_{s_t} \vec{j} \cdot \hat{n} =  \\
-\end{aligned}\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[
-    \oint_{\partial s_t} \vec{h}^* \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} = \int_{s_t} \vec{j}^* \cdot \hat{n} \ ,
-\]</div>
-<p>having defined <span class="math notranslate nohighlight">\(\vec{h}^* := \vec{h} - \vec{v}_b \times \vec{d}\)</span>, and using the previously introduced definition <span class="math notranslate nohighlight">\(\vec{j}^* := \vec{j} - \rho \vec{v}_b\)</span>.</p>
-<p>Adding the definitions:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  \rho^*    &amp;  = \rho  \\
-  \vec{d}^* &amp;  = \vec{d}  \\
-  \vec{b}^* &amp;  = \vec{b}
-\end{aligned}\end{split}\]</div>
-<p>one obtains equations having the same form as those written for stationary domains in space, but which can be applied to moving domains. The definitions:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-\rho^* = \rho \qquad &amp; , \qquad \vec{j}^* = \vec{j} - \rho \vec{v}_b \\
-\vec{d}^* = \vec{d} \qquad &amp; , \qquad \vec{e}^* = \vec{e} + \vec{v}_b \times \vec{b} \\
-\vec{b}^* = \vec{b} \qquad &amp; , \qquad \vec{h}^* = \vec{h} - \vec{v}_b \times \vec{d} \\
-\end{aligned}\end{split}\]</div>
-<p>are nothing more than the transformation of the fields for two observers in relative motion, and correspond to the low-speed limit of Lorentz transformations from special relativity for velocities <span class="math notranslate nohighlight">\(|\vec{v}_b| \ll c\)</span>: in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein’s theory of relativity.</p>
-<p><strong>todo</strong> Reference Galilean and Lorentz transformations for relativity in electromagnetism.</p>
-<hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="integral-to-differential"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>As in continuum mechanics, integral equations are the most general form of the equations that governs the global behavior of a system and requires no assumption of regularity of the physical quantities involved. Under the assumptions of regularity, differential equations can be derived from integral equations using theorems of calculus involving differential operators of the fields: differential equations provide local balances. If the fields are piece-wise regular in different regions of the domain, it’s possible to derive and use differenial equations in each sub-domain, and link them through jump conditions.</p>
-</dd>
-</dl>
-</div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -603,11 +432,11 @@ with the need to define constitutive equations $\vec{d}(\vec{e}, \vec{b})$, $\ve
       </div>
     </a>
     <a class="right-next"
-       href="potentials.html"
+       href="principles-vacuum.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">successivo</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Electromagnetic Potentials</p>
+        <p class="prev-next-title"><span class="section-number">2.1. </span>Principles of Classical Electromagnetism in Free Space</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -617,25 +446,6 @@ with the need to define constitutive equations $\vec{d}(\vec{e}, \vec{b})$, $\ve
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contenuti
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principles-in-differential-form">2.1. Principles in Differential Form</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#principles-in-integral-form-electromagnetic-equations-and-galilean-relativity">2.2. Principles in Integral Form: Electromagnetic Equations and Galilean Relativity</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-form-on-control-volumes">2.2.1. Integral Form on Control Volumes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-form-on-arbitrary-volumes">2.2.2. Integral Form on Arbitrary Volumes</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
