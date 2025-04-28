@@ -2,7 +2,7 @@
 # Transient dynamics of linear electrical grids with one dynamic component
 
 ```{admonition} Guidelines for solution
-:class: tip
+:class: tip, dropdown
 
 Breaking down the solution:
 1. Find the **many-port equivalent** of the **linear algebraic part of the network** (resistor, and prescribed generators), using PSCE. Find the relation between port voltage and currents and all the required variables of the network,
@@ -358,7 +358,6 @@ At $t = 0$, $v_A(0) = 7.667 \, V$ and $E_C(0) = 14.694 \, J $.
 
 
 ````{dropdown} Solution
-:open:
 
 Following the **guidelines for the solution**, a [many-port Thevenin equivalent circuit](classical-electromagnetism:electrical-engineering:newtork-analysis:thevenin:n-port) of the resistive part of the circuit is found, with two ports for interfacing with the capacitor (A) and with the switch. The dynamical equation of the system is written in state-space representation, writing the voltage at the ports and the unknown variable $i(t)$ as outputs; the capacitor contitutive equation is used to find the time evolution of the system once the switch is closed
 
@@ -668,7 +667,7 @@ $$E_C(\tau) = 0.5 \cdot 5 \cdot 10^{-4} \, F \cdot ( 19.25 \, V )^2 = 9.26 \cdot
 ```{figure} ../media/exam-2024-09-06-ese-01.png
 ```
 
-````{dropdown} Solution
+````{dropdown} Solution - todo
 ````
 
 `````
@@ -679,7 +678,7 @@ $$E_C(\tau) = 0.5 \cdot 5 \cdot 10^{-4} \, F \cdot ( 19.25 \, V )^2 = 9.26 \cdot
 ```{figure} ../media/exam-2024-07-22-ese-01.png
 ```
 
-````{dropdown} Solution
+````{dropdown} Solution - todo
 ````
 
 `````
@@ -690,7 +689,7 @@ $$E_C(\tau) = 0.5 \cdot 5 \cdot 10^{-4} \, F \cdot ( 19.25 \, V )^2 = 9.26 \cdot
 ```{figure} ../media/exam-2024-02-13-ese-01-b.png
 ```
 
-````{dropdown} Solution
+````{dropdown} Solution - todo
 ````
 
 `````

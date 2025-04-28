@@ -201,7 +201,7 @@ $$\begin{aligned}
 ```{figure} ../media/exam-2024-09-06-ese-02.png
 ```
 
-```{dropdown} Solution
+```{dropdown} Solution - todo
 :open:
 
 
@@ -216,7 +216,7 @@ $$\begin{aligned}
 ```{figure} ../media/exam-2024-07-22-ese-02.png
 ```
 
-```{dropdown} Solution
+```{dropdown} Solution - todo
 :open:
 
 

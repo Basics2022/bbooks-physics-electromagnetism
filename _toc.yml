@@ -14,6 +14,9 @@ parts:
     sections:
     - file: ch/principles-vacuum
     - file: ch/principles-matter
+      sections:
+      - file: ch/principles-matter-polarization
+      - file: ch/principles-matter-magnetization
     - file: ch/principles-relativity
   - file: ch/waves
     sections:
@@ -30,7 +33,7 @@ parts:
     - file: ch/regimes-electrostatics
     - file: ch/regimes-steady
     - file: ch/regimes-slow
-- caption: Electric Engineering
+- caption: Electrical Engineering
   numbered: true
   chapters:
   - file: ch/circuits

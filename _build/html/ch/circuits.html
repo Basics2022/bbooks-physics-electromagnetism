@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. Approssimazione circuitale &#8212; electromagnetism</title>
+    <title>6. Circuit Approximation &#8212; electromagnetism</title>
   
   
   
@@ -64,6 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/circuits';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -199,9 +201,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Electric Engineering</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Electrical Engineering</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">6. Approssimazione circuitale</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">6. Circuit Approximation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">6.1. Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-approximation.html">6.1.1. Validità dell’approccio circuitale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">6.1.2. Induzione elettromagnetica nell’approssimazione circuitale</a></li>
@@ -213,7 +215,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="circuits-electromagnetic-transformer.html">6.2.1. Trasformatore</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="circuits-electromechanic.html">6.3. Circuiti elettromeccanici</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuits-electromechanic.html">6.3. Electromechanical Circuits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks.html">6.4. Network analysis of linear circuits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks-harmonic.html">6.5. Network analysis of linear circuits - harmonic regime</a></li>
 <li class="toctree-l2"><a class="reference internal" href="electrical-engineering-three-phase.html">6.6. Three-phase circuits</a></li>
@@ -371,7 +373,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Approssimazione circuitale</h1>
+    <h1>Circuit Approximation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -385,18 +387,58 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-<div class="tex2jax_ignore mathjax_ignore section" id="approssimazione-circuitale">
-<span id="classical-electromagnetism-circuits"></span><h1><span class="section-number">6. </span>Approssimazione circuitale<a class="headerlink" href="#approssimazione-circuitale" title="Permalink to this heading">#</a></h1>
-<p><strong>Circuiti elettrici.</strong> <em>Condizioni per la validità dell’approssimazione circuitale; componenti elementari; regimi di utilizzo: stazionario, armonico (alternato), transitorio;</em></p>
-<p><strong>Circuiti elettromagnetici.</strong> <em>Condizioni per la validità dell’approssimazione circuitale; es. trasformatori</em></p>
-<p><strong>Circuito elettro-magneto-meccanici.</strong> <em>Es. semplici circuiti; motori elettrici e generatori</em></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="circuit-approximation">
+<span id="classical-electromagnetism-electrical-engineering"></span><h1><span class="section-number">6. </span>Circuit Approximation<a class="headerlink" href="#circuit-approximation" title="Permalink to this heading">#</a></h1>
+<p><strong>Electric Circuits</strong></p>
+<ul class="simple">
+<li><p><strong>Validity Conditions for Circuit Approximation:</strong></p>
+<ul>
+<li><p>The dimensions of the circuit are much smaller than the wavelength of the electromagnetic waves involved.</p></li>
+<li><p>The frequency of the signals is low enough that the propagation delay is negligible.</p></li>
+<li><p>The electric and magnetic fields are confined within the circuit components.</p></li>
+</ul>
+</li>
+<li><p><strong>Basic Components:</strong> resistors (R); capacitors (C); inductors (L); voltage and current sources; switches; non-linear components: diodes, transistors,…</p></li>
+<li><p><strong>Operating Regimes:</strong></p>
+<ul>
+<li><p><strong>Steady State (DC):</strong> The circuit parameters (voltage, current) do not change over time.</p></li>
+<li><p><strong>Harmonic (AC):</strong> The circuit parameters vary sinusoidally with time.</p></li>
+<li><p><strong>Transient:</strong> The circuit parameters change over time, typically due to a change in input or initial conditions.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Electromagnetic Circuits</strong></p>
+<ul class="simple">
+<li><p><strong>Validity Conditions for Circuit Approximation:</strong></p>
+<ul>
+<li><p>term <span class="math notranslate nohighlight">\(\partial_t \vec{d}\)</span> negligible,…<strong>todo</strong> <em>as an integral condition on a system? Discussion in terms of energy?</em></p></li>
+</ul>
+</li>
+<li><p><strong>Example: Transformers</strong></p>
+<ul>
+<li><p>Transformers operate on the principle of electromagnetic induction.</p></li>
+<li><p>They are used to step up or step down voltages and currents in AC circuits.</p></li>
+<li><p>The circuit approximation is valid as long as the frequency of the AC signal is within the designed range of the transformer.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Electro-Magneto-Mechanical Circuits</strong></p>
+<ul class="simple">
+<li><p><strong>Examples:</strong></p>
+<ul>
+<li><p><strong>Simple Circuits:</strong> Basic circuits involving electromagnetic and mechanical components, such as a moving coil in a magnetic field.</p></li>
+<li><p><strong>Electric Motors:</strong> Convert electrical energy into mechanical energy.</p></li>
+<li><p><strong>Generators:</strong> Convert mechanical energy into electrical energy.</p></li>
+</ul>
+</li>
+<li><p><strong>Key Concepts:</strong></p>
+<ul>
+<li><p>Interaction between electrical and mechanical components.</p></li>
+<li><p>Energy conversion and efficiency.</p></li>
+<li><p>Dynamic behavior and control of electromechanical systems.</p></li>
+</ul>
+</li>
+</ul>
 <div class="toctree-wrapper compound">
 </div>
 </div>

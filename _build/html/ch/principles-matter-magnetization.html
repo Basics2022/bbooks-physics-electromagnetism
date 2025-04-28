@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.2. Electromagnetism in Matter &#8212; electromagnetism</title>
+    <title>2.2.7. Magnetization &#8212; electromagnetism</title>
   
   
   
@@ -66,12 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/principles-matter';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/principles-matter-magnetization';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.2.6. Polarization" href="principles-matter-polarization.html" />
-    <link rel="prev" title="2.1. Principles of Classical Electromagnetism in Free Space" href="principles-vacuum.html" />
+    <link rel="next" title="2.3. Galileian relativity in electromagnetism" href="principles-relativity.html" />
+    <link rel="prev" title="2.2.6. Polarization" href="principles-matter-polarization.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,9 +179,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">1. Brief history of Electromagnetism</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="principles.html">2. Principles of Classical Electromagnetism</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="principles-vacuum.html">2.1. Principles of Classical Electromagnetism in Free Space</a></li>
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">2.2. Electromagnetism in Matter</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="principles-matter.html">2.2. Electromagnetism in Matter</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="principles-matter-polarization.html">2.2.6. Polarization</a></li>
-<li class="toctree-l3"><a class="reference internal" href="principles-matter-magnetization.html">2.2.7. Magnetization</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">2.2.7. Magnetization</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="principles-relativity.html">2.3. Galileian relativity in electromagnetism</a></li>
@@ -295,7 +295,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/principles-matter.md" target="_blank"
+      <li><a href="../_sources/ch/principles-matter-magnetization.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -379,7 +379,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Electromagnetism in Matter</h1>
+    <h1>Magnetization</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -389,11 +389,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-electromagnetism-in-matter">2.2.1. Equations of electromagnetism in matter</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">2.2.2. Examples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#governing-equations-in-differential-form">2.2.3. Governing equations in differential form</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#governing-equation-in-integral-form">2.2.4. Governing equation in integral form</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jump-conditions">2.2.5. Jump Conditions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-magnetic-moment-limit-of-an-elementary-loop">2.2.7.1. Single Magnetic Moment (Limit of an Elementary Loop)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-distribution-of-magnetic-moment">2.2.7.2. Continuous Distribution of Magnetic Moment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reformulation-of-maxwell-s-equations-and-charge-continuity">2.2.7.3. Reformulation of Maxwell’s Equations and Charge Continuity</a></li>
 </ul>
             </nav>
         </div>
@@ -405,151 +403,142 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <!--
-```{article-info}
-\:author: basics
-\:date: "{sub-ref}`today`"
-\:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-<div class="tex2jax_ignore mathjax_ignore section" id="electromagnetism-in-matter">
-<span id="classical-electromagnetism-principles-matter"></span><h1><span class="section-number">2.2. </span>Electromagnetism in Matter<a class="headerlink" href="#electromagnetism-in-matter" title="Permalink to this heading">#</a></h1>
-<p>Electromagnetism in matter requires the description of the behavior of the matter involved in the process. In general, a medium immersed in an electromagnetic field may respond with local charge distributions, resulting in <a class="reference internal" href="principles-matter-polarization.html#classical-electromagnetism-media-polarization"><span class="std std-ref"><strong>polarization</strong></span></a> and <a class="reference internal" href="principles-matter-magnetization.html#classical-electromagnetism-media-magnetization"><span class="std std-ref"><strong>magnetization</strong></span></a>. Total electric <span class="math notranslate nohighlight">\(\vec{e}(\vec{r},t)\)</span> and magnetic field <span class="math notranslate nohighlight">\(\vec{b}(\vec{r},t)\)</span> can be written as the sum of contributions of free charges <span class="math notranslate nohighlight">\(\rho_f\)</span> and currents <span class="math notranslate nohighlight">\(\vec{j}_f\)</span> and bound charges <span class="math notranslate nohighlight">\(\rho_b\)</span> and currents <span class="math notranslate nohighlight">\(\vec{j}_b\)</span>.</p>
-<p>Bound charge density represents local separation of charges of molecules of dielectric media immersed in electric field, that can be represented as a volume distribution of charge dipole,</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="magnetization">
+<span id="classical-electromagnetism-media-magnetization"></span><h1><span class="section-number">2.2.7. </span>Magnetization<a class="headerlink" href="#magnetization" title="Permalink to this heading">#</a></h1>
+<div class="section" id="single-magnetic-moment-limit-of-an-elementary-loop">
+<h2><span class="section-number">2.2.7.1. </span>Single Magnetic Moment (Limit of an Elementary Loop)<a class="headerlink" href="#single-magnetic-moment-limit-of-an-elementary-loop" title="Permalink to this heading">#</a></h2>
+<p>Using the Biot-Savart law, specialized for a conductor carrying current <span class="math notranslate nohighlight">\(i(\vec{r}_0)\)</span></p>
 <div class="math notranslate nohighlight">
-\[\rho = \rho_f + \rho_b = \rho_f + \rho_P \ .\]</div>
-<p>Bound current density represents two effects: the variation of polarization charge and the orientation of Amperian currents - “non random” currents in the molecules of the medium, producing net contribution to the magnetic field, and can be represented as a volume distribution of elementary loop currents.</p>
+\[\begin{split}\begin{aligned}
+  d \vec{b}(\vec{r})
+  &amp; = - \frac{\mu}{4 \pi} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \vec{j}(\vec{r}_0) d V_0 = \\
+  &amp; = - \frac{\mu}{4 \pi} i(\vec{r}_0) \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \hat{\vec{t}}(\vec{r}_0) d \ell_0 \ ,
+\end{aligned}\end{split}\]</div>
+<p>we can calculate the magnetic field generated by a loop with path <span class="math notranslate nohighlight">\(\ell_0 = \partial S_0\)</span> using the PSCE</p>
 <div class="math notranslate nohighlight">
-\[\begin{aligned}
-  \vec{j} &amp; = \vec{j}_f + \vec{j}_b 
-            = \vec{j}_f + \vec{j}_P + \vec{j}_M  \ .
-\end{aligned}\]</div>
-<p>As it will shown below, the bound current can be written as the divergence of the polarization field <span class="math notranslate nohighlight">\(\vec{p}\)</span>, representing the volume density fo the dipole distribution, and the magnetization current as the curl of the magnetization field <span class="math notranslate nohighlight">\(\vec{m}\)</span>,</p>
+\[\begin{split}\begin{aligned}
+  \vec{b}(\vec{r})
+  &amp; = \oint_{\ell_0} d \vec{b}(\vec{r}_0) = \\
+  &amp; = - \frac{\mu}{4 \pi} i_0 \oint_{\vec{r}_0 \in \ell_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \hat{\vec{t}}(\vec{r}_0)  = \\
+  &amp; =   \frac{\mu}{4 \pi} i_0 \int_{\vec{r}_0 \in S_0} \hat{\vec{n}}(\vec{r}_0) \cdot \nabla_{\vec{r}_0} \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right)
+\end{aligned}\end{split}\]</div>
+<p>The field generated by an elementary loop of surface <span class="math notranslate nohighlight">\(S_0\)</span> with normal <span class="math notranslate nohighlight">\(\hat{\vec{n}}_0\)</span>, using the mean value theorem, is</p>
 <div class="math notranslate nohighlight">
-\[\rho_p = - \nabla \cdot \vec{p} \quad , \quad \vec{j}_M = \nabla \times \vec{m} \ .\]</div>
-<div class="section" id="equations-of-electromagnetism-in-matter">
-<span id="classical-electromagnetism-media-vacuum-to-matter"></span><h2><span class="section-number">2.2.1. </span>Equations of electromagnetism in matter<a class="headerlink" href="#equations-of-electromagnetism-in-matter" title="Permalink to this heading">#</a></h2>
-<p>Introducing the splitting of free and bound charge and current into the equations of the electromagnetism, namely electric charge continuity and Maxwell’s equations,</p>
+\[\vec{b}(\vec{r}) = \frac{\mu}{4 \pi} i_0 S_0 \hat{\vec{n}}_0 \cdot \nabla_{\vec{r}_0} \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) + o(S_0)\]</div>
+<p>and as <span class="math notranslate nohighlight">\(i_0 \rightarrow \infty\)</span>, <span class="math notranslate nohighlight">\(S_0 \rightarrow 0\)</span> such that <span class="math notranslate nohighlight">\(\vec{M}_0 := i_0 S_0 \hat{\vec{n}}_0\)</span></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\partial_t \rho + \nabla \cdot \vec{j} = 0
+\[\begin{split}\begin{aligned}
+ \vec{b}(\vec{r})
+  &amp; = \frac{\mu}{4 \pi} \vec{M}_0 \cdot \nabla_{\vec{r}_0} \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) \\
+  &amp; = - \frac{\mu_0}{4\pi} \left[ \frac{(\vec{r}-\vec{r}_0)(\vec{r}-\vec{r}_0)}{|\vec{r}-\vec{r}_0|^5} \cdot \vec{M}_0 - \frac{\vec{M}_0}{|\vec{r}-\vec{r}_0|^3} \right] = \\
+  &amp; = - \frac{\mu_0}{4\pi} \left[ \frac{(\vec{r}-\vec{r}_0) \otimes (\vec{r}-\vec{r}_0)}{|\vec{r}-\vec{r}_0|^5} - \frac{\mathbb{I}}{|\vec{r}-\vec{r}_0|^3} \right] \cdot \vec{M}_0 \ .
+\end{aligned}\end{split}\]</div>
+<p><strong>todo</strong> Analogy with the electric field produced by a distribution of dipoles.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\oint_{\partial S} A \, t_i = \int_S \varepsilon_{ijk} \, n_j \, \partial_k A
 \qquad , \qquad
-\begin{cases}
-\nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
-\nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
-\nabla \cdot \vec{b} = 0 \\
-\nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} = \mu_0 \vec{j}
-\end{cases}\end{split}\]</div>
-<p>and more precisely</p>
-<ul>
-<li><p>into Gauss’ law for the electric field</p>
+  \oint_{\partial S} A \, \hat{\vec{t}} = \int_S \hat{\vec{n}} \times \nabla A\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-    &amp; 0  = \nabla \cdot \vec{e} - \frac{\rho}{\varepsilon_0} = \nabla \cdot \vec{e} - \frac{\rho_f - \nabla \cdot \vec{p}}{\varepsilon_0}  \\ \\
-    &amp; \rightarrow \qquad \nabla \cdot \vec{d} = \rho_f \ ,
-  \end{aligned}\end{split}\]</div>
-<p>with <span class="math notranslate nohighlight">\(\vec{d} = \varepsilon_0 \vec{e} + \vec{p}\)</span> defined as the <strong>displacement field</strong>.</p>
-</li>
-<li><p>into continuity equation</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-    0 
-    &amp; = \partial_t \rho + \nabla \cdot \vec{j} = \\
-    &amp; = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_b + \nabla \cdot ( \vec{j}_P + \nabla \times \vec{j}_M ) = \\
-  \end{split}\]</div>
-<p>since <span class="math notranslate nohighlight">\(\nabla \cdot \nabla \times \vec{m} \equiv 0\)</span>, and keeping separated the contributions of free and bound charges,</p>
+\oint_{\vec{r}_0 \in \ell_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \hat{\vec{t}}(\vec{r}_0) d \ell_0
+  &amp; = \oint_{\vec{r}_0 \in \ell_0} \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3}  t_k = \\
+  &amp; = \int_{\vec{r}_0 \in S_0} \varepsilon_{krs} n_r \partial^0_s \left( \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right) = \\
+  &amp; = \int_{\vec{r}_0 \in S_0} \left( \delta_{ir} \delta_{js} - \delta_{is} \delta_{jr} \right) n_r \partial^0_s \left( \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right) = \\
+  &amp; = \int_{\vec{r}_0 \in S_0} \left\{ n_i \underbrace{\partial^0_j \left( \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right)}_{=0} - n_j \partial^0_i \left( \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right) \right\} = \\
+  &amp; = - \int_{\vec{r}_0 \in S_0} n_j \partial^0_i \left( \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right) \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details></div>
+<div class="section" id="continuous-distribution-of-magnetic-moment">
+<h2><span class="section-number">2.2.7.2. </span>Continuous Distribution of Magnetic Moment<a class="headerlink" href="#continuous-distribution-of-magnetic-moment" title="Permalink to this heading">#</a></h2>
+<p>To calculate the magnetic field generated by a volume distribution of magnetic moment, we can proceed in analogy with what was done to calculate the electric field generated by a distribution of dipoles</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-     &amp; \partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \\
-     &amp; \partial_t \rho_P + \nabla \cdot \vec{j}_P = 0 \\ \\
-     &amp; \rightarrow \qquad \vec{j}_P = \partial_t \vec{p} \ .
-  \end{aligned}\end{split}\]</div>
-</li>
-<li><p>and into Ampére-Maxwell’s law</p>
+\vec{b}(\vec{r})
+  &amp; = \int_{\vec{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \vec{m}(\vec{r}_0) \cdot \nabla_{\vec{r}_0}  \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) = \\
+  &amp; = \oint_{\vec{r}_0 \in \partial V_0} \frac{\mu_0}{4 \pi}  \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \hat{\vec{n}}(\vec{r}_0) \cdot \vec{m}(\vec{r}_0) + \int_{\vec{r}_0 \in V_0} \frac{\mu_0}{4 \pi} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \,\left( - \nabla_{\vec{r}_0} \cdot \vec{m}(\vec{r}_0) \right) \ , \\
+\end{aligned}\end{split}\]</div>
+<p>but without obtaining an analogy with the expression of the Biot-Savart law, which involves the cross product between the term <span class="math notranslate nohighlight">\(\frac{\vec{r}- \vec{r}_0}{|\vec{r} - \vec{r}_0|^3}\)</span> and a current density <span class="math notranslate nohighlight">\(\vec{j}(\vec{r}_0)\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We can rewrite</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-    \vec{0}
-    &amp; = \nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} - \mu_0 \vec{j} = \\
-    &amp; = \nabla \times \vec{b} - \mu_0 \, \partial_t \left( \vec{d} - \vec{p} \right) - \mu_0 \vec{j}_f - \mu_0 \partial_t \vec{p} - \mu_0 \nabla \times \vec{m} \\
-    &amp; = \nabla \times \left( \vec{b} - \mu_0 \vec{m} \right) - \ mu_0 \, \partial_t \vec{d} - \mu_0 \vec{j}_f \\ \\ 
-    &amp; \rightarrow \qquad \nabla \times \vec{h}  - \, \partial_t \vec{d} = \vec{j}_f \ ,
-  \end{aligned}\end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\vec{h} := \vec{b} - \mu_0 \vec{m}\)</span>, the <strong>magnetic field strength</strong>.</p>
-</li>
-</ul>
-<!--
-## Continuous Media
-
-In general, some materials respond to an imposed "external" electromagnetic field with polarization and magnetization. In particular, the electric polarization of a material corresponds to a local separation of electric charges, macroscopically equivalent to a volume density of dipoles, $\vec{p}(\vec{r}_0)$; magnetization corresponds to an orientation of the axes of Amperian current loops, macroscopically equivalent to a density of magnetic moment $\vec{m}(\vec{r}_0)$.
--->
-</div>
-<div class="section" id="examples">
-<h2><span class="section-number">2.2.2. </span>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>conductors</p></li>
-<li><p>ferromagnetic and weak magnetism (para-, dia-, anti-)</p></li>
-</ul>
-</div>
-<div class="section" id="governing-equations-in-differential-form">
-<span id="classical-electromagnetism-media-differential"></span><h2><span class="section-number">2.2.3. </span>Governing equations in differential form<a class="headerlink" href="#governing-equations-in-differential-form" title="Permalink to this heading">#</a></h2>
-<p>Differential form of Maxwell’s equations</p>
+  \oint_{\vec{r}_0 \in \partial V_0} &amp; \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \left( \hat{\vec{n}}(\vec{r}_0) \times \vec{m}(\vec{r}_0) \right) \\
+  &amp; = \oint_{\vec{r}_0 \in \partial V_0} \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} \varepsilon_{krs} n_r m_s = \\
+  &amp; = \int_{\vec{r}_0 \in V_0} \left( \delta_{ir} \delta_{js} - \delta_{is} \delta_{jr} \right) \partial^0_r \left( \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_s \right) = \\
+  &amp; = \int_{\vec{r}_0 \in V_0} \left\{ \partial^0_i \left( \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_j \right) - \partial^0_j \left( \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_i \right)  \right\} = \\
+  &amp; = \int_{\vec{r}_0 \in V_0}
+  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_j
+         + \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} \partial^0_i m_j
+         - \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} \partial^0_j m_i
+         - \underbrace{ \partial^0_j \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3}}_{=0} m_i
+  \right\} = \\
+  &amp; = \int_{\vec{r}_0 \in V_0}
+  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_j
+         + \varepsilon_{ijk} \varepsilon_{krs} \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} \partial^0_r m_s
+  \right\} = \\
+  &amp; = \int_{\vec{r}_0 \in V_0}
+  \left\{ \nabla_{\vec{r}_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r}-\vec{r}_0|^3} \cdot \vec{m}(\vec{r}_0)
+         + \frac{\vec{r} - \vec{r}_0}{|\vec{r}-\vec{r}_0|^3} \times \left( \nabla_{\vec{r}_0} \times \vec{m}(\vec{r}_0) \right)
+  \right\} = \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">using vector calculus identities,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
- \nabla \cdot \vec{d} = \rho_f \\
- \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
- \nabla \cdot \vec{b} = 0 \\
- \nabla \times \vec{h} - \partial_t \vec{d} = \vec{j}_f
-\end{cases}\end{split}\]</div>
-<p><strong>todo</strong> <em>continuity equation for charge</em></p>
-</div>
-<div class="section" id="governing-equation-in-integral-form">
-<span id="classical-electromagnetism-media-integral"></span><h2><span class="section-number">2.2.4. </span>Governing equation in integral form<a class="headerlink" href="#governing-equation-in-integral-form" title="Permalink to this heading">#</a></h2>
-<p>Integral form of Maxwell’s equations</p>
+\[\begin{split}\begin{aligned}
+  \vec{a} \times (\vec{b} \times \vec{c}) &amp; = \varepsilon_{ijk} a_j \varepsilon_{krs} b_r c_s = \\
+  &amp; = (\delta_{ir} \delta_{js} - \delta_{is} \delta_{jr}) a_j b_r c_s = \\
+  &amp; = a_j b_i c_j - c_i b_j a_j = \vec{b}(\vec{a} \cdot \vec{c}) - \vec{c} (\vec{a} \cdot \vec{b})
+\end{aligned}\end{split}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
- \displaystyle \oint_{\partial V} \vec{d} \cdot \hat{\vec{n}} = \int_{V} \rho_f \\
- \displaystyle \oint_{\partial S} \vec{e} \cdot \hat{\vec{t}} + \dfrac{d}{dt} \int_S \vec{b} \cdot \hat{\vec{n}} = 0 \\
- \displaystyle \oint_{\partial V} \vec{b} \cdot \hat{\vec{n}} = 0 \\
- \displaystyle \oint_{\partial S} \vec{h} \cdot \hat{\vec{t}} - \dfrac{d}{dt} \int_S \vec{d} \cdot \hat{\vec{n}} = \int_{S} \vec{j}_f \cdot \hat{\vec{n}} \\
-\end{cases}\end{split}\]</div>
-<ul class="simple">
-<li><p>control volume</p></li>
-<li><p>arbitrary domain</p></li>
-<li><p>low-speed relativity</p></li>
-</ul>
-</div>
-<div class="section" id="jump-conditions">
-<span id="classical-electromagnetism-media-jump"></span><h2><span class="section-number">2.2.5. </span>Jump Conditions<a class="headerlink" href="#jump-conditions" title="Permalink to this heading">#</a></h2>
-<p>Letting <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(S\)</span> “collapse on a discontinuity”…</p>
-<div class="math notranslate nohighlight" id="equation-eq-em-jump">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-em-jump" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{cases}
-  [ d_n ] = \sigma_f \\
-  [ e_t ] = 0 \\
-  [ b_n ] = 0 \\
-  [ h_t ] = \iota_f \ ,
-\end{cases}\end{split}\]</div>
-<p>being <span class="math notranslate nohighlight">\(\sigma_f\)</span> and <span class="math notranslate nohighlight">\(\iota_f\)</span> surface charge and current density, with physical dimension <span class="math notranslate nohighlight">\(\frac{\text{charge}}{\text{surface}}\)</span>, and <span class="math notranslate nohighlight">\(\frac{\text{current}}{\text{surface}}\)</span> respectively. These contributions can be thought of as Dirac delta contributions in volume density, namely</p>
+\[\begin{split}\begin{aligned}
+ a_j \partial_i m_j - a_j \partial_j m_i
+ &amp; = (\delta_{ir} \delta_{js} - \delta_{is} \delta_{jr}) a_j \partial_r m_s = \\
+ &amp; = \varepsilon_{ijk} \varepsilon_{krs} a_j \partial_r m_s = \\
+ &amp; = \vec{a} \times \left( \nabla \times \vec{m} \right)
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">The magnetic field generated by a distribution of magnetic moment can therefore be rewritten as</p>
 <div class="math notranslate nohighlight">
-\[\rho(\vec{r},t) = \rho_0(\vec{r},t) + \sigma(\vec{r}_s,t) \delta_{1}(\vec{r}-\vec{r}_s) \ ,\]</div>
-<p>being <span class="math notranslate nohighlight">\(\rho(\vec{r},t)\)</span> the regular part of the volume density in all the points of the domain <span class="math notranslate nohighlight">\(\vec{r} \in V\)</span>, <span class="math notranslate nohighlight">\(\sigma(\vec{r}_s,t)\)</span> the surface density on 2-dimensional surfaces <span class="math notranslate nohighlight">\(\vec{r}_s \in S\)</span>, <span class="math notranslate nohighlight">\(\delta_1()\)</span> the Dirac’s delta with physical dimension <span class="math notranslate nohighlight">\(\frac{1}{\text{length}}\)</span>.</p>
-<p>If there’s no free surface charge and currents, jump conditions for linear media become</p>
-<div class="math notranslate nohighlight" id="equation-eq-em-jump-no-surf-density">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-eq-em-jump-no-surf-density" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{cases}
-  [ d_n ] = 0 \\
-  [ e_t ] = 0 \\
-  [ b_n ] = 0 \\
-  [ h_t ] = 0 \ ,
-\end{cases}
-\qquad \rightarrow \qquad
-\begin{cases}
-  d_{n,1} = d_{n,2}  \quad \rightarrow \quad \varepsilon_1 e_{n,1} = \varepsilon_2 e_{n,2} \\
-  e_{t,1} = e_{t,2}  \\
-  b_{n,1} = b_{n,2}  \\
-  h_{t,1} = h_{t,2}  \quad \rightarrow \quad \frac{1}{\mu_1} b_{t,1} = \frac{1}{\mu_2} b_{t,2} \\
-\end{cases}
-\end{split}\]</div>
+\[\begin{split}\begin{aligned}
+\vec{b}(\vec{r})
+  &amp; = \int_{\vec{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \vec{m}(\vec{r}_0) \cdot \nabla_{\vec{r}_0}  \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) = \\
+  &amp; = - \frac{\mu_0}{4\pi} \oint_{\vec{r}_0 \in \partial V_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \underbrace{ \left( - \hat{\vec{n}}(\vec{r}_0) \times \vec{m}(\vec{r}_0) \right) }_{\vec{j}^s_M}
+  - \frac{\mu_0}{4 \pi} \int_{\vec{r}_0 \in V_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r}-\vec{r}_0|^3} \times \underbrace{ \left(\nabla_{\vec{r}_0} \times \vec{m}(\vec{r}_0) \right)}_{\vec{j}_M} \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">having defined the surface magnetization current density <span class="math notranslate nohighlight">\(\vec{j}^s_M\)</span> and the volume magnetization current density <span class="math notranslate nohighlight">\(\vec{j}_M\)</span> as the intensities of the distributed singularities, in analogy with the expression of the Biot-Savart law.</p>
 </div>
-<div class="toctree-wrapper compound">
+</details></div>
+<div class="section" id="reformulation-of-maxwell-s-equations-and-charge-continuity">
+<h2><span class="section-number">2.2.7.3. </span>Reformulation of Maxwell’s Equations and Charge Continuity<a class="headerlink" href="#reformulation-of-maxwell-s-equations-and-charge-continuity" title="Permalink to this heading">#</a></h2>
+<p>The Ampère-Maxwell law can be rewritten</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ &amp; \nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} = \mu_0 \vec{j} \\
+ &amp; \nabla \times \vec{b} - \mu_0 \partial_t \left( \vec{d} - \vec{p} \right) = \mu_0 \left( \vec{j}_f + \vec{j}_P + \vec{j}_M \right) \\
+ &amp; \nabla \times \underbrace{\left( \vec{b} - \mu_0 \vec{m} \right)}_{=: \mu_0 \vec{h}} - \mu_0 \partial_t \vec{d} + \mu_0 \underbrace{\left( \partial_t \vec{p} - \vec{j}_P \right)}_{= \vec{0}} = \mu_0 \vec{j}_f  \\ \\
+ &amp; \nabla \times \vec{h} - \partial_t \vec{d} = \vec{j}_f
+\end{aligned}\end{split}\]</div>
+<p>From the continuity equation of electric current,</p>
+<div class="math notranslate nohighlight">
+\[\partial_t \rho + \nabla \cdot \vec{j} = 0 \ ,\]</div>
+<p>we derive the continuity equation for magnetization charges</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 &amp; = \partial_t \rho_M + \nabla \cdot \vec{j}_M = \\
+    &amp; = \partial_t \rho_M + \underbrace{ \nabla \cdot \nabla \times \vec{m}}_{ \equiv \vec{0} } \ .
+\end{aligned}\end{split}\]</div>
 </div>
 </div>
 
@@ -584,20 +573,20 @@ In general, some materials respond to an imposed "external" electromagnetic fiel
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="principles-vacuum.html"
+       href="principles-matter-polarization.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Principles of Classical Electromagnetism in Free Space</p>
+        <p class="prev-next-title"><span class="section-number">2.2.6. </span>Polarization</p>
       </div>
     </a>
     <a class="right-next"
-       href="principles-matter-polarization.html"
+       href="principles-relativity.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.2.6. </span>Polarization</p>
+        <p class="prev-next-title"><span class="section-number">2.3. </span>Galileian relativity in electromagnetism</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -616,11 +605,9 @@ In general, some materials respond to an imposed "external" electromagnetic fiel
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-electromagnetism-in-matter">2.2.1. Equations of electromagnetism in matter</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">2.2.2. Examples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#governing-equations-in-differential-form">2.2.3. Governing equations in differential form</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#governing-equation-in-integral-form">2.2.4. Governing equation in integral form</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jump-conditions">2.2.5. Jump Conditions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-magnetic-moment-limit-of-an-elementary-loop">2.2.7.1. Single Magnetic Moment (Limit of an Elementary Loop)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-distribution-of-magnetic-moment">2.2.7.2. Continuous Distribution of Magnetic Moment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reformulation-of-maxwell-s-equations-and-charge-continuity">2.2.7.3. Reformulation of Maxwell’s Equations and Charge Continuity</a></li>
 </ul>
   </nav></div>
 
