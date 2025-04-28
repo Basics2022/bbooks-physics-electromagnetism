@@ -1,6 +1,38 @@
 (classical-electromagnetism:electrostatics)=
 # Electrostatics
 
+Elextrostatics studies the electric phenomena in systems with stationary charges. Thus, current is identically zero $\vec{j} = \vec{0}$.
+
+
+So far, random topics
+
+- governing equations of electrostatics
+- zero electric field insiede a conductor
+
+## Governing equation of electrostatics
+
+Governing equations become
+
+$$\partial_t \rho = 0$$
+
+$$\begin{cases}
+  \nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
+  \nabla \times \vec{e} = \vec{0} \\
+  \nabla \cdot \vec{b} = 0 \\
+  \nabla \times \vec{h} = \vec{0} \ .
+\end{cases}$$
+
+In absence of magnetic field, the problem is fully determined by the Gauss' law for the electric field and the steady condition of the Faraday's law, implying that the irrotational electric field can be written as the gradient of a scalar potential,
+
+$$\vec{e} = - \nabla \varphi \ .$$
+
+Introducing this expression into Gauss' law for the electric field, electrostatics can be formulated as a problem governed by a Laplace equation for the scalar potential
+
+$$-\Delta \varphi = \dfrac{\rho}{\varepsilon_0} \ ,$$
+
+supplied with the proper boundary conditions. **todo** *discuss boundary conditions...*
+
+
 ## Zero electric field inside a conductor
 
 Studying the transient of the electric charge distribution inside a conductor,
