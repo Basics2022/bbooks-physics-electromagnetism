@@ -21,7 +21,6 @@ As an example, for a **star-star configuration**:
 ```
 
 ````{dropdown} Solution
-:open:
 
 This network is a star-star connection with impedances
 
@@ -88,7 +87,6 @@ using the effective values of tension and current $V_2$, $I_2$.
 ```
 
 ````{dropdown} Solution
-:open:
 
 This network is a star-star connection with impedances
 
@@ -155,7 +153,6 @@ $$s = V_{C_2} I_{C_2}^* \ .$$
 ```
 
 ````{dropdown} Solution
-:open:
 
 This network is a star-star connection with impedances
 
@@ -210,7 +207,7 @@ $$s_{e_1} = e_{2} i_{e_2}^* \ .$$
 ```{figure} ../media/exam-2024-02-13-ese-02.png
 ```
 
-````{dropdown} Solution
+````{dropdown} Solution - todo
 :open:
 
 ````
