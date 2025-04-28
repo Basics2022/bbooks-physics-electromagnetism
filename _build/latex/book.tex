@@ -87,7 +87,7 @@
         
 
 \title{electromagnetism}
-\date{27 apr 2025}
+\date{28 apr 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -104,46 +104,36 @@
 
 
 \sphinxAtStartPar
-This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,download,myst}{.pdf document}.
+This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,myst}{.pdf document}.
+\subsubsection*{Classical electromagnetism}
 
 \sphinxAtStartPar
-\sphinxstylestrong{Introduzione.}
+{\hyperref[\detokenize{ch/experiments:classical-electromagnetism-first-experiments}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Brief history of electromagnetism}}}}}. \sphinxstylestrong{todo}
 
 \sphinxAtStartPar
-L’elettromagnetismo si occupa dello studio dei fenomeni elettromagnetici prodotti da cariche e correnti elettriche o dalla struttura microscopica della materia (magnetismo naturale)
+{\hyperref[\detokenize{ch/principles:classical-electromagnetism-principles}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Principles of classical electromagnetism}}}}}.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Breve storia.} \sphinxstyleemphasis{Prime esperienze: cariche di 2 tipi diversi e legge di Coulomb;}
+{\hyperref[\detokenize{ch/principles-matter:classical-electromagnetism-media}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Electromagnetism in matter}}}}}.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Argomenti.}
+{\hyperref[\detokenize{ch/energy-momentum-balance:classical-electromagnetism-energy}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Energy}}}}}.
 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/experiments:classical-electromagnetism-first-experiments}]{\sphinxcrossref{\DUrole{std,std-ref}{Prime esperienze}}}} \sphinxstylestrong{TODO} \sphinxstyleemphasis{Prime esperienze; elettromagnetismo come teoria dei} \sphinxstylestrong{campi} \sphinxstylestrong{TODO} \sphinxstyleemphasis{aggiungere una sezione su first\sphinxhyphen{}experiments\sphinxhyphen{}revisited, dopo la presentazione dei princìpi dell’elettromagnetismo}
+{\hyperref[\detokenize{ch/regimes-electrostatics:classical-electromagnetism-electrostatics}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Electrostatics}}}}}.
 
 \sphinxAtStartPar
-\sphinxstylestrong{todo} Aggiungere sezione su strumenti matematici necessari, per la formulazione di una teoria dei campi
+{\hyperref[\detokenize{ch/waves:classical-electromagnetism-waves}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Electromagnetic waves}}}}}.
+\subsubsection*{Electric Engineering}
 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/principles:classical-electromagnetism-principles}]{\sphinxcrossref{\DUrole{std,std-ref}{Princìpi dell’elettromagnetismo}}}} \sphinxstylestrong{TODO} \sphinxstyleemphasis{Trattare prima regime stazionario \sphinxhyphen{} elettricità e magnetismo \sphinxhyphen{} e poi regime non\sphinxhyphen{}stazionario \sphinxhyphen{} elettromagnetismo}**?** \sphinxstylestrong{TODO} \sphinxstyleemphasis{Princìpi. Conservazione della carica, leggi di Maxwell, legge di Lorentz} \sphinxstylestrong{TODO} \sphinxstyleemphasis{Principi in forma integrale; princìpi in forma differenziale \sphinxhyphen{} le leggi di Maxwell}
+\sphinxstylestrong{Electric circuits}.
 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/energy-linear:classical-electromagnetism-energy}]{\sphinxcrossref{\DUrole{std,std-ref}{Energia}}}}
+\sphinxstylestrong{Electromagentic systems}.
 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/waves:classical-electromagnetism-waves}]{\sphinxcrossref{\DUrole{std,std-ref}{Onde elettromagnetiche}}}}
-
-\sphinxAtStartPar
-{\hyperref[\detokenize{ch/circuits:classical-electromagnetism-circuits}]{\sphinxcrossref{\DUrole{std,std-ref}{Approssimazione circuitale}}}} \sphinxstylestrong{TODO} \sphinxstyleemphasis{Circuiti elettrici; circuiti elettromagnetici; sistemi elettro\sphinxhyphen{}meccanici. Regimi: stazionario, non\sphinxhyphen{}stazionario: regime transitorio e armonico}
-
-\sphinxAtStartPar
-\sphinxstylestrong{Extra.}
-
-\sphinxAtStartPar
-\DUrole{xref,myst}{Ottica}
-
-\sphinxAtStartPar
-\sphinxstylestrong{Elettromagnetismo e relatività} \sphinxstylestrong{todo} \sphinxstyleemphasis{Relatività a per \(v \ll c\); crisi della relatività galileiana}
+\sphinxstylestrong{Electromagneto\sphinxhyphen{}mechanics systems}.
 
 \sphinxstepscope
 
@@ -160,201 +150,251 @@ L’elettromagnetismo si occupa dello studio dei fenomeni elettromagnetici prodo
 \sphinxstepscope
 
 
-
-
 \chapter{Principles of Classical Electromagnetism}
 \label{\detokenize{ch/principles:principles-of-classical-electromagnetism}}\label{\detokenize{ch/principles:classical-electromagnetism-principles}}\label{\detokenize{ch/principles::doc}}
+\sphinxstepscope
+
+
+
+
+\section{Principles of Classical Electromagnetism in Free Space}
+\label{\detokenize{ch/principles-vacuum:principles-of-classical-electromagnetism-in-free-space}}\label{\detokenize{ch/principles-vacuum:classical-electromagnetism-principles-free-space}}\label{\detokenize{ch/principles-vacuum::doc}}
 \sphinxAtStartPar
 The progress in the study of electromagnetic phenomena during the 19th century allowed James Clerk Maxwell to formulate what are now known as \sphinxstyleemphasis{Maxwell’s equations}, which can be considered the first consistent formulation of the principles of classical electromagnetism, together with the charge conservation law and the expression for the Lorentz force on an electric charge immersed in an electromagnetic field.
 
-
-\section{Principles in Differential Form}
-\label{\detokenize{ch/principles:principles-in-differential-form}}\label{\detokenize{ch/principles:classical-electromagnetism-principles-differential}}
 \sphinxAtStartPar
-The principles in differential form can be derived from the more general {\hyperref[\detokenize{ch/principles:classical-electromagnetism-principles-integral}]{\sphinxcrossref{\DUrole{std,std-ref}{integral form}}}}, provided the fields satisfy the necessary minimal regularity conditions, which can be qualitatively stated as «all operations must make sense.»
+Principles are introduced here for total charges and the electric and the magnetic field, in the form that is known as \sphinxstylestrong{equations of electromagnetism in vacuum}. Equations of {\hyperref[\detokenize{ch/principles-matter:classical-electromagnetism-media}]{\sphinxcrossref{\DUrole{std,std-ref}{electromagnetism in matter}}}} (1) separate the contribution of free and bound charges and currents, and (2) introduce \sphinxstylestrong{polarization} and \sphinxstylestrong{magnetization} of matter in constitutive equations representing the macroscopic response of the media as a result of local microscopic charge distribution induced by «external» fields.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Conservation of Electric Charge.}
+Here principles of electromagnetism are first shown in their {\hyperref[\detokenize{ch/principles-vacuum:classical-electromagnetism-principles-differential}]{\sphinxcrossref{\DUrole{std,std-ref}{differential form}}}}: (1) continuity equation of electric charge describes the conservation of electric charge, (2) Maxwell’s equations govern the generation of the electromagnteic field by electric charge and currents, while (3) the differential form of Lorentz’s force gives the expression of the force per unit volume acting on a distribution of electric charge and currents immersed in an electromagnetic field. Then, the more general {\hyperref[\detokenize{ch/principles-vacuum:classical-electromagnetism-principles-integral}]{\sphinxcrossref{\DUrole{std,std-ref}{integral form}}}}%
+\begin{footnote}[1]\sphinxAtStartFootnote
+As in continuum mechanics, integral equations are the most general form of the equations that governs the global behavior of a system and requires no assumption of regularity of the physical quantities involved. Under the assumptions of regularity, differential equations can be derived from integral equations using theorems of calculus involving differential operators of the fields: differential equations provide local balances. If the fields are piece\sphinxhyphen{}wise regular in different regions of the domain, it’s possible to derive and use differenial equations in each sub\sphinxhyphen{}domain, and link them through jump conditions.
+%
+\end{footnote} is presented for {\hyperref[\detokenize{ch/principles-vacuum:classical-electromagnetism-principles-integral-control-volume}]{\sphinxcrossref{\DUrole{std,std-ref}{control volume}}}}, at rest w.r.t. the observer \sphinxhyphen{} an inertial one? \sphinxhyphen{} and then derived form {\hyperref[\detokenize{ch/principles-vacuum:classical-electromagnetism-principles-integral-arbitrary-volume}]{\sphinxcrossref{\DUrole{std,std-ref}{arbitrary domains}}}}, using the \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html}{rules for time derivatives of integrals over moving domains}, and this description is used to have a first discussion about relativity in electromagnetism.
+
+
+\subsection{Principles in Differential Form}
+\label{\detokenize{ch/principles-vacuum:principles-in-differential-form}}\label{\detokenize{ch/principles-vacuum:classical-electromagnetism-principles-differential}}
+\sphinxAtStartPar
+The principles in differential form can be derived from the more general {\hyperref[\detokenize{ch/principles-vacuum:classical-electromagnetism-principles-integral}]{\sphinxcrossref{\DUrole{std,std-ref}{integral form}}}}, provided the fields satisfy the necessary minimal regularity conditions, which can be qualitatively stated as «all operations must make sense.»
+
+\sphinxAtStartPar
+\sphinxstylestrong{Conservation of Electric Charge.} Differential form of conservation of electric charge is described by a continuity equation for the electric charge density \(\rho(\vec{r},t)\), with electric current \(\vec{j} = \rho \vec{v}\) as the flux \sphinxhyphen{} where \(\vec{v}(\vec{r},t)\) is the average velocity of the charges in the point \(\vec{r}\) of space at time \(t\)
 \begin{equation*}
-\begin{split}\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ .\end{split}
+\begin{split}\partial_t \rho + \nabla \cdot \vec{j} = 0 \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Maxwell’s Equations.}
+\sphinxstylestrong{Maxwell’s Equations.} Maxwell’s equations give the relations between the electric charge and current densities, with the electromagnetic field \(\vec{e}(\vec{r}, t)\), \(\vec{b}(\vec{r},t)\),
 \begin{equation*}
 \begin{split}\begin{cases}
- \nabla \cdot \mathbf{d} = \rho \\
- \nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\ 
- \nabla \cdot \mathbf{b} = 0 \\
- \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j} \\
+ \nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
+ \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\ 
+ \nabla \cdot \vec{b} = 0 \\
+ \nabla \times \vec{b} - \varepsilon_0 \mu_0 \, \partial_t \vec{e} = \mu_0 \vec{j}  \ ,\\
 \end{cases}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-with the need to define constitutive equations \(\mathbf{d}(\mathbf{e}, \mathbf{b})\), \(\mathbf{h}(\mathbf{e}, \mathbf{b})\).
-
-\sphinxAtStartPar
-\sphinxstylestrong{Lorentz Force.} The force per unit volume acting on the electric charge present at a point \(\mathbf{r}\) in space is
+with the \sphinxstylestrong{permittivity of free space} \sphinxhyphen{} or the \sphinxstylestrong{dielectric constant of free space} \sphinxhyphen{} \(\varepsilon_0\) and the \sphinxstylestrong{permeability of the free space}, \(\mu_0\)
 \begin{equation*}
 \begin{split}\begin{aligned}
-  \mathbf{f}(\mathbf{r},t) & = \rho(\mathbf{r},t) \, \mathbf{e}(\mathbf{r},t) + \mathbf{j}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) = \\
-                           & = \rho(\mathbf{r},t) \left[ \mathbf{e}(\mathbf{r}) + \mathbf{v}(\mathbf{r},t) \times \mathbf{b}(\mathbf{r},t) \right] =  \\
-                           & = \rho(\mathbf{r},t) \, \mathbf{e}^*(\mathbf{r},t) 
+  \varepsilon_0 & = 8.85 \cdot 10^{-12} \, \text{F}\, \text{m}^{-1} \\
+          \mu_0 & = 4 \pi \cdot 10^{-7} \, \text{N}\, \text{A}^{-2} \\
+\end{aligned}\end{split}
+\end{equation*}
+
+
+\sphinxAtStartPar
+\sphinxstylestrong{Lorentz Force.} The force per unit volume acting on the electric charges at point \(\vec{r}\) and time \(t\) is governed by differential form of Lorent’z force
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{f}(\vec{r},t) & = \rho(\vec{r},t) \, \vec{e}(\vec{r},t) + \vec{j}(\vec{r},t) \times \vec{b}(\vec{r},t) = \\
+                           & = \rho(\vec{r},t) \left[ \vec{e}(\vec{r}) + \vec{v}(\vec{r},t) \times \vec{b}(\vec{r},t) \right] =  \\
+                           & = \rho^*(\vec{r},t) \, \vec{e}^*(\vec{r},t) 
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-having defined \(\mathbf{e}^*\) as the electric field \sphinxstylestrong{seen by the moving charge}.
+having defined \(\rho^*{(\vec{r}), t}\) \(\vec{e}^*(\vec{r}, t)\) as the current desntiy and the electric field \sphinxstylestrong{as seen by the moving charge}
 
 
-\section{Principles in Integral Form: Electromagnetic Equations and Galilean Relativity}
-\label{\detokenize{ch/principles:principles-in-integral-form-electromagnetic-equations-and-galilean-relativity}}\label{\detokenize{ch/principles:classical-electromagnetism-principles-integral}}
+\subsection{Principles in Integral Form: Electromagnetic Equations and Galilean Relativity}
+\label{\detokenize{ch/principles-vacuum:principles-in-integral-form-electromagnetic-equations-and-galilean-relativity}}\label{\detokenize{ch/principles-vacuum:classical-electromagnetism-principles-integral}}
 
-\subsection{Integral Form on Control Volumes}
-\label{\detokenize{ch/principles:integral-form-on-control-volumes}}\label{\detokenize{ch/principles:classical-electromagnetism-principles-integral-control-volume}}
+\subsubsection{Integral Form on Control Volumes}
+\label{\detokenize{ch/principles-vacuum:integral-form-on-control-volumes}}\label{\detokenize{ch/principles-vacuum:classical-electromagnetism-principles-integral-control-volume}}
 \sphinxAtStartPar
 The integral form of the principles of electromagnetism for fixed volumes \(V\) and surfaces \(S\) in space is obtained by integrating the differential equations over the domains and using the divergence theorem to obtain flux terms, and Stokes” theorem to obtain circulation terms.
 
 \sphinxAtStartPar
 \sphinxstylestrong{Continuity of Electric Charge.}
 \begin{equation*}
-\begin{split}
-    \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \mathbf{j} \cdot \hat{\mathbf{n}} = 0
-\end{split}
+\begin{split}\begin{aligned}
+    \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \vec{j} \cdot \hat{n} & = 0 \\ \\
+    \dfrac{d}{dt} Q_V + \Phi_{\partial V}\left( \vec{j} \right) & = 0
+\end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Gauss’s Law for the Field \(\mathbf{d}(\mathbf{r},t)\).}
+\sphinxstylestrong{Gauss’s Law for the Field \(\vec{e}(\vec{r},t)\).}
 \begin{equation*}
-\begin{split}
-    \oint_{\partial V} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{V} \rho
-\end{split}
+\begin{split}\begin{aligned}
+    \oint_{\partial V} \vec{e} \cdot \hat{n} & = \int_{V} \frac{\rho}{\varepsilon_0} \\ \\
+    \Phi_{\partial V}(\vec{e}) & = \frac{Q_V}{\varepsilon_0}
+\end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Gauss’s Law for the Field \(\mathbf{b}(\mathbf{r},t)\).}
+\sphinxstylestrong{Gauss’s Law for the Field \(\vec{b}(\vec{r},t)\).}
 \begin{equation*}
-\begin{split}
-    \oint_{\partial V} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
-\end{split}
+\begin{split}\begin{aligned}
+    \oint_{\partial V} \vec{b} \cdot \hat{n} & = 0 \\  \\
+    \Phi_{\partial V}\left( \vec{b} \right) & = 0
+\end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 \sphinxstylestrong{Faraday–Neumann–Lenz Law for Electromagnetic Induction.}
 \begin{equation*}
-\begin{split}
-    \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \mathbf{0}
-\end{split}
+\begin{split}\begin{aligned}
+    \oint_{\partial S} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_{S} \vec{b} \cdot \hat{n} & = 0 \\  \\
+    \Gamma_{S} \left( \vec{e} \right) + \dfrac{d}{dt} \Phi_{S} \left( \vec{b} \right) & = 0
+\end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 \sphinxstylestrong{Ampère–Maxwell Law.}
 \begin{equation*}
-\begin{split}
-    \oint_{\partial S} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{S} \mathbf{d} \cdot \hat{\mathbf{n}} = \int_{S} \mathbf{j} \cdot \hat{\mathbf{n}} \ .
-\end{split}
+\begin{split}\begin{aligned}
+    \oint_{\partial S} \vec{b} \cdot \hat{t} - \dfrac{d}{dt} \int_{S} \varepsilon_0 \mu_0 \, \vec{e} \cdot \hat{n} & = \int_{S} \mu_0 \, \vec{j} \cdot \hat{n} \\ \\
+    \Gamma_{\partial S} \left( \vec{b} \right) - \frac{1}{c_0^2} \dfrac{d}{dt} \Phi_{S} \left( \vec{e} \right) & = \mu_0 \Phi_{S} \left( \vec{j} \right) \ ,
+\end{aligned}\end{split}
 \end{equation*}
+\sphinxAtStartPar
+having introduced the speed of velocity in free space, \(c_0 = \dfrac{1}{\sqrt{\varepsilon_0 \mu_0}}\).
 
-\subsection{Integral Form on Arbitrary Volumes}
-\label{\detokenize{ch/principles:integral-form-on-arbitrary-volumes}}\label{\detokenize{ch/principles:classical-electromagnetism-principles-integral-arbitrary-volume}}
+\begin{sphinxadmonition}{note}{Maxwell’s equations and continuity equation of electric charge are overdetermined}
+
+\sphinxAtStartPar
+Introducing (1) the time derivative of Gauss law of the electric field \(\vec{e}(\vec{r},t)\) and (2) the Ampére\sphinxhyphen{}Maxwell law in the continuity equation of the electric charge
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 & = \dot{Q}_V + \Phi_{\partial V}\big( \vec{j} \big) = && (1) \\
+    & = \varepsilon_0 \dot{\Phi}_{\partial V}\big( \vec{e} \big) + \Phi_{\partial V}\big( \vec{j} \big) =\\
+    & = \frac{1}{\mu_0} \left[ \mu_0 \varepsilon_0 \dot{\Phi}_{\partial V}\big( \vec{e} \big) + \mu_0 \Phi_{\partial V}\big( \vec{j} \big)\right] =  && (2) \\
+    & = \frac{1}{\mu_0} \Gamma_{\partial \partial V} \big( \vec{b} \big) = 0 \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+an identity appears as the contour \(\partial S\) of a closed surface \(S = \partial V\) has zero dimension. Thus, these equations are not linearly independent and the system is over\sphinxhyphen{}determined.
+\end{sphinxadmonition}
+
+
+\subsubsection{Integral Form on Arbitrary Volumes}
+\label{\detokenize{ch/principles-vacuum:integral-form-on-arbitrary-volumes}}\label{\detokenize{ch/principles-vacuum:classical-electromagnetism-principles-integral-arbitrary-volume}}
 \sphinxAtStartPar
 Due to their importance in fundamental applications such as electric motors, and to avoid confusion or leaps in logic when dealing with electromagnetic induction, it is crucial to provide the correct expression of the electromagnetic principles when moving volumes are involved in space. Not only is the form of these principles shown, but also the correct procedure to derive them starting from the fixed\sphinxhyphen{}control\sphinxhyphen{}volume version. This is done using rules for \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html}{time derivative for fundamental integrals over moving domains}, such as the integral of a density function over a volume, the flux of a vector field through a surface, or the circulation along a curve.
 
 \sphinxAtStartPar
 These three derivative rules are listed here and proved in the material about \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/intro.html}{Mathematics}:Vector and Tensor Algebra and Calculus:\sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html}{Time derivatives of integrals over moving domains}
 \begin{equation*}
-\begin{split}\dfrac{d}{dt} \int_{v_t} f = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \mathbf{u}_b \cdot \hat{\mathbf{n}}\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\dfrac{d}{dt} \int_{s_t} \mathbf{f} \cdot \hat{\mathbf{n}} = \int_{s_t} \dfrac{\partial \mathbf{f}}{\partial t} \cdot \hat{\mathbf{n}} + \int_{s_t} \nabla \cdot \mathbf{f} \, \mathbf{u}_b \cdot \hat{\mathbf{n}} - \oint_{\partial s_t} \mathbf{u}_b \times \mathbf{f} \cdot \hat{\mathbf{t}}\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\dfrac{d}{dt} \int_{\ell_t} \mathbf{f} \cdot \hat{\mathbf{t}} = \int_{\ell_t} \dfrac{\partial \mathbf{f}}{\partial t} \cdot \hat{\mathbf{t}} + \int_{\ell_t} \nabla \times \mathbf{f} \, \cdot \, \mathbf{u}_b \times \hat{\mathbf{t}} + \mathbf{f}_B \cdot \mathbf{u}_B - \mathbf{f}_A \cdot \mathbf{u}_A\end{split}
+\begin{split}\begin{aligned}
+  \dfrac{d}{dt} \int_{v_t} f & = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \vec{v}_b \cdot \hat{n} && \text{(density)} \\
+  \dfrac{d}{dt} \int_{s_t} \vec{f} \cdot \hat{n} & = \int_{s_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{n} + \int_{s_t} \nabla \cdot \vec{f} \, \vec{v}_b \cdot \hat{n} - \oint_{\partial s_t} \vec{v}_b \times \vec{f} \cdot \hat{t} && \text{(flux)} \\
+  \dfrac{d}{dt} \int_{\ell_t} \vec{f} \cdot \hat{t} & = \int_{\ell_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{t} + \int_{\ell_t} \nabla \times \vec{f} \, \cdot \, \vec{v}_b \times \hat{t} + \vec{f}_B \cdot \vec{v}_B - \vec{f}_A \cdot \vec{v}_A && \text{(circulation)}
+\end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 \sphinxstylestrong{Continuity of Electric Charge.}
 \begin{equation*}
 \begin{split}\begin{aligned}
-   0 & = \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \mathbf{j} \cdot \hat{\mathbf{n}} = \\
-   & = \dfrac{d}{dt} \int_{v_t} \rho - \oint_{\partial v_t } \rho \mathbf{u}_b \cdot \hat{\mathbf{n}} + \oint_{\partial v_t} \mathbf{j} \cdot \hat{\mathbf{n}} 
+   0 & = \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \vec{j} \cdot \hat{n} = \\
+   & = \dfrac{d}{dt} \int_{v_t} \rho - \oint_{\partial v_t } \rho \vec{v}_b \cdot \hat{n} + \oint_{\partial v_t} \vec{j} \cdot \hat{n} 
 \end{aligned}\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}
-    \dfrac{d}{dt} \int_{v_t} \rho + \oint_{\partial v_t} \underbrace{\rho (\mathbf{u} - \mathbf{u}_b)}_{\mathbf{j}^*} \cdot \hat{\mathbf{n}} 
+    \dfrac{d}{dt} \int_{v_t} \rho + \oint_{\partial v_t} \underbrace{\rho (\vec{v} - \vec{v}_b)}_{\vec{j}^*} \cdot \hat{n} 
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Gauss’s Law for the Field \(\mathbf{d}(\mathbf{r},t)\).}
+\sphinxstylestrong{Gauss’s Law for the Field \(\vec{d}(\vec{r},t)\).}
 \begin{equation*}
 \begin{split}
-    \oint_{\partial v_t} \mathbf{d} \cdot \mathbf{\hat{n}} = \int_{v_t} \rho
+    \oint_{\partial v_t} \vec{d} \cdot \hat{n} = \int_{v_t} \rho
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Gauss’s Law for the Field \(\mathbf{b}(\mathbf{r},t)\).}
+\sphinxstylestrong{Gauss’s Law for the Field \(\vec{b}(\vec{r},t)\).}
 \begin{equation*}
 \begin{split}
-    \oint_{\partial v_t} \mathbf{b} \cdot \mathbf{\hat{n}} = 0
+    \oint_{\partial v_t} \vec{b} \cdot \hat{n} = 0
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
 \sphinxstylestrong{Faraday–Neumann–Lenz Law for Electromagnetic Induction.}
 \begin{equation*}
 \begin{split}\begin{aligned}
-   \mathbf{0} & = \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{S} \mathbf{b} \cdot \hat{\mathbf{n}} = \\
-    & = \oint_{\partial s_t} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} - \int_{s_t} \underbrace{\nabla \cdot \mathbf{b}}_{=0} \, \mathbf{u}_b \cdot \hat{\mathbf{n}} + \oint_{s_t} \mathbf{u}_b \times \mathbf{b} \cdot \hat{\mathbf{t}} =  \\
+   \vec{0} & = \oint_{\partial S} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_{S} \vec{b} \cdot \hat{n} = \\
+    & = \oint_{\partial s_t} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} - \int_{s_t} \underbrace{\nabla \cdot \vec{b}}_{=0} \, \vec{v}_b \cdot \hat{n} + \oint_{s_t} \vec{v}_b \times \vec{b} \cdot \hat{t} =  \\
 \end{aligned}\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}
-    \oint_{\partial s_t} \mathbf{e}^* \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} \ ,
+    \oint_{\partial s_t} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} \ ,
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-with the definition \(\mathbf{e}^* := \mathbf{e} + \mathbf{u}_b \cdot \mathbf{b}\), already used in the expression of the Lorentz force law.
+with the definition \(\vec{e}^* := \vec{e} + \vec{v}_b \cdot \vec{b}\), already used in the expression of the Lorentz force law.
 
 \sphinxAtStartPar
 \sphinxstylestrong{Ampère–Maxwell Law.}
 \begin{equation*}
 \begin{split}\begin{aligned}
-    \mathbf{0} & = \oint_{\partial s_t} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{d} \cdot \hat{\mathbf{n}} - \int_{s_t} \mathbf{j} \cdot \hat{\mathbf{n}} = \\
-    & = \oint_{\partial s_t} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{d} \cdot \hat{\mathbf{n}} + \int_{s_t} \underbrace{\nabla \cdot \mathbf{d}}_{=\rho} \, \mathbf{u}_b \cdot \hat{\mathbf{n}} - \oint_{s_t} \mathbf{u}_b \times \mathbf{d} \cdot \hat{\mathbf{t}} - \int_{s_t} \mathbf{j} \cdot \hat{\mathbf{n}} =  \\
+    \vec{0} & = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} - \int_{s_t} \vec{j} \cdot \hat{n} = \\
+    & = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} + \int_{s_t} \underbrace{\nabla \cdot \vec{d}}_{=\rho} \, \vec{v}_b \cdot \hat{n} - \oint_{s_t} \vec{v}_b \times \vec{d} \cdot \hat{t} - \int_{s_t} \vec{j} \cdot \hat{n} =  \\
 \end{aligned}\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}
-    \oint_{\partial s_t} \mathbf{h}^* \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_{s_t} \mathbf{b} \cdot \hat{\mathbf{n}} = \int_{s_t} \mathbf{j}^* \cdot \hat{\mathbf{n}} \ ,
+    \oint_{\partial s_t} \vec{h}^* \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} = \int_{s_t} \vec{j}^* \cdot \hat{n} \ ,
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-having defined \(\mathbf{h}^* := \mathbf{h} - \mathbf{u}_b \times \mathbf{d}\), and using the previously introduced definition \(\mathbf{j}^* := \mathbf{j} - \rho \mathbf{u}_b\).
+having defined \(\vec{h}^* := \vec{h} - \vec{v}_b \times \vec{d}\), and using the previously introduced definition \(\vec{j}^* := \vec{j} - \rho \vec{v}_b\).
 
 \sphinxAtStartPar
 Adding the definitions:
 \begin{equation*}
-\begin{split}\rho^* = \rho\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\mathbf{d}^* = \mathbf{d}\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\mathbf{b}^* = \mathbf{b}\end{split}
+\begin{split}\begin{aligned}
+  \rho^*    &  = \rho  \\
+  \vec{d}^* &  = \vec{d}  \\
+  \vec{b}^* &  = \vec{b}
+\end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 one obtains equations having the same form as those written for stationary domains in space, but which can be applied to moving domains. The definitions:
 \begin{equation*}
 \begin{split}\begin{aligned}
-\rho^* = \rho \qquad & , \qquad \mathbf{j}^* = \mathbf{j} - \rho \mathbf{u}_b \\
-\mathbf{d}^* = \mathbf{d} \qquad & , \qquad \mathbf{e}^* = \mathbf{e} + \mathbf{u}_b \times \mathbf{b} \\
-\mathbf{b}^* = \mathbf{b} \qquad & , \qquad \mathbf{h}^* = \mathbf{h} - \mathbf{u}_b \times \mathbf{d} \\
+\rho^* = \rho \qquad & , \qquad \vec{j}^* = \vec{j} - \rho \vec{v}_b \\
+\vec{d}^* = \vec{d} \qquad & , \qquad \vec{e}^* = \vec{e} + \vec{v}_b \times \vec{b} \\
+\vec{b}^* = \vec{b} \qquad & , \qquad \vec{h}^* = \vec{h} - \vec{v}_b \times \vec{d} \\
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-are nothing more than the transformation of the fields for two observers in relative motion, and correspond to the low\sphinxhyphen{}speed limit of Lorentz transformations from special relativity for velocities \(|\mathbf{u}_b| \ll c\): in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein’s theory of relativity.
+are nothing more than the transformation of the fields for two observers in relative motion, and correspond to the low\sphinxhyphen{}speed limit of Lorentz transformations from special relativity for velocities \(|\vec{v}_b| \ll c\): in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein’s theory of relativity.
 
 \sphinxAtStartPar
 \sphinxstylestrong{todo} Reference Galilean and Lorentz transformations for relativity in electromagnetism.
+
+
+\bigskip\hrule\bigskip
+
 
 \sphinxstepscope
 
 
 
 
-\chapter{Electromagnetic Potentials}
-\label{\detokenize{ch/potentials:electromagnetic-potentials}}\label{\detokenize{ch/potentials:classical-electromagnetism-potentials}}\label{\detokenize{ch/potentials::doc}}
+\section{Electromagnetic Potentials}
+\label{\detokenize{ch/principles-potentials:electromagnetic-potentials}}\label{\detokenize{ch/principles-potentials:classical-electromagnetism-potentials}}\label{\detokenize{ch/principles-potentials::doc}}
 \sphinxAtStartPar
 It is possible to demonstrate that the system of Maxwell’s equations and the charge continuity equation is overdetermined. Specifically, it can be shown that, given the distribution of charge and current density—considered as the generating causes of the electric field—and the constitutive laws of the material, four unknowns are sufficient to define the six unknowns (three components for two vector fields) of the problem. Therefore, the problem can be formulated in terms of a scalar potential \(\varphi\) and a vector potential \(\mathbf{a}\), along with a gauge condition that eliminates the remaining two arbitrary factors (irrelevant for the calculation of physical fields).
 
 
-\section{Vector Potential and Scalar Potential}
-\label{\detokenize{ch/potentials:vector-potential-and-scalar-potential}}
+\subsection{Vector Potential and Scalar Potential}
+\label{\detokenize{ch/principles-potentials:vector-potential-and-scalar-potential}}
 \sphinxAtStartPar
 Starting from Maxwell’s equations, the potentials of the electromagnetic field can be defined. Using Gauss’s law for the magnetic field, the vector potential \(\mathbf{a}(\mathbf{r},t)\) can be introduced,
 \begin{equation*}
@@ -374,8 +414,8 @@ since the curl of a gradient is identically zero. The «physical» quantities of
 \end{cases}\end{split}
 \end{equation*}
 
-\section{Gauge Conditions}
-\label{\detokenize{ch/potentials:gauge-conditions}}
+\subsection{Gauge Conditions}
+\label{\detokenize{ch/principles-potentials:gauge-conditions}}
 \sphinxAtStartPar
 The potentials are defined up to a gauge condition, an additional condition that eliminates any arbitrariness in the definition. For example, the vector potential is defined up to the gradient of a scalar function, since \(\nabla \times \nabla f \equiv \mathbf{0}\), and thus the potential \(\tilde{\mathbf{a}} = \mathbf{a} + \nabla f\) produces the same magnetic field \(\mathbf{b}\)
 \begin{equation*}
@@ -396,175 +436,242 @@ The potentials are defined up to a gauge condition, an additional condition that
 
 
 
-\chapter{Electromagnetism in Matter}
-\label{\detokenize{ch/media:electromagnetism-in-matter}}\label{\detokenize{ch/media:classical-electromagnetism-media}}\label{\detokenize{ch/media::doc}}
+\section{Electromagnetism in Matter}
+\label{\detokenize{ch/principles-matter:electromagnetism-in-matter}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media}}\label{\detokenize{ch/principles-matter::doc}}
 \sphinxAtStartPar
-\sphinxstylestrong{todo}
+Electromagnetism in matter requires the description of the behavior of the matter involved in the process. In general, a medium immersed in an electromagnetic field may respond with local charge distributions, resulting in {\hyperref[\detokenize{ch/principles-matter:classical-electromagnetism-media-polarization}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{polarization}}}}} and {\hyperref[\detokenize{ch/principles-matter:classical-electromagnetism-media-magnetization}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{magnetization}}}}}. Total electric \(\vec{e}(\vec{r},t)\) and magnetic field \(\vec{b}(\vec{r},t)\) can be written as the sum of contributions of free charges \(\rho_f\) and currents \(\vec{j}_f\) and bound charges \(\rho_b\) and currents \(\vec{j}_b\).
 
-
-\section{Vacuum}
-\label{\detokenize{ch/media:vacuum}}
 \sphinxAtStartPar
-Electromagnetic phenomena in a vacuum are governed by Maxwell’s equations in a vacuum,
+Bound charge density represents local separation of charges of molecules of dielectric media immersed in electric field, that can be represented as a volume distribution of charge dipole,
 \begin{equation*}
-\begin{split}\begin{cases}
-\nabla \cdot \mathbf{e} = \frac{\rho}{\varepsilon_0} \\
-\nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\
-\nabla \cdot \mathbf{b} = 0 \\
-\nabla \times \mathbf{b} - \mu_0 \varepsilon_0 \partial_t \mathbf{e} = \mu_0 \mathbf{j}
+\begin{split}\rho = \rho_f + \rho_b = \rho_f + \rho_P \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Bound current density represents two effects: the variation of polarization charge and the orientation of Amperian currents \sphinxhyphen{} «non random» currents in the molecules of the medium, producing net contribution to the magnetic field, and can be represented as a volume distribution of elementary loop currents.
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{j} & = \vec{j}_f + \vec{j}_b 
+            = \vec{j}_f + \vec{j}_P + \vec{j}_M  \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As it will shown below, the bound current can be written as the divergence of the polarization field \(\vec{p}\), representing the volume density fo the dipole distribution, and the magnetization current as the curl of the magnetization field \(\vec{m}\),
+\begin{equation*}
+\begin{split}\rho_p = - \nabla \cdot \vec{p} \quad , \quad \vec{j}_M = \nabla \times \vec{m} \ .\end{split}
+\end{equation*}
+
+\subsection{Equations of electromagnetism in matter}
+\label{\detokenize{ch/principles-matter:equations-of-electromagnetism-in-matter}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-vacuum-to-matter}}
+\sphinxAtStartPar
+Introducing the splitting of free and bound charge and current into the equations of the electromagnetism, namely electric charge continuity and Maxwell’s equations,
+\begin{equation*}
+\begin{split}
+\partial_t \rho + \nabla \cdot \vec{j} = 0
+\qquad , \qquad
+\begin{cases}
+\nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
+\nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
+\nabla \cdot \vec{b} = 0 \\
+\nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} = \mu_0 \vec{j}
 \end{cases}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-and by the continuity equation of electric charge,
+and more precisely
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+into Gauss” law for the electric field
 \begin{equation*}
-\begin{split}\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ .\end{split}
+\begin{split}\begin{aligned}
+    & 0  = \nabla \cdot \vec{e} - \frac{\rho}{\varepsilon_0} = \nabla \cdot \vec{e} - \frac{\rho_f - \nabla \cdot \vec{p}}{\varepsilon_0}  \\ \\
+    & \rightarrow \qquad \nabla \cdot \vec{d} = \rho_f \ ,
+  \end{aligned}\end{split}
 \end{equation*}
-
-\section{Continuous Media}
-\label{\detokenize{ch/media:continuous-media}}
 \sphinxAtStartPar
-In general, some materials respond to an imposed «external» electromagnetic field with polarization and magnetization. In particular, the electric polarization of a material corresponds to a local separation of electric charges, macroscopically equivalent to a volume density of dipoles, \(\mathbf{p}(\mathbf{r}_0)\); magnetization corresponds to an orientation of the axes of Amperian current loops, macroscopically equivalent to a density of magnetic moment \(\mathbf{m}(\mathbf{r}_0)\).
+with \(\vec{d} = \varepsilon_0 \vec{e} + \vec{p}\) defined as the \sphinxstylestrong{displacement field}.
 
-
-\section{Polarization}
-\label{\detokenize{ch/media:polarization}}
-
-\subsection{Single Electric Dipole}
-\label{\detokenize{ch/media:single-electric-dipole}}
+\item {} 
 \sphinxAtStartPar
-A discrete electric dipole is formed by two equal and opposite electric charges \(q\), \(-q\), at points \(P_+\), \(P_- = P_+ \mathbf{l}\), in the limit \(q \rightarrow +\infty\), \(|\mathbf{l}| \rightarrow 0\) with \(q |\mathbf{l}|\) finite.
-
-\sphinxAtStartPar
-The electric field (stationary \sphinxstylestrong{todo} \sphinxstyleemphasis{check what happens in the non\sphinxhyphen{}stationary case. Perhaps after deriving the general solution to the problem, as a solution to the wave equations in terms of EM potentials}) generated at the point in space \(\mathbf{r}\) by an electric dipole at the point \(\mathbf{r}_0\) is calculated as the limit of the electric field generated by two equal and opposite charges \(q^{\mp}\) at the points \(\mathbf{r}_0 \mp \frac{\mathbf{l}}{2}\),
+into continuity equation
 \begin{equation*}
-\begin{split}\mathbf{e}(\mathbf{r}) = -\frac{q}{4 \pi \varepsilon_0} \frac{\mathbf{r} - \left( \mathbf{r}_0 - \frac{\mathbf{l}}{2} \right)}{\left|\mathbf{r} - \left( \mathbf{r}_0 - \frac{\mathbf{l}}{2} \right)\right|^3} + \frac{q}{4 \pi \varepsilon_0} \frac{\mathbf{r} - \left( \mathbf{r}_0 + \frac{\mathbf{l}}{2} \right)}{\left|\mathbf{r} - \left( \mathbf{r}_0 + \frac{\mathbf{l}}{2} \right)\right|^3} \ .\end{split}
+\begin{split}
+    0 
+    & = \partial_t \rho + \nabla \cdot \vec{j} = \\
+    & = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_b + \nabla \cdot ( \vec{j}_P + \nabla \times \vec{j}_M ) = \\
+  \end{split}
+\end{equation*}
+\sphinxAtStartPar
+since \(\nabla \cdot \nabla \times \vec{m} \equiv 0\), and keeping separated the contributions of free and bound charges,
+\begin{equation*}
+\begin{split}\begin{aligned}
+     & \partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \\
+     & \partial_t \rho_P + \nabla \cdot \vec{j}_P = 0 \\ \\
+     & \rightarrow \qquad \vec{j}_P = \partial_t \vec{p} \ .
+  \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+and into Ampére\sphinxhyphen{}Maxwell’s law
+\begin{equation*}
+\begin{split}\begin{aligned}
+    \vec{0}
+    & = \nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} - \mu_0 \vec{j} = \\
+    & = \nabla \times \vec{b} - \mu_0 \, \partial_t \left( \vec{d} - \vec{p} \right) - \mu_0 \vec{j}_f - \mu_0 \partial_t \vec{p} - \mu_0 \nabla \times \vec{m} \\
+    & = \nabla \times \left( \vec{b} - \mu_0 \vec{m} \right) - \ mu_0 \, \partial_t \vec{d} - \mu_0 \vec{j}_f \\ \\ 
+    & \rightarrow \qquad \nabla \times \vec{h}  - \, \partial_t \vec{d} = \vec{j}_f \ ,
+  \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(\vec{h} := \vec{b} - \mu_0 \vec{m}\), the \sphinxstylestrong{magnetic field strength}.
+
+\end{itemize}
+
+
+\subsection{Continuous Media}
+\label{\detokenize{ch/principles-matter:continuous-media}}
+\sphinxAtStartPar
+In general, some materials respond to an imposed «external» electromagnetic field with polarization and magnetization. In particular, the electric polarization of a material corresponds to a local separation of electric charges, macroscopically equivalent to a volume density of dipoles, \(\vec{p}(\vec{r}_0)\); magnetization corresponds to an orientation of the axes of Amperian current loops, macroscopically equivalent to a density of magnetic moment \(\vec{m}(\vec{r}_0)\).
+
+
+\subsection{Polarization}
+\label{\detokenize{ch/principles-matter:polarization}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-polarization}}
+
+\subsubsection{Single Electric Dipole}
+\label{\detokenize{ch/principles-matter:single-electric-dipole}}
+\sphinxAtStartPar
+A discrete electric dipole is formed by two equal and opposite electric charges \(q\), \(-q\), at points \(P_+\), \(P_- = P_+ \vec{l}\), in the limit \(q \rightarrow +\infty\), \(|\vec{l}| \rightarrow 0\) with \(q |\vec{l}|\) finite.
+
+\sphinxAtStartPar
+The electric field (stationary \sphinxstylestrong{todo} \sphinxstyleemphasis{check what happens in the non\sphinxhyphen{}stationary case. Perhaps after deriving the general solution to the problem, as a solution to the wave equations in terms of EM potentials}) generated at the point in space \(\vec{r}\) by an electric dipole at the point \(\vec{r}_0\) is calculated as the limit of the electric field generated by two equal and opposite charges \(q^{\mp}\) at the points \(\vec{r}_0 \mp \frac{\vec{l}}{2}\),
+\begin{equation*}
+\begin{split}\vec{e}(\vec{r}) = -\frac{q}{4 \pi \varepsilon_0} \frac{\vec{r} - \left( \vec{r}_0 - \frac{\vec{l}}{2} \right)}{\left|\vec{r} - \left( \vec{r}_0 - \frac{\vec{l}}{2} \right)\right|^3} + \frac{q}{4 \pi \varepsilon_0} \frac{\vec{r} - \left( \vec{r}_0 + \frac{\vec{l}}{2} \right)}{\left|\vec{r} - \left( \vec{r}_0 + \frac{\vec{l}}{2} \right)\right|^3} \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
 Using the formula for the derivative of the terms
 \begin{equation*}
-\begin{split}\partial_{\ell_k} \frac{x_i \pm \frac{\ell_i}{2}}{\left|\mathbf{x} \pm \frac{\mathbf{l}}{2} \right|^3} = \frac{1}{2} \left[ \pm \frac{\delta_{ik}}{r^3} - 3 r^{-4} \left( \pm \frac{x_k \pm \frac{\ell_k}{2}}{r} \right) \right]\end{split}
+\begin{split}\partial_{\ell_k} \frac{x_i \pm \frac{\ell_i}{2}}{\left|\vec{x} \pm \frac{\vec{l}}{2} \right|^3} = \frac{1}{2} \left[ \pm \frac{\delta_{ik}}{r^3} - 3 r^{-4} \left( \pm \frac{x_k \pm \frac{\ell_k}{2}}{r} \right) \right]\end{split}
 \end{equation*}\begin{equation*}
-\begin{split}\left. \partial_{\ell_k} \frac{x_i \pm \frac{\ell_i}{2}}{\left|\mathbf{x} \pm \frac{\mathbf{l}}{2} \right|^3} \right|_{\mathbf{l} = \mathbf{0}} = \mp \frac{1}{2} \left[ - \frac{\delta_{ik}}{|\mathbf{x}|^3} + 3 \left( \frac{x_k}{r^5} \right) \right] = \mp \frac{1}{2} \partial_{r_{0 k}} \frac{r_i - r_{0 i}}{|\mathbf{r} - \mathbf{r}_0|^3} = \mp \frac{1}{2} \nabla_{\mathbf{r}_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \end{split}
+\begin{split}\left. \partial_{\ell_k} \frac{x_i \pm \frac{\ell_i}{2}}{\left|\vec{x} \pm \frac{\vec{l}}{2} \right|^3} \right|_{\vec{l} = \vec{0}} = \mp \frac{1}{2} \left[ - \frac{\delta_{ik}}{|\vec{x}|^3} + 3 \left( \frac{x_k}{r^5} \right) \right] = \mp \frac{1}{2} \partial_{r_{0 k}} \frac{r_i - r_{0 i}}{|\vec{r} - \vec{r}_0|^3} = \mp \frac{1}{2} \nabla_{\vec{r}_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \end{split}
 \end{equation*}
 \sphinxAtStartPar
-we derive the first\sphinxhyphen{}order approximation in \(\mathbf{l}\) of the two terms
+we derive the first\sphinxhyphen{}order approximation in \(\vec{l}\) of the two terms
 \begin{equation*}
 \begin{split}\begin{aligned}
-  \frac{\mathbf{r} - \left( \mathbf{r}_0 \mp \frac{\mathbf{l}}{2} \right)}{\left|\mathbf{r} - \left( \mathbf{r}_0 \mp \frac{\mathbf{l}}{2} \right)\right|^3}
-  & = \frac{\mathbf{r} - \mathbf{r}_0 }{\left|\mathbf{r} - \mathbf{r}_0 \right|^3} \pm \mathbf{l} \cdot \frac{1}{2} \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) + o(|\mathbf{l}|)\\
+  \frac{\vec{r} - \left( \vec{r}_0 \mp \frac{\vec{l}}{2} \right)}{\left|\vec{r} - \left( \vec{r}_0 \mp \frac{\vec{l}}{2} \right)\right|^3}
+  & = \frac{\vec{r} - \vec{r}_0 }{\left|\vec{r} - \vec{r}_0 \right|^3} \pm \vec{l} \cdot \frac{1}{2} \nabla_{\vec{r}_0} \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) + o(|\vec{l}|)\\
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-and, defining the dipole intensity \(\mathbf{P}_0 := q \mathbf{l}\) and taking the quantities to the desired limit, that of the electric field
+and, defining the dipole intensity \(\vec{P}_0 := q \vec{l}\) and taking the quantities to the desired limit, that of the electric field
 \begin{equation*}
 \begin{split}\begin{aligned}
-  \mathbf{e}(\mathbf{r})
-  & = - \frac{1}{4\pi \varepsilon_0} \, \mathbf{P}_0 \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right)   = \\
-  & = - \frac{1}{4\pi \varepsilon_0} \left[ \frac{(\mathbf{r}-\mathbf{r}_0)(\mathbf{r}-\mathbf{r}_0)}{|\mathbf{r}-\mathbf{r}_0|^5} \cdot \mathbf{P}_0 - \frac{\mathbf{P}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \right] = \\
-  & = - \frac{1}{4\pi \varepsilon_0} \left[ \frac{(\mathbf{r}-\mathbf{r}_0) \otimes (\mathbf{r}-\mathbf{r}_0)}{|\mathbf{r}-\mathbf{r}_0|^5} - \frac{\mathbb{I}}{|\mathbf{r}-\mathbf{r}_0|^3} \right] \cdot \mathbf{P}_0 \ .
+  \vec{e}(\vec{r})
+  & = - \frac{1}{4\pi \varepsilon_0} \, \vec{P}_0 \cdot \nabla_{\vec{r}_0}  \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right)   = \\
+  & = - \frac{1}{4\pi \varepsilon_0} \left[ \frac{(\vec{r}-\vec{r}_0)(\vec{r}-\vec{r}_0)}{|\vec{r}-\vec{r}_0|^5} \cdot \vec{P}_0 - \frac{\vec{P}_0}{|\vec{r}-\vec{r}_0|^3} \right] = \\
+  & = - \frac{1}{4\pi \varepsilon_0} \left[ \frac{(\vec{r}-\vec{r}_0) \otimes (\vec{r}-\vec{r}_0)}{|\vec{r}-\vec{r}_0|^5} - \frac{\mathbb{I}}{|\vec{r}-\vec{r}_0|^3} \right] \cdot \vec{P}_0 \ .
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 \sphinxstylestrong{todo} In the general case, it would be necessary to pay attention to the order of the factors in the product between vectors and tensors, but in this case, the symmetry of the second\sphinxhyphen{}order tensor (or of the operations) can be exploited.
 
 
-\subsection{Continuous Distribution of Dipoles}
-\label{\detokenize{ch/media:continuous-distribution-of-dipoles}}
+\subsubsection{Continuous Distribution of Dipoles}
+\label{\detokenize{ch/principles-matter:continuous-distribution-of-dipoles}}
 \sphinxAtStartPar
-A distribution of dipoles with volume density \(\mathbf{p}(\mathbf{r_0})\), which produces the elementary dipole \(\Delta \mathbf{P}(\mathbf{r}_0) = \mathbf{p}(\mathbf{r}_0) dV_0\) in the volume \(d V_0\), produces the electric field
+A distribution of dipoles with volume density \(\vec{p}(\vec{r_0})\), which produces the elementary dipole \(\Delta \vec{P}(\vec{r}_0) = \vec{p}(\vec{r}_0) dV_0\) in the volume \(d V_0\), produces the electric field
 \begin{equation*}
-\begin{split}\mathbf{e}(\mathbf{r}) = \int_{\mathbf{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \mathbf{p}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \ , \end{split}
+\begin{split}\vec{e}(\vec{r}) = \int_{\vec{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \vec{p}(\vec{r}_0) \cdot \nabla_{\vec{r}_0}  \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) \ , \end{split}
 \end{equation*}
 \sphinxAtStartPar
 whose expression can be rewritten using the rules of integration by parts
 \begin{equation*}
 \begin{split}\begin{aligned}
-\mathbf{e}(\mathbf{r})
-  & = \int_{\mathbf{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \mathbf{p}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
-  & = \oint_{\mathbf{r}_0 \in \partial V_0} \frac{1}{4 \pi \varepsilon_0}  \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \underbrace{ \hat{\mathbf{n}}(\mathbf{r}_0) \cdot \mathbf{p}(\mathbf{r}_0) }_{ =: \sigma_P(\mathbf{r}_0)}  + \int_{\mathbf{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \underbrace{ \left( - \nabla_{\mathbf{r}_0} \cdot \mathbf{p}(\mathbf{r}_0) \right)}_{ =: \rho_P(\mathbf{r}_0) } \ , \\
+\vec{e}(\vec{r})
+  & = \int_{\vec{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \vec{p}(\vec{r}_0) \cdot \nabla_{\vec{r}_0}  \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) = \\
+  & = \oint_{\vec{r}_0 \in \partial V_0} \frac{1}{4 \pi \varepsilon_0}  \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \underbrace{ \hat{\vec{n}}(\vec{r}_0) \cdot \vec{p}(\vec{r}_0) }_{ =: \sigma_P(\vec{r}_0)}  + \int_{\vec{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \underbrace{ \left( - \nabla_{\vec{r}_0} \cdot \vec{p}(\vec{r}_0) \right)}_{ =: \rho_P(\vec{r}_0) } \ , \\
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 having defined the surface polarization charge density \(\sigma_P\) and the volume polarization charge density \(\rho_P\) as the intensities of the distributed sources of the electric field, in analogy with the expression of Coulomb’s law.
 
 
-\subsection{Reformulation of Maxwell’s Equations and Charge Continuity}
-\label{\detokenize{ch/media:reformulation-of-maxwell-s-equations-and-charge-continuity}}
+\subsubsection{Reformulation of Maxwell’s Equations and Charge Continuity}
+\label{\detokenize{ch/principles-matter:reformulation-of-maxwell-s-equations-and-charge-continuity}}
 \sphinxAtStartPar
-Gauss’s equation determines the volume flux density of the electric field \(\mathbf{e}\),
+Gauss’s equation determines the volume flux density of the electric field \(\vec{e}\),
 \begin{equation*}
-\begin{split}\nabla \cdot \mathbf{e} = \frac{\rho}{\varepsilon_0} \ .\end{split}
+\begin{split}\nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-By decomposing the charge density as the sum of \sphinxstylestrong{free charges} \(\rho_f\) and \sphinxstylestrong{polarization charges} \(\rho_P := - \nabla \cdot \mathbf{p}\), we can rework Gauss’s equation,
+By decomposing the charge density as the sum of \sphinxstylestrong{free charges} \(\rho_f\) and \sphinxstylestrong{polarization charges} \(\rho_P := - \nabla \cdot \vec{p}\), we can rework Gauss’s equation,
 \begin{equation*}
 \begin{split}\begin{aligned}
- & \nabla \cdot \mathbf{e} = \frac{\rho_f + \rho_P}{\varepsilon_0} \\
- & \nabla \cdot \left( \varepsilon_0 \mathbf{e} + \mathbf{p} \right) = \rho_f \\ \\
- & \nabla \cdot \mathbf{d} = \rho_f \ ,
+ & \nabla \cdot \vec{e} = \frac{\rho_f + \rho_P}{\varepsilon_0} \\
+ & \nabla \cdot \left( \varepsilon_0 \vec{e} + \vec{p} \right) = \rho_f \\ \\
+ & \nabla \cdot \vec{d} = \rho_f \ ,
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-having introduced the \sphinxstylestrong{displacement field}, \(\mathbf{d} := \varepsilon_0 \mathbf{e} + \mathbf{p}\).
+having introduced the \sphinxstylestrong{displacement field}, \(\vec{d} := \varepsilon_0 \vec{e} + \vec{p}\).
 
 \sphinxAtStartPar
-The decomposition of the electric current as the sum \(\mathbf{j} = \mathbf{j}_f + \mathbf{j}_P\) of the free current \(\mathbf{j}_f\) and the polarization current \(\mathbf{j}_P\), allows us to rework the continuity equation of electric charge
+The decomposition of the electric current as the sum \(\vec{j} = \vec{j}_f + \vec{j}_P\) of the free current \(\vec{j}_f\) and the polarization current \(\vec{j}_P\), allows us to rework the continuity equation of electric charge
 \begin{equation*}
 \begin{split}\begin{aligned}
-  0 & = \partial_t \rho + \nabla \cdot \mathbf{j} = \\
-    & = \partial_t (\rho_f + \rho_P) + \nabla \cdot \left( \mathbf{j}_f + \mathbf{j}_P \right) = \\
-    & = \partial_t \rho_f + \nabla \cdot  \mathbf{j}_f + \partial_t \rho_P + \nabla \cdot \mathbf{j}_P \ ,
+  0 & = \partial_t \rho + \nabla \cdot \vec{j} = \\
+    & = \partial_t (\rho_f + \rho_P) + \nabla \cdot \left( \vec{j}_f + \vec{j}_P \right) = \\
+    & = \partial_t \rho_f + \nabla \cdot  \vec{j}_f + \partial_t \rho_P + \nabla \cdot \vec{j}_P \ ,
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 and write the continuity equations for the two charge distributions (of different nature, it is assumed that both must satisfy charge continuity independently, if free charges remain free and polarization charges remain polarization charges),
 \begin{equation*}
 \begin{split}\begin{aligned}
-  & \partial_t \rho_f + \nabla \cdot \mathbf{j}_f = 0 \\
-  & \partial_t \rho_P + \nabla \cdot \mathbf{j}_P = 0 \qquad \rightarrow \qquad 0 = \nabla \cdot (-\partial_t \mathbf{p} + \mathbf{j}_P) \qquad \rightarrow \qquad \mathbf{j}_P = \partial_t \mathbf{p}
+  & \partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \\
+  & \partial_t \rho_P + \nabla \cdot \vec{j}_P = 0 \qquad \rightarrow \qquad 0 = \nabla \cdot (-\partial_t \vec{p} + \vec{j}_P) \qquad \rightarrow \qquad \vec{j}_P = \partial_t \vec{p}
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 \sphinxstylestrong{todo} \sphinxstyleemphasis{justify absence of constant field}
 
 
-\section{Magnetization}
-\label{\detokenize{ch/media:magnetization}}
+\subsection{Magnetization}
+\label{\detokenize{ch/principles-matter:magnetization}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-magnetization}}
 
-\subsection{Single Magnetic Moment (Limit of an Elementary Loop)}
-\label{\detokenize{ch/media:single-magnetic-moment-limit-of-an-elementary-loop}}
+\subsubsection{Single Magnetic Moment (Limit of an Elementary Loop)}
+\label{\detokenize{ch/principles-matter:single-magnetic-moment-limit-of-an-elementary-loop}}
 \sphinxAtStartPar
-Using the Biot\sphinxhyphen{}Savart law, specialized for a conductor carrying current \(i(\mathbf{r}_0)\)
+Using the Biot\sphinxhyphen{}Savart law, specialized for a conductor carrying current \(i(\vec{r}_0)\)
 \begin{equation*}
 \begin{split}\begin{aligned}
-  d \mathbf{b}(\mathbf{r})
-  & = - \frac{\mu}{4 \pi} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \mathbf{j}(\mathbf{r}_0) d V_0 = \\
-  & = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \hat{\mathbf{t}}(\mathbf{r}_0) d \ell_0 \ ,
+  d \vec{b}(\vec{r})
+  & = - \frac{\mu}{4 \pi} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \vec{j}(\vec{r}_0) d V_0 = \\
+  & = - \frac{\mu}{4 \pi} i(\vec{r}_0) \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \hat{\vec{t}}(\vec{r}_0) d \ell_0 \ ,
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 we can calculate the magnetic field generated by a loop with path \(\ell_0 = \partial S_0\) using the PSCE
 \begin{equation*}
 \begin{split}\begin{aligned}
-  \mathbf{b}(\mathbf{r})
-  & = \oint_{\ell_0} d \mathbf{b}(\mathbf{r}_0) = \\
-  & = - \frac{\mu}{4 \pi} i_0 \oint_{\mathbf{r}_0 \in \ell_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \hat{\mathbf{t}}(\mathbf{r}_0)  = \\
-  & =   \frac{\mu}{4 \pi} i_0 \int_{\mathbf{r}_0 \in S_0} \hat{\mathbf{n}}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right)
+  \vec{b}(\vec{r})
+  & = \oint_{\ell_0} d \vec{b}(\vec{r}_0) = \\
+  & = - \frac{\mu}{4 \pi} i_0 \oint_{\vec{r}_0 \in \ell_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \hat{\vec{t}}(\vec{r}_0)  = \\
+  & =   \frac{\mu}{4 \pi} i_0 \int_{\vec{r}_0 \in S_0} \hat{\vec{n}}(\vec{r}_0) \cdot \nabla_{\vec{r}_0} \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right)
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-The field generated by an elementary loop of surface \(S_0\) with normal \(\hat{\mathbf{n}}_0\), using the mean value theorem, is
+The field generated by an elementary loop of surface \(S_0\) with normal \(\hat{\vec{n}}_0\), using the mean value theorem, is
 \begin{equation*}
-\begin{split}\mathbf{b}(\mathbf{r}) = \frac{\mu}{4 \pi} i_0 S_0 \hat{\mathbf{n}}_0 \cdot \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) + o(S_0)\end{split}
+\begin{split}\vec{b}(\vec{r}) = \frac{\mu}{4 \pi} i_0 S_0 \hat{\vec{n}}_0 \cdot \nabla_{\vec{r}_0} \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) + o(S_0)\end{split}
 \end{equation*}
 \sphinxAtStartPar
-and as \(i_0 \rightarrow \infty\), \(S_0 \rightarrow 0\) such that \(\mathbf{M}_0 := i_0 S_0 \hat{\mathbf{n}}_0\)
+and as \(i_0 \rightarrow \infty\), \(S_0 \rightarrow 0\) such that \(\vec{M}_0 := i_0 S_0 \hat{\vec{n}}_0\)
 \begin{equation*}
 \begin{split}\begin{aligned}
- \mathbf{b}(\mathbf{r})
-  & = \frac{\mu}{4 \pi} \mathbf{M}_0 \cdot \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \\
-  & = - \frac{\mu_0}{4\pi} \left[ \frac{(\mathbf{r}-\mathbf{r}_0)(\mathbf{r}-\mathbf{r}_0)}{|\mathbf{r}-\mathbf{r}_0|^5} \cdot \mathbf{M}_0 - \frac{\mathbf{M}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \right] = \\
-  & = - \frac{\mu_0}{4\pi} \left[ \frac{(\mathbf{r}-\mathbf{r}_0) \otimes (\mathbf{r}-\mathbf{r}_0)}{|\mathbf{r}-\mathbf{r}_0|^5} - \frac{\mathbb{I}}{|\mathbf{r}-\mathbf{r}_0|^3} \right] \cdot \mathbf{M}_0 \ .
+ \vec{b}(\vec{r})
+  & = \frac{\mu}{4 \pi} \vec{M}_0 \cdot \nabla_{\vec{r}_0} \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) \\
+  & = - \frac{\mu_0}{4\pi} \left[ \frac{(\vec{r}-\vec{r}_0)(\vec{r}-\vec{r}_0)}{|\vec{r}-\vec{r}_0|^5} \cdot \vec{M}_0 - \frac{\vec{M}_0}{|\vec{r}-\vec{r}_0|^3} \right] = \\
+  & = - \frac{\mu_0}{4\pi} \left[ \frac{(\vec{r}-\vec{r}_0) \otimes (\vec{r}-\vec{r}_0)}{|\vec{r}-\vec{r}_0|^5} - \frac{\mathbb{I}}{|\vec{r}-\vec{r}_0|^3} \right] \cdot \vec{M}_0 \ .
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
@@ -573,54 +680,54 @@ and as \(i_0 \rightarrow \infty\), \(S_0 \rightarrow 0\) such that \(\mathbf{M}_
 \begin{equation*}
 \begin{split}\oint_{\partial S} A \, t_i = \int_S \varepsilon_{ijk} \, n_j \, \partial_k A
 \qquad , \qquad
-  \oint_{\partial S} A \, \hat{\mathbf{t}} = \int_S \hat{\mathbf{n}} \times \nabla A\end{split}
+  \oint_{\partial S} A \, \hat{\vec{t}} = \int_S \hat{\vec{n}} \times \nabla A\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}\begin{aligned}
-\oint_{\mathbf{r}_0 \in \ell_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \hat{\mathbf{t}}(\mathbf{r}_0) d \ell_0
-  & = \oint_{\mathbf{r}_0 \in \ell_0} \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3}  t_k = \\
-  & = \int_{\mathbf{r}_0 \in S_0} \varepsilon_{krs} n_r \partial^0_s \left( \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
-  & = \int_{\mathbf{r}_0 \in S_0} \left( \delta_{ir} \delta_{js} - \delta_{is} \delta_{jr} \right) n_r \partial^0_s \left( \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
-  & = \int_{\mathbf{r}_0 \in S_0} \left\{ n_i \underbrace{\partial^0_j \left( \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right)}_{=0} - n_j \partial^0_i \left( \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \right\} = \\
-  & = - \int_{\mathbf{r}_0 \in S_0} n_j \partial^0_i \left( \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \ .
+\oint_{\vec{r}_0 \in \ell_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \hat{\vec{t}}(\vec{r}_0) d \ell_0
+  & = \oint_{\vec{r}_0 \in \ell_0} \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3}  t_k = \\
+  & = \int_{\vec{r}_0 \in S_0} \varepsilon_{krs} n_r \partial^0_s \left( \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right) = \\
+  & = \int_{\vec{r}_0 \in S_0} \left( \delta_{ir} \delta_{js} - \delta_{is} \delta_{jr} \right) n_r \partial^0_s \left( \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right) = \\
+  & = \int_{\vec{r}_0 \in S_0} \left\{ n_i \underbrace{\partial^0_j \left( \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right)}_{=0} - n_j \partial^0_i \left( \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right) \right\} = \\
+  & = - \int_{\vec{r}_0 \in S_0} n_j \partial^0_i \left( \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right) \ .
 \end{aligned}\end{split}
 \end{equation*}
 
-\subsection{Continuous Distribution of Magnetic Moment}
-\label{\detokenize{ch/media:continuous-distribution-of-magnetic-moment}}
+\subsubsection{Continuous Distribution of Magnetic Moment}
+\label{\detokenize{ch/principles-matter:continuous-distribution-of-magnetic-moment}}
 \sphinxAtStartPar
 To calculate the magnetic field generated by a volume distribution of magnetic moment, we can proceed in analogy with what was done to calculate the electric field generated by a distribution of dipoles
 \begin{equation*}
 \begin{split}\begin{aligned}
-\mathbf{b}(\mathbf{r})
-  & = \int_{\mathbf{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \mathbf{m}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
-  & = \oint_{\mathbf{r}_0 \in \partial V_0} \frac{\mu_0}{4 \pi}  \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \hat{\mathbf{n}}(\mathbf{r}_0) \cdot \mathbf{m}(\mathbf{r}_0) + \int_{\mathbf{r}_0 \in V_0} \frac{\mu_0}{4 \pi} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \,\left( - \nabla_{\mathbf{r}_0} \cdot \mathbf{m}(\mathbf{r}_0) \right) \ , \\
+\vec{b}(\vec{r})
+  & = \int_{\vec{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \vec{m}(\vec{r}_0) \cdot \nabla_{\vec{r}_0}  \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) = \\
+  & = \oint_{\vec{r}_0 \in \partial V_0} \frac{\mu_0}{4 \pi}  \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \hat{\vec{n}}(\vec{r}_0) \cdot \vec{m}(\vec{r}_0) + \int_{\vec{r}_0 \in V_0} \frac{\mu_0}{4 \pi} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \,\left( - \nabla_{\vec{r}_0} \cdot \vec{m}(\vec{r}_0) \right) \ , \\
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-but without obtaining an analogy with the expression of the Biot\sphinxhyphen{}Savart law, which involves the cross product between the term \(\frac{\mathbf{r}- \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3}\) and a current density \(\mathbf{j}(\mathbf{r}_0)\).
+but without obtaining an analogy with the expression of the Biot\sphinxhyphen{}Savart law, which involves the cross product between the term \(\frac{\vec{r}- \vec{r}_0}{|\vec{r} - \vec{r}_0|^3}\) and a current density \(\vec{j}(\vec{r}_0)\).
 \subsubsection*{Details}
 
 \sphinxAtStartPar
 We can rewrite
 \begin{equation*}
 \begin{split}\begin{aligned}
-  \oint_{\mathbf{r}_0 \in \partial V_0} & \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \left( \hat{\mathbf{n}}(\mathbf{r}_0) \times \mathbf{m}(\mathbf{r}_0) \right) \\
-  & = \oint_{\mathbf{r}_0 \in \partial V_0} \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \varepsilon_{krs} n_r m_s = \\
-  & = \int_{\mathbf{r}_0 \in V_0} \left( \delta_{ir} \delta_{js} - \delta_{is} \delta_{jr} \right) \partial^0_r \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_s \right) = \\
-  & = \int_{\mathbf{r}_0 \in V_0} \left\{ \partial^0_i \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j \right) - \partial^0_j \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_i \right)  \right\} = \\
-  & = \int_{\mathbf{r}_0 \in V_0}
-  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j
-         + \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_i m_j
-         - \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_j m_i
-         - \underbrace{ \partial^0_j \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3}}_{=0} m_i
+  \oint_{\vec{r}_0 \in \partial V_0} & \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \left( \hat{\vec{n}}(\vec{r}_0) \times \vec{m}(\vec{r}_0) \right) \\
+  & = \oint_{\vec{r}_0 \in \partial V_0} \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} \varepsilon_{krs} n_r m_s = \\
+  & = \int_{\vec{r}_0 \in V_0} \left( \delta_{ir} \delta_{js} - \delta_{is} \delta_{jr} \right) \partial^0_r \left( \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_s \right) = \\
+  & = \int_{\vec{r}_0 \in V_0} \left\{ \partial^0_i \left( \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_j \right) - \partial^0_j \left( \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_i \right)  \right\} = \\
+  & = \int_{\vec{r}_0 \in V_0}
+  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_j
+         + \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} \partial^0_i m_j
+         - \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} \partial^0_j m_i
+         - \underbrace{ \partial^0_j \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3}}_{=0} m_i
   \right\} = \\
-  & = \int_{\mathbf{r}_0 \in V_0}
-  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j
-         + \varepsilon_{ijk} \varepsilon_{krs} \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_r m_s
+  & = \int_{\vec{r}_0 \in V_0}
+  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_j
+         + \varepsilon_{ijk} \varepsilon_{krs} \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} \partial^0_r m_s
   \right\} = \\
-  & = \int_{\mathbf{r}_0 \in V_0}
-  \left\{ \nabla_{\mathbf{r}_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \cdot \mathbf{m}(\mathbf{r}_0)
-         + \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \times \left( \nabla_{\mathbf{r}_0} \times \mathbf{m}(\mathbf{r}_0) \right)
+  & = \int_{\vec{r}_0 \in V_0}
+  \left\{ \nabla_{\vec{r}_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r}-\vec{r}_0|^3} \cdot \vec{m}(\vec{r}_0)
+         + \frac{\vec{r} - \vec{r}_0}{|\vec{r}-\vec{r}_0|^3} \times \left( \nabla_{\vec{r}_0} \times \vec{m}(\vec{r}_0) \right)
   \right\} = \\
 \end{aligned}\end{split}
 \end{equation*}
@@ -628,60 +735,60 @@ We can rewrite
 using vector calculus identities,
 \begin{equation*}
 \begin{split}\begin{aligned}
-  \mathbf{a} \times (\mathbf{b} \times \mathbf{c}) & = \varepsilon_{ijk} a_j \varepsilon_{krs} b_r c_s = \\
+  \vec{a} \times (\vec{b} \times \vec{c}) & = \varepsilon_{ijk} a_j \varepsilon_{krs} b_r c_s = \\
   & = (\delta_{ir} \delta_{js} - \delta_{is} \delta_{jr}) a_j b_r c_s = \\
-  & = a_j b_i c_j - c_i b_j a_j = \mathbf{b}(\mathbf{a} \cdot \mathbf{c}) - \mathbf{c} (\mathbf{a} \cdot \mathbf{b})
+  & = a_j b_i c_j - c_i b_j a_j = \vec{b}(\vec{a} \cdot \vec{c}) - \vec{c} (\vec{a} \cdot \vec{b})
 \end{aligned}\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}\begin{aligned}
  a_j \partial_i m_j - a_j \partial_j m_i
  & = (\delta_{ir} \delta_{js} - \delta_{is} \delta_{jr}) a_j \partial_r m_s = \\
  & = \varepsilon_{ijk} \varepsilon_{krs} a_j \partial_r m_s = \\
- & = \mathbf{a} \times \left( \nabla \times \mathbf{m} \right)
+ & = \vec{a} \times \left( \nabla \times \vec{m} \right)
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 The magnetic field generated by a distribution of magnetic moment can therefore be rewritten as
 \begin{equation*}
 \begin{split}\begin{aligned}
-\mathbf{b}(\mathbf{r})
-  & = \int_{\mathbf{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \mathbf{m}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
-  & = - \frac{\mu_0}{4\pi} \oint_{\mathbf{r}_0 \in \partial V_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \underbrace{ \left( - \hat{\mathbf{n}}(\mathbf{r}_0) \times \mathbf{m}(\mathbf{r}_0) \right) }_{\mathbf{j}^s_M}
-  - \frac{\mu_0}{4 \pi} \int_{\mathbf{r}_0 \in V_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \times \underbrace{ \left(\nabla_{\mathbf{r}_0} \times \mathbf{m}(\mathbf{r}_0) \right)}_{\mathbf{j}_M} \ ,
+\vec{b}(\vec{r})
+  & = \int_{\vec{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \vec{m}(\vec{r}_0) \cdot \nabla_{\vec{r}_0}  \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) = \\
+  & = - \frac{\mu_0}{4\pi} \oint_{\vec{r}_0 \in \partial V_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \underbrace{ \left( - \hat{\vec{n}}(\vec{r}_0) \times \vec{m}(\vec{r}_0) \right) }_{\vec{j}^s_M}
+  - \frac{\mu_0}{4 \pi} \int_{\vec{r}_0 \in V_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r}-\vec{r}_0|^3} \times \underbrace{ \left(\nabla_{\vec{r}_0} \times \vec{m}(\vec{r}_0) \right)}_{\vec{j}_M} \ ,
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-having defined the surface magnetization current density \(\mathbf{j}^s_M\) and the volume magnetization current density \(\mathbf{j}_M\) as the intensities of the distributed singularities, in analogy with the expression of the Biot\sphinxhyphen{}Savart law.
+having defined the surface magnetization current density \(\vec{j}^s_M\) and the volume magnetization current density \(\vec{j}_M\) as the intensities of the distributed singularities, in analogy with the expression of the Biot\sphinxhyphen{}Savart law.
 
 
-\subsection{Reformulation of Maxwell’s Equations and Charge Continuity}
-\label{\detokenize{ch/media:id1}}
+\subsubsection{Reformulation of Maxwell’s Equations and Charge Continuity}
+\label{\detokenize{ch/principles-matter:id1}}
 \sphinxAtStartPar
 The Ampère\sphinxhyphen{}Maxwell law can be rewritten
 \begin{equation*}
 \begin{split}\begin{aligned}
- & \nabla \times \mathbf{b} - \mu_0 \varepsilon_0 \partial_t \mathbf{e} = \mu_0 \mathbf{j} \\
- & \nabla \times \mathbf{b} - \mu_0 \partial_t \left( \mathbf{d} - \mathbf{p} \right) = \mu_0 \left( \mathbf{j}_f + \mathbf{j}_P + \mathbf{j}_M \right) \\
- & \nabla \times \underbrace{\left( \mathbf{b} - \mu_0 \mathbf{m} \right)}_{=: \mu_0 \mathbf{h}} - \mu_0 \partial_t \mathbf{d} + \mu_0 \underbrace{\left( \partial_t \mathbf{p} - \mathbf{j}_P \right)}_{= \mathbf{0}} = \mu_0 \mathbf{j}_f  \\ \\
- & \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j}_f
+ & \nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} = \mu_0 \vec{j} \\
+ & \nabla \times \vec{b} - \mu_0 \partial_t \left( \vec{d} - \vec{p} \right) = \mu_0 \left( \vec{j}_f + \vec{j}_P + \vec{j}_M \right) \\
+ & \nabla \times \underbrace{\left( \vec{b} - \mu_0 \vec{m} \right)}_{=: \mu_0 \vec{h}} - \mu_0 \partial_t \vec{d} + \mu_0 \underbrace{\left( \partial_t \vec{p} - \vec{j}_P \right)}_{= \vec{0}} = \mu_0 \vec{j}_f  \\ \\
+ & \nabla \times \vec{h} - \partial_t \vec{d} = \vec{j}_f
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 From the continuity equation of electric current,
 \begin{equation*}
-\begin{split}\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ ,\end{split}
+\begin{split}\partial_t \rho + \nabla \cdot \vec{j} = 0 \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
 we derive the continuity equation for magnetization charges
 \begin{equation*}
 \begin{split}\begin{aligned}
-  0 & = \partial_t \rho_M + \nabla \cdot \mathbf{j}_M = \\
-    & = \partial_t \rho_M + \underbrace{ \nabla \cdot \nabla \times \mathbf{m}}_{ \equiv \mathbf{0} } \ .
+  0 & = \partial_t \rho_M + \nabla \cdot \vec{j}_M = \\
+    & = \partial_t \rho_M + \underbrace{ \nabla \cdot \nabla \times \vec{m}}_{ \equiv \vec{0} } \ .
 \end{aligned}\end{split}
 \end{equation*}
 
-\section{Examples}
-\label{\detokenize{ch/media:examples}}\begin{itemize}
+\subsection{Examples}
+\label{\detokenize{ch/principles-matter:examples}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
 conductors
@@ -693,31 +800,31 @@ ferromagnetic and weak magnetism (para\sphinxhyphen{}, dia\sphinxhyphen{}, anti\
 \end{itemize}
 
 
-\section{Jump Conditions}
-\label{\detokenize{ch/media:jump-conditions}}\label{\detokenize{ch/media:classical-electromagnetism-media-jump}}
+\subsection{Jump Conditions}
+\label{\detokenize{ch/principles-matter:jump-conditions}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-jump}}
 \sphinxAtStartPar
 Differential form of Maxwell’s equations
 \begin{equation*}
 \begin{split}\begin{cases}
- \nabla \cdot \mathbf{d} = \rho_f \\
- \nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\
- \nabla \cdot \mathbf{b} = 0 \\
- \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j}_f
+ \nabla \cdot \vec{d} = \rho_f \\
+ \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
+ \nabla \cdot \vec{b} = 0 \\
+ \nabla \times \vec{h} - \partial_t \vec{d} = \vec{j}_f
 \end{cases}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 Integral form of Maxwell’s equations
 \begin{equation*}
 \begin{split}\begin{cases}
- \displaystyle \oint_{\partial V} \mathbf{d} \cdot \hat{\mathbf{n}} = \int_{V} \rho_f \\
- \displaystyle \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_S \mathbf{b} \cdot \hat{\mathbf{n}} = 0 \\
- \displaystyle \oint_{\partial V} \mathbf{b} \cdot \hat{\mathbf{n}} = 0 \\
- \displaystyle \oint_{\partial S} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_S \mathbf{d} \cdot \hat{\mathbf{n}} = \int_{S} \mathbf{j}_f \cdot \hat{\mathbf{n}} \\
+ \displaystyle \oint_{\partial V} \vec{d} \cdot \hat{\vec{n}} = \int_{V} \rho_f \\
+ \displaystyle \oint_{\partial S} \vec{e} \cdot \hat{\vec{t}} + \dfrac{d}{dt} \int_S \vec{b} \cdot \hat{\vec{n}} = 0 \\
+ \displaystyle \oint_{\partial V} \vec{b} \cdot \hat{\vec{n}} = 0 \\
+ \displaystyle \oint_{\partial S} \vec{h} \cdot \hat{\vec{t}} - \dfrac{d}{dt} \int_S \vec{d} \cdot \hat{\vec{n}} = \int_{S} \vec{j}_f \cdot \hat{\vec{n}} \\
 \end{cases}\end{split}
 \end{equation*}
 \sphinxAtStartPar
 Letting \(V\) and \(S\) «collapse on a discontinuity»…
-\begin{equation}\label{equation:ch/media:eq:em-jump}
+\begin{equation}\label{equation:ch/principles-matter:eq:em-jump}
 \begin{split}\begin{cases}
   [ d_n ] = \sigma_f \\
   [ e_t ] = 0 \\
@@ -728,14 +835,14 @@ Letting \(V\) and \(S\) «collapse on a discontinuity»…
 \sphinxAtStartPar
 being \(\sigma_f\) and \(\iota_f\) surface charge and current density, with physical dimension \(\frac{\text{charge}}{\text{surface}}\), and \(\frac{\text{current}}{\text{surface}}\) respectively. These contributions can be thought of as Dirac delta contributions in volume density, namely
 \begin{equation*}
-\begin{split}\rho(\mathbf{r},t) = \rho_0(\mathbf{r},t) + \sigma(\mathbf{r}_s,t) \delta_{1}(\mathbf{r}-\mathbf{r}_s) \ ,\end{split}
+\begin{split}\rho(\vec{r},t) = \rho_0(\vec{r},t) + \sigma(\vec{r}_s,t) \delta_{1}(\vec{r}-\vec{r}_s) \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-being \(\rho(\mathbf{r},t)\) the regular part of the volume density in all the points of the domain \(\mathbf{r} \in V\), \(\sigma(\mathbf{r}_s,t)\) the surface density on 2\sphinxhyphen{}dimensional surfaces \(\mathbf{r}_s \in S\), \(\delta_1()\) the Dirac’s delta with physical dimension \(\frac{1}{\text{length}}\).
+being \(\rho(\vec{r},t)\) the regular part of the volume density in all the points of the domain \(\vec{r} \in V\), \(\sigma(\vec{r}_s,t)\) the surface density on 2\sphinxhyphen{}dimensional surfaces \(\vec{r}_s \in S\), \(\delta_1()\) the Dirac’s delta with physical dimension \(\frac{1}{\text{length}}\).
 
 \sphinxAtStartPar
 If there’s no free surface charge and currents, jump conditions for linear media become
-\begin{equation}\label{equation:ch/media:eq:em-jump:no-surf-density}
+\begin{equation}\label{equation:ch/principles-matter:eq:em-jump:no-surf-density}
 \begin{split}\begin{cases}
   [ d_n ] = 0 \\
   [ e_t ] = 0 \\
@@ -754,484 +861,8 @@ If there’s no free surface charge and currents, jump conditions for linear med
 \sphinxstepscope
 
 
-\chapter{Electrostatics}
-\label{\detokenize{ch/electrostatics:electrostatics}}\label{\detokenize{ch/electrostatics:classical-electromagnetism-electrostatics}}\label{\detokenize{ch/electrostatics::doc}}
-
-\section{Zero electric field inside a conductor}
-\label{\detokenize{ch/electrostatics:zero-electric-field-inside-a-conductor}}
-\sphinxAtStartPar
-Studying the transient of the electric charge distribution inside a conductor,
-\begin{equation*}
-\begin{split}\vec{e} = \rho_R \vec{j} \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-whose constitutive equation is
-\begin{equation*}
-\begin{split}\vec{d} = \varepsilon \vec{e} \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-with free electric charge continuity equation
-\begin{equation*}
-\begin{split}\partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-and Gauss equation for the displacement field
-\begin{equation*}
-\begin{split}\nabla \cdot \vec{d} = \rho_f \ .\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\begin{aligned}
-  \partial_t \rho_f
-  & = - \nabla \cdot \vec{j}_f = \\
-  & = - \nabla \cdot \left( \frac{1}{\rho_R} \vec{e} \right) = \\
-  & = - \frac{1}{\rho_R \varepsilon} \nabla \cdot \vec{d} = \\
-  & = - \frac{1}{\rho_R \varepsilon} \rho_f \ ,
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-having assumed uniform properties. The differential equation in the volume of the conductor provides the evolution of the electric charge in the volume \(\rho(\mathbf{r},t)\), given the initial condition \(\rho(\mathbf{r},0) = \rho_{f,0}(\mathbf{r})\)
-\begin{equation*}
-\begin{split}\partial_t \rho_f = - \frac{1}{\rho_R \varepsilon} \rho_f\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\rho_f(\mathbf{r},t) = \rho_{f,0}(\mathbf{r}) \exp\left[ - \dfrac{t}{\rho_R \varepsilon} \right] \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-For a conductor:
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-\(\varepsilon \sim \varepsilon_0 = 8.85 \cdot 10^{-12} \text{F} \text{m}^-1\)
-
-\item {} 
-\sphinxAtStartPar
-\(\rho_R \sim 10^{-7}  \Omega \, \text{m}\)
-
-\end{itemize}
-
-\sphinxAtStartPar
-so that the time constant (that can be thought as a characteristic time) of the process is
-\begin{equation*}
-\begin{split}\tau = \rho_R \varepsilon \sim 8.85 \cdot 10^{-19} \, \text{s} \ , \end{split}
-\end{equation*}
-\sphinxAtStartPar
-and thus, after a very short period of time the volume charge density is approximately zero everywhere in the volume: it accumulates in a very thin surface layer.
-\subsubsection*{Proof}
-\begin{equation*}
-\begin{split}\partial_t \left( \rho_f e^{\frac{t}{\rho_R \varepsilon}} \right) = 0\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\rho_f(\mathbf{r},t) e^{\frac{r}{\rho_R \varepsilon}} = a(\mathbf{r})\end{split}
-\end{equation*}
-\sphinxAtStartPar
-and appylying initial conditions in all the points of the domain, \(\rho_{f}(\mathbf{r},0) = \rho_{f,0}(\mathbf{r})\), function \(a(\mathbf{r})\) must be equal to \(\rho_{f,0}(\mathbf{r})\) and the solution reads
-\begin{equation*}
-\begin{split}\rho_f(\mathbf{r},t) = \rho_{f,0}(\mathbf{r}) \exp \left[ -\dfrac{t}{\rho_R \varepsilon} \right]\end{split}
-\end{equation*}
-\sphinxstepscope
-
-
-
-
-\chapter{Energy balance in electromagnetism}
-\label{\detokenize{ch/energy:energy-balance-in-electromagnetism}}\label{\detokenize{ch/energy:classical-electromagnetism-energy}}\label{\detokenize{ch/energy::doc}}
-
-\section{Force, moment, and power on elementary components}
-\label{\detokenize{ch/energy:force-moment-and-power-on-elementary-components}}
-
-\subsection{Force, moment and power on a point electric charge}
-\label{\detokenize{ch/energy:force-moment-and-power-on-a-point-electric-charge}}
-\sphinxAtStartPar
-Point electric charge with charge \(q\) in a point \(\vec{r}_P(t)\) at time \(t\) where electromagnetic field is \(\vec{e}(\vec{r},t)\), \(\vec{b}(\vec{r},t)\):
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-Lorentz’s force
-\begin{equation*}
-\begin{split}\vec{F} = q \left( \vec{e}(\vec{r}_P(t), t) - \vec{b}(\vec{r}_P(t),t) \times \vec{v}_P(t) \right) \ ,\end{split}
-\end{equation*}
-\item {} 
-\sphinxAtStartPar
-zero moment, since it has no dimension (and assumed uniform or symmetric or… distribution of electric charge)
-
-\item {} 
-\sphinxAtStartPar
-power
-\begin{equation*}
-\begin{split}\begin{aligned}
-     P & = \vec{v}_P(t) \cdot \vec{F} = \\
-       & = \vec{v}_P(t) \cdot \, q \, \left( \vec{e}(\vec{r}_P(t), t) - \vec{b}(\vec{r}_P(t), t) \times \vec{v}_P(t) \right) = q \, \vec{v}_P(t) \cdot \vec{e}(\vec{r}_P(t),t) \ .
-   \end{aligned}\end{split}
-\end{equation*}
-\end{itemize}
-
-
-\subsection{Force, moment and power on a electric dipole}
-\label{\detokenize{ch/energy:force-moment-and-power-on-a-electric-dipole}}
-\sphinxAtStartPar
-Electric dipole with center \(\vec{r}_C(t)\), axis \(\vec{\ell}\), so that the positive charge \(q\) is in \(P_+ = C + \dfrac{\vec{\ell}}{2}\) and the negative charge is in \(P_- = C - \dfrac{\vec{\ell}}{2}\), with \(q \rightarrow +\infty\), \(|\vec{\ell}| \rightarrow 0\), s.t. \(q|\vec{\ell}| = |\vec{d}|\) finite.
-
-\sphinxAtStartPar
-\sphinxstylestrong{Kinematics and expansion of the field}
-\begin{equation*}
-\begin{split}\vec{v}_{\pm} = \vec{v}_C \pm \vec{\omega} \times \frac{\vec{\ell}}{2}\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\vec{e}(P_{\pm}) = \vec{e}\left( C \pm \dfrac{\vec{\ell}}{2} \right) = \vec{e}(C) \pm \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}(C) + o(|\vec{\ell}|)\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\vec{b}(P_{\pm}) = \vec{b}\left( C \pm \dfrac{\vec{\ell}}{2} \right) = \vec{b}(C) \pm \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}(C) + o(|\vec{\ell}|)\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{Net force.}
-\begin{equation*}
-\begin{split}\begin{aligned}
-  \vec{F} & = \vec{F}_+ + \vec{F}_- = \\
-   & = q \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+} \right] - q \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-} \right] = \\
-   & = q \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] + \\ 
-   & - q \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] = \\
-   & = q \vec{\ell} \cdot \nabla \vec{e}(C) - \left( q \vec{\ell} \cdot \nabla \vec{b}(C) \right) \times \vec{v}_C + \vec{b}(C) \times \left(  \vec{\omega} \times q \vec{\ell} \right) + o(|\vec{\ell}|)
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{Net moment, w.r.t. \(C\).}
-\begin{equation*}
-\begin{split}\begin{aligned}
-  \vec{M}_C
-   & = \frac{\vec{\ell}}{2} \times \vec{F}_+ - \frac{\vec{\ell}}{2} \times \vec{F}_- = \\
-   & = q \frac{\vec{\ell}}{2} \times \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+} \right] + q \frac{\vec{\ell}}{2} \times \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-} \right] = \\
-   & = q \frac{\vec{\ell}}{2} \times \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] + \\ 
-   & + q \frac{\vec{\ell}}{2} \times \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] = \\
-   & = q \vec{\ell} \times \left[ \vec{e}_C - \vec{b}_C \times \vec{v}_C \right] + o(|\vec{\ell}|) \ .
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{Power.}
-\begin{equation*}
-\begin{split}\begin{aligned}
-  P & = P_+ + P_- = \\
-  & = \vec{F}_+ \cdot \vec{v}_+ + \vec{F}_- \cdot \vec{v}_- = \\
-  & = q \, \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+}  \right] \cdot \vec{v}_{+} 
-    - q \, \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-}  \right] \cdot \vec{v}_{-} = \\
-  & = q \, \vec{e}(P_+) \cdot \vec{v}_{+} 
-    - q \, \vec{e}(P_-) \cdot \vec{v}_{-} = \\
-  & = q \, \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] 
-    - q \, \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] = \\
-  & = \vec{e}_C \cdot \left( \vec{\omega} \times q \vec{\ell} \right) + \left( q \vec{\ell} \cdot \nabla \vec{e}_C \right) \cdot \vec{v}_C + o(|\vec{\ell}|^2) \ .
-\end{aligned}\end{split}
-\end{equation*}
-
-\subsection{Force, moment and power on a magnetic dipole}
-\label{\detokenize{ch/energy:force-moment-and-power-on-a-magnetic-dipole}}
-\sphinxAtStartPar
-On an elementary magnetic dipole, modeled as a «small» circuit with current \(i\) enclosing area \(S\) and center \(C\), with \(S \rightarrow 0\), \(i \rightarrow + \infty\) so that \(i S \hat{n} := \vec{m}\) finite
-
-\sphinxAtStartPar
-\sphinxstylestrong{Force.}
-\begin{equation*}
-\begin{split}\dots\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\vec{F} = \nabla \vec{b}(C) \cdot \vec{m}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{Moment.}
-\begin{equation*}
-\begin{split}\dots\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\vec{M}_C = \vec{m} \times \vec{b}(C)\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{Power.}
-\begin{equation*}
-\begin{split}P = \vec{v}_C \cdot \nabla \vec{b}(C) \cdot \vec{m} + \vec{\omega} \cdot \vec{m} \times \vec{b}(C) \ .\end{split}
-\end{equation*}
-
-\section{Energy balance}
-\label{\detokenize{ch/energy:energy-balance}}
-\sphinxAtStartPar
-\sphinxstylestrong{todo} \sphinxstyleemphasis{Check and put charges, currents, and dipoles together with the electromagnetic field}
-
-\sphinxAtStartPar
-Ispirati dalle dimensioni fisiche dei campi elettromagnetici,
-\begin{equation*}
-\begin{split}\begin{aligned}
-\left[\mathbf{e}\right] = \frac{\text{force}}{\text{charge}} \qquad & , \qquad
-[\mathbf{d}] = \frac{\text{charge}}{\text{length}^2} \\
-[\mathbf{b}] = \frac{\text{force}\cdot\text{time}}{\text{charge}\cdot\text{length}} \qquad & , \qquad
-[\mathbf{h}] = \frac{\text{charge}}{\text{time} \cdot \text{length}}
-\end{aligned}\end{split}
-\end{equation*}
-
-
-
-\begin{equation*}
-\begin{split}\begin{aligned}
-\left[\mathbf{e} \cdot \mathbf{d}\right] & = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u] \\
-[\mathbf{b} \cdot \mathbf{h}] & = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u]
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-si può costruire la densità di volume di energia  (\sphinxstylestrong{todo} trovare motivazioni più convincenti, non basandosi solo sull’analisi dimensionale ma sul lavoro)
-\begin{equation*}
-\begin{split}u = \frac{1}{2} \left( \mathbf{e} \cdot \mathbf{d} + \mathbf{b} \cdot \mathbf{h} \right) \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Si può calcolare la derivata parziale nel tempo della densità di energia, \(u\), e usare le equazioni di Maxwell per ottenere un’equazione di bilancio dell’energia del campo elettromagnetico. Per un mezzo isotropo lineare, per il quale valgono le equazioni costitutive \(\mathbf{d} = \varepsilon \mathbf{e}\), \(\mathbf{b} = \mu \mathbf{h}\), la derivata parziale nel tempo dell’energia elettromagnetica può essere riscritta sfuttando la regola di derivazione del prodotto e le equazioni di Faraday\sphinxhyphen{}Lenz\sphinxhyphen{}Neumann e Ampére\sphinxhyphen{}Maxwell,
-\begin{equation*}
-\begin{split}\begin{aligned}
-\dfrac{\partial u}{\partial t} & = \dfrac{\partial}{\partial t}\left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} + \mathbf{b} \cdot \mathbf{h} \right) =  \qquad (...) \\
-& = \mathbf{e} \cdot \partial_t \mathbf{d} + \mathbf{h} \cdot \partial_t \mathbf{b} = \\
-& = \mathbf{e} \cdot (\nabla \times \mathbf{h} - \mathbf{j}) - \mathbf{h} \cdot \nabla \times \mathbf{e} \ .
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-L’ultimo termine può essere ulteriormente manipolato, usando l’identità vettoriale
-\begin{equation*}
-\begin{split}\begin{aligned}
-\mathbf{e} \cdot \nabla \times \mathbf{h} - \mathbf{h} \cdot \nabla \times \mathbf{e} & = e_i \varepsilon_{ijk} \partial_j h_k - h_i \varepsilon_{ijk} \partial_j e_k = \qquad (i \rightarrow k, k \rightarrow i)\\
-& = e_i \varepsilon_{ijk} \partial_j h_k - h_k \varepsilon_{kji} \partial_j e_i = \\
-& = e_i \varepsilon_{ijk} \partial_j h_k + h_k \varepsilon_{ijk} \partial_j e_i = \\
-& =  \partial_j (\varepsilon_{ijk} e_i  h_k ) = \\
-& =  \partial_j (\varepsilon_{jki} e_i  h_k ) = \\
-& = \nabla \cdot (\mathbf{h} \times \mathbf{e}) = - \nabla \cdot (\mathbf{e} \times \mathbf{h})
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-che permette di scrivere l’equazione del bilancio di energia elettromagnetica come,
-\begin{equation*}
-\begin{split}\frac{\partial u }{\partial t} + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j} \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-dove è stato definito il \sphinxstylestrong{vettore di Poynting}, o meglio il campo vettoriale di Poynting,
-\begin{equation*}
-\begin{split}\mathbf{s}(\mathbf{r},t) := \mathbf{e}(\mathbf{r},t) \times \mathbf{h}(\mathbf{r},t) \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-che può essere identificato come un flusso di potenza per unità di superficie, comparendo sotto l’operatore di divergenza nel bilnacio di energia.
-
-\sphinxAtStartPar
-\sphinxstylestrong{todo.} Rimandare a una sezione in cui si mostra questa ultima affermazione passando dal bilancio differenziale al bilancio integrale e si usa il teorema della divergenza, \(\int_V \nabla \cdot \mathbf{s} = \oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}}\).
-\subsubsection*{Bilancio di energia di cariche nel vuoto, o i materiali senza polarizzazione o magnetizzazione}
-
-\sphinxAtStartPar
-\sphinxstylestrong{Moto di cariche puntiformi.}
-L’equazione del moto di carica puntiforme \(q_k\) nella posizione \(\mathbf{r}_k(t)\) al tempo \(t\) è
-\begin{equation*}
-\begin{split}m_k \ddot{\mathbf{r}}_k = \mathbf{f}_k + \mathbf{f}_k^{em} \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-avendo riconosciuto i contributi di forza dovuti al campo elettromagnetico come \(\mathbf{f}_k^{em}\) dagli altri. L’espressione della forza dovuta al campo elettromagnetico sulla carica \(k\) è data dalla forza di Lorentz,
-\begin{equation*}
-\begin{split}\mathbf{f}_k^{em}(t) = q_k \left[ \mathbf{e}(\mathbf{r_k}(t), t) - \mathbf{b}(\mathbf{r}_k(t), t) \times \dot{\mathbf{r}}_k(t) \right]\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{Continuità della carica elettrica.} La densità di carica e di corrente elettrica di un insieme di cariche libere puntiformi macroscopiche può essere scritta come
-\begin{equation*}
-\begin{split}\begin{aligned}
-  \rho(\mathbf{r},t) & = \sum_k q_k \delta(\mathbf{r} - \mathbf{r}_k(t)) \\
-  \mathbf{j}(\mathbf{r},t) & = \sum_k q_k \dot{\mathbf{r}}_k(t) \delta(\mathbf{r} - \mathbf{r}_k(t)) \ .
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-L’equazione di continuità della carica, \(\partial_t \rho + \nabla \cdot \mathbf{j} = 0\), risulta quindi soddisfatta,
-\begin{equation*}
-\begin{split}\begin{aligned}
-  \partial_t \rho &  = - \sum_k q_k \, \partial_i \delta(\mathbf{r} - \mathbf{r}_k(t)) \, \dot{r}_{k,i} \\
-  \partial_i j_i  &  =   \sum_k q_k \, \dot{r}_{k,i} \, \partial_i \delta(\mathbf{r} - \mathbf{r}_k(t)) \\
-\end{aligned}\end{split}
-\end{equation*}\subsubsection*{Procedimento alternativo (e più generale?)}
-
-\sphinxAtStartPar
-\sphinxstylestrong{todo} \sphinxstyleemphasis{In caso questo procedimento sia più generale, o più corretto, sostituire il procedimento precedente.}
-
-\sphinxAtStartPar
-La carica elementare in un volumetto \(\Delta V\) è data da dal prodotto tra il volume e la densità volumetrica di carica, \(\rho \Delta V\); la velocità media locale della carica elettrica è \(\mathbf{v}\); la forza agente sulla carica elementare immersa in un campo elettromagnetico è determinata dalla formula di Lorentz, \(\mathbf{f} \Delta V = \Delta V \rho \left( \mathbf{e} - \mathbf{b} \times \mathbf{v} \right)\). La potenza di questa forza è il prodotto scalare con la velocità media delle cariche, \(\Delta V \mathbf{f} \cdot \mathbf{v}\)
-
-\sphinxAtStartPar
-La potenza del campo elettromagnetico sul moto della carica elettrica per unità di volume è quindi
-\begin{equation*}
-\begin{split}\mathbf{v} \cdot \mathbf{f} = \rho \mathbf{v} \cdot \left( \mathbf{e} - \mathbf{b} \times \mathbf{v} \right) = \rho \mathbf{v} \cdot \mathbf{e} = \mathbf{j} \cdot \mathbf{e} \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{todo}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-discutere questo termine del bilancio di energia cinetica nel moto della carica elettrica
-
-\item {} 
-\sphinxAtStartPar
-questo termine compare con segno opposto nel bilancio dell’energia elettromagnetica del sistema
-
-\item {} 
-\sphinxAtStartPar
-dove compare la non\sphinxhyphen{}conservatività del problema in presenza di materiali dissipativi (come resistenza elettrica con \(\mathbf{e} = \rho_R \mathbf{j}\)?
-
-\end{itemize}
-
-\sphinxAtStartPar
-Il termine \(\mathbf{e} \cdot \mathbf{j}\) può essere manipolato usando le equazioni di Maxwell, e le relazioni
-\begin{equation*}
-\begin{split}\begin{cases}
-  \mathbf{d} = \varepsilon_0 \mathbf{e} + \mathbf{p} \\
-  \mathbf{h} = \frac{\mathbf{b}}{\mu_0} - \mathbf{m} \\
-\end{cases}\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\begin{aligned}
-  \mathbf{e} \cdot \mathbf{j} 
-    & = \mathbf{e} \cdot \left( \nabla \times \mathbf{h} - \partial_t \mathbf{d} \right) = \\
-    & = - \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) + \mathbf{h} \cdot \nabla \times \mathbf{e} - \mathbf{e} \cdot \partial_t \mathbf{d} = \\
-    & = - \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) - \mathbf{h} \cdot \partial_t \mathbf{b} - \mathbf{e} \cdot \partial_t \mathbf{d} 
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Gli ultimi due termini possono essere manipolati in diverse maniere,
-\begin{equation*}
-\begin{split}\begin{aligned}
-  \mathbf{e} \cdot \partial_t \mathbf{d}
-    = \mathbf{e} \cdot \partial_t \left( \varepsilon_0 \mathbf{e} + \mathbf{p} \right) 
-  & = \partial_t \left( \frac{1}{2} \varepsilon_0 \mathbf{e} \cdot \mathbf{e} \right) + \mathbf{e} \cdot \partial_t \mathbf{p} \\
-  & = \partial_t \left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} \right) + \frac{1}{2} \left( \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} \right) \\
-  & = \partial_t \left( \frac{1}{2 \varepsilon_0} \mathbf{d} \cdot \mathbf{d} \right) - \frac{\mathbf{p}}{\varepsilon_0} \cdot \partial_t \mathbf{d} \\
-\end{aligned}\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\begin{aligned}
-  \mathbf{h} \cdot \partial_t \mathbf{b}
-    = \mathbf{h} \cdot \partial_t \left( \mu_0 \mathbf{h} + \mu_0 \mathbf{m} \right) 
-  & = \partial_t \left( \frac{1}{2} \mu_0 \mathbf{h} \cdot \mathbf{h} \right) + \mu_0 \mathbf{h} \cdot \partial_t \mathbf{m} \\
-  & = \partial_t \left( \frac{1}{2} \mathbf{b} \cdot \mathbf{h} \right) + \frac{1}{2} \mu_0 \left( \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \\
-  & = \partial_t \left( \frac{1}{2 \mu_0} \mathbf{b} \cdot \mathbf{b} \right) - \mathbf{m} \cdot \partial_t \mathbf{b} \\
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Nel vuoto o in mezzi lineari \(\mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} = \mathbf{0}\), \(\mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} = \mathbf{0}\). Usando le seconde espressioni, si può riscrivere l’equazione dell’energia del campo elettromagnetico come
-\begin{equation*}
-\begin{split}\begin{aligned}
-  \partial_t \left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} + \frac{1}{2} \mathbf{b} \cdot \mathbf{h} \right) + \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) & = - \ \mathbf{e} \cdot \mathbf{j} \ + \\
-   & \quad - \frac{1}{2} \left[ \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} + \mu_0 \left(  \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \right]
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-o, usando le definizioni di densità di energia elettromagnetica \(u\) e vettore di Poynting \(\mathbf{s}\),
-\begin{equation*}
-\begin{split}
-  \partial_t u + \nabla \cdot \mathbf{s} =
-    - \ \mathbf{e} \cdot \mathbf{j} \
-    - \frac{1}{2} \left[ \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} + \mu_0 \left(  \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \right]
-\end{split}
-\end{equation*}
-\sphinxstepscope
-
-
-\chapter{Energy and momentum balance in linear, local, isotropic, non\sphinxhyphen{}dispersive media}
-\label{\detokenize{ch/energy-linear:energy-and-momentum-balance-in-linear-local-isotropic-non-dispersive-media}}\label{\detokenize{ch/energy-linear:classical-electromagnetism-energy}}\label{\detokenize{ch/energy-linear::doc}}\begin{equation*}
-\begin{split}\begin{cases}
-  \mathbf{d} = \varepsilon_0 \mathbf{e} + \mathbf{p} \\
-  \mathbf{h} = \dfrac{1}{\mu_0} \mathbf{b} - \mathbf{m} \ .
-\end{cases}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-with
-\begin{equation*}
-\begin{split}\mathbf{d} = \varepsilon \mathbf{e} \qquad , \qquad \mathbf{h} = \dfrac{\mathbf{b}}{\mu}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Let \(r\) be mass density, and \(\vec{v}\) be charge velocity field, the equation of motion \sphinxhyphen{} momentum equation \sphinxhyphen{} of electric charges reads
-\begin{equation*}
-\begin{split}r \frac{D \mathbf{v}}{D t} = \mathbf{f} \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-and the kinetic energy equation becomes
-\begin{equation*}
-\begin{split}\mathbf{v} \cdot \mathbf{f} = r \mathbf{v} \cdot \frac{D \mathbf{v}}{D t} = r \dfrac{D}{Dt} \dfrac{|\mathbf{v}|^2}{2} \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-or using continuity equation for \(r\), it can be recast in conservative form. The same term can be recast using the expression of Lorentz’s force on electric charges in electromagnetic field (\sphinxstylestrong{is this the right way to evaluate power of bounded charges and currents? check it!})
-\begin{equation*}
-\begin{split}\mathbf{v} \cdot \mathbf{f} = \mathbf{v} \cdot \left[ \rho ( \mathbf{e} - \mathbf{b} \times \mathbf{v} ) \right] = \rho \mathbf{v} \cdot \mathbf{e} = \mathbf{e} \cdot \mathbf{j} \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-and furthered manipulated writing \(\mathbf{j} = \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m\) and using Maxwell’s equations
-\begin{equation*}
-\begin{split}\begin{aligned}
-  \mathbf{e} \cdot \mathbf{j} 
-  & = \mathbf{e} \cdot \left( \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m \right) = \\
-  & = \mathbf{e} \cdot \left( \nabla \times \mathbf{h} - \partial_t \mathbf{d} \right) + \mathbf{e} \cdot \partial_t \mathbf{p} + \mathbf{e} \cdot \nabla \times \mathbf{m} = \\
-  & = \mathbf{e} \cdot \nabla \times \left( \mathbf{h} + \mathbf{m} \right) - \mathbf{e} \cdot \partial_t \left( \mathbf{d} - \mathbf{p} \right)  = \\
-  & = \dfrac{1}{\mu_0} \mathbf{e} \cdot \nabla \times \mathbf{b} - \varepsilon_0 \mathbf{e} \cdot \partial_t \mathbf{e} = \\
-  & = - \dfrac{1}{\mu_0} \nabla \cdot \left( \mathbf{e} \times \mathbf{b} \right) - \dfrac{\mathbf{b}}{\mu_0} \cdot \partial_t \mathbf{b} - \varepsilon_0 \mathbf{e} \cdot \partial_t \mathbf{e} = \\
-\end{aligned}\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\mathbf{e} \cdot \nabla \times \mathbf{h} = e_i \varepsilon_{ijk} \partial_j h_k = \partial_j \left( \varepsilon_{jki} h_k e_i \right) - \varepsilon_{ijk} h_k \partial_j e_i = - \nabla \cdot (\mathbf{e} \times \mathbf{h} ) + \mathbf{h} \cdot \nabla \times \mathbf{e} = - \nabla \cdot (\mathbf{e} \times \mathbf{h} ) - \mathbf{h} \cdot \partial_t \mathbf{b}\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\begin{aligned}
-  \mathbf{e} \cdot \mathbf{j}_f & = - \nabla \cdot ( \mathbf{e} \times \mathbf{h} ) - \mathbf{e} \cdot \partial_t \mathbf{d} - \mathbf{h} \cdot \partial_t \mathbf{b}
-\end{aligned}\end{split}
-\end{equation*}
-
-\section{Linear media \sphinxhyphen{} energy}
-\label{\detokenize{ch/energy-linear:linear-media-energy}}
-\sphinxAtStartPar
-For linear media, the energy of the electromagnetic field per unit volume reads
-\begin{equation*}
-\begin{split}u = \dfrac{1}{2} \left( \mathbf{e} \cdot \mathbf{d} + \mathbf{h} \cdot \mathbf{b} \right)\end{split}
-\end{equation*}
-\sphinxAtStartPar
-so that the differential balance equation for the eneergy of the electromagnetic field becomes
-\begin{equation*}
-\begin{split}\begin{aligned}
- \partial_t u + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j} \ ,
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-with Poynting vector \(\mathbf{s} := \mathbf{e} \times \mathbf{h}\), namely the momentum density of the electromagnetic field.
-
-
-\section{Linear media \sphinxhyphen{} momentum}
-\label{\detokenize{ch/energy-linear:linear-media-momentum}}\begin{equation*}
-\begin{split}\partial_t \mathbf{s} = \partial_t s_i = \partial_t \left( \varepsilon_{ijk} e_j h_k \right)\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\begin{aligned}
-  \varepsilon_{ijk} \partial_t e_j h_k
-  & = \dfrac{1}{\varepsilon} \varepsilon_{ijk} \partial_t d_j h_k \\
-  & = \dfrac{1}{\varepsilon} \varepsilon_{ijk} \left(\varepsilon_{jlm} \partial_l h_m - j^f_j \right) h_k \\
-  & = - \dfrac{1}{\varepsilon} \varepsilon_{ijk} \, j^f_j \, h_k + \dfrac{1}{\varepsilon} \varepsilon_{ijk} \varepsilon_{jlm} h_k \partial_l h_m \\
-  & = - \dfrac{1}{\varepsilon} \varepsilon_{ijk} \, j^f_j \, h_k + \dfrac{1}{\varepsilon} \left( \delta_{im} \delta_{kl} - \delta_{il} \delta_{km} \right) h_k \partial_l h_m =  \\
-  & = - \dfrac{1}{\varepsilon} \varepsilon_{ijk} \, j^f_j \, h_k + \dfrac{1}{\varepsilon} \left( h_m \partial_m h_i - h_m \partial_i h_m \right) =  \\
-  & = - \dfrac{1}{\varepsilon} \varepsilon_{ijk} \, j^f_j \, h_k + \dfrac{1}{\varepsilon} \left[ \partial_m ( h_m  h_i ) - \partial_m h_m \, h_i - \partial_i \left( \frac{h_m h_m}{2} \right) \right] =  \\
-  & = \dfrac{1}{\varepsilon \mu} \varepsilon_{ijk} \, b_j \, j^f_k + \dfrac{1}{\varepsilon \mu} \left[ \partial_m ( b_m  h_i ) - \underbrace{\partial_m b_m}_{=0} \, h_i - \partial_i \left( \frac{h_m b_m}{2} \right) \right] =  \\
-\end{aligned}\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\begin{aligned}
-  \varepsilon_{ijk} e_j \partial_t h_k
-  & =   \dfrac{1}{\mu} \varepsilon_{ijk} e_j \partial_t b_k = \\
-  & = - \dfrac{1}{\mu} \varepsilon_{ijk} e_j \left( \varepsilon_{klm} \partial_l e_m \right) = \\
-  & = - \dfrac{1}{\mu} \left( \delta_{il} \delta_{jm} - \delta_{im} \delta_{jl} \right) e_j \partial_l e_m =  \\
-  & = - \dfrac{1}{\mu} \left( e_m \partial_i e_m - e_m \partial_m e_i \right) =  \\
-  & = - \dfrac{1}{\mu} \left[ \partial_i \left(\frac{e_m e_m}{2}\right) -  \partial_m \left( e_m e_i \right) + \partial_m e_m \, e_i \right] = \\
-  & = - \dfrac{1}{\varepsilon \mu} \left[ \partial_i \left(\frac{d_m e_m}{2}\right) - \partial_m \left( d_m e_i \right) + \rho^f \, e_i \right] \ .
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-so that
-\begin{equation*}
-\begin{split}\partial_t s_i + c^2 \partial_m \left[ \dfrac{1}{2}\left( d_n e_n + h_n b_n \right) \delta_{mi} - \left( h_m b_i + d_m e_i \right) \right] = - c^2 \rho^f e_i + c^2 \varepsilon_{ijk} b_j j_k^f \end{split}
-\end{equation*}
-\sphinxAtStartPar
-or
-\begin{equation*}
-\begin{split}\partial_t \mathbf{s} + c^2 \nabla \cdot \left[ \, \dfrac{1}{2} \left( \mathbf{d} \cdot \mathbf{e} + \mathbf{h} \cdot \mathbf{b} \right) \mathbb{I} - \left( \mathbf{d} \otimes \mathbf{e} + \mathbf{h} \otimes \mathbf{b} \right) \, \right] = - c^2 \left( \rho^f \mathbf{e} - \mathbf{b} \times \mathbf{j}^f \right)\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\begin{cases}
-& \partial_t u + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j}^f \\
-& \partial_t \mathbf{s} + c^2 \nabla \cdot \left[ \, u \mathbb{I} - \left( \mathbf{d} \otimes \mathbf{e} + \mathbf{h} \otimes \mathbf{b} \right) \, \right] = - c^2 \left( \mathbf{e} \, \rho^f - \mathbf{b} \times \mathbf{j}^f \right)
-\end{cases}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{todo} \sphinxstyleemphasis{use this system to derive the 4\sphinxhyphen{}d formulation of special relativity in modern physics}
-
-\sphinxstepscope
-
-
-
-
-\chapter{Relativity in electromagnetism}
-\label{\detokenize{ch/low-speed-relativity:relativity-in-electromagnetism}}\label{\detokenize{ch/low-speed-relativity:classical-electromagnetism-low-speed-relativity}}\label{\detokenize{ch/low-speed-relativity::doc}}
+\section{Galileian relativity in electromagnetism}
+\label{\detokenize{ch/principles-relativity:galileian-relativity-in-electromagnetism}}\label{\detokenize{ch/principles-relativity:classical-electromagnetism-principles-low-speed-relativity}}\label{\detokenize{ch/principles-relativity::doc}}
 \sphinxstepscope
 
 
@@ -1495,7 +1126,7 @@ and for harmonic plane EM waves
 being index \(a\) representing the media involved: \(a = 1\) for the medium with incident and reflected waves, \(a = 2\) for the medium with the refracted wave.
 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/media:classical-electromagnetism-media-jump}]{\sphinxcrossref{\DUrole{std,std-ref}{Jump conditions of electromagnetic field at an interface}}}} with no charge or current surface density are given by conditions \eqref{equation:ch/media:eq:em-jump:no-surf-density},
+{\hyperref[\detokenize{ch/principles-matter:classical-electromagnetism-media-jump}]{\sphinxcrossref{\DUrole{std,std-ref}{Jump conditions of electromagnetic field at an interface}}}} with no charge or current surface density are given by conditions \eqref{equation:ch/principles-matter:eq:em-jump:no-surf-density},
 \begin{equation*}
 \begin{split}\begin{cases}
   \varepsilon_1 e_{n,1} = \varepsilon_2 e_{n,2} \\
@@ -1751,6 +1382,503 @@ Dividing by \(\alpha_1 \cos  \theta_1\)
 \sphinxstepscope
 
 
+\chapter{Force, moments, energy and momentum in electromagnetism}
+\label{\detokenize{ch/energy:force-moments-energy-and-momentum-in-electromagnetism}}\label{\detokenize{ch/energy:classical-electromagnetism-energy}}\label{\detokenize{ch/energy::doc}}
+\sphinxstepscope
+
+
+\section{Energy and momentum balance in linear, local, isotropic, non\sphinxhyphen{}dispersive media}
+\label{\detokenize{ch/energy-momentum-balance:energy-and-momentum-balance-in-linear-local-isotropic-non-dispersive-media}}\label{\detokenize{ch/energy-momentum-balance:classical-electromagnetism-energy}}\label{\detokenize{ch/energy-momentum-balance::doc}}\begin{equation*}
+\begin{split}\begin{cases}
+  \mathbf{d} = \varepsilon_0 \mathbf{e} + \mathbf{p} \\
+  \mathbf{h} = \dfrac{1}{\mu_0} \mathbf{b} - \mathbf{m} \ .
+\end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with
+\begin{equation*}
+\begin{split}\mathbf{d} = \varepsilon \mathbf{e} \qquad , \qquad \mathbf{h} = \dfrac{\mathbf{b}}{\mu}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Let \(r\) be mass density, and \(\vec{v}\) be charge velocity field, the equation of motion \sphinxhyphen{} momentum equation \sphinxhyphen{} of electric charges reads
+\begin{equation*}
+\begin{split}r \frac{D \mathbf{v}}{D t} = \mathbf{f} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and the kinetic energy equation becomes
+\begin{equation*}
+\begin{split}\mathbf{v} \cdot \mathbf{f} = r \mathbf{v} \cdot \frac{D \mathbf{v}}{D t} = r \dfrac{D}{Dt} \dfrac{|\mathbf{v}|^2}{2} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or using continuity equation for \(r\), it can be recast in conservative form. The same term can be recast using the expression of Lorentz’s force on electric charges in electromagnetic field (\sphinxstylestrong{is this the right way to evaluate power of bounded charges and currents? check it!})
+\begin{equation*}
+\begin{split}\mathbf{v} \cdot \mathbf{f} = \mathbf{v} \cdot \left[ \rho ( \mathbf{e} - \mathbf{b} \times \mathbf{v} ) \right] = \rho \mathbf{v} \cdot \mathbf{e} = \mathbf{e} \cdot \mathbf{j} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and furthered manipulated writing \(\mathbf{j} = \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m\) and using Maxwell’s equations
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{e} \cdot \mathbf{j} 
+  & = \mathbf{e} \cdot \left( \mathbf{j}_f + \mathbf{j}_p + \mathbf{j}_m \right) = \\
+  & = \mathbf{e} \cdot \left( \nabla \times \mathbf{h} - \partial_t \mathbf{d} \right) + \mathbf{e} \cdot \partial_t \mathbf{p} + \mathbf{e} \cdot \nabla \times \mathbf{m} = \\
+  & = \mathbf{e} \cdot \nabla \times \left( \mathbf{h} + \mathbf{m} \right) - \mathbf{e} \cdot \partial_t \left( \mathbf{d} - \mathbf{p} \right)  = \\
+  & = \dfrac{1}{\mu_0} \mathbf{e} \cdot \nabla \times \mathbf{b} - \varepsilon_0 \mathbf{e} \cdot \partial_t \mathbf{e} = \\
+  & = - \dfrac{1}{\mu_0} \nabla \cdot \left( \mathbf{e} \times \mathbf{b} \right) - \dfrac{\mathbf{b}}{\mu_0} \cdot \partial_t \mathbf{b} - \varepsilon_0 \mathbf{e} \cdot \partial_t \mathbf{e} = \\
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\mathbf{e} \cdot \nabla \times \mathbf{h} = e_i \varepsilon_{ijk} \partial_j h_k = \partial_j \left( \varepsilon_{jki} h_k e_i \right) - \varepsilon_{ijk} h_k \partial_j e_i = - \nabla \cdot (\mathbf{e} \times \mathbf{h} ) + \mathbf{h} \cdot \nabla \times \mathbf{e} = - \nabla \cdot (\mathbf{e} \times \mathbf{h} ) - \mathbf{h} \cdot \partial_t \mathbf{b}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{e} \cdot \mathbf{j}_f & = - \nabla \cdot ( \mathbf{e} \times \mathbf{h} ) - \mathbf{e} \cdot \partial_t \mathbf{d} - \mathbf{h} \cdot \partial_t \mathbf{b}
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsection{Linear media \sphinxhyphen{} energy}
+\label{\detokenize{ch/energy-momentum-balance:linear-media-energy}}
+\sphinxAtStartPar
+For linear media, the energy of the electromagnetic field per unit volume reads
+\begin{equation*}
+\begin{split}u = \dfrac{1}{2} \left( \mathbf{e} \cdot \mathbf{d} + \mathbf{h} \cdot \mathbf{b} \right)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the differential balance equation for the eneergy of the electromagnetic field becomes
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \partial_t u + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with Poynting vector \(\mathbf{s} := \mathbf{e} \times \mathbf{h}\), namely the momentum density of the electromagnetic field.
+
+
+\subsection{Linear media \sphinxhyphen{} momentum}
+\label{\detokenize{ch/energy-momentum-balance:linear-media-momentum}}\begin{equation*}
+\begin{split}\partial_t \mathbf{s} = \partial_t s_i = \partial_t \left( \varepsilon_{ijk} e_j h_k \right)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \varepsilon_{ijk} \partial_t e_j h_k
+  & = \dfrac{1}{\varepsilon} \varepsilon_{ijk} \partial_t d_j h_k \\
+  & = \dfrac{1}{\varepsilon} \varepsilon_{ijk} \left(\varepsilon_{jlm} \partial_l h_m - j^f_j \right) h_k \\
+  & = - \dfrac{1}{\varepsilon} \varepsilon_{ijk} \, j^f_j \, h_k + \dfrac{1}{\varepsilon} \varepsilon_{ijk} \varepsilon_{jlm} h_k \partial_l h_m \\
+  & = - \dfrac{1}{\varepsilon} \varepsilon_{ijk} \, j^f_j \, h_k + \dfrac{1}{\varepsilon} \left( \delta_{im} \delta_{kl} - \delta_{il} \delta_{km} \right) h_k \partial_l h_m =  \\
+  & = - \dfrac{1}{\varepsilon} \varepsilon_{ijk} \, j^f_j \, h_k + \dfrac{1}{\varepsilon} \left( h_m \partial_m h_i - h_m \partial_i h_m \right) =  \\
+  & = - \dfrac{1}{\varepsilon} \varepsilon_{ijk} \, j^f_j \, h_k + \dfrac{1}{\varepsilon} \left[ \partial_m ( h_m  h_i ) - \partial_m h_m \, h_i - \partial_i \left( \frac{h_m h_m}{2} \right) \right] =  \\
+  & = \dfrac{1}{\varepsilon \mu} \varepsilon_{ijk} \, b_j \, j^f_k + \dfrac{1}{\varepsilon \mu} \left[ \partial_m ( b_m  h_i ) - \underbrace{\partial_m b_m}_{=0} \, h_i - \partial_i \left( \frac{h_m b_m}{2} \right) \right] =  \\
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \varepsilon_{ijk} e_j \partial_t h_k
+  & =   \dfrac{1}{\mu} \varepsilon_{ijk} e_j \partial_t b_k = \\
+  & = - \dfrac{1}{\mu} \varepsilon_{ijk} e_j \left( \varepsilon_{klm} \partial_l e_m \right) = \\
+  & = - \dfrac{1}{\mu} \left( \delta_{il} \delta_{jm} - \delta_{im} \delta_{jl} \right) e_j \partial_l e_m =  \\
+  & = - \dfrac{1}{\mu} \left( e_m \partial_i e_m - e_m \partial_m e_i \right) =  \\
+  & = - \dfrac{1}{\mu} \left[ \partial_i \left(\frac{e_m e_m}{2}\right) -  \partial_m \left( e_m e_i \right) + \partial_m e_m \, e_i \right] = \\
+  & = - \dfrac{1}{\varepsilon \mu} \left[ \partial_i \left(\frac{d_m e_m}{2}\right) - \partial_m \left( d_m e_i \right) + \rho^f \, e_i \right] \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that
+\begin{equation*}
+\begin{split}\partial_t s_i + c^2 \partial_m \left[ \dfrac{1}{2}\left( d_n e_n + h_n b_n \right) \delta_{mi} - \left( h_m b_i + d_m e_i \right) \right] = - c^2 \rho^f e_i + c^2 \varepsilon_{ijk} b_j j_k^f \end{split}
+\end{equation*}
+\sphinxAtStartPar
+or
+\begin{equation*}
+\begin{split}\partial_t \mathbf{s} + c^2 \nabla \cdot \left[ \, \dfrac{1}{2} \left( \mathbf{d} \cdot \mathbf{e} + \mathbf{h} \cdot \mathbf{b} \right) \mathbb{I} - \left( \mathbf{d} \otimes \mathbf{e} + \mathbf{h} \otimes \mathbf{b} \right) \, \right] = - c^2 \left( \rho^f \mathbf{e} - \mathbf{b} \times \mathbf{j}^f \right)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{cases}
+& \partial_t u + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j}^f \\
+& \partial_t \mathbf{s} + c^2 \nabla \cdot \left[ \, u \mathbb{I} - \left( \mathbf{d} \otimes \mathbf{e} + \mathbf{h} \otimes \mathbf{b} \right) \, \right] = - c^2 \left( \mathbf{e} \, \rho^f - \mathbf{b} \times \mathbf{j}^f \right)
+\end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{use this system to derive the 4\sphinxhyphen{}d formulation of special relativity in modern physics}
+
+\sphinxstepscope
+
+
+
+
+\section{Force, moment, and power on elementary charge distributions}
+\label{\detokenize{ch/forces-moments-on-charges:force-moment-and-power-on-elementary-charge-distributions}}\label{\detokenize{ch/forces-moments-on-charges:classical-electromagnetism-forces-moments}}\label{\detokenize{ch/forces-moments-on-charges::doc}}
+
+\subsection{Force, moment and power on a point electric charge}
+\label{\detokenize{ch/forces-moments-on-charges:force-moment-and-power-on-a-point-electric-charge}}
+\sphinxAtStartPar
+Point electric charge with charge \(q\) in a point \(\vec{r}_P(t)\) at time \(t\) where electromagnetic field is \(\vec{e}(\vec{r},t)\), \(\vec{b}(\vec{r},t)\):
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Lorentz’s force
+\begin{equation*}
+\begin{split}\vec{F} = q \left( \vec{e}(\vec{r}_P(t), t) - \vec{b}(\vec{r}_P(t),t) \times \vec{v}_P(t) \right) \ ,\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+zero moment, since it has no dimension (and assumed uniform or symmetric or… distribution of electric charge)
+
+\item {} 
+\sphinxAtStartPar
+power
+\begin{equation*}
+\begin{split}\begin{aligned}
+     P & = \vec{v}_P(t) \cdot \vec{F} = \\
+       & = \vec{v}_P(t) \cdot \, q \, \left( \vec{e}(\vec{r}_P(t), t) - \vec{b}(\vec{r}_P(t), t) \times \vec{v}_P(t) \right) = q \, \vec{v}_P(t) \cdot \vec{e}(\vec{r}_P(t),t) \ .
+   \end{aligned}\end{split}
+\end{equation*}
+\end{itemize}
+
+
+\subsection{Force, moment and power on a electric dipole}
+\label{\detokenize{ch/forces-moments-on-charges:force-moment-and-power-on-a-electric-dipole}}
+\sphinxAtStartPar
+Electric dipole with center \(\vec{r}_C(t)\), axis \(\vec{\ell}\), so that the positive charge \(q\) is in \(P_+ = C + \dfrac{\vec{\ell}}{2}\) and the negative charge is in \(P_- = C - \dfrac{\vec{\ell}}{2}\), with \(q \rightarrow +\infty\), \(|\vec{\ell}| \rightarrow 0\), s.t. \(q|\vec{\ell}| = |\vec{d}|\) finite.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Kinematics and expansion of the field}
+\begin{equation*}
+\begin{split}\vec{v}_{\pm} = \vec{v}_C \pm \vec{\omega} \times \frac{\vec{\ell}}{2}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\vec{e}(P_{\pm}) = \vec{e}\left( C \pm \dfrac{\vec{\ell}}{2} \right) = \vec{e}(C) \pm \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}(C) + o(|\vec{\ell}|)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\vec{b}(P_{\pm}) = \vec{b}\left( C \pm \dfrac{\vec{\ell}}{2} \right) = \vec{b}(C) \pm \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}(C) + o(|\vec{\ell}|)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Net force.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{F} & = \vec{F}_+ + \vec{F}_- = \\
+   & = q \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+} \right] - q \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-} \right] = \\
+   & = q \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] + \\ 
+   & - q \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] = \\
+   & = q \vec{\ell} \cdot \nabla \vec{e}(C) - \left( q \vec{\ell} \cdot \nabla \vec{b}(C) \right) \times \vec{v}_C + \vec{b}(C) \times \left(  \vec{\omega} \times q \vec{\ell} \right) + o(|\vec{\ell}|)
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Net moment, w.r.t. \(C\).}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{M}_C
+   & = \frac{\vec{\ell}}{2} \times \vec{F}_+ - \frac{\vec{\ell}}{2} \times \vec{F}_- = \\
+   & = q \frac{\vec{\ell}}{2} \times \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+} \right] + q \frac{\vec{\ell}}{2} \times \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-} \right] = \\
+   & = q \frac{\vec{\ell}}{2} \times \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] + \\ 
+   & + q \frac{\vec{\ell}}{2} \times \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] = \\
+   & = q \vec{\ell} \times \left[ \vec{e}_C - \vec{b}_C \times \vec{v}_C \right] + o(|\vec{\ell}|) \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Power.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  P & = P_+ + P_- = \\
+  & = \vec{F}_+ \cdot \vec{v}_+ + \vec{F}_- \cdot \vec{v}_- = \\
+  & = q \, \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+}  \right] \cdot \vec{v}_{+} 
+    - q \, \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-}  \right] \cdot \vec{v}_{-} = \\
+  & = q \, \vec{e}(P_+) \cdot \vec{v}_{+} 
+    - q \, \vec{e}(P_-) \cdot \vec{v}_{-} = \\
+  & = q \, \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] 
+    - q \, \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] = \\
+  & = \vec{e}_C \cdot \left( \vec{\omega} \times q \vec{\ell} \right) + \left( q \vec{\ell} \cdot \nabla \vec{e}_C \right) \cdot \vec{v}_C + o(|\vec{\ell}|^2) \ .
+\end{aligned}\end{split}
+\end{equation*}
+
+\subsection{Force, moment and power on a magnetic dipole}
+\label{\detokenize{ch/forces-moments-on-charges:force-moment-and-power-on-a-magnetic-dipole}}
+\sphinxAtStartPar
+On an elementary magnetic dipole, modeled as a «small» circuit with current \(i\) enclosing area \(S\) and center \(C\), with \(S \rightarrow 0\), \(i \rightarrow + \infty\) so that \(i S \hat{n} := \vec{m}\) finite
+
+\sphinxAtStartPar
+\sphinxstylestrong{Force.}
+\begin{equation*}
+\begin{split}\dots\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\vec{F} = \nabla \vec{b}(C) \cdot \vec{m}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Moment.}
+\begin{equation*}
+\begin{split}\dots\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\vec{M}_C = \vec{m} \times \vec{b}(C)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Power.}
+\begin{equation*}
+\begin{split}P = \vec{v}_C \cdot \nabla \vec{b}(C) \cdot \vec{m} + \vec{\omega} \cdot \vec{m} \times \vec{b}(C) \ .\end{split}
+\end{equation*}
+
+\subsection{Energy balance}
+\label{\detokenize{ch/forces-moments-on-charges:energy-balance}}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{Check and put charges, currents, and dipoles together with the electromagnetic field}
+
+\sphinxAtStartPar
+Ispirati dalle dimensioni fisiche dei campi elettromagnetici,
+\begin{equation*}
+\begin{split}\begin{aligned}
+\left[\mathbf{e}\right] = \frac{\text{force}}{\text{charge}} \qquad & , \qquad
+[\mathbf{d}] = \frac{\text{charge}}{\text{length}^2} \\
+[\mathbf{b}] = \frac{\text{force}\cdot\text{time}}{\text{charge}\cdot\text{length}} \qquad & , \qquad
+[\mathbf{h}] = \frac{\text{charge}}{\text{time} \cdot \text{length}}
+\end{aligned}\end{split}
+\end{equation*}
+
+
+
+\begin{equation*}
+\begin{split}\begin{aligned}
+\left[\mathbf{e} \cdot \mathbf{d}\right] & = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u] \\
+[\mathbf{b} \cdot \mathbf{h}] & = \frac{\text{force}}{\text{length}^2} = \frac{\text{energy}}{\text{length}^3} = [u]
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+si può costruire la densità di volume di energia  (\sphinxstylestrong{todo} trovare motivazioni più convincenti, non basandosi solo sull’analisi dimensionale ma sul lavoro)
+\begin{equation*}
+\begin{split}u = \frac{1}{2} \left( \mathbf{e} \cdot \mathbf{d} + \mathbf{b} \cdot \mathbf{h} \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Si può calcolare la derivata parziale nel tempo della densità di energia, \(u\), e usare le equazioni di Maxwell per ottenere un’equazione di bilancio dell’energia del campo elettromagnetico. Per un mezzo isotropo lineare, per il quale valgono le equazioni costitutive \(\mathbf{d} = \varepsilon \mathbf{e}\), \(\mathbf{b} = \mu \mathbf{h}\), la derivata parziale nel tempo dell’energia elettromagnetica può essere riscritta sfuttando la regola di derivazione del prodotto e le equazioni di Faraday\sphinxhyphen{}Lenz\sphinxhyphen{}Neumann e Ampére\sphinxhyphen{}Maxwell,
+\begin{equation*}
+\begin{split}\begin{aligned}
+\dfrac{\partial u}{\partial t} & = \dfrac{\partial}{\partial t}\left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} + \mathbf{b} \cdot \mathbf{h} \right) =  \qquad (...) \\
+& = \mathbf{e} \cdot \partial_t \mathbf{d} + \mathbf{h} \cdot \partial_t \mathbf{b} = \\
+& = \mathbf{e} \cdot (\nabla \times \mathbf{h} - \mathbf{j}) - \mathbf{h} \cdot \nabla \times \mathbf{e} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+L’ultimo termine può essere ulteriormente manipolato, usando l’identità vettoriale
+\begin{equation*}
+\begin{split}\begin{aligned}
+\mathbf{e} \cdot \nabla \times \mathbf{h} - \mathbf{h} \cdot \nabla \times \mathbf{e} & = e_i \varepsilon_{ijk} \partial_j h_k - h_i \varepsilon_{ijk} \partial_j e_k = \qquad (i \rightarrow k, k \rightarrow i)\\
+& = e_i \varepsilon_{ijk} \partial_j h_k - h_k \varepsilon_{kji} \partial_j e_i = \\
+& = e_i \varepsilon_{ijk} \partial_j h_k + h_k \varepsilon_{ijk} \partial_j e_i = \\
+& =  \partial_j (\varepsilon_{ijk} e_i  h_k ) = \\
+& =  \partial_j (\varepsilon_{jki} e_i  h_k ) = \\
+& = \nabla \cdot (\mathbf{h} \times \mathbf{e}) = - \nabla \cdot (\mathbf{e} \times \mathbf{h})
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+che permette di scrivere l’equazione del bilancio di energia elettromagnetica come,
+\begin{equation*}
+\begin{split}\frac{\partial u }{\partial t} + \nabla \cdot \mathbf{s} = - \mathbf{e} \cdot \mathbf{j} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+dove è stato definito il \sphinxstylestrong{vettore di Poynting}, o meglio il campo vettoriale di Poynting,
+\begin{equation*}
+\begin{split}\mathbf{s}(\mathbf{r},t) := \mathbf{e}(\mathbf{r},t) \times \mathbf{h}(\mathbf{r},t) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+che può essere identificato come un flusso di potenza per unità di superficie, comparendo sotto l’operatore di divergenza nel bilnacio di energia.
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo.} Rimandare a una sezione in cui si mostra questa ultima affermazione passando dal bilancio differenziale al bilancio integrale e si usa il teorema della divergenza, \(\int_V \nabla \cdot \mathbf{s} = \oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}}\).
+\subsubsection*{Bilancio di energia di cariche nel vuoto, o i materiali senza polarizzazione o magnetizzazione}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Moto di cariche puntiformi.}
+L’equazione del moto di carica puntiforme \(q_k\) nella posizione \(\mathbf{r}_k(t)\) al tempo \(t\) è
+\begin{equation*}
+\begin{split}m_k \ddot{\mathbf{r}}_k = \mathbf{f}_k + \mathbf{f}_k^{em} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+avendo riconosciuto i contributi di forza dovuti al campo elettromagnetico come \(\mathbf{f}_k^{em}\) dagli altri. L’espressione della forza dovuta al campo elettromagnetico sulla carica \(k\) è data dalla forza di Lorentz,
+\begin{equation*}
+\begin{split}\mathbf{f}_k^{em}(t) = q_k \left[ \mathbf{e}(\mathbf{r_k}(t), t) - \mathbf{b}(\mathbf{r}_k(t), t) \times \dot{\mathbf{r}}_k(t) \right]\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Continuità della carica elettrica.} La densità di carica e di corrente elettrica di un insieme di cariche libere puntiformi macroscopiche può essere scritta come
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \rho(\mathbf{r},t) & = \sum_k q_k \delta(\mathbf{r} - \mathbf{r}_k(t)) \\
+  \mathbf{j}(\mathbf{r},t) & = \sum_k q_k \dot{\mathbf{r}}_k(t) \delta(\mathbf{r} - \mathbf{r}_k(t)) \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+L’equazione di continuità della carica, \(\partial_t \rho + \nabla \cdot \mathbf{j} = 0\), risulta quindi soddisfatta,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_t \rho &  = - \sum_k q_k \, \partial_i \delta(\mathbf{r} - \mathbf{r}_k(t)) \, \dot{r}_{k,i} \\
+  \partial_i j_i  &  =   \sum_k q_k \, \dot{r}_{k,i} \, \partial_i \delta(\mathbf{r} - \mathbf{r}_k(t)) \\
+\end{aligned}\end{split}
+\end{equation*}\subsubsection*{Procedimento alternativo (e più generale?)}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{In caso questo procedimento sia più generale, o più corretto, sostituire il procedimento precedente.}
+
+\sphinxAtStartPar
+La carica elementare in un volumetto \(\Delta V\) è data da dal prodotto tra il volume e la densità volumetrica di carica, \(\rho \Delta V\); la velocità media locale della carica elettrica è \(\mathbf{v}\); la forza agente sulla carica elementare immersa in un campo elettromagnetico è determinata dalla formula di Lorentz, \(\mathbf{f} \Delta V = \Delta V \rho \left( \mathbf{e} - \mathbf{b} \times \mathbf{v} \right)\). La potenza di questa forza è il prodotto scalare con la velocità media delle cariche, \(\Delta V \mathbf{f} \cdot \mathbf{v}\)
+
+\sphinxAtStartPar
+La potenza del campo elettromagnetico sul moto della carica elettrica per unità di volume è quindi
+\begin{equation*}
+\begin{split}\mathbf{v} \cdot \mathbf{f} = \rho \mathbf{v} \cdot \left( \mathbf{e} - \mathbf{b} \times \mathbf{v} \right) = \rho \mathbf{v} \cdot \mathbf{e} = \mathbf{j} \cdot \mathbf{e} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+discutere questo termine del bilancio di energia cinetica nel moto della carica elettrica
+
+\item {} 
+\sphinxAtStartPar
+questo termine compare con segno opposto nel bilancio dell’energia elettromagnetica del sistema
+
+\item {} 
+\sphinxAtStartPar
+dove compare la non\sphinxhyphen{}conservatività del problema in presenza di materiali dissipativi (come resistenza elettrica con \(\mathbf{e} = \rho_R \mathbf{j}\)?
+
+\end{itemize}
+
+\sphinxAtStartPar
+Il termine \(\mathbf{e} \cdot \mathbf{j}\) può essere manipolato usando le equazioni di Maxwell, e le relazioni
+\begin{equation*}
+\begin{split}\begin{cases}
+  \mathbf{d} = \varepsilon_0 \mathbf{e} + \mathbf{p} \\
+  \mathbf{h} = \frac{\mathbf{b}}{\mu_0} - \mathbf{m} \\
+\end{cases}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{e} \cdot \mathbf{j} 
+    & = \mathbf{e} \cdot \left( \nabla \times \mathbf{h} - \partial_t \mathbf{d} \right) = \\
+    & = - \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) + \mathbf{h} \cdot \nabla \times \mathbf{e} - \mathbf{e} \cdot \partial_t \mathbf{d} = \\
+    & = - \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) - \mathbf{h} \cdot \partial_t \mathbf{b} - \mathbf{e} \cdot \partial_t \mathbf{d} 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Gli ultimi due termini possono essere manipolati in diverse maniere,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{e} \cdot \partial_t \mathbf{d}
+    = \mathbf{e} \cdot \partial_t \left( \varepsilon_0 \mathbf{e} + \mathbf{p} \right) 
+  & = \partial_t \left( \frac{1}{2} \varepsilon_0 \mathbf{e} \cdot \mathbf{e} \right) + \mathbf{e} \cdot \partial_t \mathbf{p} \\
+  & = \partial_t \left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} \right) + \frac{1}{2} \left( \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} \right) \\
+  & = \partial_t \left( \frac{1}{2 \varepsilon_0} \mathbf{d} \cdot \mathbf{d} \right) - \frac{\mathbf{p}}{\varepsilon_0} \cdot \partial_t \mathbf{d} \\
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \mathbf{h} \cdot \partial_t \mathbf{b}
+    = \mathbf{h} \cdot \partial_t \left( \mu_0 \mathbf{h} + \mu_0 \mathbf{m} \right) 
+  & = \partial_t \left( \frac{1}{2} \mu_0 \mathbf{h} \cdot \mathbf{h} \right) + \mu_0 \mathbf{h} \cdot \partial_t \mathbf{m} \\
+  & = \partial_t \left( \frac{1}{2} \mathbf{b} \cdot \mathbf{h} \right) + \frac{1}{2} \mu_0 \left( \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \\
+  & = \partial_t \left( \frac{1}{2 \mu_0} \mathbf{b} \cdot \mathbf{b} \right) - \mathbf{m} \cdot \partial_t \mathbf{b} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Nel vuoto o in mezzi lineari \(\mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} = \mathbf{0}\), \(\mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} = \mathbf{0}\). Usando le seconde espressioni, si può riscrivere l’equazione dell’energia del campo elettromagnetico come
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_t \left( \frac{1}{2} \mathbf{e} \cdot \mathbf{d} + \frac{1}{2} \mathbf{b} \cdot \mathbf{h} \right) + \nabla \cdot \left( \mathbf{e} \times \mathbf{h} \right) & = - \ \mathbf{e} \cdot \mathbf{j} \ + \\
+   & \quad - \frac{1}{2} \left[ \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} + \mu_0 \left(  \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \right]
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+o, usando le definizioni di densità di energia elettromagnetica \(u\) e vettore di Poynting \(\mathbf{s}\),
+\begin{equation*}
+\begin{split}
+  \partial_t u + \nabla \cdot \mathbf{s} =
+    - \ \mathbf{e} \cdot \mathbf{j} \
+    - \frac{1}{2} \left[ \mathbf{e} \cdot \partial_t \mathbf{p} - \mathbf{p} \cdot \partial_t \mathbf{e} + \mu_0 \left(  \mathbf{h} \cdot \partial_t \mathbf{m} - \mathbf{m} \cdot \partial_t \mathbf{h} \right) \right]
+\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\chapter{Regimes in Electromagnetic systems}
+\label{\detokenize{ch/regimes:regimes-in-electromagnetic-systems}}\label{\detokenize{ch/regimes:classical-electromagnetism-regimes}}\label{\detokenize{ch/regimes::doc}}
+\sphinxstepscope
+
+
+\section{Electrostatics}
+\label{\detokenize{ch/regimes-electrostatics:electrostatics}}\label{\detokenize{ch/regimes-electrostatics:classical-electromagnetism-electrostatics}}\label{\detokenize{ch/regimes-electrostatics::doc}}
+
+\subsection{Zero electric field inside a conductor}
+\label{\detokenize{ch/regimes-electrostatics:zero-electric-field-inside-a-conductor}}
+\sphinxAtStartPar
+Studying the transient of the electric charge distribution inside a conductor,
+\begin{equation*}
+\begin{split}\vec{e} = \rho_R \vec{j} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+whose constitutive equation is
+\begin{equation*}
+\begin{split}\vec{d} = \varepsilon \vec{e} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with free electric charge continuity equation
+\begin{equation*}
+\begin{split}\partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and Gauss equation for the displacement field
+\begin{equation*}
+\begin{split}\nabla \cdot \vec{d} = \rho_f \ .\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_t \rho_f
+  & = - \nabla \cdot \vec{j}_f = \\
+  & = - \nabla \cdot \left( \frac{1}{\rho_R} \vec{e} \right) = \\
+  & = - \frac{1}{\rho_R \varepsilon} \nabla \cdot \vec{d} = \\
+  & = - \frac{1}{\rho_R \varepsilon} \rho_f \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having assumed uniform properties. The differential equation in the volume of the conductor provides the evolution of the electric charge in the volume \(\rho(\mathbf{r},t)\), given the initial condition \(\rho(\mathbf{r},0) = \rho_{f,0}(\mathbf{r})\)
+\begin{equation*}
+\begin{split}\partial_t \rho_f = - \frac{1}{\rho_R \varepsilon} \rho_f\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\rho_f(\mathbf{r},t) = \rho_{f,0}(\mathbf{r}) \exp\left[ - \dfrac{t}{\rho_R \varepsilon} \right] \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+For a conductor:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\(\varepsilon \sim \varepsilon_0 = 8.85 \cdot 10^{-12} \text{F} \text{m}^-1\)
+
+\item {} 
+\sphinxAtStartPar
+\(\rho_R \sim 10^{-7}  \Omega \, \text{m}\)
+
+\end{itemize}
+
+\sphinxAtStartPar
+so that the time constant (that can be thought as a characteristic time) of the process is
+\begin{equation*}
+\begin{split}\tau = \rho_R \varepsilon \sim 8.85 \cdot 10^{-19} \, \text{s} \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus, after a very short period of time the volume charge density is approximately zero everywhere in the volume: it accumulates in a very thin surface layer.
+\subsubsection*{Proof}
+\begin{equation*}
+\begin{split}\partial_t \left( \rho_f e^{\frac{t}{\rho_R \varepsilon}} \right) = 0\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\rho_f(\mathbf{r},t) e^{\frac{r}{\rho_R \varepsilon}} = a(\mathbf{r})\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and appylying initial conditions in all the points of the domain, \(\rho_{f}(\mathbf{r},0) = \rho_{f,0}(\mathbf{r})\), function \(a(\mathbf{r})\) must be equal to \(\rho_{f,0}(\mathbf{r})\) and the solution reads
+\begin{equation*}
+\begin{split}\rho_f(\mathbf{r},t) = \rho_{f,0}(\mathbf{r}) \exp \left[ -\dfrac{t}{\rho_R \varepsilon} \right]\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\section{Steady regime}
+\label{\detokenize{ch/regimes-steady:steady-regime}}\label{\detokenize{ch/regimes-steady:classical-electromagnetism-regimes-steady}}\label{\detokenize{ch/regimes-steady::doc}}
+\sphinxAtStartPar
+Steady regime \sphinxhyphen{} in a Eulerian description \sphinxhyphen{} allows for steady currents.
+
+\sphinxstepscope
+
+
+\section{Slow…}
+\label{\detokenize{ch/regimes-slow:slow}}\label{\detokenize{ch/regimes-slow:classical-electromagnetism-regimes}}\label{\detokenize{ch/regimes-slow::doc}}
+\sphinxAtStartPar
+leading to circuit approximation
+
+\sphinxstepscope
+
+
 \part{Electric Engineering}
 
 \sphinxstepscope
@@ -1797,7 +1925,7 @@ Quando possibile, cioè quando capace di descrivere adeguatamente il comportamen
 L’approccio circuitale consente di ridurre il problema elettromagnetico, in generale un problema di campo che richiede la soluzione di PDE, a un approccio «ai morsetti» \sphinxstylestrong{todo}, che richiede la soluzione di ODE.
 
 \sphinxAtStartPar
-Una rivisitazione dell”{\hyperref[\detokenize{ch/energy-linear:classical-electromagnetism-energy}]{\sphinxcrossref{\DUrole{std,std-ref}{equazione dell’energia}}}} permette di valutare i regimi in cui è possibile usare un approccio circuitale a un sistema elettromagnetico.
+Una rivisitazione dell”{\hyperref[\detokenize{ch/energy-momentum-balance:classical-electromagnetism-energy}]{\sphinxcrossref{\DUrole{std,std-ref}{equazione dell’energia}}}} permette di valutare i regimi in cui è possibile usare un approccio circuitale a un sistema elettromagnetico.
 
 \sphinxAtStartPar
 In particolare, nell’equazione di bilancio dell’energia elettromagnetica
@@ -2129,7 +2257,7 @@ In genereale, in circuiti elettromeccanici le riluttanze non sono dei parametri 
 \sphinxAtStartPar
 La matrice di induttanza \(\mathbf{L}\) è simmetrica \sphinxstylestrong{todo} \sphinxstyleemphasis{Dimostrazione}
 \label{ch/circuits-electromechanic:example-0}
-\begin{sphinxadmonition}{note}{Example 10.3.1}
+\begin{sphinxadmonition}{note}{Example 6.3.1}
 
 
 
@@ -2557,7 +2685,7 @@ The harmonic dynamics of a linear circuit can be evaluated in Fourier domain, or
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-having anticipated the definition {\hyperref[\detokenize{ch/electrical-engineering-networks-harmonic:harmonic:effective-values}]{\sphinxcrossref{Definition 10.5.1}}} of effective tension \(V\) and current \(I\).
+having anticipated the definition {\hyperref[\detokenize{ch/electrical-engineering-networks-harmonic:harmonic:effective-values}]{\sphinxcrossref{Definition 6.5.1}}} of effective tension \(V\) and current \(I\).
 
 
 \subsection{Power}
@@ -2588,7 +2716,7 @@ and the property \(\cos(-x) = \cos x\).
 \sphinxAtStartPar
 as the integral of the harmonic term with period \(\frac{T}{2}\) of the instantaneous power \eqref{equation:ch/electrical-engineering-networks-harmonic:eq:harmonic:power:instantaneous} is identically zero, and with the definition of the \sphinxstylestrong{effective voltage and current}
 \label{ch/electrical-engineering-networks-harmonic:harmonic:effective-values}
-\begin{sphinxadmonition}{note}{Definition 10.5.1 (Effective voltage and current in AC)}
+\begin{sphinxadmonition}{note}{Definition 6.5.1 (Effective voltage and current in AC)}
 
 
 
@@ -2949,7 +3077,7 @@ Once the state variables of the dynamical equations are known. it’s possible t
 
 \phantomsection \label{exercise:exam-25-02-11-exe-01}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.1 (Exam 2025\sphinxhyphen{}02\sphinxhyphen{}11, Exercise 1.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.1 (Exam 2025\sphinxhyphen{}02\sphinxhyphen{}11, Exercise 1.)}
 
 
 
@@ -3175,7 +3303,7 @@ At \(t = 0\), \(v_A(0) = 7.667 \, V\) and \(E_C(0) = 14.694 \, J \).
 
 \phantomsection \label{exercise:exam-25-01-22-exe-01}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.2 (Exam 2025\sphinxhyphen{}01\sphinxhyphen{}22, Exercise 1.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.2 (Exam 2025\sphinxhyphen{}01\sphinxhyphen{}22, Exercise 1.)}
 
 
 
@@ -3474,7 +3602,7 @@ and thus \(v_A(\tau) = -19.25 \, V\)
 \end{equation*}\end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-09-06-exe-01}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.3 (Exam 2024\sphinxhyphen{}09\sphinxhyphen{}06, Exercise 1.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.3 (Exam 2024\sphinxhyphen{}09\sphinxhyphen{}06, Exercise 1.)}
 
 
 
@@ -3487,7 +3615,7 @@ and thus \(v_A(\tau) = -19.25 \, V\)
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-07-22-exe-01}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.4 (Exam 2024\sphinxhyphen{}07\sphinxhyphen{}22, Exercise 1.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.4 (Exam 2024\sphinxhyphen{}07\sphinxhyphen{}22, Exercise 1.)}
 
 
 
@@ -3500,7 +3628,7 @@ and thus \(v_A(\tau) = -19.25 \, V\)
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-02-13-exe-01-b}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.5 (Exam 2024\sphinxhyphen{}02\sphinxhyphen{}13, Exercise 1.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.5 (Exam 2024\sphinxhyphen{}02\sphinxhyphen{}13, Exercise 1.)}
 
 
 
@@ -3518,7 +3646,7 @@ and thus \(v_A(\tau) = -19.25 \, V\)
 \subsection{Harmonic regime of linear electrical grids}
 \label{\detokenize{ch/electrical-engineering-exercises-harmonic:harmonic-regime-of-linear-electrical-grids}}\label{\detokenize{ch/electrical-engineering-exercises-harmonic:classical-electromagnetism-electrical-engineering-exercises-harmonic}}\label{\detokenize{ch/electrical-engineering-exercises-harmonic::doc}}\phantomsection \label{exercise:exam-25-02-11-exe-02}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.6 (Exam 2025\sphinxhyphen{}02\sphinxhyphen{}11, Exercise 2.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.6 (Exam 2025\sphinxhyphen{}02\sphinxhyphen{}11, Exercise 2.)}
 
 
 
@@ -3619,7 +3747,7 @@ while the reactive power in this condition reads
 \end{equation*}\end{sphinxadmonition}
 \phantomsection \label{exercise:exam-25-02-11-exe-03}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.7 (Exam 2025\sphinxhyphen{}02\sphinxhyphen{}11, Exercise 3.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.7 (Exam 2025\sphinxhyphen{}02\sphinxhyphen{}11, Exercise 3.)}
 
 
 
@@ -3674,7 +3802,7 @@ and the power factor is \(\cos \varphi_s = \dots\), where
 \end{equation*}\end{sphinxadmonition}
 \phantomsection \label{exercise:exam-25-01-22-exe-02}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.8 (Exam 2025\sphinxhyphen{}01\sphinxhyphen{}22, Exercise 2.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.8 (Exam 2025\sphinxhyphen{}01\sphinxhyphen{}22, Exercise 2.)}
 
 
 
@@ -3740,7 +3868,7 @@ Signal in time is reconstructed using using the relation between effective and m
 \end{equation*}\end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-09-06-exe-02}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.9 (Exam 2024\sphinxhyphen{}09\sphinxhyphen{}06, Exercise 2.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.9 (Exam 2024\sphinxhyphen{}09\sphinxhyphen{}06, Exercise 2.)}
 
 
 
@@ -3753,7 +3881,7 @@ Signal in time is reconstructed using using the relation between effective and m
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-07-22-exe-02}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.10 (Exam 2024\sphinxhyphen{}07\sphinxhyphen{}22, Exercise 2.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.10 (Exam 2024\sphinxhyphen{}07\sphinxhyphen{}22, Exercise 2.)}
 
 
 
@@ -3799,7 +3927,7 @@ use relations of {\hyperref[\detokenize{ch/electrical-engineering-networks-harmo
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-09-06-exe-03}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.11 (Exam 2024\sphinxhyphen{}09\sphinxhyphen{}06, Exercise 3.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.11 (Exam 2024\sphinxhyphen{}09\sphinxhyphen{}06, Exercise 3.)}
 
 
 
@@ -3866,7 +3994,7 @@ using the effective values of tension and current \(V_2\), \(I_2\).
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-07-22-exe-03}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.12 (Exam 2024\sphinxhyphen{}07\sphinxhyphen{}22, Exercise 3.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.12 (Exam 2024\sphinxhyphen{}07\sphinxhyphen{}22, Exercise 3.)}
 
 
 
@@ -3943,7 +4071,7 @@ and the complex power is
 \end{equation*}\end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-06-19-exe-01}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.13 (Exam 2024\sphinxhyphen{}06\sphinxhyphen{}19, Exercise 1.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.13 (Exam 2024\sphinxhyphen{}06\sphinxhyphen{}19, Exercise 1.)}
 
 
 
@@ -4008,7 +4136,7 @@ being \(i_2 = i_{e_2} + i_{L_1} + i_{R_4}\) the sum of the current in the parall
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-02-13-exe-02}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.14 (Exam 2024\sphinxhyphen{}02\sphinxhyphen{}13, Exercise 2.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.14 (Exam 2024\sphinxhyphen{}02\sphinxhyphen{}13, Exercise 2.)}
 
 
 
@@ -4029,7 +4157,7 @@ being \(i_2 = i_{e_2} + i_{L_1} + i_{R_4}\) the sum of the current in the parall
 \subsection{Electromagnetic circuits}
 \label{\detokenize{ch/electrical-engineering-exercises-electromagnetic:electromagnetic-circuits}}\label{\detokenize{ch/electrical-engineering-exercises-electromagnetic::doc}}\phantomsection \label{exercise:exam-25-01-22-exe-03}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.15 (Exam 2025\sphinxhyphen{}01\sphinxhyphen{}22, Exercise 3.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.15 (Exam 2025\sphinxhyphen{}01\sphinxhyphen{}22, Exercise 3.)}
 
 
 
@@ -4041,7 +4169,7 @@ being \(i_2 = i_{e_2} + i_{L_1} + i_{R_4}\) the sum of the current in the parall
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-06-19-exe-02}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.16 (Exam 2024\sphinxhyphen{}06\sphinxhyphen{}19, Exercise 2.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.16 (Exam 2024\sphinxhyphen{}06\sphinxhyphen{}19, Exercise 2.)}
 
 
 
@@ -4053,7 +4181,7 @@ being \(i_2 = i_{e_2} + i_{L_1} + i_{R_4}\) the sum of the current in the parall
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-02-13-exe-01-a}
 
-\begin{sphinxadmonition}{note}{Exercise 10.7.17 (Exam 2024\sphinxhyphen{}02\sphinxhyphen{}13, Exercise 1a.)}
+\begin{sphinxadmonition}{note}{Exercise 6.7.17 (Exam 2024\sphinxhyphen{}02\sphinxhyphen{}13, Exercise 1a.)}
 
 
 
@@ -4109,7 +4237,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-26 apr 2025
+28 apr 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -4447,7 +4575,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-26 apr 2025
+28 apr 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}

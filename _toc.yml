@@ -16,6 +16,10 @@ parts:
     - file: ch/principles-potentials
     - file: ch/principles-matter
     - file: ch/principles-relativity
+  - file: ch/waves
+    sections:
+    - file: ch/waves-equation
+    - file: ch/waves-plane
   - file: ch/energy
     sections:
     - file: ch/energy-momentum-balance
@@ -26,10 +30,6 @@ parts:
     - file: ch/regimes-electrostatics
     - file: ch/regimes-steady
     - file: ch/regimes-slow
-    - file: ch/waves
-      sections:
-      - file: ch/waves-equation
-      - file: ch/waves-plane
 - caption: Electric Engineering
   numbered: true
   chapters:
