@@ -375,7 +375,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vacuum">4.1. Vacuum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-electromagnetism-in-matter">4.1. Equations of electromagnetism in matter</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-media">4.2. Continuous Media</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarization">4.3. Polarization</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-electric-dipole">4.3.1. Single Electric Dipole</a></li>
@@ -411,126 +411,175 @@ document.write(`
 -->
 <div class="tex2jax_ignore mathjax_ignore section" id="electromagnetism-in-matter">
 <span id="classical-electromagnetism-media"></span><h1><span class="section-number">4. </span>Electromagnetism in Matter<a class="headerlink" href="#electromagnetism-in-matter" title="Permalink to this heading">#</a></h1>
-<p><strong>todo</strong></p>
-<div class="section" id="vacuum">
-<h2><span class="section-number">4.1. </span>Vacuum<a class="headerlink" href="#vacuum" title="Permalink to this heading">#</a></h2>
-<p>Electromagnetic phenomena in a vacuum are governed by Maxwell’s equations in a vacuum,</p>
+<p>Electromagnetism in matter requires the description of the behavior of the matter involved in the process. In general, a medium immersed in an electromagnetic field may respond with local charge distributions, resulting in <a class="reference internal" href="#classical-electromagnetism-media-polarization"><span class="std std-ref"><strong>polarization</strong></span></a> and <a class="reference internal" href="#classical-electromagnetism-media-magnetization"><span class="std std-ref"><strong>magnetization</strong></span></a>. Total electric <span class="math notranslate nohighlight">\(\vec{e}(\vec{r},t)\)</span> and magnetic field <span class="math notranslate nohighlight">\(\vec{b}(\vec{r},t)\)</span> can be written as the sum of contributions of free charges <span class="math notranslate nohighlight">\(\rho_f\)</span> and currents <span class="math notranslate nohighlight">\(\vec{j}_f\)</span> and bound charges <span class="math notranslate nohighlight">\(\rho_b\)</span> and currents <span class="math notranslate nohighlight">\(\vec{j}_b\)</span>.</p>
+<p>Bound charge density represents local separation of charges of molecules of dielectric media immersed in electric field, that can be represented as a volume distribution of charge dipole,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
-\nabla \cdot \mathbf{e} = \frac{\rho}{\varepsilon_0} \\
-\nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\
-\nabla \cdot \mathbf{b} = 0 \\
-\nabla \times \mathbf{b} - \mu_0 \varepsilon_0 \partial_t \mathbf{e} = \mu_0 \mathbf{j}
+\[\rho = \rho_f + \rho_b = \rho_f + \rho_P \ .\]</div>
+<p>Bound current density represents two effects: the variation of polarization charge and the orientation of Amperian currents - «non random» currents in the molecules of the medium, producing net contribution to the magnetic field, and can be represented as a volume distribution of elementary loop currents.</p>
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \vec{j} &amp; = \vec{j}_f + \vec{j}_b 
+            = \vec{j}_f + \vec{j}_P + \vec{j}_M  \ .
+\end{aligned}\]</div>
+<p>As it will shown below, the bound current can be written as the divergence of the polarization field <span class="math notranslate nohighlight">\(\vec{p}\)</span>, representing the volume density fo the dipole distribution, and the magnetization current as the curl of the magnetization field <span class="math notranslate nohighlight">\(\vec{m}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\rho_p = - \nabla \cdot \vec{p} \quad , \quad \vec{j}_M = \nabla \times \vec{m} \ .\]</div>
+<div class="section" id="equations-of-electromagnetism-in-matter">
+<span id="classical-electromagnetism-media-vacuum-to-matter"></span><h2><span class="section-number">4.1. </span>Equations of electromagnetism in matter<a class="headerlink" href="#equations-of-electromagnetism-in-matter" title="Permalink to this heading">#</a></h2>
+<p>Introducing the splitting of free and bound charge and current into the equations of the electromagnetism, namely electric charge continuity and Maxwell’s equations,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\partial_t \rho + \nabla \cdot \vec{j} = 0
+\qquad , \qquad
+\begin{cases}
+\nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
+\nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
+\nabla \cdot \vec{b} = 0 \\
+\nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} = \mu_0 \vec{j}
 \end{cases}\end{split}\]</div>
-<p>and by the continuity equation of electric charge,</p>
+<p>and more precisely</p>
+<ul>
+<li><p>into Gauss” law for the electric field</p>
 <div class="math notranslate nohighlight">
-\[\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ .\]</div>
+\[\begin{split}\begin{aligned}
+    &amp; 0  = \nabla \cdot \vec{e} - \frac{\rho}{\varepsilon_0} = \nabla \cdot \vec{e} - \frac{\rho_f - \nabla \cdot \vec{p}}{\varepsilon_0}  \\ \\
+    &amp; \rightarrow \qquad \nabla \cdot \vec{d} = \rho_f \ ,
+  \end{aligned}\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\vec{d} = \varepsilon_0 \vec{e} + \vec{p}\)</span> defined as the <strong>displacement field</strong>.</p>
+</li>
+<li><p>into continuity equation</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    0 
+    &amp; = \partial_t \rho + \nabla \cdot \vec{j} = \\
+    &amp; = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_b + \nabla \cdot ( \vec{j}_P + \nabla \times \vec{j}_M ) = \\
+  \end{split}\]</div>
+<p>since <span class="math notranslate nohighlight">\(\nabla \cdot \nabla \times \vec{m} \equiv 0\)</span>, and keeping separated the contributions of free and bound charges,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     &amp; \partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \\
+     &amp; \partial_t \rho_P + \nabla \cdot \vec{j}_P = 0 \\ \\
+     &amp; \rightarrow \qquad \vec{j}_P = \partial_t \vec{p} \ .
+  \end{aligned}\end{split}\]</div>
+</li>
+<li><p>and into Ampére-Maxwell’s law</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \vec{0}
+    &amp; = \nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} - \mu_0 \vec{j} = \\
+    &amp; = \nabla \times \vec{b} - \mu_0 \, \partial_t \left( \vec{d} - \vec{p} \right) - \mu_0 \vec{j}_f - \mu_0 \partial_t \vec{p} - \mu_0 \nabla \times \vec{m} \\
+    &amp; = \nabla \times \left( \vec{b} - \mu_0 \vec{m} \right) - \ mu_0 \, \partial_t \vec{d} - \mu_0 \vec{j}_f \\ \\ 
+    &amp; \rightarrow \qquad \nabla \times \vec{h}  - \, \partial_t \vec{d} = \vec{j}_f \ ,
+  \end{aligned}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\vec{h} := \vec{b} - \mu_0 \vec{m}\)</span>, the <strong>magnetic field strength</strong>.</p>
+</li>
+</ul>
 </div>
 <div class="section" id="continuous-media">
 <h2><span class="section-number">4.2. </span>Continuous Media<a class="headerlink" href="#continuous-media" title="Permalink to this heading">#</a></h2>
-<p>In general, some materials respond to an imposed «external» electromagnetic field with polarization and magnetization. In particular, the electric polarization of a material corresponds to a local separation of electric charges, macroscopically equivalent to a volume density of dipoles, <span class="math notranslate nohighlight">\(\mathbf{p}(\mathbf{r}_0)\)</span>; magnetization corresponds to an orientation of the axes of Amperian current loops, macroscopically equivalent to a density of magnetic moment <span class="math notranslate nohighlight">\(\mathbf{m}(\mathbf{r}_0)\)</span>.</p>
+<p>In general, some materials respond to an imposed «external» electromagnetic field with polarization and magnetization. In particular, the electric polarization of a material corresponds to a local separation of electric charges, macroscopically equivalent to a volume density of dipoles, <span class="math notranslate nohighlight">\(\vec{p}(\vec{r}_0)\)</span>; magnetization corresponds to an orientation of the axes of Amperian current loops, macroscopically equivalent to a density of magnetic moment <span class="math notranslate nohighlight">\(\vec{m}(\vec{r}_0)\)</span>.</p>
 </div>
 <div class="section" id="polarization">
-<h2><span class="section-number">4.3. </span>Polarization<a class="headerlink" href="#polarization" title="Permalink to this heading">#</a></h2>
+<span id="classical-electromagnetism-media-polarization"></span><h2><span class="section-number">4.3. </span>Polarization<a class="headerlink" href="#polarization" title="Permalink to this heading">#</a></h2>
 <div class="section" id="single-electric-dipole">
 <h3><span class="section-number">4.3.1. </span>Single Electric Dipole<a class="headerlink" href="#single-electric-dipole" title="Permalink to this heading">#</a></h3>
-<p>A discrete electric dipole is formed by two equal and opposite electric charges <span class="math notranslate nohighlight">\(q\)</span>, <span class="math notranslate nohighlight">\(-q\)</span>, at points <span class="math notranslate nohighlight">\(P_+\)</span>, <span class="math notranslate nohighlight">\(P_- = P_+ \mathbf{l}\)</span>, in the limit <span class="math notranslate nohighlight">\(q \rightarrow +\infty\)</span>, <span class="math notranslate nohighlight">\(|\mathbf{l}| \rightarrow 0\)</span> with <span class="math notranslate nohighlight">\(q |\mathbf{l}|\)</span> finite.</p>
-<p>The electric field (stationary <strong>todo</strong> <em>check what happens in the non-stationary case. Perhaps after deriving the general solution to the problem, as a solution to the wave equations in terms of EM potentials</em>) generated at the point in space <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> by an electric dipole at the point <span class="math notranslate nohighlight">\(\mathbf{r}_0\)</span> is calculated as the limit of the electric field generated by two equal and opposite charges <span class="math notranslate nohighlight">\(q^{\mp}\)</span> at the points <span class="math notranslate nohighlight">\(\mathbf{r}_0 \mp \frac{\mathbf{l}}{2}\)</span>,</p>
+<p>A discrete electric dipole is formed by two equal and opposite electric charges <span class="math notranslate nohighlight">\(q\)</span>, <span class="math notranslate nohighlight">\(-q\)</span>, at points <span class="math notranslate nohighlight">\(P_+\)</span>, <span class="math notranslate nohighlight">\(P_- = P_+ \vec{l}\)</span>, in the limit <span class="math notranslate nohighlight">\(q \rightarrow +\infty\)</span>, <span class="math notranslate nohighlight">\(|\vec{l}| \rightarrow 0\)</span> with <span class="math notranslate nohighlight">\(q |\vec{l}|\)</span> finite.</p>
+<p>The electric field (stationary <strong>todo</strong> <em>check what happens in the non-stationary case. Perhaps after deriving the general solution to the problem, as a solution to the wave equations in terms of EM potentials</em>) generated at the point in space <span class="math notranslate nohighlight">\(\vec{r}\)</span> by an electric dipole at the point <span class="math notranslate nohighlight">\(\vec{r}_0\)</span> is calculated as the limit of the electric field generated by two equal and opposite charges <span class="math notranslate nohighlight">\(q^{\mp}\)</span> at the points <span class="math notranslate nohighlight">\(\vec{r}_0 \mp \frac{\vec{l}}{2}\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\mathbf{e}(\mathbf{r}) = -\frac{q}{4 \pi \varepsilon_0} \frac{\mathbf{r} - \left( \mathbf{r}_0 - \frac{\mathbf{l}}{2} \right)}{\left|\mathbf{r} - \left( \mathbf{r}_0 - \frac{\mathbf{l}}{2} \right)\right|^3} + \frac{q}{4 \pi \varepsilon_0} \frac{\mathbf{r} - \left( \mathbf{r}_0 + \frac{\mathbf{l}}{2} \right)}{\left|\mathbf{r} - \left( \mathbf{r}_0 + \frac{\mathbf{l}}{2} \right)\right|^3} \ .\]</div>
+\[\vec{e}(\vec{r}) = -\frac{q}{4 \pi \varepsilon_0} \frac{\vec{r} - \left( \vec{r}_0 - \frac{\vec{l}}{2} \right)}{\left|\vec{r} - \left( \vec{r}_0 - \frac{\vec{l}}{2} \right)\right|^3} + \frac{q}{4 \pi \varepsilon_0} \frac{\vec{r} - \left( \vec{r}_0 + \frac{\vec{l}}{2} \right)}{\left|\vec{r} - \left( \vec{r}_0 + \frac{\vec{l}}{2} \right)\right|^3} \ .\]</div>
 <p>Using the formula for the derivative of the terms</p>
 <div class="math notranslate nohighlight">
-\[\partial_{\ell_k} \frac{x_i \pm \frac{\ell_i}{2}}{\left|\mathbf{x} \pm \frac{\mathbf{l}}{2} \right|^3} = \frac{1}{2} \left[ \pm \frac{\delta_{ik}}{r^3} - 3 r^{-4} \left( \pm \frac{x_k \pm \frac{\ell_k}{2}}{r} \right) \right]\]</div>
+\[\partial_{\ell_k} \frac{x_i \pm \frac{\ell_i}{2}}{\left|\vec{x} \pm \frac{\vec{l}}{2} \right|^3} = \frac{1}{2} \left[ \pm \frac{\delta_{ik}}{r^3} - 3 r^{-4} \left( \pm \frac{x_k \pm \frac{\ell_k}{2}}{r} \right) \right]\]</div>
 <div class="math notranslate nohighlight">
-\[\left. \partial_{\ell_k} \frac{x_i \pm \frac{\ell_i}{2}}{\left|\mathbf{x} \pm \frac{\mathbf{l}}{2} \right|^3} \right|_{\mathbf{l} = \mathbf{0}} = \mp \frac{1}{2} \left[ - \frac{\delta_{ik}}{|\mathbf{x}|^3} + 3 \left( \frac{x_k}{r^5} \right) \right] = \mp \frac{1}{2} \partial_{r_{0 k}} \frac{r_i - r_{0 i}}{|\mathbf{r} - \mathbf{r}_0|^3} = \mp \frac{1}{2} \nabla_{\mathbf{r}_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \]</div>
-<p>we derive the first-order approximation in <span class="math notranslate nohighlight">\(\mathbf{l}\)</span> of the two terms</p>
+\[\left. \partial_{\ell_k} \frac{x_i \pm \frac{\ell_i}{2}}{\left|\vec{x} \pm \frac{\vec{l}}{2} \right|^3} \right|_{\vec{l} = \vec{0}} = \mp \frac{1}{2} \left[ - \frac{\delta_{ik}}{|\vec{x}|^3} + 3 \left( \frac{x_k}{r^5} \right) \right] = \mp \frac{1}{2} \partial_{r_{0 k}} \frac{r_i - r_{0 i}}{|\vec{r} - \vec{r}_0|^3} = \mp \frac{1}{2} \nabla_{\vec{r}_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \]</div>
+<p>we derive the first-order approximation in <span class="math notranslate nohighlight">\(\vec{l}\)</span> of the two terms</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \frac{\mathbf{r} - \left( \mathbf{r}_0 \mp \frac{\mathbf{l}}{2} \right)}{\left|\mathbf{r} - \left( \mathbf{r}_0 \mp \frac{\mathbf{l}}{2} \right)\right|^3}
-  &amp; = \frac{\mathbf{r} - \mathbf{r}_0 }{\left|\mathbf{r} - \mathbf{r}_0 \right|^3} \pm \mathbf{l} \cdot \frac{1}{2} \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) + o(|\mathbf{l}|)\\
+  \frac{\vec{r} - \left( \vec{r}_0 \mp \frac{\vec{l}}{2} \right)}{\left|\vec{r} - \left( \vec{r}_0 \mp \frac{\vec{l}}{2} \right)\right|^3}
+  &amp; = \frac{\vec{r} - \vec{r}_0 }{\left|\vec{r} - \vec{r}_0 \right|^3} \pm \vec{l} \cdot \frac{1}{2} \nabla_{\vec{r}_0} \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) + o(|\vec{l}|)\\
 \end{aligned}\end{split}\]</div>
-<p>and, defining the dipole intensity <span class="math notranslate nohighlight">\(\mathbf{P}_0 := q \mathbf{l}\)</span> and taking the quantities to the desired limit, that of the electric field</p>
+<p>and, defining the dipole intensity <span class="math notranslate nohighlight">\(\vec{P}_0 := q \vec{l}\)</span> and taking the quantities to the desired limit, that of the electric field</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \mathbf{e}(\mathbf{r})
-  &amp; = - \frac{1}{4\pi \varepsilon_0} \, \mathbf{P}_0 \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right)   = \\
-  &amp; = - \frac{1}{4\pi \varepsilon_0} \left[ \frac{(\mathbf{r}-\mathbf{r}_0)(\mathbf{r}-\mathbf{r}_0)}{|\mathbf{r}-\mathbf{r}_0|^5} \cdot \mathbf{P}_0 - \frac{\mathbf{P}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \right] = \\
-  &amp; = - \frac{1}{4\pi \varepsilon_0} \left[ \frac{(\mathbf{r}-\mathbf{r}_0) \otimes (\mathbf{r}-\mathbf{r}_0)}{|\mathbf{r}-\mathbf{r}_0|^5} - \frac{\mathbb{I}}{|\mathbf{r}-\mathbf{r}_0|^3} \right] \cdot \mathbf{P}_0 \ .
+  \vec{e}(\vec{r})
+  &amp; = - \frac{1}{4\pi \varepsilon_0} \, \vec{P}_0 \cdot \nabla_{\vec{r}_0}  \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right)   = \\
+  &amp; = - \frac{1}{4\pi \varepsilon_0} \left[ \frac{(\vec{r}-\vec{r}_0)(\vec{r}-\vec{r}_0)}{|\vec{r}-\vec{r}_0|^5} \cdot \vec{P}_0 - \frac{\vec{P}_0}{|\vec{r}-\vec{r}_0|^3} \right] = \\
+  &amp; = - \frac{1}{4\pi \varepsilon_0} \left[ \frac{(\vec{r}-\vec{r}_0) \otimes (\vec{r}-\vec{r}_0)}{|\vec{r}-\vec{r}_0|^5} - \frac{\mathbb{I}}{|\vec{r}-\vec{r}_0|^3} \right] \cdot \vec{P}_0 \ .
 \end{aligned}\end{split}\]</div>
 <p><strong>todo</strong> In the general case, it would be necessary to pay attention to the order of the factors in the product between vectors and tensors, but in this case, the symmetry of the second-order tensor (or of the operations) can be exploited.</p>
 </div>
 <div class="section" id="continuous-distribution-of-dipoles">
 <h3><span class="section-number">4.3.2. </span>Continuous Distribution of Dipoles<a class="headerlink" href="#continuous-distribution-of-dipoles" title="Permalink to this heading">#</a></h3>
-<p>A distribution of dipoles with volume density <span class="math notranslate nohighlight">\(\mathbf{p}(\mathbf{r_0})\)</span>, which produces the elementary dipole <span class="math notranslate nohighlight">\(\Delta \mathbf{P}(\mathbf{r}_0) = \mathbf{p}(\mathbf{r}_0) dV_0\)</span> in the volume <span class="math notranslate nohighlight">\(d V_0\)</span>, produces the electric field</p>
+<p>A distribution of dipoles with volume density <span class="math notranslate nohighlight">\(\vec{p}(\vec{r_0})\)</span>, which produces the elementary dipole <span class="math notranslate nohighlight">\(\Delta \vec{P}(\vec{r}_0) = \vec{p}(\vec{r}_0) dV_0\)</span> in the volume <span class="math notranslate nohighlight">\(d V_0\)</span>, produces the electric field</p>
 <div class="math notranslate nohighlight">
-\[\mathbf{e}(\mathbf{r}) = \int_{\mathbf{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \mathbf{p}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \ , \]</div>
+\[\vec{e}(\vec{r}) = \int_{\vec{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \vec{p}(\vec{r}_0) \cdot \nabla_{\vec{r}_0}  \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) \ , \]</div>
 <p>whose expression can be rewritten using the rules of integration by parts</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-\mathbf{e}(\mathbf{r})
-  &amp; = \int_{\mathbf{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \mathbf{p}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
-  &amp; = \oint_{\mathbf{r}_0 \in \partial V_0} \frac{1}{4 \pi \varepsilon_0}  \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \underbrace{ \hat{\mathbf{n}}(\mathbf{r}_0) \cdot \mathbf{p}(\mathbf{r}_0) }_{ =: \sigma_P(\mathbf{r}_0)}  + \int_{\mathbf{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \underbrace{ \left( - \nabla_{\mathbf{r}_0} \cdot \mathbf{p}(\mathbf{r}_0) \right)}_{ =: \rho_P(\mathbf{r}_0) } \ , \\
+\vec{e}(\vec{r})
+  &amp; = \int_{\vec{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \vec{p}(\vec{r}_0) \cdot \nabla_{\vec{r}_0}  \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) = \\
+  &amp; = \oint_{\vec{r}_0 \in \partial V_0} \frac{1}{4 \pi \varepsilon_0}  \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \underbrace{ \hat{\vec{n}}(\vec{r}_0) \cdot \vec{p}(\vec{r}_0) }_{ =: \sigma_P(\vec{r}_0)}  + \int_{\vec{r}_0 \in V_0} \frac{1}{4 \pi \varepsilon_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \underbrace{ \left( - \nabla_{\vec{r}_0} \cdot \vec{p}(\vec{r}_0) \right)}_{ =: \rho_P(\vec{r}_0) } \ , \\
 \end{aligned}\end{split}\]</div>
 <p>having defined the surface polarization charge density <span class="math notranslate nohighlight">\(\sigma_P\)</span> and the volume polarization charge density <span class="math notranslate nohighlight">\(\rho_P\)</span> as the intensities of the distributed sources of the electric field, in analogy with the expression of Coulomb’s law.</p>
 </div>
 <div class="section" id="reformulation-of-maxwell-s-equations-and-charge-continuity">
 <h3><span class="section-number">4.3.3. </span>Reformulation of Maxwell’s Equations and Charge Continuity<a class="headerlink" href="#reformulation-of-maxwell-s-equations-and-charge-continuity" title="Permalink to this heading">#</a></h3>
-<p>Gauss’s equation determines the volume flux density of the electric field <span class="math notranslate nohighlight">\(\mathbf{e}\)</span>,</p>
+<p>Gauss’s equation determines the volume flux density of the electric field <span class="math notranslate nohighlight">\(\vec{e}\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\nabla \cdot \mathbf{e} = \frac{\rho}{\varepsilon_0} \ .\]</div>
-<p>By decomposing the charge density as the sum of <strong>free charges</strong> <span class="math notranslate nohighlight">\(\rho_f\)</span> and <strong>polarization charges</strong> <span class="math notranslate nohighlight">\(\rho_P := - \nabla \cdot \mathbf{p}\)</span>, we can rework Gauss’s equation,</p>
+\[\nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \ .\]</div>
+<p>By decomposing the charge density as the sum of <strong>free charges</strong> <span class="math notranslate nohighlight">\(\rho_f\)</span> and <strong>polarization charges</strong> <span class="math notranslate nohighlight">\(\rho_P := - \nabla \cdot \vec{p}\)</span>, we can rework Gauss’s equation,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
- &amp; \nabla \cdot \mathbf{e} = \frac{\rho_f + \rho_P}{\varepsilon_0} \\
- &amp; \nabla \cdot \left( \varepsilon_0 \mathbf{e} + \mathbf{p} \right) = \rho_f \\ \\
- &amp; \nabla \cdot \mathbf{d} = \rho_f \ ,
+ &amp; \nabla \cdot \vec{e} = \frac{\rho_f + \rho_P}{\varepsilon_0} \\
+ &amp; \nabla \cdot \left( \varepsilon_0 \vec{e} + \vec{p} \right) = \rho_f \\ \\
+ &amp; \nabla \cdot \vec{d} = \rho_f \ ,
 \end{aligned}\end{split}\]</div>
-<p>having introduced the <strong>displacement field</strong>, <span class="math notranslate nohighlight">\(\mathbf{d} := \varepsilon_0 \mathbf{e} + \mathbf{p}\)</span>.</p>
-<p>The decomposition of the electric current as the sum <span class="math notranslate nohighlight">\(\mathbf{j} = \mathbf{j}_f + \mathbf{j}_P\)</span> of the free current <span class="math notranslate nohighlight">\(\mathbf{j}_f\)</span> and the polarization current <span class="math notranslate nohighlight">\(\mathbf{j}_P\)</span>, allows us to rework the continuity equation of electric charge</p>
+<p>having introduced the <strong>displacement field</strong>, <span class="math notranslate nohighlight">\(\vec{d} := \varepsilon_0 \vec{e} + \vec{p}\)</span>.</p>
+<p>The decomposition of the electric current as the sum <span class="math notranslate nohighlight">\(\vec{j} = \vec{j}_f + \vec{j}_P\)</span> of the free current <span class="math notranslate nohighlight">\(\vec{j}_f\)</span> and the polarization current <span class="math notranslate nohighlight">\(\vec{j}_P\)</span>, allows us to rework the continuity equation of electric charge</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  0 &amp; = \partial_t \rho + \nabla \cdot \mathbf{j} = \\
-    &amp; = \partial_t (\rho_f + \rho_P) + \nabla \cdot \left( \mathbf{j}_f + \mathbf{j}_P \right) = \\
-    &amp; = \partial_t \rho_f + \nabla \cdot  \mathbf{j}_f + \partial_t \rho_P + \nabla \cdot \mathbf{j}_P \ ,
+  0 &amp; = \partial_t \rho + \nabla \cdot \vec{j} = \\
+    &amp; = \partial_t (\rho_f + \rho_P) + \nabla \cdot \left( \vec{j}_f + \vec{j}_P \right) = \\
+    &amp; = \partial_t \rho_f + \nabla \cdot  \vec{j}_f + \partial_t \rho_P + \nabla \cdot \vec{j}_P \ ,
 \end{aligned}\end{split}\]</div>
 <p>and write the continuity equations for the two charge distributions (of different nature, it is assumed that both must satisfy charge continuity independently, if free charges remain free and polarization charges remain polarization charges),</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  &amp; \partial_t \rho_f + \nabla \cdot \mathbf{j}_f = 0 \\
-  &amp; \partial_t \rho_P + \nabla \cdot \mathbf{j}_P = 0 \qquad \rightarrow \qquad 0 = \nabla \cdot (-\partial_t \mathbf{p} + \mathbf{j}_P) \qquad \rightarrow \qquad \mathbf{j}_P = \partial_t \mathbf{p}
+  &amp; \partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \\
+  &amp; \partial_t \rho_P + \nabla \cdot \vec{j}_P = 0 \qquad \rightarrow \qquad 0 = \nabla \cdot (-\partial_t \vec{p} + \vec{j}_P) \qquad \rightarrow \qquad \vec{j}_P = \partial_t \vec{p}
 \end{aligned}\end{split}\]</div>
 <p><strong>todo</strong> <em>justify absence of constant field</em></p>
 </div>
 </div>
 <div class="section" id="magnetization">
-<h2><span class="section-number">4.4. </span>Magnetization<a class="headerlink" href="#magnetization" title="Permalink to this heading">#</a></h2>
+<span id="classical-electromagnetism-media-magnetization"></span><h2><span class="section-number">4.4. </span>Magnetization<a class="headerlink" href="#magnetization" title="Permalink to this heading">#</a></h2>
 <div class="section" id="single-magnetic-moment-limit-of-an-elementary-loop">
 <h3><span class="section-number">4.4.1. </span>Single Magnetic Moment (Limit of an Elementary Loop)<a class="headerlink" href="#single-magnetic-moment-limit-of-an-elementary-loop" title="Permalink to this heading">#</a></h3>
-<p>Using the Biot-Savart law, specialized for a conductor carrying current <span class="math notranslate nohighlight">\(i(\mathbf{r}_0)\)</span></p>
+<p>Using the Biot-Savart law, specialized for a conductor carrying current <span class="math notranslate nohighlight">\(i(\vec{r}_0)\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  d \mathbf{b}(\mathbf{r})
-  &amp; = - \frac{\mu}{4 \pi} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \mathbf{j}(\mathbf{r}_0) d V_0 = \\
-  &amp; = - \frac{\mu}{4 \pi} i(\mathbf{r}_0) \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \hat{\mathbf{t}}(\mathbf{r}_0) d \ell_0 \ ,
+  d \vec{b}(\vec{r})
+  &amp; = - \frac{\mu}{4 \pi} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \vec{j}(\vec{r}_0) d V_0 = \\
+  &amp; = - \frac{\mu}{4 \pi} i(\vec{r}_0) \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \hat{\vec{t}}(\vec{r}_0) d \ell_0 \ ,
 \end{aligned}\end{split}\]</div>
 <p>we can calculate the magnetic field generated by a loop with path <span class="math notranslate nohighlight">\(\ell_0 = \partial S_0\)</span> using the PSCE</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \mathbf{b}(\mathbf{r})
-  &amp; = \oint_{\ell_0} d \mathbf{b}(\mathbf{r}_0) = \\
-  &amp; = - \frac{\mu}{4 \pi} i_0 \oint_{\mathbf{r}_0 \in \ell_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \hat{\mathbf{t}}(\mathbf{r}_0)  = \\
-  &amp; =   \frac{\mu}{4 \pi} i_0 \int_{\mathbf{r}_0 \in S_0} \hat{\mathbf{n}}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right)
+  \vec{b}(\vec{r})
+  &amp; = \oint_{\ell_0} d \vec{b}(\vec{r}_0) = \\
+  &amp; = - \frac{\mu}{4 \pi} i_0 \oint_{\vec{r}_0 \in \ell_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \hat{\vec{t}}(\vec{r}_0)  = \\
+  &amp; =   \frac{\mu}{4 \pi} i_0 \int_{\vec{r}_0 \in S_0} \hat{\vec{n}}(\vec{r}_0) \cdot \nabla_{\vec{r}_0} \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right)
 \end{aligned}\end{split}\]</div>
-<p>The field generated by an elementary loop of surface <span class="math notranslate nohighlight">\(S_0\)</span> with normal <span class="math notranslate nohighlight">\(\hat{\mathbf{n}}_0\)</span>, using the mean value theorem, is</p>
+<p>The field generated by an elementary loop of surface <span class="math notranslate nohighlight">\(S_0\)</span> with normal <span class="math notranslate nohighlight">\(\hat{\vec{n}}_0\)</span>, using the mean value theorem, is</p>
 <div class="math notranslate nohighlight">
-\[\mathbf{b}(\mathbf{r}) = \frac{\mu}{4 \pi} i_0 S_0 \hat{\mathbf{n}}_0 \cdot \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) + o(S_0)\]</div>
-<p>and as <span class="math notranslate nohighlight">\(i_0 \rightarrow \infty\)</span>, <span class="math notranslate nohighlight">\(S_0 \rightarrow 0\)</span> such that <span class="math notranslate nohighlight">\(\mathbf{M}_0 := i_0 S_0 \hat{\mathbf{n}}_0\)</span></p>
+\[\vec{b}(\vec{r}) = \frac{\mu}{4 \pi} i_0 S_0 \hat{\vec{n}}_0 \cdot \nabla_{\vec{r}_0} \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) + o(S_0)\]</div>
+<p>and as <span class="math notranslate nohighlight">\(i_0 \rightarrow \infty\)</span>, <span class="math notranslate nohighlight">\(S_0 \rightarrow 0\)</span> such that <span class="math notranslate nohighlight">\(\vec{M}_0 := i_0 S_0 \hat{\vec{n}}_0\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
- \mathbf{b}(\mathbf{r})
-  &amp; = \frac{\mu}{4 \pi} \mathbf{M}_0 \cdot \nabla_{\mathbf{r}_0} \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \\
-  &amp; = - \frac{\mu_0}{4\pi} \left[ \frac{(\mathbf{r}-\mathbf{r}_0)(\mathbf{r}-\mathbf{r}_0)}{|\mathbf{r}-\mathbf{r}_0|^5} \cdot \mathbf{M}_0 - \frac{\mathbf{M}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \right] = \\
-  &amp; = - \frac{\mu_0}{4\pi} \left[ \frac{(\mathbf{r}-\mathbf{r}_0) \otimes (\mathbf{r}-\mathbf{r}_0)}{|\mathbf{r}-\mathbf{r}_0|^5} - \frac{\mathbb{I}}{|\mathbf{r}-\mathbf{r}_0|^3} \right] \cdot \mathbf{M}_0 \ .
+ \vec{b}(\vec{r})
+  &amp; = \frac{\mu}{4 \pi} \vec{M}_0 \cdot \nabla_{\vec{r}_0} \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) \\
+  &amp; = - \frac{\mu_0}{4\pi} \left[ \frac{(\vec{r}-\vec{r}_0)(\vec{r}-\vec{r}_0)}{|\vec{r}-\vec{r}_0|^5} \cdot \vec{M}_0 - \frac{\vec{M}_0}{|\vec{r}-\vec{r}_0|^3} \right] = \\
+  &amp; = - \frac{\mu_0}{4\pi} \left[ \frac{(\vec{r}-\vec{r}_0) \otimes (\vec{r}-\vec{r}_0)}{|\vec{r}-\vec{r}_0|^5} - \frac{\mathbb{I}}{|\vec{r}-\vec{r}_0|^3} \right] \cdot \vec{M}_0 \ .
 \end{aligned}\end{split}\]</div>
 <p><strong>todo</strong> Analogy with the electric field produced by a distribution of dipoles.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -543,15 +592,15 @@ Details<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\oint_{\partial S} A \, t_i = \int_S \varepsilon_{ijk} \, n_j \, \partial_k A
 \qquad , \qquad
-  \oint_{\partial S} A \, \hat{\mathbf{t}} = \int_S \hat{\mathbf{n}} \times \nabla A\]</div>
+  \oint_{\partial S} A \, \hat{\vec{t}} = \int_S \hat{\vec{n}} \times \nabla A\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-\oint_{\mathbf{r}_0 \in \ell_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \hat{\mathbf{t}}(\mathbf{r}_0) d \ell_0
-  &amp; = \oint_{\mathbf{r}_0 \in \ell_0} \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3}  t_k = \\
-  &amp; = \int_{\mathbf{r}_0 \in S_0} \varepsilon_{krs} n_r \partial^0_s \left( \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
-  &amp; = \int_{\mathbf{r}_0 \in S_0} \left( \delta_{ir} \delta_{js} - \delta_{is} \delta_{jr} \right) n_r \partial^0_s \left( \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
-  &amp; = \int_{\mathbf{r}_0 \in S_0} \left\{ n_i \underbrace{\partial^0_j \left( \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right)}_{=0} - n_j \partial^0_i \left( \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \right\} = \\
-  &amp; = - \int_{\mathbf{r}_0 \in S_0} n_j \partial^0_i \left( \frac{r_j - r_{0,j}}{|\mathbf{r} - \mathbf{r}_0|^3} \right) \ .
+\oint_{\vec{r}_0 \in \ell_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \hat{\vec{t}}(\vec{r}_0) d \ell_0
+  &amp; = \oint_{\vec{r}_0 \in \ell_0} \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3}  t_k = \\
+  &amp; = \int_{\vec{r}_0 \in S_0} \varepsilon_{krs} n_r \partial^0_s \left( \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right) = \\
+  &amp; = \int_{\vec{r}_0 \in S_0} \left( \delta_{ir} \delta_{js} - \delta_{is} \delta_{jr} \right) n_r \partial^0_s \left( \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right) = \\
+  &amp; = \int_{\vec{r}_0 \in S_0} \left\{ n_i \underbrace{\partial^0_j \left( \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right)}_{=0} - n_j \partial^0_i \left( \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right) \right\} = \\
+  &amp; = - \int_{\vec{r}_0 \in S_0} n_j \partial^0_i \left( \frac{r_j - r_{0,j}}{|\vec{r} - \vec{r}_0|^3} \right) \ .
 \end{aligned}\end{split}\]</div>
 </div>
 </details></div>
@@ -560,11 +609,11 @@ Details<div class="sd-summary-down docutils">
 <p>To calculate the magnetic field generated by a volume distribution of magnetic moment, we can proceed in analogy with what was done to calculate the electric field generated by a distribution of dipoles</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-\mathbf{b}(\mathbf{r})
-  &amp; = \int_{\mathbf{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \mathbf{m}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
-  &amp; = \oint_{\mathbf{r}_0 \in \partial V_0} \frac{\mu_0}{4 \pi}  \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \hat{\mathbf{n}}(\mathbf{r}_0) \cdot \mathbf{m}(\mathbf{r}_0) + \int_{\mathbf{r}_0 \in V_0} \frac{\mu_0}{4 \pi} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \,\left( - \nabla_{\mathbf{r}_0} \cdot \mathbf{m}(\mathbf{r}_0) \right) \ , \\
+\vec{b}(\vec{r})
+  &amp; = \int_{\vec{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \vec{m}(\vec{r}_0) \cdot \nabla_{\vec{r}_0}  \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) = \\
+  &amp; = \oint_{\vec{r}_0 \in \partial V_0} \frac{\mu_0}{4 \pi}  \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \hat{\vec{n}}(\vec{r}_0) \cdot \vec{m}(\vec{r}_0) + \int_{\vec{r}_0 \in V_0} \frac{\mu_0}{4 \pi} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \,\left( - \nabla_{\vec{r}_0} \cdot \vec{m}(\vec{r}_0) \right) \ , \\
 \end{aligned}\end{split}\]</div>
-<p>but without obtaining an analogy with the expression of the Biot-Savart law, which involves the cross product between the term <span class="math notranslate nohighlight">\(\frac{\mathbf{r}- \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3}\)</span> and a current density <span class="math notranslate nohighlight">\(\mathbf{j}(\mathbf{r}_0)\)</span>.</p>
+<p>but without obtaining an analogy with the expression of the Biot-Savart law, which involves the cross product between the term <span class="math notranslate nohighlight">\(\frac{\vec{r}- \vec{r}_0}{|\vec{r} - \vec{r}_0|^3}\)</span> and a current density <span class="math notranslate nohighlight">\(\vec{j}(\vec{r}_0)\)</span>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Details<div class="sd-summary-down docutils">
@@ -575,48 +624,48 @@ Details<div class="sd-summary-down docutils">
 <p class="sd-card-text">We can rewrite</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \oint_{\mathbf{r}_0 \in \partial V_0} &amp; \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \left( \hat{\mathbf{n}}(\mathbf{r}_0) \times \mathbf{m}(\mathbf{r}_0) \right) \\
-  &amp; = \oint_{\mathbf{r}_0 \in \partial V_0} \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \varepsilon_{krs} n_r m_s = \\
-  &amp; = \int_{\mathbf{r}_0 \in V_0} \left( \delta_{ir} \delta_{js} - \delta_{is} \delta_{jr} \right) \partial^0_r \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_s \right) = \\
-  &amp; = \int_{\mathbf{r}_0 \in V_0} \left\{ \partial^0_i \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j \right) - \partial^0_j \left( \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_i \right)  \right\} = \\
-  &amp; = \int_{\mathbf{r}_0 \in V_0}
-  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j
-         + \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_i m_j
-         - \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_j m_i
-         - \underbrace{ \partial^0_j \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3}}_{=0} m_i
+  \oint_{\vec{r}_0 \in \partial V_0} &amp; \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \left( \hat{\vec{n}}(\vec{r}_0) \times \vec{m}(\vec{r}_0) \right) \\
+  &amp; = \oint_{\vec{r}_0 \in \partial V_0} \varepsilon_{ijk} \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} \varepsilon_{krs} n_r m_s = \\
+  &amp; = \int_{\vec{r}_0 \in V_0} \left( \delta_{ir} \delta_{js} - \delta_{is} \delta_{jr} \right) \partial^0_r \left( \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_s \right) = \\
+  &amp; = \int_{\vec{r}_0 \in V_0} \left\{ \partial^0_i \left( \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_j \right) - \partial^0_j \left( \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_i \right)  \right\} = \\
+  &amp; = \int_{\vec{r}_0 \in V_0}
+  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_j
+         + \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} \partial^0_i m_j
+         - \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} \partial^0_j m_i
+         - \underbrace{ \partial^0_j \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3}}_{=0} m_i
   \right\} = \\
-  &amp; = \int_{\mathbf{r}_0 \in V_0}
-  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} m_j
-         + \varepsilon_{ijk} \varepsilon_{krs} \frac{r_j - r_{0,j}}{|\mathbf{r}-\mathbf{r}_0|^3} \partial^0_r m_s
+  &amp; = \int_{\vec{r}_0 \in V_0}
+  \left\{ \partial^0_i \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} m_j
+         + \varepsilon_{ijk} \varepsilon_{krs} \frac{r_j - r_{0,j}}{|\vec{r}-\vec{r}_0|^3} \partial^0_r m_s
   \right\} = \\
-  &amp; = \int_{\mathbf{r}_0 \in V_0}
-  \left\{ \nabla_{\mathbf{r}_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \cdot \mathbf{m}(\mathbf{r}_0)
-         + \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \times \left( \nabla_{\mathbf{r}_0} \times \mathbf{m}(\mathbf{r}_0) \right)
+  &amp; = \int_{\vec{r}_0 \in V_0}
+  \left\{ \nabla_{\vec{r}_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r}-\vec{r}_0|^3} \cdot \vec{m}(\vec{r}_0)
+         + \frac{\vec{r} - \vec{r}_0}{|\vec{r}-\vec{r}_0|^3} \times \left( \nabla_{\vec{r}_0} \times \vec{m}(\vec{r}_0) \right)
   \right\} = \\
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">using vector calculus identities,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  \mathbf{a} \times (\mathbf{b} \times \mathbf{c}) &amp; = \varepsilon_{ijk} a_j \varepsilon_{krs} b_r c_s = \\
+  \vec{a} \times (\vec{b} \times \vec{c}) &amp; = \varepsilon_{ijk} a_j \varepsilon_{krs} b_r c_s = \\
   &amp; = (\delta_{ir} \delta_{js} - \delta_{is} \delta_{jr}) a_j b_r c_s = \\
-  &amp; = a_j b_i c_j - c_i b_j a_j = \mathbf{b}(\mathbf{a} \cdot \mathbf{c}) - \mathbf{c} (\mathbf{a} \cdot \mathbf{b})
+  &amp; = a_j b_i c_j - c_i b_j a_j = \vec{b}(\vec{a} \cdot \vec{c}) - \vec{c} (\vec{a} \cdot \vec{b})
 \end{aligned}\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
  a_j \partial_i m_j - a_j \partial_j m_i
  &amp; = (\delta_{ir} \delta_{js} - \delta_{is} \delta_{jr}) a_j \partial_r m_s = \\
  &amp; = \varepsilon_{ijk} \varepsilon_{krs} a_j \partial_r m_s = \\
- &amp; = \mathbf{a} \times \left( \nabla \times \mathbf{m} \right)
+ &amp; = \vec{a} \times \left( \nabla \times \vec{m} \right)
 \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">The magnetic field generated by a distribution of magnetic moment can therefore be rewritten as</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-\mathbf{b}(\mathbf{r})
-  &amp; = \int_{\mathbf{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \mathbf{m}(\mathbf{r}_0) \cdot \nabla_{\mathbf{r}_0}  \left( \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \right) = \\
-  &amp; = - \frac{\mu_0}{4\pi} \oint_{\mathbf{r}_0 \in \partial V_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r} - \mathbf{r}_0|^3} \times \underbrace{ \left( - \hat{\mathbf{n}}(\mathbf{r}_0) \times \mathbf{m}(\mathbf{r}_0) \right) }_{\mathbf{j}^s_M}
-  - \frac{\mu_0}{4 \pi} \int_{\mathbf{r}_0 \in V_0} \frac{\mathbf{r} - \mathbf{r}_0}{|\mathbf{r}-\mathbf{r}_0|^3} \times \underbrace{ \left(\nabla_{\mathbf{r}_0} \times \mathbf{m}(\mathbf{r}_0) \right)}_{\mathbf{j}_M} \ ,
+\vec{b}(\vec{r})
+  &amp; = \int_{\vec{r}_0 \in V_0} \frac{\mu_0}{4 \pi } \vec{m}(\vec{r}_0) \cdot \nabla_{\vec{r}_0}  \left( \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \right) = \\
+  &amp; = - \frac{\mu_0}{4\pi} \oint_{\vec{r}_0 \in \partial V_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r} - \vec{r}_0|^3} \times \underbrace{ \left( - \hat{\vec{n}}(\vec{r}_0) \times \vec{m}(\vec{r}_0) \right) }_{\vec{j}^s_M}
+  - \frac{\mu_0}{4 \pi} \int_{\vec{r}_0 \in V_0} \frac{\vec{r} - \vec{r}_0}{|\vec{r}-\vec{r}_0|^3} \times \underbrace{ \left(\nabla_{\vec{r}_0} \times \vec{m}(\vec{r}_0) \right)}_{\vec{j}_M} \ ,
 \end{aligned}\end{split}\]</div>
-<p class="sd-card-text">having defined the surface magnetization current density <span class="math notranslate nohighlight">\(\mathbf{j}^s_M\)</span> and the volume magnetization current density <span class="math notranslate nohighlight">\(\mathbf{j}_M\)</span> as the intensities of the distributed singularities, in analogy with the expression of the Biot-Savart law.</p>
+<p class="sd-card-text">having defined the surface magnetization current density <span class="math notranslate nohighlight">\(\vec{j}^s_M\)</span> and the volume magnetization current density <span class="math notranslate nohighlight">\(\vec{j}_M\)</span> as the intensities of the distributed singularities, in analogy with the expression of the Biot-Savart law.</p>
 </div>
 </details></div>
 <div class="section" id="id1">
@@ -624,19 +673,19 @@ Details<div class="sd-summary-down docutils">
 <p>The Ampère-Maxwell law can be rewritten</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
- &amp; \nabla \times \mathbf{b} - \mu_0 \varepsilon_0 \partial_t \mathbf{e} = \mu_0 \mathbf{j} \\
- &amp; \nabla \times \mathbf{b} - \mu_0 \partial_t \left( \mathbf{d} - \mathbf{p} \right) = \mu_0 \left( \mathbf{j}_f + \mathbf{j}_P + \mathbf{j}_M \right) \\
- &amp; \nabla \times \underbrace{\left( \mathbf{b} - \mu_0 \mathbf{m} \right)}_{=: \mu_0 \mathbf{h}} - \mu_0 \partial_t \mathbf{d} + \mu_0 \underbrace{\left( \partial_t \mathbf{p} - \mathbf{j}_P \right)}_{= \mathbf{0}} = \mu_0 \mathbf{j}_f  \\ \\
- &amp; \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j}_f
+ &amp; \nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} = \mu_0 \vec{j} \\
+ &amp; \nabla \times \vec{b} - \mu_0 \partial_t \left( \vec{d} - \vec{p} \right) = \mu_0 \left( \vec{j}_f + \vec{j}_P + \vec{j}_M \right) \\
+ &amp; \nabla \times \underbrace{\left( \vec{b} - \mu_0 \vec{m} \right)}_{=: \mu_0 \vec{h}} - \mu_0 \partial_t \vec{d} + \mu_0 \underbrace{\left( \partial_t \vec{p} - \vec{j}_P \right)}_{= \vec{0}} = \mu_0 \vec{j}_f  \\ \\
+ &amp; \nabla \times \vec{h} - \partial_t \vec{d} = \vec{j}_f
 \end{aligned}\end{split}\]</div>
 <p>From the continuity equation of electric current,</p>
 <div class="math notranslate nohighlight">
-\[\partial_t \rho + \nabla \cdot \mathbf{j} = 0 \ ,\]</div>
+\[\partial_t \rho + \nabla \cdot \vec{j} = 0 \ ,\]</div>
 <p>we derive the continuity equation for magnetization charges</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  0 &amp; = \partial_t \rho_M + \nabla \cdot \mathbf{j}_M = \\
-    &amp; = \partial_t \rho_M + \underbrace{ \nabla \cdot \nabla \times \mathbf{m}}_{ \equiv \mathbf{0} } \ .
+  0 &amp; = \partial_t \rho_M + \nabla \cdot \vec{j}_M = \\
+    &amp; = \partial_t \rho_M + \underbrace{ \nabla \cdot \nabla \times \vec{m}}_{ \equiv \vec{0} } \ .
 \end{aligned}\end{split}\]</div>
 </div>
 </div>
@@ -652,18 +701,18 @@ Details<div class="sd-summary-down docutils">
 <p>Differential form of Maxwell’s equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
- \nabla \cdot \mathbf{d} = \rho_f \\
- \nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\
- \nabla \cdot \mathbf{b} = 0 \\
- \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j}_f
+ \nabla \cdot \vec{d} = \rho_f \\
+ \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
+ \nabla \cdot \vec{b} = 0 \\
+ \nabla \times \vec{h} - \partial_t \vec{d} = \vec{j}_f
 \end{cases}\end{split}\]</div>
 <p>Integral form of Maxwell’s equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
- \displaystyle \oint_{\partial V} \mathbf{d} \cdot \hat{\mathbf{n}} = \int_{V} \rho_f \\
- \displaystyle \oint_{\partial S} \mathbf{e} \cdot \hat{\mathbf{t}} + \dfrac{d}{dt} \int_S \mathbf{b} \cdot \hat{\mathbf{n}} = 0 \\
- \displaystyle \oint_{\partial V} \mathbf{b} \cdot \hat{\mathbf{n}} = 0 \\
- \displaystyle \oint_{\partial S} \mathbf{h} \cdot \hat{\mathbf{t}} - \dfrac{d}{dt} \int_S \mathbf{d} \cdot \hat{\mathbf{n}} = \int_{S} \mathbf{j}_f \cdot \hat{\mathbf{n}} \\
+ \displaystyle \oint_{\partial V} \vec{d} \cdot \hat{\vec{n}} = \int_{V} \rho_f \\
+ \displaystyle \oint_{\partial S} \vec{e} \cdot \hat{\vec{t}} + \dfrac{d}{dt} \int_S \vec{b} \cdot \hat{\vec{n}} = 0 \\
+ \displaystyle \oint_{\partial V} \vec{b} \cdot \hat{\vec{n}} = 0 \\
+ \displaystyle \oint_{\partial S} \vec{h} \cdot \hat{\vec{t}} - \dfrac{d}{dt} \int_S \vec{d} \cdot \hat{\vec{n}} = \int_{S} \vec{j}_f \cdot \hat{\vec{n}} \\
 \end{cases}\end{split}\]</div>
 <p>Letting <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(S\)</span> «collapse on a discontinuity»…</p>
 <div class="math notranslate nohighlight" id="equation-eq-em-jump">
@@ -675,8 +724,8 @@ Details<div class="sd-summary-down docutils">
 \end{cases}\end{split}\]</div>
 <p>being <span class="math notranslate nohighlight">\(\sigma_f\)</span> and <span class="math notranslate nohighlight">\(\iota_f\)</span> surface charge and current density, with physical dimension <span class="math notranslate nohighlight">\(\frac{\text{charge}}{\text{surface}}\)</span>, and <span class="math notranslate nohighlight">\(\frac{\text{current}}{\text{surface}}\)</span> respectively. These contributions can be thought of as Dirac delta contributions in volume density, namely</p>
 <div class="math notranslate nohighlight">
-\[\rho(\mathbf{r},t) = \rho_0(\mathbf{r},t) + \sigma(\mathbf{r}_s,t) \delta_{1}(\mathbf{r}-\mathbf{r}_s) \ ,\]</div>
-<p>being <span class="math notranslate nohighlight">\(\rho(\mathbf{r},t)\)</span> the regular part of the volume density in all the points of the domain <span class="math notranslate nohighlight">\(\mathbf{r} \in V\)</span>, <span class="math notranslate nohighlight">\(\sigma(\mathbf{r}_s,t)\)</span> the surface density on 2-dimensional surfaces <span class="math notranslate nohighlight">\(\mathbf{r}_s \in S\)</span>, <span class="math notranslate nohighlight">\(\delta_1()\)</span> the Dirac’s delta with physical dimension <span class="math notranslate nohighlight">\(\frac{1}{\text{length}}\)</span>.</p>
+\[\rho(\vec{r},t) = \rho_0(\vec{r},t) + \sigma(\vec{r}_s,t) \delta_{1}(\vec{r}-\vec{r}_s) \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(\rho(\vec{r},t)\)</span> the regular part of the volume density in all the points of the domain <span class="math notranslate nohighlight">\(\vec{r} \in V\)</span>, <span class="math notranslate nohighlight">\(\sigma(\vec{r}_s,t)\)</span> the surface density on 2-dimensional surfaces <span class="math notranslate nohighlight">\(\vec{r}_s \in S\)</span>, <span class="math notranslate nohighlight">\(\delta_1()\)</span> the Dirac’s delta with physical dimension <span class="math notranslate nohighlight">\(\frac{1}{\text{length}}\)</span>.</p>
 <p>If there’s no free surface charge and currents, jump conditions for linear media become</p>
 <div class="math notranslate nohighlight" id="equation-eq-em-jump-no-surf-density">
 <span class="eqno">(4.2)<a class="headerlink" href="#equation-eq-em-jump-no-surf-density" title="Permalink a questa equazione">#</a></span>\[\begin{split}\begin{cases}
@@ -759,7 +808,7 @@ Details<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vacuum">4.1. Vacuum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-electromagnetism-in-matter">4.1. Equations of electromagnetism in matter</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-media">4.2. Continuous Media</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#polarization">4.3. Polarization</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-electric-dipole">4.3.1. Single Electric Dipole</a></li>

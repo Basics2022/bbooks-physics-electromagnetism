@@ -8,7 +8,7 @@ This material is part of the [**basics-books project**](https://basics2022.githu
 
 [**Brief history of electromagnetism**](classical-electromagnetism:first-experiments). **todo**
 
-[**Principles of classical electromagnetism**](classical-electromagnetism:principles). Principles of electromagnetism are: electric charge conservation, Maxwell's equations and Lorentz's force.
+[**Principles of classical electromagnetism**](classical-electromagnetism:principles). 
 
 [**Electromagnetism in matter**](classical-electromagnetism:media).
 
