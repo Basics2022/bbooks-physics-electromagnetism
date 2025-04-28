@@ -3,29 +3,32 @@
 
 This material is part of the [**basics-books project**](https://basics2022.github.io/bbooks). It is also available as a [.pdf document](_build/latex/book.pdf).
 
-**Introduzione.**
+```{dropdown} Classical electromagnetism
+:open:
 
-L'elettromagnetismo si occupa dello studio dei fenomeni elettromagnetici prodotti da cariche e correnti elettriche o dalla struttura microscopica della materia (magnetismo naturale)
+[**Brief history of electromagnetism**](classical-electromagnetism:first-experiments). **todo**
 
-**Breve storia.** *Prime esperienze: cariche di 2 tipi diversi e legge di Coulomb;* 
+[**Principles of classical electromagnetism**](classical-electromagnetism:principles). 
 
-**Argomenti.**
+[**Electromagnetism in matter**](classical-electromagnetism:media).
 
-[Prime esperienze](classical-electromagnetism:first-experiments) **TODO** *Prime esperienze; elettromagnetismo come teoria dei* **campi** **TODO** *aggiungere una sezione su first-experiments-revisited, dopo la presentazione dei princìpi dell'elettromagnetismo*
+[**Energy**](classical-electromagnetism:energy).
 
-**todo** Aggiungere sezione su strumenti matematici necessari, per la formulazione di una teoria dei campi
+[**Electrostatics**](classical-electromagnetism:electrostatics).
 
-[Princìpi dell'elettromagnetismo](classical-electromagnetism:principles) **TODO** *Trattare prima regime stazionario - elettricità e magnetismo - e poi regime non-stazionario - elettromagnetismo***?** **TODO** *Princìpi. Conservazione della carica, leggi di Maxwell, legge di Lorentz* **TODO** *Principi in forma integrale; princìpi in forma differenziale - le leggi di Maxwell*
+[**Electromagnetic waves**](classical-electromagnetism:waves).
 
-[Energia](classical-electromagnetism:energy)
+```
 
-[Onde elettromagnetiche](classical-electromagnetism:waves)
+```{dropdown} Electric Engineering
+:open:
 
-[Approssimazione circuitale](classical-electromagnetism:circuits) **TODO** *Circuiti elettrici; circuiti elettromagnetici; sistemi elettro-meccanici. Regimi: stazionario, non-stazionario: regime transitorio e armonico*
+**Electric circuits**.
 
-**Extra.**
+**Electromagentic systems**.
 
-[Ottica](classical-electromagnetism:optics)
+**Electromagneto-mechanics systems**.
 
-**Elettromagnetismo e relatività** **todo** *Relatività a per $v \ll c$; crisi della relatività galileiana*
+```
+
 
