@@ -6,7 +6,7 @@
 ```
 -->
 
-(classical-electromagnetism:media)=
+(classical-electromagnetism:principles:matter)=
 # Electromagnetism in Matter
 
 Electromagnetism in matter requires the description of the behavior of the matter involved in the process. In general, a medium immersed in an electromagnetic field may respond with local charge distributions, resulting in [**polarization**](classical-electromagnetism:media:polarization) and [**magnetization**](classical-electromagnetism:media:magnetization). Total electric $\vec{e}(\vec{r},t)$ and magnetic field $\vec{b}(\vec{r},t)$ can be written as the sum of contributions of free charges $\rho_f$ and currents $\vec{j}_f$ and bound charges $\rho_b$ and currents $\vec{j}_b$.

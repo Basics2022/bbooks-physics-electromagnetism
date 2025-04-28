@@ -177,8 +177,6 @@ $$\begin{aligned}
 ```
 
 
-
-
 ```{dropdown} Procedimento alternativo (e più generale?)
 
 **todo** *In caso questo procedimento sia più generale, o più corretto, sostituire il procedimento precedente.*

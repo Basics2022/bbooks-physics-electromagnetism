@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="it" data-content_root="" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -56,7 +56,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -69,12 +68,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/principles-vacuum';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
-    <link rel="index" title="Indice" href="../genindex.html" />
-    <link rel="search" title="Cerca" href="../search.html" />
-    <link rel="next" title="2.2. Electromagnetic Potentials" href="principles-potentials.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.2. Electromagnetism in Matter" href="principles-matter.html" />
     <link rel="prev" title="2. Principles of Classical Electromagnetism" href="principles.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="it"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6MNXBVGKF"></script>
@@ -180,14 +179,14 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">1. Brief history of Electromagnetism</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="principles.html">2. Principles of Classical Electromagnetism</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">2.1. Principles of Classical Electromagnetism in Free Space</a></li>
-<li class="toctree-l2"><a class="reference internal" href="principles-potentials.html">2.2. Electromagnetic Potentials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="principles-matter.html">2.3. Electromagnetism in Matter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="principles-relativity.html">2.4. Galileian relativity in electromagnetism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-matter.html">2.2. Electromagnetism in Matter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principles-relativity.html">2.3. Galileian relativity in electromagnetism</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">3. Electromagnetic waves</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">3.1. Wave Equations in Electromagnetism</a></li>
-<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">3.2. Plane Electromagnetic Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="potentials.html">3.1. Electromagnetic Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">3.2. Wave Equations in Electromagnetism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">3.3. Plane Electromagnetic Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="energy.html">4. Force, moments, energy and momentum in electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -285,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Scarica questa pagina">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
@@ -294,7 +293,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="../_sources/ch/principles-vacuum.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Scarica il file sorgente"
+   title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
@@ -312,7 +311,7 @@ const thebe_selector_output = ".output, .cell_output"
       <li>
 <button onclick="window.print()"
   class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Stampa in PDF"
+  title="Print to PDF"
   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
@@ -332,7 +331,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <button onclick="toggleFullScreen()"
   class="btn btn-sm btn-fullscreen-button"
-  title="Modalità schermo intero"
+  title="Fullscreen mode"
   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
@@ -358,7 +357,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Cerca" aria-label="Cerca" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -382,7 +381,7 @@ document.write(`
         <div id="jb-print-toc">
             
             <div>
-                <h2> Contenuti </h2>
+                <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -413,11 +412,11 @@ document.write(`
 <div class="tex2jax_ignore mathjax_ignore section" id="principles-of-classical-electromagnetism-in-free-space">
 <span id="classical-electromagnetism-principles-free-space"></span><h1><span class="section-number">2.1. </span>Principles of Classical Electromagnetism in Free Space<a class="headerlink" href="#principles-of-classical-electromagnetism-in-free-space" title="Permalink to this heading">#</a></h1>
 <p>The progress in the study of electromagnetic phenomena during the 19th century allowed James Clerk Maxwell to formulate what are now known as <em>Maxwell’s equations</em>, which can be considered the first consistent formulation of the principles of classical electromagnetism, together with the charge conservation law and the expression for the Lorentz force on an electric charge immersed in an electromagnetic field.</p>
-<p>Principles are introduced here for total charges and the electric and the magnetic field, in the form that is known as <strong>equations of electromagnetism in vacuum</strong>. Equations of <a class="reference internal" href="principles-matter.html#classical-electromagnetism-media"><span class="std std-ref">electromagnetism in matter</span></a> (1) separate the contribution of free and bound charges and currents, and (2) introduce <strong>polarization</strong> and <strong>magnetization</strong> of matter in constitutive equations representing the macroscopic response of the media as a result of local microscopic charge distribution induced by «external» fields.</p>
+<p>Principles are introduced here for total charges and the electric and the magnetic field, in the form that is known as <strong>equations of electromagnetism in vacuum</strong>. Equations of <span class="xref myst">electromagnetism in matter</span> (1) separate the contribution of free and bound charges and currents, and (2) introduce <strong>polarization</strong> and <strong>magnetization</strong> of matter in constitutive equations representing the macroscopic response of the media as a result of local microscopic charge distribution induced by “external” fields.</p>
 <p>Here principles of electromagnetism are first shown in their <a class="reference internal" href="#classical-electromagnetism-principles-differential"><span class="std std-ref">differential form</span></a>: (1) continuity equation of electric charge describes the conservation of electric charge, (2) Maxwell’s equations govern the generation of the electromagnteic field by electric charge and currents, while (3) the differential form of Lorentz’s force gives the expression of the force per unit volume acting on a distribution of electric charge and currents immersed in an electromagnetic field. Then, the more general <a class="reference internal" href="#classical-electromagnetism-principles-integral"><span class="std std-ref">integral form</span></a><a class="footnote-reference brackets" href="#integral-to-differential" id="id1">1</a> is presented for <a class="reference internal" href="#classical-electromagnetism-principles-integral-control-volume"><span class="std std-ref">control volume</span></a>, at rest w.r.t. the observer - an inertial one? - and then derived form <a class="reference internal" href="#classical-electromagnetism-principles-integral-arbitrary-volume"><span class="std std-ref">arbitrary domains</span></a>, using the <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html">rules for time derivatives of integrals over moving domains</a>, and this description is used to have a first discussion about relativity in electromagnetism.</p>
 <div class="section" id="principles-in-differential-form">
 <span id="classical-electromagnetism-principles-differential"></span><h2><span class="section-number">2.1.1. </span>Principles in Differential Form<a class="headerlink" href="#principles-in-differential-form" title="Permalink to this heading">#</a></h2>
-<p>The principles in differential form can be derived from the more general <a class="reference internal" href="#classical-electromagnetism-principles-integral"><span class="std std-ref">integral form</span></a>, provided the fields satisfy the necessary minimal regularity conditions, which can be qualitatively stated as «all operations must make sense.»</p>
+<p>The principles in differential form can be derived from the more general <a class="reference internal" href="#classical-electromagnetism-principles-integral"><span class="std std-ref">integral form</span></a>, provided the fields satisfy the necessary minimal regularity conditions, which can be qualitatively stated as “all operations must make sense.”</p>
 <p><strong>Conservation of Electric Charge.</strong> Differential form of conservation of electric charge is described by a continuity equation for the electric charge density <span class="math notranslate nohighlight">\(\rho(\vec{r},t)\)</span>, with electric current <span class="math notranslate nohighlight">\(\vec{j} = \rho \vec{v}\)</span> as the flux - where <span class="math notranslate nohighlight">\(\vec{v}(\vec{r},t)\)</span> is the average velocity of the charges in the point <span class="math notranslate nohighlight">\(\vec{r}\)</span> of space at time <span class="math notranslate nohighlight">\(t\)</span></p>
 <div class="math notranslate nohighlight">
 \[\partial_t \rho + \nabla \cdot \vec{j} = 0 \ .\]</div>
@@ -451,7 +450,7 @@ with the need to define constitutive equations $\vec{d}(\vec{e}, \vec{b})$, $\ve
 <span id="classical-electromagnetism-principles-integral"></span><h2><span class="section-number">2.1.2. </span>Principles in Integral Form: Electromagnetic Equations and Galilean Relativity<a class="headerlink" href="#principles-in-integral-form-electromagnetic-equations-and-galilean-relativity" title="Permalink to this heading">#</a></h2>
 <div class="section" id="integral-form-on-control-volumes">
 <span id="classical-electromagnetism-principles-integral-control-volume"></span><h3><span class="section-number">2.1.2.1. </span>Integral Form on Control Volumes<a class="headerlink" href="#integral-form-on-control-volumes" title="Permalink to this heading">#</a></h3>
-<p>The integral form of the principles of electromagnetism for fixed volumes <span class="math notranslate nohighlight">\(V\)</span> and surfaces <span class="math notranslate nohighlight">\(S\)</span> in space is obtained by integrating the differential equations over the domains and using the divergence theorem to obtain flux terms, and Stokes” theorem to obtain circulation terms.</p>
+<p>The integral form of the principles of electromagnetism for fixed volumes <span class="math notranslate nohighlight">\(V\)</span> and surfaces <span class="math notranslate nohighlight">\(S\)</span> in space is obtained by integrating the differential equations over the domains and using the divergence theorem to obtain flux terms, and Stokes’ theorem to obtain circulation terms.</p>
 <p><strong>Continuity of Electric Charge.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -609,16 +608,16 @@ with the need to define constitutive equations $\vec{d}(\vec{e}, \vec{b})$, $\ve
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">precedente</p>
+        <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title"><span class="section-number">2. </span>Principles of Classical Electromagnetism</p>
       </div>
     </a>
     <a class="right-next"
-       href="principles-potentials.html"
+       href="principles-matter.html"
        title="next page">
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">successivo</p>
-        <p class="prev-next-title"><span class="section-number">2.2. </span>Electromagnetic Potentials</p>
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>Electromagnetism in Matter</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -633,7 +632,7 @@ with the need to define constitutive equations $\vec{d}(\vec{e}, \vec{b})$, $\ve
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contenuti
+    <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
@@ -657,7 +656,7 @@ with the need to define constitutive equations $\vec{d}(\vec{e}, \vec{b})$, $\ve
   <div class="footer-item">
     
 <p class="component-author">
-Di basics
+By basics
 </p>
 
   </div>
