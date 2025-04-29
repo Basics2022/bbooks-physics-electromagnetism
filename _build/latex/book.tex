@@ -85,7 +85,7 @@
         
 
 \title{electromagnetism}
-\date{Apr 28, 2025}
+\date{Apr 29, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -388,7 +388,7 @@ are nothing more than the transformation of the fields for two observers in rela
 \section{Electromagnetism in Matter}
 \label{\detokenize{ch/principles-matter:electromagnetism-in-matter}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-principles-matter}}\label{\detokenize{ch/principles-matter::doc}}
 \sphinxAtStartPar
-Electromagnetism in matter requires the description of the behavior of the matter involved in the process. In general, a medium immersed in an electromagnetic field may respond with local charge distributions, resulting in {\hyperref[\detokenize{ch/principles-matter:classical-electromagnetism-media-polarization}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{polarization}}}}} and {\hyperref[\detokenize{ch/principles-matter:classical-electromagnetism-media-magnetization}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{magnetization}}}}}. Total electric \(\vec{e}(\vec{r},t)\) and magnetic field \(\vec{b}(\vec{r},t)\) can be written as the sum of contributions of free charges \(\rho_f\) and currents \(\vec{j}_f\) and bound charges \(\rho_b\) and currents \(\vec{j}_b\).
+Electromagnetism in matter requires the description of the behavior of the matter involved in the process. In general, a medium immersed in an electromagnetic field may respond with local charge distributions, resulting in {\hyperref[\detokenize{ch/principles-matter-polarization:classical-electromagnetism-media-polarization}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{polarization}}}}} and {\hyperref[\detokenize{ch/principles-matter-magnetization:classical-electromagnetism-media-magnetization}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{magnetization}}}}}. Total electric \(\vec{e}(\vec{r},t)\) and magnetic field \(\vec{b}(\vec{r},t)\) can be written as the sum of contributions of free charges \(\rho_f\) and currents \(\vec{j}_f\) and bound charges \(\rho_b\) and currents \(\vec{j}_b\).
 
 \sphinxAtStartPar
 Bound charge density represents local separation of charges of molecules of dielectric media immersed in electric field, that can be represented as a volume distribution of charge dipole,
@@ -476,17 +476,110 @@ where \(\vec{h} := \vec{b} - \mu_0 \vec{m}\), the \sphinxstylestrong{magnetic fi
 \end{itemize}
 
 
-\subsection{Continuous Media}
-\label{\detokenize{ch/principles-matter:continuous-media}}
+
+
+\subsection{Examples}
+\label{\detokenize{ch/principles-matter:examples}}\begin{itemize}
+\item {} 
 \sphinxAtStartPar
-In general, some materials respond to an imposed “external” electromagnetic field with polarization and magnetization. In particular, the electric polarization of a material corresponds to a local separation of electric charges, macroscopically equivalent to a volume density of dipoles, \(\vec{p}(\vec{r}_0)\); magnetization corresponds to an orientation of the axes of Amperian current loops, macroscopically equivalent to a density of magnetic moment \(\vec{m}(\vec{r}_0)\).
+conductors
+
+\item {} 
+\sphinxAtStartPar
+ferromagnetic and weak magnetism (para\sphinxhyphen{}, dia\sphinxhyphen{}, anti\sphinxhyphen{})
+
+\end{itemize}
+
+
+\subsection{Governing equations in differential form}
+\label{\detokenize{ch/principles-matter:governing-equations-in-differential-form}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-differential}}
+\sphinxAtStartPar
+Differential form of Maxwell’s equations
+\begin{equation*}
+\begin{split}\begin{cases}
+ \nabla \cdot \vec{d} = \rho_f \\
+ \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
+ \nabla \cdot \vec{b} = 0 \\
+ \nabla \times \vec{h} - \partial_t \vec{d} = \vec{j}_f
+\end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{continuity equation for charge}
+
+
+\subsection{Governing equation in integral form}
+\label{\detokenize{ch/principles-matter:governing-equation-in-integral-form}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-integral}}
+\sphinxAtStartPar
+Integral form of Maxwell’s equations
+\begin{equation*}
+\begin{split}\begin{cases}
+ \displaystyle \oint_{\partial V} \vec{d} \cdot \hat{\vec{n}} = \int_{V} \rho_f \\
+ \displaystyle \oint_{\partial S} \vec{e} \cdot \hat{\vec{t}} + \dfrac{d}{dt} \int_S \vec{b} \cdot \hat{\vec{n}} = 0 \\
+ \displaystyle \oint_{\partial V} \vec{b} \cdot \hat{\vec{n}} = 0 \\
+ \displaystyle \oint_{\partial S} \vec{h} \cdot \hat{\vec{t}} - \dfrac{d}{dt} \int_S \vec{d} \cdot \hat{\vec{n}} = \int_{S} \vec{j}_f \cdot \hat{\vec{n}} \\
+\end{cases}\end{split}
+\end{equation*}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+control volume
+
+\item {} 
+\sphinxAtStartPar
+arbitrary domain
+
+\item {} 
+\sphinxAtStartPar
+low\sphinxhyphen{}speed relativity
+
+\end{itemize}
+
+
+\subsection{Jump Conditions}
+\label{\detokenize{ch/principles-matter:jump-conditions}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-jump}}
+\sphinxAtStartPar
+Letting \(V\) and \(S\) “collapse on a discontinuity”…
+\begin{equation}\label{equation:ch/principles-matter:eq:em-jump}
+\begin{split}\begin{cases}
+  [ d_n ] = \sigma_f \\
+  [ e_t ] = 0 \\
+  [ b_n ] = 0 \\
+  [ h_t ] = \iota_f \ ,
+\end{cases}\end{split}
+\end{equation}
+\sphinxAtStartPar
+being \(\sigma_f\) and \(\iota_f\) surface charge and current density, with physical dimension \(\frac{\text{charge}}{\text{surface}}\), and \(\frac{\text{current}}{\text{surface}}\) respectively. These contributions can be thought of as Dirac delta contributions in volume density, namely
+\begin{equation*}
+\begin{split}\rho(\vec{r},t) = \rho_0(\vec{r},t) + \sigma(\vec{r}_s,t) \delta_{1}(\vec{r}-\vec{r}_s) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(\rho(\vec{r},t)\) the regular part of the volume density in all the points of the domain \(\vec{r} \in V\), \(\sigma(\vec{r}_s,t)\) the surface density on 2\sphinxhyphen{}dimensional surfaces \(\vec{r}_s \in S\), \(\delta_1()\) the Dirac’s delta with physical dimension \(\frac{1}{\text{length}}\).
+
+\sphinxAtStartPar
+If there’s no free surface charge and currents, jump conditions for linear media become
+\begin{equation}\label{equation:ch/principles-matter:eq:em-jump:no-surf-density}
+\begin{split}\begin{cases}
+  [ d_n ] = 0 \\
+  [ e_t ] = 0 \\
+  [ b_n ] = 0 \\
+  [ h_t ] = 0 \ ,
+\end{cases}
+\qquad \rightarrow \qquad
+\begin{cases}
+  d_{n,1} = d_{n,2}  \quad \rightarrow \quad \varepsilon_1 e_{n,1} = \varepsilon_2 e_{n,2} \\
+  e_{t,1} = e_{t,2}  \\
+  b_{n,1} = b_{n,2}  \\
+  h_{t,1} = h_{t,2}  \quad \rightarrow \quad \frac{1}{\mu_1} b_{t,1} = \frac{1}{\mu_2} b_{t,2} \\
+\end{cases}
+\end{split}
+\end{equation}
+\sphinxstepscope
 
 
 \subsection{Polarization}
-\label{\detokenize{ch/principles-matter:polarization}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-polarization}}
+\label{\detokenize{ch/principles-matter-polarization:polarization}}\label{\detokenize{ch/principles-matter-polarization:classical-electromagnetism-media-polarization}}\label{\detokenize{ch/principles-matter-polarization::doc}}
 
 \subsubsection{Single Electric Dipole}
-\label{\detokenize{ch/principles-matter:single-electric-dipole}}
+\label{\detokenize{ch/principles-matter-polarization:single-electric-dipole}}
 \sphinxAtStartPar
 A discrete electric dipole is formed by two equal and opposite electric charges \(q\), \(-q\), at points \(P_+\), \(P_- = P_+ \vec{l}\), in the limit \(q \rightarrow +\infty\), \(|\vec{l}| \rightarrow 0\) with \(q |\vec{l}|\) finite.
 
@@ -525,7 +618,7 @@ and, defining the dipole intensity \(\vec{P}_0 := q \vec{l}\) and taking the qua
 
 
 \subsubsection{Continuous Distribution of Dipoles}
-\label{\detokenize{ch/principles-matter:continuous-distribution-of-dipoles}}
+\label{\detokenize{ch/principles-matter-polarization:continuous-distribution-of-dipoles}}
 \sphinxAtStartPar
 A distribution of dipoles with volume density \(\vec{p}(\vec{r_0})\), which produces the elementary dipole \(\Delta \vec{P}(\vec{r}_0) = \vec{p}(\vec{r}_0) dV_0\) in the volume \(d V_0\), produces the electric field
 \begin{equation*}
@@ -545,7 +638,7 @@ having defined the surface polarization charge density \(\sigma_P\) and the volu
 
 
 \subsubsection{Reformulation of Maxwell’s Equations and Charge Continuity}
-\label{\detokenize{ch/principles-matter:reformulation-of-maxwell-s-equations-and-charge-continuity}}
+\label{\detokenize{ch/principles-matter-polarization:reformulation-of-maxwell-s-equations-and-charge-continuity}}
 \sphinxAtStartPar
 Gauss’s equation determines the volume flux density of the electric field \(\vec{e}\),
 \begin{equation*}
@@ -583,12 +676,14 @@ and write the continuity equations for the two charge distributions (of differen
 \sphinxAtStartPar
 \sphinxstylestrong{todo} \sphinxstyleemphasis{justify absence of constant field}
 
+\sphinxstepscope
+
 
 \subsection{Magnetization}
-\label{\detokenize{ch/principles-matter:magnetization}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-magnetization}}
+\label{\detokenize{ch/principles-matter-magnetization:magnetization}}\label{\detokenize{ch/principles-matter-magnetization:classical-electromagnetism-media-magnetization}}\label{\detokenize{ch/principles-matter-magnetization::doc}}
 
 \subsubsection{Single Magnetic Moment (Limit of an Elementary Loop)}
-\label{\detokenize{ch/principles-matter:single-magnetic-moment-limit-of-an-elementary-loop}}
+\label{\detokenize{ch/principles-matter-magnetization:single-magnetic-moment-limit-of-an-elementary-loop}}
 \sphinxAtStartPar
 Using the Biot\sphinxhyphen{}Savart law, specialized for a conductor carrying current \(i(\vec{r}_0)\)
 \begin{equation*}
@@ -642,7 +737,7 @@ and as \(i_0 \rightarrow \infty\), \(S_0 \rightarrow 0\) such that \(\vec{M}_0 :
 \end{equation*}
 
 \subsubsection{Continuous Distribution of Magnetic Moment}
-\label{\detokenize{ch/principles-matter:continuous-distribution-of-magnetic-moment}}
+\label{\detokenize{ch/principles-matter-magnetization:continuous-distribution-of-magnetic-moment}}
 \sphinxAtStartPar
 To calculate the magnetic field generated by a volume distribution of magnetic moment, we can proceed in analogy with what was done to calculate the electric field generated by a distribution of dipoles
 \begin{equation*}
@@ -711,7 +806,7 @@ having defined the surface magnetization current density \(\vec{j}^s_M\) and the
 
 
 \subsubsection{Reformulation of Maxwell’s Equations and Charge Continuity}
-\label{\detokenize{ch/principles-matter:id1}}
+\label{\detokenize{ch/principles-matter-magnetization:reformulation-of-maxwell-s-equations-and-charge-continuity}}
 \sphinxAtStartPar
 The Ampère\sphinxhyphen{}Maxwell law can be rewritten
 \begin{equation*}
@@ -735,78 +830,6 @@ we derive the continuity equation for magnetization charges
     & = \partial_t \rho_M + \underbrace{ \nabla \cdot \nabla \times \vec{m}}_{ \equiv \vec{0} } \ .
 \end{aligned}\end{split}
 \end{equation*}
-
-\subsection{Examples}
-\label{\detokenize{ch/principles-matter:examples}}\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-conductors
-
-\item {} 
-\sphinxAtStartPar
-ferromagnetic and weak magnetism (para\sphinxhyphen{}, dia\sphinxhyphen{}, anti\sphinxhyphen{})
-
-\end{itemize}
-
-
-\subsection{Jump Conditions}
-\label{\detokenize{ch/principles-matter:jump-conditions}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-jump}}
-\sphinxAtStartPar
-Differential form of Maxwell’s equations
-\begin{equation*}
-\begin{split}\begin{cases}
- \nabla \cdot \vec{d} = \rho_f \\
- \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
- \nabla \cdot \vec{b} = 0 \\
- \nabla \times \vec{h} - \partial_t \vec{d} = \vec{j}_f
-\end{cases}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Integral form of Maxwell’s equations
-\begin{equation*}
-\begin{split}\begin{cases}
- \displaystyle \oint_{\partial V} \vec{d} \cdot \hat{\vec{n}} = \int_{V} \rho_f \\
- \displaystyle \oint_{\partial S} \vec{e} \cdot \hat{\vec{t}} + \dfrac{d}{dt} \int_S \vec{b} \cdot \hat{\vec{n}} = 0 \\
- \displaystyle \oint_{\partial V} \vec{b} \cdot \hat{\vec{n}} = 0 \\
- \displaystyle \oint_{\partial S} \vec{h} \cdot \hat{\vec{t}} - \dfrac{d}{dt} \int_S \vec{d} \cdot \hat{\vec{n}} = \int_{S} \vec{j}_f \cdot \hat{\vec{n}} \\
-\end{cases}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Letting \(V\) and \(S\) “collapse on a discontinuity”…
-\begin{equation}\label{equation:ch/principles-matter:eq:em-jump}
-\begin{split}\begin{cases}
-  [ d_n ] = \sigma_f \\
-  [ e_t ] = 0 \\
-  [ b_n ] = 0 \\
-  [ h_t ] = \iota_f \ ,
-\end{cases}\end{split}
-\end{equation}
-\sphinxAtStartPar
-being \(\sigma_f\) and \(\iota_f\) surface charge and current density, with physical dimension \(\frac{\text{charge}}{\text{surface}}\), and \(\frac{\text{current}}{\text{surface}}\) respectively. These contributions can be thought of as Dirac delta contributions in volume density, namely
-\begin{equation*}
-\begin{split}\rho(\vec{r},t) = \rho_0(\vec{r},t) + \sigma(\vec{r}_s,t) \delta_{1}(\vec{r}-\vec{r}_s) \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-being \(\rho(\vec{r},t)\) the regular part of the volume density in all the points of the domain \(\vec{r} \in V\), \(\sigma(\vec{r}_s,t)\) the surface density on 2\sphinxhyphen{}dimensional surfaces \(\vec{r}_s \in S\), \(\delta_1()\) the Dirac’s delta with physical dimension \(\frac{1}{\text{length}}\).
-
-\sphinxAtStartPar
-If there’s no free surface charge and currents, jump conditions for linear media become
-\begin{equation}\label{equation:ch/principles-matter:eq:em-jump:no-surf-density}
-\begin{split}\begin{cases}
-  [ d_n ] = 0 \\
-  [ e_t ] = 0 \\
-  [ b_n ] = 0 \\
-  [ h_t ] = 0 \ ,
-\end{cases}
-\qquad \rightarrow \qquad
-\begin{cases}
-  d_{n,1} = d_{n,2}  \quad \rightarrow \quad \varepsilon_1 e_{n,1} = \varepsilon_2 e_{n,2} \\
-  e_{t,1} = e_{t,2}  \\
-  b_{n,1} = b_{n,2}  \\
-  h_{t,1} = h_{t,2}  \quad \rightarrow \quad \frac{1}{\mu_1} b_{t,1} = \frac{1}{\mu_2} b_{t,2} \\
-\end{cases}
-\end{split}
-\end{equation}
 \sphinxstepscope
 
 
@@ -1996,23 +2019,131 @@ leading to circuit approximation
 \sphinxstepscope
 
 
-\part{Electric Engineering}
+\part{Electrical Engineering}
 
 \sphinxstepscope
 
 
-
-
-\chapter{Approssimazione circuitale}
-\label{\detokenize{ch/circuits:approssimazione-circuitale}}\label{\detokenize{ch/circuits:classical-electromagnetism-circuits}}\label{\detokenize{ch/circuits::doc}}
+\chapter{Circuit Approximation}
+\label{\detokenize{ch/circuits:circuit-approximation}}\label{\detokenize{ch/circuits:classical-electromagnetism-electrical-engineering}}\label{\detokenize{ch/circuits::doc}}
 \sphinxAtStartPar
-\sphinxstylestrong{Circuiti elettrici.} \sphinxstyleemphasis{Condizioni per la validità dell’approssimazione circuitale; componenti elementari; regimi di utilizzo: stazionario, armonico (alternato), transitorio;}
+\sphinxstylestrong{Electric Circuits}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Validity Conditions for Circuit Approximation:}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+The dimensions of the circuit are much smaller than the wavelength of the electromagnetic waves involved.
+
+\item {} 
+\sphinxAtStartPar
+The frequency of the signals is low enough that the propagation delay is negligible.
+
+\item {} 
+\sphinxAtStartPar
+The electric and magnetic fields are confined within the circuit components.
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Basic Components:} resistors (R); capacitors (C); inductors (L); voltage and current sources; switches; non\sphinxhyphen{}linear components: diodes, transistors,…
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Operating Regimes:}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Steady State (DC):} The circuit parameters (voltage, current) do not change over time.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Harmonic (AC):} The circuit parameters vary sinusoidally with time.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Transient:} The circuit parameters change over time, typically due to a change in input or initial conditions.
+
+\end{itemize}
+
+\end{itemize}
 
 \sphinxAtStartPar
-\sphinxstylestrong{Circuiti elettromagnetici.} \sphinxstyleemphasis{Condizioni per la validità dell’approssimazione circuitale; es. trasformatori}
+\sphinxstylestrong{Electromagnetic Circuits}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Validity Conditions for Circuit Approximation:}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+term \(\partial_t \vec{d}\) negligible,…\sphinxstylestrong{todo} \sphinxstyleemphasis{as an integral condition on a system? Discussion in terms of energy?}
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Example: Transformers}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Transformers operate on the principle of electromagnetic induction.
+
+\item {} 
+\sphinxAtStartPar
+They are used to step up or step down voltages and currents in AC circuits.
+
+\item {} 
+\sphinxAtStartPar
+The circuit approximation is valid as long as the frequency of the AC signal is within the designed range of the transformer.
+
+\end{itemize}
+
+\end{itemize}
 
 \sphinxAtStartPar
-\sphinxstylestrong{Circuito elettro\sphinxhyphen{}magneto\sphinxhyphen{}meccanici.} \sphinxstyleemphasis{Es. semplici circuiti; motori elettrici e generatori}
+\sphinxstylestrong{Electro\sphinxhyphen{}Magneto\sphinxhyphen{}Mechanical Circuits}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Examples:}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Simple Circuits:} Basic circuits involving electromagnetic and mechanical components, such as a moving coil in a magnetic field.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Electric Motors:} Convert electrical energy into mechanical energy.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Generators:} Convert mechanical energy into electrical energy.
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Key Concepts:}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Interaction between electrical and mechanical components.
+
+\item {} 
+\sphinxAtStartPar
+Energy conversion and efficiency.
+
+\item {} 
+\sphinxAtStartPar
+Dynamic behavior and control of electromechanical systems.
+
+\end{itemize}
+
+\end{itemize}
 
 \sphinxstepscope
 
@@ -2344,35 +2475,35 @@ La derivata nel tempo di questa relazione, con numero di avvolgimenti costanti n
 
 
 
-\section{Circuiti elettromeccanici}
-\label{\detokenize{ch/circuits-electromechanic:circuiti-elettromeccanici}}\label{\detokenize{ch/circuits-electromechanic:classical-electromagnetism-circuits-electromechanic}}\label{\detokenize{ch/circuits-electromechanic::doc}}
+\section{Electromechanical Circuits}
+\label{\detokenize{ch/circuits-electromechanic:electromechanical-circuits}}\label{\detokenize{ch/circuits-electromechanic:classical-electromagnetism-circuits-electromechanic}}\label{\detokenize{ch/circuits-electromechanic::doc}}
 \sphinxAtStartPar
-Alcuni sistemi di interesse e di enorme diffusione nella società moderna sfruttano le interazioni tra componenti fenomeni elettromagnetici e meccanici: un esempio fondamentale sono le macchine elettriche, alcune delle quali possono operare sia come motore (con la potenza fornita dal sistema elettrico e convertita in potenza meccanica) sia come generatore di energia elettrica (convertendo potenza meccanica in potenza elettrica).
+Some systems of interest and widespread use in modern society exploit the interactions between electromagnetic and mechanical phenomena: a fundamental example is electric machines, some of which can operate both as motors (with power supplied by the electrical system and converted into mechanical power) and as generators of electrical energy (converting mechanical power into electrical power).
 
 \sphinxAtStartPar
-In un sistema di induttori con mutua influenza, la differenza di tensione ai capi dell’induttore “potenziato” \(i\) è
+In a system of inductors with mutual influence, the voltage difference across the “enhanced” inductor \(i\) is
 \begin{equation*}
 \begin{split}v_i = \dot{\psi}_i = \dfrac{d}{dt} \left( N_i \, \phi_i \right) \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Il flusso concatenato dipende dall’effetto di tutti gli induttori del sistema (e del campo magnetico generato da eventuali cause esterne al sistema),
+The linked flux depends on the effect of all the inductors in the system (and the magnetic field generated by any causes external to the system),
 \begin{equation*}
 \begin{split}\phi_i = \sum_{k} \phi_{ik} = \sum_{k} \frac{1}{\theta_{ik}} \, m_k \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-avendo indicato con \(\theta_{ik}\) la riluttanza del circuito tra l’induttore potenziante \(k\) e l’induttore potenziato \(i\). Usando l’espressione della forza magneto\sphinxhyphen{}motrice \(m_k = N_k \, i_k\), si può riscrivere l’espressione della differenza di tensione
+where \(\theta_{ik}\) is the reluctance of the circuit between the enhancing inductor \(k\) and the enhanced inductor \(i\). Using the expression for the magnetomotive force \(m_k = N_k \, i_k\), the voltage difference expression can be rewritten as
 \begin{equation*}
 \begin{split}v_i = \sum_k \frac{d}{dt} \left( \frac{N_i \, N_k}{\theta_{ik}} i_k \right) = \sum_k \frac{d}{dt} \left( L_{ik} \, i_k \right) \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-In genereale, in circuiti elettromeccanici le riluttanze non sono dei parametri costanti del sistema ma dipendono dallo stato “meccanico” del sistema, descritto qui dalle variabili \(\mathbf{x}\),
+In general, in electromechanical circuits, reluctances are not constant parameters of the system but depend on the “mechanical” state of the system, described here by the variables \(\mathbf{x}\),
 \begin{equation*}
 \begin{split}v_i = \sum_k \frac{d}{dt} \left( \frac{N_i \, N_k}{\theta_{ik}(\mathbf{x})} i_k \right) = \sum_k \frac{d}{dt} \left( L_{ik} (\mathbf{x}) \, i_k \right) \ .\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}\mathbf{v}(t) = \dfrac{d}{dt} \Big( \mathbf{L}(\mathbf{x}(t)) \, \mathbf{i}(t) \Big) \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-La matrice di induttanza \(\mathbf{L}\) è simmetrica \sphinxstylestrong{todo} \sphinxstyleemphasis{Dimostrazione}
+The inductance matrix \(\mathbf{L}\) is symmetric \sphinxstylestrong{todo} \sphinxstyleemphasis{Proof}
 \label{ch/circuits-electromechanic:example-0}
 \begin{sphinxadmonition}{note}{Example 6.3.1}
 
@@ -2492,10 +2623,10 @@ The dynamical equation of the wire is
 \end{equation*}\end{sphinxadmonition}
 
 
-\subsection{Sistemi elettromeccanici conservativi}
-\label{\detokenize{ch/circuits-electromechanic:sistemi-elettromeccanici-conservativi}}
+\subsection{Conservative Electromechanical Systems}
+\label{\detokenize{ch/circuits-electromechanic:conservative-electromechanical-systems}}
 \sphinxAtStartPar
-Le equazioni che governano il sistema elettromeccanico, senza condensatori, in generale possono essere scritte come
+The equations governing the electromechanical system, without capacitors, can generally be written as
 \begin{equation*}
 \begin{split}\begin{cases}
  \mathbf{M} \ddot{\mathbf{x}} + \mathbf{D} \dot{\mathbf{x}} + \mathbf{K} \mathbf{x} = \mathbf{f}^{ext} + \mathbf{f}^{em} \\
@@ -2503,24 +2634,24 @@ Le equazioni che governano il sistema elettromeccanico, senza condensatori, in g
 \end{cases}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-In termini di energia,
+In terms of energy,
 \begin{equation*}
 \begin{split}
 0 = \dot{\mathbf{x}}^T \left[ \mathbf{M} \ddot{\mathbf{x}} + \mathbf{D} \dot{\mathbf{x}} + \mathbf{K} \mathbf{x} - \mathbf{f}^{ext} - \mathbf{f}^{em} \right] + \mathbf{i}^T \left[ \dfrac{d}{dt} \left( \mathbf{L} \mathbf{i} \right) + \mathbf{R} \mathbf{i} - \mathbf{e} \right]
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-Nel caso di matrici di massa, smorzamento e rigidzza costanti, e usando la derivata del prodotto per ottenere un termine di derivata dell’energia degli induttori sfruttando la simmetria di \(\mathbf{L}\),
+In the case of constant mass, damping, and stiffness matrices, and using the product rule to obtain a term of the derivative of the energy of the inductors exploiting the symmetry of \(\mathbf{L}\),
 \begin{equation}\label{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:energy-mech-0}
 \begin{split} \begin{aligned}
-\dfrac{d}{dt} \left[ \frac{1}{2} \mathbf{i}^T \mathbf{L} \mathbf{i} \right] 
+\dfrac{d}{dt} \left[ \frac{1}{2} \mathbf{i}^T \mathbf{L} \mathbf{i} \right]
   & = \mathbf{i}^T \dfrac{d}{dt} \left( \mathbf{L} \, \mathbf{i} \right) + \frac{1}{2} \mathbf{i}^T \dfrac{d \mathbf{L}}{dt} \mathbf{i} = \\
   & = \mathbf{i}^T \dfrac{d}{dt} \left( \mathbf{L} \, \mathbf{i} \right) + \sum_{a} \frac{1}{2} \mathbf{i}^T \dfrac{\partial \mathbf{L}}{\partial x_a} \mathbf{i} \, \dot{x}_a = \\
   & = \mathbf{i}^T \dfrac{d}{dt} \left( \mathbf{L} \, \mathbf{i} \right) + \nabla \left( \frac{1}{2} \mathbf{i}^T \mathbf{L} \mathbf{i} \right) \dot{\mathbf{x}}  \ .
 \end{aligned}\end{split}
 \end{equation}
 \sphinxAtStartPar
-si può scrivere un’equazione di bilancio dell’energia meccanica macroscopica, \(E^{mec, int}\)
+one can write an equation of macroscopic mechanical energy balance, \(E^{mec, int}\)
 \begin{equation*}
 \begin{split}
 0 & = \dfrac{d}{dt} \left[ \dfrac{1}{2} \dot{\mathbf{x}}^T \mathbf{M} \dot{\mathbf{x}} + \dfrac{1}{2} \mathbf{x}^T \mathbf{K} \mathbf{x} + \dfrac{1}{2} \mathbf{i}^T \mathbf{L} \mathbf{i} \right] - \dot{\mathbf{x}}^T \left( \mathbf{f}^{em} - \nabla E^{ind}(\mathbf{x}, \mathbf{i})  \right) + \\
@@ -2529,15 +2660,15 @@ si può scrivere un’equazione di bilancio dell’energia meccanica macroscopic
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-Nell’ipotesi che il processo sia conservativo, si ricava la forma delle forze dovute ai fenomeni elettromagnetici,
+Assuming the process is conservative, the form of the forces due to electromagnetic phenomena is derived,
 \begin{equation}\label{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:f-em}
 \begin{split}\mathbf{f}^{em} = \nabla_{\mathbf{x}} E^{ind}(\mathbf{x}, \mathbf{i}) \ .\end{split}
 \end{equation}
 
-\subsection{Equazioni di governo}
-\label{\detokenize{ch/circuits-electromechanic:equazioni-di-governo}}
+\subsection{Governing Equations}
+\label{\detokenize{ch/circuits-electromechanic:governing-equations}}
 \sphinxAtStartPar
-Usando l’espressione \eqref{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:f-em} delle azioni meccaniche dovute agli effetti elettromagnetici, del sistema sono
+Using the expression \eqref{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:f-em} of the mechanical actions due to electromagnetic effects, the system equations are
 \begin{equation*}
 \begin{split}\begin{cases}
   \mathbf{M} \ddot{\mathbf{x}} + \mathbf{D} \dot{\mathbf{x}} + \mathbf{K} \mathbf{x} - \nabla_{\mathbf{x}} E^{ind}(\mathbf{x}, \mathbf{i})  = \mathbf{f}^{ext} \\
@@ -2545,7 +2676,7 @@ Usando l’espressione \eqref{equation:ch/circuits-electromechanic:classical-ele
 \end{cases}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-o nel caso generale
+or in the general case
 \begin{equation*}
 \begin{split}\begin{cases}
   \mathbf{M} \ddot{\mathbf{x}} - \nabla_{\mathbf{x}} E^{ind} ( \mathbf{x}, \mathbf{i}) = \mathbf{f}^{ext} \\
@@ -2553,52 +2684,52 @@ o nel caso generale
 \end{cases}\end{split}
 \end{equation*}
 
-\subsection{Bilancio energetico}
-\label{\detokenize{ch/circuits-electromechanic:bilancio-energetico}}
+\subsection{Energy Balance}
+\label{\detokenize{ch/circuits-electromechanic:energy-balance}}
 
-\subsubsection{Energia meccanica macroscopica}
-\label{\detokenize{ch/circuits-electromechanic:energia-meccanica-macroscopica}}
+\subsubsection{Macroscopic Mechanical Energy}
+\label{\detokenize{ch/circuits-electromechanic:macroscopic-mechanical-energy}}
 \sphinxAtStartPar
-Usando l’espressione \eqref{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:f-em} delle azioni meccaniche dovute ai fenomeni elettromagnetici, si può riscrivere la relazione \eqref{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:energy-mech-0}, come un bilancio di energia meccanica macroscopica del sistema,
+Using the expression \eqref{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:f-em} of the mechanical actions due to electromagnetic phenomena, the relation \eqref{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:energy-mech-0} can be rewritten as a macroscopic mechanical energy balance of the system,
 \begin{equation*}
 \begin{split}\dfrac{d}{dt} \left[ \dfrac{1}{2} \dot{\mathbf{x}}^T \mathbf{M} \dot{\mathbf{x}} + \dfrac{1}{2} \mathbf{x}^T \mathbf{K} \mathbf{x} + \dfrac{1}{2} \mathbf{i}^T \mathbf{L} \mathbf{i} \right] = \dot{\mathbf{x}}^T \mathbf{f}^{ext} + \mathbf{i}^T \mathbf{e} - \dot{\mathbf{x}}^T \mathbf{D} \dot{\mathbf{x}} - \mathbf{i}^T \mathbf{R} \mathbf{i} \ , \end{split}
 \end{equation*}
 \sphinxAtStartPar
-e quindi
+and therefore
 \begin{equation*}
 \begin{split}\dot{E}^{mec} = P^{ext} - \dot{D} \ .\end{split}
 \end{equation*}
 
-\subsubsection{Energia cinetica}
-\label{\detokenize{ch/circuits-electromechanic:energia-cinetica}}
+\subsubsection{Kinetic Energy}
+\label{\detokenize{ch/circuits-electromechanic:kinetic-energy}}
 \sphinxAtStartPar
-L’energia meccanica macroscopica può essere scritta come la somma dell’energia cinetica e dell’energia potenziale interna del sistema, \(E^{mec} = K + V^{int}\). La derivata nel tempo dell’energia potenziale delle azioni interne è l’opposto della potenza delle azioni interne conservative, \(P^{int, c} = - \dot{V}^{int}\); la dissipazione è l’opposto della potenza delle azioni interne non\sphinxhyphen{}conservative, \(P^{int, nc} = - \dot{D}\). La potenza complessiva delle azioni interne può quindi essere scritta come
+The macroscopic mechanical energy can be written as the sum of the kinetic energy and the internal potential energy of the system, \(E^{mec} = K + V^{int}\). The time derivative of the potential energy of the internal actions is the opposite of the power of the conservative internal actions, \(P^{int, c} = - \dot{V}^{int}\); the dissipation is the opposite of the power of the non\sphinxhyphen{}conservative internal actions, \(P^{int, nc} = - \dot{D}\). The total power of the internal actions can therefore be written as
 \begin{equation*}
 \begin{split}P^{int} = P^{int, c} + P^{int, nc} = - \dot{V}^{int} - \dot{D} \ ,\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}\dot{K} = \dot{E}^{mec} - \dot{V}^{int} = P^{ext} \underbrace{- \dot{D} - \dot{V}^{int}}_{=P^{int}} \  \end{split}
 \end{equation*}
 
-\subsubsection{Energia totale}
-\label{\detokenize{ch/circuits-electromechanic:energia-totale}}
+\subsubsection{Total Energy}
+\label{\detokenize{ch/circuits-electromechanic:total-energy}}
 \sphinxAtStartPar
-Il primo principio della termodinamica fornisce l’equazione di bilancio dell’energia totale di un sistema chiuso,
+The first principle of thermodynamics provides the total energy balance equation of a closed system,
 \begin{equation*}
 \begin{split}\dot{E}^{tot} = P^{ext} + \dot{Q}^{ext} \ .\end{split}
 \end{equation*}
 
-\subsubsection{Energia interna}
-\label{\detokenize{ch/circuits-electromechanic:energia-interna}}
+\subsubsection{Internal Energy}
+\label{\detokenize{ch/circuits-electromechanic:internal-energy}}
 \sphinxAtStartPar
-L’energia interna di un sistema è definita come la differenza dell’energia totale e dell’energia cinetica macroscopica, \(E := E^{tot} - K\). L’equazione di bilancio dell’energia interna di un sistema chiuso è
+The internal energy of a system is defined as the difference between the total energy and the macroscopic kinetic energy, \(E := E^{tot} - K\). The internal energy balance equation of a closed system is
 \begin{equation*}
 \begin{split}\dot{E} = Q^{ext} - P^{int} \ .\end{split}
 \end{equation*}
 
-\subsubsection{Energia interna termica (microscopica)}
-\label{\detokenize{ch/circuits-electromechanic:energia-interna-termica-microscopica}}
+\subsubsection{Thermal (Microscopic) Internal Energy}
+\label{\detokenize{ch/circuits-electromechanic:thermal-microscopic-internal-energy}}
 \sphinxAtStartPar
-Se si definisce l’energia interna termica, corrispondente all’energia cinetica associata alle dinamiche microscopiche, come differenza tra energia interna e energia potenziale interna, o differenza di energia totale ed energia meccanica macrsocopica,
+If the thermal internal energy, corresponding to the kinetic energy associated with microscopic dynamics, is defined as the difference between internal energy and internal potential energy, or the difference between total energy and macroscopic mechanical energy,
 \begin{equation*}
 \begin{split}\begin{aligned}
   E^{th} & = E - V^{int} = \\
@@ -2606,10 +2737,10 @@ Se si definisce l’energia interna termica, corrispondente all’energia cineti
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-l’equazione di bilancio dell’energia interna termica è
+the thermal internal energy balance equation is
 \begin{equation*}
 \begin{split}   \dot{E}^{th} = \dot{Q}^{ext} + \dot{D} \ . \end{split}
-\end{equation*}\subsubsection*{Dimostrazione}
+\end{equation*}\subsubsection*{Proof}
 \begin{equation*}
 \begin{split}\begin{aligned}
   \dot{E}^{th} = \dot{E} - V^{int}
@@ -2624,7 +2755,7 @@ l’equazione di bilancio dell’energia interna termica è
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Leggi ai nodi.}
+\sphinxstylestrong{Node laws.}
 \begin{equation*}
 \begin{split}0 = \sum_{k \in B_j} \alpha_{jk} \, i_{jk}\end{split}
 \end{equation*}\begin{equation*}
@@ -2632,24 +2763,24 @@ l’equazione di bilancio dell’energia interna termica è
 \end{equation*}
 \item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Differenza di potenziale nodi\sphinxhyphen{}lati.}
+\sphinxstylestrong{Node\sphinxhyphen{}branch voltage difference.}
 \begin{equation*}
 \begin{split}\mathbf{A}^T \mathbf{v}_{n} = \mathbf{v}\end{split}
 \end{equation*}
 \item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Nodo a terra.}
+\sphinxstylestrong{Ground node.}
 \begin{equation*}
 \begin{split}\mathbf{v}_{\perp} = \mathbf{v}_0 \ .\end{split}
 \end{equation*}
 \item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Equazioni costitutive.}
+\sphinxstylestrong{Constitutive equations.}
 \begin{equation*}
 \begin{split}\begin{aligned}
-    \mathbf{0} & = \mathbf{v}_R - \mathbf{R} \mathbf{i}_R & \text{resistenze} \\
-    \mathbf{0} & = \mathbf{v}_L - \frac{d}{dt} \left( \mathbf{L} \mathbf{i}_L \right) & \text{induttanze} \\
-    \mathbf{0} & = \frac{d}{dt} \left( C \mathbf{v}_C \right) - \mathbf{i}_C & \text{condensatori} \\
+    \mathbf{0} & = \mathbf{v}_R - \mathbf{R} \mathbf{i}_R & \text{resistances} \\
+    \mathbf{0} & = \mathbf{v}_L - \frac{d}{dt} \left( \mathbf{L} \mathbf{i}_L \right) & \text{inductances} \\
+    \mathbf{0} & = \frac{d}{dt} \left( C \mathbf{v}_C \right) - \mathbf{i}_C & \text{capacitors} \\
   \end{aligned}\end{split}
 \end{equation*}
 \end{itemize}
@@ -3728,7 +3859,7 @@ and thus \(v_A(\tau) = -19.25 \, V\)
 
 \noindent\sphinxincludegraphics{{exam-2024-09-06-ese-01}.png}
 \end{figure}
-\subsubsection*{Solution}
+\subsubsection*{Solution \sphinxhyphen{} todo}
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-07-22-exe-01}
 
@@ -3741,7 +3872,7 @@ and thus \(v_A(\tau) = -19.25 \, V\)
 
 \noindent\sphinxincludegraphics{{exam-2024-07-22-ese-01}.png}
 \end{figure}
-\subsubsection*{Solution}
+\subsubsection*{Solution \sphinxhyphen{} todo}
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-02-13-exe-01-b}
 
@@ -3754,7 +3885,7 @@ and thus \(v_A(\tau) = -19.25 \, V\)
 
 \noindent\sphinxincludegraphics{{exam-2024-02-13-ese-01-b}.png}
 \end{figure}
-\subsubsection*{Solution}
+\subsubsection*{Solution \sphinxhyphen{} todo}
 \end{sphinxadmonition}
 
 \sphinxstepscope
@@ -3994,7 +4125,7 @@ Signal in time is reconstructed using using the relation between effective and m
 
 \noindent\sphinxincludegraphics{{exam-2024-09-06-ese-02}.png}
 \end{figure}
-\subsubsection*{Solution}
+\subsubsection*{Solution \sphinxhyphen{} todo}
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-07-22-exe-02}
 
@@ -4007,7 +4138,7 @@ Signal in time is reconstructed using using the relation between effective and m
 
 \noindent\sphinxincludegraphics{{exam-2024-07-22-ese-02}.png}
 \end{figure}
-\subsubsection*{Solution}
+\subsubsection*{Solution \sphinxhyphen{} todo}
 \end{sphinxadmonition}
 
 \sphinxstepscope
@@ -4262,17 +4393,61 @@ being \(i_2 = i_{e_2} + i_{L_1} + i_{R_4}\) the sum of the current in the parall
 
 \noindent\sphinxincludegraphics{{exam-2024-02-13-ese-02}.png}
 \end{figure}
-\subsubsection*{Solution}
+\subsubsection*{Solution \sphinxhyphen{} todo}
 \end{sphinxadmonition}
 
 \sphinxstepscope
 
-\sphinxAtStartPar
-1classical\sphinxhyphen{}electromagnetism:electrical\sphinxhyphen{}engineering\sphinxhyphen{}exercises:electromagnetic)=
-
 
 \subsection{Electromagnetic circuits}
-\label{\detokenize{ch/electrical-engineering-exercises-electromagnetic:electromagnetic-circuits}}\label{\detokenize{ch/electrical-engineering-exercises-electromagnetic::doc}}\phantomsection \label{exercise:exam-25-01-22-exe-03}
+\label{\detokenize{ch/electrical-engineering-exercises-electromagnetic:electromagnetic-circuits}}\label{\detokenize{ch/electrical-engineering-exercises-electromagnetic:classical-electromagnetism-electrical-engineering-exercises-electromagnetic}}\label{\detokenize{ch/electrical-engineering-exercises-electromagnetic::doc}}
+\begin{sphinxadmonition}{note}{Guidlines for solution}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+Find the equivalent magnetic network of the inductive part of the system to find the relation,
+\begin{equation*}
+\begin{split}\mathbf{v}(t) = \dot{\symbf{\psi}}(t) = \frac{d}{dt} \left( \mathbf{L} \, \mathbf{i}(t) \right) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+between the tensions and the currents at the ports of the electromagnetic system, usually under the assumpsions of
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+no dispersed fluxes,
+
+\item {} 
+\sphinxAtStartPar
+linear constitutive equation of the ferromagnetic medium, \(b = \mu_{\text{Fe}} h\), so that hysteresis is neglected
+
+\item {} 
+\sphinxAtStartPar
+permeability of the ferromagnetic much larger than the permeability of free space, \(\mu_{\text{Fe}} \gg \mu_0\), so that the reluctance of the ferrmagnetic medium is negligible if compared with the reluctance of the air gaps. Relucatnce of air gaps reads
+
+\end{itemize}
+\begin{equation*}
+\begin{split}\theta = \frac{\delta}{\mu_0 A} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+In \sphinxstylestrong{stationary regime} \(\frac{d}{dt} \equiv 0\), and thus inductors act as short\sphinxhyphen{}circuits.
+
+\item {} 
+\sphinxAtStartPar
+Use the relation \(\mathbf{v} = \frac{d}{dt} \left( \mathbf{L} \, \mathbf{i} \right)\) in the electric network to solve the electromagnetic system
+
+\item {} 
+\sphinxAtStartPar
+Find all the other physical quantities needed, remembering that the volume density of electromagnetic energy in media, under the assumption of linear media, is
+\begin{equation*}
+\begin{split}u = \frac{1}{2 \mu} \left|\vec{b}(\vec{r},t)\right|^2 + \frac{1}{2} \varepsilon \left|\vec{e}(\vec{r},t)\right|^2 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Volume density must be integrated over the regions of space where it’s not negligible, like air gaps.
+
+\end{enumerate}
+\end{sphinxadmonition}
+\phantomsection \label{exercise:exam-25-01-22-exe-03}
 
 \begin{sphinxadmonition}{note}{Exercise 6.7.15 (Exam 2025\sphinxhyphen{}01\sphinxhyphen{}22, Exercise 3.)}
 
@@ -4283,6 +4458,102 @@ being \(i_2 = i_{e_2} + i_{L_1} + i_{R_4}\) the sum of the current in the parall
 
 \noindent\sphinxincludegraphics{{exam-2025-01-22-ese-03}.png}
 \end{figure}
+\subsubsection*{Solution}
+
+\begin{figure}[htbp]
+\centering
+
+\noindent\sphinxincludegraphics{{exam-2025-01-22-ese-03-c}.png}
+\end{figure}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+Equivalent magnetic network of the inductive part of the system. The equivalent reluctance seen by the magnetic flux generator \(m_A = N i_A\) is
+\begin{equation*}
+\begin{split}\theta_{eq} = \theta_2 + \left( \theta_1 \parallel \theta_3 \right) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and thus the flux through it reads
+\begin{equation*}
+\begin{split}\phi_A = \frac{m_A}{\theta_{eq}} = \frac{N}{\theta_{eq}} i = \dots\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The parallel part of the circuit acts as a current divider and thus magnetic fluxes through gaps \(1\) and \(3\) are
+\begin{equation}\label{equation:ch/electrical-engineering-exercises-electromagnetic:eq:2025-01-22:fluxes}
+\begin{split}\begin{aligned}
+      \phi_1 & = \frac{\theta_3}{\theta_1 + \theta_3} \phi_A = \frac{\theta_3}{\theta_1 + \theta_3} \frac{N}{\theta_{eq}} i_A = \dots \\
+      \phi_3 & = \frac{\theta_1}{\theta_1 + \theta_3} \phi_A = \frac{\theta_1}{\theta_1 + \theta_3} \frac{N}{\theta_{eq}} i_A = \dots \\
+    \end{aligned}\end{split}
+\end{equation}
+\sphinxAtStartPar
+Faraday’s law provides the relation between the voltage and the concatenated flux,
+\begin{equation*}
+\begin{split}v_A = \dot{\psi} = N \dot{\phi}_A = \frac{N^2}{\theta_{eq}} \dfrac{d i_A}{dt} = L_{eq} \dfrac{di}{dt} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where the equivalent inductance of the magnetic circuit
+\begin{equation*}
+\begin{split}L_{eq} = \dots\end{split}
+\end{equation*}
+\sphinxAtStartPar
+has been introduced. This relation becomes \(v_A = 0\) in steady regime.
+
+\item {} 
+\sphinxAtStartPar
+The electric network can be solved evaluating Thevenin equivalent network at the inductive port,
+\begin{equation*}
+\begin{split}\begin{aligned}
+     v_{Th} & = \frac{R_3}{R_2 + R_3} e + R_1 a \\
+     R_{Th} & = R_1 + R_2 + \left( R_3 \parallel R_4 \right) \ ,
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Thus the KVL on the equivalent complete network is
+\begin{equation*}
+\begin{split}v_{Th} - R_{Th} i_A - L \dfrac{d i_A}{d t} = 0 \ . \end{split}
+\end{equation*}
+\sphinxAtStartPar
+In \sphinxstylestrong{steady regime}, \(\frac{d}{dt} \equiv 0\), and thus
+\begin{equation}\label{equation:ch/electrical-engineering-exercises-electromagnetic:eq:2025-01-22:current}
+\begin{split}\overline{i}_A = \dfrac{v_{Th}}{R_{Th}} = \dots \end{split}
+\end{equation}
+\item {} 
+\sphinxAtStartPar
+Energy stored in the magnetic field is the sum (integral) of the contribution \(\frac{1}{2 \mu} \left|\vec{b}\right|^2\) in electromagnetic energy density, \(u\). With the assumption of negligible reluctance of the ferromagnetic medium,
+\begin{equation*}
+\begin{split}\begin{aligned}
+     \int_{V} \frac{1}{2 \mu} \left| \vec{b} \right|^2 
+     & \sim \int_{V_{gaps}} \frac{1}{2 \mu_0} \left| \vec{b}(\vec{r},t) \right|^2 = \\
+     & \sim \sum_{k \in \text{gaps}} \frac{1}{2 \mu_0} b_k^2 \, V_k = \\
+     & \sim \sum_{k \in \text{gaps}} \frac{1}{2 \mu_0} \left(\frac{\phi_k}{A_k}\right)^2 \, A_k \, \delta_k = \\
+     & \sim \sum_{k \in \text{gaps}} \frac{1}{2} \frac{\delta_k}{\mu_0 A_k} \phi_k^2 = \\
+     & \sim \sum_{k \in \text{gaps}} \frac{1}{2} \theta_k \phi_k^2 = \dots \ .
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Fluxes can be evaluated with relations \eqref{equation:ch/electrical-engineering-exercises-electromagnetic:eq:2025-01-22:fluxes}, once the current \(i_A\) is known, from \eqref{equation:ch/electrical-engineering-exercises-electromagnetic:eq:2025-01-22:current}.
+
+\item {} 
+\sphinxAtStartPar
+After solving the electric circuit (e.g. introducing two loop currents in the left and right loops), powers through resistors and generators read
+\begin{equation*}
+\begin{split}\begin{aligned}
+      P_{R_1} & = R_1 \, i_1^2 = R_1 (i_A - a)^2 = \dots \\
+      P_{R_2} & = R_2 \, i_2^2 = R_2 i_A^2 = \dots \\
+      P_{R_3} & = R_3 \, i_3^2 = R_3 (i_A - i_{e,1})^2 = \dots \\
+      P_{R_4} & = R_4 \, i_4^2 = R_4 (i_A + i_{e,1})^2 = \dots \\
+   \end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+      P_a & = v_a a = R_1 (i_A-a) \, a = \dots \\
+      P_e & = e i_e = e ( -i_A + i_{e,1} ) = \dots \\
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(i_{e,1} = \frac{e}{R_3 + R_4}\).
+
+\end{enumerate}
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-06-19-exe-02}
 
@@ -4293,8 +4564,9 @@ being \(i_2 = i_{e_2} + i_{L_1} + i_{R_4}\) the sum of the current in the parall
 \begin{figure}[htbp]
 \centering
 
-\noindent\sphinxincludegraphics{{exam-2025-01-22-ese-03}.png}
+\noindent\sphinxincludegraphics{{exam-2024-06-19-ese-02}.png}
 \end{figure}
+\subsubsection*{Solution \sphinxhyphen{} todo}
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-02-13-exe-01-a}
 
@@ -4307,6 +4579,7 @@ being \(i_2 = i_{e_2} + i_{L_1} + i_{R_4}\) the sum of the current in the parall
 
 \noindent\sphinxincludegraphics{{exam-2024-02-13-ese-01-a}.png}
 \end{figure}
+\subsubsection*{Solution \sphinxhyphen{} todo}
 \end{sphinxadmonition}
 
 \sphinxstepscope
