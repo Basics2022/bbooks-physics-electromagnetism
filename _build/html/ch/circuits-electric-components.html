@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6.1.3. Componenti elementari dei circuiti elettrici &#8212; Classical Electromagnetism and Principles of Electrical Engineering</title>
+    <title>6.1.4. Componenti elementari dei circuiti elettrici &#8212; Classical Electromagnetism and Principles of Electrical Engineering</title>
   
   
   
@@ -70,8 +70,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.1.4. Regimi di funzionamento in circuiti elettrici" href="circuits-electric-regimes.html" />
-    <link rel="prev" title="6.1.2. Induzione elettromagnetica nell’approssimazione circuitale" href="circuits-electric-induction.html" />
+    <link rel="next" title="6.1.5. Regimi di funzionamento in circuiti elettrici" href="circuits-electric-regimes.html" />
+    <link rel="prev" title="6.1.3. Induzione elettromagnetica nell’approssimazione circuitale" href="circuits-electric-induction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -202,7 +202,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="regimes-non-dimensional.html">5.1. Non-dimensional equations of electromagnetism</a></li>
 <li class="toctree-l2"><a class="reference internal" href="regimes-electrostatics.html">5.2. Electrostatics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="regimes-steady.html">5.3. Steady regime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="regimes-slow.html">5.4. Slow…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regimes-slow.html">5.4. Slow regime</a></li>
 </ul>
 </li>
 </ul>
@@ -210,10 +210,11 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="circuits.html">6. Circuit Approximation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="circuits-electric.html">6.1. Circuiti elettrici</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-approximation.html">6.1.1. Validità dell’approccio circuitale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">6.1.2. Induzione elettromagnetica nell’approssimazione circuitale</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">6.1.3. Componenti elementari dei circuiti elettrici</a></li>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">6.1.4. Regimi di funzionamento in circuiti elettrici</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-energy.html">6.1.1. Energy balance in circuit approximation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-approximation.html">6.1.2. Validità dell’approccio circuitale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">6.1.3. Induzione elettromagnetica nell’approssimazione circuitale</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">6.1.4. Componenti elementari dei circuiti elettrici</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">6.1.5. Regimi di funzionamento in circuiti elettrici</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electromagnetic.html">6.2. Circuiti elettromagnetici</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -390,7 +391,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistore-ohmico">6.1.3.1. Resistore ohmico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistore-ohmico">6.1.4.1. Resistore ohmico</a></li>
 </ul>
             </nav>
         </div>
@@ -410,9 +411,9 @@ document.write(`
 ```
 -->
 <div class="tex2jax_ignore mathjax_ignore section" id="componenti-elementari-dei-circuiti-elettrici">
-<span id="classical-electromagnetism-circuits-electric-components"></span><h1><span class="section-number">6.1.3. </span>Componenti elementari dei circuiti elettrici<a class="headerlink" href="#componenti-elementari-dei-circuiti-elettrici" title="Permalink to this heading">#</a></h1>
+<span id="classical-electromagnetism-circuits-electric-components"></span><h1><span class="section-number">6.1.4. </span>Componenti elementari dei circuiti elettrici<a class="headerlink" href="#componenti-elementari-dei-circuiti-elettrici" title="Permalink to this heading">#</a></h1>
 <div class="section" id="resistore-ohmico">
-<h2><span class="section-number">6.1.3.1. </span>Resistore ohmico<a class="headerlink" href="#resistore-ohmico" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.1.4.1. </span>Resistore ohmico<a class="headerlink" href="#resistore-ohmico" title="Permalink to this heading">#</a></h2>
 <p>Un resistore di Ohm risulta dall’approssimazione circuitale di un materiale con equazione costitutiva lineare</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{e} = \rho_R \, \mathbf{j} \ ,\]</div>
@@ -480,7 +481,7 @@ Se il materiale non è in grado di accumulare carica, il bilancio di carica elet
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6.1.2. </span>Induzione elettromagnetica nell’approssimazione circuitale</p>
+        <p class="prev-next-title"><span class="section-number">6.1.3. </span>Induzione elettromagnetica nell’approssimazione circuitale</p>
       </div>
     </a>
     <a class="right-next"
@@ -488,7 +489,7 @@ Se il materiale non è in grado di accumulare carica, il bilancio di carica elet
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.1.4. </span>Regimi di funzionamento in circuiti elettrici</p>
+        <p class="prev-next-title"><span class="section-number">6.1.5. </span>Regimi di funzionamento in circuiti elettrici</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -507,7 +508,7 @@ Se il materiale non è in grado di accumulare carica, il bilancio di carica elet
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistore-ohmico">6.1.3.1. Resistore ohmico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistore-ohmico">6.1.4.1. Resistore ohmico</a></li>
 </ul>
   </nav></div>
 

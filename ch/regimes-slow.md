@@ -1,4 +1,4 @@
-(classical-electromagnetism:regimes)=
+(classical-electromagnetism:regimes:slow)=
 # Slow regime
 
 Slow regime leads to circuit approximations of electromagnetic systems with **moderate dimensions** at **low frequency**. For these systems and regimes, the ratio appearing into [non-dimensional equations of electromagnetism](classical-electromagnetism:regimes:non-dimensional) reads,

@@ -118,7 +118,7 @@ This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\s
 {\hyperref[\detokenize{ch/energy:classical-electromagnetism-energy}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Force, Moments on charges, Momentum and Energy of the electromagnetic field}}}}}.
 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/regimes-slow:classical-electromagnetism-regimes}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Regimes}}}}}.
+\DUrole{xref,myst}{\sphinxstylestrong{Regimes}}.
 
 \sphinxAtStartPar
 \DUrole{xref,myst}{\sphinxstylestrong{Einstein’s special relativity and electromagnetism}}.
@@ -2067,18 +2067,28 @@ zero electric field insiede a conductor
 \subsection{Governing equation of electrostatics}
 \label{\detokenize{ch/regimes-electrostatics:governing-equation-of-electrostatics}}
 \sphinxAtStartPar
-Governing equations become
+Electrostatics studies systems with no motion of charges, and thus no currents, \(\vec{j} = \vec{0}\), and time dependency, \(\partial_t \equiv 0\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Maxwell’s equations.}
 \begin{equation*}
-\begin{split}\partial_t \rho = 0\end{split}
-\end{equation*}\begin{equation*}
 \begin{split}\begin{cases}
-  \nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
-  \nabla \times \vec{e} = \vec{0} \\
-  \nabla \cdot \vec{b} = 0 \\
-  \nabla \times \vec{h} = \vec{0} \ .
-\end{cases}\end{split}
+    \nabla \cdot \vec{e} = \dfrac{\rho}{\varepsilon_0} \\
+    \nabla \times \vec{e} = \vec{0} \\ 
+    \nabla \cdot \vec{b} = 0 \\
+    \nabla \times \vec{b} = \vec{0}
+  \end{cases}\end{split}
 \end{equation*}
 \sphinxAtStartPar
+\sphinxstylestrong{Potentials.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+      \vec{b} & = \nabla \times \vec{a} \\
+      \vec{e} & = - \nabla \phi \\
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+As both the divergence and the curl of the magnetic field are zero, only constant and uniform magnetic field are allowed.
 In absence of magnetic field, the problem is fully determined by the Gauss’ law for the electric field and the steady condition of the Faraday’s law, implying that the irrotational electric field can be written as the gradient of a scalar potential,
 \begin{equation*}
 \begin{split}\vec{e} = - \nabla \varphi \ .\end{split}
@@ -2168,11 +2178,34 @@ and appylying initial conditions in all the points of the domain, \(\rho_{f}(\ma
 \sphinxAtStartPar
 Steady regime \sphinxhyphen{} in a Eulerian description \sphinxhyphen{} allows for steady currents, but non\sphinxhyphen{}varying fields in an Eulerian description \(\partial_t \equiv 0\).
 
+\sphinxAtStartPar
+\sphinxstylestrong{Continuity equation of electric charge.}
+\begin{equation*}
+\begin{split}\nabla \cdot \vec{j} = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Maxwell’s equations.}
+\begin{equation*}
+\begin{split}\begin{cases}
+    \nabla \cdot \vec{e} = \dfrac{\rho}{\varepsilon_0} \\
+    \nabla \times \vec{e} = \vec{0} \\ 
+    \nabla \cdot \vec{b} = 0 \\
+    \nabla \times \vec{b} = \mu_0 \vec{j} 
+  \end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Potentials.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+      \vec{b} & = \nabla \times \vec{a} \\
+      \vec{e} & = - \nabla \phi \\
+   \end{aligned}\end{split}
+\end{equation*}
 \sphinxstepscope
 
 
-\section{Slow…}
-\label{\detokenize{ch/regimes-slow:slow}}\label{\detokenize{ch/regimes-slow:classical-electromagnetism-regimes}}\label{\detokenize{ch/regimes-slow::doc}}
+\section{Slow regime}
+\label{\detokenize{ch/regimes-slow:slow-regime}}\label{\detokenize{ch/regimes-slow:classical-electromagnetism-regimes-slow}}\label{\detokenize{ch/regimes-slow::doc}}
 \sphinxAtStartPar
 Slow regime leads to circuit approximations of electromagnetic systems with \sphinxstylestrong{moderate dimensions} at \sphinxstylestrong{low frequency}. For these systems and regimes, the ratio appearing into {\hyperref[\detokenize{ch/regimes-non-dimensional:classical-electromagnetism-regimes-non-dimensional}]{\sphinxcrossref{\DUrole{std,std-ref}{non\sphinxhyphen{}dimensional equations of electromagnetism}}}} reads,
 \begin{equation*}
@@ -2349,6 +2382,41 @@ Quando possibile, cioè quando capace di descrivere adeguatamente il comportamen
 
 \sphinxAtStartPar
 \sphinxstylestrong{Componenti elementari di un circuito elettrico.}
+
+\sphinxstepscope
+
+
+\subsection{Energy balance in circuit approximation}
+\label{\detokenize{ch/circuits-electric-energy:energy-balance-in-circuit-approximation}}\label{\detokenize{ch/circuits-electric-energy:classical-electromagnetism-circuits-electric-energy}}\label{\detokenize{ch/circuits-electric-energy::doc}}
+\sphinxAtStartPar
+Integral balance of electromagnetic energy \eqref{equation:ch/energy-momentum-balance:eq:energy:integral:2} reads
+\begin{equation*}
+\begin{split}\dfrac{d}{dt} \int_V u + \int_{V} \vec{e} \cdot \vec{j} = - \oint_{\partial V} \, \phi \vec{j} \cdot \hat{n} + \oint_{\partial V} \hat{n} \cdot \left[ \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b} + \varepsilon_0 \, \phi\, \partial_t \vec{e} \right] \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+In the limit of {\hyperref[\detokenize{ch/regimes-slow:classical-electromagnetism-regimes-slow}]{\sphinxcrossref{\DUrole{std,std-ref}{slow regime}}}}, \(\frac{f L}{c_0} \ll 1\), the comparison of the characteristic dimensions of the three boundary contributions gives
+\begin{equation*}
+\begin{split}\begin{aligned}
+  - \oint_{\partial V} \phi \, \vec{j} \cdot \hat{n} & = \sum_{k \in \text{wires}} v_k i_k = V I \sum_{k \in \text{wires}} v_k i_k && (1) \\
+  \oint_{\partial V} \hat{n} \cdot \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b} & = S \dfrac{ f A B }{\mu_0} \oint_{\partial \widetilde{V}} \hat{n} \cdot \partial_t \vec{a} \times \vec{b} = S \dfrac{B^2 f L}{\mu_0}  \oint_{\partial \widetilde{V}} \hat{n} \cdot \partial_t \vec{a} \times \vec{b}  && (2) \\
+  \oint_{\partial V} \hat{n} \cdot \varepsilon_0 \, \phi\, \partial_t \vec{e} & = S \, \varepsilon_0 f E \Phi \oint_{\partial \widetilde{V}} \hat{n} \cdot \phi\, \partial_t \vec{e} = S \dfrac{B^2 f L}{\mu_0} \left( \dfrac{f L}{c_0} \right)^2 \oint_{\partial \widetilde{V}} \hat{n} \cdot \phi\, \partial_t \vec{e} && (3) \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(E = B f L\), and \(\Phi = E L = B f L^2\), \(E \Phi = (B f L)^2 L\), and \(\varepsilon_0 = \dfrac{1}{\mu_0 c_0^2}\). If the integrals with non\sphinxhyphen{}dimensional quantities have the same order of magnitude (and this should occur if the non\sphinxhyphen{}dimensional equations are build using reference quantities of the system), the contribution (3) is smaller than the contribution (2) in the slow regime limit, as its \(\left( \frac{f L}{c_0} \right)^2 \ll 1\) times the order of magnitude.
+
+\sphinxAtStartPar
+Comparing (1) and (2), the second contribution is negligible if
+\begin{equation*}
+\begin{split}1 \gg \dfrac{S \frac{B^2 f L}{\mu_0}}{VI} = \dots\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{check this! Is it ok that the frequency disappears? Term (1) is non\sphinxhyphen{}zero but (2) is identically zero for steady regime, \(f = 0\). And if it’s required to separate steady and unsteady contributions in the discussion of non\sphinxhyphen{}dimensional equations}
+\begin{equation*}
+\begin{split}1 \gg \dfrac{S \frac{B^2 f L}{\mu_0}}{VI} = S \dfrac{B^2 f L}{\mu_0 \Phi I} = S \frac{B^2 f L}{\mu_0 B f L^2 I} = S \frac{B}{\mu_0 L I} = S \frac{\mu_0 J L}{\mu_0 L I} = \frac{S J}{I} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The dimension of the boundary of the domain is proprotional to the square of the linear dimension of the system, \(S \sim L_{V}^2\). This inequality holds if the product of the dimension of the boundary of the domain and the characteristic current density \(J\) is much smaller than the characteristic current \(I\) at the boundary.
 
 \sphinxstepscope
 

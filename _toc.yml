@@ -41,6 +41,7 @@ parts:
     sections:
     - file: ch/circuits-electric
       sections:
+      - file: ch/circuits-electric-energy
       - file: ch/circuits-electric-approximation
       - file: ch/circuits-electric-induction
       - file: ch/circuits-electric-components
