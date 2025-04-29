@@ -11,17 +11,25 @@ So far, random topics
 
 ## Governing equation of electrostatics
 
-Governing equations become
+Electrostatics studies systems with no motion of charges, and thus no currents, $\vec{j} = \vec{0}$, and time dependency, $\partial_t \equiv 0$.
 
-$$\partial_t \rho = 0$$
+**Maxwell's equations.**
 
-$$\begin{cases}
-  \nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
-  \nabla \times \vec{e} = \vec{0} \\
-  \nabla \cdot \vec{b} = 0 \\
-  \nabla \times \vec{h} = \vec{0} \ .
-\end{cases}$$
+  $$\begin{cases}
+    \nabla \cdot \vec{e} = \dfrac{\rho}{\varepsilon_0} \\
+    \nabla \times \vec{e} = \vec{0} \\ 
+    \nabla \cdot \vec{b} = 0 \\
+    \nabla \times \vec{b} = \vec{0}
+  \end{cases}$$
 
+**Potentials.**
+
+   $$\begin{aligned}
+      \vec{b} & = \nabla \times \vec{a} \\
+      \vec{e} & = - \nabla \phi \\
+   \end{aligned}$$
+
+As both the divergence and the curl of the magnetic field are zero, only constant and uniform magnetic field are allowed.
 In absence of magnetic field, the problem is fully determined by the Gauss' law for the electric field and the steady condition of the Faraday's law, implying that the irrotational electric field can be written as the gradient of a scalar potential,
 
 $$\vec{e} = - \nabla \varphi \ .$$

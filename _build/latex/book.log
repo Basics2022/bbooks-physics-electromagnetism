@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  29 APR 2025 16:26
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2024.9.16)  29 APR 2025 19:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1806,91 +1806,91 @@ LaTeX Info: Redefining \ttfamily on input line 1937.
 ]
 Chapter 5.
 [37]
-LaTeX Info: Redefining \rmfamily on input line 2074.
-LaTeX Info: Redefining \sffamily on input line 2074.
-LaTeX Info: Redefining \ttfamily on input line 2074.
+LaTeX Info: Redefining \rmfamily on input line 2085.
+LaTeX Info: Redefining \sffamily on input line 2085.
+LaTeX Info: Redefining \ttfamily on input line 2085.
  [38]
-LaTeX Info: Redefining \rmfamily on input line 2104.
-LaTeX Info: Redefining \sffamily on input line 2104.
-LaTeX Info: Redefining \ttfamily on input line 2104.
+LaTeX Info: Redefining \rmfamily on input line 2152.
+LaTeX Info: Redefining \sffamily on input line 2152.
+LaTeX Info: Redefining \ttfamily on input line 2152.
  [39]
-LaTeX Info: Redefining \rmfamily on input line 2104.
-LaTeX Info: Redefining \sffamily on input line 2104.
-LaTeX Info: Redefining \ttfamily on input line 2104.
- [40
+LaTeX Info: Redefining \rmfamily on input line 2210.
+LaTeX Info: Redefining \sffamily on input line 2210.
+LaTeX Info: Redefining \ttfamily on input line 2210.
+ [40] [41
 
-] [41] [42]
+] [42]
 Chapter 6.
 [43
 
 ]
-LaTeX Info: Redefining \rmfamily on input line 2291.
-LaTeX Info: Redefining \sffamily on input line 2291.
-LaTeX Info: Redefining \ttfamily on input line 2291.
+LaTeX Info: Redefining \rmfamily on input line 2397.
+LaTeX Info: Redefining \sffamily on input line 2397.
+LaTeX Info: Redefining \ttfamily on input line 2397.
  [44]
-LaTeX Info: Redefining \rmfamily on input line 2356.
-LaTeX Info: Redefining \sffamily on input line 2356.
-LaTeX Info: Redefining \ttfamily on input line 2356.
+LaTeX Info: Redefining \rmfamily on input line 2462.
+LaTeX Info: Redefining \sffamily on input line 2462.
+LaTeX Info: Redefining \ttfamily on input line 2462.
  [45]
-LaTeX Info: Redefining \rmfamily on input line 2441.
-LaTeX Info: Redefining \sffamily on input line 2441.
-LaTeX Info: Redefining \ttfamily on input line 2441.
+LaTeX Info: Redefining \rmfamily on input line 2547.
+LaTeX Info: Redefining \sffamily on input line 2547.
+LaTeX Info: Redefining \ttfamily on input line 2547.
  [46]
-LaTeX Info: Redefining \rmfamily on input line 2499.
-LaTeX Info: Redefining \sffamily on input line 2499.
-LaTeX Info: Redefining \ttfamily on input line 2499.
+LaTeX Info: Redefining \rmfamily on input line 2605.
+LaTeX Info: Redefining \sffamily on input line 2605.
+LaTeX Info: Redefining \ttfamily on input line 2605.
  [47]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2540.
+(hyperref)                removing `math shift' on input line 2646.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2540.
+(hyperref)                removing `subscript' on input line 2646.
 
-LaTeX Info: Redefining \rmfamily on input line 2560.
-LaTeX Info: Redefining \sffamily on input line 2560.
-LaTeX Info: Redefining \ttfamily on input line 2560.
+LaTeX Info: Redefining \rmfamily on input line 2666.
+LaTeX Info: Redefining \sffamily on input line 2666.
+LaTeX Info: Redefining \ttfamily on input line 2666.
 [48]
 File: ex-00-loop.jpg Graphic file (type bmp)
 <ex-00-loop.jpg>
 File: ex-00-loop.jpg Graphic file (type bmp)
 <ex-00-loop.jpg>
-LaTeX Info: Redefining \rmfamily on input line 2623.
-LaTeX Info: Redefining \sffamily on input line 2623.
-LaTeX Info: Redefining \ttfamily on input line 2623.
+LaTeX Info: Redefining \rmfamily on input line 2729.
+LaTeX Info: Redefining \sffamily on input line 2729.
+LaTeX Info: Redefining \ttfamily on input line 2729.
  [49]
 File: ex-00-circuit.jpg Graphic file (type bmp)
 <ex-00-circuit.jpg>
 File: ex-00-force-em.jpg Graphic file (type bmp)
 <ex-00-force-em.jpg>
-LaTeX Info: Redefining \rmfamily on input line 2676.
-LaTeX Info: Redefining \sffamily on input line 2676.
-LaTeX Info: Redefining \ttfamily on input line 2676.
+LaTeX Info: Redefining \rmfamily on input line 2782.
+LaTeX Info: Redefining \sffamily on input line 2782.
+LaTeX Info: Redefining \ttfamily on input line 2782.
  [50]
-LaTeX Info: Redefining \rmfamily on input line 2734.
-LaTeX Info: Redefining \sffamily on input line 2734.
-LaTeX Info: Redefining \ttfamily on input line 2734.
+LaTeX Info: Redefining \rmfamily on input line 2840.
+LaTeX Info: Redefining \sffamily on input line 2840.
+LaTeX Info: Redefining \ttfamily on input line 2840.
  [51]
-LaTeX Info: Redefining \rmfamily on input line 2785.
-LaTeX Info: Redefining \sffamily on input line 2785.
-LaTeX Info: Redefining \ttfamily on input line 2785.
+LaTeX Info: Redefining \rmfamily on input line 2891.
+LaTeX Info: Redefining \sffamily on input line 2891.
+LaTeX Info: Redefining \ttfamily on input line 2891.
  [52]
-LaTeX Info: Redefining \rmfamily on input line 2836.
-LaTeX Info: Redefining \sffamily on input line 2836.
-LaTeX Info: Redefining \ttfamily on input line 2836.
+LaTeX Info: Redefining \rmfamily on input line 2942.
+LaTeX Info: Redefining \sffamily on input line 2942.
+LaTeX Info: Redefining \ttfamily on input line 2942.
  [53]
-LaTeX Info: Redefining \rmfamily on input line 2918.
-LaTeX Info: Redefining \sffamily on input line 2918.
-LaTeX Info: Redefining \ttfamily on input line 2918.
+LaTeX Info: Redefining \rmfamily on input line 3024.
+LaTeX Info: Redefining \sffamily on input line 3024.
+LaTeX Info: Redefining \ttfamily on input line 3024.
  [54]
-LaTeX Info: Redefining \rmfamily on input line 2995.
-LaTeX Info: Redefining \sffamily on input line 2995.
-LaTeX Info: Redefining \ttfamily on input line 2995.
+LaTeX Info: Redefining \rmfamily on input line 3101.
+LaTeX Info: Redefining \sffamily on input line 3101.
+LaTeX Info: Redefining \ttfamily on input line 3101.
  [55]
-LaTeX Info: Redefining \rmfamily on input line 3078.
-LaTeX Info: Redefining \sffamily on input line 3078.
-LaTeX Info: Redefining \ttfamily on input line 3078.
+LaTeX Info: Redefining \rmfamily on input line 3184.
+LaTeX Info: Redefining \sffamily on input line 3184.
+LaTeX Info: Redefining \ttfamily on input line 3184.
  [56]
 File: star-star.png Graphic file (type bmp)
 <star-star.png>
@@ -1900,300 +1900,300 @@ File: star-star.png Graphic file (type bmp)
 <star-star.png>
 File: star-star-e1.png Graphic file (type bmp)
 <star-star-e1.png>
-LaTeX Info: Redefining \rmfamily on input line 3113.
-LaTeX Info: Redefining \sffamily on input line 3113.
-LaTeX Info: Redefining \ttfamily on input line 3113.
+LaTeX Info: Redefining \rmfamily on input line 3219.
+LaTeX Info: Redefining \sffamily on input line 3219.
+LaTeX Info: Redefining \ttfamily on input line 3219.
  [57]
-LaTeX Info: Redefining \rmfamily on input line 3167.
-LaTeX Info: Redefining \sffamily on input line 3167.
-LaTeX Info: Redefining \ttfamily on input line 3167.
+LaTeX Info: Redefining \rmfamily on input line 3273.
+LaTeX Info: Redefining \sffamily on input line 3273.
+LaTeX Info: Redefining \ttfamily on input line 3273.
  [58]
 File: star-star-parallel-connections.png Graphic file (type bmp)
 <star-star-parallel-connections.png>
 File: star-star-extra-connections.png Graphic file (type bmp)
 <star-star-extra-connections.png>
-LaTeX Info: Redefining \rmfamily on input line 3235.
-LaTeX Info: Redefining \sffamily on input line 3235.
-LaTeX Info: Redefining \ttfamily on input line 3235.
+LaTeX Info: Redefining \rmfamily on input line 3341.
+LaTeX Info: Redefining \sffamily on input line 3341.
+LaTeX Info: Redefining \ttfamily on input line 3341.
  [59]
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-transient-1
--dynamic:exam-25-02-11-exe-01' on page 60 undefined on input line 3240.
+-dynamic:exam-25-02-11-exe-01' on page 60 undefined on input line 3346.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-transient-1-dynam
-ic:exam-25-02-11-exe-01' on page 60 undefined on input line 3240.
+ic:exam-25-02-11-exe-01' on page 60 undefined on input line 3346.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-harmonic:ex
-am-25-02-11-exe-02' on page 60 undefined on input line 3244.
+am-25-02-11-exe-02' on page 60 undefined on input line 3350.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-harmonic:exam-25-
-02-11-exe-02' on page 60 undefined on input line 3244.
+02-11-exe-02' on page 60 undefined on input line 3350.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-harmonic:ex
-am-25-02-11-exe-03' on page 60 undefined on input line 3248.
+am-25-02-11-exe-03' on page 60 undefined on input line 3354.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-harmonic:exam-25-
-02-11-exe-03' on page 60 undefined on input line 3248.
+02-11-exe-03' on page 60 undefined on input line 3354.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-transient-1
--dynamic:exam-25-01-22-exe-01' on page 60 undefined on input line 3260.
+-dynamic:exam-25-01-22-exe-01' on page 60 undefined on input line 3366.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-transient-1-dynam
-ic:exam-25-01-22-exe-01' on page 60 undefined on input line 3260.
+ic:exam-25-01-22-exe-01' on page 60 undefined on input line 3366.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-harmonic:ex
-am-25-01-22-exe-02' on page 60 undefined on input line 3264.
+am-25-01-22-exe-02' on page 60 undefined on input line 3370.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-harmonic:exam-25-
-01-22-exe-02' on page 60 undefined on input line 3264.
+01-22-exe-02' on page 60 undefined on input line 3370.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-electromagn
-etic:exam-25-01-22-exe-03' on page 60 undefined on input line 3268.
+etic:exam-25-01-22-exe-03' on page 60 undefined on input line 3374.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-electromagnetic:e
-xam-25-01-22-exe-03' on page 60 undefined on input line 3268.
+xam-25-01-22-exe-03' on page 60 undefined on input line 3374.
 
-LaTeX Info: Redefining \rmfamily on input line 3275.
-LaTeX Info: Redefining \sffamily on input line 3275.
-LaTeX Info: Redefining \ttfamily on input line 3275.
+LaTeX Info: Redefining \rmfamily on input line 3381.
+LaTeX Info: Redefining \sffamily on input line 3381.
+LaTeX Info: Redefining \ttfamily on input line 3381.
 [60]
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-transient-1
--dynamic:exam-24-09-06-exe-01' on page 61 undefined on input line 3280.
+-dynamic:exam-24-09-06-exe-01' on page 61 undefined on input line 3386.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-transient-1-dynam
-ic:exam-24-09-06-exe-01' on page 61 undefined on input line 3280.
+ic:exam-24-09-06-exe-01' on page 61 undefined on input line 3386.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-harmonic:ex
-am-24-09-06-exe-02' on page 61 undefined on input line 3284.
+am-24-09-06-exe-02' on page 61 undefined on input line 3390.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-harmonic:exam-24-
-09-06-exe-02' on page 61 undefined on input line 3284.
+09-06-exe-02' on page 61 undefined on input line 3390.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-three-phase
-:exam-24-09-06-exe-03' on page 61 undefined on input line 3288.
+:exam-24-09-06-exe-03' on page 61 undefined on input line 3394.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-three-phase:exam-
-24-09-06-exe-03' on page 61 undefined on input line 3288.
+24-09-06-exe-03' on page 61 undefined on input line 3394.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-transient-1
--dynamic:exam-24-07-22-exe-01' on page 61 undefined on input line 3300.
+-dynamic:exam-24-07-22-exe-01' on page 61 undefined on input line 3406.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-transient-1-dynam
-ic:exam-24-07-22-exe-01' on page 61 undefined on input line 3300.
+ic:exam-24-07-22-exe-01' on page 61 undefined on input line 3406.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-harmonic:ex
-am-24-07-22-exe-02' on page 61 undefined on input line 3304.
+am-24-07-22-exe-02' on page 61 undefined on input line 3410.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-harmonic:exam-24-
-07-22-exe-02' on page 61 undefined on input line 3304.
+07-22-exe-02' on page 61 undefined on input line 3410.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-three-phase
-:exam-24-07-22-exe-03' on page 61 undefined on input line 3308.
+:exam-24-07-22-exe-03' on page 61 undefined on input line 3414.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-three-phase:exam-
-24-07-22-exe-03' on page 61 undefined on input line 3308.
+24-07-22-exe-03' on page 61 undefined on input line 3414.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-three-phase
-:exam-24-06-19-exe-01' on page 61 undefined on input line 3316.
+:exam-24-06-19-exe-01' on page 61 undefined on input line 3422.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-three-phase:exam-
-24-06-19-exe-01' on page 61 undefined on input line 3316.
+24-06-19-exe-01' on page 61 undefined on input line 3422.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-electromagn
-etic:exam-24-06-19-exe-02' on page 61 undefined on input line 3320.
+etic:exam-24-06-19-exe-02' on page 61 undefined on input line 3426.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-electromagnetic:e
-xam-24-06-19-exe-02' on page 61 undefined on input line 3320.
+xam-24-06-19-exe-02' on page 61 undefined on input line 3426.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-electromagn
-etic:exam-24-02-13-exe-01-a' on page 61 undefined on input line 3328.
+etic:exam-24-02-13-exe-01-a' on page 61 undefined on input line 3434.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-electromagnetic:e
-xam-24-02-13-exe-01-a' on page 61 undefined on input line 3328.
+xam-24-02-13-exe-01-a' on page 61 undefined on input line 3434.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-transient-1
--dynamic:exam-24-02-13-exe-01-b' on page 61 undefined on input line 3332.
+-dynamic:exam-24-02-13-exe-01-b' on page 61 undefined on input line 3438.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-transient-1-dynam
-ic:exam-24-02-13-exe-01-b' on page 61 undefined on input line 3332.
+ic:exam-24-02-13-exe-01-b' on page 61 undefined on input line 3438.
 
 
 LaTeX Warning: Hyper reference `ch/electrical-engineering-exercises-three-phase
-:exam-24-02-13-exe-02' on page 61 undefined on input line 3336.
+:exam-24-02-13-exe-02' on page 61 undefined on input line 3442.
 
 
 LaTeX Warning: Reference `ch/electrical-engineering-exercises-three-phase:exam-
-24-02-13-exe-02' on page 61 undefined on input line 3336.
+24-02-13-exe-02' on page 61 undefined on input line 3442.
 
-LaTeX Info: Redefining \rmfamily on input line 3376.
-LaTeX Info: Redefining \sffamily on input line 3376.
-LaTeX Info: Redefining \ttfamily on input line 3376.
+LaTeX Info: Redefining \rmfamily on input line 3482.
+LaTeX Info: Redefining \sffamily on input line 3482.
+LaTeX Info: Redefining \ttfamily on input line 3482.
 [61]
 File: exam-2025-02-11-ese-01.png Graphic file (type bmp)
 <exam-2025-02-11-ese-01.png>
-LaTeX Info: Redefining \rmfamily on input line 3419.
-LaTeX Info: Redefining \sffamily on input line 3419.
-LaTeX Info: Redefining \ttfamily on input line 3419.
+LaTeX Info: Redefining \rmfamily on input line 3525.
+LaTeX Info: Redefining \sffamily on input line 3525.
+LaTeX Info: Redefining \ttfamily on input line 3525.
  [62]
 File: exam-2025-02-11-ese-01-b.png Graphic file (type bmp)
 <exam-2025-02-11-ese-01-b.png>
 File: exam-2025-02-11-ese-01-c.png Graphic file (type bmp)
 <exam-2025-02-11-ese-01-c.png>
-LaTeX Info: Redefining \rmfamily on input line 3459.
-LaTeX Info: Redefining \sffamily on input line 3459.
-LaTeX Info: Redefining \ttfamily on input line 3459.
+LaTeX Info: Redefining \rmfamily on input line 3565.
+LaTeX Info: Redefining \sffamily on input line 3565.
+LaTeX Info: Redefining \ttfamily on input line 3565.
  [63]
 File: exam-2025-02-11-ese-01-a.png Graphic file (type bmp)
 <exam-2025-02-11-ese-01-a.png>
-LaTeX Info: Redefining \rmfamily on input line 3512.
-LaTeX Info: Redefining \sffamily on input line 3512.
-LaTeX Info: Redefining \ttfamily on input line 3512.
+LaTeX Info: Redefining \rmfamily on input line 3618.
+LaTeX Info: Redefining \sffamily on input line 3618.
+LaTeX Info: Redefining \ttfamily on input line 3618.
  [64]
-LaTeX Info: Redefining \rmfamily on input line 3552.
-LaTeX Info: Redefining \sffamily on input line 3552.
-LaTeX Info: Redefining \ttfamily on input line 3552.
+LaTeX Info: Redefining \rmfamily on input line 3658.
+LaTeX Info: Redefining \sffamily on input line 3658.
+LaTeX Info: Redefining \ttfamily on input line 3658.
  [65]
-LaTeX Info: Redefining \rmfamily on input line 3631.
-LaTeX Info: Redefining \sffamily on input line 3631.
-LaTeX Info: Redefining \ttfamily on input line 3631.
+LaTeX Info: Redefining \rmfamily on input line 3737.
+LaTeX Info: Redefining \sffamily on input line 3737.
+LaTeX Info: Redefining \ttfamily on input line 3737.
  [66]
 File: exam-2025-01-22-ese-01.png Graphic file (type bmp)
 <exam-2025-01-22-ese-01.png>
 File: exam-2025-01-22-ese-01-b.png Graphic file (type bmp)
 <exam-2025-01-22-ese-01-b.png>
-LaTeX Info: Redefining \rmfamily on input line 3691.
-LaTeX Info: Redefining \sffamily on input line 3691.
-LaTeX Info: Redefining \ttfamily on input line 3691.
+LaTeX Info: Redefining \rmfamily on input line 3797.
+LaTeX Info: Redefining \sffamily on input line 3797.
+LaTeX Info: Redefining \ttfamily on input line 3797.
  [67]
 File: exam-2025-01-22-ese-01-c.png Graphic file (type bmp)
 <exam-2025-01-22-ese-01-c.png>
-LaTeX Info: Redefining \rmfamily on input line 3735.
-LaTeX Info: Redefining \sffamily on input line 3735.
-LaTeX Info: Redefining \ttfamily on input line 3735.
+LaTeX Info: Redefining \rmfamily on input line 3841.
+LaTeX Info: Redefining \sffamily on input line 3841.
+LaTeX Info: Redefining \ttfamily on input line 3841.
  [68]
 File: exam-2025-01-22-ese-01-a.png Graphic file (type bmp)
 <exam-2025-01-22-ese-01-a.png>
-LaTeX Info: Redefining \rmfamily on input line 3775.
-LaTeX Info: Redefining \sffamily on input line 3775.
-LaTeX Info: Redefining \ttfamily on input line 3775.
+LaTeX Info: Redefining \rmfamily on input line 3881.
+LaTeX Info: Redefining \sffamily on input line 3881.
+LaTeX Info: Redefining \ttfamily on input line 3881.
  [69]
-LaTeX Info: Redefining \rmfamily on input line 3817.
-LaTeX Info: Redefining \sffamily on input line 3817.
-LaTeX Info: Redefining \ttfamily on input line 3817.
+LaTeX Info: Redefining \rmfamily on input line 3923.
+LaTeX Info: Redefining \sffamily on input line 3923.
+LaTeX Info: Redefining \ttfamily on input line 3923.
  [70]
-LaTeX Info: Redefining \rmfamily on input line 3899.
-LaTeX Info: Redefining \sffamily on input line 3899.
-LaTeX Info: Redefining \ttfamily on input line 3899.
+LaTeX Info: Redefining \rmfamily on input line 4005.
+LaTeX Info: Redefining \sffamily on input line 4005.
+LaTeX Info: Redefining \ttfamily on input line 4005.
  [71]
 File: exam-2024-09-06-ese-01.png Graphic file (type bmp)
 <exam-2024-09-06-ese-01.png>
-LaTeX Info: Redefining \rmfamily on input line 3944.
-LaTeX Info: Redefining \sffamily on input line 3944.
-LaTeX Info: Redefining \ttfamily on input line 3944.
+LaTeX Info: Redefining \rmfamily on input line 4050.
+LaTeX Info: Redefining \sffamily on input line 4050.
+LaTeX Info: Redefining \ttfamily on input line 4050.
  [72]
 File: exam-2024-07-22-ese-01.png Graphic file (type bmp)
 <exam-2024-07-22-ese-01.png>
 File: exam-2024-02-13-ese-01-b.png Graphic file (type bmp)
 <exam-2024-02-13-ese-01-b.png>
-LaTeX Info: Redefining \rmfamily on input line 3970.
-LaTeX Info: Redefining \sffamily on input line 3970.
-LaTeX Info: Redefining \ttfamily on input line 3970.
+LaTeX Info: Redefining \rmfamily on input line 4076.
+LaTeX Info: Redefining \sffamily on input line 4076.
+LaTeX Info: Redefining \ttfamily on input line 4076.
  [73]
 File: exam-2025-02-11-ese-02.png Graphic file (type bmp)
 <exam-2025-02-11-ese-02.png>
-LaTeX Info: Redefining \rmfamily on input line 4025.
-LaTeX Info: Redefining \sffamily on input line 4025.
-LaTeX Info: Redefining \ttfamily on input line 4025.
+LaTeX Info: Redefining \rmfamily on input line 4131.
+LaTeX Info: Redefining \sffamily on input line 4131.
+LaTeX Info: Redefining \ttfamily on input line 4131.
  [74]
 File: exam-2025-02-11-ese-03.png Graphic file (type bmp)
 <exam-2025-02-11-ese-03.png>
-LaTeX Info: Redefining \rmfamily on input line 4089.
-LaTeX Info: Redefining \sffamily on input line 4089.
-LaTeX Info: Redefining \ttfamily on input line 4089.
+LaTeX Info: Redefining \rmfamily on input line 4195.
+LaTeX Info: Redefining \sffamily on input line 4195.
+LaTeX Info: Redefining \ttfamily on input line 4195.
  [75]
 File: exam-2025-01-22-ese-02.png Graphic file (type bmp)
 <exam-2025-01-22-ese-02.png>
-LaTeX Info: Redefining \rmfamily on input line 4143.
-LaTeX Info: Redefining \sffamily on input line 4143.
-LaTeX Info: Redefining \ttfamily on input line 4143.
+LaTeX Info: Redefining \rmfamily on input line 4249.
+LaTeX Info: Redefining \sffamily on input line 4249.
+LaTeX Info: Redefining \ttfamily on input line 4249.
 
 [76]
-LaTeX Info: Redefining \rmfamily on input line 4188.
-LaTeX Info: Redefining \sffamily on input line 4188.
-LaTeX Info: Redefining \ttfamily on input line 4188.
+LaTeX Info: Redefining \rmfamily on input line 4294.
+LaTeX Info: Redefining \sffamily on input line 4294.
+LaTeX Info: Redefining \ttfamily on input line 4294.
  [77]
 File: exam-2024-09-06-ese-02.png Graphic file (type bmp)
 <exam-2024-09-06-ese-02.png>
 File: exam-2024-07-22-ese-02.png Graphic file (type bmp)
 <exam-2024-07-22-ese-02.png>
-LaTeX Info: Redefining \rmfamily on input line 4229.
-LaTeX Info: Redefining \sffamily on input line 4229.
-LaTeX Info: Redefining \ttfamily on input line 4229.
+LaTeX Info: Redefining \rmfamily on input line 4335.
+LaTeX Info: Redefining \sffamily on input line 4335.
+LaTeX Info: Redefining \ttfamily on input line 4335.
  [78]
 File: exam-2024-09-06-ese-03.png Graphic file (type bmp)
 <exam-2024-09-06-ese-03.png>
-LaTeX Info: Redefining \rmfamily on input line 4292.
-LaTeX Info: Redefining \sffamily on input line 4292.
-LaTeX Info: Redefining \ttfamily on input line 4292.
+LaTeX Info: Redefining \rmfamily on input line 4398.
+LaTeX Info: Redefining \sffamily on input line 4398.
+LaTeX Info: Redefining \ttfamily on input line 4398.
  [79]
 File: exam-2024-07-22-ese-03.png Graphic file (type bmp)
 <exam-2024-07-22-ese-03.png>
-LaTeX Info: Redefining \rmfamily on input line 4336.
-LaTeX Info: Redefining \sffamily on input line 4336.
-LaTeX Info: Redefining \ttfamily on input line 4336.
+LaTeX Info: Redefining \rmfamily on input line 4442.
+LaTeX Info: Redefining \sffamily on input line 4442.
+LaTeX Info: Redefining \ttfamily on input line 4442.
  [80]
-LaTeX Info: Redefining \rmfamily on input line 4383.
-LaTeX Info: Redefining \sffamily on input line 4383.
-LaTeX Info: Redefining \ttfamily on input line 4383.
+LaTeX Info: Redefining \rmfamily on input line 4489.
+LaTeX Info: Redefining \sffamily on input line 4489.
+LaTeX Info: Redefining \ttfamily on input line 4489.
  [81]
 File: exam-2024-06-19-ese-01.png Graphic file (type bmp)
 <exam-2024-06-19-ese-01.png>
-LaTeX Info: Redefining \rmfamily on input line 4413.
-LaTeX Info: Redefining \sffamily on input line 4413.
-LaTeX Info: Redefining \ttfamily on input line 4413.
+LaTeX Info: Redefining \rmfamily on input line 4519.
+LaTeX Info: Redefining \sffamily on input line 4519.
+LaTeX Info: Redefining \ttfamily on input line 4519.
  [82]
 File: exam-2024-02-13-ese-02.png Graphic file (type bmp)
 <exam-2024-02-13-ese-02.png>
-LaTeX Info: Redefining \rmfamily on input line 4484.
-LaTeX Info: Redefining \sffamily on input line 4484.
-LaTeX Info: Redefining \ttfamily on input line 4484.
+LaTeX Info: Redefining \rmfamily on input line 4590.
+LaTeX Info: Redefining \sffamily on input line 4590.
+LaTeX Info: Redefining \ttfamily on input line 4590.
  [83]
 File: exam-2025-01-22-ese-03.png Graphic file (type bmp)
 <exam-2025-01-22-ese-03.png>
-LaTeX Info: Redefining \rmfamily on input line 4543.
-LaTeX Info: Redefining \sffamily on input line 4543.
-LaTeX Info: Redefining \ttfamily on input line 4543.
+LaTeX Info: Redefining \rmfamily on input line 4649.
+LaTeX Info: Redefining \sffamily on input line 4649.
+LaTeX Info: Redefining \ttfamily on input line 4649.
  [84]
 File: exam-2025-01-22-ese-03-a.png Graphic file (type bmp)
 <exam-2025-01-22-ese-03-a.png>
@@ -2207,68 +2207,68 @@ File: exam-2025-01-22-ese-03-b.png Graphic file (type bmp)
 <exam-2025-01-22-ese-03-b.png>
 File: exam-2025-01-22-ese-03-c.png Graphic file (type bmp)
 <exam-2025-01-22-ese-03-c.png>
-LaTeX Info: Redefining \rmfamily on input line 4600.
-LaTeX Info: Redefining \sffamily on input line 4600.
-LaTeX Info: Redefining \ttfamily on input line 4600.
+LaTeX Info: Redefining \rmfamily on input line 4706.
+LaTeX Info: Redefining \sffamily on input line 4706.
+LaTeX Info: Redefining \ttfamily on input line 4706.
  [85]
 File: exam-2024-06-19-ese-02.png Graphic file (type bmp)
 <exam-2024-06-19-ese-02.png>
-LaTeX Info: Redefining \rmfamily on input line 4667.
-LaTeX Info: Redefining \sffamily on input line 4667.
-LaTeX Info: Redefining \ttfamily on input line 4667.
+LaTeX Info: Redefining \rmfamily on input line 4773.
+LaTeX Info: Redefining \sffamily on input line 4773.
+LaTeX Info: Redefining \ttfamily on input line 4773.
  [86]
 File: exam-2024-02-13-ese-01-a.png Graphic file (type bmp)
 <exam-2024-02-13-ese-01-a.png>
-LaTeX Info: Redefining \rmfamily on input line 4686.
-LaTeX Info: Redefining \sffamily on input line 4686.
-LaTeX Info: Redefining \ttfamily on input line 4686.
+LaTeX Info: Redefining \rmfamily on input line 4792.
+LaTeX Info: Redefining \sffamily on input line 4792.
+LaTeX Info: Redefining \ttfamily on input line 4792.
  [87]
-LaTeX Info: Redefining \rmfamily on input line 4686.
-LaTeX Info: Redefining \sffamily on input line 4686.
-LaTeX Info: Redefining \ttfamily on input line 4686.
+LaTeX Info: Redefining \rmfamily on input line 4792.
+LaTeX Info: Redefining \sffamily on input line 4792.
+LaTeX Info: Redefining \ttfamily on input line 4792.
  [88] [89
 
 ] [90]
-LaTeX Info: Redefining \rmfamily on input line 4768.
-LaTeX Info: Redefining \sffamily on input line 4768.
-LaTeX Info: Redefining \ttfamily on input line 4768.
+LaTeX Info: Redefining \rmfamily on input line 4874.
+LaTeX Info: Redefining \sffamily on input line 4874.
+LaTeX Info: Redefining \ttfamily on input line 4874.
 
 [91]
-LaTeX Info: Redefining \rmfamily on input line 4768.
-LaTeX Info: Redefining \sffamily on input line 4768.
-LaTeX Info: Redefining \ttfamily on input line 4768.
+LaTeX Info: Redefining \rmfamily on input line 4874.
+LaTeX Info: Redefining \sffamily on input line 4874.
+LaTeX Info: Redefining \ttfamily on input line 4874.
  [92
 
 ]
 Chapter 7.
 [93]
-LaTeX Info: Redefining \rmfamily on input line 4907.
-LaTeX Info: Redefining \sffamily on input line 4907.
-LaTeX Info: Redefining \ttfamily on input line 4907.
+LaTeX Info: Redefining \rmfamily on input line 5013.
+LaTeX Info: Redefining \sffamily on input line 5013.
+LaTeX Info: Redefining \ttfamily on input line 5013.
  [94]
-LaTeX Info: Redefining \rmfamily on input line 4972.
-LaTeX Info: Redefining \sffamily on input line 4972.
-LaTeX Info: Redefining \ttfamily on input line 4972.
+LaTeX Info: Redefining \rmfamily on input line 5078.
+LaTeX Info: Redefining \sffamily on input line 5078.
+LaTeX Info: Redefining \ttfamily on input line 5078.
  [95]
-LaTeX Info: Redefining \rmfamily on input line 5065.
-LaTeX Info: Redefining \sffamily on input line 5065.
-LaTeX Info: Redefining \ttfamily on input line 5065.
+LaTeX Info: Redefining \rmfamily on input line 5171.
+LaTeX Info: Redefining \sffamily on input line 5171.
+LaTeX Info: Redefining \ttfamily on input line 5171.
  [96]
-LaTeX Info: Redefining \rmfamily on input line 5106.
-LaTeX Info: Redefining \sffamily on input line 5106.
-LaTeX Info: Redefining \ttfamily on input line 5106.
+LaTeX Info: Redefining \rmfamily on input line 5212.
+LaTeX Info: Redefining \sffamily on input line 5212.
+LaTeX Info: Redefining \ttfamily on input line 5212.
  [97]
-LaTeX Info: Redefining \rmfamily on input line 5106.
-LaTeX Info: Redefining \sffamily on input line 5106.
-LaTeX Info: Redefining \ttfamily on input line 5106.
+LaTeX Info: Redefining \rmfamily on input line 5212.
+LaTeX Info: Redefining \sffamily on input line 5212.
+LaTeX Info: Redefining \ttfamily on input line 5212.
  [98
 
 ]
 Chapter 8.
 [99]
-LaTeX Info: Redefining \rmfamily on input line 5218.
-LaTeX Info: Redefining \sffamily on input line 5218.
-LaTeX Info: Redefining \ttfamily on input line 5218.
+LaTeX Info: Redefining \rmfamily on input line 5324.
+LaTeX Info: Redefining \sffamily on input line 5324.
+LaTeX Info: Redefining \ttfamily on input line 5324.
  [100] [101
 
 ] [102]
@@ -2276,13 +2276,13 @@ Chapter 9.
 [103
 
 ]
-LaTeX Info: Redefining \rmfamily on input line 5251.
-LaTeX Info: Redefining \sffamily on input line 5251.
-LaTeX Info: Redefining \ttfamily on input line 5251.
+LaTeX Info: Redefining \rmfamily on input line 5357.
+LaTeX Info: Redefining \sffamily on input line 5357.
+LaTeX Info: Redefining \ttfamily on input line 5357.
  [104
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 5257--5258
+Underfull \hbox (badness 10000) in paragraph at lines 5363--5364
 []\TU/FreeMono(0)/m/n/10 harmonic:effective-values \TU/FreeSerif(0)/m/n/10 (\TU
 /FreeSerif(0)/m/it/10 ch/electrical-
  []
@@ -2325,15 +2325,15 @@ braces):
 >  {english/babelname}  =>  {american}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5262.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5262.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5368.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5368.
  (./book.aux
 LaTeX Info: Redefining \rmfamily on input line 19.
 LaTeX Info: Redefining \sffamily on input line 19.
 LaTeX Info: Redefining \ttfamily on input line 19.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 5262.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5262.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 5368.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5368.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: 82EC54F4ED633B5D464C5113AE84DF14;9610.
@@ -2345,7 +2345,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  42545 strings out of 481789
  966107 string characters out of 5937152
- 1687963 words of memory out of 5000000
+ 1689963 words of memory out of 5000000
  58690 multiletter control sequences out of 15000+600000
  540120 words of font info for 123 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191

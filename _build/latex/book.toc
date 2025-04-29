@@ -50,11 +50,11 @@
 \contentsline {subsubsection}{Momentum}{34}{subsubsection*.19}%
 \contentsline {chapter}{\numberline {5}Regimes in Electromagnetic systems}{37}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Non\sphinxhyphen {}dimensional equations of electromagnetism}{37}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Electrostatics}{37}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Governing equation of electrostatics}{37}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Zero electric field inside a conductor}{38}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Steady regime}{39}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Slow…}{39}{section.5.4}%
+\contentsline {section}{\numberline {5.2}Electrostatics}{38}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Governing equation of electrostatics}{38}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Zero electric field inside a conductor}{39}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Steady regime}{40}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Slow…}{40}{section.5.4}%
 \contentsline {part}{II\hspace {1em}Electrical Engineering}{41}{part.2}%
 \contentsline {chapter}{\numberline {6}Circuit Approximation}{43}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Circuiti elettrici}{44}{section.6.1}%
