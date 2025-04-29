@@ -64,11 +64,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/regimes-steady';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.4. Slow…" href="regimes-slow.html" />
+    <link rel="next" title="5.4. Slow regime" href="regimes-slow.html" />
     <link rel="prev" title="5.2. Electrostatics" href="regimes-electrostatics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -200,7 +202,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="regimes-non-dimensional.html">5.1. Non-dimensional equations of electromagnetism</a></li>
 <li class="toctree-l2"><a class="reference internal" href="regimes-electrostatics.html">5.2. Electrostatics</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">5.3. Steady regime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="regimes-slow.html">5.4. Slow…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regimes-slow.html">5.4. Slow regime</a></li>
 </ul>
 </li>
 </ul>
@@ -392,7 +394,24 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="steady-regime">
 <span id="classical-electromagnetism-regimes-steady"></span><h1><span class="section-number">5.3. </span>Steady regime<a class="headerlink" href="#steady-regime" title="Permalink to this heading">#</a></h1>
-<p>Steady regime - in a Eulerian description - allows for steady currents.</p>
+<p>Steady regime - in a Eulerian description - allows for steady currents, but non-varying fields in an Eulerian description <span class="math notranslate nohighlight">\(\partial_t \equiv 0\)</span>.</p>
+<p><strong>Continuity equation of electric charge.</strong></p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot \vec{j} = 0\]</div>
+<p><strong>Maxwell’s equations.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{cases}
+    \nabla \cdot \vec{e} = \dfrac{\rho}{\varepsilon_0} \\
+    \nabla \times \vec{e} = \vec{0} \\ 
+    \nabla \cdot \vec{b} = 0 \\
+    \nabla \times \vec{b} = \mu_0 \vec{j} 
+  \end{cases}\end{split}\]</div>
+<p><strong>Potentials.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+      \vec{b} &amp; = \nabla \times \vec{a} \\
+      \vec{e} &amp; = - \nabla \phi \\
+   \end{aligned}\end{split}\]</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -439,7 +458,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.4. </span>Slow…</p>
+        <p class="prev-next-title"><span class="section-number">5.4. </span>Slow regime</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
