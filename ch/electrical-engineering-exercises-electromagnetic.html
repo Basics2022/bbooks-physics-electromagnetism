@@ -75,6 +75,15 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X6MNXBVGKF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X6MNXBVGKF');
+</script>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -384,7 +393,7 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="electromagnetic-circuits">
 <span id="classical-electromagnetism-electrical-engineering-exercises-electromagnetic"></span><h1><span class="section-number">6.7.4. </span>Electromagnetic circuits<a class="headerlink" href="#electromagnetic-circuits" title="Permalink to this heading">#</a></h1>
-<div class="tip admonition">
+<div class="tip dropdown admonition">
 <p class="admonition-title">Guidlines for solution</p>
 <ol class="arabic">
 <li><p>Find the equivalent magnetic network of the inductive part of the system to find the relation,</p>
@@ -433,15 +442,18 @@ Solution<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\phi_A = \frac{m_A}{\theta_{eq}} = \frac{N}{\theta_{eq}} i = \dots\]</div>
 <p class="sd-card-text">The parallel part of the circuit acts as a current divider and thus magnetic fluxes through gaps <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(3\)</span> are</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+<div class="math notranslate nohighlight" id="equation-eq-2025-01-22-fluxes">
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-eq-2025-01-22-fluxes" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
       \phi_1 &amp; = \frac{\theta_3}{\theta_1 + \theta_3} \phi_A = \frac{\theta_3}{\theta_1 + \theta_3} \frac{N}{\theta_{eq}} i_A = \dots \\
       \phi_3 &amp; = \frac{\theta_1}{\theta_1 + \theta_3} \phi_A = \frac{\theta_1}{\theta_1 + \theta_3} \frac{N}{\theta_{eq}} i_A = \dots \\
     \end{aligned}\end{split}\]</div>
 <p class="sd-card-text">Faraday’s law provides the relation between the voltage and the concatenated flux,</p>
 <div class="math notranslate nohighlight">
 \[v_A = \dot{\psi} = N \dot{\phi}_A = \frac{N^2}{\theta_{eq}} \dfrac{d i_A}{dt} = L_{eq} \dfrac{di}{dt} \ ,\]</div>
-<p class="sd-card-text">that becomes <span class="math notranslate nohighlight">\(v_A = 0\)</span> in steady regime.</p>
+<p class="sd-card-text">where the equivalent inductance of the magnetic circuit</p>
+<div class="math notranslate nohighlight">
+\[L_{eq} = \dots\]</div>
+<p class="sd-card-text">has been introduced. This relation becomes <span class="math notranslate nohighlight">\(v_A = 0\)</span> in steady regime.</p>
 </li>
 <li><p class="sd-card-text">The electric network can be solved evaluating Thevenin equivalent network at the inductive port,</p>
 <div class="math notranslate nohighlight">
@@ -453,8 +465,8 @@ Solution<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[v_{Th} - R_{Th} i_A - L \dfrac{d i_A}{d t} = 0 \ . \]</div>
 <p class="sd-card-text">In <strong>steady regime</strong>, <span class="math notranslate nohighlight">\(\frac{d}{dt} \equiv 0\)</span>, and thus</p>
-<div class="math notranslate nohighlight">
-\[\overline{i}_A = \dfrac{v_{Th}}{R_{Th}} = \dots \]</div>
+<div class="math notranslate nohighlight" id="equation-eq-2025-01-22-current">
+<span class="eqno">(6.5)<a class="headerlink" href="#equation-eq-2025-01-22-current" title="Permalink to this equation">#</a></span>\[\overline{i}_A = \dfrac{v_{Th}}{R_{Th}} = \dots \]</div>
 </li>
 <li><p class="sd-card-text">Energy stored in the magnetic field is the sum (integral) of the contribution <span class="math notranslate nohighlight">\(\frac{1}{2 \mu} \left|\vec{b}\right|^2\)</span> in electromagnetic energy density, <span class="math notranslate nohighlight">\(u\)</span>. With the assumption of negligible reluctance of the ferromagnetic medium,</p>
 <div class="math notranslate nohighlight">
@@ -463,7 +475,25 @@ Solution<div class="sd-summary-down docutils">
      &amp; \sim \int_{V_{gaps}} \frac{1}{2 \mu_0} \left| \vec{b}(\vec{r},t) \right|^2 = \\
      &amp; \sim \sum_{k \in \text{gaps}} \frac{1}{2 \mu_0} b_k^2 \, V_k = \\
      &amp; \sim \sum_{k \in \text{gaps}} \frac{1}{2 \mu_0} \left(\frac{\phi_k}{A_k}\right)^2 \, A_k \, \delta_k = \\
+     &amp; \sim \sum_{k \in \text{gaps}} \frac{1}{2} \frac{\delta_k}{\mu_0 A_k} \phi_k^2 = \\
+     &amp; \sim \sum_{k \in \text{gaps}} \frac{1}{2} \theta_k \phi_k^2 = \dots \ .
    \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Fluxes can be evaluated with relations <a class="reference internal" href="#equation-eq-2025-01-22-fluxes">(6.4)</a>, once the current <span class="math notranslate nohighlight">\(i_A\)</span> is known, from <a class="reference internal" href="#equation-eq-2025-01-22-current">(6.5)</a>.</p>
+</li>
+<li><p class="sd-card-text">After solving the electric circuit (e.g. introducing two loop currents in the left and right loops), powers through resistors and generators read</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+      P_{R_1} &amp; = R_1 \, i_1^2 = R_1 (i_A - a)^2 = \dots \\
+      P_{R_2} &amp; = R_2 \, i_2^2 = R_2 i_A^2 = \dots \\
+      P_{R_3} &amp; = R_3 \, i_3^2 = R_3 (i_A - i_{e,1})^2 = \dots \\
+      P_{R_4} &amp; = R_4 \, i_4^2 = R_4 (i_A + i_{e,1})^2 = \dots \\
+   \end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+      P_a &amp; = v_a a = R_1 (i_A-a) \, a = \dots \\
+      P_e &amp; = e i_e = e ( -i_A + i_{e,1} ) = \dots \\
+   \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">with <span class="math notranslate nohighlight">\(i_{e,1} = \frac{e}{R_3 + R_4}\)</span>.</p>
 </li>
 </ol>
 </div>
