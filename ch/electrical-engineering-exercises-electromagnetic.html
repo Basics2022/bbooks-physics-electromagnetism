@@ -64,6 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/electrical-engineering-exercises-electromagnetic';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -73,15 +75,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X6MNXBVGKF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-X6MNXBVGKF');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -177,22 +170,26 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="experiments.html">1. Brief history of Electromagnetism</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="principles.html">2. Principles of Classical Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="principles-vacuum.html">2.1. Principles of Classical Electromagnetism in Free Space</a></li>
-<li class="toctree-l2"><a class="reference internal" href="principles-matter.html">2.2. Electromagnetism in Matter</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="principles-matter.html">2.2. Electromagnetism in Matter</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="principles-matter-polarization.html">2.2.6. Polarization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="principles-matter-magnetization.html">2.2.7. Magnetization</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="principles-relativity.html">2.3. Galileian relativity in electromagnetism</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">3. Electromagnetic waves</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">3. Electromagnetic waves</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="potentials.html">3.1. Electromagnetic Potentials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="waves-equation.html">3.2. Wave Equations in Electromagnetism</a></li>
 <li class="toctree-l2"><a class="reference internal" href="waves-plane.html">3.3. Plane Electromagnetic Waves</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="energy.html">4. Force, moments, energy and momentum in electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="energy.html">4. Force, moments, energy and momentum in electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="forces-moments-on-charges.html">4.1. Force, moment, and power on elementary charge distributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="energy-momentum-balance.html">4.2. Energy and momentum balance in linear, local, isotropic, non-dispersive media</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="regimes.html">5. Regimes in Electromagnetic systems</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="regimes.html">5. Regimes in Electromagnetic systems</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="regimes-electrostatics.html">5.1. Electrostatics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="regimes-steady.html">5.2. Steady regime</a></li>
 <li class="toctree-l2"><a class="reference internal" href="regimes-slow.html">5.3. Slow…</a></li>
@@ -201,15 +198,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Electrical Engineering</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="circuits.html">6. Circuit Approximation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">6.1. Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="circuits.html">6. Circuit Approximation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">6.1. Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-approximation.html">6.1.1. Validità dell’approccio circuitale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">6.1.2. Induzione elettromagnetica nell’approssimazione circuitale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-components.html">6.1.3. Componenti elementari dei circuiti elettrici</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">6.1.4. Regimi di funzionamento in circuiti elettrici</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electromagnetic.html">6.2. Circuiti elettromagnetici</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electromagnetic.html">6.2. Circuiti elettromagnetici</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electromagnetic-transformer.html">6.2.1. Trasformatore</a></li>
 </ul>
 </li>
@@ -217,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks.html">6.4. Network analysis of linear circuits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks-harmonic.html">6.5. Network analysis of linear circuits - harmonic regime</a></li>
 <li class="toctree-l2"><a class="reference internal" href="electrical-engineering-three-phase.html">6.6. Three-phase circuits</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="electrical-engineering-exercises.html">6.7. Exercises</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="electrical-engineering-exercises.html">6.7. Exercises</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-transient-1-dynamic.html">6.7.1. Transient dynamics of linear electrical grids with one dynamic component</a></li>
 <li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-harmonic.html">6.7.2. Harmonic regime of linear electrical grids</a></li>
 <li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-three-phase.html">6.7.3. Three-phase electrical circuits in harmonic regime</a></li>
@@ -387,6 +384,30 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="electromagnetic-circuits">
 <span id="classical-electromagnetism-electrical-engineering-exercises-electromagnetic"></span><h1><span class="section-number">6.7.4. </span>Electromagnetic circuits<a class="headerlink" href="#electromagnetic-circuits" title="Permalink to this heading">#</a></h1>
+<div class="tip admonition">
+<p class="admonition-title">Guidlines for solution</p>
+<ol class="arabic">
+<li><p>Find the equivalent magnetic network of the inductive part of the system to find the relation,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{v}(t) = \dot{\symbf{\psi}}(t) = \frac{d}{dt} \left( \mathbf{L} \, \mathbf{i}(t) \right) \ ,\]</div>
+<p>between the tensions and the currents at the ports of the electromagnetic system, usually under the assumpsions of</p>
+<ul class="simple">
+<li><p>no dispersed fluxes,</p></li>
+<li><p>linear constitutive equation of the ferromagnetic medium, <span class="math notranslate nohighlight">\(b = \mu_{\text{Fe}} h\)</span>, so that hysteresis is neglected</p></li>
+<li><p>permeability of the ferromagnetic much larger than the permeability of free space, <span class="math notranslate nohighlight">\(\mu_{\text{Fe}} \gg \mu_0\)</span>, so that the reluctance of the ferrmagnetic medium is negligible if compared with the reluctance of the air gaps. Relucatnce of air gaps reads</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\theta = \frac{\delta}{\mu_0 A} \ .\]</div>
+<p>In <strong>stationary regime</strong> <span class="math notranslate nohighlight">\(\frac{d}{dt} \equiv 0\)</span>, and thus inductors act as short-circuits.</p>
+</li>
+<li><p>Use the relation <span class="math notranslate nohighlight">\(\mathbf{v} = \frac{d}{dt} \left( \mathbf{L} \, \mathbf{i} \right)\)</span> in the electric network to solve the electromagnetic system</p></li>
+<li><p>Find all the other physical quantities needed, remembering that the volume density of electromagnetic energy in media, under the assumption of linear media, is</p>
+<div class="math notranslate nohighlight">
+\[u = \frac{1}{2 \mu} \left|\vec{b}(\vec{r},t)\right|^2 + \frac{1}{2} \varepsilon \left|\vec{e}(\vec{r},t)\right|^2 \ .\]</div>
+<p>Volume density must be integrated over the regions of space where it’s not negligible, like air gaps.</p>
+</li>
+</ol>
+</div>
 <div class="exercise admonition" id="exam-25-01-22-exe-03">
 
 <p class="admonition-title"><span class="caption-number">Exercise 6.15 </span> (Exam 2025-01-22, Exercise 3.)</p>
@@ -394,13 +415,57 @@ document.write(`
 <div class="figure align-default">
 <img alt="../_images/exam-2025-01-22-ese-03.png" src="../_images/exam-2025-01-22-ese-03.png" />
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-Solution - todo<div class="sd-summary-down docutils">
+Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<div class="figure align-default">
+<img alt="../_images/exam-2025-01-22-ese-03-c.png" src="../_images/exam-2025-01-22-ese-03-c.png" />
+</div>
+<ol class="arabic">
+<li><p class="sd-card-text">Equivalent magnetic network of the inductive part of the system. The equivalent reluctance seen by the magnetic flux generator <span class="math notranslate nohighlight">\(m_A = N i_A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\theta_{eq} = \theta_2 + \left( \theta_1 \parallel \theta_3 \right) \ .\]</div>
+<p class="sd-card-text">and thus the flux through it reads</p>
+<div class="math notranslate nohighlight">
+\[\phi_A = \frac{m_A}{\theta_{eq}} = \frac{N}{\theta_{eq}} i = \dots\]</div>
+<p class="sd-card-text">The parallel part of the circuit acts as a current divider and thus magnetic fluxes through gaps <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(3\)</span> are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+      \phi_1 &amp; = \frac{\theta_3}{\theta_1 + \theta_3} \phi_A = \frac{\theta_3}{\theta_1 + \theta_3} \frac{N}{\theta_{eq}} i_A = \dots \\
+      \phi_3 &amp; = \frac{\theta_1}{\theta_1 + \theta_3} \phi_A = \frac{\theta_1}{\theta_1 + \theta_3} \frac{N}{\theta_{eq}} i_A = \dots \\
+    \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Faraday’s law provides the relation between the voltage and the concatenated flux,</p>
+<div class="math notranslate nohighlight">
+\[v_A = \dot{\psi} = N \dot{\phi}_A = \frac{N^2}{\theta_{eq}} \dfrac{d i_A}{dt} = L_{eq} \dfrac{di}{dt} \ ,\]</div>
+<p class="sd-card-text">that becomes <span class="math notranslate nohighlight">\(v_A = 0\)</span> in steady regime.</p>
+</li>
+<li><p class="sd-card-text">The electric network can be solved evaluating Thevenin equivalent network at the inductive port,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     v_{Th} &amp; = \frac{R_3}{R_2 + R_3} e + R_1 a \\
+     R_{Th} &amp; = R_1 + R_2 + \left( R_3 \parallel R_4 \right) \ ,
+   \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Thus the KVL on the equivalent complete network is</p>
+<div class="math notranslate nohighlight">
+\[v_{Th} - R_{Th} i_A - L \dfrac{d i_A}{d t} = 0 \ . \]</div>
+<p class="sd-card-text">In <strong>steady regime</strong>, <span class="math notranslate nohighlight">\(\frac{d}{dt} \equiv 0\)</span>, and thus</p>
+<div class="math notranslate nohighlight">
+\[\overline{i}_A = \dfrac{v_{Th}}{R_{Th}} = \dots \]</div>
+</li>
+<li><p class="sd-card-text">Energy stored in the magnetic field is the sum (integral) of the contribution <span class="math notranslate nohighlight">\(\frac{1}{2 \mu} \left|\vec{b}\right|^2\)</span> in electromagnetic energy density, <span class="math notranslate nohighlight">\(u\)</span>. With the assumption of negligible reluctance of the ferromagnetic medium,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     \int_{V} \frac{1}{2 \mu} \left| \vec{b} \right|^2 
+     &amp; \sim \int_{V_{gaps}} \frac{1}{2 \mu_0} \left| \vec{b}(\vec{r},t) \right|^2 = \\
+     &amp; \sim \sum_{k \in \text{gaps}} \frac{1}{2 \mu_0} b_k^2 \, V_k = \\
+     &amp; \sim \sum_{k \in \text{gaps}} \frac{1}{2 \mu_0} \left(\frac{\phi_k}{A_k}\right)^2 \, A_k \, \delta_k = \\
+   \end{aligned}\end{split}\]</div>
+</li>
+</ol>
 </div>
 </details></div>
 </div>
