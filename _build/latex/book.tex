@@ -84,7 +84,7 @@
         % End of preamble defined in sphinx-jupyterbook-latex %
         
 
-\title{electromagnetism}
+\title{Classical Electromagnetism and Principles of Electrical Engineering}
 \date{Apr 29, 2025}
 \release{}
 \author{basics}
@@ -118,7 +118,7 @@ This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\s
 {\hyperref[\detokenize{ch/energy:classical-electromagnetism-energy}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Force, Moments on charges, Momentum and Energy of the electromagnetic field}}}}}.
 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/regimes-slow:classical-electromagnetism-regimes}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Regimes}}}}}.
+{\hyperref[\detokenize{ch/regimes:classical-electromagnetism-regimes}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Regimes}}}}}.
 
 \sphinxAtStartPar
 \DUrole{xref,myst}{\sphinxstylestrong{Einstein’s special relativity and electromagnetism}}.
@@ -1706,6 +1706,9 @@ o, usando le definizioni di densità di energia elettromagnetica \(u\) e vettore
 
 \section{Energy and momentum balance in linear, local, isotropic, non\sphinxhyphen{}dispersive media}
 \label{\detokenize{ch/energy-momentum-balance:energy-and-momentum-balance-in-linear-local-isotropic-non-dispersive-media}}\label{\detokenize{ch/energy-momentum-balance:classical-electromagnetism-energy-momentum}}\label{\detokenize{ch/energy-momentum-balance::doc}}
+
+\subsection{Energy equation in differential form}
+\label{\detokenize{ch/energy-momentum-balance:energy-equation-in-differential-form}}\label{\detokenize{ch/energy-momentum-balance:classical-electromagnetism-energy-momentum-energy-differential}}
 \sphinxAtStartPar
 In this section balance equations for the energy and the momentum of the system are derived for a linear, local, isotropic, homogeneous,… systems.
 
@@ -1780,6 +1783,57 @@ with the energy volume density,
   & = - \nabla \cdot \vec{S} - \vec{h} \cdot \partial_t \vec{b} - \partial_t \vec{d} \cdot \vec{e} \ 
 \end{aligned}\end{split}
 \end{equation}
+
+\subsection{Energy equation in integral form \sphinxhyphen{} control volumes}
+\label{\detokenize{ch/energy-momentum-balance:energy-equation-in-integral-form-control-volumes}}\label{\detokenize{ch/energy-momentum-balance:classical-electromagnetism-energy-momentum-energy-integral-control}}
+\sphinxAtStartPar
+Integral form of energy equation for a control volume \(V\) can be derived integrating the differential balance equation \eqref{equation:ch/energy-momentum-balance:eq:energy:2} over \(V\),
+\begin{equation}\label{equation:ch/energy-momentum-balance:eq:energy:integral:1}
+\begin{split}\dfrac{d}{dt}\int_{V} u + \int_{V} \vec{e} \cdot \vec{j} = - \oint_{\partial V} \hat{n} \cdot \vec{s}  \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+having used the divergence theorem to transform volume integral of the divergence of Poynting vector into a flux integral across the boundary \(\partial V\) of the domain, and exploited the indepndence of \(V\) from time to take the time derivative outside the integral (see reuls for integration over time\sphinxhyphen{}depending domains).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Interpretation.} This equation has an immediate interpretation in terms of energy of the system and power (dissipated? and exchanged with the external environemnt) \sphinxstylestrong{todo} \sphinxstyleemphasis{discuss}
+
+\sphinxAtStartPar
+This equation can be recast in different forms. One of them is particurarly useful later in this material to discuss energy balance in different regimes of electromagnetic systems and in circuit approximation and discuss the validity of the circuit approximation itself.
+Manipulating the surface contribution, the energy equation \eqref{equation:ch/energy-momentum-balance:eq:energy:integral:1} can be recast as
+\begin{equation}\label{equation:ch/energy-momentum-balance:eq:energy:integral:2}
+\begin{split}\dfrac{d}{dt} \int_V u + \int_{V} \vec{e} \cdot \vec{j} = - \oint_{\partial V} \, \phi \vec{j} \cdot \hat{n} + \oint_{\partial V} \hat{n} \cdot \left[ \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b} + \varepsilon_0 \, \phi\, \partial_t \vec{e} \right] \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+highlighting two contributions in the surface term:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+the first contribution can be recast as the common power flux at ports of circuits used in circuit approximations,
+\begin{equation*}
+\begin{split}- \oint_{\partial V} \, \phi \, \vec{j} \cdot \hat{n} = \sum_{k \in \text{wires}} \, v_k  i_k \ ,\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+the second contribution is often negligible in electromagnetic systems with \sphinxstylestrong{low characteristic frequencies} and \sphinxstylestrong{non\sphinxhyphen{}large\sphinxhyphen{}scale} systems, as it will be discussed \sphinxstylestrong{todo} \sphinxstyleemphasis{add link}
+
+\end{itemize}
+\subsubsection*{Boundary contribution to electromagnetic energy}
+\begin{equation*}
+\begin{split}\begin{aligned}
+\oint_{\partial V} \hat{n} \cdot \vec{s} 
+& = \dfrac{1}{\mu_0} \oint_{\partial V} \hat{n} \cdot \vec{e} \times \vec{b} = \\
+& = \dfrac{1}{\mu_0} \oint_{\partial V} \hat{n} \cdot \left( -\partial_t \vec{a} - \nabla \phi \right) \times \vec{b} = \\
+& = - \dfrac{1}{\mu_0} \oint_{\partial V} \hat{n} \cdot \left( \partial_t \vec{a} \times \vec{b} + \nabla \times ( \phi \, \vec{b} ) - \phi \nabla \times \vec{b} \right)  = \\
+& = - \dfrac{1}{\mu_0} \oint_{\partial V} \hat{n} \cdot \left( \partial_t \vec{a} \times \vec{b} - \phi \, \left( \mu_0 \vec{j} + \varepsilon_0 \mu_0 \, \partial_t \vec{e} \right) \right)  = \\
+& = \oint_{\partial V}  \phi \, \vec{j} \cdot \hat{n} - \oint_{\partial V} \hat{n} \cdot \left[ \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b}+  \varepsilon_0  \, \phi\, \partial_t \vec{e} \right] \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where the integral of the flux of the curl across a closed surface goes to zero, assuming that curl theorem holds (\sphinxstylestrong{todo} does it hold?).
+
+
+\subsection{Energy equation in integral form \sphinxhyphen{} arbitrary domains}
+\label{\detokenize{ch/energy-momentum-balance:energy-equation-in-integral-form-arbitrary-domains}}\label{\detokenize{ch/energy-momentum-balance:classical-electromagnetism-energy-momentum-energy-integral-arbitrary}}
 
 
 
@@ -1882,6 +1936,34 @@ or with vector notation
 
 \chapter{Regimes in Electromagnetic systems}
 \label{\detokenize{ch/regimes:regimes-in-electromagnetic-systems}}\label{\detokenize{ch/regimes:classical-electromagnetism-regimes}}\label{\detokenize{ch/regimes::doc}}
+\sphinxAtStartPar
+Non\sphinxhyphen{}dimensional analysis allows to distinguish different regimes of electromagnetic systems.
+
+\sphinxstepscope
+
+
+\section{Non\sphinxhyphen{}dimensional equations of electromagnetism}
+\label{\detokenize{ch/regimes-non-dimensional:non-dimensional-equations-of-electromagnetism}}\label{\detokenize{ch/regimes-non-dimensional:classical-electromagnetism-regimes-non-dimensional}}\label{\detokenize{ch/regimes-non-dimensional::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{Continuity equation of electric charge.}
+\begin{equation*}
+\begin{split}\partial_t \rho + \nabla \cdot \vec{j} = 0\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Maxwell’s equations.}
+\begin{equation*}
+\begin{split}\begin{cases}
+    \nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
+    \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\ 
+    \nabla \cdot \vec{b} = 0 \\
+    \nabla \times \vec{b} - \frac{1}{c_0^2} \partial_t \vec{e} = \mu_0 \vec{j} 
+  \end{cases}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Potentials.}
+\sphinxstylestrong{Gauge.}
+\sphinxstylestrong{Wave equations.}
+
 \sphinxstepscope
 
 
@@ -4460,11 +4542,27 @@ Volume density must be integrated over the regions of space where it’s not neg
 \end{figure}
 \subsubsection*{Solution}
 
-\begin{figure}[htbp]
-\centering
 
-\noindent\sphinxincludegraphics{{exam-2025-01-22-ese-03-c}.png}
-\end{figure}
+
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+
+\sphinxAtStartPar
+\sphinxincludegraphics{{exam-2025-01-22-ese-03-a}.png}
+&
+\sphinxAtStartPar
+\sphinxincludegraphics{{exam-2025-01-22-ese-03-b}.png}
+&
+\sphinxAtStartPar
+\sphinxincludegraphics{{exam-2025-01-22-ese-03-c}.png}
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
 \item {} 
@@ -4627,7 +4725,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-Apr 28, 2025
+Apr 29, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -4965,7 +5063,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-Apr 28, 2025
+Apr 29, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}

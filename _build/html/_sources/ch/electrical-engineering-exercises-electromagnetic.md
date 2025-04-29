@@ -38,8 +38,21 @@
 ````{dropdown} Solution
 :open:
 
+<!--
 ```{figure} ../media/exam-2025-01-22-ese-03-c.png
 ```
+-->
+
+```{list-table}
+:header-rows: 0
+
+* - ![](../media/exam-2025-01-22-ese-03-a.png) 
+  - ![](../media/exam-2025-01-22-ese-03-b.png) 
+  - ![](../media/exam-2025-01-22-ese-03-c.png) 
+
+```
+
+
 1. Equivalent magnetic network of the inductive part of the system. The equivalent reluctance seen by the magnetic flux generator $m_A = N i_A$ is 
 
     $$\theta_{eq} = \theta_2 + \left( \theta_1 \parallel \theta_3 \right) \ .$$

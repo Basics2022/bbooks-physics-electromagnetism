@@ -30,6 +30,7 @@ parts:
 # - file: ch/energy-linear
   - file: ch/regimes
     sections:
+    - file: ch/regimes-non-dimensional
     - file: ch/regimes-electrostatics
     - file: ch/regimes-steady
     - file: ch/regimes-slow
