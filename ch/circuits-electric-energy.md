@@ -25,3 +25,9 @@ $$1 \gg \dfrac{S \frac{B^2 f L}{\mu_0}}{VI} = S \dfrac{B^2 f L}{\mu_0 \Phi I} = 
 
 <span style="color:red">The dimension of the boundary of the domain is proprotional to the square of the linear dimension of the system, $S \sim L_{V}^2$. This inequality holds if the product of the dimension of the boundary of the domain and the characteristic current density $J$ is much smaller than the characteristic current $I$ at the boundary.</span>
 
+<!--
+---
+
+$$1 \gg \dfrac{S \frac{B^2 f L}{\mu_0}}{VI} = S \dfrac{\mu_0^2 J^2 L^2 f L}{\mu_0 \Phi I} = S \frac{B^2 f L}{\mu_0 B f L^2 I} = S \frac{B}{\mu_0 L I} = S \frac{\mu_0 J L}{\mu_0 L I} = \frac{S J}{I} \ .$$
+
+-->
