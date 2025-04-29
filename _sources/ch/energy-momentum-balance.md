@@ -1,6 +1,8 @@
 (classical-electromagnetism:energy-momentum)=
 # Energy and momentum balance in linear, local, isotropic, non-dispersive media
 
+(classical-electromagnetism:energy-momentum:energy:differential)=
+## Energy equation in differential form
 In this section balance equations for the energy and the momentum of the system are derived for a linear, local, isotropic, homogeneous,... systems.
 
 Power per unit volume of the Lorentz' force per unit volume acting on a charge distribution $\rho(\vec{r},t)$ with electric current density $\vec{j}(\vec{r},t)$ is
@@ -81,6 +83,50 @@ $$\begin{aligned}
 \end{aligned}$$ (eq:energy:free-current)
 
 ```
+
+(classical-electromagnetism:energy-momentum:energy:integral:control)=
+## Energy equation in integral form - control volumes
+
+Integral form of energy equation for a control volume $V$ can be derived integrating the differential balance equation {eq}`eq:energy:2` over $V$, 
+
+$$\dfrac{d}{dt}\int_{V} u + \int_{V} \vec{e} \cdot \vec{j} = - \oint_{\partial V} \hat{n} \cdot \vec{s}  \ ,$$ (eq:energy:integral:1)
+
+having used the divergence theorem to transform volume integral of the divergence of Poynting vector into a flux integral across the boundary $\partial V$ of the domain, and exploited the indepndence of $V$ from time to take the time derivative outside the integral (see reuls for integration over time-depending domains).
+
+**Interpretation.** This equation has an immediate interpretation in terms of energy of the system and power (dissipated? and exchanged with the external environemnt) **todo** *discuss* 
+
+This equation can be recast in different forms. One of them is particurarly useful later in this material to discuss energy balance in different regimes of electromagnetic systems and in circuit approximation and discuss the validity of the circuit approximation itself.
+Manipulating the surface contribution, the energy equation {eq}`eq:energy:integral:1` can be recast as
+
+$$\dfrac{d}{dt} \int_V u + \int_{V} \vec{e} \cdot \vec{j} = - \oint_{\partial V} \, \phi \vec{j} \cdot \hat{n} + \oint_{\partial V} \hat{n} \cdot \left[ \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b} + \varepsilon_0 \, \phi\, \partial_t \vec{e} \right] \ ,$$ (eq:energy:integral:2)
+
+highlighting two contributions in the surface term:
+- the first contribution can be recast as the common power flux at ports of circuits used in circuit approximations,
+
+   $$- \oint_{\partial V} \, \phi \, \vec{j} \cdot \hat{n} = \sum_{k \in \text{wires}} \, v_k  i_k \ ,$$
+
+- the second contribution is often negligible in electromagnetic systems with **low characteristic frequencies** and **non-large-scale** systems, as it will be discussed **todo** *add link*
+
+```{dropdown} Boundary contribution to electromagnetic energy
+:open:
+
+$$\begin{aligned}
+\oint_{\partial V} \hat{n} \cdot \vec{s} 
+& = \dfrac{1}{\mu_0} \oint_{\partial V} \hat{n} \cdot \vec{e} \times \vec{b} = \\
+& = \dfrac{1}{\mu_0} \oint_{\partial V} \hat{n} \cdot \left( -\partial_t \vec{a} - \nabla \phi \right) \times \vec{b} = \\
+& = - \dfrac{1}{\mu_0} \oint_{\partial V} \hat{n} \cdot \left( \partial_t \vec{a} \times \vec{b} + \nabla \times ( \phi \, \vec{b} ) - \phi \nabla \times \vec{b} \right)  = \\
+& = - \dfrac{1}{\mu_0} \oint_{\partial V} \hat{n} \cdot \left( \partial_t \vec{a} \times \vec{b} - \phi \, \left( \mu_0 \vec{j} + \varepsilon_0 \mu_0 \, \partial_t \vec{e} \right) \right)  = \\
+& = \oint_{\partial V}  \phi \, \vec{j} \cdot \hat{n} - \oint_{\partial V} \hat{n} \cdot \left[ \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b}+  \varepsilon_0  \, \phi\, \partial_t \vec{e} \right] \ ,
+\end{aligned}$$
+
+where the integral of the flux of the curl across a closed surface goes to zero, assuming that curl theorem holds (**todo** does it hold?).
+
+
+```
+
+
+(classical-electromagnetism:energy-momentum:energy:integral:arbitrary)=
+## Energy equation in integral form - arbitrary domains
 
 <!--
 Now, using the constitutive equations involving the definition of the polarization and magnetization field,

@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4.2. Energy and momentum balance in linear, local, isotropic, non-dispersive media &#8212; electromagnetism</title>
+    <title>4.2. Energy and momentum balance in linear, local, isotropic, non-dispersive media &#8212; Classical Electromagnetism and Principles of Electrical Engineering</title>
   
   
   
@@ -167,8 +167,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.svg" class="logo__image only-light" alt="electromagnetism - Home"/>
-    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="electromagnetism - Home"/>`);</script>
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Classical Electromagnetism and Principles of Electrical Engineering - Home"/>
+    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Classical Electromagnetism and Principles of Electrical Engineering - Home"/>`);</script>
   
   
 </a></div>
@@ -199,9 +199,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="regimes.html">5. Regimes in Electromagnetic systems</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="regimes-electrostatics.html">5.1. Electrostatics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="regimes-steady.html">5.2. Steady regime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="regimes-slow.html">5.3. Slow…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regimes-non-dimensional.html">5.1. Non-dimensional equations of electromagnetism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regimes-electrostatics.html">5.2. Electrostatics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regimes-steady.html">5.3. Steady regime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regimes-slow.html">5.4. Slow…</a></li>
 </ul>
 </li>
 </ul>
@@ -389,9 +390,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-isotropic-media">4.2.1. Linear isotropic media</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-equation">4.2.1.1. Energy equation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum">4.2.1.2. Momentum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-equation-in-differential-form">4.2.1. Energy equation in differential form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-equation-in-integral-form-control-volumes">4.2.2. Energy equation in integral form - control volumes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-equation-in-integral-form-arbitrary-domains">4.2.3. Energy equation in integral form - arbitrary domains</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-isotropic-media">4.2.4. Linear isotropic media</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-equation">4.2.4.1. Energy equation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum">4.2.4.2. Momentum</a></li>
 </ul>
 </li>
 </ul>
@@ -407,6 +411,8 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="energy-and-momentum-balance-in-linear-local-isotropic-non-dispersive-media">
 <span id="classical-electromagnetism-energy-momentum"></span><h1><span class="section-number">4.2. </span>Energy and momentum balance in linear, local, isotropic, non-dispersive media<a class="headerlink" href="#energy-and-momentum-balance-in-linear-local-isotropic-non-dispersive-media" title="Permalink to this heading">#</a></h1>
+<div class="section" id="energy-equation-in-differential-form">
+<span id="classical-electromagnetism-energy-momentum-energy-differential"></span><h2><span class="section-number">4.2.1. </span>Energy equation in differential form<a class="headerlink" href="#energy-equation-in-differential-form" title="Permalink to this heading">#</a></h2>
 <p>In this section balance equations for the energy and the momentum of the system are derived for a linear, local, isotropic, homogeneous,… systems.</p>
 <p>Power per unit volume of the Lorentz’ force per unit volume acting on a charge distribution <span class="math notranslate nohighlight">\(\rho(\vec{r},t)\)</span> with electric current density <span class="math notranslate nohighlight">\(\vec{j}(\vec{r},t)\)</span> is</p>
 <div class="math notranslate nohighlight">
@@ -485,7 +491,48 @@ Free current.<div class="sd-summary-down docutils">
   &amp; = - \nabla \cdot \vec{S} - \vec{h} \cdot \partial_t \vec{b} - \partial_t \vec{d} \cdot \vec{e} \ 
 \end{aligned}\end{split}\]</div>
 </div>
-</details><!--
+</details></div>
+<div class="section" id="energy-equation-in-integral-form-control-volumes">
+<span id="classical-electromagnetism-energy-momentum-energy-integral-control"></span><h2><span class="section-number">4.2.2. </span>Energy equation in integral form - control volumes<a class="headerlink" href="#energy-equation-in-integral-form-control-volumes" title="Permalink to this heading">#</a></h2>
+<p>Integral form of energy equation for a control volume <span class="math notranslate nohighlight">\(V\)</span> can be derived integrating the differential balance equation <a class="reference internal" href="#equation-eq-energy-2">(4.3)</a> over <span class="math notranslate nohighlight">\(V\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-energy-integral-1">
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-eq-energy-integral-1" title="Permalink to this equation">#</a></span>\[\dfrac{d}{dt}\int_{V} u + \int_{V} \vec{e} \cdot \vec{j} = - \oint_{\partial V} \hat{n} \cdot \vec{s}  \ ,\]</div>
+<p>having used the divergence theorem to transform volume integral of the divergence of Poynting vector into a flux integral across the boundary <span class="math notranslate nohighlight">\(\partial V\)</span> of the domain, and exploited the indepndence of <span class="math notranslate nohighlight">\(V\)</span> from time to take the time derivative outside the integral (see reuls for integration over time-depending domains).</p>
+<p><strong>Interpretation.</strong> This equation has an immediate interpretation in terms of energy of the system and power (dissipated? and exchanged with the external environemnt) <strong>todo</strong> <em>discuss</em></p>
+<p>This equation can be recast in different forms. One of them is particurarly useful later in this material to discuss energy balance in different regimes of electromagnetic systems and in circuit approximation and discuss the validity of the circuit approximation itself.
+Manipulating the surface contribution, the energy equation <a class="reference internal" href="#equation-eq-energy-integral-1">(4.6)</a> can be recast as</p>
+<div class="math notranslate nohighlight" id="equation-eq-energy-integral-2">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-eq-energy-integral-2" title="Permalink to this equation">#</a></span>\[\dfrac{d}{dt} \int_V u + \int_{V} \vec{e} \cdot \vec{j} = - \oint_{\partial V} \, \phi \vec{j} \cdot \hat{n} + \oint_{\partial V} \hat{n} \cdot \left[ \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b} + \varepsilon_0 \, \phi\, \partial_t \vec{e} \right] \ ,\]</div>
+<p>highlighting two contributions in the surface term:</p>
+<ul>
+<li><p>the first contribution can be recast as the common power flux at ports of circuits used in circuit approximations,</p>
+<div class="math notranslate nohighlight">
+\[- \oint_{\partial V} \, \phi \, \vec{j} \cdot \hat{n} = \sum_{k \in \text{wires}} \, v_k  i_k \ ,\]</div>
+</li>
+<li><p>the second contribution is often negligible in electromagnetic systems with <strong>low characteristic frequencies</strong> and <strong>non-large-scale</strong> systems, as it will be discussed <strong>todo</strong> <em>add link</em></p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Boundary contribution to electromagnetic energy<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\oint_{\partial V} \hat{n} \cdot \vec{s} 
+&amp; = \dfrac{1}{\mu_0} \oint_{\partial V} \hat{n} \cdot \vec{e} \times \vec{b} = \\
+&amp; = \dfrac{1}{\mu_0} \oint_{\partial V} \hat{n} \cdot \left( -\partial_t \vec{a} - \nabla \phi \right) \times \vec{b} = \\
+&amp; = - \dfrac{1}{\mu_0} \oint_{\partial V} \hat{n} \cdot \left( \partial_t \vec{a} \times \vec{b} + \nabla \times ( \phi \, \vec{b} ) - \phi \nabla \times \vec{b} \right)  = \\
+&amp; = - \dfrac{1}{\mu_0} \oint_{\partial V} \hat{n} \cdot \left( \partial_t \vec{a} \times \vec{b} - \phi \, \left( \mu_0 \vec{j} + \varepsilon_0 \mu_0 \, \partial_t \vec{e} \right) \right)  = \\
+&amp; = \oint_{\partial V}  \phi \, \vec{j} \cdot \hat{n} - \oint_{\partial V} \hat{n} \cdot \left[ \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b}+  \varepsilon_0  \, \phi\, \partial_t \vec{e} \right] \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">where the integral of the flux of the curl across a closed surface goes to zero, assuming that curl theorem holds (<strong>todo</strong> does it hold?).</p>
+</div>
+</details></div>
+<div class="section" id="energy-equation-in-integral-form-arbitrary-domains">
+<span id="classical-electromagnetism-energy-momentum-energy-integral-arbitrary"></span><h2><span class="section-number">4.2.3. </span>Energy equation in integral form - arbitrary domains<a class="headerlink" href="#energy-equation-in-integral-form-arbitrary-domains" title="Permalink to this heading">#</a></h2>
+<!--
 Now, using the constitutive equations involving the definition of the polarization and magnetization field,
 
 $$\begin{aligned}
@@ -501,8 +548,9 @@ $$\begin{aligned}
   & = \nabla \cdot \vec{s} + ... + \varepsilon_0 \partial_t \vec{e} \cdot \vec{e} + \partial_t \vec{p} \cdot \vec{e} = \\ 
 \end{aligned}$$
 -->
+</div>
 <div class="section" id="linear-isotropic-media">
-<h2><span class="section-number">4.2.1. </span>Linear isotropic media<a class="headerlink" href="#linear-isotropic-media" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.2.4. </span>Linear isotropic media<a class="headerlink" href="#linear-isotropic-media" title="Permalink to this heading">#</a></h2>
 <p>Using constitutive equations of a linear isotropic medium</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -517,7 +565,7 @@ $$\begin{aligned}
 \end{cases}\end{split}\]</div>
 <p><strong>todo</strong> <em>use this system to derive the <a class="reference external" href="https://basics2022.github.io/bbooks-physics-modern/ch/relativity-special/notes.html#electromagnetism">4-d formulation of special relativity in modern physics</a></em></p>
 <div class="section" id="energy-equation">
-<h3><span class="section-number">4.2.1.1. </span>Energy equation<a class="headerlink" href="#energy-equation" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.2.4.1. </span>Energy equation<a class="headerlink" href="#energy-equation" title="Permalink to this heading">#</a></h3>
 <p>The products in the power equation of free current <a class="reference internal" href="#equation-eq-energy-free-current">(4.5)</a> becomes</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -534,7 +582,7 @@ For linear media, the energy of the electromagnetic field per unit volume due to
 \end{aligned}\]</div>
 </div>
 <div class="section" id="momentum">
-<h3><span class="section-number">4.2.1.2. </span>Momentum<a class="headerlink" href="#momentum" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.2.4.2. </span>Momentum<a class="headerlink" href="#momentum" title="Permalink to this heading">#</a></h3>
 <p>Taking the time derivative of the Poynting vector,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -666,9 +714,12 @@ For linear media, the energy of the electromagnetic field per unit volume due to
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-isotropic-media">4.2.1. Linear isotropic media</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-equation">4.2.1.1. Energy equation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum">4.2.1.2. Momentum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-equation-in-differential-form">4.2.1. Energy equation in differential form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-equation-in-integral-form-control-volumes">4.2.2. Energy equation in integral form - control volumes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-equation-in-integral-form-arbitrary-domains">4.2.3. Energy equation in integral form - arbitrary domains</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-isotropic-media">4.2.4. Linear isotropic media</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-equation">4.2.4.1. Energy equation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum">4.2.4.2. Momentum</a></li>
 </ul>
 </li>
 </ul>
