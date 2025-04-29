@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6.1.3. Induzione elettromagnetica nell’approssimazione circuitale &#8212; Classical Electromagnetism and Principles of Electrical Engineering</title>
+    <title>6.1.1. Energy balance in circuit approximation &#8212; Classical Electromagnetism and Principles of Electrical Engineering</title>
   
   
   
@@ -66,12 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/circuits-electric-induction';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/circuits-electric-energy';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.1.4. Componenti elementari dei circuiti elettrici" href="circuits-electric-components.html" />
-    <link rel="prev" title="6.1.2. Validità dell’approccio circuitale" href="circuits-electric-approximation.html" />
+    <link rel="next" title="6.1.2. Validità dell’approccio circuitale" href="circuits-electric-approximation.html" />
+    <link rel="prev" title="6.1. Circuiti elettrici" href="circuits-electric.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -210,9 +210,9 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="circuits.html">6. Circuit Approximation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="circuits-electric.html">6.1. Circuiti elettrici</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-energy.html">6.1.1. Energy balance in circuit approximation</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">6.1.1. Energy balance in circuit approximation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-approximation.html">6.1.2. Validità dell’approccio circuitale</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">6.1.3. Induzione elettromagnetica nell’approssimazione circuitale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">6.1.3. Induzione elettromagnetica nell’approssimazione circuitale</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-components.html">6.1.4. Componenti elementari dei circuiti elettrici</a></li>
 <li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">6.1.5. Regimi di funzionamento in circuiti elettrici</a></li>
 </ul>
@@ -297,7 +297,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/ch/circuits-electric-induction.md" target="_blank"
+      <li><a href="../_sources/ch/circuits-electric-energy.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -379,7 +379,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Induzione elettromagnetica nell’approssimazione circuitale</h1>
+    <h1>Energy balance in circuit approximation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,25 +393,26 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-<div class="tex2jax_ignore mathjax_ignore section" id="induzione-elettromagnetica-nell-approssimazione-circuitale">
-<span id="classical-electromagnetism-circuits-electric-induction"></span><h1><span class="section-number">6.1.3. </span>Induzione elettromagnetica nell’approssimazione circuitale<a class="headerlink" href="#induzione-elettromagnetica-nell-approssimazione-circuitale" title="Permalink to this heading">#</a></h1>
-<p>E’ possibile applicare l’approssimazione circuitale anche in presenza di regioni in cui non è possibile trascurare il termine <span class="math notranslate nohighlight">\(\partial_t \mathbf{b}\)</span>, come ad esempio circuiti elettromagnetici che coinvolgono trasformatori e/o motori o generatori elettrici.</p>
-<p>In queste situazioni, se è possibile identificare una regione <span class="math notranslate nohighlight">\(V_0\)</span> dello spazio connessa nella quale il termine <span class="math notranslate nohighlight">\(\partial_t \mathbf{b} = \mathbf{0}\)</span>, e quindi <span class="math notranslate nohighlight">\(\nabla \times \mathbf{e} = \mathbf{0}\)</span>, in <span class="math notranslate nohighlight">\(V_0\)</span> è possibile definire il campo elettrico in termini di un potenziale <span class="math notranslate nohighlight">\(\varphi\)</span>,</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="energy-balance-in-circuit-approximation">
+<span id="classical-electromagnetism-circuits-electric-energy"></span><h1><span class="section-number">6.1.1. </span>Energy balance in circuit approximation<a class="headerlink" href="#energy-balance-in-circuit-approximation" title="Permalink to this heading">#</a></h1>
+<p>Integral balance of electromagnetic energy <a class="reference internal" href="energy-momentum-balance.html#equation-eq-energy-integral-2">(4.7)</a> reads</p>
 <div class="math notranslate nohighlight">
-\[\mathbf{e} = - \nabla \varphi \qquad , \qquad \mathbf{r} \in V_0 \ .\]</div>
-<p>E’ possibile calcolare le differenze di potenziale ai morsetti di un sistema in cui <span class="math notranslate nohighlight">\(\delta_t \mathbf{b} \ne 0\)</span>, racchiuso nel volume <span class="math notranslate nohighlight">\(V_k\)</span>, con la legge di Faraday,</p>
+\[\dfrac{d}{dt} \int_V u + \int_{V} \vec{e} \cdot \vec{j} = - \oint_{\partial V} \, \phi \vec{j} \cdot \hat{n} + \oint_{\partial V} \hat{n} \cdot \left[ \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b} + \varepsilon_0 \, \phi\, \partial_t \vec{e} \right] \ .\]</div>
+<p>In the limit of <a class="reference internal" href="regimes-slow.html#classical-electromagnetism-regimes-slow"><span class="std std-ref">slow regime</span></a>, <span class="math notranslate nohighlight">\(\frac{f L}{c_0} \ll 1\)</span>, the comparison of the characteristic dimensions of the three boundary contributions gives</p>
 <div class="math notranslate nohighlight">
-\[\oint_{\ell_k} \mathbf{e} \cdot \hat{\mathbf{t}} = - \frac{d}{dt} \int_{S_k} \mathbf{b} \cdot \hat{\mathbf{n}} \ ,\]</div>
-<p>dove il percorso chiuso <span class="math notranslate nohighlight">\(\ell_k = \ell_k^{cond} \cup \ell_k^{mors}\)</span> descrive il conduttore in <span class="math notranslate nohighlight">\(V_k\)</span> chiuso dalla linea geometrica tra i morsetti. Se si può trascurare la resistività del conduttore in <span class="math notranslate nohighlight">\(V_k\)</span>, <span class="math notranslate nohighlight">\(\int_{\ell_k^{cond}} \mathbf{e} \cdot \hat{\mathbf{t}} = 0\)</span>, la differenza di tensione ai morsetti vale</p>
+\[\begin{split}\begin{aligned}
+  - \oint_{\partial V} \phi \, \vec{j} \cdot \hat{n} &amp; = \sum_{k \in \text{wires}} v_k i_k = V I \sum_{k \in \text{wires}} v_k i_k &amp;&amp; (1) \\
+  \oint_{\partial V} \hat{n} \cdot \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b} &amp; = S \dfrac{ f A B }{\mu_0} \oint_{\partial \widetilde{V}} \hat{n} \cdot \partial_t \vec{a} \times \vec{b} = S \dfrac{B^2 f L}{\mu_0}  \oint_{\partial \widetilde{V}} \hat{n} \cdot \partial_t \vec{a} \times \vec{b}  &amp;&amp; (2) \\
+  \oint_{\partial V} \hat{n} \cdot \varepsilon_0 \, \phi\, \partial_t \vec{e} &amp; = S \, \varepsilon_0 f E \Phi \oint_{\partial \widetilde{V}} \hat{n} \cdot \phi\, \partial_t \vec{e} = S \dfrac{B^2 f L}{\mu_0} \left( \dfrac{f L}{c_0} \right)^2 \oint_{\partial \widetilde{V}} \hat{n} \cdot \phi\, \partial_t \vec{e} &amp;&amp; (3) \\
+\end{aligned}\end{split}\]</div>
+<p>being <span class="math notranslate nohighlight">\(E = B f L\)</span>, and <span class="math notranslate nohighlight">\(\Phi = E L = B f L^2\)</span>, <span class="math notranslate nohighlight">\(E \Phi = (B f L)^2 L\)</span>, and <span class="math notranslate nohighlight">\(\varepsilon_0 = \dfrac{1}{\mu_0 c_0^2}\)</span>. If the integrals with non-dimensional quantities have the same order of magnitude (and this should occur if the non-dimensional equations are build using reference quantities of the system), the contribution (3) is smaller than the contribution (2) in the slow regime limit, as its <span class="math notranslate nohighlight">\(\left( \frac{f L}{c_0} \right)^2 \ll 1\)</span> times the order of magnitude.</p>
+<p>Comparing (1) and (2), the second contribution is negligible if</p>
 <div class="math notranslate nohighlight">
-\[\Delta v_k = \int_{\ell^{mors}_k} \mathbf{e} \cdot \hat{\mathbf{t}} = - \frac{d}{dt} \int_{S_k} \mathbf{b} \cdot \hat{\mathbf{n}}\]</div>
+\[1 \gg \dfrac{S \frac{B^2 f L}{\mu_0}}{VI} = \dots\]</div>
+<p><strong>todo</strong> <span style="color:red"><em>check this! Is it ok that the frequency disappears? Term (1) is non-zero but (2) is identically zero for steady regime, <span class="math notranslate nohighlight">\(f = 0\)</span>. And if it’s required to separate steady and unsteady contributions in the discussion of non-dimensional equations</em></span></p>
+<div class="math notranslate nohighlight">
+\[1 \gg \dfrac{S \frac{B^2 f L}{\mu_0}}{VI} = S \dfrac{B^2 f L}{\mu_0 \Phi I} = S \frac{B^2 f L}{\mu_0 B f L^2 I} = S \frac{B}{\mu_0 L I} = S \frac{\mu_0 J L}{\mu_0 L I} = \frac{S J}{I} \ .\]</div>
+<p><span style="color:red">The dimension of the boundary of the domain is proprotional to the square of the linear dimension of the system, <span class="math notranslate nohighlight">\(S \sim L_{V}^2\)</span>. This inequality holds if the product of the dimension of the boundary of the domain and the characteristic current density <span class="math notranslate nohighlight">\(J\)</span> is much smaller than the characteristic current <span class="math notranslate nohighlight">\(I\)</span> at the boundary.</span></p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -445,20 +446,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="circuits-electric-approximation.html"
+       href="circuits-electric.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6.1.2. </span>Validità dell’approccio circuitale</p>
+        <p class="prev-next-title"><span class="section-number">6.1. </span>Circuiti elettrici</p>
       </div>
     </a>
     <a class="right-next"
-       href="circuits-electric-components.html"
+       href="circuits-electric-approximation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.1.4. </span>Componenti elementari dei circuiti elettrici</p>
+        <p class="prev-next-title"><span class="section-number">6.1.2. </span>Validità dell’approccio circuitale</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
