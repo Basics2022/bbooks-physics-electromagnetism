@@ -202,7 +202,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="regimes-non-dimensional.html">5.1. Non-dimensional equations of electromagnetism</a></li>
 <li class="toctree-l2"><a class="reference internal" href="regimes-electrostatics.html">5.2. Electrostatics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="regimes-steady.html">5.3. Steady regime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="regimes-slow.html">5.4. Slow…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regimes-slow.html">5.4. Slow regime</a></li>
 </ul>
 </li>
 </ul>
@@ -210,10 +210,11 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="circuits.html">6. Circuit Approximation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electric.html">6.1. Circuiti elettrici</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-approximation.html">6.1.1. Validità dell’approccio circuitale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">6.1.2. Induzione elettromagnetica nell’approssimazione circuitale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-components.html">6.1.3. Componenti elementari dei circuiti elettrici</a></li>
-<li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">6.1.4. Regimi di funzionamento in circuiti elettrici</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-energy.html">6.1.1. Energy balance in circuit approximation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-approximation.html">6.1.2. Validità dell’approccio circuitale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-induction.html">6.1.3. Induzione elettromagnetica nell’approssimazione circuitale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-components.html">6.1.4. Componenti elementari dei circuiti elettrici</a></li>
+<li class="toctree-l3"><a class="reference internal" href="circuits-electric-regimes.html">6.1.5. Regimi di funzionamento in circuiti elettrici</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="circuits-electromagnetic.html">6.2. Circuiti elettromagnetici</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -1027,13 +1028,111 @@ $$\begin{aligned}
 <div class="figure align-default">
 <img alt="../_images/exam-2024-09-06-ese-01.png" src="../_images/exam-2024-09-06-ese-01.png" />
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-Solution - todo<div class="sd-summary-down docutils">
+Solution<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Equivalent 2-port circuit of the resistive network.</strong> Following the <strong>guidelines for the solution</strong>, a <a class="reference internal" href="electrical-engineering-networks.html#classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-n-port"><span class="std std-ref">many-port Thevenin equivalent circuit</span></a> of the resistive part of the circuit is found, with two ports for interfacing with the capacitor (A) and with the switch. The dynamical equation of the system is written in state-space representation, writing the voltage at the ports and the unknown variable <span class="math notranslate nohighlight">\(i(t)\)</span> as outputs; the capacitor contitutive equation is used to find the time evolution of the system once the switch is closed</p>
+<ul>
+<li><p class="sd-card-text"><em>open circuit</em></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     v_{A,0} &amp; = - e - R_2 \, a = - 5 \, V - 2 \, \Omega \cdot 5 \, A = - 15 \, V \\
+     v_{B,0} &amp; = - e = - 5 \, V \\
+     i_{0}   &amp; = 0 \, A \\
+   \end{aligned}\end{split}\]</div>
+</li>
+<li><p class="sd-card-text"><em>current generators at ports, internal generators off</em></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     v_A &amp; = R_4 (i_A+i_B) + R_2 i_A \\
+     v_B &amp; = v_A + R_1 i_B - R_2 i_A = R_4 (i_A + i_B) + R_1 i_B \\
+     i   &amp; = i_A + i_B \\
+   \end{aligned}\end{split}\]</div>
+</li>
+</ul>
+<p class="sd-card-text">and thus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  v_A &amp; = v_{A,0} + R_{AA} i_A + R_{AB} i_B &amp;&amp; = v_{A,0} + \left( R_2+R_4 \right) i_A +        R_4     \,      i_B \\
+  v_B &amp; = v_{B,0} + R_{BA} i_A + R_{BB} i_B &amp;&amp; = v_{B,0} +        R_4     \,      i_A + \left( R_1+R_4 \right) i_B \\
+  i   &amp; = i_{ ,0} + i_{/A} i_A + i_{/B} i_B &amp;&amp; =  0 \, A +        i_A +        i_B \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Initial conditions.</strong> Steady conditions with open switch follows from conditions <span class="math notranslate nohighlight">\(i_B = 0\)</span>, and <span class="math notranslate nohighlight">\(v_A = L \frac{d i_A}{d t} = 0\)</span>, solving the equations for</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    i_A(0^-) &amp; = - \frac{v_{A,0}}{R_{AA}} &amp;&amp; = - \dfrac{-15 \, V}{6 \, \Omega} &amp;&amp; = 2.5 \, A \\
+    v_B(0^-) &amp; = - v_{B,0} + R_{BA} \, i_A  = - v_{B,0} - \dfrac{R_{BA}}{R_{AA}} v_{A,0} &amp;&amp; = 5 \, V + \dfrac{4 \, \Omega}{6 \, \Omega} 15 \, V &amp;&amp; = 15 \, V \\ 
+    i  (0^-) &amp; = i_{ ,0} + i_{/A} i_A =  i_{ ,0} - \dfrac{i_{/A}}{R_{AA}} v_{A,0} &amp;&amp; = 0 \, A - \dfrac{-15 \, V}{6 \, \Omega} &amp;&amp; = 2.5 \, A \\
+  \end{aligned}\end{split}\]</div>
+<p class="sd-card-text"><strong>Transient.</strong></p>
+<ul>
+<li><p class="sd-card-text">switch closes at time <span class="math notranslate nohighlight">\(t = 0\)</span>. Voltage across the switch as a function of time can be represented by the function</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+      v_{B}(t) &amp; = v_B(0^-) \left( 1 - h(t) \right) \\
+               &amp; = \left[ v_{B,0} - \dfrac{R_{BA}}{R_{AA}} v_{A,0} \right] \left( 1 - h(t) \right) \\
+      \Delta v_{B}(t) = v_{B}(t) - v_{B,0}  &amp; =  - v_{B,0} h(t) - \dfrac{R_{BA}}{R_{AA}} v_{A,0} \left( 1 - h(t) \right) \\
+   \end{aligned}\end{split}\]</div>
+</li>
+<li><p class="sd-card-text">dynamical equation of the inductor is written as a first order differential equation in the state variable of the inductor, <span class="math notranslate nohighlight">\(i_A(t)\)</span>, after writing <span class="math notranslate nohighlight">\(v_A\)</span> as a function of <span class="math notranslate nohighlight">\(i_A\)</span> and the potentials at the ports,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     v_A 
+     &amp; = v_{A,0} + R_{AA} i_A + R_{AB} i_B = \\
+     &amp; = v_{A,0} + R_{AA} i_A + \dfrac{R_{AB}}{R_{BB}} \left( v_B(t) - v_{B,0} - R_{BA} i_A \right) = \\
+     &amp; = \dfrac{\det \mathbf{R}}{R_{BB}} i_A + v_{A,0} + \dfrac{R_{AB}}{R_{BB}} \left( v_B(t) - v_{B,0} \right) = \\
+     &amp; = \dfrac{\det \mathbf{R}}{R_{BB}} i_A + v_{A,0} - \dfrac{R_{AB}}{R_{BB}} v_{B,0} \, h(t) -  \dfrac{R_{AB}}{R_{BB}}\dfrac{R_{BA}}{R_{AA}} v_{A,0} (1- h(t)) = \\
+     &amp; = \dfrac{\det \mathbf{R}}{R_{BB}} i_A + \dfrac{\det \mathbf{R}}{R_{AA} R_{BB}} v_{A,0} - \dfrac{R_{AB}}{R_{BB}}\left( v_{B,0} - \dfrac{R_{BA}}{R_{AA}} v_{A,0} \right) \, h(t)
+  \end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    0 = &amp; L \dfrac{d i_A}{dt} + v_A \\
+        &amp; L \dfrac{d i_A}{dt} + \dfrac{\det \mathbf{R}}{R_{BB}} i_A = - \dfrac{\det \mathbf{R}}{R_{AA} R_{BB}} v_{A,0} + \dfrac{R_{AB}}{R_{BB}} \left( v_{B,0} - \dfrac{R_{BA}}{R_{AA}} v_{A,0}  \right) \, h(t)
+  \end{aligned}\end{split}\]</div>
+<p class="sd-card-text">with initial conditions <span class="math notranslate nohighlight">\(i_A(0) = i_A(0^-)\)</span>.</p>
+<p class="sd-card-text">Numerical values</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \tau &amp; = \dfrac{L}{R_{eq}} = \dfrac{0.1 \, H}{2.8 \, \Omega} = 3.57 \cdot 10^{-2} \, s  \\
+    R_{eq} &amp; = \dfrac{\det \mathbf{R}}{R_{BB}} = \dfrac{14 \, \Omega^2}{5 \, \Omega} = 2.8 \, \Omega \\
+    \det \mathbf{R} &amp; = R_{AA} R_{BB} - R_{AB} R_{BA} = \\
+                    &amp; = (R_1 + R_4)(R_2 + R_4) - R_4^2 = ( 30 - 16 ) \Omega^2 = 14 \, \Omega^2
+  \end{aligned}\end{split}\]</div>
+</li>
+<li><p class="sd-card-text"><strong>Current through the inductor.</strong></p>
+<div class="math notranslate nohighlight">
+\[i_A(t) = \dots \]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+      i_A(0) &amp; = i_A(0^-) = 2.5 \, A \\
+      i_A(+\infty) &amp; = \dfrac{1}{R_{eq}} \left[ - v_{A,0} + \dfrac{R_{AB}}{R_{BB}} v_{B,0} \right] = \dfrac{1}{2.8 \, \Omega} \left[ 15 \, V + \dfrac{4}{5} \, ( - 5 \, V ) \right] = 3.93 \, A
+   \end{aligned}\end{split}\]</div>
+</li>
+<li><p class="sd-card-text"><strong>Current through the switch.</strong></p>
+<div class="math notranslate nohighlight">
+\[i_B(t) = \dfrac{1}{R_{BB}} \left( v_B(t) - v_{B,0} - R_{BA} i_A(t) \right)\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     i_B(0^+)     &amp; = \dfrac{1}{R_{BB}} \left( v_B(0^+    ) - v_{B,0} - R_{BA} i_A(0^+    ) \right) = \\
+                  &amp; = \dfrac{1}{5 \, \Omega} \left( 0 \, V + 5 \, V  - 4 \, \Omega \cdot (2.5 \, A) \right) = -1.00 \, A \\
+     i_B(+\infty) &amp; = \dfrac{1}{R_{BB}} \left( v_B(+\infty) - v_{B,0} - R_{BA} i_A(+\infty) \right) = \\
+                  &amp; = \dfrac{1}{5 \, \Omega} \left( 0 \, V  + 5 \, V - 4 \, \Omega \cdot (3.93 \, A) \right) = -2.14 \, A\\
+   \end{aligned}\end{split}\]</div>
+</li>
+<li><p class="sd-card-text"><strong>Current <span class="math notranslate nohighlight">\(i_{R_4}\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[i_{R_4}(t) = i_A(t) + i_B(t)\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+     i_{R_4}(0^+    ) &amp; = i_A(0^+    ) + i_B(0^+    ) =   2.50 \, A - 1.00 \, A = 1.50 \, A \\
+     i_{R_4}(+\infty) &amp; = i_A(+\infty) + i_B(+\infty) =   3.93 \, A - 2.14 \, A = 1.79 \, A \\
+   \end{aligned}\end{split}\]</div>
+</li>
+</ul>
 </div>
 </details></div>
 </div>
