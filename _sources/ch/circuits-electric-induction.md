@@ -1,27 +1,17 @@
-<!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-
 (classical-electromagnetism:circuits-electric:induction)=
-# Induzione elettromagnetica nell'approssimazione circuitale
+# Electromagnetic Induction in Circuit Approximation
 
-E' possibile applicare l'approssimazione circuitale anche in presenza di regioni in cui non è possibile trascurare il termine $\partial_t \mathbf{b}$, come ad esempio circuiti elettromagnetici che coinvolgono trasformatori e/o motori o generatori elettrici.
+It is possible to apply the circuit approximation even in the presence of regions where the term $\partial_t \mathbf{b}$ cannot be neglected, such as in electromagnetic circuits involving transformers, motors, or electric generators.
 
-In queste situazioni, se è possibile identificare una regione $V_0$ dello spazio connessa nella quale il termine $\partial_t \mathbf{b} = \mathbf{0}$, e quindi $\nabla \times \mathbf{e} = \mathbf{0}$, in $V_0$ è possibile definire il campo elettrico in termini di un potenziale $\varphi$,
+In these situations, if it is possible to identify a connected region $V_0$ in space where $\partial_t \mathbf{b} = \mathbf{0}$, and therefore $\nabla \times \mathbf{e} = \mathbf{0}$, it is possible to define the electric field in terms of a potential $\varphi$ in $V_0$:
 
 $$\mathbf{e} = - \nabla \varphi \qquad , \qquad \mathbf{r} \in V_0 \ .$$
 
-E' possibile calcolare le differenze di potenziale ai morsetti di un sistema in cui $\delta_t \mathbf{b} \ne 0$, racchiuso nel volume $V_k$, con la legge di Faraday,
+It is possible to calculate the potential differences at the terminals of a system where $\partial_t \mathbf{b} \ne 0$, enclosed in the volume $V_k$, using Faraday's law:
 
 $$\oint_{\ell_k} \mathbf{e} \cdot \hat{\mathbf{t}} = - \frac{d}{dt} \int_{S_k} \mathbf{b} \cdot \hat{\mathbf{n}} \ ,$$
 
-dove il percorso chiuso $\ell_k = \ell_k^{cond} \cup \ell_k^{mors}$ descrive il conduttore in $V_k$ chiuso dalla linea geometrica tra i morsetti. Se si può trascurare la resistività del conduttore in $V_k$, $\int_{\ell_k^{cond}} \mathbf{e} \cdot \hat{\mathbf{t}} = 0$, la differenza di tensione ai morsetti vale
+where the closed path $\ell_k = \ell_k^{cond} \cup \ell_k^{mors}$ describes the conductor in $V_k$ closed by the geometric line between the terminals. If the resistivity of the conductor in $V_k$ can be neglected, $\int_{\ell_k^{cond}} \mathbf{e} \cdot \hat{\mathbf{t}} = 0$, the voltage difference at the terminals is:
 
 $$\Delta v_k = \int_{\ell^{mors}_k} \mathbf{e} \cdot \hat{\mathbf{t}} = - \frac{d}{dt} \int_{S_k} \mathbf{b} \cdot \hat{\mathbf{n}}$$
-
-
 

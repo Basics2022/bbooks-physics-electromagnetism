@@ -1,49 +1,40 @@
-<!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-
 (classical-electromagnetism:circuits-electromagnetic:transformer)=
-# Trasformatore
+# Transformer
 
-- flusso del campo magnetico, nell'ipotesi di campo uniforme, o in termini del campo medio
+- Magnetic field flux, assuming a uniform field or in terms of the average field:
 
   $$\phi = b \, A$$
 
-- flusso del campo magnetico concatenato a $N$ avvolgimenti
+- Magnetic field flux linked to $N$ windings:
 
   $$\psi = N \, \phi$$
 
-- relazione tra tensione ai morsetti dell'induttore e flusso concatenato, applicando la [legge di Faraday solo in parte irrotazionali](classical-electromagnetism:circuits-electric:induction)
+- Relationship between the voltage at the inductor terminals and the linked flux, applying [Faraday's law to irrotational parts](classical-electromagnetism:circuits-electric:induction):
 
   $$v = \dot{\psi}$$
 
-## Trasformatore ideale
+## Ideal Transformer
 
-In assenza di flussi dispersi e riluttanza nel traferro, la legge alle maglie nel traferro implica
+In the absence of stray fluxes and reluctance in the air gap, the loop law in the air gap implies:
 
 $$0 = m_1 + m_2 = N_1 \, i_1 + N_2 \, i_2$$
 
-Il flusso del campo magnetico può essere scritto in funzione del flusso concatenato agli avvolgimenti,
+The magnetic field flux can be written in terms of the flux linked to the windings:
 
 $$\phi = \frac{\psi_1}{N_1} = \frac{\psi_2}{N_2}$$
 
-La derivata nel tempo di questa relazione, con numero di avvolgimenti costanti nel tempo, implica
+The time derivative of this relation, with a constant number of windings over time, implies:
 
 $$\frac{v_2}{N_2} = \frac{v_1}{N_1} \ .$$
 
-
-## Trasformatore con flussi dispersi
+## Transformer with Stray Fluxes
 
 $$\begin{cases}
- & \phi_1 - \phi_{1,d} = \phi \\
- & \phi_2 - \phi_{2,d} = \phi \\
- & m_1 = \theta_{1,d} \phi_{1,d} \\
- & m_2 = \theta_{2,d} \phi_{2,d} \\
- & m_1 + m_2 = 0
+  \phi_1 - \phi_{1,d} = \phi \\
+  \phi_2 - \phi_{2,d} = \phi \\
+  m_1 = \theta_{1,d} \phi_{1,d} \\
+  m_2 = \theta_{2,d} \phi_{2,d} \\
+  m_1 + m_2 = 0
 \end{cases}$$
 
 $$\rightarrow \qquad 0 = m_1 + m_2 = N_1 \, i_1 + N_2 \, i_2$$
@@ -54,35 +45,19 @@ $$\begin{aligned}
 \end{aligned}$$
 
 $$\rightarrow \qquad \frac{\psi_2}{N_2} - \frac{m_2}{\theta_{2,d}} = \frac{\psi_1}{N_1} - \frac{m_1}{\theta_{1,d}} \ .$$
-$$\rightarrow \qquad \frac{1}{N_2} \left( v_2 - \frac{N_2^2}{\theta_{2,d}} \dfrac{d i_2}{d t} \right) =  
+
+$$\rightarrow \qquad \frac{1}{N_2} \left( v_2 - \frac{N_2^2}{\theta_{2,d}} \dfrac{d i_2}{d t} \right) =
                      \frac{1}{N_1} \left( v_1 - \frac{N_1^2}{\theta_{1,d}} \dfrac{d i_1}{d t} \right)  \ .$$
 
-
-## Trasformatore con flussi dispersi e riluttanza $\theta_{Fe}$ nel traferro
+## Transformer with Stray Fluxes and Reluctance $\theta_{Fe}$ in the Air Gap
 
 $$\begin{cases}
- & \phi_{1} - \phi_{1,d} = \phi \\
- & \phi_{2} - \phi_{2,d} = \phi \\
- & m_{1} = \theta_{1,d} \phi_{1,d} \\
- & m_{2} = \theta_{2,d} \phi_{2,d} \\
- & m_1   + m_{2} = \theta_{Fe} \, \phi
+  \phi_{1} - \phi_{1,d} = \phi \\
+  \phi_{2} - \phi_{2,d} = \phi \\
+  m_{1} = \theta_{1,d} \phi_{1,d} \\
+  m_{2} = \theta_{2,d} \phi_{2,d} \\
+  m_1 + m_2 = \theta_{Fe} \, \phi
 \end{cases}$$
 
-<span style="color:red">**todo** finire e controllare i conti; disegnare circuito equivalente</span>
-
-<!--
-$$\begin{aligned}
-  \frac{\psi_{2}}{N_{2}} & = \phi_2 = \\
-                     & = \phi + \phi_{2,d} = \\
-                     & = \phi + \frac{m_2}{\theta_{2,d}} = \\
-                     & = \phi + \frac{1}{\theta_{2,d}} ( \theta_{Fe} \, \phi - m_1 ) = \\
-                     & = \left( 1 + \frac{\theta_{Fe}}{\theta_{2,d}} \right) \, \phi - \frac{1}{\theta_{2,d}} m_1 = \\
-                     & = \left( 1 + \frac{\theta_{Fe}}{\theta_{2,d}} \right) \, \left( \frac{\psi_1}{N_1} - \frac{m_1}{\theta_{1,d}} \right) - \frac{1}{\theta_{2,d}} m_1 = \\
-\end{aligned}$$
--->
-
-
-
-
-
+<span style="color:red">**todo** complete and verify the calculations; draw the equivalent circuit</span>
 
