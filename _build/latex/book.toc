@@ -57,55 +57,75 @@
 \contentsline {section}{\numberline {5.4}Slow regime}{40}{section.5.4}%
 \contentsline {part}{II\hspace {1em}Electrical Engineering}{43}{part.2}%
 \contentsline {chapter}{\numberline {6}Circuit Approximation}{45}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Circuiti elettrici}{46}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Energy balance in circuit approximation}{46}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Validità dell’approccio circuitale}{47}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Induzione elettromagnetica nell’approssimazione circuitale}{48}{subsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.1.4}Componenti elementari dei circuiti elettrici}{48}{subsection.6.1.4}%
-\contentsline {subsubsection}{Resistore ohmico}{48}{subsubsection*.20}%
-\contentsline {subsection}{\numberline {6.1.5}Regimi di funzionamento in circuiti elettrici}{49}{subsection.6.1.5}%
-\contentsline {section}{\numberline {6.2}Circuiti elettromagnetici}{49}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Trasformatore}{50}{subsection.6.2.1}%
-\contentsline {subsubsection}{Trasformatore ideale}{50}{subsubsection*.21}%
-\contentsline {subsubsection}{Trasformatore con flussi dispersi}{51}{subsubsection*.22}%
-\contentsline {subsubsection}{Trasformatore con flussi dispersi e riluttanza \(\mittheta _{Fe}\) nel traferro}{51}{subsubsection*.23}%
-\contentsline {section}{\numberline {6.3}Electromechanical Circuits}{51}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Conservative Electromechanical Systems}{54}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Governing Equations}{54}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Energy Balance}{54}{subsection.6.3.3}%
-\contentsline {subsubsection}{Macroscopic Mechanical Energy}{54}{subsubsection*.24}%
-\contentsline {subsubsection}{Kinetic Energy}{55}{subsubsection*.25}%
-\contentsline {subsubsection}{Total Energy}{55}{subsubsection*.26}%
-\contentsline {subsubsection}{Internal Energy}{55}{subsubsection*.27}%
-\contentsline {subsubsection}{Thermal (Microscopic) Internal Energy}{55}{subsubsection*.28}%
-\contentsline {section}{\numberline {6.4}Network analysis of linear circuits}{56}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Thevenin equivalent}{57}{subsection.6.4.1}%
-\contentsline {subsubsection}{One\sphinxhyphen {}port circuit}{57}{subsubsection*.29}%
-\contentsline {subsubsection}{Many\sphinxhyphen {}port circuit}{58}{subsubsection*.30}%
-\contentsline {subsection}{\numberline {6.4.2}Norton equivalent}{58}{subsection.6.4.2}%
-\contentsline {section}{\numberline {6.5}Network analysis of linear circuits \sphinxhyphen {} harmonic regime}{58}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Power}{58}{subsection.6.5.1}%
-\contentsline {section}{\numberline {6.6}Three\sphinxhyphen {}phase circuits}{59}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Star\sphinxhyphen {}star network}{59}{subsection.6.6.1}%
-\contentsline {subsubsection}{General solution}{59}{subsubsection*.31}%
-\contentsline {subsubsection}{Equilibrated generation and loads}{61}{subsubsection*.32}%
-\contentsline {subsubsection}{Extra connections}{61}{subsubsection*.33}%
-\contentsline {paragraph}{Phase\sphinxhyphen {}neutral connections}{61}{paragraph*.34}%
-\contentsline {paragraph}{Phase\sphinxhyphen {}phase connections}{61}{paragraph*.35}%
-\contentsline {section}{\numberline {6.7}Exercises}{61}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Transient dynamics of linear electrical grids with one dynamic component}{63}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}Harmonic regime of linear electrical grids}{76}{subsection.6.7.2}%
-\contentsline {subsection}{\numberline {6.7.3}Three\sphinxhyphen {}phase electrical circuits in harmonic regime}{81}{subsection.6.7.3}%
-\contentsline {subsection}{\numberline {6.7.4}Electromagnetic circuits}{86}{subsection.6.7.4}%
-\contentsline {part}{III\hspace {1em}Numerical Methods}{91}{part.3}%
-\contentsline {chapter}{\numberline {7}Green’s function method}{95}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Poisson equation}{95}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Helmholtz equation}{96}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Wave equation}{98}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Metodi numerici}{101}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Elettrostatica}{101}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Sorgente}{101}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Dipolo}{101}{subsection.8.1.2}%
-\contentsline {part}{IV\hspace {1em}Appendices}{103}{part.4}%
-\contentsline {chapter}{\numberline {9}todo: appendices}{105}{chapter.9}%
-\contentsline {chapter}{Proof Index}{107}{section*.53}%
+\contentsline {chapter}{\numberline {7}Energy balance in circuit approximation}{47}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Boundary terms in circuit approximation}{48}{section.7.1}%
+\contentsline {chapter}{\numberline {8}Electric circuits}{49}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Circuit Approximation}{49}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Electrical Wires}{50}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Kirchhoff’s Laws}{50}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}Components}{51}{subsection.8.1.3}%
+\contentsline {subsubsection}{Electrical Resistance}{51}{subsubsection*.21}%
+\contentsline {subsubsection}{Capacitor}{51}{subsubsection*.22}%
+\contentsline {subsubsection}{Inductor}{51}{subsubsection*.23}%
+\contentsline {subsubsection}{Voltage Generator}{51}{subsubsection*.24}%
+\contentsline {subsubsection}{Current Generator}{51}{subsubsection*.25}%
+\contentsline {subsubsection}{Diode}{52}{subsubsection*.26}%
+\contentsline {section}{\numberline {8.2}Elementary circuits}{52}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Series and Parallel Connections}{52}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Special Cases}{53}{subsection.8.2.2}%
+\contentsline {subsubsection}{Open Circuit}{53}{subsubsection*.27}%
+\contentsline {subsubsection}{Short Circuit}{53}{subsubsection*.28}%
+\contentsline {section}{\numberline {8.3}Electromagnetic induction in circuit approximation}{53}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Operating Regimes}{54}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Steady\sphinxhyphen {}State Regime \sphinxhyphen {} Direct Current}{54}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Transient Regime}{54}{subsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.4.3}Periodic Regime \sphinxhyphen {} Alternating Current}{54}{subsection.8.4.3}%
+\contentsline {subsection}{\numberline {8.4.4}AC\sphinxhyphen {}DC and DC\sphinxhyphen {}AC Conversion}{54}{subsection.8.4.4}%
+\contentsline {subsubsection}{AC \(\rightarrow \) DC, Using Rectifiers}{54}{subsubsection*.29}%
+\contentsline {subsubsection}{DC \(\rightarrow \) AC, Using Inverters}{55}{subsubsection*.30}%
+\contentsline {chapter}{\numberline {9}Circuiti elettromagnetici}{57}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Trasformatore}{58}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Trasformatore ideale}{58}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Trasformatore con flussi dispersi}{58}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Trasformatore con flussi dispersi e riluttanza \(\mittheta _{Fe}\) nel traferro}{59}{subsection.9.1.3}%
+\contentsline {chapter}{\numberline {10}Electromechanical Circuits}{61}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Conservative Electromechanical Systems}{63}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Governing Equations}{64}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Energy Balance}{64}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Macroscopic Mechanical Energy}{64}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {10.3.2}Kinetic Energy}{65}{subsection.10.3.2}%
+\contentsline {subsection}{\numberline {10.3.3}Total Energy}{65}{subsection.10.3.3}%
+\contentsline {subsection}{\numberline {10.3.4}Internal Energy}{65}{subsection.10.3.4}%
+\contentsline {subsection}{\numberline {10.3.5}Thermal (Microscopic) Internal Energy}{65}{subsection.10.3.5}%
+\contentsline {chapter}{\numberline {11}Network analysis}{67}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Network analysis of linear circuits}{67}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Thevenin equivalent}{68}{subsection.11.1.1}%
+\contentsline {subsubsection}{One\sphinxhyphen {}port circuit}{68}{subsubsection*.31}%
+\contentsline {subsubsection}{Many\sphinxhyphen {}port circuit}{69}{subsubsection*.32}%
+\contentsline {subsection}{\numberline {11.1.2}Norton equivalent}{69}{subsection.11.1.2}%
+\contentsline {section}{\numberline {11.2}Network analysis of linear circuits \sphinxhyphen {} harmonic regime}{69}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Power}{69}{subsection.11.2.1}%
+\contentsline {section}{\numberline {11.3}Three\sphinxhyphen {}phase circuits}{70}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}Star\sphinxhyphen {}star network}{70}{subsection.11.3.1}%
+\contentsline {subsubsection}{General solution}{70}{subsubsection*.33}%
+\contentsline {subsubsection}{Equilibrated generation and loads}{72}{subsubsection*.34}%
+\contentsline {subsubsection}{Extra connections}{72}{subsubsection*.35}%
+\contentsline {paragraph}{Phase\sphinxhyphen {}neutral connections}{72}{paragraph*.36}%
+\contentsline {paragraph}{Phase\sphinxhyphen {}phase connections}{72}{paragraph*.37}%
+\contentsline {section}{\numberline {11.4}Exercises}{72}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}Transient dynamics of linear electrical grids with one dynamic component}{74}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.4.2}Harmonic regime of linear electrical grids}{89}{subsection.11.4.2}%
+\contentsline {subsection}{\numberline {11.4.3}Three\sphinxhyphen {}phase electrical circuits in harmonic regime}{94}{subsection.11.4.3}%
+\contentsline {subsection}{\numberline {11.4.4}Electromagnetic circuits}{99}{subsection.11.4.4}%
+\contentsline {part}{III\hspace {1em}Numerical Methods}{105}{part.3}%
+\contentsline {chapter}{\numberline {12}Green’s function method}{109}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Poisson equation}{109}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Helmholtz equation}{110}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Wave equation}{112}{section.12.3}%
+\contentsline {chapter}{\numberline {13}Metodi numerici}{115}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Elettrostatica}{115}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}Sorgente}{115}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.1.2}Dipolo}{115}{subsection.13.1.2}%
+\contentsline {part}{IV\hspace {1em}Appendices}{117}{part.4}%
+\contentsline {chapter}{\numberline {14}todo: appendices}{119}{chapter.14}%
+\contentsline {chapter}{Proof Index}{121}{section*.55}%

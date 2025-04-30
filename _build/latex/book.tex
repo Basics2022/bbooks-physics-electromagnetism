@@ -85,7 +85,7 @@
         
 
 \title{Classical Electromagnetism and Principles of Electrical Engineering}
-\date{Apr 29, 2025}
+\date{Apr 30, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -2248,151 +2248,99 @@ Under this assumption, the equations of electromagnetism can be approximated as
 \chapter{Circuit Approximation}
 \label{\detokenize{ch/circuits:circuit-approximation}}\label{\detokenize{ch/circuits:classical-electromagnetism-electrical-engineering}}\label{\detokenize{ch/circuits::doc}}
 \sphinxAtStartPar
-\sphinxstylestrong{Electric Circuits}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{Validity Conditions for Circuit Approximation:}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-The dimensions of the circuit are much smaller than the wavelength of the electromagnetic waves involved.
-
-\item {} 
-\sphinxAtStartPar
-The frequency of the signals is low enough that the propagation delay is negligible.
-
-\item {} 
-\sphinxAtStartPar
-The electric and magnetic fields are confined within the circuit components.
-
-\end{itemize}
-
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{Basic Components:} resistors (R); capacitors (C); inductors (L); voltage and current sources; switches; non\sphinxhyphen{}linear components: diodes, transistors,…
-
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{Operating Regimes:}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{Steady State (DC):} The circuit parameters (voltage, current) do not change over time.
-
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{Harmonic (AC):} The circuit parameters vary sinusoidally with time.
-
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{Transient:} The circuit parameters change over time, typically due to a change in input or initial conditions.
-
-\end{itemize}
-
-\end{itemize}
+Circuit approximation of electromagnetic systems is a good approximation of electromagnetic phenomena in \sphinxstylestrong{slow regime} of systems of \sphinxstylestrong{moderate dimension}, allowing to reduce the complexity of the problem: while the electromagnetism is a “field” physical phenomenon governed by system of PDEs, circuit approximation allows to build models governed by ODEs for non\sphinxhyphen{}stationary problems, and algebraic equations for stationary problems.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Electromagnetic Circuits}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{Validity Conditions for Circuit Approximation:}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-term \(\partial_t \vec{d}\) negligible,…\sphinxstylestrong{todo} \sphinxstyleemphasis{as an integral condition on a system? Discussion in terms of energy?}
-
-\end{itemize}
-
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{Example: Transformers}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-Transformers operate on the principle of electromagnetic induction.
-
-\item {} 
-\sphinxAtStartPar
-They are used to step up or step down voltages and currents in AC circuits.
-
-\item {} 
-\sphinxAtStartPar
-The circuit approximation is valid as long as the frequency of the AC signal is within the designed range of the transformer.
-
-\end{itemize}
-
-\end{itemize}
+Under the assumptions of circuit approximation, components of the electromagnetic field don’t radiate EM energy through waves, but involve electromagnetic field confined in space, and interface with other components typically through electric ports made of conductor wires \sphinxhyphen{} or with actions on mechanical elements for electro\sphinxhyphen{}mechanical systems.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Electro\sphinxhyphen{}Magneto\sphinxhyphen{}Mechanical Circuits}
-\begin{itemize}
-\item {} 
+{\hyperref[\detokenize{ch/circuits-energy:classical-electromagnetism-circuits-energy}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Energy balance}}}}}. Under the assumptions of circuit approximation, discussed later, electromagnetic energy balance equation \eqref{equation:ch/energy-momentum-balance:eq:energy:integral:2} for electomagnetic systems may reduce to
+\begin{equation*}
+\begin{split}\dfrac{d U}{dt} + \sum_{k \in \text{Resistors}} R_k i_k^2 = \sum_{j \in \text{Wires}} v_j i_j \ ,\end{split}
+\end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Examples:}
-\begin{itemize}
-\item {} 
+where resistors produce power dissipation, \(\dot{D} \ge 0\), and the electromagnetic energy \(U\) is the sum of the contributions stored in conservative elements like capacitors and inductors,
+\begin{equation*}
+\begin{split}U = \sum_{i \in \text{Capacitors}} \frac{1}{2} C_i v_i^2 + \sum_{j \in \text{Inductors}} \dfrac{1}{2} L_j i_j^2 \ ,\end{split}
+\end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Simple Circuits:} Basic circuits involving electromagnetic and mechanical components, such as a moving coil in a magnetic field.
-
-\item {} 
+or, defining \(P^{vi, ext}\) the power exchanged with the external environment through the ports,
+\begin{equation*}
+\begin{split}\dot{U} = P^{vi, ext} - \dot{D} \ .\end{split}
+\end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Electric Motors:} Convert electrical energy into mechanical energy.
+{\hyperref[\detokenize{ch/circuits-electric:classical-electromagnetism-circuits-electric}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Electric circuits}}}}}. Elementary components of electric circuits are discussed and their constitutive equations relating the current through the component and the voltage difference at their ports are derived from the equations of electromagnetism. First, circuits with no unsteady flux of the magnetic field are discussed, along with Kirchhoff’s laws; then time\sphinxhyphen{}varying magnetic flux in a confined regions of the domain and electromagnetic induction in electric circuits is discussed.
 
-\item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Generators:} Convert mechanical energy into electrical energy.
+{\hyperref[\detokenize{ch/circuits-electromagnetic:classical-electromagnetism-circuits-electromagnetic}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Electromagnetic circuits}}}}}. Circuit approximation of electromagnetic circuit is discussed for systems working in slow regimes, where the contribution of the displacement current density is negligible, \(\partial_t \vec{d} = 0\). Kirchhoff law’s for magnetic circuits are stated in terms of magnetic flux, magnetomotive force and reluctance, under the (\sphinxstylestrong{strong?} no hysteresis) assumption of linear and non dispersive constitutive law, \(\vec{b} = \mu \vec{h}\). Electromagnetic models of transformers are discussed.
 
-\end{itemize}
-
-\item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Key Concepts:}
-\begin{itemize}
-\item {} 
+{\hyperref[\detokenize{ch/circuits-electromechanic:classical-electromagnetism-circuits-electromechanic}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Electromechanical systems}}}}}. Electromagnetic and mechanical phenomena interact in electromechanical systems. These systems usually convert electrical inputsto create mechanical power (e.g. electric motors), or viceversa convert mechanical power into electromagnetic energy or power (e.g. electric generators).
+
 \sphinxAtStartPar
-Interaction between electrical and mechanical components.
+{\hyperref[\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Network analysis}}}}}. Classical methods in the analyses are discussed. This section contains {\hyperref[\detokenize{ch/electrical-engineering-exercises:classical-electromagnetism-electrical-engineering-exercises}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{exercises with solution}}}}} taken from exams at Politecnico di Milano.
 
-\item {} 
-\sphinxAtStartPar
-Energy conversion and efficiency.
 
-\item {} 
-\sphinxAtStartPar
-Dynamic behavior and control of electromechanical systems.
-
-\end{itemize}
-
-\end{itemize}
 
 \sphinxstepscope
 
 
-
-
-\section{Circuiti elettrici}
-\label{\detokenize{ch/circuits-electric:circuiti-elettrici}}\label{\detokenize{ch/circuits-electric:classical-electromagnetism-circuits-electric}}\label{\detokenize{ch/circuits-electric::doc}}
-\sphinxAtStartPar
-Se il sistema di interesse soddisfa alcune condizioni, è possibile ridurre la teoria di campo dell’elettromagnetismo a una teoria circuitale.
-Quando possibile, cioè quando capace di descrivere adeguatamente il comportamento del sistema di interesse, l’approccio circuitale semplifica di molto la descrizione del problema, non richiedendo la soluzione di un sistema di equazioni differenziali alle derivate parziali da risolvere nello spazio, ma la soluzione di equazioni differenziali ordinarie nelle incognite circuitali, che si riduce a un sistema algebrico, spesso lineare, in regime stazionario.
-
-\sphinxAtStartPar
-\sphinxstylestrong{Giustificazione dell’approccio circuitale.}
-
-\sphinxAtStartPar
-\sphinxstylestrong{Componenti elementari di un circuito elettrico.}
-
-\sphinxstepscope
-
-
-\subsection{Energy balance in circuit approximation}
-\label{\detokenize{ch/circuits-electric-energy:energy-balance-in-circuit-approximation}}\label{\detokenize{ch/circuits-electric-energy:classical-electromagnetism-circuits-electric-energy}}\label{\detokenize{ch/circuits-electric-energy::doc}}
+\chapter{Energy balance in circuit approximation}
+\label{\detokenize{ch/circuits-energy:energy-balance-in-circuit-approximation}}\label{\detokenize{ch/circuits-energy:classical-electromagnetism-circuits-energy}}\label{\detokenize{ch/circuits-energy::doc}}
 \sphinxAtStartPar
 Integral balance of electromagnetic energy \eqref{equation:ch/energy-momentum-balance:eq:energy:integral:2} reads
 \begin{equation*}
 \begin{split}\dfrac{d}{dt} \int_V u + \int_{V} \vec{e} \cdot \vec{j} = - \oint_{\partial V} \, \phi \vec{j} \cdot \hat{n} + \oint_{\partial V} \hat{n} \cdot \left[ \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b} + \varepsilon_0 \, \phi\, \partial_t \vec{e} \right] \ .\end{split}
 \end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Volume terms} represent
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+time derivative of the electromagnetic energy stored in the system, as an example in capacitors, inductors, air gaps in magnetic components,
+\begin{equation*}
+\begin{split}U = \sum_{k \in \text{Capacitors}} \dfrac{1}{2} C_k v_k^2 + \sum_{k \in \text{Inductors}} \dfrac{1}{2} L_k i_k^2 + \sum_{k \in \text{Gaps}} \dfrac{1}{2} \theta_k \phi_k^2 \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+…
+
+\item {} 
+\sphinxAtStartPar
+other contributions to electric power, like power dissipated in resistors
+\begin{equation*}
+\begin{split}\int_{V_k} \vec{e} \cdot \vec{j} = \int_{V_k} \rho_R \, |\vec{j}|^2 = \rho_{R_k} A_k \ell_k \dfrac{i_k^2}{A_k^2} = \dfrac{\rho_{R_k} \ell_k}{A_k} i_k^2 = R_k i_k^2 \ , \end{split}
+\end{equation*}
+\sphinxAtStartPar
+with the constitutive law of Ohm resistors \(\vec{e} = \rho_R \vec{j}\), the definition of electric current \(i = \int_S \vec{j} \cdot \hat{n} \sim j A\) and resistance \(R = \frac{\rho_R \ell}{A}\)
+
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Boundary terms} represent:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+the “VI” contribution, that can be re\sphinxhyphen{}written as the product of voltage and current intensity at wires of the electric ports, the only “active” interface in circuit approximation
+\begin{equation*}
+\begin{split}\oint_{\partial V} \phi \vec{j} \cdot \hat{n} = - \sum_{k \in \text{wires}} \phi_k \int_{S_k} \hat{j} \cdot \hat{n} = \sum_{k \in \text{wires}} v_k \, i_k \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having defined the current current entering the system through wire \(k\) (assuming equipotential section of the wire, constant \(\phi = v_k\) on section \(S_k\) of the \(k^{th}\) wire),
+\begin{equation*}
+\begin{split}i_k = - \int_{S_k} \vec{j} \cdot \hat{n} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+as the unit vector \(\hat{n}\) is pointing outwards the boundary of the system.
+
+\item {} 
+\sphinxAtStartPar
+a radiation term, due to radiation of electromagnetic energy in free\sphinxhyphen{}space through the boundary of the domain; this contribution is the dominant contribution making antenna wokr, and it’s usually negligible for slow regimes of systems of moderate dimensions, as discussed below comparing the order of magnitude of these contributions.
+
+\end{itemize}
+
+
+\section{Boundary terms in circuit approximation}
+\label{\detokenize{ch/circuits-energy:boundary-terms-in-circuit-approximation}}\label{\detokenize{ch/circuits-energy:classical-electromagnetism-circuits-energy-boundary}}
 \sphinxAtStartPar
 In the limit of {\hyperref[\detokenize{ch/regimes-slow:classical-electromagnetism-regimes-slow}]{\sphinxcrossref{\DUrole{std,std-ref}{slow regime}}}}, \(\frac{f L}{c_0} \ll 1\), the comparison of the characteristic dimensions of the three boundary contributions gives
 \begin{equation*}
@@ -2425,56 +2373,281 @@ The dimension of the boundary of the domain is proprotional to the square of the
 
 
 
-\subsection{Validità dell’approccio circuitale}
-\label{\detokenize{ch/circuits-electric-approximation:validita-dell-approccio-circuitale}}\label{\detokenize{ch/circuits-electric-approximation:classical-electromagnetism-circuits-electric-approximation}}\label{\detokenize{ch/circuits-electric-approximation::doc}}
+\chapter{Electric circuits}
+\label{\detokenize{ch/circuits-electric:electric-circuits}}\label{\detokenize{ch/circuits-electric:classical-electromagnetism-circuits-electric}}\label{\detokenize{ch/circuits-electric::doc}}
 \sphinxAtStartPar
-L’approccio circuitale consente di ridurre il problema elettromagnetico, in generale un problema di campo che richiede la soluzione di PDE, a un approccio “ai morsetti” \sphinxstylestrong{todo}, che richiede la soluzione di ODE.
+{\hyperref[\detokenize{ch/circuits-electric-components:classical-electromagnetism-circuits-electric-approx}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Electrical circuits in irrotational regions}}}}}. Electric circuits are discussed here first for regions of space with no time\sphinxhyphen{}varying magnetic fields, \(\partial_t \vec{b} = \vec{0}\). From Faraday’s law, this condition implies \(\nabla \times \vec{e} = \vec{0}\) and that the electric field can be expressed as the gradient of the potential \(\phi\), interpreted as \sphinxstylestrong{voltage}. Under these assumptions, {\hyperref[\detokenize{ch/circuits-electric-components:physics-hs-electromagnetism-circuits-electric-kirchhoff-laws}]{\sphinxcrossref{\DUrole{std,std-ref}{Kirchhoff laws}}}} for electric circuits, and constitutive equations of elementary {\hyperref[\detokenize{ch/circuits-electric-components:classical-electromagnetism-circuits-electric-components}]{\sphinxcrossref{\DUrole{std,std-ref}{components of electric circuits}}}} are derived from equations of electromagnetism.
 
 \sphinxAtStartPar
-Una rivisitazione dell’{\hyperref[\detokenize{ch/energy:classical-electromagnetism-energy}]{\sphinxcrossref{\DUrole{std,std-ref}{equazione dell’energia}}}} permette di valutare i regimi in cui è possibile usare un approccio circuitale a un sistema elettromagnetico.
+{\hyperref[\detokenize{ch/circuits-electric-elementary-connections:physics-hs-electromagnetism-circuits-electric-components-configurations}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Elementary circuits}}}}}.
 
 \sphinxAtStartPar
-In particolare, nell’equazione di bilancio dell’energia elettromagnetica
-\begin{equation*}
-\begin{split}\dfrac{d}{dt} \int_V u = \oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}} - \int_V \mathbf{j} \cdot \mathbf{e} \ ,\end{split}
-\end{equation*}
+{\hyperref[\detokenize{ch/circuits-electric-induction:classical-electromagnetism-circuits-electric-induction}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Electromagnetic induction in electrical circuits}}}}}. Electromagnetic induction is discussed in electromagnetic systems modelled with circuit approximation: electromagetic induction in sections of a circuit is governed by Faraday’s law, and thus produced by time\sphinxhyphen{}varying flux of the magnetic field, produced as an example by (a) time\sphinxhyphen{}varying magnetic field, (b) moving sections of the circuit.
+
 \sphinxAtStartPar
-viene indagato il termine di flusso alla frontiera, ricordando la definizione di vettore di Poynting \(\mathbf{s} := \mathbf{e} \times \mathbf{h}\), e riscrivendo i campi elettrico e magnetico in funzione dei potenziali elettromagnetici, \(\mathbf{b} = \nabla \times \mathbf{a}\), \(\mathbf{e} = - \nabla \varphi - \partial_t \mathbf{a} \ ,\)
-\begin{equation*}
-\begin{split}\begin{aligned}
-  - \oint_{\partial V} \mathbf{s} \cdot \mathbf{\hat{n}}
-  & = - \oint_{\partial V} \left(\mathbf{e} \times \mathbf{h} \right) \cdot \mathbf{\hat{n}} = \\
-  & =   \oint_{\partial V} \left(\nabla \varphi + \partial_t \mathbf{a} \right) \times \mathbf{h}  \cdot \mathbf{\hat{n}} = \\
-  & = ... \\
-  & = \underbrace{\oint_{\partial V} \hat{\mathbf{n}} \cdot \nabla \times ( \varphi \mathbf{h} )}_{=0 \text{ (Stokes'thm **todo** check)}} - \oint_{\partial V} \varphi \hat{\mathbf{n}} \cdot \underbrace{\nabla \times \mathbf{h}}_{\partial_t \mathbf{d} + \mathbf{j}} + \oint_{\partial V} \hat{\mathbf{n}} \cdot \partial_t \mathbf{a} \times \mathbf{h} = \\
-  & = - \oint_{\partial V} \varphi \mathbf{j} \cdot \hat{\mathbf{n}} - \oint_{\partial V} \hat{\mathbf{n}} \cdot \left( \partial_t \mathbf{d} + \mathbf{h} \times \partial_t \mathbf{a} \right) \ , 
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-e assumendo che il flusso di carica elettrica avvenga solo in corrispondenza di un numero finito di sezioni \(S_k \in \partial V\) equipotenziali a potenziale \(v_k = -\varphi_k\), costante sulle sezioni, e riconoscento il flusso di carica elettrica attraverso la sezione \(S_k\) come la corrente \(i_k = \int_{S_k} \mathbf{j} \cdot \hat{\mathbf{n}}\), si può scrivere
-\begin{equation*}
-\begin{split}- \oint_{\partial V} \mathbf{s} \cdot \hat{\mathbf{n}} = \sum_k v_k \, i_k - \oint_{\partial V} \hat{\mathbf{n}} \cdot \left( \partial_t \mathbf{d} + \mathbf{h} \times \partial_t \mathbf{a} \right) \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Il bilancio di energia elettromagnetica del sistema può quindi essere riscritto come
-\begin{equation*}
-\begin{split}\frac{d}{dt} \int_V u = \sum_k v_k \, i_k - \int_{V} \mathbf{j} \cdot \mathbf{e} - \oint_{\partial V} \hat{\mathbf{n}} \cdot \left( \partial_t \mathbf{d} + \mathbf{h} \times \partial_t \mathbf{a} \right) \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Nelle condizioni in cui l’ultimo termine è nullo o trascurabile (\sphinxstylestrong{todo} \sphinxstyleemphasis{quali? Spendere due parole sulla validità dell’approssimazione, con analisi dimensionale? Fare esempio in cui l’approssimazione non funziona}), la variazione di energia interna al sistema è dovuta alla differenza della potenza in ingresso ai morsetti, e la dissipazione all’interno del volume (ad esempio dovuta alla conduzione non ideale in conduttori con resistività finita),
-\begin{equation*}
-\begin{split}\dot{E}^{em} = P^{ext, vi} - \dot{D} \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-con \(\dot{D} \ge 0\) per il secondo principio della termodinamica \sphinxstylestrong{todo} \sphinxstyleemphasis{aggiungere riferimento, e discussione.}
+{\hyperref[\detokenize{ch/circuits-electric-regimes:classical-electromagnetism-circuits-electric-regimes}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Operating regimes}}}}}. Some characteristic regimes are discussed: steady regime (DC), transient dynamics, periodic regime (AC).
+
+
 
 \sphinxstepscope
 
 
 
 
-\subsection{Induzione elettromagnetica nell’approssimazione circuitale}
-\label{\detokenize{ch/circuits-electric-induction:induzione-elettromagnetica-nell-approssimazione-circuitale}}\label{\detokenize{ch/circuits-electric-induction:classical-electromagnetism-circuits-electric-induction}}\label{\detokenize{ch/circuits-electric-induction::doc}}
+\section{Circuit Approximation}
+\label{\detokenize{ch/circuits-electric-components:circuit-approximation}}\label{\detokenize{ch/circuits-electric-components:classical-electromagnetism-circuits-electric-approx}}\label{\detokenize{ch/circuits-electric-components::doc}}
+\sphinxAtStartPar
+Electrical engineering primarily deals with systems involving intense currents but low frequencies. In this operating regime, the Maxwell equations governing electromagnetic phenomena can be simplified:
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+In regions outside the walls of any capacitors present in the system, the time derivative of the displacement field flux is negligible.
+
+\item {} 
+\sphinxAtStartPar
+The magnetic field \(\vec{b}\) and its time derivative are relevant only in certain regions of space and are thus confined to components with inductances, such as electric motors.
+
+\end{enumerate}
+
+\sphinxAtStartPar
+Outside these regions, the Maxwell equations \sphinxcode{\sphinxupquote{eq:principles:maxwell}} reduce to the steady\sphinxhyphen{}state equations:
+\begin{equation}\label{equation:ch/circuits-electric-components:eq:principles:maxwell:el-circuit}
+\begin{split}\begin{cases}
+  \Phi_{\partial V}(\vec{d}) = Q_f \\
+  \Gamma_{\partial S}(\vec{e}) + \dot{\Phi}_S(\vec{b}) = 0 \\
+  \Phi_{\partial V}(\vec{b}) = 0 \\
+  \Gamma_{\partial S}(\vec{h}) - \dot{\Phi}_S(\vec{d}) = \Phi_S(\vec{j}_f)
+\end{cases}
+\qquad \rightarrow \qquad
+\begin{cases}
+  \Phi_{\partial V}(\vec{d}) = Q_f \\
+  \Gamma_{\partial S}(\vec{e}) = 0 \\
+  \Phi_{\partial V}(\vec{b}) = 0 \\
+  \Gamma_{\partial S}(\vec{h}) = \Phi_S(\vec{j}_f)
+\end{cases}\end{split}
+\end{equation}
+\sphinxAtStartPar
+At low frequencies,
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Electric components can be analyzed \sphinxstylestrong{“for their external effects”}: each component has its characteristic behavior determined by its nature and described by its constitutive equation, but it interfaces with the outside world only through the \sphinxstylestrong{electrical port terminals}, which in most cases are the electrical wires with which the component can be connected to other components in a circuit.
+
+\item {} 
+\sphinxAtStartPar
+The transmission of the electromagnetic field as electromagnetic waves can be neglected, and the power radiated through these waves is also negligible. The energy balance of the components of an electrical system can be reduced to the power transmitted through the electrical port terminals, which takes the form \(P = \sum_{k \in \text{Ports}} v_k i_k\), as shown by {\hyperref[\detokenize{ch/circuits-energy:classical-electromagnetism-circuits-energy}]{\sphinxcrossref{\DUrole{std,std-ref}{Energy balance in circuit approximation}}}}
+\begin{equation}\label{equation:ch/circuits-electric-components:eq:el-circuit:power}
+\begin{split}\dfrac{d E}{dt} = v i\end{split}
+\end{equation}
+\item {} 
+\sphinxAtStartPar
+Since electromagnetic waves are not transmitted, the low\sphinxhyphen{}frequency electromagnetic problem is greatly simplified compared to the general electromagnetic problem: while the general electromagnetic problem requires solving the electromagnetic field in all regions of space, the circuit approach allows—when applicable—considering only the electromagnetic components connected through conductors that replace the system.%
+\begin{footnote}[1]\sphinxAtStartFootnote
+From a mathematical point of view, the general electromagnetic problem is governed by partial differential equations (PDEs), which are beyond the capabilities of a high school student. The circuit approach allows formulating the electromagnetic problem in terms of ordinary differential equations in the non\sphinxhyphen{}steady\sphinxhyphen{}state case and algebraic equations in the steady\sphinxhyphen{}state (or periodic) case, following appropriate transformations: not the simplest problem possible, but a problem that high school students can still tackle.
+%
+\end{footnote}
+
+\end{itemize}
+
+
+\subsection{Electrical Wires}
+\label{\detokenize{ch/circuits-electric-components:electrical-wires}}\label{\detokenize{ch/circuits-electric-components:physics-hs-electromagnetism-circuits-electric-electric-cable}}
+\sphinxAtStartPar
+Within the circuit approximation, electrical wires with a small cross\sphinxhyphen{}section relative to the circuit dimensions can be treated as 1\sphinxhyphen{}dimensional elements, curves with geometric (mean line, cross\sphinxhyphen{}section) and physical (resistivity) properties.
+
+\sphinxAtStartPar
+The small cross\sphinxhyphen{}section allows neglecting the three\sphinxhyphen{}dimensional nature of the general problem and assuming that quantities are uniform across each section—or not very different from their average value: the average \sphinxstyleemphasis{drift} velocity \(\vec{v}\) of the charges and thus the \DUrole{xref,myst}{current density}, \(\vec{j} = \rho \vec{v}\), has the same direction as the local axis of the conductor.
+
+\sphinxAtStartPar
+The current can therefore be expressed as
+\begin{equation}\label{equation:ch/circuits-electric-components:eq:cable:current-current-density}
+\begin{split}i = \vec{j} \cdot \hat{n} A \simeq j A \ ,\end{split}
+\end{equation}
+\sphinxAtStartPar
+where \(\hat{n}\) denotes the normal to the cross\sphinxhyphen{}section, \(A\) is the area of the wire’s cross\sphinxhyphen{}section, and only the scalar value of the physical quantities needs to be considered if the cross\sphinxhyphen{}section is perpendicular to the wire’s axis.
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{add image}
+
+
+\subsection{Kirchhoff’s Laws}
+\label{\detokenize{ch/circuits-electric-components:kirchhoff-s-laws}}\label{\detokenize{ch/circuits-electric-components:physics-hs-electromagnetism-circuits-electric-kirchhoff-laws}}
+\sphinxAtStartPar
+Kirchhoff’s laws transform the appropriately simplified governing equations of the electromagnetic problem within the low\sphinxhyphen{}frequency regime into the two fundamental laws of circuits.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Node Law.} The sum of the currents entering a node in an electrical circuit is zero. This law is a consequence of the charge balance law \sphinxcode{\sphinxupquote{eq:principles:charge}} for a system with zero volume—or a system that cannot accumulate charge, \(\dot{Q}_V\), such as a wire in an electrical circuit operating at low frequency.
+\begin{equation*}
+\begin{split}0 = \Phi_{\partial V}(\vec{j}) = \sum_{k} \vec{j}_k \cdot \hat{n}_k \, A_k = \sum_{k} i_k \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where the sum is performed over all conductors \(k\) connected to the node under consideration.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Loop Law.} The sum of the voltages around a loop in an electrical circuit is zero in regions where the time derivative of the magnetic field flux is negligible—for example, outside electric motors and transformers. This law is a consequence of Faraday’s law when the time derivative of the magnetic field flux is zero, allowing the electric field to be written in terms of the electric potential.
+\begin{equation*}
+\begin{split}0 = \Gamma_{\partial S}(\vec{e}) = \sum_{k} \Delta v_k \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where the sum is performed over all sides \(k\) of the circuit loop under consideration.
+
+
+\subsection{Components}
+\label{\detokenize{ch/circuits-electric-components:components}}\label{\detokenize{ch/circuits-electric-components:classical-electromagnetism-circuits-electric-components}}
+\sphinxAtStartPar
+This section presents the main components that can constitute a circuit. The following section analyzes some possible connections of these components and some elementary circuits.
+The components are characterized by their constitutive law—determined by their nature and internal structure—which completely describes the electrical component “for its external effects,” i.e., at the terminals of its electrical port, in terms of current \(i\) and voltage difference across the terminals. For completeness, and to align with common practice, the two \sphinxstylestrong{sign conventions} for voltage difference and current are introduced for two classes of components:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Generators}, components that produce electrical power.
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Loads}, components that—typically—absorb electrical power.
+
+\end{itemize}
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} Add images of the two conventions
+
+
+\subsubsection{Electrical Resistance}
+\label{\detokenize{ch/circuits-electric-components:electrical-resistance}}\label{\detokenize{ch/circuits-electric-components:physics-hs-electromagnetism-circuits-electric-components-resistor}}
+\sphinxAtStartPar
+The constitutive law of \DUrole{xref,myst}{linear electrical resistance} is determined by Ohm’s law \sphinxcode{\sphinxupquote{ohm:integral:first:R}} for linear resistances:
+\begin{equation*}
+\begin{split}v = R i \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+using the convention for loads.
+
+
+\subsubsection{Capacitor}
+\label{\detokenize{ch/circuits-electric-components:capacitor}}\label{\detokenize{ch/circuits-electric-components:physics-hs-electromagnetism-circuits-electric-components-capacitor}}
+\sphinxAtStartPar
+The constitutive law of a \DUrole{xref,myst}{capacitor} is:
+\begin{equation*}
+\begin{split}i = C \dfrac{d v}{dt}\end{split}
+\end{equation*}
+
+\subsubsection{Inductor}
+\label{\detokenize{ch/circuits-electric-components:inductor}}\label{\detokenize{ch/circuits-electric-components:physics-hs-electromagnetism-circuits-electric-components-inductor}}
+\sphinxAtStartPar
+The constitutive law of an inductor is:
+\begin{equation*}
+\begin{split}v = L \dfrac{d i}{dt}\end{split}
+\end{equation*}
+
+\subsubsection{Voltage Generator}
+\label{\detokenize{ch/circuits-electric-components:voltage-generator}}\label{\detokenize{ch/circuits-electric-components:physics-hs-electromagnetism-circuits-electric-components-generator-v}}\begin{equation*}
+\begin{split}v = e\end{split}
+\end{equation*}
+
+\subsubsection{Current Generator}
+\label{\detokenize{ch/circuits-electric-components:current-generator}}\label{\detokenize{ch/circuits-electric-components:physics-hs-electromagnetism-circuits-electric-components-generator-i}}\begin{equation*}
+\begin{split}i = a\end{split}
+\end{equation*}
+
+\subsubsection{Diode}
+\label{\detokenize{ch/circuits-electric-components:diode}}\label{\detokenize{ch/circuits-electric-components:physics-hs-electromagnetism-circuits-electric-components-diode}}
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+
+
+\bigskip\hrule\bigskip
+
+
+\sphinxstepscope
+
+
+\section{Elementary circuits}
+\label{\detokenize{ch/circuits-electric-elementary-connections:elementary-circuits}}\label{\detokenize{ch/circuits-electric-elementary-connections:physics-hs-electromagnetism-circuits-electric-components-configurations}}\label{\detokenize{ch/circuits-electric-elementary-connections::doc}}
+
+\subsection{Series and Parallel Connections}
+\label{\detokenize{ch/circuits-electric-elementary-connections:series-and-parallel-connections}}\label{\detokenize{ch/circuits-electric-elementary-connections:physics-hs-electromagnetism-circuits-electric-components-configurations-series-parallel}}
+\sphinxAtStartPar
+\sphinxstylestrong{Series Connection.} A series connection of linear passive components of the same type involves the same current passing through each component, \(i_n = i, \forall n=1:N\), and the total voltage difference between the “input terminal” of the first element and the “output terminal” of the last element being the sum of the voltage differences, \(v = \sum_{n=1:N} v_n\). Therefore:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+For resistors in series, \(R_n\), the equivalent resistance is equal to the sum of the resistances:
+\begin{equation*}
+\begin{split}v = \sum_n v_n = \sum_n \left( R_n \, i_n \right) = \left( \sum_n R_n \right) i = R_{series} \, i \qquad \rightarrow \qquad R_{series} = \sum_n R_n\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+For capacitors in series, \(C_n\), the inverse of the equivalent capacitance is equal to the sum of the inverses of the capacitances:
+\begin{equation*}
+\begin{split}\dfrac{d v}{dt} = \sum_n \dfrac{d v_n}{dt} = \sum_n \left( \frac{1}{C_n} \, i_n \right) = \left( \sum_n \frac{1}{C_n} \right) i = \dfrac{1}{C_{series}} \, i \qquad \rightarrow \qquad \frac{1}{C_{series}} = \sum_n \frac{1}{C_n}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+For inductors in series, \(L_n\), the equivalent inductance is equal to the sum of the inductances:
+\begin{equation*}
+\begin{split}v = \sum_n v_n = \sum_n \left( L_n \, \dfrac{d i_n}{d t} \right) = \left( \sum_n L_n \right) \dfrac{d i}{dt} = L_{series} \, \dfrac{d i}{dt} \qquad \rightarrow \qquad L_{series} = \sum_n L_n\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+Consequently, the resistance and inductance of series\sphinxhyphen{}connected resistors and inductors are greater than the maximum resistance/inductance in the system; the equivalent capacitance of series\sphinxhyphen{}connected capacitors is less than the minimum capacitance of the capacitors in the system.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Parallel Connection.} A parallel connection of linear passive components of the same type involves the same voltage difference across the terminals of each component, \(v_n = i, \forall n=1:N\), and the current through each component being generally different, with the sum of the currents equal to the current at the two extreme nodes of the connection, \(\sum_{n=1:N} i_n = i\). Therefore:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+For resistors in parallel, \(R_n\), the inverse of the equivalent resistance is equal to the sum of the inverses of the resistances:
+\begin{equation*}
+\begin{split}i = \sum_n i_n = \sum_n \left( \frac{1}{R_n} \, i_n \right) = \left( \sum_n \frac{1}{R_n} \right) i = \frac{1}{R_{\parallel}} \, i \qquad \rightarrow \qquad \frac{1}{R_{\parallel}} = \sum_n \frac{1}{R_n}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+For capacitors in parallel, \(C_n\), the equivalent capacitance is equal to the sum of the capacitances:
+\begin{equation*}
+\begin{split}i = \sum_n i_n = \sum_n \left( C_n \, \dfrac{d v_n}{d t} \right) = \left( \sum_n C_n \right) \dfrac{d v}{dt} = C_{\parallel} \, \dfrac{d v}{dt} \qquad \rightarrow \qquad C_{\parallel} = \sum_n C_n\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+For inductors in parallel, \(L_n\), the inverse of the equivalent inductance is equal to the sum of the inverses of the inductances:
+\begin{equation*}
+\begin{split}\dfrac{d i}{dt} = \sum_n \dfrac{d i_n}{dt} = \sum_n \left( \frac{1}{L_n} \, v_n \right) = \left( \sum_n \frac{1}{L_n} \right) v = \dfrac{1}{L_{\parallel}} \, v \qquad \rightarrow \qquad \frac{1}{L_{\parallel}} = \sum_n \frac{1}{L_n}\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+Consequently, the resistance and inductance of parallel\sphinxhyphen{}connected resistors and inductors are less than the minimum resistance/inductance in the system; the equivalent capacitance of parallel\sphinxhyphen{}connected capacitors is greater than the maximum capacitance of the capacitors in the system.
+
+
+\subsection{Special Cases}
+\label{\detokenize{ch/circuits-electric-elementary-connections:special-cases}}\label{\detokenize{ch/circuits-electric-elementary-connections:physics-hs-electromagnetism-circuits-electric-circuits}}
+
+\subsubsection{Open Circuit}
+\label{\detokenize{ch/circuits-electric-elementary-connections:open-circuit}}\label{\detokenize{ch/circuits-electric-elementary-connections:physics-hs-electromagnetism-circuits-electric-circuits-open}}
+\sphinxAtStartPar
+A circuit is open in the absence of a physical closure (with a wire) of a loop or behaves as such in the presence of a side through which the passage of electric current is impeded:
+\begin{equation*}
+\begin{split}i = 0 \ .\end{split}
+\end{equation*}
+
+\subsubsection{Short Circuit}
+\label{\detokenize{ch/circuits-electric-elementary-connections:short-circuit}}\label{\detokenize{ch/circuits-electric-elementary-connections:physics-hs-electromagnetism-circuits-electric-circuits-short}}
+\sphinxAtStartPar
+A short circuit occurs through a component with zero voltage drop:
+\begin{equation*}
+\begin{split}v = 0 \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+If a short circuit occurs in an entire loop, it is traversed by infinite current—in a linear model that does not consider the limits of validity; in reality, non\sphinxhyphen{}linear effects occur much earlier, or sparks, explosions, or other destructive effects—often characterized by zero resistance. \sphinxstylestrong{todo} \sphinxstyleemphasis{check the generality of this condition}
+
+\sphinxstepscope
+
+
+
+
+\section{Electromagnetic induction in circuit approximation}
+\label{\detokenize{ch/circuits-electric-induction:electromagnetic-induction-in-circuit-approximation}}\label{\detokenize{ch/circuits-electric-induction:classical-electromagnetism-circuits-electric-induction}}\label{\detokenize{ch/circuits-electric-induction::doc}}
 \sphinxAtStartPar
 E’ possibile applicare l’approssimazione circuitale anche in presenza di regioni in cui non è possibile trascurare il termine \(\partial_t \mathbf{b}\), come ad esempio circuiti elettromagnetici che coinvolgono trasformatori e/o motori o generatori elettrici.
 
@@ -2498,78 +2671,73 @@ dove il percorso chiuso \(\ell_k = \ell_k^{cond} \cup \ell_k^{mors}\) descrive i
 
 
 
-\subsection{Componenti elementari dei circuiti elettrici}
-\label{\detokenize{ch/circuits-electric-components:componenti-elementari-dei-circuiti-elettrici}}\label{\detokenize{ch/circuits-electric-components:classical-electromagnetism-circuits-electric-components}}\label{\detokenize{ch/circuits-electric-components::doc}}
-
-\subsubsection{Resistore ohmico}
-\label{\detokenize{ch/circuits-electric-components:resistore-ohmico}}
+\section{Operating Regimes}
+\label{\detokenize{ch/circuits-electric-regimes:operating-regimes}}\label{\detokenize{ch/circuits-electric-regimes:classical-electromagnetism-circuits-electric-regimes}}\label{\detokenize{ch/circuits-electric-regimes::doc}}
 \sphinxAtStartPar
-Un resistore di Ohm risulta dall’approssimazione circuitale di un materiale con equazione costitutiva lineare
+\sphinxstylestrong{Steady, DC}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Transient dynamics.}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Periodic, AC}
+
+
+\subsection{Steady\sphinxhyphen{}State Regime \sphinxhyphen{} Direct Current}
+\label{\detokenize{ch/circuits-electric-regimes:steady-state-regime-direct-current}}\label{\detokenize{ch/circuits-electric-regimes:physics-hs-electromagnetism-circuits-electric-regimes-dc}}
+\sphinxAtStartPar
+The operating regime of a circuit in direct current involves the value of the electric current and the system variables being constant—in real life, “sufficiently constant.”
+
+\sphinxAtStartPar
+In this operating regime, capacitors behave like {\hyperref[\detokenize{ch/circuits-electric-elementary-connections:physics-hs-electromagnetism-circuits-electric-circuits-open}]{\sphinxcrossref{\DUrole{std,std-ref}{open circuits}}}}, since \(i = C \frac{dv}{dt} = 0\); inductors behave like {\hyperref[\detokenize{ch/circuits-electric-elementary-connections:physics-hs-electromagnetism-circuits-electric-circuits-short}]{\sphinxcrossref{\DUrole{std,std-ref}{short circuits}}}}, \(v = L \frac{d i}{d t} = 0\).
+
+
+\subsection{Transient Regime}
+\label{\detokenize{ch/circuits-electric-regimes:transient-regime}}\label{\detokenize{ch/circuits-electric-regimes:physics-hs-electromagnetism-circuits-electric-regimes-dt}}
+\sphinxAtStartPar
+Typical transient problems between two steady\sphinxhyphen{}state conditions include the dynamics of charging/discharging a capacitor following the closing/opening of a switch.
+
+\sphinxAtStartPar
+\sphinxstylestrong{RLC Circuit.} \sphinxstylestrong{todo}
+
+
+\subsection{Periodic Regime \sphinxhyphen{} Alternating Current}
+\label{\detokenize{ch/circuits-electric-regimes:periodic-regime-alternating-current}}\label{\detokenize{ch/circuits-electric-regimes:physics-hs-electromagnetism-circuits-electric-regimes-ac}}
+\sphinxAtStartPar
+The harmonic periodic regime is characteristic of the operation of electromagnetic circuits in alternating current, which is present in many modern electrical networks, from production (through generators) to transformation to high voltage for efficient long\sphinxhyphen{}distance transmission, to transformation to medium and then low voltage for distribution and use.
+
+\sphinxAtStartPar
+Using the formalism of \sphinxstylestrong{phasors} to represent harmonic periodic quantities at a constant frequency \(f = \frac{\Omega}{2 \pi}\), one can write:
 \begin{equation*}
-\begin{split}\mathbf{e} = \rho_R \, \mathbf{j} \ ,\end{split}
+\begin{split}v(t) = V e^{-i \Omega t} \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-tra il campo elettrico \(\mathbf{e}\) e la densità di corrente \(\mathbf{j}\), tramite la costante di proporzionalità \(\rho_R\), la \sphinxstylestrong{resistività} del materiale. La corrente elettrica attraverso una sezione del componente è definita come il flusso di carica attraverso una sua sezione
-\begin{equation*}
-\begin{split}i = \int_S \mathbf{j} \cdot \hat{\mathbf{t}} \simeq j \, A \ ,\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Nell’ipotesi che il vettore densità di corrente si allineato con l’asse del componente e uniforme sulla sezione \(A\), “piccola”.
-Se il materiale non è in grado di accumulare carica, il bilancio di carica elettrica si traduce nella continuità della corrente elettrica attraverso le sezioni del conduttore.
+with \(V \in \mathbb{C}\). \sphinxstylestrong{todo}
 
 \sphinxAtStartPar
-Utilizzando l’equazione costitutiva su un elemento di lunghezza elementare \(d\mathbf{r} =\hat{\mathbf{t}} \, d \ell \), e assumendo che il campo elettrico sia allineato con l’asse del componente, \(\mathbf{e} = e \hat{\mathbf{t}}\) si può scrivere il lavoro elementare per unità di carica come
-\begin{equation*}
-\begin{split}\delta v = \mathbf{e} \cdot d \mathbf{r} =  e \, d\ell = \rho_R \, j \, d\ell =  \frac{\rho_R \, d\ell}{A} i \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Da questa ultima equazione seguono le due leggi di Ohm, per resistori lineari.
+\sphinxstylestrong{Circuit Analysis.}
 
 \sphinxAtStartPar
-\sphinxstylestrong{Prima legge di Ohm.} La differenza di potenziale tra due sezioni di un resistore lineare è proporzionale alla corrente che passa attraverso di esso,
-\begin{equation*}
-\begin{split}\delta v = dR \, i \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{Seconda legge di Ohm.} La costante di proporzionalità che lega la differenza di potenziale e la corrente all’interno di un resistore ohmico, la \sphinxstylestrong{resistenza} del resistore, è proporzionale alla resistività e alla lunghezza del resistore, e inversamente proporzionale alla sua sezione,
-\begin{equation*}
-\begin{split}dR = \frac{\rho_R \ d\ell}{A} \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-Se le proprietà sono uniformi nel resistore, si possono integrare le relazioni elementari per ottenere la relazione tra grandezze finite,
-\begin{equation*}
-\begin{split}\Delta V = R \, i \end{split}
-\end{equation*}\begin{equation*}
-\begin{split}R = \frac{\rho_R \ \ell}{A}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{todo} (perché si può usare il potenziale? Nelle mie note avevo usato il simbolo \(v^*\), come se fosse una definizione leggermente diversa per incorporare movimento e instazionarietà, che si riduce a \(v\) nel caso stazionario).
+\sphinxstylestrong{Power Analysis.}
 
-\sphinxAtStartPar
-\sphinxstylestrong{Condensatore.}
 
-\sphinxAtStartPar
-\sphinxstylestrong{Induttore.}
+\subsection{AC\sphinxhyphen{}DC and DC\sphinxhyphen{}AC Conversion}
+\label{\detokenize{ch/circuits-electric-regimes:ac-dc-and-dc-ac-conversion}}\label{\detokenize{ch/circuits-electric-regimes:physics-hs-electromagnetism-circuits-electric-regimes-conversion}}
 
+\subsubsection{AC \protect\(\rightarrow\protect\) DC, Using Rectifiers}
+\label{\detokenize{ch/circuits-electric-regimes:ac-rightarrow-dc-using-rectifiers}}\label{\detokenize{ch/circuits-electric-regimes:physics-hs-electromagnetism-circuits-electric-regimes-conversion-rectifier}}
 \sphinxAtStartPar
-\sphinxstylestrong{Generatore di tensione.}
+A Graetz bridge with diodes. Oscillations are reduced using capacitors and inductors.
 
-\sphinxAtStartPar
-\sphinxstylestrong{Generatore di corrente.}
 
+\subsubsection{DC \protect\(\rightarrow\protect\) AC, Using Inverters}
+\label{\detokenize{ch/circuits-electric-regimes:dc-rightarrow-ac-using-inverters}}\label{\detokenize{ch/circuits-electric-regimes:physics-hs-electromagnetism-circuits-electric-regimes-conversion-inverter}}
 \sphinxstepscope
 
 
 
 
-\subsection{Regimi di funzionamento in circuiti elettrici}
-\label{\detokenize{ch/circuits-electric-regimes:regimi-di-funzionamento-in-circuiti-elettrici}}\label{\detokenize{ch/circuits-electric-regimes:classical-electromagnetism-circuits-electric-regimes}}\label{\detokenize{ch/circuits-electric-regimes::doc}}
-\sphinxstepscope
-
-
-
-
-\section{Circuiti elettromagnetici}
+\chapter{Circuiti elettromagnetici}
 \label{\detokenize{ch/circuits-electromagnetic:circuiti-elettromagnetici}}\label{\detokenize{ch/circuits-electromagnetic:classical-electromagnetism-circuits-electromagnetic}}\label{\detokenize{ch/circuits-electromagnetic::doc}}
 \sphinxAtStartPar
 Sotto opportune ipotesi è possibile usare un modello circuitale anche per sistemi elettromagnetici, come ad esempio i trasformatori, o i motori elettrici.
@@ -2649,7 +2817,7 @@ avendo introdotto la riluttanza \(\theta_k = \frac{\ell_k}{\mu_k \, A_k}\), l’
 
 
 
-\subsection{Trasformatore}
+\section{Trasformatore}
 \label{\detokenize{ch/circuits-electromagnetic-transformer:trasformatore}}\label{\detokenize{ch/circuits-electromagnetic-transformer:classical-electromagnetism-circuits-electromagnetic-transformer}}\label{\detokenize{ch/circuits-electromagnetic-transformer::doc}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
@@ -2672,7 +2840,7 @@ relazione tra tensione ai morsetti dell’induttore e flusso concatenato, applic
 \end{itemize}
 
 
-\subsubsection{Trasformatore ideale}
+\subsection{Trasformatore ideale}
 \label{\detokenize{ch/circuits-electromagnetic-transformer:trasformatore-ideale}}
 \sphinxAtStartPar
 In assenza di flussi dispersi e riluttanza nel traferro, la legge alle maglie nel traferro implica
@@ -2690,7 +2858,7 @@ La derivata nel tempo di questa relazione, con numero di avvolgimenti costanti n
 \begin{split}\frac{v_2}{N_2} = \frac{v_1}{N_1} \ .\end{split}
 \end{equation*}
 
-\subsubsection{Trasformatore con flussi dispersi}
+\subsection{Trasformatore con flussi dispersi}
 \label{\detokenize{ch/circuits-electromagnetic-transformer:trasformatore-con-flussi-dispersi}}\begin{equation*}
 \begin{split}\begin{cases}
  & \phi_1 - \phi_{1,d} = \phi \\
@@ -2713,7 +2881,7 @@ La derivata nel tempo di questa relazione, con numero di avvolgimenti costanti n
                      \frac{1}{N_1} \left( v_1 - \frac{N_1^2}{\theta_{1,d}} \dfrac{d i_1}{d t} \right)  \ .\end{split}
 \end{equation*}
 
-\subsubsection{Trasformatore con flussi dispersi e riluttanza \protect\(\theta_{Fe}\protect\) nel traferro}
+\subsection{Trasformatore con flussi dispersi e riluttanza \protect\(\theta_{Fe}\protect\) nel traferro}
 \label{\detokenize{ch/circuits-electromagnetic-transformer:trasformatore-con-flussi-dispersi-e-riluttanza-theta-fe-nel-traferro}}\begin{equation*}
 \begin{split}\begin{cases}
  & \phi_{1} - \phi_{1,d} = \phi \\
@@ -2733,7 +2901,7 @@ La derivata nel tempo di questa relazione, con numero di avvolgimenti costanti n
 
 
 
-\section{Electromechanical Circuits}
+\chapter{Electromechanical Circuits}
 \label{\detokenize{ch/circuits-electromechanic:electromechanical-circuits}}\label{\detokenize{ch/circuits-electromechanic:classical-electromagnetism-circuits-electromechanic}}\label{\detokenize{ch/circuits-electromechanic::doc}}
 \sphinxAtStartPar
 Some systems of interest and widespread use in modern society exploit the interactions between electromagnetic and mechanical phenomena: a fundamental example is electric machines, some of which can operate both as motors (with power supplied by the electrical system and converted into mechanical power) and as generators of electrical energy (converting mechanical power into electrical power).
@@ -2763,7 +2931,7 @@ In general, in electromechanical circuits, reluctances are not constant paramete
 \sphinxAtStartPar
 The inductance matrix \(\mathbf{L}\) is symmetric \sphinxstylestrong{todo} \sphinxstyleemphasis{Proof}
 \label{ch/circuits-electromechanic:example-0}
-\begin{sphinxadmonition}{note}{Example 6.3.1}
+\begin{sphinxadmonition}{note}{Example 10.1}
 
 
 
@@ -2881,7 +3049,7 @@ The dynamical equation of the wire is
 \end{equation*}\end{sphinxadmonition}
 
 
-\subsection{Conservative Electromechanical Systems}
+\section{Conservative Electromechanical Systems}
 \label{\detokenize{ch/circuits-electromechanic:conservative-electromechanical-systems}}
 \sphinxAtStartPar
 The equations governing the electromechanical system, without capacitors, can generally be written as
@@ -2923,7 +3091,7 @@ Assuming the process is conservative, the form of the forces due to electromagne
 \begin{split}\mathbf{f}^{em} = \nabla_{\mathbf{x}} E^{ind}(\mathbf{x}, \mathbf{i}) \ .\end{split}
 \end{equation}
 
-\subsection{Governing Equations}
+\section{Governing Equations}
 \label{\detokenize{ch/circuits-electromechanic:governing-equations}}
 \sphinxAtStartPar
 Using the expression \eqref{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:f-em} of the mechanical actions due to electromagnetic effects, the system equations are
@@ -2942,10 +3110,10 @@ or in the general case
 \end{cases}\end{split}
 \end{equation*}
 
-\subsection{Energy Balance}
+\section{Energy Balance}
 \label{\detokenize{ch/circuits-electromechanic:energy-balance}}
 
-\subsubsection{Macroscopic Mechanical Energy}
+\subsection{Macroscopic Mechanical Energy}
 \label{\detokenize{ch/circuits-electromechanic:macroscopic-mechanical-energy}}
 \sphinxAtStartPar
 Using the expression \eqref{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:f-em} of the mechanical actions due to electromagnetic phenomena, the relation \eqref{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:energy-mech-0} can be rewritten as a macroscopic mechanical energy balance of the system,
@@ -2958,7 +3126,7 @@ and therefore
 \begin{split}\dot{E}^{mec} = P^{ext} - \dot{D} \ .\end{split}
 \end{equation*}
 
-\subsubsection{Kinetic Energy}
+\subsection{Kinetic Energy}
 \label{\detokenize{ch/circuits-electromechanic:kinetic-energy}}
 \sphinxAtStartPar
 The macroscopic mechanical energy can be written as the sum of the kinetic energy and the internal potential energy of the system, \(E^{mec} = K + V^{int}\). The time derivative of the potential energy of the internal actions is the opposite of the power of the conservative internal actions, \(P^{int, c} = - \dot{V}^{int}\); the dissipation is the opposite of the power of the non\sphinxhyphen{}conservative internal actions, \(P^{int, nc} = - \dot{D}\). The total power of the internal actions can therefore be written as
@@ -2968,7 +3136,7 @@ The macroscopic mechanical energy can be written as the sum of the kinetic energ
 \begin{split}\dot{K} = \dot{E}^{mec} - \dot{V}^{int} = P^{ext} \underbrace{- \dot{D} - \dot{V}^{int}}_{=P^{int}} \  \end{split}
 \end{equation*}
 
-\subsubsection{Total Energy}
+\subsection{Total Energy}
 \label{\detokenize{ch/circuits-electromechanic:total-energy}}
 \sphinxAtStartPar
 The first principle of thermodynamics provides the total energy balance equation of a closed system,
@@ -2976,7 +3144,7 @@ The first principle of thermodynamics provides the total energy balance equation
 \begin{split}\dot{E}^{tot} = P^{ext} + \dot{Q}^{ext} \ .\end{split}
 \end{equation*}
 
-\subsubsection{Internal Energy}
+\subsection{Internal Energy}
 \label{\detokenize{ch/circuits-electromechanic:internal-energy}}
 \sphinxAtStartPar
 The internal energy of a system is defined as the difference between the total energy and the macroscopic kinetic energy, \(E := E^{tot} - K\). The internal energy balance equation of a closed system is
@@ -2984,7 +3152,7 @@ The internal energy of a system is defined as the difference between the total e
 \begin{split}\dot{E} = Q^{ext} - P^{int} \ .\end{split}
 \end{equation*}
 
-\subsubsection{Thermal (Microscopic) Internal Energy}
+\subsection{Thermal (Microscopic) Internal Energy}
 \label{\detokenize{ch/circuits-electromechanic:thermal-microscopic-internal-energy}}
 \sphinxAtStartPar
 If the thermal internal energy, corresponding to the kinetic energy associated with microscopic dynamics, is defined as the difference between internal energy and internal potential energy, or the difference between total energy and macroscopic mechanical energy,
@@ -3046,8 +3214,22 @@ the thermal internal energy balance equation is
 \sphinxstepscope
 
 
+\chapter{Network analysis}
+\label{\detokenize{ch/electrical-engineering-networks:network-analysis}}\label{\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis}}\label{\detokenize{ch/electrical-engineering-networks::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{Network analysis of linear circuits.} Parallel and series connections; \sphinxstylestrong{equivalent circuits}: Thevenin and Norton theorems, Millman’s theorem; state\sphinxhyphen{}space representation in physical and transformed domains (typically Laplace for transient dynamics \sphinxhyphen{} e.g. response to change of state of switches \sphinxhyphen{}, and Fourier for periodic regimes \sphinxhyphen{} e.g. AC)
+
+\sphinxAtStartPar
+\sphinxstylestrong{Harmonic regime.} Analysis of networks in AC; state variables, network variables, and power.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Three\sphinxhyphen{}phase circuits.} Three\sphinxhyphen{}phase circuits are introduced, along with some standard configurations (star and trinagles), and a general approach for the solution.
+
+\sphinxstepscope
+
+
 \section{Network analysis of linear circuits}
-\label{\detokenize{ch/electrical-engineering-networks:network-analysis-of-linear-circuits}}\label{\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis}}\label{\detokenize{ch/electrical-engineering-networks::doc}}
+\label{\detokenize{ch/electrical-engineering-networks-linear:network-analysis-of-linear-circuits}}\label{\detokenize{ch/electrical-engineering-networks-linear:classical-electromagnetism-electrical-engineering-newtork-analysis-linear}}\label{\detokenize{ch/electrical-engineering-networks-linear::doc}}
 \sphinxAtStartPar
 Dynamical equations of a linear circuit can be written as a general linear state\sphinxhyphen{}space model
 \begin{equation*}
@@ -3092,13 +3274,13 @@ loop currents, voltage drops across any side.
 
 
 \subsection{Thevenin equivalent}
-\label{\detokenize{ch/electrical-engineering-networks:thevenin-equivalent}}\label{\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin}}
+\label{\detokenize{ch/electrical-engineering-networks-linear:thevenin-equivalent}}\label{\detokenize{ch/electrical-engineering-networks-linear:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin}}
 \sphinxAtStartPar
 \sphinxstylestrong{One\sphinxhyphen{}port.} Thevenin’s theorem states that any linear circuit can be reduced to a single voltage source and a single impedance in series.
 
 
 \subsubsection{One\sphinxhyphen{}port circuit}
-\label{\detokenize{ch/electrical-engineering-networks:one-port-circuit}}\label{\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-1-port}}
+\label{\detokenize{ch/electrical-engineering-networks-linear:one-port-circuit}}\label{\detokenize{ch/electrical-engineering-networks-linear:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-1-port}}
 \sphinxAtStartPar
 As the goal of Thevenin’s theorem is to find the constitutive equation of the network as \(v(i)\), the network is connected to an external current generator that prescribes \(i\) and the voltage \(v\) at the port is evaluated.
 
@@ -3169,12 +3351,12 @@ having recast it as Thevenin’s theorem defining the voltage \(v_{Th}\) and the
 \end{equation*}
 
 \subsubsection{Many\sphinxhyphen{}port circuit}
-\label{\detokenize{ch/electrical-engineering-networks:many-port-circuit}}\label{\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-n-port}}\begin{equation*}
+\label{\detokenize{ch/electrical-engineering-networks-linear:many-port-circuit}}\label{\detokenize{ch/electrical-engineering-networks-linear:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-n-port}}\begin{equation*}
 \begin{split}\mathbf{v} = \mathbf{G}_{gen}(s) \mathbf{u}_{gen} + \mathbf{G}_i(s) \mathbf{i} = \mathbf{v}_{Th} - \mathbf{Z}_{Th} \mathbf{i} \ .\end{split}
 \end{equation*}
 
 \subsection{Norton equivalent}
-\label{\detokenize{ch/electrical-engineering-networks:norton-equivalent}}\label{\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis-norton}}
+\label{\detokenize{ch/electrical-engineering-networks-linear:norton-equivalent}}\label{\detokenize{ch/electrical-engineering-networks-linear:classical-electromagnetism-electrical-engineering-newtork-analysis-norton}}
 \sphinxstepscope
 
 
@@ -3191,7 +3373,7 @@ The harmonic dynamics of a linear circuit can be evaluated in Fourier domain, or
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-having anticipated the definition {\hyperref[\detokenize{ch/electrical-engineering-networks-harmonic:harmonic:effective-values}]{\sphinxcrossref{Definition 6.5.1}}} of effective tension \(V\) and current \(I\).
+having anticipated the definition {\hyperref[\detokenize{ch/electrical-engineering-networks-harmonic:harmonic:effective-values}]{\sphinxcrossref{Definition 11.2.1}}} of effective tension \(V\) and current \(I\).
 
 
 \subsection{Power}
@@ -3222,7 +3404,7 @@ and the property \(\cos(-x) = \cos x\).
 \sphinxAtStartPar
 as the integral of the harmonic term with period \(\frac{T}{2}\) of the instantaneous power \eqref{equation:ch/electrical-engineering-networks-harmonic:eq:harmonic:power:instantaneous} is identically zero, and with the definition of the \sphinxstylestrong{effective voltage and current}
 \label{ch/electrical-engineering-networks-harmonic:harmonic:effective-values}
-\begin{sphinxadmonition}{note}{Definition 6.5.1 (Effective voltage and current in AC)}
+\begin{sphinxadmonition}{note}{Definition 11.2.1 (Effective voltage and current in AC)}
 
 
 
@@ -3583,7 +3765,7 @@ Once the state variables of the dynamical equations are known. it’s possible t
 
 \phantomsection \label{exercise:exam-25-02-11-exe-01}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.1 (Exam 2025\sphinxhyphen{}02\sphinxhyphen{}11, Exercise 1.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.1 (Exam 2025\sphinxhyphen{}02\sphinxhyphen{}11, Exercise 1.)}
 
 
 
@@ -3595,7 +3777,7 @@ Once the state variables of the dynamical equations are known. it’s possible t
 \subsubsection*{Solution}
 
 \sphinxAtStartPar
-Following the \sphinxstylestrong{guidelines for the solution}, a {\hyperref[\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-n-port}]{\sphinxcrossref{\DUrole{std,std-ref}{many\sphinxhyphen{}port Thevenin equivalent circuit}}}} of the resistive part of the circuit is found, with two ports for interfacing with the capacitor (A) and with the switch. The dynamical equation of the system is written in state\sphinxhyphen{}space representation, writing the voltage at the ports and the unknown variable \(i(t)\) as outputs; the capacitor contitutive equation is used to find the time evolution of the system once the switch is closed
+Following the \sphinxstylestrong{guidelines for the solution}, a {\hyperref[\detokenize{ch/electrical-engineering-networks-linear:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-n-port}]{\sphinxcrossref{\DUrole{std,std-ref}{many\sphinxhyphen{}port Thevenin equivalent circuit}}}} of the resistive part of the circuit is found, with two ports for interfacing with the capacitor (A) and with the switch. The dynamical equation of the system is written in state\sphinxhyphen{}space representation, writing the voltage at the ports and the unknown variable \(i(t)\) as outputs; the capacitor contitutive equation is used to find the time evolution of the system once the switch is closed
 
 \begin{figure}[htbp]
 \centering
@@ -3809,7 +3991,7 @@ At \(t = 0\), \(v_A(0) = 7.667 \, V\) and \(E_C(0) = 14.694 \, J \).
 
 \phantomsection \label{exercise:exam-25-01-22-exe-01}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.2 (Exam 2025\sphinxhyphen{}01\sphinxhyphen{}22, Exercise 1.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.2 (Exam 2025\sphinxhyphen{}01\sphinxhyphen{}22, Exercise 1.)}
 
 
 
@@ -3821,7 +4003,7 @@ At \(t = 0\), \(v_A(0) = 7.667 \, V\) and \(E_C(0) = 14.694 \, J \).
 \subsubsection*{Solution}
 
 \sphinxAtStartPar
-Following the \sphinxstylestrong{guidelines for the solution}, a {\hyperref[\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-n-port}]{\sphinxcrossref{\DUrole{std,std-ref}{many\sphinxhyphen{}port Thevenin equivalent circuit}}}} of the resistive part of the circuit is found, with two ports for interfacing with the capacitor (A) and with the switch. The dynamical equation of the system is written in state\sphinxhyphen{}space representation, writing the voltage at the ports and the unknown variable \(i(t)\) as outputs; the capacitor contitutive equation is used to find the time evolution of the system once the switch is closed
+Following the \sphinxstylestrong{guidelines for the solution}, a {\hyperref[\detokenize{ch/electrical-engineering-networks-linear:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-n-port}]{\sphinxcrossref{\DUrole{std,std-ref}{many\sphinxhyphen{}port Thevenin equivalent circuit}}}} of the resistive part of the circuit is found, with two ports for interfacing with the capacitor (A) and with the switch. The dynamical equation of the system is written in state\sphinxhyphen{}space representation, writing the voltage at the ports and the unknown variable \(i(t)\) as outputs; the capacitor contitutive equation is used to find the time evolution of the system once the switch is closed
 
 
 
@@ -4108,7 +4290,7 @@ and thus \(v_A(\tau) = -19.25 \, V\)
 \end{equation*}\end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-09-06-exe-01}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.3 (Exam 2024\sphinxhyphen{}09\sphinxhyphen{}06, Exercise 1.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.3 (Exam 2024\sphinxhyphen{}09\sphinxhyphen{}06, Exercise 1.)}
 
 
 
@@ -4117,11 +4299,135 @@ and thus \(v_A(\tau) = -19.25 \, V\)
 
 \noindent\sphinxincludegraphics{{exam-2024-09-06-ese-01}.png}
 \end{figure}
-\subsubsection*{Solution \sphinxhyphen{} todo}
+\subsubsection*{Solution}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Equivalent 2\sphinxhyphen{}port circuit of the resistive network.} Following the \sphinxstylestrong{guidelines for the solution}, a {\hyperref[\detokenize{ch/electrical-engineering-networks-linear:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-n-port}]{\sphinxcrossref{\DUrole{std,std-ref}{many\sphinxhyphen{}port Thevenin equivalent circuit}}}} of the resistive part of the circuit is found, with two ports for interfacing with the capacitor (A) and with the switch. The dynamical equation of the system is written in state\sphinxhyphen{}space representation, writing the voltage at the ports and the unknown variable \(i(t)\) as outputs; the capacitor contitutive equation is used to find the time evolution of the system once the switch is closed
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstyleemphasis{open circuit}
+\begin{equation*}
+\begin{split}\begin{aligned}
+     v_{A,0} & = - e - R_2 \, a = - 5 \, V - 2 \, \Omega \cdot 5 \, A = - 15 \, V \\
+     v_{B,0} & = - e = - 5 \, V \\
+     i_{0}   & = 0 \, A \\
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstyleemphasis{current generators at ports, internal generators off}
+\begin{equation*}
+\begin{split}\begin{aligned}
+     v_A & = R_4 (i_A+i_B) + R_2 i_A \\
+     v_B & = v_A + R_1 i_B - R_2 i_A = R_4 (i_A + i_B) + R_1 i_B \\
+     i   & = i_A + i_B \\
+   \end{aligned}\end{split}
+\end{equation*}
+\end{itemize}
+
+\sphinxAtStartPar
+and thus
+\begin{equation*}
+\begin{split}\begin{aligned}
+  v_A & = v_{A,0} + R_{AA} i_A + R_{AB} i_B && = v_{A,0} + \left( R_2+R_4 \right) i_A +        R_4     \,      i_B \\
+  v_B & = v_{B,0} + R_{BA} i_A + R_{BB} i_B && = v_{B,0} +        R_4     \,      i_A + \left( R_1+R_4 \right) i_B \\
+  i   & = i_{ ,0} + i_{/A} i_A + i_{/B} i_B && =  0 \, A +        i_A +        i_B \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Initial conditions.} Steady conditions with open switch follows from conditions \(i_B = 0\), and \(v_A = L \frac{d i_A}{d t} = 0\), solving the equations for
+\begin{equation*}
+\begin{split}\begin{aligned}
+    i_A(0^-) & = - \frac{v_{A,0}}{R_{AA}} && = - \dfrac{-15 \, V}{6 \, \Omega} && = 2.5 \, A \\
+    v_B(0^-) & = - v_{B,0} + R_{BA} \, i_A  = - v_{B,0} - \dfrac{R_{BA}}{R_{AA}} v_{A,0} && = 5 \, V + \dfrac{4 \, \Omega}{6 \, \Omega} 15 \, V && = 15 \, V \\ 
+    i  (0^-) & = i_{ ,0} + i_{/A} i_A =  i_{ ,0} - \dfrac{i_{/A}}{R_{AA}} v_{A,0} && = 0 \, A - \dfrac{-15 \, V}{6 \, \Omega} && = 2.5 \, A \\
+  \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Transient.}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+switch closes at time \(t = 0\). Voltage across the switch as a function of time can be represented by the function
+\begin{equation*}
+\begin{split}\begin{aligned}
+      v_{B}(t) & = v_B(0^-) \left( 1 - h(t) \right) \\
+               & = \left[ v_{B,0} - \dfrac{R_{BA}}{R_{AA}} v_{A,0} \right] \left( 1 - h(t) \right) \\
+      \Delta v_{B}(t) = v_{B}(t) - v_{B,0}  & =  - v_{B,0} h(t) - \dfrac{R_{BA}}{R_{AA}} v_{A,0} \left( 1 - h(t) \right) \\
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+dynamical equation of the inductor is written as a first order differential equation in the state variable of the inductor, \(i_A(t)\), after writing \(v_A\) as a function of \(i_A\) and the potentials at the ports,
+\begin{equation*}
+\begin{split}\begin{aligned}
+     v_A 
+     & = v_{A,0} + R_{AA} i_A + R_{AB} i_B = \\
+     & = v_{A,0} + R_{AA} i_A + \dfrac{R_{AB}}{R_{BB}} \left( v_B(t) - v_{B,0} - R_{BA} i_A \right) = \\
+     & = \dfrac{\det \mathbf{R}}{R_{BB}} i_A + v_{A,0} + \dfrac{R_{AB}}{R_{BB}} \left( v_B(t) - v_{B,0} \right) = \\
+     & = \dfrac{\det \mathbf{R}}{R_{BB}} i_A + v_{A,0} - \dfrac{R_{AB}}{R_{BB}} v_{B,0} \, h(t) -  \dfrac{R_{AB}}{R_{BB}}\dfrac{R_{BA}}{R_{AA}} v_{A,0} (1- h(t)) = \\
+     & = \dfrac{\det \mathbf{R}}{R_{BB}} i_A + \dfrac{\det \mathbf{R}}{R_{AA} R_{BB}} v_{A,0} - \dfrac{R_{AB}}{R_{BB}}\left( v_{B,0} - \dfrac{R_{BA}}{R_{AA}} v_{A,0} \right) \, h(t)
+  \end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+    0 = & L \dfrac{d i_A}{dt} + v_A \\
+        & L \dfrac{d i_A}{dt} + \dfrac{\det \mathbf{R}}{R_{BB}} i_A = - \dfrac{\det \mathbf{R}}{R_{AA} R_{BB}} v_{A,0} + \dfrac{R_{AB}}{R_{BB}} \left( v_{B,0} - \dfrac{R_{BA}}{R_{AA}} v_{A,0}  \right) \, h(t)
+  \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with initial conditions \(i_A(0) = i_A(0^-)\).
+
+\sphinxAtStartPar
+Numerical values
+\begin{equation*}
+\begin{split}\begin{aligned}
+    \tau & = \dfrac{L}{R_{eq}} = \dfrac{0.1 \, H}{2.8 \, \Omega} = 3.57 \cdot 10^{-2} \, s  \\
+    R_{eq} & = \dfrac{\det \mathbf{R}}{R_{BB}} = \dfrac{14 \, \Omega^2}{5 \, \Omega} = 2.8 \, \Omega \\
+    \det \mathbf{R} & = R_{AA} R_{BB} - R_{AB} R_{BA} = \\
+                    & = (R_1 + R_4)(R_2 + R_4) - R_4^2 = ( 30 - 16 ) \Omega^2 = 14 \, \Omega^2
+  \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Current through the inductor.}
+\begin{equation*}
+\begin{split}i_A(t) = \dots \end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+      i_A(0) & = i_A(0^-) = 2.5 \, A \\
+      i_A(+\infty) & = \dfrac{1}{R_{eq}} \left[ - v_{A,0} + \dfrac{R_{AB}}{R_{BB}} v_{B,0} \right] = \dfrac{1}{2.8 \, \Omega} \left[ 15 \, V + \dfrac{4}{5} \, ( - 5 \, V ) \right] = 3.93 \, A
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Current through the switch.}
+\begin{equation*}
+\begin{split}i_B(t) = \dfrac{1}{R_{BB}} \left( v_B(t) - v_{B,0} - R_{BA} i_A(t) \right)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+     i_B(0^+)     & = \dfrac{1}{R_{BB}} \left( v_B(0^+    ) - v_{B,0} - R_{BA} i_A(0^+    ) \right) = \\
+                  & = \dfrac{1}{5 \, \Omega} \left( 0 \, V + 5 \, V  - 4 \, \Omega \cdot (2.5 \, A) \right) = -1.00 \, A \\
+     i_B(+\infty) & = \dfrac{1}{R_{BB}} \left( v_B(+\infty) - v_{B,0} - R_{BA} i_A(+\infty) \right) = \\
+                  & = \dfrac{1}{5 \, \Omega} \left( 0 \, V  + 5 \, V - 4 \, \Omega \cdot (3.93 \, A) \right) = -2.14 \, A\\
+   \end{aligned}\end{split}
+\end{equation*}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{Current \(i_{R_4}\).}
+\begin{equation*}
+\begin{split}i_{R_4}(t) = i_A(t) + i_B(t)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+     i_{R_4}(0^+    ) & = i_A(0^+    ) + i_B(0^+    ) =   2.50 \, A - 1.00 \, A = 1.50 \, A \\
+     i_{R_4}(+\infty) & = i_A(+\infty) + i_B(+\infty) =   3.93 \, A - 2.14 \, A = 1.79 \, A \\
+   \end{aligned}\end{split}
+\end{equation*}
+\end{itemize}
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-07-22-exe-01}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.4 (Exam 2024\sphinxhyphen{}07\sphinxhyphen{}22, Exercise 1.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.4 (Exam 2024\sphinxhyphen{}07\sphinxhyphen{}22, Exercise 1.)}
 
 
 
@@ -4134,7 +4440,7 @@ and thus \(v_A(\tau) = -19.25 \, V\)
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-02-13-exe-01-b}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.5 (Exam 2024\sphinxhyphen{}02\sphinxhyphen{}13, Exercise 1.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.5 (Exam 2024\sphinxhyphen{}02\sphinxhyphen{}13, Exercise 1.)}
 
 
 
@@ -4152,7 +4458,7 @@ and thus \(v_A(\tau) = -19.25 \, V\)
 \subsection{Harmonic regime of linear electrical grids}
 \label{\detokenize{ch/electrical-engineering-exercises-harmonic:harmonic-regime-of-linear-electrical-grids}}\label{\detokenize{ch/electrical-engineering-exercises-harmonic:classical-electromagnetism-electrical-engineering-exercises-harmonic}}\label{\detokenize{ch/electrical-engineering-exercises-harmonic::doc}}\phantomsection \label{exercise:exam-25-02-11-exe-02}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.6 (Exam 2025\sphinxhyphen{}02\sphinxhyphen{}11, Exercise 2.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.6 (Exam 2025\sphinxhyphen{}02\sphinxhyphen{}11, Exercise 2.)}
 
 
 
@@ -4164,7 +4470,7 @@ and thus \(v_A(\tau) = -19.25 \, V\)
 \subsubsection*{Solution}
 
 \sphinxAtStartPar
-First {\hyperref[\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-1-port}]{\sphinxcrossref{\DUrole{std,std-ref}{one\sphinxhyphen{}port equivalent Thevenin circuit}}}} of the circuit with port \(A-B\) is evaluated, then {\hyperref[\detokenize{ch/electrical-engineering-networks-harmonic:classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic-power}]{\sphinxcrossref{\DUrole{std,std-ref}{power flow in harmonic regime}}}} is discussed.
+First {\hyperref[\detokenize{ch/electrical-engineering-networks-linear:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-1-port}]{\sphinxcrossref{\DUrole{std,std-ref}{one\sphinxhyphen{}port equivalent Thevenin circuit}}}} of the circuit with port \(A-B\) is evaluated, then {\hyperref[\detokenize{ch/electrical-engineering-networks-harmonic:classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic-power}]{\sphinxcrossref{\DUrole{std,std-ref}{power flow in harmonic regime}}}} is discussed.
 
 \sphinxAtStartPar
 \sphinxstylestrong{Thevenin equivalent: voltage.} With open circuit in \(A-B\), current \(a\) flows in the lower branch and in impedence \(Z_1\). Clockwise loop currents \(i_1\) and \(i_2\) flows in the left and right loop respectively. Kirchhoff voltage laws in the left and right loops give
@@ -4253,7 +4559,7 @@ while the reactive power in this condition reads
 \end{equation*}\end{sphinxadmonition}
 \phantomsection \label{exercise:exam-25-02-11-exe-03}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.7 (Exam 2025\sphinxhyphen{}02\sphinxhyphen{}11, Exercise 3.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.7 (Exam 2025\sphinxhyphen{}02\sphinxhyphen{}11, Exercise 3.)}
 
 
 
@@ -4308,7 +4614,7 @@ and the power factor is \(\cos \varphi_s = \dots\), where
 \end{equation*}\end{sphinxadmonition}
 \phantomsection \label{exercise:exam-25-01-22-exe-02}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.8 (Exam 2025\sphinxhyphen{}01\sphinxhyphen{}22, Exercise 2.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.8 (Exam 2025\sphinxhyphen{}01\sphinxhyphen{}22, Exercise 2.)}
 
 
 
@@ -4320,7 +4626,7 @@ and the power factor is \(\cos \varphi_s = \dots\), where
 \subsubsection*{Solution}
 
 \sphinxAtStartPar
-First {\hyperref[\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-1-port}]{\sphinxcrossref{\DUrole{std,std-ref}{one\sphinxhyphen{}port equivalent Thevenin circuit}}}} of the circuit with port \(A-B\) is evaluated, then the equivalent circuit is solved to find the tension \(v(t)\) across the current generator, and {\hyperref[\detokenize{ch/electrical-engineering-networks-harmonic:classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic-power}]{\sphinxcrossref{\DUrole{std,std-ref}{power flow in harmonic regime}}}} is discussed.
+First {\hyperref[\detokenize{ch/electrical-engineering-networks-linear:classical-electromagnetism-electrical-engineering-newtork-analysis-thevenin-1-port}]{\sphinxcrossref{\DUrole{std,std-ref}{one\sphinxhyphen{}port equivalent Thevenin circuit}}}} of the circuit with port \(A-B\) is evaluated, then the equivalent circuit is solved to find the tension \(v(t)\) across the current generator, and {\hyperref[\detokenize{ch/electrical-engineering-networks-harmonic:classical-electromagnetism-electrical-engineering-newtork-analysis-harmonic-power}]{\sphinxcrossref{\DUrole{std,std-ref}{power flow in harmonic regime}}}} is discussed.
 
 \sphinxAtStartPar
 \sphinxstylestrong{Thevenin equivalent: voltage.} With an open circuit, the network can be split into two parts: the triangle in the upper\sphinxhyphen{}left side and the section in the right part.
@@ -4374,7 +4680,7 @@ Signal in time is reconstructed using using the relation between effective and m
 \end{equation*}\end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-09-06-exe-02}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.9 (Exam 2024\sphinxhyphen{}09\sphinxhyphen{}06, Exercise 2.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.9 (Exam 2024\sphinxhyphen{}09\sphinxhyphen{}06, Exercise 2.)}
 
 
 
@@ -4387,7 +4693,7 @@ Signal in time is reconstructed using using the relation between effective and m
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-07-22-exe-02}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.10 (Exam 2024\sphinxhyphen{}07\sphinxhyphen{}22, Exercise 2.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.10 (Exam 2024\sphinxhyphen{}07\sphinxhyphen{}22, Exercise 2.)}
 
 
 
@@ -4433,7 +4739,7 @@ use relations of {\hyperref[\detokenize{ch/electrical-engineering-networks-harmo
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-09-06-exe-03}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.11 (Exam 2024\sphinxhyphen{}09\sphinxhyphen{}06, Exercise 3.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.11 (Exam 2024\sphinxhyphen{}09\sphinxhyphen{}06, Exercise 3.)}
 
 
 
@@ -4500,7 +4806,7 @@ using the effective values of tension and current \(V_2\), \(I_2\).
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-07-22-exe-03}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.12 (Exam 2024\sphinxhyphen{}07\sphinxhyphen{}22, Exercise 3.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.12 (Exam 2024\sphinxhyphen{}07\sphinxhyphen{}22, Exercise 3.)}
 
 
 
@@ -4577,7 +4883,7 @@ and the complex power is
 \end{equation*}\end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-06-19-exe-01}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.13 (Exam 2024\sphinxhyphen{}06\sphinxhyphen{}19, Exercise 1.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.13 (Exam 2024\sphinxhyphen{}06\sphinxhyphen{}19, Exercise 1.)}
 
 
 
@@ -4642,7 +4948,7 @@ being \(i_2 = i_{e_2} + i_{L_1} + i_{R_4}\) the sum of the current in the parall
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-02-13-exe-02}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.14 (Exam 2024\sphinxhyphen{}02\sphinxhyphen{}13, Exercise 2.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.14 (Exam 2024\sphinxhyphen{}02\sphinxhyphen{}13, Exercise 2.)}
 
 
 
@@ -4707,7 +5013,7 @@ Volume density must be integrated over the regions of space where it’s not neg
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-25-01-22-exe-03}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.15 (Exam 2025\sphinxhyphen{}01\sphinxhyphen{}22, Exercise 3.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.15 (Exam 2025\sphinxhyphen{}01\sphinxhyphen{}22, Exercise 3.)}
 
 
 
@@ -4831,7 +5137,7 @@ with \(i_{e,1} = \frac{e}{R_3 + R_4}\).
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-06-19-exe-02}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.16 (Exam 2024\sphinxhyphen{}06\sphinxhyphen{}19, Exercise 2.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.16 (Exam 2024\sphinxhyphen{}06\sphinxhyphen{}19, Exercise 2.)}
 
 
 
@@ -4844,7 +5150,7 @@ with \(i_{e,1} = \frac{e}{R_3 + R_4}\).
 \end{sphinxadmonition}
 \phantomsection \label{exercise:exam-24-02-13-exe-01-a}
 
-\begin{sphinxadmonition}{note}{Exercise 6.7.17 (Exam 2024\sphinxhyphen{}02\sphinxhyphen{}13, Exercise 1a.)}
+\begin{sphinxadmonition}{note}{Exercise 11.4.17 (Exam 2024\sphinxhyphen{}02\sphinxhyphen{}13, Exercise 1a.)}
 
 
 
@@ -4901,7 +5207,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-Apr 29, 2025
+Apr 30, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -5239,7 +5545,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-Apr 29, 2025
+Apr 30, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}

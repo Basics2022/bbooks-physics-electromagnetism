@@ -1,58 +1,48 @@
-<!--
-```{article-info}
-:author: basics
-:date: "{sub-ref}`today`"
-:read-time: "{sub-ref}`wordcount-minutes` min read"
-```
--->
-
 (classical-electromagnetism:circuits-electromagnetic)=
-# Circuiti elettromagnetici
+# Electromagnetic Circuits
 
-Sotto opportune ipotesi è possibile usare un modello circuitale anche per sistemi elettromagnetici, come ad esempio i trasformatori, o i motori elettrici.
+Under appropriate assumptions, it is possible to use a circuit model for electromagnetic systems, such as transformers or electric motors.
 
-- legge di Gauss per il campo magnetico
+- **Gauss's Law for Magnetic Fields:**
 
-  $$\nabla \cdot \mathbf{b} = 0$$
+  $$\nabla \cdot \vec{b} = 0$$
 
-- legge di Ampére-Maxwell
+- **Ampère-Maxwell's Law:**
 
-  $$\nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j}$$
+  $$\nabla \times \vec{h} - \partial_t \vec{d} = \vec{j}$$
 
-Si aggiungono le seguenti ipotesi:
-- materiali lineari non-dissipativi e non-dispersivi $\mathbf{b} = \mu \mathbf{h}$ <span style="color:red">**todo** discutere questa ipotesi, insieme a isteresi materiali, cicli di magnetizzazione,...</span>.
-- variazioni del campo $\mathbf{d}$ nel tempo trascurabili, $\partial_t \mathbf{d} = \mathbf{0}$.
+Additional assumptions include:
+- Linear, non-dissipative, and non-dispersive materials: $\vec{b} = \mu \vec{h}$ <span style="color:red">**todo** discuss this assumption, along with material hysteresis, magnetization cycles, etc.</span>.
+- Negligible time variations of the field $\vec{d}$, i.e., $\partial_t \vec{d} = \vec{0}$.
 
-La legge di Gauss del campo magnetico in forma integrale permette di scrivere la **legge ai nodi** del flusso del campo magnetico per i circuiti magnetici,
+The integral form of Gauss's law for the magnetic field allows writing the **node law** for the magnetic field flux in magnetic circuits:
 
-$$0 = \oint_{\partial V} \mathbf{b} \cdot \hat{\mathbf{n}} = \sum_k \phi_k \ .$$
+$$0 = \oint_{\partial V} \vec{b} \cdot \hat{\vec{n}} = \sum_k \phi_k \ .$$
 
-La legge di Ampére-Maxwell in forma integrale considerando:
-- un percorso incatenato con il solo induttore
-  
-  $$\int_{\ell_{ind}} \mathbf{h} \cdot \hat{\mathbf{t}} + \int_{\ell_{12}} \mathbf{h} \cdot \hat{\mathbf{t}} = \oint_{\ell_{1}} \mathbf{h} \cdot \hat{\mathbf{t}} = \int_{S^{ind}} \mathbf{j} \cdot \hat{\mathbf{n}} =  N i =: m$$
+The integral form of Ampère-Maxwell's law, considering:
+- A path linked only with the inductor:
 
-- un percorso incatenato con il traferro, aggirando l'induttore
-  
-  $$0 = \int_{\ell_{traf}} \mathbf{h} \cdot \hat{\mathbf{t}} + \int_{\ell_{21}} \hat{h} \cdot \hat{\mathbf{t}} = \sum_{k} h_k \ell_k + \int_{\ell_{21}} \hat{h} \cdot \hat{\mathbf{t}}$$
+  $$\int_{\ell_{ind}} \vec{h} \cdot \hat{\vec{t}} + \int_{\ell_{12}} \vec{h} \cdot \hat{\vec{t}} = \oint_{\ell_{1}} \vec{h} \cdot \hat{\vec{t}} = \int_{S^{ind}} \vec{j} \cdot \hat{\vec{n}} =  N i =: m$$
 
-e sommando le due equazioni, riconoscendo che i due integrali di linea sullo stesso percorsoin versi opposti si annullano, si ottiene la **legge alle maglie** per i circuiti magnetici
+- A path linked with the air gap, bypassing the inductor:
+
+  $$0 = \int_{\ell_{traf}} \vec{h} \cdot \hat{\vec{t}} + \int_{\ell_{21}} \hat{h} \cdot \hat{\vec{t}} = \sum_{k} h_k \ell_k + \int_{\ell_{21}} \hat{h} \cdot \hat{\vec{t}}$$
+
+By summing these two equations and recognizing that the two line integrals over the same path in opposite directions cancel each other out, we obtain the **loop law** for magnetic circuits:
 
 $$\begin{aligned}
-  m & = \int_{\ell_{ind}} \mathbf{h} \cdot \hat{\mathbf{t}} + \int_{\ell_{traf}} \mathbf{h} \cdot \hat{\mathbf{t}} = \\
-    & \approx \sum_{k \in \ell} h_k \, \ell_k 
-      = \sum_{k \in \ell} \frac{b_k}{\mu_k} \, \ell_k 
-      = \sum_{k \in \ell} \frac{\ell_k}{\mu_k \, A_k} \, \phi_k  \ .
+  m & = \int_{\ell_{ind}} \vec{h} \cdot \hat{\vec{t}} + \int_{\ell_{traf}} \vec{h} \cdot \hat{\vec{t}} \\
+    & \approx \sum_{k \in \ell} h_k \, \ell_k \\
+    & = \sum_{k \in \ell} \frac{b_k}{\mu_k} \, \ell_k \\
+    & = \sum_{k \in \ell} \frac{\ell_k}{\mu_k \, A_k} \, \phi_k \ .
 \end{aligned}$$
 
-Le leggi di Kirchhoff per i circuiti magnetici sono quindi
+Kirchhoff's laws for magnetic circuits are therefore:
 
 $$\begin{cases}
-  \sum_{k \in N_j} \phi_k = 0 \\ \\
+  \sum_{k \in N_j} \phi_k = 0 \\
   m_{\ell_i} = \sum_{k \in \ell_i} \theta_k \phi_k \ ,
 \end{cases}$$
 
-avendo introdotto la riluttanza $\theta_k = \frac{\ell_k}{\mu_k \, A_k}$, l'inverso della permeanza $\Lambda_k = \theta_k^{-1}$.
-
-
+where $\theta_k = \frac{\ell_k}{\mu_k \, A_k}$ is the reluctance, the inverse of the permeance $\Lambda_k = \theta_k^{-1}$.
 

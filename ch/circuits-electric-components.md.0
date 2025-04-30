@@ -1,0 +1,164 @@
+<!--
+```{article-info}
+:author: basics
+:date: "{sub-ref}`today`"
+:read-time: "{sub-ref}`wordcount-minutes` min read"
+```
+-->
+
+(classical-electromagnetism:circuits-electric:components)=
+# Circuit approximation
+
+## Conductors
+
+## Kirchhoff laws
+
+## Components
+(classical-electromagnetism:circuits-electric:components:resistor)=
+## Ohmic Resistor
+An Ohmic resistor results from the circuit approximation of a material with a linear constitutive equation
+
+$$\mathbf{e} = \rho_R \, \mathbf{j} \ ,$$
+
+between the electric field $\mathbf{e}$ and the current density $\mathbf{j}$, through the proportionality constant $\rho_R$, the **resistivity** of the material. The electric current through a section of the component is defined as the flow of charge through its cross-section
+
+$$i = \int_S \mathbf{j} \cdot \hat{\mathbf{t}} \simeq j \, A \ ,$$
+
+assuming that the current density vector is aligned with the axis of the component and uniform over the cross-section $A$, which is "small".
+If the material is not capable of accumulating charge, the balance of electric charge translates into the continuity of the electric current through the sections of the conductor.
+
+Using the constitutive equation on an element of elementary length $d\mathbf{r} =\hat{\mathbf{t}} \, d \ell $, and assuming that the electric field is aligned with the axis of the component, $\mathbf{e} = e \hat{\mathbf{t}}$, the elementary work per unit charge can be written as
+
+$$\delta v = \mathbf{e} \cdot d \mathbf{r} =  e \, d\ell = \rho_R \, j \, d\ell =  \frac{\rho_R \, d\ell}{A} i \ .$$
+
+From this last equation, the two Ohm's laws for linear resistors follow.
+
+```{prf:definition} First Ohm's Law.
+:label: ohm-law:first
+
+The potential difference between two sections of a linear resistor is proportional to the current flowing through it,
+
+  $$\delta v = dR \, i \ .$$
+
+```
+
+```{prf:definition} Second Ohm's Law.
+:label: ohm-law:second
+
+The proportionality constant that relates the potential difference and the current within an Ohmic resistor, the **resistance** of the resistor, is proportional to the resistivity and the length of the resistor, and inversely proportional to its cross-section,
+
+  $$dR = \frac{\rho_R \ d\ell}{A} \ .$$
+
+If the properties are uniform within the resistor, the elementary relations can be integrated to obtain the relationship between finite quantities,
+
+$$\Delta V = R \, i $$
+$$R = \frac{\rho_R \ \ell}{A}$$
+
+**Note:** (Why can we use potential? In my notes, I used the symbol $v^*$, as if it were a slightly different definition to incorporate motion and non-stationarity, which reduces to $v$ in the stationary case).
+
+```
+
+---
+
+**Capacitor.**
+
+A capacitor is a passive two-terminal electrical component that stores electrical energy in an electric field. The effect of a capacitor is known as capacitance. While some capacitance exists between any two electrical conductors in proximity in a circuit, a capacitor is a component designed to add capacitance to a circuit.
+
+The capacitance $C$ is defined as the ratio of the electric charge $Q$ on each conductor to the voltage $V$ between them:
+
+$$C = \frac{Q}{V}$$
+
+The energy stored in a capacitor is given by:
+
+$$E = \frac{1}{2} C V^2$$
+
+---
+
+**Inductor.**
+
+An inductor, also called a coil, choke, or reactor, is a passive two-terminal electrical component that stores energy in a magnetic field when electric current flows through it. An inductor typically consists of an insulated wire wound into a coil.
+
+The inductance $L$ is defined as the ratio of the magnetic flux $\Phi$ to the current $I$:
+
+$$L = \frac{\Phi}{I}$$
+
+The energy stored in an inductor is given by:
+
+$$E = \frac{1}{2} L I^2$$
+
+---
+
+**Voltage Generator.**
+
+A voltage generator, or voltage source, is a two-terminal device that can maintain a fixed voltage across its terminals, independent of the current flowing through it (within its limits). It is often used to supply electrical power to a circuit.
+
+The voltage $V$ provided by the generator is typically denoted as:
+
+$$V = V_0$$
+
+where $V_0$ is the constant voltage supplied by the generator.
+
+---
+
+**Current Generator.**
+
+A current generator, or current source, is a two-terminal device that can maintain a fixed current through its terminals, independent of the voltage across it (within its limits). It is often used to supply a constant current to a circuit.
+
+The current $I$ provided by the generator is typically denoted as:
+
+$$I = I_0$$
+
+where $I_0$ is the constant current supplied by the generator.
+
+
+
+
+
+
+
+<!--
+(classical-electromagnetism:circuits-electric:components)=
+# Elementary components in electric circuits
+
+(classical-electromagnetism:circuits-electric:components:resistor)=
+## Ohm resistor
+Un resistore di Ohm risulta dall'approssimazione circuitale di un materiale con equazione costitutiva lineare 
+
+$$\mathbf{e} = \rho_R \, \mathbf{j} \ ,$$
+
+tra il campo elettrico $\mathbf{e}$ e la densità di corrente $\mathbf{j}$, tramite la costante di proporzionalità $\rho_R$, la **resistività** del materiale. La corrente elettrica attraverso una sezione del componente è definita come il flusso di carica attraverso una sua sezione
+
+$$i = \int_S \mathbf{j} \cdot \hat{\mathbf{t}} \simeq j \, A \ ,$$
+
+Nell'ipotesi che il vettore densità di corrente si allineato con l'asse del componente e uniforme sulla sezione $A$, "piccola".
+Se il materiale non è in grado di accumulare carica, il bilancio di carica elettrica si traduce nella continuità della corrente elettrica attraverso le sezioni del conduttore.
+
+Utilizzando l'equazione costitutiva su un elemento di lunghezza elementare $d\mathbf{r} =\hat{\mathbf{t}} \, d \ell $, e assumendo che il campo elettrico sia allineato con l'asse del componente, $\mathbf{e} = e \hat{\mathbf{t}}$ si può scrivere il lavoro elementare per unità di carica come
+
+$$\delta v = \mathbf{e} \cdot d \mathbf{r} =  e \, d\ell = \rho_R \, j \, d\ell =  \frac{\rho_R \, d\ell}{A} i \ .$$
+
+Da questa ultima equazione seguono le due leggi di Ohm, per resistori lineari.
+
+**Prima legge di Ohm.** La differenza di potenziale tra due sezioni di un resistore lineare è proporzionale alla corrente che passa attraverso di esso,
+
+  $$\delta v = dR \, i \ .$$
+
+**Seconda legge di Ohm.** La costante di proporzionalità che lega la differenza di potenziale e la corrente all'interno di un resistore ohmico, la **resistenza** del resistore, è proporzionale alla resistività e alla lunghezza del resistore, e inversamente proporzionale alla sua sezione,
+
+  $$dR = \frac{\rho_R \ d\ell}{A} \ .$$
+
+Se le proprietà sono uniformi nel resistore, si possono integrare le relazioni elementari per ottenere la relazione tra grandezze finite,
+
+$$\Delta V = R \, i $$
+$$R = \frac{\rho_R \ \ell}{A}$$
+
+**todo** (perché si può usare il potenziale? Nelle mie note avevo usato il simbolo $v^*$, come se fosse una definizione leggermente diversa per incorporare movimento e instazionarietà, che si riduce a $v$ nel caso stazionario).
+
+**Condensatore.**
+
+**Induttore.**
+
+**Generatore di tensione.**
+
+**Generatore di corrente.**
+-->
