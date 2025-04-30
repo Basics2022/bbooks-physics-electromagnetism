@@ -667,7 +667,111 @@ $$E_C(\tau) = 0.5 \cdot 5 \cdot 10^{-4} \, F \cdot ( 19.25 \, V )^2 = 9.26 \cdot
 ```{figure} ../media/exam-2024-09-06-ese-01.png
 ```
 
-````{dropdown} Solution - todo
+````{dropdown} Solution
+:open:
+
+**Equivalent 2-port circuit of the resistive network.** Following the **guidelines for the solution**, a [many-port Thevenin equivalent circuit](classical-electromagnetism:electrical-engineering:newtork-analysis:thevenin:n-port) of the resistive part of the circuit is found, with two ports for interfacing with the capacitor (A) and with the switch. The dynamical equation of the system is written in state-space representation, writing the voltage at the ports and the unknown variable $i(t)$ as outputs; the capacitor contitutive equation is used to find the time evolution of the system once the switch is closed
+
+- *open circuit*
+
+   $$\begin{aligned}
+     v_{A,0} & = - e - R_2 \, a = - 5 \, V - 2 \, \Omega \cdot 5 \, A = - 15 \, V \\
+     v_{B,0} & = - e = - 5 \, V \\
+     i_{0}   & = 0 \, A \\
+   \end{aligned}$$
+
+- *current generators at ports, internal generators off*
+
+   $$\begin{aligned}
+     v_A & = R_4 (i_A+i_B) + R_2 i_A \\
+     v_B & = v_A + R_1 i_B - R_2 i_A = R_4 (i_A + i_B) + R_1 i_B \\
+     i   & = i_A + i_B \\
+   \end{aligned}$$
+
+and thus
+
+$$\begin{aligned}
+  v_A & = v_{A,0} + R_{AA} i_A + R_{AB} i_B && = v_{A,0} + \left( R_2+R_4 \right) i_A +        R_4     \,      i_B \\
+  v_B & = v_{B,0} + R_{BA} i_A + R_{BB} i_B && = v_{B,0} +        R_4     \,      i_A + \left( R_1+R_4 \right) i_B \\
+  i   & = i_{ ,0} + i_{/A} i_A + i_{/B} i_B && =  0 \, A +        i_A +        i_B \\
+\end{aligned}$$
+
+
+**Initial conditions.** Steady conditions with open switch follows from conditions $i_B = 0$, and $v_A = L \frac{d i_A}{d t} = 0$, solving the equations for
+
+  $$\begin{aligned}
+    i_A(0^-) & = - \frac{v_{A,0}}{R_{AA}} && = - \dfrac{-15 \, V}{6 \, \Omega} && = 2.5 \, A \\
+    v_B(0^-) & = - v_{B,0} + R_{BA} \, i_A  = - v_{B,0} - \dfrac{R_{BA}}{R_{AA}} v_{A,0} && = 5 \, V + \dfrac{4 \, \Omega}{6 \, \Omega} 15 \, V && = 15 \, V \\ 
+    i  (0^-) & = i_{ ,0} + i_{/A} i_A =  i_{ ,0} - \dfrac{i_{/A}}{R_{AA}} v_{A,0} && = 0 \, A - \dfrac{-15 \, V}{6 \, \Omega} && = 2.5 \, A \\
+  \end{aligned}$$
+
+
+**Transient.**
+- switch closes at time $t = 0$. Voltage across the switch as a function of time can be represented by the function
+
+   $$\begin{aligned}
+      v_{B}(t) & = v_B(0^-) \left( 1 - h(t) \right) \\
+               & = \left[ v_{B,0} - \dfrac{R_{BA}}{R_{AA}} v_{A,0} \right] \left( 1 - h(t) \right) \\
+      \Delta v_{B}(t) = v_{B}(t) - v_{B,0}  & =  - v_{B,0} h(t) - \dfrac{R_{BA}}{R_{AA}} v_{A,0} \left( 1 - h(t) \right) \\
+   \end{aligned}$$
+
+- dynamical equation of the inductor is written as a first order differential equation in the state variable of the inductor, $i_A(t)$, after writing $v_A$ as a function of $i_A$ and the potentials at the ports,
+
+  $$\begin{aligned}
+     v_A 
+     & = v_{A,0} + R_{AA} i_A + R_{AB} i_B = \\
+     & = v_{A,0} + R_{AA} i_A + \dfrac{R_{AB}}{R_{BB}} \left( v_B(t) - v_{B,0} - R_{BA} i_A \right) = \\
+     & = \dfrac{\det \mathbf{R}}{R_{BB}} i_A + v_{A,0} + \dfrac{R_{AB}}{R_{BB}} \left( v_B(t) - v_{B,0} \right) = \\
+     & = \dfrac{\det \mathbf{R}}{R_{BB}} i_A + v_{A,0} - \dfrac{R_{AB}}{R_{BB}} v_{B,0} \, h(t) -  \dfrac{R_{AB}}{R_{BB}}\dfrac{R_{BA}}{R_{AA}} v_{A,0} (1- h(t)) = \\
+     & = \dfrac{\det \mathbf{R}}{R_{BB}} i_A + \dfrac{\det \mathbf{R}}{R_{AA} R_{BB}} v_{A,0} - \dfrac{R_{AB}}{R_{BB}}\left( v_{B,0} - \dfrac{R_{BA}}{R_{AA}} v_{A,0} \right) \, h(t)
+  \end{aligned}$$
+
+
+  $$\begin{aligned}
+    0 = & L \dfrac{d i_A}{dt} + v_A \\
+        & L \dfrac{d i_A}{dt} + \dfrac{\det \mathbf{R}}{R_{BB}} i_A = - \dfrac{\det \mathbf{R}}{R_{AA} R_{BB}} v_{A,0} + \dfrac{R_{AB}}{R_{BB}} \left( v_{B,0} - \dfrac{R_{BA}}{R_{AA}} v_{A,0}  \right) \, h(t)
+  \end{aligned}$$
+
+  with initial conditions $i_A(0) = i_A(0^-)$.
+
+  Numerical values
+
+  $$\begin{aligned}
+    \tau & = \dfrac{L}{R_{eq}} = \dfrac{0.1 \, H}{2.8 \, \Omega} = 3.57 \cdot 10^{-2} \, s  \\
+    R_{eq} & = \dfrac{\det \mathbf{R}}{R_{BB}} = \dfrac{14 \, \Omega^2}{5 \, \Omega} = 2.8 \, \Omega \\
+    \det \mathbf{R} & = R_{AA} R_{BB} - R_{AB} R_{BA} = \\
+                    & = (R_1 + R_4)(R_2 + R_4) - R_4^2 = ( 30 - 16 ) \Omega^2 = 14 \, \Omega^2
+  \end{aligned}$$
+
+- **Current through the inductor.**
+
+   $$i_A(t) = \dots $$
+
+   $$\begin{aligned}
+      i_A(0) & = i_A(0^-) = 2.5 \, A \\
+      i_A(+\infty) & = \dfrac{1}{R_{eq}} \left[ - v_{A,0} + \dfrac{R_{AB}}{R_{BB}} v_{B,0} \right] = \dfrac{1}{2.8 \, \Omega} \left[ 15 \, V + \dfrac{4}{5} \, ( - 5 \, V ) \right] = 3.93 \, A
+   \end{aligned}$$
+
+- **Current through the switch.**
+
+   $$i_B(t) = \dfrac{1}{R_{BB}} \left( v_B(t) - v_{B,0} - R_{BA} i_A(t) \right)$$
+   
+   $$\begin{aligned}
+     i_B(0^+)     & = \dfrac{1}{R_{BB}} \left( v_B(0^+    ) - v_{B,0} - R_{BA} i_A(0^+    ) \right) = \\
+                  & = \dfrac{1}{5 \, \Omega} \left( 0 \, V + 5 \, V  - 4 \, \Omega \cdot (2.5 \, A) \right) = -1.00 \, A \\
+     i_B(+\infty) & = \dfrac{1}{R_{BB}} \left( v_B(+\infty) - v_{B,0} - R_{BA} i_A(+\infty) \right) = \\
+                  & = \dfrac{1}{5 \, \Omega} \left( 0 \, V  + 5 \, V - 4 \, \Omega \cdot (3.93 \, A) \right) = -2.14 \, A\\
+   \end{aligned}$$
+
+- **Current $i_{R_4}$.**
+
+   $$i_{R_4}(t) = i_A(t) + i_B(t)$$
+   
+   $$\begin{aligned}
+     i_{R_4}(0^+    ) & = i_A(0^+    ) + i_B(0^+    ) =   2.50 \, A - 1.00 \, A = 1.50 \, A \\
+     i_{R_4}(+\infty) & = i_A(+\infty) + i_B(+\infty) =   3.93 \, A - 2.14 \, A = 1.79 \, A \\
+   \end{aligned}$$
+
 ````
 
 `````
