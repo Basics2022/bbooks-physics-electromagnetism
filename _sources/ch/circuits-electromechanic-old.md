@@ -6,7 +6,7 @@
 ```
 -->
 (classical-electromagnetism:circuits-electromechanic)=
-# Electromechanical Systems
+# Electromechanical Systems - OLD
 
 Some systems of interest and widespread use in modern society exploit the interactions between electromagnetic and mechanical phenomena: a fundamental example is electric machines, some of which can operate both as motors (with power supplied by the electrical system and converted into mechanical power) and as generators of electrical energy (converting mechanical power into electrical power).
 

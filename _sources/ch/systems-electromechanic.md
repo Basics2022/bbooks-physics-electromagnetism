@@ -5,9 +5,18 @@
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
 -->
-(classical-electromagnetism:circuits-electromechanic)=
+(classical-electromagnetism:systems-electromechanic)=
 # Electromechanical Systems
 
+**Energy**
+
+**Examples**
+- simple electromechanical systems: rudimentary electrical motor/generator
+- locks
+- DC motors
+- AC motors
+
+<!--
 Some systems of interest and widespread use in modern society exploit the interactions between electromagnetic and mechanical phenomena: a fundamental example is electric machines, some of which can operate both as motors (with power supplied by the electrical system and converted into mechanical power) and as generators of electrical energy (converting mechanical power into electrical power).
 
 In a system of inductors with mutual influence, the voltage difference across the "enhanced" inductor $i$ is
@@ -231,7 +240,7 @@ $$\begin{aligned}
     \mathbf{0} & = \frac{d}{dt} \left( C \mathbf{v}_C \right) - \mathbf{i}_C & \text{capacitors} \\
   \end{aligned}$$
 ```
-
+-->
 
 
 
