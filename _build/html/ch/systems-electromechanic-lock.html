@@ -64,6 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch/systems-electromechanic-lock';</script>
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -378,7 +380,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -394,6 +398,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-shaped-magnetic-circuit">10.2.2.1. C-shaped magnetic circuit</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -405,6 +417,44 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="electromechanic-lock">
 <span id="classical-electromagnetism-systems-electromechanic-examples-lock"></span><h1><span class="section-number">10.2.2. </span>Electromechanic lock<a class="headerlink" href="#electromechanic-lock" title="Permalink to this heading">#</a></h1>
+<div class="section" id="c-shaped-magnetic-circuit">
+<h2><span class="section-number">10.2.2.1. </span>C-shaped magnetic circuit<a class="headerlink" href="#c-shaped-magnetic-circuit" title="Permalink to this heading">#</a></h2>
+<p>Mechanical sub-system</p>
+<div class="math notranslate nohighlight">
+\[m \ddot{x} + c \dot{x} + k x = F^{ext} + F^{em}\]</div>
+<p>Electromagnetic sub-system, with no dispersed flux and non-negligible reactance of the ferromagnetic medium</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  e   &amp; = R i + v_L \\
+  v_L &amp; = \dfrac{d \psi}{dt} = \dfrac{d \left( N \phi \right)}{d t} \\
+  N i = m &amp; = \left( \theta_{Fe} + 2 \theta_0(x) \right) \phi = \\
+          &amp; = \left( \theta_{Fe} + 2 \dfrac{x}{\mu_0 A} \right) \phi \ .
+\end{aligned}\end{split}\]</div>
+<p>Assuming no dispersed flux and conservative conversion of electromagnetic power to mechanical power, the expression of the force <span class="math notranslate nohighlight">\(F^{em}\)</span> acting on the mechanical system due to electromagnetic phenomena is derived from energy balance equation,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 
+  &amp; = \dot{x} \left( m \ddot{x} + c \dot{x} + k x - F^{ext} - F^{em} \right) + i \left( R i - e + \dfrac{d}{dt} \left( \dfrac{N^2}{\theta(x)} \, i \right) \right) \\
+  &amp; = \dot{x} \left( m \ddot{x} + c \dot{x} + k x - F^{ext} - F^{em} \right) + i \left( R i - e + \dfrac{d}{dt} \left( L(x) \, i \right) \right) \\
+  &amp; = \dfrac{d}{dt} \left( \dfrac{1}{2} m \dot{x}^2 + \dfrac{1}{2} k x^2 + \dfrac{1}{2} L i^2 \right) + c \dot{x}^2 + R i^2 - \dot{x} F^{ext} - e i - \dot{x} \left( F^{em} - \partial_x \left( \dfrac{1}{2} L i^2 \right) \right)
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  F^{em} = \dfrac{1}{2} \partial_x L i^2
+  &amp; = - \dfrac{1}{2} \dfrac{N^2}{\theta^2(x)} \theta'(x) i^2 = \\
+  &amp; = - \dfrac{1}{2} \dfrac{N^2 i^2}{\theta^2(x)} \dfrac{2}{\mu_0 A} = \\
+  &amp; = - \dfrac{1}{2} \dfrac{N^2 i^2}{\left( \theta_{Fe} + \frac{2 x}{\mu_0 A} \right)^2} \dfrac{2}{\mu_0 A} = \\
+  &amp; = - 2 \dfrac{1}{2 \mu_0 A} \phi^2(x,i) \ ,
+\end{aligned}\end{split}\]</div>
+<p>so that the force produce by each of the two gaps is</p>
+<div class="math notranslate nohighlight">
+\[F^{em}_{gap} = -\dfrac{\phi^2(x,i)}{2 \mu_0 A} \ .\]</div>
+<p><strong>todo</strong></p>
+<ul class="simple">
+<li><p>Find general expression of the force at each gap. Is it possible to find such an expression?</p></li>
+<li><p>Example: electromagnetic lock</p></li>
+</ul>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -461,6 +511,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-shaped-magnetic-circuit">10.2.2.1. C-shaped magnetic circuit</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

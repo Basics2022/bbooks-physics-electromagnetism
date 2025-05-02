@@ -429,15 +429,75 @@ document.write(`
 <p>as derived from integral form of governing equations on arbitrary domain <span class="math notranslate nohighlight">\(s_t\)</span> (<strong>todo</strong> <em>add link</em>), that can move in space, with the definition of</p>
 <div class="math notranslate nohighlight">
 \[\vec{e}^* = \vec{e} - \vec{b} \times \vec{v}_b \ ,\]</div>
-<p>and <span class="math notranslate nohighlight">\(\vec{v}_b\)</span> is the velocity of the point of the boundary of the surface <span class="math notranslate nohighlight">\(\partial s_t\)</span>.</p>
+<p>and <span class="math notranslate nohighlight">\(\vec{v}_b\)</span> is the velocity of the point of the boundary of the surface <span class="math notranslate nohighlight">\(\partial s_t\)</span>. As shown in the examples of this section, a time-varying flux of the magnetic field may induce:</p>
+<ul>
+<li><p><strong>electromotive force</strong> resulting in</p>
+<ul class="simple">
+<li><p>voltage difference at the electric port of an open circuit, <span class="math notranslate nohighlight">\(v = \dfrac{d \psi(\vec{b})}{d t}\)</span>,</p></li>
+<li><p>current in a closed loop, <span class="math notranslate nohighlight">\(i = \dfrac{v}{R} = \dfrac{1}{R} \dfrac{d \psi(\vec{b})}{d t}\)</span>,</p></li>
+</ul>
+<p>being the flux <span class="math notranslate nohighlight">\(\psi = N A B \cos \alpha\)</span> of uniform magnetic field across a <span class="math notranslate nohighlight">\(N\)</span>-winding loop of area <span class="math notranslate nohighlight">\(A\)</span> in a plane with unit normal vectro forming an angle <span class="math notranslate nohighlight">\(\alpha\)</span> with the magnetic field;</p>
+</li>
+<li><p><strong>force</strong> on conductors, either moving conductors or conductors with electric current, governed by the expression of <strong>Lorentz’s force</strong>,</p>
+<div class="math notranslate nohighlight">
+\[\vec{f} = \rho \vec{e} - \vec{j} \times \vec{b}\]</div>
+<p>or in integral form (elementary on the length of the conductor only) with no net charge</p>
+<div class="math notranslate nohighlight">
+\[d \vec{F} = - i \vec{b} \times \hat{t} \, d \ell \ .\]</div>
+</li>
+</ul>
 <div class="section" id="simple-loop-with-moving-side-in-a-constant-and-uniform-magnetic-field">
 <h2><span class="section-number">10.2.1.1. </span>Simple loop with moving side in a constant and uniform magnetic field<a class="headerlink" href="#simple-loop-with-moving-side-in-a-constant-and-uniform-magnetic-field" title="Permalink to this heading">#</a></h2>
+<p>Mechanical sub-system</p>
+<div class="math notranslate nohighlight">
+\[m \ddot{x} = F^{ext} + F^{em}_x\]</div>
+<p>Faraday’s law (with Ohm’s law <span class="math notranslate nohighlight">\(\vec{e}^* = \rho_R \vec{j}^*\)</span>, and negligible resistance of the circuit except for the section <span class="math notranslate nohighlight">\(l_R\)</span>; it’s possible to use the equivalent form of Faraday’s law, on the second line of the first equation of this section)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 
+  &amp; = \oint_{\partial s_t} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} = \\
+  &amp; = \int_{l_R} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \left( B a x \right) = \\
+  &amp; = R i + B a \dot{x} \ .
+\end{aligned}\end{split}\]</div>
+<p>Faraday’s experience, or consequence of Lorentz’s force</p>
+<div class="math notranslate nohighlight">
+\[F^{em}_x = i B a = - \dfrac{(B a)^2}{R} \dot{x} \ .\]</div>
+<p>Inserting into the mechanical sub-system, even without self-inductance, the electromagnetic effects appears as a damping term</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  m \ddot{x} &amp; = F^{ext} - \dfrac{(B a)^2}{R} \dot{x} \\ 
+  m \ddot{x} + \dfrac{(B a)^2}{R} \dot{x} &amp; = F^{ext} \\ 
+\end{aligned}\end{split}\]</div>
+<p><strong>todo</strong></p>
+<ul class="simple">
+<li><p>Show force acting on the moving side of the circuit starting from Lorentz’s force</p>
+<ul>
+<li><p>discuss the motion of a rod in a magnetic field, without connection to a circuit; discuss electric charge distribution</p></li>
+</ul>
+</li>
+<li><p>as <span class="math notranslate nohighlight">\(\partial_t \vec{b} = 0\)</span>, it’s possible to use potential <span class="math notranslate nohighlight">\(v\)</span> to define the electromagnetic field <span class="math notranslate nohighlight">\(\vec{e} = - \nabla v\)</span></p></li>
+</ul>
 </div>
 <div class="section" id="rotating-loop-in-a-constant-and-uniform-magnetic-field">
 <h2><span class="section-number">10.2.1.2. </span>Rotating loop in a constant and uniform magnetic field<a class="headerlink" href="#rotating-loop-in-a-constant-and-uniform-magnetic-field" title="Permalink to this heading">#</a></h2>
+<p>…</p>
+<div class="math notranslate nohighlight">
+\[0 = R i + \dfrac{d}{dt} \left( A B \cos \alpha \right) \ ,\]</div>
+<p>…</p>
 </div>
 <div class="section" id="simple-loop-in-a-time-varying-magnetic-field">
 <h2><span class="section-number">10.2.1.3. </span>Simple loop in a time-varying magnetic field<a class="headerlink" href="#simple-loop-in-a-time-varying-magnetic-field" title="Permalink to this heading">#</a></h2>
+<p>A time-dependent magnetic flux may induce electric current in an electric circuit…</p>
+<p>…</p>
+<p>Faraday’s law (with Ohm’s law <span class="math notranslate nohighlight">\(\vec{e}^* = \rho_R \vec{j}^*\)</span>, and negligible resistance of the circuit except for the section <span class="math notranslate nohighlight">\(l_R\)</span>;…)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 
+  &amp; = \oint_{\partial s_t} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} = \\
+  &amp; = \int_{l_R} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \left( B A \right) = \\
+  &amp; = R i + A \dot{B} \ ,
+\end{aligned}\end{split}\]</div>
+<p>having here assumed that the area of the circuit is constant, and the circuit is planar in a plane with unit normal vector aligned with <span class="math notranslate nohighlight">\(\vec{b} = B(t) \hat{z}\)</span></p>
 </div>
 </div>
 
