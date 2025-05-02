@@ -49,7 +49,16 @@ parts:
   - file: ch/circuits-electromagnetic
     sections:
     - file: ch/circuits-electromagnetic-transformer
-  - file: ch/circuits-electromechanic
+  - file: ch/systems-electromechanic
+    sections:
+    - file: ch/systems-electromechanic-energy
+    - file: ch/systems-electromechanic-examples
+      sections:
+      - file: ch/systems-electromechanic-induction-intro
+      - file: ch/systems-electromechanic-lock
+      - file: ch/systems-electromechanic-motor-dc
+      - file: ch/systems-electromechanic-motor-ac
+    - file: ch/circuits-electromechanic-old
   - file: ch/electrical-engineering-networks
     sections:
     - file: ch/electrical-engineering-networks-linear
