@@ -146,7 +146,7 @@ $$
 **Gauss's Law for the Field $\vec{d}(\vec{r},t)$.**
 
 $$
-    \oint_{\partial v_t} \vec{d} \cdot \hat{n} = \int_{v_t} \rho
+    \oint_{\partial v_t} \vec{d} \cdot \hat{n} = \int_{v_t} \rho^f
 $$
 
 **Gauss's Law for the Field $\vec{b}(\vec{r},t)$.**
@@ -170,15 +170,15 @@ with the definition $\vec{e}^* := \vec{e} + \vec{v}_b \cdot \vec{b}$, already us
 **Ampère–Maxwell Law.**
 
 $$\begin{aligned}
-    \vec{0} & = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} - \int_{s_t} \vec{j} \cdot \hat{n} = \\
-    & = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} + \int_{s_t} \underbrace{\nabla \cdot \vec{d}}_{=\rho} \, \vec{v}_b \cdot \hat{n} - \oint_{s_t} \vec{v}_b \times \vec{d} \cdot \hat{t} - \int_{s_t} \vec{j} \cdot \hat{n} =  \\
+    \vec{0} & = \oint_{\partial S} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{S} \vec{d} \cdot \hat{n} - \int_{S} \vec{j}^f \cdot \hat{n} = \\
+    & = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} + \int_{s_t} \underbrace{\nabla \cdot \vec{d}}_{=\rho^f} \, \vec{v}_b \cdot \hat{n} - \oint_{s_t} \vec{v}_b \times \vec{d} \cdot \hat{t} - \int_{s_t} \vec{j}^f \cdot \hat{n} =  \\
 \end{aligned}$$
 
 $$
-    \oint_{\partial s_t} \vec{h}^* \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} = \int_{s_t} \vec{j}^* \cdot \hat{n} \ ,
+    \oint_{\partial s_t} \vec{h}^* \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} = \int_{s_t} \vec{j}^{f*} \cdot \hat{n} \ ,
 $$
 
-having defined $\vec{h}^* := \vec{h} - \vec{v}_b \times \vec{d}$, and using the previously introduced definition $\vec{j}^* := \vec{j} - \rho \vec{v}_b$.
+having defined $\vec{h}^* := \vec{h} - \vec{v}_b \times \vec{d}$, and using the previously introduced definition $\vec{j}^{f*} := \vec{j}^f - \rho^f \vec{v}_b$.
 
 Adding the definitions:
 
@@ -196,7 +196,34 @@ $$\begin{aligned}
 \vec{b}^* = \vec{b} \qquad & , \qquad \vec{h}^* = \vec{h} - \vec{v}_b \times \vec{d} \\
 \end{aligned}$$
 
-are nothing more than the transformation of the fields for two observers in relative motion, and correspond to the low-speed limit of Lorentz transformations from special relativity for velocities $|\vec{v}_b| \ll c$: in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein's theory of relativity.
+are nothing more than the transformation of the fields for two observers in relative motion, and correspond to the **low-speed limit** of [Lorentz transformations from special relativity](https://basics2022.github.io/bbooks-physics-modern/ch/relativity-special/lorentz.html#inertial-reference-frames-and-lorentz-s-transformations) for velocities $|\vec{v}_b| \ll c$, and Lorentz's factor $\gamma \sim 1$: in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein's theory of relativity.
 
 **todo** Reference Galilean and Lorentz transformations for relativity in electromagnetism.
+
+**todo** Sistematic power expansion
+
+**todo** Take into account higher-order contributions
+
+$$\begin{aligned}
+  \rho^*    & = \rho    - \dfrac{\vec{j}}{c^2} + \text{terms coming from $\gamma c \rho$} \\
+  \vec{d}^* & = \vec{d} - \dfrac{\vec{h} \times \vec{v}}{c^2} + \text{terms coming from $(1-\gamma) \hat{v} \hat{v} \cdot \vec{d}$}  \\
+  \vec{b}^* & = \vec{b} + \dfrac{\vec{e} \times \vec{v}}{c^2} + \text{terms coming from $(1-\gamma) \hat{v} \hat{v} \cdot \vec{b}$}  \\
+\end{aligned}$$
+
+**todo** Relativity of polarization and magnetization
+
+$$\begin{aligned}
+  \vec{p} 
+  := & \  \vec{d} - \varepsilon_0 \vec{e} = \\
+   = & \  \vec{d}^* + \dfrac{\vec{h} \times \vec{v}}{c^2} - \varepsilon_0 \left( \vec{e}^* + \vec{b} \times \vec{v} \right) = \\
+   = & \  \vec{d}^* - \varepsilon_0 \vec{e}^* + \left( \dfrac{\vec{h}}{c^2} - \varepsilon_0 \vec{b} \right) \times \vec{v} = \\ 
+   = & \  \vec{p}^* - \dfrac{ \vec{m} \times \vec{v}}{c^2} \ .
+\end{aligned}$$
+
+$$\begin{aligned}
+  \vec{m} 
+  := & \ \dfrac{1}{\mu_0} \vec{b} - \vec{h} = \\
+   = & \ \dfrac{1}{\mu_0} \vec{b}^* + \dfrac{1}{\mu_0} \dfrac{\vec{v} \times \vec{e}}{c^2} - \vec{h}^* - \vec{v} \times \vec{d} = \\ \\
+   = & \ \vec{m}^* - \vec{v} \times \vec{p} \ .
+\end{aligned}$$
 

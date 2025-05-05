@@ -35,15 +35,14 @@ $$
 \partial_t \rho + \nabla \cdot \vec{j} = 0
 \qquad , \qquad
 \begin{cases}
-\nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
+\nabla \cdot \vec{e} = d\frac{\rho}{\varepsilon_0} \\
 \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
 \nabla \cdot \vec{b} = 0 \\
 \nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} = \mu_0 \vec{j}
 \end{cases}$$
 
-and more precisely 
 
-- into Gauss' law for the electric field
+**Gauss' law for the electric field, and the dielectric field.**
 
   $$\begin{aligned}
     & 0  = \nabla \cdot \vec{e} - \frac{\rho}{\varepsilon_0} = \nabla \cdot \vec{e} - \frac{\rho_f - \nabla \cdot \vec{p}}{\varepsilon_0}  \\ \\
@@ -52,34 +51,36 @@ and more precisely
 
   with $\vec{d} = \varepsilon_0 \vec{e} + \vec{p}$ defined as the **displacement field**. 
 
-- into continuity equation
+**Continuity equation of electric charge.**
 
   $$
     0 
     & = \partial_t \rho + \nabla \cdot \vec{j} = \\
-    & = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_b + \nabla \cdot ( \vec{j}_P + \nabla \times \vec{j}_M ) = \\
+    & = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_b + \nabla \cdot \vec{j}_b = \\
+    & = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_P + \nabla \cdot ( \vec{j}_P + \vec{j}_M ) = \\
+    & = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_P + \nabla \cdot ( \vec{j}_P + \nabla \times \vec{m} ) = \\
   $$
 
-  since $\nabla \cdot \nabla \times \vec{m} \equiv 0$, and keeping separated the contributions of free and bound charges,
+  Since $\nabla \cdot \nabla \times \vec{m} \equiv 0$, and keeping separated the contributions of free and bound charges, two continuity equations follow for free and bound charges,
 
   $$\begin{aligned}
      & \partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \\
      & \partial_t \rho_P + \nabla \cdot \vec{j}_P = 0 \\ \\
-     & \rightarrow \qquad \vec{j}_P = \partial_t \vec{p} \ .
   \end{aligned}$$
 
+As $\rho_P = - \nabla \cdot \vec{p}$, it follows the expression of the polarization current as a function of polarization field $\vec{j}_P = \partial_t \vec{p}$.
 
-- and into Ampére-Maxwell's law
+**Maxwell-Ampére equation.** Introducing the expression of the electric field as a function of the dielectric field and polarization, and the expression of the polarization and magnetization currents
   
   $$\begin{aligned}
     \vec{0}
     & = \nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} - \mu_0 \vec{j} = \\
     & = \nabla \times \vec{b} - \mu_0 \, \partial_t \left( \vec{d} - \vec{p} \right) - \mu_0 \vec{j}_f - \mu_0 \partial_t \vec{p} - \mu_0 \nabla \times \vec{m} \\
-    & = \nabla \times \left( \vec{b} - \mu_0 \vec{m} \right) - \ mu_0 \, \partial_t \vec{d} - \mu_0 \vec{j}_f \\ \\ 
-    & \rightarrow \qquad \nabla \times \vec{h}  - \, \partial_t \vec{d} = \vec{j}_f \ ,
+    & = \nabla \times \left( \vec{b} - \mu_0 \vec{m} \right) - \mu_0 \, \partial_t \vec{d} - \mu_0 \vec{j}_f \\ \\ 
+    & \rightarrow \qquad \nabla \times \vec{h}  - \, \partial_t \vec{d} = \vec{j}_f \\
   \end{aligned}$$
 
-  where $\vec{h} := \vec{b} - \mu_0 \vec{m}$, the **magnetic field strength**.
+  habing introduced the **magnetic field strength**, $\vec{h} := \dfrac{1}{\mu_0} \vec{b} - \vec{m}$.
 
 <!--
 ## Continuous Media
@@ -112,10 +113,10 @@ $$\begin{cases}
 Integral form of Maxwell's equations
 
 $$\begin{cases}
- \displaystyle \oint_{\partial V} \vec{d} \cdot \hat{\vec{n}} = \int_{V} \rho_f \\
- \displaystyle \oint_{\partial S} \vec{e} \cdot \hat{\vec{t}} + \dfrac{d}{dt} \int_S \vec{b} \cdot \hat{\vec{n}} = 0 \\
- \displaystyle \oint_{\partial V} \vec{b} \cdot \hat{\vec{n}} = 0 \\
- \displaystyle \oint_{\partial S} \vec{h} \cdot \hat{\vec{t}} - \dfrac{d}{dt} \int_S \vec{d} \cdot \hat{\vec{n}} = \int_{S} \vec{j}_f \cdot \hat{\vec{n}} \\
+ \displaystyle \oint_{\partial V} \vec{d} \cdot \hat{n} = \int_{V} \rho_f \\
+ \displaystyle \oint_{\partial S} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_S \vec{b} \cdot \hat{n} = 0 \\
+ \displaystyle \oint_{\partial V} \vec{b} \cdot \hat{n} = 0 \\
+ \displaystyle \oint_{\partial S} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_S \vec{d} \cdot \hat{n} = \int_{S} \vec{j}_f \cdot \hat{n} \\
 \end{cases}$$
 
 - control volume

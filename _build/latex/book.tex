@@ -85,7 +85,7 @@
         
 
 \title{Classical Electromagnetism and Principles of Electrical Engineering}
-\date{Apr 30, 2025}
+\date{May 05, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -312,7 +312,7 @@ These three derivative rules are listed here and proved in the material about \s
 \sphinxstylestrong{Gauss’s Law for the Field \(\vec{d}(\vec{r},t)\).}
 \begin{equation*}
 \begin{split}
-    \oint_{\partial v_t} \vec{d} \cdot \hat{n} = \int_{v_t} \rho
+    \oint_{\partial v_t} \vec{d} \cdot \hat{n} = \int_{v_t} \rho^f
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
@@ -341,16 +341,16 @@ with the definition \(\vec{e}^* := \vec{e} + \vec{v}_b \cdot \vec{b}\), already 
 \sphinxstylestrong{Ampère–Maxwell Law.}
 \begin{equation*}
 \begin{split}\begin{aligned}
-    \vec{0} & = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} - \int_{s_t} \vec{j} \cdot \hat{n} = \\
-    & = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} + \int_{s_t} \underbrace{\nabla \cdot \vec{d}}_{=\rho} \, \vec{v}_b \cdot \hat{n} - \oint_{s_t} \vec{v}_b \times \vec{d} \cdot \hat{t} - \int_{s_t} \vec{j} \cdot \hat{n} =  \\
+    \vec{0} & = \oint_{\partial S} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{S} \vec{d} \cdot \hat{n} - \int_{S} \vec{j}^f \cdot \hat{n} = \\
+    & = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} + \int_{s_t} \underbrace{\nabla \cdot \vec{d}}_{=\rho^f} \, \vec{v}_b \cdot \hat{n} - \oint_{s_t} \vec{v}_b \times \vec{d} \cdot \hat{t} - \int_{s_t} \vec{j}^f \cdot \hat{n} =  \\
 \end{aligned}\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}
-    \oint_{\partial s_t} \vec{h}^* \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} = \int_{s_t} \vec{j}^* \cdot \hat{n} \ ,
+    \oint_{\partial s_t} \vec{h}^* \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} = \int_{s_t} \vec{j}^{f*} \cdot \hat{n} \ ,
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-having defined \(\vec{h}^* := \vec{h} - \vec{v}_b \times \vec{d}\), and using the previously introduced definition \(\vec{j}^* := \vec{j} - \rho \vec{v}_b\).
+having defined \(\vec{h}^* := \vec{h} - \vec{v}_b \times \vec{d}\), and using the previously introduced definition \(\vec{j}^{f*} := \vec{j}^f - \rho^f \vec{v}_b\).
 
 \sphinxAtStartPar
 Adding the definitions:
@@ -371,11 +371,41 @@ one obtains equations having the same form as those written for stationary domai
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-are nothing more than the transformation of the fields for two observers in relative motion, and correspond to the low\sphinxhyphen{}speed limit of Lorentz transformations from special relativity for velocities \(|\vec{v}_b| \ll c\): in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein’s theory of relativity.
+are nothing more than the transformation of the fields for two observers in relative motion, and correspond to the \sphinxstylestrong{low\sphinxhyphen{}speed limit} of \sphinxhref{https://basics2022.github.io/bbooks-physics-modern/ch/relativity-special/lorentz.html\#inertial-reference-frames-and-lorentz-s-transformations}{Lorentz transformations from special relativity} for velocities \(|\vec{v}_b| \ll c\), and Lorentz’s factor \(\gamma \sim 1\): in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein’s theory of relativity.
 
 \sphinxAtStartPar
 \sphinxstylestrong{todo} Reference Galilean and Lorentz transformations for relativity in electromagnetism.
 
+\sphinxAtStartPar
+\sphinxstylestrong{todo} Sistematic power expansion
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} Take into account higher\sphinxhyphen{}order contributions
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \rho^*    & = \rho    - \dfrac{\vec{j}}{c^2} + \text{terms coming from $\gamma c \rho$} \\
+  \vec{d}^* & = \vec{d} - \dfrac{\vec{h} \times \vec{v}}{c^2} + \text{terms coming from $(1-\gamma) \hat{v} \hat{v} \cdot \vec{d}$}  \\
+  \vec{b}^* & = \vec{b} + \dfrac{\vec{e} \times \vec{v}}{c^2} + \text{terms coming from $(1-\gamma) \hat{v} \hat{v} \cdot \vec{b}$}  \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} Relativity of polarization and magnetization
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{p} 
+  := & \  \vec{d} - \varepsilon_0 \vec{e} = \\
+   = & \  \vec{d}^* + \dfrac{\vec{h} \times \vec{v}}{c^2} - \varepsilon_0 \left( \vec{e}^* + \vec{b} \times \vec{v} \right) = \\
+   = & \  \vec{d}^* - \varepsilon_0 \vec{e}^* + \left( \dfrac{\vec{h}}{c^2} - \varepsilon_0 \vec{b} \right) \times \vec{v} = \\ 
+   = & \  \vec{p}^* - \dfrac{ \vec{m} \times \vec{v}}{c^2} \ .
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{m} 
+  := & \ \dfrac{1}{\mu_0} \vec{b} - \vec{h} = \\
+   = & \ \dfrac{1}{\mu_0} \vec{b}^* + \dfrac{1}{\mu_0} \dfrac{\vec{v} \times \vec{e}}{c^2} - \vec{h}^* - \vec{v} \times \vec{d} = \\ \\
+   = & \ \vec{m}^* - \vec{v} \times \vec{p} \ .
+\end{aligned}\end{split}
+\end{equation*}
 
 \bigskip\hrule\bigskip
 
@@ -418,18 +448,14 @@ Introducing the splitting of free and bound charge and current into the equation
 \partial_t \rho + \nabla \cdot \vec{j} = 0
 \qquad , \qquad
 \begin{cases}
-\nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
+\nabla \cdot \vec{e} = d\frac{\rho}{\varepsilon_0} \\
 \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
 \nabla \cdot \vec{b} = 0 \\
 \nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} = \mu_0 \vec{j}
 \end{cases}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-and more precisely
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-into Gauss’ law for the electric field
+\sphinxstylestrong{Gauss’ law for the electric field, and the dielectric field.}
 \begin{equation*}
 \begin{split}\begin{aligned}
     & 0  = \nabla \cdot \vec{e} - \frac{\rho}{\varepsilon_0} = \nabla \cdot \vec{e} - \frac{\rho_f - \nabla \cdot \vec{p}}{\varepsilon_0}  \\ \\
@@ -439,41 +465,41 @@ into Gauss’ law for the electric field
 \sphinxAtStartPar
 with \(\vec{d} = \varepsilon_0 \vec{e} + \vec{p}\) defined as the \sphinxstylestrong{displacement field}.
 
-\item {} 
 \sphinxAtStartPar
-into continuity equation
+\sphinxstylestrong{Continuity equation of electric charge.}
 \begin{equation*}
 \begin{split}
     0 
     & = \partial_t \rho + \nabla \cdot \vec{j} = \\
-    & = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_b + \nabla \cdot ( \vec{j}_P + \nabla \times \vec{j}_M ) = \\
+    & = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_b + \nabla \cdot \vec{j}_b = \\
+    & = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_P + \nabla \cdot ( \vec{j}_P + \vec{j}_M ) = \\
+    & = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_P + \nabla \cdot ( \vec{j}_P + \nabla \times \vec{m} ) = \\
   \end{split}
 \end{equation*}
 \sphinxAtStartPar
-since \(\nabla \cdot \nabla \times \vec{m} \equiv 0\), and keeping separated the contributions of free and bound charges,
+Since \(\nabla \cdot \nabla \times \vec{m} \equiv 0\), and keeping separated the contributions of free and bound charges, two continuity equations follow for free and bound charges,
 \begin{equation*}
 \begin{split}\begin{aligned}
      & \partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \\
      & \partial_t \rho_P + \nabla \cdot \vec{j}_P = 0 \\ \\
-     & \rightarrow \qquad \vec{j}_P = \partial_t \vec{p} \ .
   \end{aligned}\end{split}
 \end{equation*}
-\item {} 
 \sphinxAtStartPar
-and into Ampére\sphinxhyphen{}Maxwell’s law
+As \(\rho_P = - \nabla \cdot \vec{p}\), it follows the expression of the polarization current as a function of polarization field \(\vec{j}_P = \partial_t \vec{p}\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{Maxwell\sphinxhyphen{}Ampére equation.} Introducing the expression of the electric field as a function of the dielectric field and polarization, and the expression of the polarization and magnetization currents
 \begin{equation*}
 \begin{split}\begin{aligned}
     \vec{0}
     & = \nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} - \mu_0 \vec{j} = \\
     & = \nabla \times \vec{b} - \mu_0 \, \partial_t \left( \vec{d} - \vec{p} \right) - \mu_0 \vec{j}_f - \mu_0 \partial_t \vec{p} - \mu_0 \nabla \times \vec{m} \\
-    & = \nabla \times \left( \vec{b} - \mu_0 \vec{m} \right) - \ mu_0 \, \partial_t \vec{d} - \mu_0 \vec{j}_f \\ \\ 
-    & \rightarrow \qquad \nabla \times \vec{h}  - \, \partial_t \vec{d} = \vec{j}_f \ ,
+    & = \nabla \times \left( \vec{b} - \mu_0 \vec{m} \right) - \mu_0 \, \partial_t \vec{d} - \mu_0 \vec{j}_f \\ \\ 
+    & \rightarrow \qquad \nabla \times \vec{h}  - \, \partial_t \vec{d} = \vec{j}_f \\
   \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-where \(\vec{h} := \vec{b} - \mu_0 \vec{m}\), the \sphinxstylestrong{magnetic field strength}.
-
-\end{itemize}
+habing introduced the \sphinxstylestrong{magnetic field strength}, \(\vec{h} := \dfrac{1}{\mu_0} \vec{b} - \vec{m}\).
 
 
 
@@ -513,10 +539,10 @@ Differential form of Maxwell’s equations
 Integral form of Maxwell’s equations
 \begin{equation*}
 \begin{split}\begin{cases}
- \displaystyle \oint_{\partial V} \vec{d} \cdot \hat{\vec{n}} = \int_{V} \rho_f \\
- \displaystyle \oint_{\partial S} \vec{e} \cdot \hat{\vec{t}} + \dfrac{d}{dt} \int_S \vec{b} \cdot \hat{\vec{n}} = 0 \\
- \displaystyle \oint_{\partial V} \vec{b} \cdot \hat{\vec{n}} = 0 \\
- \displaystyle \oint_{\partial S} \vec{h} \cdot \hat{\vec{t}} - \dfrac{d}{dt} \int_S \vec{d} \cdot \hat{\vec{n}} = \int_{S} \vec{j}_f \cdot \hat{\vec{n}} \\
+ \displaystyle \oint_{\partial V} \vec{d} \cdot \hat{n} = \int_{V} \rho_f \\
+ \displaystyle \oint_{\partial S} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_S \vec{b} \cdot \hat{n} = 0 \\
+ \displaystyle \oint_{\partial V} \vec{b} \cdot \hat{n} = 0 \\
+ \displaystyle \oint_{\partial S} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_S \vec{d} \cdot \hat{n} = \int_{S} \vec{j}_f \cdot \hat{n} \\
 \end{cases}\end{split}
 \end{equation*}\begin{itemize}
 \item {} 
@@ -2275,7 +2301,7 @@ or, defining \(P^{vi, ext}\) the power exchanged with the external environment t
 {\hyperref[\detokenize{ch/circuits-electromagnetic:classical-electromagnetism-circuits-electromagnetic}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Electromagnetic circuits}}}}}. Circuit approximation of electromagnetic circuit is discussed for systems working in slow regimes, where the contribution of the displacement current density is negligible, \(\partial_t \vec{d} = 0\). Kirchhoff law’s for magnetic circuits are stated in terms of magnetic flux, magnetomotive force and reluctance, under the (\sphinxstylestrong{strong?} no hysteresis) assumption of linear and non dispersive constitutive law, \(\vec{b} = \mu \vec{h}\). Electromagnetic models of transformers are discussed.
 
 \sphinxAtStartPar
-{\hyperref[\detokenize{ch/circuits-electromechanic:classical-electromagnetism-circuits-electromechanic}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Electromechanical systems}}}}}. Electromagnetic and mechanical phenomena interact in electromechanical systems. These systems usually convert electrical inputsto create mechanical power (e.g. electric motors), or viceversa convert mechanical power into electromagnetic energy or power (e.g. electric generators).
+{\hyperref[\detokenize{ch/circuits-electromechanic-old:classical-electromagnetism-circuits-electromechanic}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Electromechanical systems}}}}}. Electromagnetic and mechanical phenomena interact in electromechanical systems. These systems usually convert electrical inputsto create mechanical power (e.g. electric motors), or viceversa convert mechanical power into electromagnetic energy or power (e.g. electric generators).
 
 \sphinxAtStartPar
 {\hyperref[\detokenize{ch/electrical-engineering-networks:classical-electromagnetism-electrical-engineering-newtork-analysis}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{Network analysis}}}}}. Classical methods in the analyses are discussed. This section contains {\hyperref[\detokenize{ch/electrical-engineering-exercises:classical-electromagnetism-electrical-engineering-exercises}]{\sphinxcrossref{\DUrole{std,std-ref}{\sphinxstylestrong{exercises with solution}}}}} taken from exams at Politecnico di Milano.
@@ -2644,25 +2670,23 @@ If a short circuit occurs in an entire loop, it is traversed by infinite current
 \sphinxstepscope
 
 
-
-
-\section{Electromagnetic induction in circuit approximation}
+\section{Electromagnetic Induction in Circuit Approximation}
 \label{\detokenize{ch/circuits-electric-induction:electromagnetic-induction-in-circuit-approximation}}\label{\detokenize{ch/circuits-electric-induction:classical-electromagnetism-circuits-electric-induction}}\label{\detokenize{ch/circuits-electric-induction::doc}}
 \sphinxAtStartPar
-E’ possibile applicare l’approssimazione circuitale anche in presenza di regioni in cui non è possibile trascurare il termine \(\partial_t \mathbf{b}\), come ad esempio circuiti elettromagnetici che coinvolgono trasformatori e/o motori o generatori elettrici.
+It is possible to apply the circuit approximation even in the presence of regions where the term \(\partial_t \mathbf{b}\) cannot be neglected, such as in electromagnetic circuits involving transformers, motors, or electric generators.
 
 \sphinxAtStartPar
-In queste situazioni, se è possibile identificare una regione \(V_0\) dello spazio connessa nella quale il termine \(\partial_t \mathbf{b} = \mathbf{0}\), e quindi \(\nabla \times \mathbf{e} = \mathbf{0}\), in \(V_0\) è possibile definire il campo elettrico in termini di un potenziale \(\varphi\),
+In these situations, if it is possible to identify a connected region \(V_0\) in space where \(\partial_t \mathbf{b} = \mathbf{0}\), and therefore \(\nabla \times \mathbf{e} = \mathbf{0}\), it is possible to define the electric field in terms of a potential \(\varphi\) in \(V_0\):
 \begin{equation*}
 \begin{split}\mathbf{e} = - \nabla \varphi \qquad , \qquad \mathbf{r} \in V_0 \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-E’ possibile calcolare le differenze di potenziale ai morsetti di un sistema in cui \(\delta_t \mathbf{b} \ne 0\), racchiuso nel volume \(V_k\), con la legge di Faraday,
+It is possible to calculate the potential differences at the terminals of a system where \(\partial_t \mathbf{b} \ne 0\), enclosed in the volume \(V_k\), using Faraday’s law:
 \begin{equation*}
 \begin{split}\oint_{\ell_k} \mathbf{e} \cdot \hat{\mathbf{t}} = - \frac{d}{dt} \int_{S_k} \mathbf{b} \cdot \hat{\mathbf{n}} \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-dove il percorso chiuso \(\ell_k = \ell_k^{cond} \cup \ell_k^{mors}\) descrive il conduttore in \(V_k\) chiuso dalla linea geometrica tra i morsetti. Se si può trascurare la resistività del conduttore in \(V_k\), \(\int_{\ell_k^{cond}} \mathbf{e} \cdot \hat{\mathbf{t}} = 0\), la differenza di tensione ai morsetti vale
+where the closed path \(\ell_k = \ell_k^{cond} \cup \ell_k^{mors}\) describes the conductor in \(V_k\) closed by the geometric line between the terminals. If the resistivity of the conductor in \(V_k\) can be neglected, \(\int_{\ell_k^{cond}} \mathbf{e} \cdot \hat{\mathbf{t}} = 0\), the voltage difference at the terminals is:
 \begin{equation*}
 \begin{split}\Delta v_k = \int_{\ell^{mors}_k} \mathbf{e} \cdot \hat{\mathbf{t}} = - \frac{d}{dt} \int_{S_k} \mathbf{b} \cdot \hat{\mathbf{n}}\end{split}
 \end{equation*}
@@ -2735,137 +2759,133 @@ A Graetz bridge with diodes. Oscillations are reduced using capacitors and induc
 \sphinxstepscope
 
 
-
-
-\chapter{Circuiti elettromagnetici}
-\label{\detokenize{ch/circuits-electromagnetic:circuiti-elettromagnetici}}\label{\detokenize{ch/circuits-electromagnetic:classical-electromagnetism-circuits-electromagnetic}}\label{\detokenize{ch/circuits-electromagnetic::doc}}
+\chapter{Electromagnetic Circuits}
+\label{\detokenize{ch/circuits-electromagnetic:electromagnetic-circuits}}\label{\detokenize{ch/circuits-electromagnetic:classical-electromagnetism-circuits-electromagnetic}}\label{\detokenize{ch/circuits-electromagnetic::doc}}
 \sphinxAtStartPar
-Sotto opportune ipotesi è possibile usare un modello circuitale anche per sistemi elettromagnetici, come ad esempio i trasformatori, o i motori elettrici.
+Under appropriate assumptions, it is possible to use a circuit model for electromagnetic systems, such as transformers or electric motors.
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-legge di Gauss per il campo magnetico
+\sphinxstylestrong{Gauss’s Law for Magnetic Fields:}
 \begin{equation*}
-\begin{split}\nabla \cdot \mathbf{b} = 0\end{split}
+\begin{split}\nabla \cdot \vec{b} = 0\end{split}
 \end{equation*}
 \item {} 
 \sphinxAtStartPar
-legge di Ampére\sphinxhyphen{}Maxwell
+\sphinxstylestrong{Ampère\sphinxhyphen{}Maxwell’s Law:}
 \begin{equation*}
-\begin{split}\nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j}\end{split}
+\begin{split}\nabla \times \vec{h} - \partial_t \vec{d} = \vec{j}\end{split}
 \end{equation*}
 \end{itemize}
 
 \sphinxAtStartPar
-Si aggiungono le seguenti ipotesi:
+Additional assumptions include:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-materiali lineari non\sphinxhyphen{}dissipativi e non\sphinxhyphen{}dispersivi \(\mathbf{b} = \mu \mathbf{h}\) \sphinxstylestrong{todo} discutere questa ipotesi, insieme a isteresi materiali, cicli di magnetizzazione,….
+Linear, non\sphinxhyphen{}dissipative, and non\sphinxhyphen{}dispersive materials: \(\vec{b} = \mu \vec{h}\) \sphinxstylestrong{todo} discuss this assumption, along with material hysteresis, magnetization cycles, etc..
 
 \item {} 
 \sphinxAtStartPar
-variazioni del campo \(\mathbf{d}\) nel tempo trascurabili, \(\partial_t \mathbf{d} = \mathbf{0}\).
+Negligible time variations of the field \(\vec{d}\), i.e., \(\partial_t \vec{d} = \vec{0}\).
 
 \end{itemize}
 
 \sphinxAtStartPar
-La legge di Gauss del campo magnetico in forma integrale permette di scrivere la \sphinxstylestrong{legge ai nodi} del flusso del campo magnetico per i circuiti magnetici,
+The integral form of Gauss’s law for the magnetic field allows writing the \sphinxstylestrong{node law} for the magnetic field flux in magnetic circuits:
 \begin{equation*}
-\begin{split}0 = \oint_{\partial V} \mathbf{b} \cdot \hat{\mathbf{n}} = \sum_k \phi_k \ .\end{split}
+\begin{split}0 = \oint_{\partial V} \vec{b} \cdot \hat{\vec{n}} = \sum_k \phi_k \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-La legge di Ampére\sphinxhyphen{}Maxwell in forma integrale considerando:
+The integral form of Ampère\sphinxhyphen{}Maxwell’s law, considering:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-un percorso incatenato con il solo induttore
+A path linked only with the inductor:
 \begin{equation*}
-\begin{split}\int_{\ell_{ind}} \mathbf{h} \cdot \hat{\mathbf{t}} + \int_{\ell_{12}} \mathbf{h} \cdot \hat{\mathbf{t}} = \oint_{\ell_{1}} \mathbf{h} \cdot \hat{\mathbf{t}} = \int_{S^{ind}} \mathbf{j} \cdot \hat{\mathbf{n}} =  N i =: m\end{split}
+\begin{split}\int_{\ell_{ind}} \vec{h} \cdot \hat{\vec{t}} + \int_{\ell_{12}} \vec{h} \cdot \hat{\vec{t}} = \oint_{\ell_{1}} \vec{h} \cdot \hat{\vec{t}} = \int_{S^{ind}} \vec{j} \cdot \hat{\vec{n}} =  N i =: m\end{split}
 \end{equation*}
 \item {} 
 \sphinxAtStartPar
-un percorso incatenato con il traferro, aggirando l’induttore
+A path linked with the air gap, bypassing the inductor:
 \begin{equation*}
-\begin{split}0 = \int_{\ell_{traf}} \mathbf{h} \cdot \hat{\mathbf{t}} + \int_{\ell_{21}} \hat{h} \cdot \hat{\mathbf{t}} = \sum_{k} h_k \ell_k + \int_{\ell_{21}} \hat{h} \cdot \hat{\mathbf{t}}\end{split}
+\begin{split}0 = \int_{\ell_{traf}} \vec{h} \cdot \hat{\vec{t}} + \int_{\ell_{21}} \hat{h} \cdot \hat{\vec{t}} = \sum_{k} h_k \ell_k + \int_{\ell_{21}} \hat{h} \cdot \hat{\vec{t}}\end{split}
 \end{equation*}
 \end{itemize}
 
 \sphinxAtStartPar
-e sommando le due equazioni, riconoscendo che i due integrali di linea sullo stesso percorsoin versi opposti si annullano, si ottiene la \sphinxstylestrong{legge alle maglie} per i circuiti magnetici
+By summing these two equations and recognizing that the two line integrals over the same path in opposite directions cancel each other out, we obtain the \sphinxstylestrong{loop law} for magnetic circuits:
 \begin{equation*}
 \begin{split}\begin{aligned}
-  m & = \int_{\ell_{ind}} \mathbf{h} \cdot \hat{\mathbf{t}} + \int_{\ell_{traf}} \mathbf{h} \cdot \hat{\mathbf{t}} = \\
-    & \approx \sum_{k \in \ell} h_k \, \ell_k 
-      = \sum_{k \in \ell} \frac{b_k}{\mu_k} \, \ell_k 
-      = \sum_{k \in \ell} \frac{\ell_k}{\mu_k \, A_k} \, \phi_k  \ .
+  m & = \int_{\ell_{ind}} \vec{h} \cdot \hat{\vec{t}} + \int_{\ell_{traf}} \vec{h} \cdot \hat{\vec{t}} \\
+    & \approx \sum_{k \in \ell} h_k \, \ell_k \\
+    & = \sum_{k \in \ell} \frac{b_k}{\mu_k} \, \ell_k \\
+    & = \sum_{k \in \ell} \frac{\ell_k}{\mu_k \, A_k} \, \phi_k \ .
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Le leggi di Kirchhoff per i circuiti magnetici sono quindi
+Kirchhoff’s laws for magnetic circuits are therefore:
 \begin{equation*}
 \begin{split}\begin{cases}
-  \sum_{k \in N_j} \phi_k = 0 \\ \\
+  \sum_{k \in N_j} \phi_k = 0 \\
   m_{\ell_i} = \sum_{k \in \ell_i} \theta_k \phi_k \ ,
 \end{cases}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-avendo introdotto la riluttanza \(\theta_k = \frac{\ell_k}{\mu_k \, A_k}\), l’inverso della permeanza \(\Lambda_k = \theta_k^{-1}\).
+where \(\theta_k = \frac{\ell_k}{\mu_k \, A_k}\) is the reluctance, the inverse of the permeance \(\Lambda_k = \theta_k^{-1}\).
 
 \sphinxstepscope
 
 
-
-
-\section{Trasformatore}
-\label{\detokenize{ch/circuits-electromagnetic-transformer:trasformatore}}\label{\detokenize{ch/circuits-electromagnetic-transformer:classical-electromagnetism-circuits-electromagnetic-transformer}}\label{\detokenize{ch/circuits-electromagnetic-transformer::doc}}\begin{itemize}
+\section{Transformer}
+\label{\detokenize{ch/circuits-electromagnetic-transformer:transformer}}\label{\detokenize{ch/circuits-electromagnetic-transformer:classical-electromagnetism-circuits-electromagnetic-transformer}}\label{\detokenize{ch/circuits-electromagnetic-transformer::doc}}\begin{itemize}
 \item {} 
 \sphinxAtStartPar
-flusso del campo magnetico, nell’ipotesi di campo uniforme, o in termini del campo medio
+Magnetic field flux, assuming a uniform field or in terms of the average field:
 \begin{equation*}
 \begin{split}\phi = b \, A\end{split}
 \end{equation*}
 \item {} 
 \sphinxAtStartPar
-flusso del campo magnetico concatenato a \(N\) avvolgimenti
+Magnetic field flux linked to \(N\) windings:
 \begin{equation*}
 \begin{split}\psi = N \, \phi\end{split}
 \end{equation*}
 \item {} 
 \sphinxAtStartPar
-relazione tra tensione ai morsetti dell’induttore e flusso concatenato, applicando la {\hyperref[\detokenize{ch/circuits-electric-induction:classical-electromagnetism-circuits-electric-induction}]{\sphinxcrossref{\DUrole{std,std-ref}{legge di Faraday solo in parte irrotazionali}}}}
+Relationship between the voltage at the inductor terminals and the linked flux, applying {\hyperref[\detokenize{ch/circuits-electric-induction:classical-electromagnetism-circuits-electric-induction}]{\sphinxcrossref{\DUrole{std,std-ref}{Faraday’s law to irrotational parts}}}}:
 \begin{equation*}
 \begin{split}v = \dot{\psi}\end{split}
 \end{equation*}
 \end{itemize}
 
 
-\subsection{Trasformatore ideale}
-\label{\detokenize{ch/circuits-electromagnetic-transformer:trasformatore-ideale}}
+\subsection{Ideal Transformer}
+\label{\detokenize{ch/circuits-electromagnetic-transformer:ideal-transformer}}
 \sphinxAtStartPar
-In assenza di flussi dispersi e riluttanza nel traferro, la legge alle maglie nel traferro implica
+In the absence of stray fluxes and reluctance in the air gap, the loop law in the air gap implies:
 \begin{equation*}
 \begin{split}0 = m_1 + m_2 = N_1 \, i_1 + N_2 \, i_2\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Il flusso del campo magnetico può essere scritto in funzione del flusso concatenato agli avvolgimenti,
+The magnetic field flux can be written in terms of the flux linked to the windings:
 \begin{equation*}
 \begin{split}\phi = \frac{\psi_1}{N_1} = \frac{\psi_2}{N_2}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-La derivata nel tempo di questa relazione, con numero di avvolgimenti costanti nel tempo, implica
+The time derivative of this relation, with a constant number of windings over time, implies:
 \begin{equation*}
 \begin{split}\frac{v_2}{N_2} = \frac{v_1}{N_1} \ .\end{split}
 \end{equation*}
 
-\subsection{Trasformatore con flussi dispersi}
-\label{\detokenize{ch/circuits-electromagnetic-transformer:trasformatore-con-flussi-dispersi}}\begin{equation*}
+\subsection{Transformer with Stray Fluxes}
+\label{\detokenize{ch/circuits-electromagnetic-transformer:transformer-with-stray-fluxes}}\begin{equation*}
 \begin{split}\begin{cases}
- & \phi_1 - \phi_{1,d} = \phi \\
- & \phi_2 - \phi_{2,d} = \phi \\
- & m_1 = \theta_{1,d} \phi_{1,d} \\
- & m_2 = \theta_{2,d} \phi_{2,d} \\
- & m_1 + m_2 = 0
+  \phi_1 - \phi_{1,d} = \phi \\
+  \phi_2 - \phi_{2,d} = \phi \\
+  m_1 = \theta_{1,d} \phi_{1,d} \\
+  m_2 = \theta_{2,d} \phi_{2,d} \\
+  m_1 + m_2 = 0
 \end{cases}\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}\rightarrow \qquad 0 = m_1 + m_2 = N_1 \, i_1 + N_2 \, i_2\end{split}
@@ -2877,32 +2897,424 @@ La derivata nel tempo di questa relazione, con numero di avvolgimenti costanti n
 \end{equation*}\begin{equation*}
 \begin{split}\rightarrow \qquad \frac{\psi_2}{N_2} - \frac{m_2}{\theta_{2,d}} = \frac{\psi_1}{N_1} - \frac{m_1}{\theta_{1,d}} \ .\end{split}
 \end{equation*}\begin{equation*}
-\begin{split}\rightarrow \qquad \frac{1}{N_2} \left( v_2 - \frac{N_2^2}{\theta_{2,d}} \dfrac{d i_2}{d t} \right) =  
+\begin{split}\rightarrow \qquad \frac{1}{N_2} \left( v_2 - \frac{N_2^2}{\theta_{2,d}} \dfrac{d i_2}{d t} \right) =
                      \frac{1}{N_1} \left( v_1 - \frac{N_1^2}{\theta_{1,d}} \dfrac{d i_1}{d t} \right)  \ .\end{split}
 \end{equation*}
 
-\subsection{Trasformatore con flussi dispersi e riluttanza \protect\(\theta_{Fe}\protect\) nel traferro}
-\label{\detokenize{ch/circuits-electromagnetic-transformer:trasformatore-con-flussi-dispersi-e-riluttanza-theta-fe-nel-traferro}}\begin{equation*}
+\subsection{Transformer with Stray Fluxes and Reluctance \protect\(\theta_{Fe}\protect\) in the Air Gap}
+\label{\detokenize{ch/circuits-electromagnetic-transformer:transformer-with-stray-fluxes-and-reluctance-theta-fe-in-the-air-gap}}\begin{equation*}
 \begin{split}\begin{cases}
- & \phi_{1} - \phi_{1,d} = \phi \\
- & \phi_{2} - \phi_{2,d} = \phi \\
- & m_{1} = \theta_{1,d} \phi_{1,d} \\
- & m_{2} = \theta_{2,d} \phi_{2,d} \\
- & m_1   + m_{2} = \theta_{Fe} \, \phi
+  \phi_{1} - \phi_{1,d} = \phi \\
+  \phi_{2} - \phi_{2,d} = \phi \\
+  m_{1} = \theta_{1,d} \phi_{1,d} \\
+  m_{2} = \theta_{2,d} \phi_{2,d} \\
+  m_1 + m_2 = \theta_{Fe} \, \phi
 \end{cases}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{todo} finire e controllare i conti; disegnare circuito equivalente
-
-
+\sphinxstylestrong{todo} complete and verify the calculations; draw the equivalent circuit
 
 \sphinxstepscope
 
 
 
 
-\chapter{Electromechanical Circuits}
-\label{\detokenize{ch/circuits-electromechanic:electromechanical-circuits}}\label{\detokenize{ch/circuits-electromechanic:classical-electromagnetism-circuits-electromechanic}}\label{\detokenize{ch/circuits-electromechanic::doc}}
+\chapter{Electromechanical Systems}
+\label{\detokenize{ch/systems-electromechanic:electromechanical-systems}}\label{\detokenize{ch/systems-electromechanic:classical-electromagnetism-systems-electromechanic}}\label{\detokenize{ch/systems-electromechanic::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{Energy}
+
+\sphinxAtStartPar
+\sphinxstylestrong{Examples}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+simple electromechanical systems: rudimentary electrical motor/generator
+
+\item {} 
+\sphinxAtStartPar
+locks
+
+\item {} 
+\sphinxAtStartPar
+DC motors
+
+\item {} 
+\sphinxAtStartPar
+AC motors
+
+\end{itemize}
+
+
+
+\sphinxstepscope
+
+
+\section{Energy balance in electromechanic systems}
+\label{\detokenize{ch/systems-electromechanic-energy:energy-balance-in-electromechanic-systems}}\label{\detokenize{ch/systems-electromechanic-energy:classical-electromagnetism-systems-electromechanic-energy}}\label{\detokenize{ch/systems-electromechanic-energy::doc}}
+
+
+\sphinxstepscope
+
+
+\section{Electromechanic systems: examples}
+\label{\detokenize{ch/systems-electromechanic-examples:electromechanic-systems-examples}}\label{\detokenize{ch/systems-electromechanic-examples:classical-electromagnetism-systems-electromechanic-examples}}\label{\detokenize{ch/systems-electromechanic-examples::doc}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Simple examples
+
+\item {} 
+\sphinxAtStartPar
+Electromagnetic lock
+
+\item {} 
+\sphinxAtStartPar
+DC motors
+
+\item {} 
+\sphinxAtStartPar
+AC motors
+
+\end{itemize}
+
+\sphinxstepscope
+
+
+\subsection{Electromechanic systems: first examples with induction}
+\label{\detokenize{ch/systems-electromechanic-induction-intro:electromechanic-systems-first-examples-with-induction}}\label{\detokenize{ch/systems-electromechanic-induction-intro:classical-electromagnetism-systems-electromechanic-examples-simple}}\label{\detokenize{ch/systems-electromechanic-induction-intro::doc}}
+\sphinxAtStartPar
+In this section first examples of electromechanical systems converting mechanical and electromagnetic power and viceversa exploiting \sphinxstylestrong{electromagnetic induction} are discussed. These examples can be interpreted as rudimentary models of motors or generators. Electromagnetic induction is governed by Faraday’s law
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 
+  & = \oint_{\partial s_t} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} = \\
+  & = \oint_{\partial s_t} \vec{e}   \cdot \hat{t} +               \int_{s_t} \partial_t \vec{b} \cdot \hat{n}  \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+as derived from integral form of governing equations on arbitrary domain \(s_t\) (\sphinxstylestrong{todo} \sphinxstyleemphasis{add link}), that can move in space, with the definition of
+\begin{equation*}
+\begin{split}\vec{e}^* = \vec{e} - \vec{b} \times \vec{v}_b \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+and \(\vec{v}_b\) is the velocity of the point of the boundary of the surface \(\partial s_t\). As shown in the examples of this section, a time\sphinxhyphen{}varying flux of the magnetic field may induce:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{electromotive force} resulting in
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+voltage difference at the electric port of an open circuit, \(v = \dfrac{d \psi(\vec{b})}{d t}\),
+
+\item {} 
+\sphinxAtStartPar
+current in a closed loop, \(i = \dfrac{v}{R} = \dfrac{1}{R} \dfrac{d \psi(\vec{b})}{d t}\),
+
+\end{itemize}
+
+\sphinxAtStartPar
+being the flux \(\psi = N A B \cos \alpha\) of uniform magnetic field across a \(N\)\sphinxhyphen{}winding loop of area \(A\) in a plane with unit normal vectro forming an angle \(\alpha\) with the magnetic field;
+
+\item {} 
+\sphinxAtStartPar
+\sphinxstylestrong{force} on conductors, either moving conductors or conductors with electric current, governed by the expression of \sphinxstylestrong{Lorentz’s force},
+\begin{equation*}
+\begin{split}\vec{f} = \rho \vec{e} - \vec{j} \times \vec{b}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+or in integral form (elementary on the length of the conductor only) with no net charge
+\begin{equation*}
+\begin{split}d \vec{F} = - i \vec{b} \times \hat{t} \, d \ell \ .\end{split}
+\end{equation*}
+\end{itemize}
+
+
+\subsubsection{Simple loop with moving side in a constant and uniform magnetic field}
+\label{\detokenize{ch/systems-electromechanic-induction-intro:simple-loop-with-moving-side-in-a-constant-and-uniform-magnetic-field}}
+\sphinxAtStartPar
+Mechanical sub\sphinxhyphen{}system
+\begin{equation*}
+\begin{split}m \ddot{x} = F^{ext} + F^{em}_x\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Faraday’s law (with Ohm’s law \(\vec{e}^* = \rho_R \vec{j}^*\), and negligible resistance of the circuit except for the section \(l_R\); it’s possible to use the equivalent form of Faraday’s law, on the second line of the first equation of this section)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 
+  & = \oint_{\partial s_t} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} = \\
+  & = \int_{l_R} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \left( B a x \right) = \\
+  & = R i + B a \dot{x} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Faraday’s experience, or consequence of Lorentz’s force
+\begin{equation*}
+\begin{split}F^{em}_x = i B a = - \dfrac{(B a)^2}{R} \dot{x} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Inserting into the mechanical sub\sphinxhyphen{}system, even without self\sphinxhyphen{}inductance, the electromagnetic effects appears as a damping term
+\begin{equation*}
+\begin{split}\begin{aligned}
+  m \ddot{x} & = F^{ext} - \dfrac{(B a)^2}{R} \dot{x} \\ 
+  m \ddot{x} + \dfrac{(B a)^2}{R} \dot{x} & = F^{ext} \\ 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Show force acting on the moving side of the circuit starting from Lorentz’s force
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+discuss the motion of a rod in a magnetic field, without connection to a circuit; discuss electric charge distribution
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+as \(\partial_t \vec{b} = 0\), it’s possible to use potential \(v\) to define the electromagnetic field \(\vec{e} = - \nabla v\)
+
+\end{itemize}
+
+
+\subsubsection{Rotating loop in a constant and uniform magnetic field}
+\label{\detokenize{ch/systems-electromechanic-induction-intro:rotating-loop-in-a-constant-and-uniform-magnetic-field}}
+\sphinxAtStartPar
+…
+\begin{equation*}
+\begin{split}0 = R i + \dfrac{d}{dt} \left( A B \cos \alpha \right) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+…
+
+
+\subsubsection{Simple loop in a time\sphinxhyphen{}varying magnetic field}
+\label{\detokenize{ch/systems-electromechanic-induction-intro:simple-loop-in-a-time-varying-magnetic-field}}
+\sphinxAtStartPar
+A time\sphinxhyphen{}dependent magnetic flux may induce electric current in an electric circuit…
+
+\sphinxAtStartPar
+…
+
+\sphinxAtStartPar
+Faraday’s law (with Ohm’s law \(\vec{e}^* = \rho_R \vec{j}^*\), and negligible resistance of the circuit except for the section \(l_R\);…)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 
+  & = \oint_{\partial s_t} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} = \\
+  & = \int_{l_R} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \left( B A \right) = \\
+  & = R i + A \dot{B} \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having here assumed that the area of the circuit is constant, and the circuit is planar in a plane with unit normal vector aligned with \(\vec{b} = B(t) \hat{z}\)
+
+\sphinxstepscope
+
+
+\subsection{Electromechanic lock}
+\label{\detokenize{ch/systems-electromechanic-lock:electromechanic-lock}}\label{\detokenize{ch/systems-electromechanic-lock:classical-electromagnetism-systems-electromechanic-examples-lock}}\label{\detokenize{ch/systems-electromechanic-lock::doc}}
+
+\subsubsection{C\sphinxhyphen{}shaped magnetic circuit}
+\label{\detokenize{ch/systems-electromechanic-lock:c-shaped-magnetic-circuit}}
+\sphinxAtStartPar
+Mechanical sub\sphinxhyphen{}system
+\begin{equation*}
+\begin{split}m \ddot{x} + c \dot{x} + k x = F^{ext} + F^{em}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Electromagnetic sub\sphinxhyphen{}system, with no dispersed flux and non\sphinxhyphen{}negligible reactance of the ferromagnetic medium
+\begin{equation*}
+\begin{split}\begin{aligned}
+  e   & = R i + v_L \\
+  v_L & = \dfrac{d \psi}{dt} = \dfrac{d \left( N \phi \right)}{d t} \\
+  N i = m & = \left( \theta_{Fe} + 2 \theta_0(x) \right) \phi = \\
+          & = \left( \theta_{Fe} + 2 \dfrac{x}{\mu_0 A} \right) \phi \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Assuming no dispersed flux and conservative conversion of electromagnetic power to mechanical power, the expression of the force \(F^{em}\) acting on the mechanical system due to electromagnetic phenomena is derived from energy balance equation,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 
+  & = \dot{x} \left( m \ddot{x} + c \dot{x} + k x - F^{ext} - F^{em} \right) + i \left( R i - e + \dfrac{d}{dt} \left( \dfrac{N^2}{\theta(x)} \, i \right) \right) \\
+  & = \dot{x} \left( m \ddot{x} + c \dot{x} + k x - F^{ext} - F^{em} \right) + i \left( R i - e + \dfrac{d}{dt} \left( L(x) \, i \right) \right) \\
+  & = \dfrac{d}{dt} \left( \dfrac{1}{2} m \dot{x}^2 + \dfrac{1}{2} k x^2 + \dfrac{1}{2} L i^2 \right) + c \dot{x}^2 + R i^2 - \dot{x} F^{ext} - e i - \dot{x} \left( F^{em} - \partial_x \left( \dfrac{1}{2} L i^2 \right) \right)
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  F^{em} = \dfrac{1}{2} \partial_x L i^2
+  & = - \dfrac{1}{2} \dfrac{N^2}{\theta^2(x)} \theta'(x) i^2 = \\
+  & = - \dfrac{1}{2} \dfrac{N^2 i^2}{\theta^2(x)} \dfrac{2}{\mu_0 A} = \\
+  & = - \dfrac{1}{2} \dfrac{N^2 i^2}{\left( \theta_{Fe} + \frac{2 x}{\mu_0 A} \right)^2} \dfrac{2}{\mu_0 A} = \\
+  & = - 2 \dfrac{1}{2 \mu_0 A} \phi^2(x,i) \ ,
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that the force produce by each of the two gaps is
+\begin{equation*}
+\begin{split}F^{em}_{gap} = -\dfrac{\phi^2(x,i)}{2 \mu_0 A} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Find general expression of the force at each gap. Is it possible to find such an expression?
+
+\item {} 
+\sphinxAtStartPar
+Example: electromagnetic lock
+
+\end{itemize}
+
+\sphinxstepscope
+
+
+\subsection{DC motors}
+\label{\detokenize{ch/systems-electromechanic-motor-dc:dc-motors}}\label{\detokenize{ch/systems-electromechanic-motor-dc:classical-electromagnetism-systems-electromechanic-examples-dc-motor}}\label{\detokenize{ch/systems-electromechanic-motor-dc::doc}}
+\sphinxAtStartPar
+Electric subsystem in potential regions
+\begin{equation*}
+\begin{split}e = R i + v\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Electromagnetic induction
+\begin{equation*}
+\begin{split}v_L = -\int_{\ell} \vec{e} \cdot \hat{t} = - \oint_{\partial S} \vec{e} \cdot \hat{t} = \dfrac{d}{dt}\int_{S} \vec{b} \cdot \hat{n} \end{split}
+\end{equation*}
+\sphinxAtStartPar
+Mechanical sub\sphinxhyphen{}system
+\begin{equation*}
+\begin{split}I \ddot{\alpha} = C^{em} + C^{load} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(C^{em} = F b \cos \alpha\), and \(F = i_L B a\).
+
+\sphinxAtStartPar
+\sphinxstylestrong{No commutation, neglecting the self\sphinxhyphen{}induction}. With no commutation, \(i = i_L\), \(v = v_L\) and thus the magnetic flux reads
+\begin{equation*}
+\begin{split}\int_{S} \vec{b} \cdot \hat{n} = - B a b \sin \alpha = - B A \sin \alpha \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+so that its time derivative and the voltage different at the port reads
+\begin{equation*}
+\begin{split}v_L = \dot{\alpha} B A \cos \alpha \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Current in the circuit reads
+\begin{equation*}
+\begin{split}i = \dfrac{1}{R} \left( e - v \right) = \dfrac{1}{R} \left( e - \dot{\alpha} B A \cos \alpha \right) \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+electromagnetic torque
+\begin{equation*}
+\begin{split}C^{em} = i_L B A \cos \alpha =  \dfrac{BA}{R} \cos \alpha \left( e - \dot{\alpha} B A \cos \alpha \right)\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{With commutation.} \(i_L = i \cdot \text{sign} \{ \cos \alpha \}\), \(v = v_L \cdot \text{sign} \{ \cos \alpha \}\)
+\begin{equation*}
+\begin{split}\begin{aligned}
+  C^{em} = i_L B A \cos \alpha
+  & =  \text{sign} \{ \alpha \} \cdot \dfrac{BA}{R} \cos \alpha \left( e - \dot{\alpha} B A \cos \alpha \cdot \text{sign} \{ \alpha \} \right) = \\
+  & = \dfrac{BA}{R} \left| \cos \alpha \right| \, e - \cos^2 \alpha  \dfrac{(BA)^2}{R} \, \dot{\alpha} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Multiple windings.} With \(N\) windings equally spaced \(\Delta \theta = \frac{\pi}{N}\), \(\alpha_n = \alpha + \frac{n}{N} \pi\), are connected in series, quantities in the DC motor become so regular that can be approximated with their \sphinxstylestrong{average value} on a turn of the motor,
+\begin{equation*}
+\begin{split}v = \dot{\alpha} B A \sum_{n} |\cos  \alpha_n| \simeq \dot{\alpha} \frac{2 N BA}{\pi}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}i_L = i = \frac{1}{R}\left( e - \dfrac{2 N BA}{\pi} \dot{\alpha} \right) \end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  C^{em} = i_L B A \sum_k \left| \cos \alpha_k \right|
+  & \simeq \dfrac{2 N}{\pi} BA \dfrac{1}{R}  \left( e - \dfrac{2N}{\pi} BA \dot{\alpha} \right) = \\
+  & =      \dfrac{1}{R} \dfrac{2 N BA}{\pi} e - \dfrac{1}{R} \left(\dfrac{2N BA}{\pi} \right)^2 \dot{\alpha} \ .
+\end{aligned}\end{split}
+\end{equation*}
+
+
+\sphinxAtStartPar
+The dynamical system of a brushed DC motor then are
+\begin{equation*}
+\begin{split}\begin{aligned}
+  I \ddot{\alpha} & = C^{load} + C^{em} \\ 
+               e  & = R i + v
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstyleemphasis{Energy balance.} Multiplying the mechanical equation by \(\dot{\alpha}\) and circuit equation by \(i\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 
+  & = \dot{\alpha} \left( I \ddot{\alpha} - C^{load} - C^{em} \right) - i \left( e - R i - v \right) = \\
+  & = \dot{\alpha} \left( I \ddot{\alpha} - C^{load} - i \dfrac{2 N BA}{\pi}  \right) - i \left( e - R i - \dfrac{2 N B A}{\pi} \dot{\alpha} \right) = \\
+  & = \dfrac{d}{dt} \left( \dfrac{1}{2} I \dot{\alpha}^2 \right) - C^{load} \dot{\alpha} + e i - R i^2 
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+energy balance equation can be written as
+\begin{equation*}
+\begin{split}
+  \dfrac{d}{dt} \left( \dfrac{1}{2} I \dot{\alpha}^2 \right) - R i^2 =  C^{load} \dot{\alpha} + e i \ ,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where power of external actions on the system and the internal dissipation \(R i^2\) equals the time derivative of the kinetic energy. Here the conversion of electromagnetic power to mechanical power is conservative, except for the dissipation loss in resistors.
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+better on average and different connections
+
+\item {} 
+\sphinxAtStartPar
+add pictures
+
+\item {} 
+\sphinxAtStartPar
+more on energy balance
+
+\item {} 
+\sphinxAtStartPar
+add self\sphinxhyphen{}inductance, being
+\begin{equation*}
+\begin{split}\begin{aligned}
+     v_L = \dfrac{d \psi}{d t}
+     & = \dfrac{d}{d t}\left( \widetilde{N} \phi \right) = \\
+     & = \dfrac{d}{d t} \left( \widetilde{N} \left( B A \sin \alpha + \phi_d \right) \right) = \\
+     & = \dfrac{d}{d t} \left( B A \widetilde{N} \sin \alpha \right) + \dfrac{d}{dt} \left( L i \right)  = \\
+     & = \dot{\alpha} \, B A \widetilde{N} \cos \alpha + \dfrac{d}{dt} \left( L i \right) \ .
+   \end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(\phi_d = \dfrac{\widetilde{N} i}{\theta}\) the dispersed flux producing self\sphinxhyphen{}induction, and \(L = \dfrac{\widetilde{N}^2}{\theta}\) the self\sphinxhyphen{}inductance. KVL equation on the electric circuit gives
+\begin{equation*}
+\begin{split}e = R i + v = R i + L \dfrac{d}{dt} (i ) + K \dot{\alpha} \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having introduced average quantities for multiple windings. \sphinxstylestrong{todo} define \(\widetilde{N}\) for multiple windings
+
+\end{itemize}
+
+\sphinxstepscope
+
+
+\subsection{AC motors}
+\label{\detokenize{ch/systems-electromechanic-motor-ac:ac-motors}}\label{\detokenize{ch/systems-electromechanic-motor-ac:classical-electromagnetism-systems-electromechanic-examples-ac-motor}}\label{\detokenize{ch/systems-electromechanic-motor-ac::doc}}
+\sphinxstepscope
+
+
+
+
+\section{Electromechanical Systems \sphinxhyphen{} OLD}
+\label{\detokenize{ch/circuits-electromechanic-old:electromechanical-systems-old}}\label{\detokenize{ch/circuits-electromechanic-old:classical-electromagnetism-circuits-electromechanic}}\label{\detokenize{ch/circuits-electromechanic-old::doc}}
 \sphinxAtStartPar
 Some systems of interest and widespread use in modern society exploit the interactions between electromagnetic and mechanical phenomena: a fundamental example is electric machines, some of which can operate both as motors (with power supplied by the electrical system and converted into mechanical power) and as generators of electrical energy (converting mechanical power into electrical power).
 
@@ -2930,8 +3342,8 @@ In general, in electromechanical circuits, reluctances are not constant paramete
 \end{equation*}
 \sphinxAtStartPar
 The inductance matrix \(\mathbf{L}\) is symmetric \sphinxstylestrong{todo} \sphinxstyleemphasis{Proof}
-\label{ch/circuits-electromechanic:example-0}
-\begin{sphinxadmonition}{note}{Example 10.1}
+\label{ch/circuits-electromechanic-old:example-0}
+\begin{sphinxadmonition}{note}{Example 10.3.1}
 
 
 
@@ -3049,8 +3461,8 @@ The dynamical equation of the wire is
 \end{equation*}\end{sphinxadmonition}
 
 
-\section{Conservative Electromechanical Systems}
-\label{\detokenize{ch/circuits-electromechanic:conservative-electromechanical-systems}}
+\subsection{Conservative Electromechanical Systems}
+\label{\detokenize{ch/circuits-electromechanic-old:conservative-electromechanical-systems}}
 \sphinxAtStartPar
 The equations governing the electromechanical system, without capacitors, can generally be written as
 \begin{equation*}
@@ -3068,7 +3480,7 @@ In terms of energy,
 \end{equation*}
 \sphinxAtStartPar
 In the case of constant mass, damping, and stiffness matrices, and using the product rule to obtain a term of the derivative of the energy of the inductors exploiting the symmetry of \(\mathbf{L}\),
-\begin{equation}\label{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:energy-mech-0}
+\begin{equation}\label{equation:ch/circuits-electromechanic-old:classical-electromagnetism:circuits-electromechanic:energy-mech-0}
 \begin{split} \begin{aligned}
 \dfrac{d}{dt} \left[ \frac{1}{2} \mathbf{i}^T \mathbf{L} \mathbf{i} \right]
   & = \mathbf{i}^T \dfrac{d}{dt} \left( \mathbf{L} \, \mathbf{i} \right) + \frac{1}{2} \mathbf{i}^T \dfrac{d \mathbf{L}}{dt} \mathbf{i} = \\
@@ -3087,14 +3499,14 @@ one can write an equation of macroscopic mechanical energy balance, \(E^{mec, in
 \end{equation*}
 \sphinxAtStartPar
 Assuming the process is conservative, the form of the forces due to electromagnetic phenomena is derived,
-\begin{equation}\label{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:f-em}
+\begin{equation}\label{equation:ch/circuits-electromechanic-old:classical-electromagnetism:circuits-electromechanic:f-em}
 \begin{split}\mathbf{f}^{em} = \nabla_{\mathbf{x}} E^{ind}(\mathbf{x}, \mathbf{i}) \ .\end{split}
 \end{equation}
 
-\section{Governing Equations}
-\label{\detokenize{ch/circuits-electromechanic:governing-equations}}
+\subsection{Governing Equations}
+\label{\detokenize{ch/circuits-electromechanic-old:governing-equations}}
 \sphinxAtStartPar
-Using the expression \eqref{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:f-em} of the mechanical actions due to electromagnetic effects, the system equations are
+Using the expression \eqref{equation:ch/circuits-electromechanic-old:classical-electromagnetism:circuits-electromechanic:f-em} of the mechanical actions due to electromagnetic effects, the system equations are
 \begin{equation*}
 \begin{split}\begin{cases}
   \mathbf{M} \ddot{\mathbf{x}} + \mathbf{D} \dot{\mathbf{x}} + \mathbf{K} \mathbf{x} - \nabla_{\mathbf{x}} E^{ind}(\mathbf{x}, \mathbf{i})  = \mathbf{f}^{ext} \\
@@ -3110,13 +3522,13 @@ or in the general case
 \end{cases}\end{split}
 \end{equation*}
 
-\section{Energy Balance}
-\label{\detokenize{ch/circuits-electromechanic:energy-balance}}
+\subsection{Energy Balance}
+\label{\detokenize{ch/circuits-electromechanic-old:energy-balance}}
 
-\subsection{Macroscopic Mechanical Energy}
-\label{\detokenize{ch/circuits-electromechanic:macroscopic-mechanical-energy}}
+\subsubsection{Macroscopic Mechanical Energy}
+\label{\detokenize{ch/circuits-electromechanic-old:macroscopic-mechanical-energy}}
 \sphinxAtStartPar
-Using the expression \eqref{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:f-em} of the mechanical actions due to electromagnetic phenomena, the relation \eqref{equation:ch/circuits-electromechanic:classical-electromagnetism:circuits-electromechanic:energy-mech-0} can be rewritten as a macroscopic mechanical energy balance of the system,
+Using the expression \eqref{equation:ch/circuits-electromechanic-old:classical-electromagnetism:circuits-electromechanic:f-em} of the mechanical actions due to electromagnetic phenomena, the relation \eqref{equation:ch/circuits-electromechanic-old:classical-electromagnetism:circuits-electromechanic:energy-mech-0} can be rewritten as a macroscopic mechanical energy balance of the system,
 \begin{equation*}
 \begin{split}\dfrac{d}{dt} \left[ \dfrac{1}{2} \dot{\mathbf{x}}^T \mathbf{M} \dot{\mathbf{x}} + \dfrac{1}{2} \mathbf{x}^T \mathbf{K} \mathbf{x} + \dfrac{1}{2} \mathbf{i}^T \mathbf{L} \mathbf{i} \right] = \dot{\mathbf{x}}^T \mathbf{f}^{ext} + \mathbf{i}^T \mathbf{e} - \dot{\mathbf{x}}^T \mathbf{D} \dot{\mathbf{x}} - \mathbf{i}^T \mathbf{R} \mathbf{i} \ , \end{split}
 \end{equation*}
@@ -3126,8 +3538,8 @@ and therefore
 \begin{split}\dot{E}^{mec} = P^{ext} - \dot{D} \ .\end{split}
 \end{equation*}
 
-\subsection{Kinetic Energy}
-\label{\detokenize{ch/circuits-electromechanic:kinetic-energy}}
+\subsubsection{Kinetic Energy}
+\label{\detokenize{ch/circuits-electromechanic-old:kinetic-energy}}
 \sphinxAtStartPar
 The macroscopic mechanical energy can be written as the sum of the kinetic energy and the internal potential energy of the system, \(E^{mec} = K + V^{int}\). The time derivative of the potential energy of the internal actions is the opposite of the power of the conservative internal actions, \(P^{int, c} = - \dot{V}^{int}\); the dissipation is the opposite of the power of the non\sphinxhyphen{}conservative internal actions, \(P^{int, nc} = - \dot{D}\). The total power of the internal actions can therefore be written as
 \begin{equation*}
@@ -3136,24 +3548,24 @@ The macroscopic mechanical energy can be written as the sum of the kinetic energ
 \begin{split}\dot{K} = \dot{E}^{mec} - \dot{V}^{int} = P^{ext} \underbrace{- \dot{D} - \dot{V}^{int}}_{=P^{int}} \  \end{split}
 \end{equation*}
 
-\subsection{Total Energy}
-\label{\detokenize{ch/circuits-electromechanic:total-energy}}
+\subsubsection{Total Energy}
+\label{\detokenize{ch/circuits-electromechanic-old:total-energy}}
 \sphinxAtStartPar
 The first principle of thermodynamics provides the total energy balance equation of a closed system,
 \begin{equation*}
 \begin{split}\dot{E}^{tot} = P^{ext} + \dot{Q}^{ext} \ .\end{split}
 \end{equation*}
 
-\subsection{Internal Energy}
-\label{\detokenize{ch/circuits-electromechanic:internal-energy}}
+\subsubsection{Internal Energy}
+\label{\detokenize{ch/circuits-electromechanic-old:internal-energy}}
 \sphinxAtStartPar
 The internal energy of a system is defined as the difference between the total energy and the macroscopic kinetic energy, \(E := E^{tot} - K\). The internal energy balance equation of a closed system is
 \begin{equation*}
 \begin{split}\dot{E} = Q^{ext} - P^{int} \ .\end{split}
 \end{equation*}
 
-\subsection{Thermal (Microscopic) Internal Energy}
-\label{\detokenize{ch/circuits-electromechanic:thermal-microscopic-internal-energy}}
+\subsubsection{Thermal (Microscopic) Internal Energy}
+\label{\detokenize{ch/circuits-electromechanic-old:thermal-microscopic-internal-energy}}
 \sphinxAtStartPar
 If the thermal internal energy, corresponding to the kinetic energy associated with microscopic dynamics, is defined as the difference between internal energy and internal potential energy, or the difference between total energy and macroscopic mechanical energy,
 \begin{equation*}
@@ -5733,7 +6145,7 @@ Quantum
 \begin{sphinxtheindex}
 \let\bigletter\sphinxstyleindexlettergroup
 \bigletter{example\sphinxhyphen{}0}
-\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/circuits\sphinxhyphen{}electromechanic}\sphinxstyleindexpageref{ch/circuits-electromechanic:\detokenize{example-0}}
+\item\relax\sphinxstyleindexentry{example\sphinxhyphen{}0}\sphinxstyleindexextra{ch/circuits\sphinxhyphen{}electromechanic\sphinxhyphen{}old}\sphinxstyleindexpageref{ch/circuits-electromechanic-old:\detokenize{example-0}}
 \indexspace
 \bigletter{harmonic:effective\sphinxhyphen{}values}
 \item\relax\sphinxstyleindexentry{harmonic:effective\sphinxhyphen{}values}\sphinxstyleindexextra{ch/electrical\sphinxhyphen{}engineering\sphinxhyphen{}networks\sphinxhyphen{}harmonic}\sphinxstyleindexpageref{ch/electrical-engineering-networks-harmonic:\detokenize{harmonic:effective-values}}
