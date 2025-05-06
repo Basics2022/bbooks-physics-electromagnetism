@@ -24,7 +24,7 @@ $$\begin{aligned}
 
 As it will shown below, the bound current can be written as the divergence of the polarization field $\vec{p}$, representing the volume density fo the dipole distribution, and the magnetization current as the curl of the magnetization field $\vec{m}$,
 
-$$\rho_p = - \nabla \cdot \vec{p} \quad , \quad \vec{j}_M = \nabla \times \vec{m} \ .$$
+$$\rho_p = - \nabla \cdot \vec{p} \quad , \quad \vec{j}_p = \partial_t \vec{p} \quad , \quad \vec{j}_M = \nabla \times \vec{m} \ .$$
 
 (classical-electromagnetism:media:vacuum-to-matter)=
 ## Equations of electromagnetism in matter
@@ -35,15 +35,14 @@ $$
 \partial_t \rho + \nabla \cdot \vec{j} = 0
 \qquad , \qquad
 \begin{cases}
-\nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
+\nabla \cdot \vec{e} = d\frac{\rho}{\varepsilon_0} \\
 \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
 \nabla \cdot \vec{b} = 0 \\
 \nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} = \mu_0 \vec{j}
 \end{cases}$$
 
-and more precisely 
 
-- into Gauss' law for the electric field
+**Gauss' law for the electric field, and the dielectric field.**
 
   $$\begin{aligned}
     & 0  = \nabla \cdot \vec{e} - \frac{\rho}{\varepsilon_0} = \nabla \cdot \vec{e} - \frac{\rho_f - \nabla \cdot \vec{p}}{\varepsilon_0}  \\ \\
@@ -52,34 +51,36 @@ and more precisely
 
   with $\vec{d} = \varepsilon_0 \vec{e} + \vec{p}$ defined as the **displacement field**. 
 
-- into continuity equation
+**Continuity equation of electric charge.**
 
   $$
     0 
     & = \partial_t \rho + \nabla \cdot \vec{j} = \\
-    & = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_b + \nabla \cdot ( \vec{j}_P + \nabla \times \vec{j}_M ) = \\
+    & = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_b + \nabla \cdot \vec{j}_b = \\
+    & = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_P + \nabla \cdot ( \vec{j}_P + \vec{j}_M ) = \\
+    & = \partial_t \rho_f + \nabla \cdot \vec{j}_f + \partial_t \rho_P + \nabla \cdot ( \vec{j}_P + \nabla \times \vec{m} ) = \\
   $$
 
-  since $\nabla \cdot \nabla \times \vec{m} \equiv 0$, and keeping separated the contributions of free and bound charges,
+  Since $\nabla \cdot \nabla \times \vec{m} \equiv 0$, and keeping separated the contributions of free and bound charges, two continuity equations follow for free and bound charges,
 
   $$\begin{aligned}
      & \partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \\
      & \partial_t \rho_P + \nabla \cdot \vec{j}_P = 0 \\ \\
-     & \rightarrow \qquad \vec{j}_P = \partial_t \vec{p} \ .
   \end{aligned}$$
 
+As $\rho_P = - \nabla \cdot \vec{p}$, it follows the expression of the polarization current as a function of polarization field $\vec{j}_P = \partial_t \vec{p}$.
 
-- and into Ampére-Maxwell's law
+**Maxwell-Ampére equation.** Introducing the expression of the electric field as a function of the dielectric field and polarization, and the expression of the polarization and magnetization currents
   
   $$\begin{aligned}
     \vec{0}
     & = \nabla \times \vec{b} - \mu_0 \varepsilon_0 \partial_t \vec{e} - \mu_0 \vec{j} = \\
     & = \nabla \times \vec{b} - \mu_0 \, \partial_t \left( \vec{d} - \vec{p} \right) - \mu_0 \vec{j}_f - \mu_0 \partial_t \vec{p} - \mu_0 \nabla \times \vec{m} \\
-    & = \nabla \times \left( \vec{b} - \mu_0 \vec{m} \right) - \ mu_0 \, \partial_t \vec{d} - \mu_0 \vec{j}_f \\ \\ 
-    & \rightarrow \qquad \nabla \times \vec{h}  - \, \partial_t \vec{d} = \vec{j}_f \ ,
+    & = \nabla \times \left( \vec{b} - \mu_0 \vec{m} \right) - \mu_0 \, \partial_t \vec{d} - \mu_0 \vec{j}_f \\ \\ 
+    & \rightarrow \qquad \nabla \times \vec{h}  - \, \partial_t \vec{d} = \vec{j}_f \\
   \end{aligned}$$
 
-  where $\vec{h} := \vec{b} - \mu_0 \vec{m}$, the **magnetic field strength**.
+  habing introduced the **magnetic field strength**, $\vec{h} := \dfrac{1}{\mu_0} \vec{b} - \vec{m}$.
 
 <!--
 ## Continuous Media
@@ -95,44 +96,182 @@ In general, some materials respond to an imposed "external" electromagnetic fiel
 (classical-electromagnetism:media:differential)=
 ## Governing equations in differential form
 
-Differential form of Maxwell's equations
-
-$$\begin{cases}
+$$\begin{aligned}
+& \quad \partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \\ \\
+& \begin{cases}
  \nabla \cdot \vec{d} = \rho_f \\
  \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
  \nabla \cdot \vec{b} = 0 \\
  \nabla \times \vec{h} - \partial_t \vec{d} = \vec{j}_f
-\end{cases}$$
+\end{cases} \\
+\end{aligned}
+\qquad , \qquad
+\begin{aligned}
+& \quad \partial_t \rho + \nabla \cdot \vec{j} = 0 \\ \\
+& \begin{cases}
+ \nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
+ \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
+ \nabla \cdot \vec{b} = 0 \\
+ \nabla \times \vec{b} - \varepsilon_0 \mu_0 \partial_t \vec{e} = \mu_0 \vec{j}
+\end{cases} \\
+\end{aligned}$$
 
-**todo** *continuity equation for charge*
+with the splitting of charge and currents in free and bound (from both polarization and magnetization) contributions
+
+$$\begin{aligned}
+  \rho    & =   \rho_f +   \rho_p +   \rho_m \\
+  \vec{j} & =\vec{j}_f +\vec{j}_p +\vec{j}_m  \\
+\end{aligned}$$
+
+with the definition of polarization $\vec{p}$ and magnetization $\vec{m}$ fields
+
+$$\begin{aligned}
+  \vec{d} & = \varepsilon_0 \vec{e} + \vec{p} \\
+  \vec{b} & = \mu_0 \vec{h} + \mu_0 \vec{m} \\
+\end{aligned}$$
+
+with $\rho_p = - \nabla \cdot \vec{p}$, and $\vec{j}_m = \nabla \times \vec{m}$, and thus
+
+$$\begin{aligned}
+  \partial_t \rho_p + \nabla \cdot \vec{j}_p & = 0 \qquad \rightarrow \qquad \vec{j}_p = \partial_t \vec{p} \\
+  \partial_t \rho_m + \nabla \cdot \vec{j}_m & = 0 \qquad \rightarrow \qquad    \rho_m = 0                  \\
+\end{aligned}$$
 
 (classical-electromagnetism:media:integral)=
 ## Governing equation in integral form
 
+(classical-electromagnetism:media:integral:control-volume)=
+### Integral Form on Control Volumes
+
 Integral form of Maxwell's equations
 
 $$\begin{cases}
- \displaystyle \oint_{\partial V} \vec{d} \cdot \hat{\vec{n}} = \int_{V} \rho_f \\
- \displaystyle \oint_{\partial S} \vec{e} \cdot \hat{\vec{t}} + \dfrac{d}{dt} \int_S \vec{b} \cdot \hat{\vec{n}} = 0 \\
- \displaystyle \oint_{\partial V} \vec{b} \cdot \hat{\vec{n}} = 0 \\
- \displaystyle \oint_{\partial S} \vec{h} \cdot \hat{\vec{t}} - \dfrac{d}{dt} \int_S \vec{d} \cdot \hat{\vec{n}} = \int_{S} \vec{j}_f \cdot \hat{\vec{n}} \\
+ \displaystyle \oint_{\partial V} \vec{d} \cdot \hat{n} = \int_{V} \rho_f \\
+ \displaystyle \oint_{\partial S} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_S \vec{b} \cdot \hat{n} = 0 \\
+ \displaystyle \oint_{\partial V} \vec{b} \cdot \hat{n} = 0 \\
+ \displaystyle \oint_{\partial S} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_S \vec{d} \cdot \hat{n} = \int_{S} \vec{j}_f \cdot \hat{n} \\
 \end{cases}$$
 
-- control volume
-- arbitrary domain
-- low-speed relativity
+(classical-electromagnetism:media:integral:arbitrary-volume)=
+### Integral Form on Arbitrary Volumes
+
+Due to their importance in fundamental applications such as electric motors, and to avoid confusion or leaps in logic when dealing with electromagnetic induction, it is crucial to provide the correct expression of the electromagnetic principles when moving volumes are involved in space. Not only is the form of these principles shown, but also the correct procedure to derive them starting from the fixed-control-volume version. This is done using rules for [time derivative for fundamental integrals over moving domains](https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html), such as the integral of a density function over a volume, the flux of a vector field through a surface, or the circulation along a curve.
+
+These three derivative rules are listed here and proved in the material about [Mathematics](https://basics2022.github.io/bbooks-math-miscellanea/intro.html):Vector and Tensor Algebra and Calculus:[Time derivatives of integrals over moving domains](https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html)
+
+$$\begin{aligned}
+  \dfrac{d}{dt} \int_{v_t} f & = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \vec{v}_b \cdot \hat{n} & \text{(density)} \\
+  \dfrac{d}{dt} \int_{s_t} \vec{f} \cdot \hat{n} & = \int_{s_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{n} + \int_{s_t} \nabla \cdot \vec{f} \, \vec{v}_b \cdot \hat{n} - \oint_{\partial s_t} \vec{v}_b \times \vec{f} \cdot \hat{t} & \text{(flux)} \\
+  \dfrac{d}{dt} \int_{\ell_t} \vec{f} \cdot \hat{t} & = \int_{\ell_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{t} + \int_{\ell_t} \nabla \times \vec{f} \, \cdot \, \vec{v}_b \times \hat{t} + \vec{f}_B \cdot \vec{v}_B - \vec{f}_A \cdot \vec{v}_A & \text{(circulation)}
+\end{aligned}$$
+
+**Continuity of Electric Charge.**
+
+$$\begin{aligned}
+   0 & = \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \vec{j} \cdot \hat{n} = \\
+   & = \dfrac{d}{dt} \int_{v_t} \rho - \oint_{\partial v_t } \rho \vec{v}_b \cdot \hat{n} + \oint_{\partial v_t} \vec{j} \cdot \hat{n} 
+\end{aligned}$$
+
+$$
+    \dfrac{d}{dt} \int_{v_t} \rho + \oint_{\partial v_t} \underbrace{\rho (\vec{v} - \vec{v}_b)}_{\vec{j}^*} \cdot \hat{n} 
+$$
+
+**Gauss's Law for the Field $\vec{d}(\vec{r},t)$.**
+
+$$
+    \oint_{\partial v_t} \vec{d} \cdot \hat{n} = \int_{v_t} \rho^f
+$$
+
+**Gauss's Law for the Field $\vec{b}(\vec{r},t)$.**
+
+$$
+    \oint_{\partial v_t} \vec{b} \cdot \hat{n} = 0
+$$
+
+**Faraday–Neumann–Lenz Law for Electromagnetic Induction.**
+
+$$\begin{aligned}
+   \vec{0} & = \oint_{\partial S} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_{S} \vec{b} \cdot \hat{n} = \\
+    & = \oint_{\partial s_t} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} - \int_{s_t} \underbrace{\nabla \cdot \vec{b}}_{=0} \, \vec{v}_b \cdot \hat{n} + \oint_{s_t} \vec{v}_b \times \vec{b} \cdot \hat{t} =  \\
+\end{aligned}$$
+
+$$
+    \oint_{\partial s_t} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} \ ,
+$$
+with the definition $\vec{e}^* := \vec{e} + \vec{v}_b \times \vec{b}$, already used in the expression of the Lorentz force law.
+
+**Ampère–Maxwell Law.**
+
+$$\begin{aligned}
+    \vec{0} & = \oint_{\partial S} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{S} \vec{d} \cdot \hat{n} - \int_{S} \vec{j}_f \cdot \hat{n} = \\
+    & = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} + \int_{s_t} \underbrace{\nabla \cdot \vec{d}}_{=\rho_f} \, \vec{v}_b \cdot \hat{n} - \oint_{s_t} \vec{v}_b \times \vec{d} \cdot \hat{t} - \int_{s_t} \vec{j}_f \cdot \hat{n} =  \\
+\end{aligned}$$
+
+$$
+    \oint_{\partial s_t} \vec{h}^* \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} = \int_{s_t} \vec{j}_f^{*} \cdot \hat{n} \ ,
+$$
+
+having defined $\vec{h}^* := \vec{h} - \vec{v}_b \times \vec{d}$, and using the previously introduced definition $\vec{j}^{f*} := \vec{j}^f - \rho^f \vec{v}_b$.
+
+Adding the definitions:
+
+$$\begin{aligned}
+  \rho^*_f  &  = \rho_f  \\
+  \vec{d}^* &  = \vec{d}  \\
+  \vec{b}^* &  = \vec{b}
+\end{aligned}$$
+
+one obtains equations having the same form as those written for stationary domains in space, but which can be applied to moving domains. The definitions:
+
+$$\begin{aligned}
+\rho^*_f = \rho_f   \qquad & , \qquad \vec{j}^*_f = \vec{j}_f - \rho \vec{v}_b \\
+\vec{d}^* = \vec{d} \qquad & , \qquad \vec{e}^* = \vec{e} + \vec{v}_b \times \vec{b} \\
+\vec{b}^* = \vec{b} \qquad & , \qquad \vec{h}^* = \vec{h} - \vec{v}_b \times \vec{d} \\
+\end{aligned}$$
+
+are nothing more than the transformation of the fields for two observers in relative motion, and correspond to the **low-speed limit** of [Lorentz transformations from special relativity](https://basics2022.github.io/bbooks-physics-modern/ch/relativity-special/lorentz.html#inertial-reference-frames-and-lorentz-s-transformations) for velocities $|\vec{v}_b| \ll c$, and Lorentz's factor $\gamma \sim 1$: in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein's theory of relativity.
+
+**todo** Reference Galilean and Lorentz transformations for relativity in electromagnetism.
+
+**todo** Sistematic power expansion
+
+**todo** Take into account higher-order contributions
+
+$$\begin{aligned}
+  \rho^*    & = \rho    - \dfrac{\vec{j}}{c^2} + \text{terms coming from $\gamma c \rho$} \\
+  \vec{d}^* & = \vec{d} - \dfrac{\vec{h} \times \vec{v}}{c^2} + \text{terms coming from $(1-\gamma) \hat{v} \hat{v} \cdot \vec{d}$}  \\
+  \vec{b}^* & = \vec{b} + \dfrac{\vec{e} \times \vec{v}}{c^2} + \text{terms coming from $(1-\gamma) \hat{v} \hat{v} \cdot \vec{b}$}  \\
+\end{aligned}$$
+
+**todo** Relativity of polarization and magnetization
+
+$$\begin{aligned}
+  \vec{p} 
+  := & \  \vec{d} - \varepsilon_0 \vec{e} = \\
+   = & \  \vec{d}^* + \dfrac{\vec{h} \times \vec{v}}{c^2} - \varepsilon_0 \left( \vec{e}^* + \vec{b} \times \vec{v} \right) = \\
+   = & \  \vec{d}^* - \varepsilon_0 \vec{e}^* + \left( \dfrac{\vec{h}}{c^2} - \varepsilon_0 \vec{b} \right) \times \vec{v} = \\ 
+   = & \  \vec{p}^* - \dfrac{ \vec{m} \times \vec{v}}{c^2} \ .
+\end{aligned}$$
+
+$$\begin{aligned}
+  \vec{m} 
+  := & \ \dfrac{1}{\mu_0} \vec{b} - \vec{h} = \\
+   = & \ \dfrac{1}{\mu_0} \vec{b}^* + \dfrac{1}{\mu_0} \dfrac{\vec{v} \times \vec{e}}{c^2} - \vec{h}^* - \vec{v} \times \vec{d} = \\ \\
+   = & \ \vec{m}^* - \vec{v} \times \vec{p} \ .
+\end{aligned}$$
 
 (classical-electromagnetism:media:jump)=
 ## Jump Conditions
 
 Letting $V$ and $S$ "collapse on a discontinuity"...
 
-$$\begin{cases}
-  [ d_n ] = \sigma_f \\
-  [ e_t ] = 0 \\
-  [ b_n ] = 0 \\
-  [ h_t ] = \iota_f \ ,
-\end{cases}$$ (eq:em-jump)
+$$\begin{aligned}
+  \left[ j^*_n \right] & = 0         & \text{charge continuity} \\
+  [ d^*_n ] & = \sigma_f             & \text{Gauss' law for $\vec{d}^*$} \\
+  [ e^*_t ] & = 0                    & \text{Faraday's law} \\
+  [ b^*_n ] & = 0                    & \text{Gauss' law for $\vec{b}^*$} \\
+  [ h*_t ]  & = \iota^*_f            & \text{Ampére-Maxwell's law} 
+\end{aligned}$$ (eq:em-jump)
 
 being $\sigma_f$ and $\iota_f$ surface charge and current density, with physical dimension $\frac{\text{charge}}{\text{surface}}$, and $\frac{\text{current}}{\text{surface}}$ respectively. These contributions can be thought of as Dirac delta contributions in volume density, namely
 

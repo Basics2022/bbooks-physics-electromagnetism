@@ -59,6 +59,20 @@ $$\begin{aligned}
 
 having defined $\rho^*{(\vec{r}), t}$ $\vec{e}^*(\vec{r}, t)$ as the current desntiy and the electric field **as seen by the moving charge**
 
+```{admonition} Maxwell's equations and continuity equation of electric charge are overdetermined - proof with differential equations
+:class: tip
+
+Introducing (1) the time derivative of Gauss law of the electric field $\vec{e}(\vec{r},t)$ and Ampére-Maxwell law in the continuity equation of the electric charge 
+
+$$\begin{aligned}
+  0 & = \partial_t \rho + \nabla \cdot \vec{j} = && (1) \\
+    & = \varepsilon_0 \partial_t \nabla \cdot \vec{e} + \nabla \cdot \left(\dfrac{1}{\mu_0}\nabla \times \vec{b} - \varepsilon_0 \partial_t \vec{e} \right) = && (2) \\
+    & = 0
+\end{aligned}$$
+
+an identity appears as (2) the divergence of a curl is identically equal to zero. Thus, these equations are not linearly independent and the system is over-determined.
+```
+
 (classical-electromagnetism:principles:integral)=
 ## Principles in Integral Form: Electromagnetic Equations and Galilean Relativity
 
@@ -104,7 +118,7 @@ $$\begin{aligned}
 
 having introduced the speed of velocity in free space, $c_0 = \dfrac{1}{\sqrt{\varepsilon_0 \mu_0}}$.
 
-```{admonition} Maxwell's equations and continuity equation of electric charge are overdetermined
+```{admonition} Maxwell's equations and continuity equation of electric charge are overdetermined - proof with integral equations
 :class: tip
 
 Introducing (1) the time derivative of Gauss law of the electric field $\vec{e}(\vec{r},t)$ and (2) the Ampére-Maxwell law in the continuity equation of the electric charge 
@@ -127,9 +141,9 @@ Due to their importance in fundamental applications such as electric motors, and
 These three derivative rules are listed here and proved in the material about [Mathematics](https://basics2022.github.io/bbooks-math-miscellanea/intro.html):Vector and Tensor Algebra and Calculus:[Time derivatives of integrals over moving domains](https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html)
 
 $$\begin{aligned}
-  \dfrac{d}{dt} \int_{v_t} f & = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \vec{v}_b \cdot \hat{n} && \text{(density)} \\
-  \dfrac{d}{dt} \int_{s_t} \vec{f} \cdot \hat{n} & = \int_{s_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{n} + \int_{s_t} \nabla \cdot \vec{f} \, \vec{v}_b \cdot \hat{n} - \oint_{\partial s_t} \vec{v}_b \times \vec{f} \cdot \hat{t} && \text{(flux)} \\
-  \dfrac{d}{dt} \int_{\ell_t} \vec{f} \cdot \hat{t} & = \int_{\ell_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{t} + \int_{\ell_t} \nabla \times \vec{f} \, \cdot \, \vec{v}_b \times \hat{t} + \vec{f}_B \cdot \vec{v}_B - \vec{f}_A \cdot \vec{v}_A && \text{(circulation)}
+  \dfrac{d}{dt} \int_{v_t} f & = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \vec{v}_b \cdot \hat{n} & \text{(density)} \\
+  \dfrac{d}{dt} \int_{s_t} \vec{f} \cdot \hat{n} & = \int_{s_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{n} + \int_{s_t} \nabla \cdot \vec{f} \, \vec{v}_b \cdot \hat{n} - \oint_{\partial s_t} \vec{v}_b \times \vec{f} \cdot \hat{t} & \text{(flux)} \\
+  \dfrac{d}{dt} \int_{\ell_t} \vec{f} \cdot \hat{t} & = \int_{\ell_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{t} + \int_{\ell_t} \nabla \times \vec{f} \, \cdot \, \vec{v}_b \times \hat{t} + \vec{f}_B \cdot \vec{v}_B - \vec{f}_A \cdot \vec{v}_A & \text{(circulation)}
 \end{aligned}$$
 
 **Continuity of Electric Charge.**
@@ -143,10 +157,10 @@ $$
     \dfrac{d}{dt} \int_{v_t} \rho + \oint_{\partial v_t} \underbrace{\rho (\vec{v} - \vec{v}_b)}_{\vec{j}^*} \cdot \hat{n} 
 $$
 
-**Gauss's Law for the Field $\vec{d}(\vec{r},t)$.**
+**Gauss's Law for the Field $\vec{e}(\vec{r},t)$.**
 
 $$
-    \oint_{\partial v_t} \vec{d} \cdot \hat{n} = \int_{v_t} \rho
+    \oint_{\partial v_t} \vec{e} \cdot \hat{n} = \int_{v_t} \dfrac{\rho}{\varepsilon_0}
 $$
 
 **Gauss's Law for the Field $\vec{b}(\vec{r},t)$.**
@@ -165,38 +179,61 @@ $$\begin{aligned}
 $$
     \oint_{\partial s_t} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} \ ,
 $$
-with the definition $\vec{e}^* := \vec{e} + \vec{v}_b \cdot \vec{b}$, already used in the expression of the Lorentz force law.
+with the definition $\vec{e}^* := \vec{e} + \vec{v}_b \times \vec{b}$, already used in the expression of the Lorentz force law.
 
 **Ampère–Maxwell Law.**
 
 $$\begin{aligned}
-    \vec{0} & = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} - \int_{s_t} \vec{j} \cdot \hat{n} = \\
-    & = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} + \int_{s_t} \underbrace{\nabla \cdot \vec{d}}_{=\rho} \, \vec{v}_b \cdot \hat{n} - \oint_{s_t} \vec{v}_b \times \vec{d} \cdot \hat{t} - \int_{s_t} \vec{j} \cdot \hat{n} =  \\
+    \vec{0} & = \oint_{\partial S} \vec{b} \cdot \hat{t} - \varepsilon_0 \mu_0 \dfrac{d}{dt} \int_{S}  \vec{e} \cdot \hat{n} - \int_{S} \mu_0 \vec{j} \cdot \hat{n} = \\
+    & = \oint_{\partial s_t} \vec{b} \cdot \hat{t} - \varepsilon_0 \mu_0 \dfrac{d}{dt} \int_{s_t} \vec{e} \cdot \hat{n} + \varepsilon_0 \mu_0 \int_{s_t} \underbrace{\nabla \cdot \vec{e}}_{=\frac{\rho}{\varepsilon_0}} \, \vec{v}_b \cdot \hat{n} - \varepsilon_0 \mu_0 \oint_{s_t} \vec{v}_b \times \vec{e} \cdot \hat{t} -  \mu_0 \int_{s_t} \vec{j} \cdot \hat{n} =  \\
 \end{aligned}$$
 
 $$
-    \oint_{\partial s_t} \vec{h}^* \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} = \int_{s_t} \vec{j}^* \cdot \hat{n} \ ,
+    \oint_{\partial s_t} \vec{b}^{* *} \cdot \hat{t} - \varepsilon_0 \mu_0 \dfrac{d}{dt} \int_{s_t} \vec{e} \cdot \hat{n} = \mu_0 \int_{s_t} \vec{j}^{*} \cdot \hat{n} \ ,
 $$
 
-having defined $\vec{h}^* := \vec{h} - \vec{v}_b \times \vec{d}$, and using the previously introduced definition $\vec{j}^* := \vec{j} - \rho \vec{v}_b$.
+having defined $\vec{b}^{* *} := \vec{b} - \dfrac{\vec{v}_b \times \vec{e}}{c^2}$, and $\vec{j}^{*} := \vec{j} - \rho \vec{v}_b$.
 
-Adding the definitions:
-
-$$\begin{aligned}
-  \rho^*    &  = \rho  \\
-  \vec{d}^* &  = \vec{d}  \\
-  \vec{b}^* &  = \vec{b}
-\end{aligned}$$
-
-one obtains equations having the same form as those written for stationary domains in space, but which can be applied to moving domains. The definitions:
+The definition of fields
 
 $$\begin{aligned}
-\rho^* = \rho \qquad & , \qquad \vec{j}^* = \vec{j} - \rho \vec{v}_b \\
-\vec{d}^* = \vec{d} \qquad & , \qquad \vec{e}^* = \vec{e} + \vec{v}_b \times \vec{b} \\
-\vec{b}^* = \vec{b} \qquad & , \qquad \vec{h}^* = \vec{h} - \vec{v}_b \times \vec{d} \\
+     \rho^*     & = \\
+  \vec{j}^*     & = \\
+  \vec{e}^*     & = \\
+  \vec{b}^{* *} & = \\
 \end{aligned}$$
 
-are nothing more than the transformation of the fields for two observers in relative motion, and correspond to the low-speed limit of Lorentz transformations from special relativity for velocities $|\vec{v}_b| \ll c$: in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein's theory of relativity.
+provides nothing more than the transformation of the fields for two observers in relative motion, and correspond to the **low-speed limit** of [Lorentz transformations from special relativity](https://basics2022.github.io/bbooks-physics-modern/ch/relativity-special/lorentz.html#inertial-reference-frames-and-lorentz-s-transformations) for velocities $|\vec{v}_b| \ll c$, and Lorentz's factor $\gamma \sim 1$: in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein's theory of relativity.
+
+While here $\vec{b}$ contains a higher order term, and $\vec{e}$ appears in Ampére-Maxwell's law, a cleaner formulation of low-speed relativity in electromagnetism arises from balance equations of [electromagnetism in matter](classical-electromagnetism:principles:matter).
 
 **todo** Reference Galilean and Lorentz transformations for relativity in electromagnetism.
 
+**todo** Sistematic power expansion
+
+**todo** Take into account higher-order contributions
+
+<!--
+$$\begin{aligned}
+  \rho^*    & = \rho    - \dfrac{\vec{j}}{c^2} + \text{terms coming from $\gamma c \rho$} \\
+  \vec{d}^* & = \vec{d} - \dfrac{\vec{h} \times \vec{v}}{c^2} + \text{terms coming from $(1-\gamma) \hat{v} \hat{v} \cdot \vec{d}$}  \\
+  \vec{b}^* & = \vec{b} + \dfrac{\vec{e} \times \vec{v}}{c^2} + \text{terms coming from $(1-\gamma) \hat{v} \hat{v} \cdot \vec{b}$}  \\
+\end{aligned}$$
+
+**todo** Relativity of polarization and magnetization
+
+$$\begin{aligned}
+  \vec{p} 
+  := & \  \vec{d} - \varepsilon_0 \vec{e} = \\
+   = & \  \vec{d}^* + \dfrac{\vec{h} \times \vec{v}}{c^2} - \varepsilon_0 \left( \vec{e}^* + \vec{b} \times \vec{v} \right) = \\
+   = & \  \vec{d}^* - \varepsilon_0 \vec{e}^* + \left( \dfrac{\vec{h}}{c^2} - \varepsilon_0 \vec{b} \right) \times \vec{v} = \\ 
+   = & \  \vec{p}^* - \dfrac{ \vec{m} \times \vec{v}}{c^2} \ .
+\end{aligned}$$
+
+$$\begin{aligned}
+  \vec{m} 
+  := & \ \dfrac{1}{\mu_0} \vec{b} - \vec{h} = \\
+   = & \ \dfrac{1}{\mu_0} \vec{b}^* + \dfrac{1}{\mu_0} \dfrac{\vec{v} \times \vec{e}}{c^2} - \vec{h}^* - \vec{v} \times \vec{d} = \\ \\
+   = & \ \vec{m}^* - \vec{v} \times \vec{p} \ .
+\end{aligned}$$
+-->
