@@ -406,7 +406,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-electromagnetism-in-matter">2.2.1. Equations of electromagnetism in matter</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">2.2.2. Examples</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#governing-equations-in-differential-form">2.2.3. Governing equations in differential form</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#governing-equation-in-integral-form">2.2.4. Governing equation in integral form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#governing-equation-in-integral-form">2.2.4. Governing equation in integral form</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-form-on-control-volumes">2.2.4.1. Integral Form on Control Volumes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-form-on-arbitrary-volumes">2.2.4.2. Integral Form on Arbitrary Volumes</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jump-conditions">2.2.5. Jump Conditions</a></li>
 </ul>
             </nav>
@@ -440,7 +444,7 @@ document.write(`
 \end{aligned}\]</div>
 <p>As it will shown below, the bound current can be written as the divergence of the polarization field <span class="math notranslate nohighlight">\(\vec{p}\)</span>, representing the volume density fo the dipole distribution, and the magnetization current as the curl of the magnetization field <span class="math notranslate nohighlight">\(\vec{m}\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[\rho_p = - \nabla \cdot \vec{p} \quad , \quad \vec{j}_M = \nabla \times \vec{m} \ .\]</div>
+\[\rho_p = - \nabla \cdot \vec{p} \quad , \quad \vec{j}_p = \partial_t \vec{p} \quad , \quad \vec{j}_M = \nabla \times \vec{m} \ .\]</div>
 <div class="section" id="equations-of-electromagnetism-in-matter">
 <span id="classical-electromagnetism-media-vacuum-to-matter"></span><h2><span class="section-number">2.2.1. </span>Equations of electromagnetism in matter<a class="headerlink" href="#equations-of-electromagnetism-in-matter" title="Permalink to this heading">#</a></h2>
 <p>Introducing the splitting of free and bound charge and current into the equations of the electromagnetism, namely electric charge continuity and Maxwell’s equations,</p>
@@ -502,18 +506,49 @@ In general, some materials respond to an imposed "external" electromagnetic fiel
 </div>
 <div class="section" id="governing-equations-in-differential-form">
 <span id="classical-electromagnetism-media-differential"></span><h2><span class="section-number">2.2.3. </span>Governing equations in differential form<a class="headerlink" href="#governing-equations-in-differential-form" title="Permalink to this heading">#</a></h2>
-<p>Differential form of Maxwell’s equations</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
+\[\begin{split}\begin{aligned}
+&amp; \quad \partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \\ \\
+&amp; \begin{cases}
  \nabla \cdot \vec{d} = \rho_f \\
  \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
  \nabla \cdot \vec{b} = 0 \\
  \nabla \times \vec{h} - \partial_t \vec{d} = \vec{j}_f
-\end{cases}\end{split}\]</div>
-<p><strong>todo</strong> <em>continuity equation for charge</em></p>
+\end{cases} \\
+\end{aligned}
+\qquad , \qquad
+\begin{aligned}
+&amp; \quad \partial_t \rho + \nabla \cdot \vec{j} = 0 \\ \\
+&amp; \begin{cases}
+ \nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
+ \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
+ \nabla \cdot \vec{b} = 0 \\
+ \nabla \times \vec{b} - \varepsilon_0 \mu_0 \partial_t \vec{e} = \mu_0 \vec{j}
+\end{cases} \\
+\end{aligned}\end{split}\]</div>
+<p>with the splitting of charge and currents in free and bound (from both polarization and magnetization) contributions</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \rho    &amp; =   \rho_f +   \rho_p +   \rho_m \\
+  \vec{j} &amp; =\vec{j}_f +\vec{j}_p +\vec{j}_m  \\
+\end{aligned}\end{split}\]</div>
+<p>with the definition of polarization <span class="math notranslate nohighlight">\(\vec{p}\)</span> and magnetization <span class="math notranslate nohighlight">\(\vec{m}\)</span> fields</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{d} &amp; = \varepsilon_0 \vec{e} + \vec{p} \\
+  \vec{b} &amp; = \mu_0 \vec{h} + \mu_0 \vec{m} \\
+\end{aligned}\end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\rho_p = - \nabla \cdot \vec{p}\)</span>, and <span class="math notranslate nohighlight">\(\vec{j}_m = \nabla \times \vec{m}\)</span>, and thus</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial_t \rho_p + \nabla \cdot \vec{j}_p &amp; = 0 \qquad \rightarrow \qquad \vec{j}_p = \partial_t \vec{p} \\
+  \partial_t \rho_m + \nabla \cdot \vec{j}_m &amp; = 0 \qquad \rightarrow \qquad    \rho_m = 0                  \\
+\end{aligned}\end{split}\]</div>
 </div>
 <div class="section" id="governing-equation-in-integral-form">
 <span id="classical-electromagnetism-media-integral"></span><h2><span class="section-number">2.2.4. </span>Governing equation in integral form<a class="headerlink" href="#governing-equation-in-integral-form" title="Permalink to this heading">#</a></h2>
+<div class="section" id="integral-form-on-control-volumes">
+<span id="classical-electromagnetism-media-integral-control-volume"></span><h3><span class="section-number">2.2.4.1. </span>Integral Form on Control Volumes<a class="headerlink" href="#integral-form-on-control-volumes" title="Permalink to this heading">#</a></h3>
 <p>Integral form of Maxwell’s equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
@@ -522,22 +557,112 @@ In general, some materials respond to an imposed "external" electromagnetic fiel
  \displaystyle \oint_{\partial V} \vec{b} \cdot \hat{n} = 0 \\
  \displaystyle \oint_{\partial S} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_S \vec{d} \cdot \hat{n} = \int_{S} \vec{j}_f \cdot \hat{n} \\
 \end{cases}\end{split}\]</div>
-<ul class="simple">
-<li><p>control volume</p></li>
-<li><p>arbitrary domain</p></li>
-<li><p>low-speed relativity</p></li>
-</ul>
+</div>
+<div class="section" id="integral-form-on-arbitrary-volumes">
+<span id="classical-electromagnetism-media-integral-arbitrary-volume"></span><h3><span class="section-number">2.2.4.2. </span>Integral Form on Arbitrary Volumes<a class="headerlink" href="#integral-form-on-arbitrary-volumes" title="Permalink to this heading">#</a></h3>
+<p>Due to their importance in fundamental applications such as electric motors, and to avoid confusion or leaps in logic when dealing with electromagnetic induction, it is crucial to provide the correct expression of the electromagnetic principles when moving volumes are involved in space. Not only is the form of these principles shown, but also the correct procedure to derive them starting from the fixed-control-volume version. This is done using rules for <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html">time derivative for fundamental integrals over moving domains</a>, such as the integral of a density function over a volume, the flux of a vector field through a surface, or the circulation along a curve.</p>
+<p>These three derivative rules are listed here and proved in the material about <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/intro.html">Mathematics</a>:Vector and Tensor Algebra and Calculus:<a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html">Time derivatives of integrals over moving domains</a></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \dfrac{d}{dt} \int_{v_t} f &amp; = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \vec{v}_b \cdot \hat{n} &amp; \text{(density)} \\
+  \dfrac{d}{dt} \int_{s_t} \vec{f} \cdot \hat{n} &amp; = \int_{s_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{n} + \int_{s_t} \nabla \cdot \vec{f} \, \vec{v}_b \cdot \hat{n} - \oint_{\partial s_t} \vec{v}_b \times \vec{f} \cdot \hat{t} &amp; \text{(flux)} \\
+  \dfrac{d}{dt} \int_{\ell_t} \vec{f} \cdot \hat{t} &amp; = \int_{\ell_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{t} + \int_{\ell_t} \nabla \times \vec{f} \, \cdot \, \vec{v}_b \times \hat{t} + \vec{f}_B \cdot \vec{v}_B - \vec{f}_A \cdot \vec{v}_A &amp; \text{(circulation)}
+\end{aligned}\end{split}\]</div>
+<p><strong>Continuity of Electric Charge.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+   0 &amp; = \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \vec{j} \cdot \hat{n} = \\
+   &amp; = \dfrac{d}{dt} \int_{v_t} \rho - \oint_{\partial v_t } \rho \vec{v}_b \cdot \hat{n} + \oint_{\partial v_t} \vec{j} \cdot \hat{n} 
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+    \dfrac{d}{dt} \int_{v_t} \rho + \oint_{\partial v_t} \underbrace{\rho (\vec{v} - \vec{v}_b)}_{\vec{j}^*} \cdot \hat{n} 
+\]</div>
+<p><strong>Gauss’s Law for the Field <span class="math notranslate nohighlight">\(\vec{d}(\vec{r},t)\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+    \oint_{\partial v_t} \vec{d} \cdot \hat{n} = \int_{v_t} \rho^f
+\]</div>
+<p><strong>Gauss’s Law for the Field <span class="math notranslate nohighlight">\(\vec{b}(\vec{r},t)\)</span>.</strong></p>
+<div class="math notranslate nohighlight">
+\[
+    \oint_{\partial v_t} \vec{b} \cdot \hat{n} = 0
+\]</div>
+<p><strong>Faraday–Neumann–Lenz Law for Electromagnetic Induction.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+   \vec{0} &amp; = \oint_{\partial S} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_{S} \vec{b} \cdot \hat{n} = \\
+    &amp; = \oint_{\partial s_t} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} - \int_{s_t} \underbrace{\nabla \cdot \vec{b}}_{=0} \, \vec{v}_b \cdot \hat{n} + \oint_{s_t} \vec{v}_b \times \vec{b} \cdot \hat{t} =  \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+    \oint_{\partial s_t} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} \ ,
+\]</div>
+<p>with the definition <span class="math notranslate nohighlight">\(\vec{e}^* := \vec{e} + \vec{v}_b \times \vec{b}\)</span>, already used in the expression of the Lorentz force law.</p>
+<p><strong>Ampère–Maxwell Law.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \vec{0} &amp; = \oint_{\partial S} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{S} \vec{d} \cdot \hat{n} - \int_{S} \vec{j}_f \cdot \hat{n} = \\
+    &amp; = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} + \int_{s_t} \underbrace{\nabla \cdot \vec{d}}_{=\rho_f} \, \vec{v}_b \cdot \hat{n} - \oint_{s_t} \vec{v}_b \times \vec{d} \cdot \hat{t} - \int_{s_t} \vec{j}_f \cdot \hat{n} =  \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+    \oint_{\partial s_t} \vec{h}^* \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} = \int_{s_t} \vec{j}_f^{*} \cdot \hat{n} \ ,
+\]</div>
+<p>having defined <span class="math notranslate nohighlight">\(\vec{h}^* := \vec{h} - \vec{v}_b \times \vec{d}\)</span>, and using the previously introduced definition <span class="math notranslate nohighlight">\(\vec{j}^{f*} := \vec{j}^f - \rho^f \vec{v}_b\)</span>.</p>
+<p>Adding the definitions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \rho^*_f  &amp;  = \rho_f  \\
+  \vec{d}^* &amp;  = \vec{d}  \\
+  \vec{b}^* &amp;  = \vec{b}
+\end{aligned}\end{split}\]</div>
+<p>one obtains equations having the same form as those written for stationary domains in space, but which can be applied to moving domains. The definitions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\rho^*_f = \rho_f   \qquad &amp; , \qquad \vec{j}^*_f = \vec{j}_f - \rho \vec{v}_b \\
+\vec{d}^* = \vec{d} \qquad &amp; , \qquad \vec{e}^* = \vec{e} + \vec{v}_b \times \vec{b} \\
+\vec{b}^* = \vec{b} \qquad &amp; , \qquad \vec{h}^* = \vec{h} - \vec{v}_b \times \vec{d} \\
+\end{aligned}\end{split}\]</div>
+<p>are nothing more than the transformation of the fields for two observers in relative motion, and correspond to the <strong>low-speed limit</strong> of <a class="reference external" href="https://basics2022.github.io/bbooks-physics-modern/ch/relativity-special/lorentz.html#inertial-reference-frames-and-lorentz-s-transformations">Lorentz transformations from special relativity</a> for velocities <span class="math notranslate nohighlight">\(|\vec{v}_b| \ll c\)</span>, and Lorentz’s factor <span class="math notranslate nohighlight">\(\gamma \sim 1\)</span>: in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein’s theory of relativity.</p>
+<p><strong>todo</strong> Reference Galilean and Lorentz transformations for relativity in electromagnetism.</p>
+<p><strong>todo</strong> Sistematic power expansion</p>
+<p><strong>todo</strong> Take into account higher-order contributions</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \rho^*    &amp; = \rho    - \dfrac{\vec{j}}{c^2} + \text{terms coming from $\gamma c \rho$} \\
+  \vec{d}^* &amp; = \vec{d} - \dfrac{\vec{h} \times \vec{v}}{c^2} + \text{terms coming from $(1-\gamma) \hat{v} \hat{v} \cdot \vec{d}$}  \\
+  \vec{b}^* &amp; = \vec{b} + \dfrac{\vec{e} \times \vec{v}}{c^2} + \text{terms coming from $(1-\gamma) \hat{v} \hat{v} \cdot \vec{b}$}  \\
+\end{aligned}\end{split}\]</div>
+<p><strong>todo</strong> Relativity of polarization and magnetization</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{p} 
+  := &amp; \  \vec{d} - \varepsilon_0 \vec{e} = \\
+   = &amp; \  \vec{d}^* + \dfrac{\vec{h} \times \vec{v}}{c^2} - \varepsilon_0 \left( \vec{e}^* + \vec{b} \times \vec{v} \right) = \\
+   = &amp; \  \vec{d}^* - \varepsilon_0 \vec{e}^* + \left( \dfrac{\vec{h}}{c^2} - \varepsilon_0 \vec{b} \right) \times \vec{v} = \\ 
+   = &amp; \  \vec{p}^* - \dfrac{ \vec{m} \times \vec{v}}{c^2} \ .
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{m} 
+  := &amp; \ \dfrac{1}{\mu_0} \vec{b} - \vec{h} = \\
+   = &amp; \ \dfrac{1}{\mu_0} \vec{b}^* + \dfrac{1}{\mu_0} \dfrac{\vec{v} \times \vec{e}}{c^2} - \vec{h}^* - \vec{v} \times \vec{d} = \\ \\
+   = &amp; \ \vec{m}^* - \vec{v} \times \vec{p} \ .
+\end{aligned}\end{split}\]</div>
+</div>
 </div>
 <div class="section" id="jump-conditions">
 <span id="classical-electromagnetism-media-jump"></span><h2><span class="section-number">2.2.5. </span>Jump Conditions<a class="headerlink" href="#jump-conditions" title="Permalink to this heading">#</a></h2>
 <p>Letting <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(S\)</span> “collapse on a discontinuity”…</p>
 <div class="math notranslate nohighlight" id="equation-eq-em-jump">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-em-jump" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{cases}
-  [ d_n ] = \sigma_f \\
-  [ e_t ] = 0 \\
-  [ b_n ] = 0 \\
-  [ h_t ] = \iota_f \ ,
-\end{cases}\end{split}\]</div>
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-em-jump" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+  \left[ j^*_n \right] &amp; = 0         &amp; \text{charge continuity} \\
+  [ d^*_n ] &amp; = \sigma_f             &amp; \text{Gauss' law for $\vec{d}^*$} \\
+  [ e^*_t ] &amp; = 0                    &amp; \text{Faraday's law} \\
+  [ b^*_n ] &amp; = 0                    &amp; \text{Gauss' law for $\vec{b}^*$} \\
+  [ h*_t ]  &amp; = \iota^*_f            &amp; \text{Ampére-Maxwell's law} 
+\end{aligned}\end{split}\]</div>
 <p>being <span class="math notranslate nohighlight">\(\sigma_f\)</span> and <span class="math notranslate nohighlight">\(\iota_f\)</span> surface charge and current density, with physical dimension <span class="math notranslate nohighlight">\(\frac{\text{charge}}{\text{surface}}\)</span>, and <span class="math notranslate nohighlight">\(\frac{\text{current}}{\text{surface}}\)</span> respectively. These contributions can be thought of as Dirac delta contributions in volume density, namely</p>
 <div class="math notranslate nohighlight">
 \[\rho(\vec{r},t) = \rho_0(\vec{r},t) + \sigma(\vec{r}_s,t) \delta_{1}(\vec{r}-\vec{r}_s) \ ,\]</div>
@@ -629,7 +754,11 @@ In general, some materials respond to an imposed "external" electromagnetic fiel
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-electromagnetism-in-matter">2.2.1. Equations of electromagnetism in matter</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">2.2.2. Examples</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#governing-equations-in-differential-form">2.2.3. Governing equations in differential form</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#governing-equation-in-integral-form">2.2.4. Governing equation in integral form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#governing-equation-in-integral-form">2.2.4. Governing equation in integral form</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-form-on-control-volumes">2.2.4.1. Integral Form on Control Volumes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-form-on-arbitrary-volumes">2.2.4.2. Integral Form on Arbitrary Volumes</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jump-conditions">2.2.5. Jump Conditions</a></li>
 </ul>
   </nav></div>

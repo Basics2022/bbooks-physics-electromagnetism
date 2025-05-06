@@ -85,7 +85,7 @@
         
 
 \title{Classical Electromagnetism and Principles of Electrical Engineering}
-\date{May 05, 2025}
+\date{May 06, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -213,6 +213,21 @@ with the \sphinxstylestrong{permittivity of free space} \sphinxhyphen{} or the \
 \sphinxAtStartPar
 having defined \(\rho^*{(\vec{r}), t}\) \(\vec{e}^*(\vec{r}, t)\) as the current desntiy and the electric field \sphinxstylestrong{as seen by the moving charge}
 
+\begin{sphinxadmonition}{note}{Maxwell’s equations and continuity equation of electric charge are overdetermined \sphinxhyphen{} proof with differential equations}
+
+\sphinxAtStartPar
+Introducing (1) the time derivative of Gauss law of the electric field \(\vec{e}(\vec{r},t)\) and Ampére\sphinxhyphen{}Maxwell law in the continuity equation of the electric charge
+\begin{equation*}
+\begin{split}\begin{aligned}
+  0 & = \partial_t \rho + \nabla \cdot \vec{j} = && (1) \\
+    & = \varepsilon_0 \partial_t \nabla \cdot \vec{e} + \nabla \cdot \left(\dfrac{1}{\mu_0}\nabla \times \vec{b} - \varepsilon_0 \partial_t \vec{e} \right) = && (2) \\
+    & = 0
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+an identity appears as (2) the divergence of a curl is identically equal to zero. Thus, these equations are not linearly independent and the system is over\sphinxhyphen{}determined.
+\end{sphinxadmonition}
+
 
 \subsection{Principles in Integral Form: Electromagnetic Equations and Galilean Relativity}
 \label{\detokenize{ch/principles-vacuum:principles-in-integral-form-electromagnetic-equations-and-galilean-relativity}}\label{\detokenize{ch/principles-vacuum:classical-electromagnetism-principles-integral}}
@@ -265,7 +280,7 @@ The integral form of the principles of electromagnetism for fixed volumes \(V\) 
 \sphinxAtStartPar
 having introduced the speed of velocity in free space, \(c_0 = \dfrac{1}{\sqrt{\varepsilon_0 \mu_0}}\).
 
-\begin{sphinxadmonition}{note}{Maxwell’s equations and continuity equation of electric charge are overdetermined}
+\begin{sphinxadmonition}{note}{Maxwell’s equations and continuity equation of electric charge are overdetermined \sphinxhyphen{} proof with integral equations}
 
 \sphinxAtStartPar
 Introducing (1) the time derivative of Gauss law of the electric field \(\vec{e}(\vec{r},t)\) and (2) the Ampére\sphinxhyphen{}Maxwell law in the continuity equation of the electric charge
@@ -291,9 +306,9 @@ Due to their importance in fundamental applications such as electric motors, and
 These three derivative rules are listed here and proved in the material about \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/intro.html}{Mathematics}:Vector and Tensor Algebra and Calculus:\sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html}{Time derivatives of integrals over moving domains}
 \begin{equation*}
 \begin{split}\begin{aligned}
-  \dfrac{d}{dt} \int_{v_t} f & = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \vec{v}_b \cdot \hat{n} && \text{(density)} \\
-  \dfrac{d}{dt} \int_{s_t} \vec{f} \cdot \hat{n} & = \int_{s_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{n} + \int_{s_t} \nabla \cdot \vec{f} \, \vec{v}_b \cdot \hat{n} - \oint_{\partial s_t} \vec{v}_b \times \vec{f} \cdot \hat{t} && \text{(flux)} \\
-  \dfrac{d}{dt} \int_{\ell_t} \vec{f} \cdot \hat{t} & = \int_{\ell_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{t} + \int_{\ell_t} \nabla \times \vec{f} \, \cdot \, \vec{v}_b \times \hat{t} + \vec{f}_B \cdot \vec{v}_B - \vec{f}_A \cdot \vec{v}_A && \text{(circulation)}
+  \dfrac{d}{dt} \int_{v_t} f & = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \vec{v}_b \cdot \hat{n} & \text{(density)} \\
+  \dfrac{d}{dt} \int_{s_t} \vec{f} \cdot \hat{n} & = \int_{s_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{n} + \int_{s_t} \nabla \cdot \vec{f} \, \vec{v}_b \cdot \hat{n} - \oint_{\partial s_t} \vec{v}_b \times \vec{f} \cdot \hat{t} & \text{(flux)} \\
+  \dfrac{d}{dt} \int_{\ell_t} \vec{f} \cdot \hat{t} & = \int_{\ell_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{t} + \int_{\ell_t} \nabla \times \vec{f} \, \cdot \, \vec{v}_b \times \hat{t} + \vec{f}_B \cdot \vec{v}_B - \vec{f}_A \cdot \vec{v}_A & \text{(circulation)}
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
@@ -309,10 +324,10 @@ These three derivative rules are listed here and proved in the material about \s
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Gauss’s Law for the Field \(\vec{d}(\vec{r},t)\).}
+\sphinxstylestrong{Gauss’s Law for the Field \(\vec{e}(\vec{r},t)\).}
 \begin{equation*}
 \begin{split}
-    \oint_{\partial v_t} \vec{d} \cdot \hat{n} = \int_{v_t} \rho^f
+    \oint_{\partial v_t} \vec{e} \cdot \hat{n} = \int_{v_t} \dfrac{\rho}{\varepsilon_0}
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
@@ -335,43 +350,38 @@ These three derivative rules are listed here and proved in the material about \s
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-with the definition \(\vec{e}^* := \vec{e} + \vec{v}_b \cdot \vec{b}\), already used in the expression of the Lorentz force law.
+with the definition \(\vec{e}^* := \vec{e} + \vec{v}_b \times \vec{b}\), already used in the expression of the Lorentz force law.
 
 \sphinxAtStartPar
 \sphinxstylestrong{Ampère–Maxwell Law.}
 \begin{equation*}
 \begin{split}\begin{aligned}
-    \vec{0} & = \oint_{\partial S} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{S} \vec{d} \cdot \hat{n} - \int_{S} \vec{j}^f \cdot \hat{n} = \\
-    & = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} + \int_{s_t} \underbrace{\nabla \cdot \vec{d}}_{=\rho^f} \, \vec{v}_b \cdot \hat{n} - \oint_{s_t} \vec{v}_b \times \vec{d} \cdot \hat{t} - \int_{s_t} \vec{j}^f \cdot \hat{n} =  \\
+    \vec{0} & = \oint_{\partial S} \vec{b} \cdot \hat{t} - \varepsilon_0 \mu_0 \dfrac{d}{dt} \int_{S}  \vec{e} \cdot \hat{n} - \int_{S} \mu_0 \vec{j} \cdot \hat{n} = \\
+    & = \oint_{\partial s_t} \vec{b} \cdot \hat{t} - \varepsilon_0 \mu_0 \dfrac{d}{dt} \int_{s_t} \vec{e} \cdot \hat{n} + \varepsilon_0 \mu_0 \int_{s_t} \underbrace{\nabla \cdot \vec{e}}_{=\frac{\rho}{\varepsilon_0}} \, \vec{v}_b \cdot \hat{n} - \varepsilon_0 \mu_0 \oint_{s_t} \vec{v}_b \times \vec{e} \cdot \hat{t} -  \mu_0 \int_{s_t} \vec{j} \cdot \hat{n} =  \\
 \end{aligned}\end{split}
 \end{equation*}\begin{equation*}
 \begin{split}
-    \oint_{\partial s_t} \vec{h}^* \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} = \int_{s_t} \vec{j}^{f*} \cdot \hat{n} \ ,
+    \oint_{\partial s_t} \vec{b}^{* *} \cdot \hat{t} - \varepsilon_0 \mu_0 \dfrac{d}{dt} \int_{s_t} \vec{e} \cdot \hat{n} = \mu_0 \int_{s_t} \vec{j}^{*} \cdot \hat{n} \ ,
 \end{split}
 \end{equation*}
 \sphinxAtStartPar
-having defined \(\vec{h}^* := \vec{h} - \vec{v}_b \times \vec{d}\), and using the previously introduced definition \(\vec{j}^{f*} := \vec{j}^f - \rho^f \vec{v}_b\).
+having defined \(\vec{b}^{* *} := \vec{b} - \dfrac{\vec{v}_b \times \vec{e}}{c^2}\), and \(\vec{j}^{*} := \vec{j} - \rho \vec{v}_b\).
 
 \sphinxAtStartPar
-Adding the definitions:
+The definition of fields
 \begin{equation*}
 \begin{split}\begin{aligned}
-  \rho^*    &  = \rho  \\
-  \vec{d}^* &  = \vec{d}  \\
-  \vec{b}^* &  = \vec{b}
+     \rho^*     & = \\
+  \vec{j}^*     & = \\
+  \vec{e}^*     & = \\
+  \vec{b}^{* *} & = \\
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-one obtains equations having the same form as those written for stationary domains in space, but which can be applied to moving domains. The definitions:
-\begin{equation*}
-\begin{split}\begin{aligned}
-\rho^* = \rho \qquad & , \qquad \vec{j}^* = \vec{j} - \rho \vec{v}_b \\
-\vec{d}^* = \vec{d} \qquad & , \qquad \vec{e}^* = \vec{e} + \vec{v}_b \times \vec{b} \\
-\vec{b}^* = \vec{b} \qquad & , \qquad \vec{h}^* = \vec{h} - \vec{v}_b \times \vec{d} \\
-\end{aligned}\end{split}
-\end{equation*}
+provides nothing more than the transformation of the fields for two observers in relative motion, and correspond to the \sphinxstylestrong{low\sphinxhyphen{}speed limit} of \sphinxhref{https://basics2022.github.io/bbooks-physics-modern/ch/relativity-special/lorentz.html\#inertial-reference-frames-and-lorentz-s-transformations}{Lorentz transformations from special relativity} for velocities \(|\vec{v}_b| \ll c\), and Lorentz’s factor \(\gamma \sim 1\): in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein’s theory of relativity.
+
 \sphinxAtStartPar
-are nothing more than the transformation of the fields for two observers in relative motion, and correspond to the \sphinxstylestrong{low\sphinxhyphen{}speed limit} of \sphinxhref{https://basics2022.github.io/bbooks-physics-modern/ch/relativity-special/lorentz.html\#inertial-reference-frames-and-lorentz-s-transformations}{Lorentz transformations from special relativity} for velocities \(|\vec{v}_b| \ll c\), and Lorentz’s factor \(\gamma \sim 1\): in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein’s theory of relativity.
+While here \(\vec{b}\) contains a higher order term, and \(\vec{e}\) appears in Ampére\sphinxhyphen{}Maxwell’s law, a cleaner formulation of low\sphinxhyphen{}speed relativity in electromagnetism arises from balance equations of {\hyperref[\detokenize{ch/principles-matter:classical-electromagnetism-principles-matter}]{\sphinxcrossref{\DUrole{std,std-ref}{electromagnetism in matter}}}}.
 
 \sphinxAtStartPar
 \sphinxstylestrong{todo} Reference Galilean and Lorentz transformations for relativity in electromagnetism.
@@ -381,31 +391,9 @@ are nothing more than the transformation of the fields for two observers in rela
 
 \sphinxAtStartPar
 \sphinxstylestrong{todo} Take into account higher\sphinxhyphen{}order contributions
-\begin{equation*}
-\begin{split}\begin{aligned}
-  \rho^*    & = \rho    - \dfrac{\vec{j}}{c^2} + \text{terms coming from $\gamma c \rho$} \\
-  \vec{d}^* & = \vec{d} - \dfrac{\vec{h} \times \vec{v}}{c^2} + \text{terms coming from $(1-\gamma) \hat{v} \hat{v} \cdot \vec{d}$}  \\
-  \vec{b}^* & = \vec{b} + \dfrac{\vec{e} \times \vec{v}}{c^2} + \text{terms coming from $(1-\gamma) \hat{v} \hat{v} \cdot \vec{b}$}  \\
-\end{aligned}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{todo} Relativity of polarization and magnetization
-\begin{equation*}
-\begin{split}\begin{aligned}
-  \vec{p} 
-  := & \  \vec{d} - \varepsilon_0 \vec{e} = \\
-   = & \  \vec{d}^* + \dfrac{\vec{h} \times \vec{v}}{c^2} - \varepsilon_0 \left( \vec{e}^* + \vec{b} \times \vec{v} \right) = \\
-   = & \  \vec{d}^* - \varepsilon_0 \vec{e}^* + \left( \dfrac{\vec{h}}{c^2} - \varepsilon_0 \vec{b} \right) \times \vec{v} = \\ 
-   = & \  \vec{p}^* - \dfrac{ \vec{m} \times \vec{v}}{c^2} \ .
-\end{aligned}\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\begin{aligned}
-  \vec{m} 
-  := & \ \dfrac{1}{\mu_0} \vec{b} - \vec{h} = \\
-   = & \ \dfrac{1}{\mu_0} \vec{b}^* + \dfrac{1}{\mu_0} \dfrac{\vec{v} \times \vec{e}}{c^2} - \vec{h}^* - \vec{v} \times \vec{d} = \\ \\
-   = & \ \vec{m}^* - \vec{v} \times \vec{p} \ .
-\end{aligned}\end{split}
-\end{equation*}
+
+
+
 
 \bigskip\hrule\bigskip
 
@@ -436,7 +424,7 @@ Bound current density represents two effects: the variation of polarization char
 \sphinxAtStartPar
 As it will shown below, the bound current can be written as the divergence of the polarization field \(\vec{p}\), representing the volume density fo the dipole distribution, and the magnetization current as the curl of the magnetization field \(\vec{m}\),
 \begin{equation*}
-\begin{split}\rho_p = - \nabla \cdot \vec{p} \quad , \quad \vec{j}_M = \nabla \times \vec{m} \ .\end{split}
+\begin{split}\rho_p = - \nabla \cdot \vec{p} \quad , \quad \vec{j}_p = \partial_t \vec{p} \quad , \quad \vec{j}_M = \nabla \times \vec{m} \ .\end{split}
 \end{equation*}
 
 \subsection{Equations of electromagnetism in matter}
@@ -518,23 +506,57 @@ ferromagnetic and weak magnetism (para\sphinxhyphen{}, dia\sphinxhyphen{}, anti\
 
 
 \subsection{Governing equations in differential form}
-\label{\detokenize{ch/principles-matter:governing-equations-in-differential-form}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-differential}}
-\sphinxAtStartPar
-Differential form of Maxwell’s equations
-\begin{equation*}
-\begin{split}\begin{cases}
+\label{\detokenize{ch/principles-matter:governing-equations-in-differential-form}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-differential}}\begin{equation*}
+\begin{split}\begin{aligned}
+& \quad \partial_t \rho_f + \nabla \cdot \vec{j}_f = 0 \\ \\
+& \begin{cases}
  \nabla \cdot \vec{d} = \rho_f \\
  \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
  \nabla \cdot \vec{b} = 0 \\
  \nabla \times \vec{h} - \partial_t \vec{d} = \vec{j}_f
-\end{cases}\end{split}
+\end{cases} \\
+\end{aligned}
+\qquad , \qquad
+\begin{aligned}
+& \quad \partial_t \rho + \nabla \cdot \vec{j} = 0 \\ \\
+& \begin{cases}
+ \nabla \cdot \vec{e} = \frac{\rho}{\varepsilon_0} \\
+ \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\
+ \nabla \cdot \vec{b} = 0 \\
+ \nabla \times \vec{b} - \varepsilon_0 \mu_0 \partial_t \vec{e} = \mu_0 \vec{j}
+\end{cases} \\
+\end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{todo} \sphinxstyleemphasis{continuity equation for charge}
-
+with the splitting of charge and currents in free and bound (from both polarization and magnetization) contributions
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \rho    & =   \rho_f +   \rho_p +   \rho_m \\
+  \vec{j} & =\vec{j}_f +\vec{j}_p +\vec{j}_m  \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with the definition of polarization \(\vec{p}\) and magnetization \(\vec{m}\) fields
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{d} & = \varepsilon_0 \vec{e} + \vec{p} \\
+  \vec{b} & = \mu_0 \vec{h} + \mu_0 \vec{m} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with \(\rho_p = - \nabla \cdot \vec{p}\), and \(\vec{j}_m = \nabla \times \vec{m}\), and thus
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \partial_t \rho_p + \nabla \cdot \vec{j}_p & = 0 \qquad \rightarrow \qquad \vec{j}_p = \partial_t \vec{p} \\
+  \partial_t \rho_m + \nabla \cdot \vec{j}_m & = 0 \qquad \rightarrow \qquad    \rho_m = 0                  \\
+\end{aligned}\end{split}
+\end{equation*}
 
 \subsection{Governing equation in integral form}
 \label{\detokenize{ch/principles-matter:governing-equation-in-integral-form}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-integral}}
+
+\subsubsection{Integral Form on Control Volumes}
+\label{\detokenize{ch/principles-matter:integral-form-on-control-volumes}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-integral-control-volume}}
 \sphinxAtStartPar
 Integral form of Maxwell’s equations
 \begin{equation*}
@@ -544,33 +566,145 @@ Integral form of Maxwell’s equations
  \displaystyle \oint_{\partial V} \vec{b} \cdot \hat{n} = 0 \\
  \displaystyle \oint_{\partial S} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_S \vec{d} \cdot \hat{n} = \int_{S} \vec{j}_f \cdot \hat{n} \\
 \end{cases}\end{split}
-\end{equation*}\begin{itemize}
-\item {} 
+\end{equation*}
+
+\subsubsection{Integral Form on Arbitrary Volumes}
+\label{\detokenize{ch/principles-matter:integral-form-on-arbitrary-volumes}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-integral-arbitrary-volume}}
 \sphinxAtStartPar
-control volume
+Due to their importance in fundamental applications such as electric motors, and to avoid confusion or leaps in logic when dealing with electromagnetic induction, it is crucial to provide the correct expression of the electromagnetic principles when moving volumes are involved in space. Not only is the form of these principles shown, but also the correct procedure to derive them starting from the fixed\sphinxhyphen{}control\sphinxhyphen{}volume version. This is done using rules for \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html}{time derivative for fundamental integrals over moving domains}, such as the integral of a density function over a volume, the flux of a vector field through a surface, or the circulation along a curve.
 
-\item {} 
 \sphinxAtStartPar
-arbitrary domain
-
-\item {} 
+These three derivative rules are listed here and proved in the material about \sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/intro.html}{Mathematics}:Vector and Tensor Algebra and Calculus:\sphinxhref{https://basics2022.github.io/bbooks-math-miscellanea/ch/tensor-algebra-calculus/time-derivative-of-integrals.html}{Time derivatives of integrals over moving domains}
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \dfrac{d}{dt} \int_{v_t} f & = \int_{v_t} \dfrac{\partial f}{\partial t} + \oint_{\partial v_t} f \, \vec{v}_b \cdot \hat{n} & \text{(density)} \\
+  \dfrac{d}{dt} \int_{s_t} \vec{f} \cdot \hat{n} & = \int_{s_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{n} + \int_{s_t} \nabla \cdot \vec{f} \, \vec{v}_b \cdot \hat{n} - \oint_{\partial s_t} \vec{v}_b \times \vec{f} \cdot \hat{t} & \text{(flux)} \\
+  \dfrac{d}{dt} \int_{\ell_t} \vec{f} \cdot \hat{t} & = \int_{\ell_t} \dfrac{\partial \vec{f}}{\partial t} \cdot \hat{t} + \int_{\ell_t} \nabla \times \vec{f} \, \cdot \, \vec{v}_b \times \hat{t} + \vec{f}_B \cdot \vec{v}_B - \vec{f}_A \cdot \vec{v}_A & \text{(circulation)}
+\end{aligned}\end{split}
+\end{equation*}
 \sphinxAtStartPar
-low\sphinxhyphen{}speed relativity
+\sphinxstylestrong{Continuity of Electric Charge.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+   0 & = \dfrac{d}{dt} \int_{V} \rho + \oint_{\partial V} \vec{j} \cdot \hat{n} = \\
+   & = \dfrac{d}{dt} \int_{v_t} \rho - \oint_{\partial v_t } \rho \vec{v}_b \cdot \hat{n} + \oint_{\partial v_t} \vec{j} \cdot \hat{n} 
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+    \dfrac{d}{dt} \int_{v_t} \rho + \oint_{\partial v_t} \underbrace{\rho (\vec{v} - \vec{v}_b)}_{\vec{j}^*} \cdot \hat{n} 
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Gauss’s Law for the Field \(\vec{d}(\vec{r},t)\).}
+\begin{equation*}
+\begin{split}
+    \oint_{\partial v_t} \vec{d} \cdot \hat{n} = \int_{v_t} \rho^f
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Gauss’s Law for the Field \(\vec{b}(\vec{r},t)\).}
+\begin{equation*}
+\begin{split}
+    \oint_{\partial v_t} \vec{b} \cdot \hat{n} = 0
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Faraday–Neumann–Lenz Law for Electromagnetic Induction.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+   \vec{0} & = \oint_{\partial S} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_{S} \vec{b} \cdot \hat{n} = \\
+    & = \oint_{\partial s_t} \vec{e} \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} - \int_{s_t} \underbrace{\nabla \cdot \vec{b}}_{=0} \, \vec{v}_b \cdot \hat{n} + \oint_{s_t} \vec{v}_b \times \vec{b} \cdot \hat{t} =  \\
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+    \oint_{\partial s_t} \vec{e}^* \cdot \hat{t} + \dfrac{d}{dt} \int_{s_t} \vec{b} \cdot \hat{n} \ ,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+with the definition \(\vec{e}^* := \vec{e} + \vec{v}_b \times \vec{b}\), already used in the expression of the Lorentz force law.
 
-\end{itemize}
+\sphinxAtStartPar
+\sphinxstylestrong{Ampère–Maxwell Law.}
+\begin{equation*}
+\begin{split}\begin{aligned}
+    \vec{0} & = \oint_{\partial S} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{S} \vec{d} \cdot \hat{n} - \int_{S} \vec{j}_f \cdot \hat{n} = \\
+    & = \oint_{\partial s_t} \vec{h} \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} + \int_{s_t} \underbrace{\nabla \cdot \vec{d}}_{=\rho_f} \, \vec{v}_b \cdot \hat{n} - \oint_{s_t} \vec{v}_b \times \vec{d} \cdot \hat{t} - \int_{s_t} \vec{j}_f \cdot \hat{n} =  \\
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+    \oint_{\partial s_t} \vec{h}^* \cdot \hat{t} - \dfrac{d}{dt} \int_{s_t} \vec{d} \cdot \hat{n} = \int_{s_t} \vec{j}_f^{*} \cdot \hat{n} \ ,
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+having defined \(\vec{h}^* := \vec{h} - \vec{v}_b \times \vec{d}\), and using the previously introduced definition \(\vec{j}^{f*} := \vec{j}^f - \rho^f \vec{v}_b\).
 
+\sphinxAtStartPar
+Adding the definitions:
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \rho^*_f  &  = \rho_f  \\
+  \vec{d}^* &  = \vec{d}  \\
+  \vec{b}^* &  = \vec{b}
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+one obtains equations having the same form as those written for stationary domains in space, but which can be applied to moving domains. The definitions:
+\begin{equation*}
+\begin{split}\begin{aligned}
+\rho^*_f = \rho_f   \qquad & , \qquad \vec{j}^*_f = \vec{j}_f - \rho \vec{v}_b \\
+\vec{d}^* = \vec{d} \qquad & , \qquad \vec{e}^* = \vec{e} + \vec{v}_b \times \vec{b} \\
+\vec{b}^* = \vec{b} \qquad & , \qquad \vec{h}^* = \vec{h} - \vec{v}_b \times \vec{d} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+are nothing more than the transformation of the fields for two observers in relative motion, and correspond to the \sphinxstylestrong{low\sphinxhyphen{}speed limit} of \sphinxhref{https://basics2022.github.io/bbooks-physics-modern/ch/relativity-special/lorentz.html\#inertial-reference-frames-and-lorentz-s-transformations}{Lorentz transformations from special relativity} for velocities \(|\vec{v}_b| \ll c\), and Lorentz’s factor \(\gamma \sim 1\): in this procedure, the transformations for low relative speeds are obtained, as no transformation of spatial and temporal dimensions has been considered, unlike Einstein’s theory of relativity.
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} Reference Galilean and Lorentz transformations for relativity in electromagnetism.
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} Sistematic power expansion
+
+\sphinxAtStartPar
+\sphinxstylestrong{todo} Take into account higher\sphinxhyphen{}order contributions
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \rho^*    & = \rho    - \dfrac{\vec{j}}{c^2} + \text{terms coming from $\gamma c \rho$} \\
+  \vec{d}^* & = \vec{d} - \dfrac{\vec{h} \times \vec{v}}{c^2} + \text{terms coming from $(1-\gamma) \hat{v} \hat{v} \cdot \vec{d}$}  \\
+  \vec{b}^* & = \vec{b} + \dfrac{\vec{e} \times \vec{v}}{c^2} + \text{terms coming from $(1-\gamma) \hat{v} \hat{v} \cdot \vec{b}$}  \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} Relativity of polarization and magnetization
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{p} 
+  := & \  \vec{d} - \varepsilon_0 \vec{e} = \\
+   = & \  \vec{d}^* + \dfrac{\vec{h} \times \vec{v}}{c^2} - \varepsilon_0 \left( \vec{e}^* + \vec{b} \times \vec{v} \right) = \\
+   = & \  \vec{d}^* - \varepsilon_0 \vec{e}^* + \left( \dfrac{\vec{h}}{c^2} - \varepsilon_0 \vec{b} \right) \times \vec{v} = \\ 
+   = & \  \vec{p}^* - \dfrac{ \vec{m} \times \vec{v}}{c^2} \ .
+\end{aligned}\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{m} 
+  := & \ \dfrac{1}{\mu_0} \vec{b} - \vec{h} = \\
+   = & \ \dfrac{1}{\mu_0} \vec{b}^* + \dfrac{1}{\mu_0} \dfrac{\vec{v} \times \vec{e}}{c^2} - \vec{h}^* - \vec{v} \times \vec{d} = \\ \\
+   = & \ \vec{m}^* - \vec{v} \times \vec{p} \ .
+\end{aligned}\end{split}
+\end{equation*}
 
 \subsection{Jump Conditions}
 \label{\detokenize{ch/principles-matter:jump-conditions}}\label{\detokenize{ch/principles-matter:classical-electromagnetism-media-jump}}
 \sphinxAtStartPar
 Letting \(V\) and \(S\) “collapse on a discontinuity”…
 \begin{equation}\label{equation:ch/principles-matter:eq:em-jump}
-\begin{split}\begin{cases}
-  [ d_n ] = \sigma_f \\
-  [ e_t ] = 0 \\
-  [ b_n ] = 0 \\
-  [ h_t ] = \iota_f \ ,
-\end{cases}\end{split}
+\begin{split}\begin{aligned}
+  \left[ j^*_n \right] & = 0         & \text{charge continuity} \\
+  [ d^*_n ] & = \sigma_f             & \text{Gauss' law for $\vec{d}^*$} \\
+  [ e^*_t ] & = 0                    & \text{Faraday's law} \\
+  [ b^*_n ] & = 0                    & \text{Gauss' law for $\vec{b}^*$} \\
+  [ h*_t ]  & = \iota^*_f            & \text{Ampére-Maxwell's law} 
+\end{aligned}\end{split}
 \end{equation}
 \sphinxAtStartPar
 being \(\sigma_f\) and \(\iota_f\) surface charge and current density, with physical dimension \(\frac{\text{charge}}{\text{surface}}\), and \(\frac{\text{current}}{\text{surface}}\) respectively. These contributions can be thought of as Dirac delta contributions in volume density, namely
@@ -5619,7 +5753,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-Apr 30, 2025
+May 06, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -5957,7 +6091,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-Apr 30, 2025
+May 06, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
