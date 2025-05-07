@@ -410,24 +410,59 @@ document.write(`
 <p>Slow regime leads to circuit approximations of electromagnetic systems with <strong>moderate dimensions</strong> at <strong>low frequency</strong>. For these systems and regimes, the ratio appearing into <a class="reference internal" href="regimes-non-dimensional.html#classical-electromagnetism-regimes-non-dimensional"><span class="std std-ref">non-dimensional equations of electromagnetism</span></a> reads,</p>
 <div class="math notranslate nohighlight">
 \[\dfrac{f L }{c_0} \ll 1 \ .\]</div>
-<p>Under this assumption, the equations of electromagnetism can be approximated as</p>
-<p><strong>Continuity equation of electric charge.</strong></p>
+<p>Under this assumption, approximate governing equations of electromagnetism in slow opearint regime is obtained setting <span class="math notranslate nohighlight">\(\frac{fL}{c} = 0\)</span> in the non-dimensional equations of the electromagnetism <a class="reference internal" href="regimes-non-dimensional.html#equation-eq-em-non-dimensional">(5.2)</a>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-em-non-dimensional-slow">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-eq-em-non-dimensional-slow" title="Permalink to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+  &amp; \text{continuity equation for charge}        &amp;&amp;  \partial_t \rho_f +  \nabla \cdot \vec{j}_f = 0 \\ \\
+  &amp; \text{Maxwell's equations}                   &amp;&amp;  \nabla \cdot \vec{d} - \rho_f = 0 \\
+  &amp;                                              &amp;&amp;  \nabla \times \vec{e} +  \partial_t \vec{b} = \vec{0} \\ 
+  &amp;                                              &amp;&amp;  \nabla \cdot \vec{b} = 0 \\
+  &amp;                                              &amp;&amp;  \nabla \times \vec{h} = \, \vec{j}_f  \\ \\
+  &amp; \text{constitutive equations}                &amp;&amp;  \vec{d} = \vec{e} \\
+  &amp;                                              &amp;&amp;  \vec{b} = \vec{h} \\ \\
+  &amp; \text{EM potentials}                         &amp;&amp;  \vec{b} = \nabla \times \vec{a} \\
+  &amp;                                              &amp;&amp;  \vec{e} = - \nabla \phi - \partial_t \vec{a} \\ \\
+  &amp; \text{Lorentz's gauge}                       &amp;&amp;  \nabla \cdot \vec{a} + \partial_t \phi = 0
+\end{aligned}
+\end{split}\]</div>
+<p><span style="color:red"><strong>todo</strong> <em>check consistency of <span class="math notranslate nohighlight">\(\vec{e} = - \nabla \phi\)</span> with Faraday’s induction law <span class="math notranslate nohighlight">\(\nabla \cdot \vec{e} + \partial_t \vec{b} = \vec{0}\)</span>. <a class="reference internal" href="regimes-non-dimensional.html#classical-electromagnetism-regimes-non-dimensional"><span class="std std-ref">Non-dimensionalization process</span></a> could be not 100% ok yet</em></span></p>
+<p>From the approximate governing equations some consequences follow:</p>
+<ul>
+<li><p>in slow operating regime wave equations can be approximated with Poisson equations: perturbations can’t travel anymore in form of waves, while their transmission is governed by a diffusive equation.
+<a class="reference internal" href="waves-equation.html#classical-electromagnetism-waves-wave-equation"><span class="std std-ref">Wave equations</span></a> becomes Poisson equations, as the wave operator <span class="math notranslate nohighlight">\(\square \sim \nabla^2\)</span> if <span class="math notranslate nohighlight">\(\left( \frac{L F}{c} \right)^2 \ll 1\)</span>, as the non-dimensional form of a wave equation follows from</p>
 <div class="math notranslate nohighlight">
-\[\partial_t \rho + \nabla \cdot \vec{j} = 0\]</div>
-<p><strong>Maxwell’s equations.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{cases}
+\[\begin{split}\begin{aligned}
+      \frac{F^2}{c^2} \partial_{tt} f - \dfrac{1}{L^2} \nabla^2 f &amp; = \dots \\
+      \dfrac{1}{L^2} \left[ \left( \frac{F L}{c}\right)^2 \partial_{tt} f -  \nabla^2 f \right] &amp; = \dots \\
+     - \dfrac{1}{L^2} \nabla^2 f  &amp; \sim \dots 
+    \end{aligned}\end{split}\]</div>
+</li>
+<li><p>radiation is negligible in energy balance, as it’s shown for <a class="reference internal" href="circuits-energy.html#classical-electromagnetism-circuits-energy-boundary"><span class="std std-ref">energy balance in circuit approximation</span></a></p></li>
+</ul>
+<!--
+Under this assumption, the equations of electromagnetism can be approximated as
+
+**Continuity equation of electric charge.**
+
+  $$\partial_t \rho + \nabla \cdot \vec{j} = 0$$
+
+**Maxwell's equations.**
+
+  $$\begin{cases}
     \nabla \cdot \vec{e} = \dfrac{\rho}{\varepsilon_0} \\
     \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\ 
     \nabla \cdot \vec{b} = 0 \\
     \nabla \times \vec{b} \simeq \mu_0 \vec{j} 
-  \end{cases}\end{split}\]</div>
-<p><strong>Potentials.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-      \vec{b} &amp; = \nabla \times \vec{a} \\
-      \vec{e} &amp; \simeq - \nabla \phi \\
-   \end{aligned}\end{split}\]</div>
+  \end{cases}$$
+
+**Potentials.**
+
+   $$\begin{aligned}
+      \vec{b} & = \nabla \times \vec{a} \\
+      \vec{e} & \simeq - \nabla \phi \\
+   \end{aligned}$$
+-->
 </div>
 
     <script type="text/x-thebe-config">

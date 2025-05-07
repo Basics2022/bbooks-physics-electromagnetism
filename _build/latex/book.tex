@@ -85,7 +85,7 @@
         
 
 \title{Classical Electromagnetism and Principles of Electrical Engineering}
-\date{May 06, 2025}
+\date{May 07, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -102,7 +102,7 @@
 
 
 \sphinxAtStartPar
-This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,download,myst}{.pdf document}.
+This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\sphinxstylestrong{basics\sphinxhyphen{}books project}}. It is also available as a \DUrole{xref,myst}{.pdf document}.
 \subsubsection*{Classical electromagnetism}
 
 \sphinxAtStartPar
@@ -2114,6 +2114,17 @@ Non\sphinxhyphen{}dimensional analysis allows to distinguish different regimes o
 \section{Non\sphinxhyphen{}dimensional equations of electromagnetism}
 \label{\detokenize{ch/regimes-non-dimensional:non-dimensional-equations-of-electromagnetism}}\label{\detokenize{ch/regimes-non-dimensional:classical-electromagnetism-regimes-non-dimensional}}\label{\detokenize{ch/regimes-non-dimensional::doc}}
 \sphinxAtStartPar
+Non\sphinxhyphen{}dimensional form of the equations of electromagnetism are derived here, defining every dimensional physical quantity as the product of a dimensional reference value and the non\sphinxhyphen{}dimensional quantity, \(g = G \widetilde{g}\), or with a small abuse of notation to avoid writing lots of tildes and to keep lighter notation,
+\begin{equation*}
+\begin{split}g = G g \ ,\end{split}
+\end{equation*}
+\sphinxAtStartPar
+using the same symbol to indicate the dimensional and the non\sphinxhyphen{}dimensional quantity. Here, capital letters are used for reference dimensional quantities.
+
+\sphinxAtStartPar
+This procedure allows to estimate the order of magnitude of the physical quantities involved in the problem: without any independent physical quantities, non\sphinxhyphen{}dimensional numbers are set equal to \(1\), whenever it’s possible. Only two equations, namely Ampére\sphinxhyphen{}Maxwell equation and the definition of the electric field with the EM potentials, contain 3 terms
+
+\sphinxAtStartPar
 \sphinxstylestrong{Continuity equation of electric charge.}
 \begin{equation*}
 \begin{split}\partial_t \rho + \nabla \cdot \vec{j} = 0\end{split}
@@ -2129,6 +2140,14 @@ Non\sphinxhyphen{}dimensional analysis allows to distinguish different regimes o
   \end{cases}\end{split}
 \end{equation*}
 \sphinxAtStartPar
+\sphinxstylestrong{Constitutive laws}, here for linear isotropic medium
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{d} & = \varepsilon \vec{e} \\
+  \vec{b} & = \mu         \vec{h} \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
 \sphinxstylestrong{Potentials.}
 \begin{equation*}
 \begin{split}\begin{aligned}
@@ -2137,80 +2156,101 @@ Non\sphinxhyphen{}dimensional analysis allows to distinguish different regimes o
    \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Gauge.}
+\sphinxstylestrong{Gauge.} Lorentz’s gauge
+\begin{equation*}
+\begin{split}0 = \dfrac{1}{c^2} \partial_t \phi + \nabla \cdot \vec{a}\end{split}
+\end{equation*}
+\sphinxAtStartPar
 \sphinxstylestrong{Wave equations.}
+
+\sphinxAtStartPar
+…
 
 \sphinxAtStartPar
 Assuming characteristic dimensions of the physical quantities involved in the problem exist, and allow to write the governing equations in non\sphinxhyphen{}dimensional form with contributions with (approximately at least) the same order of magnitude,
 \begin{equation*}
 \begin{split}
-    f R \, \partial_t \rho + \dfrac{J}{L} \nabla \cdot \vec{j} = 0
-  \qquad , \qquad
-    \partial_t \rho + \dfrac{J}{f L R} \nabla \cdot \vec{j} = 0
-  \end{split}
-\end{equation*}\begin{equation*}
-\begin{split}
-  \begin{cases}
-    \dfrac{E}{L} \nabla \cdot \vec{e} - \dfrac{R}{\varepsilon_0} \rho = 0 \\
-    \dfrac{E}{L} \nabla \times \vec{e} + {B f} \, \partial_t \vec{b} = \vec{0} \\ 
-    \dfrac{B}{L} \nabla \cdot \vec{b} = 0 \\
-    \dfrac{B}{L} \nabla \times \vec{b} - \dfrac{E f}{c_0^2} \partial_t \vec{e} = \mu_0 J \, \vec{j} 
-  \end{cases}
-  \qquad , \qquad 
-  \begin{cases}
-    \nabla \cdot \vec{e} - \dfrac{R L}{\varepsilon_0 E} \rho = 0 \\
-    \nabla \times \vec{e} + \dfrac{B f L}{E} \, \partial_t \vec{b} = \vec{0} \\ 
-    \dfrac{B}{L} \nabla \cdot \vec{b} = 0 \\
-    \nabla \times \vec{b} - \dfrac{E f L}{c_0^2 B} \partial_t \vec{e} = \dfrac{\mu_0 J L}{B} \, \vec{j} 
-  \end{cases}
-  \end{split}
-\end{equation*}\begin{equation*}
-\begin{split}
-  \begin{aligned}
-     B \vec{b} & = \dfrac{A}{L} \nabla \times \vec{a} \\
-     E \vec{e} & = - A f \, \partial_t \vec{a} - \frac{\Phi}{L} \nabla \phi \\
-  \end{aligned}
-  \qquad , \qquad 
-  \begin{aligned}
-     \vec{b} & = \dfrac{A}{B L} \nabla \times \vec{a} \\
-     \vec{e} & = - \dfrac{A f}{E} \, \partial_t \vec{a} - \frac{\Phi}{E L} \nabla \phi \\
-  \end{aligned}
-  \end{split}
-\end{equation*}\begin{equation*}
-\begin{split}
-    \dfrac{A}{L} \nabla \cdot \vec{a} + \dfrac{f \Phi}{c_0^2} \partial_t \phi = 0
-  \qquad , \qquad 
-    \nabla \cdot \vec{a} + \frac{\Phi f L}{c_0^2 A} \partial_t \phi = 0
-  \end{split}
+\begin{aligned}
+   &  F R \, \partial_t \rho_f + \dfrac{J}{L} \nabla \cdot \vec{j}_f = 0 \\ \\
+   &  \dfrac{D}{L} \nabla \cdot \vec{d} - R \rho_f = 0 \\
+   &  \dfrac{E}{L} \nabla \times \vec{e} + {B F} \, \partial_t \vec{b} = \vec{0} \\ 
+   &  \dfrac{B}{L} \nabla \cdot \vec{b} = 0 \\
+   &  \dfrac{H}{L} \nabla \times \vec{h} - F D \partial_t \vec{d} = J \, \vec{j}_f  \\ \\
+   &  D \vec{d} = \varepsilon E \vec{e} \\
+   &  B \vec{b} = \mu H \vec{h} \\ \\
+   &  B \vec{b} = \dfrac{A}{L} \nabla \times \vec{a} \\
+   &  E \vec{e} = - A F \, \partial_t \vec{a} - \frac{\Phi}{L} \nabla \phi \\ \\
+   & \dfrac{A}{L} \nabla \cdot \vec{a} + \dfrac{F \Phi}{c_0^2} \partial_t \phi = 0
+\end{aligned}
+\qquad , \qquad
+\begin{aligned}
+   &  \partial_t \rho_f + \dfrac{J}{F L R} \nabla \cdot \vec{j}_f = 0 \\ \\
+   &  \nabla \cdot \vec{d} - \dfrac{R L}{D} \rho_f = 0 \\
+   &  \nabla \times \vec{e} + \frac{B F L}{E} \, \partial_t \vec{b} = \vec{0} \\ 
+   &  \nabla \cdot \vec{b} = 0 \\
+   &  \nabla \times \vec{h} - \dfrac{D L F}{H} \partial_t \vec{d} = \frac{J L}{H} \, \vec{j}_f  \\ \\
+   &  \vec{d} = \frac{\varepsilon E}{D} \vec{e} \\
+   &  \vec{b} = \frac{\mu H}{B} \vec{h} \\ \\
+   &  \vec{b} = \dfrac{A}{B L} \nabla \times \vec{a} \\
+   &  \vec{e} = \frac{\Phi}{E L} \left[ - \dfrac{A FL}{\Phi} \, \partial_t \vec{a} - \nabla \phi \right] \\ \\
+   &  \nabla \cdot \vec{a} + \dfrac{F L \Phi}{A c_0^2} \partial_t \phi = 0
+\end{aligned}
+\end{split}
 \end{equation*}
 \sphinxAtStartPar
 All these relations but Ampére\sphinxhyphen{}Maxwell’s law and the definition of the electric field in terms of the potentials contains at most two terms: these relations can be used to immediately find the relation between the scales of the problem (if they’re not independent), by setting the non\sphinxhyphen{}dimensional numbers equal to \(1\),
 
 
+\begin{equation}\label{equation:ch/regimes-non-dimensional:eq:non-dim:c}
+\begin{split}\begin{aligned}
+  J & = R F L                                &  \text{from contintuity} \\
+  R & = \frac{D}{L}                          &  \text{from Gauss' law for $\vec{d}$} \\
+  E & = B F L                                &  \text{from Faraday's law} \\
+  D & = \varepsilon E                        &  \text{from $\vec{d} = \varepsilon \vec{e}$} \\
+  B & = \mu H                                &  \text{from $\vec{b} = \mu         \vec{h}$} \\
+  A & = B L                                  &  \text{from the definition $\vec{b} = \nabla \times \vec{a}$} \\
+  A & = \dfrac{\Phi F L}{c_0^2}              &  \text{from Lorentz's gauge} \\
+\end{aligned}\end{split}
+\end{equation}
+\sphinxAtStartPar
+Using these definitions of the characteristic dimensions of the problem, the pairs of terms in Ampére\sphinxhyphen{}Maxwell law and in the the definition of the electric field are compared
 \begin{equation*}
 \begin{split}\begin{aligned}
-  R & = \frac{\varepsilon_0 E}{L} && \text{from Gauss' law for $\vec{e}$} \\
-  E & = B f L  && \text{from Faraday's law} \\
-  A & = B L && \text{from the definition $\vec{b} = \nabla \times \vec{a}$} \\
-  A & = \dfrac{\Phi f L}{c_0^2} && \text{from Lorentz's gauge} \\
+  \frac{D L F}{H}     & = \dfrac{\varepsilon \mu E L F}{B} = \left( \dfrac{FL}{c} \right)^2 \\
+  \frac{A FL}{\Phi} & = \dfrac{\Phi F L}{c^2} \frac{FL}{\Phi} = \left(\dfrac{FL}{c}\right)^2 \\
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-while Ampére\sphinxhyphen{}Maxwell’s equation and the definition of the electric field as a function of the electromagnetic potentials can be used to compare to define different regimes, comparing the non\sphinxhyphen{}dimensional numbers appearing in these relations
+\sphinxstylestrong{todo} \sphinxstyleemphasis{check obseration at the end of thi section}
+
+\sphinxAtStartPar
+Setting equal to \(1\) al the independent non\sphinxhyphen{}dimensional numbers, (\sphinxstylestrong{todo} \sphinxstyleemphasis{is it possible? Are they really independent}), including
 \begin{equation*}
-\begin{split}\begin{aligned}
-  \nabla \times \vec{b} 
-  & = \dfrac{\mu_0 J L}{B} \vec{j} + \dfrac{E f L}{c_0^2 B} \partial_t \vec{e}  = && (E = B f L) \\
-  & = \dfrac{\mu_0 J L}{B} \vec{j} + \left(\dfrac{f L}{c_0}\right)^2 \partial_t \vec{e} = \\
-  & = \dfrac{\mu_0 J L}{B} \left[ \vec{j} + \dfrac{B}{\mu_0 J L} \left(\dfrac{f L}{c_0}\right)^2 \partial_t \vec{e} \right] \\
-\end{aligned}\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\begin{aligned}
-  \vec{e}
-  & = - \dfrac{\Phi}{E L} \left[ \nabla \phi + \dfrac{A f L}{\Phi} \partial_t \vec{a} \right] = && \left( A = \dfrac{\Phi f L}{c_0^2} \right) \\ 
-  & = - \dfrac{\Phi}{E L} \left[ \nabla \phi + \left( \dfrac{f L}{c_0} \right)^2 \partial_t \vec{a} \right]
-\end{aligned}\end{split}
+\begin{split}H = JL \qquad , \qquad \Phi = E L \ ,\end{split}
 \end{equation*}
+\sphinxAtStartPar
+the non\sphinxhyphen{}dimensional form of the equations of electromagnetism becomes
+\begin{equation}\label{equation:ch/regimes-non-dimensional:eq:em:non-dimensional}
+\begin{split}
+\begin{aligned}
+  & \text{continuity equation for charge}        &&  \partial_t \rho_f +  \nabla \cdot \vec{j}_f = 0 \\ \\
+  & \text{Maxwell's equations}                   &&  \nabla \cdot \vec{d} - \rho_f = 0 \\
+  &                                              &&  \nabla \times \vec{e} +  \partial_t \vec{b} = \vec{0} \\ 
+  &                                              &&  \nabla \cdot \vec{b} = 0 \\
+  &                                              &&  \nabla \times \vec{h} - \left(\dfrac{FL}{c}\right)^2 \partial_t \vec{d} = \, \vec{j}_f  \\ \\
+  & \text{constitutive equations}                &&  \vec{d} = \vec{e} \\
+  &                                              &&  \vec{b} = \vec{h} \\ \\
+  & \text{EM potentials}                         &&  \vec{b} = \nabla \times \vec{a} \\
+  &                                              &&  \vec{e} = - \left( \dfrac{FL}{c} \right)^2 \partial_t \vec{a} - \nabla \phi \\ \\
+  & \text{Lorentz's gauge}                       &&  \nabla \cdot \vec{a} + \partial_t \phi = 0
+\end{aligned}
+\end{split}
+\end{equation}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{check compatibility in the definition of the charactersitic physical quantities; need to distinguish steady and time\sphinxhyphen{}dependent terms?}
+
+
+
 \sphinxstepscope
 
 
@@ -2381,31 +2421,48 @@ Slow regime leads to circuit approximations of electromagnetic systems with \sph
 \begin{split}\dfrac{f L }{c_0} \ll 1 \ .\end{split}
 \end{equation*}
 \sphinxAtStartPar
-Under this assumption, the equations of electromagnetism can be approximated as
+Under this assumption, approximate governing equations of electromagnetism in slow opearint regime is obtained setting \(\frac{fL}{c} = 0\) in the non\sphinxhyphen{}dimensional equations of the electromagnetism \eqref{equation:ch/regimes-non-dimensional:eq:em:non-dimensional},
+\begin{equation}\label{equation:ch/regimes-slow:eq:em:non-dimensional:slow}
+\begin{split}
+\begin{aligned}
+  & \text{continuity equation for charge}        &&  \partial_t \rho_f +  \nabla \cdot \vec{j}_f = 0 \\ \\
+  & \text{Maxwell's equations}                   &&  \nabla \cdot \vec{d} - \rho_f = 0 \\
+  &                                              &&  \nabla \times \vec{e} +  \partial_t \vec{b} = \vec{0} \\ 
+  &                                              &&  \nabla \cdot \vec{b} = 0 \\
+  &                                              &&  \nabla \times \vec{h} = \, \vec{j}_f  \\ \\
+  & \text{constitutive equations}                &&  \vec{d} = \vec{e} \\
+  &                                              &&  \vec{b} = \vec{h} \\ \\
+  & \text{EM potentials}                         &&  \vec{b} = \nabla \times \vec{a} \\
+  &                                              &&  \vec{e} = - \nabla \phi - \partial_t \vec{a} \\ \\
+  & \text{Lorentz's gauge}                       &&  \nabla \cdot \vec{a} + \partial_t \phi = 0
+\end{aligned}
+\end{split}
+\end{equation}
+\sphinxAtStartPar
+\sphinxstylestrong{todo} \sphinxstyleemphasis{check consistency of \(\vec{e} = - \nabla \phi\) with Faraday’s induction law \(\nabla \cdot \vec{e} + \partial_t \vec{b} = \vec{0}\). {\hyperref[\detokenize{ch/regimes-non-dimensional:classical-electromagnetism-regimes-non-dimensional}]{\sphinxcrossref{\DUrole{std,std-ref}{Non\sphinxhyphen{}dimensionalization process}}}} could be not 100\% ok yet}
 
 \sphinxAtStartPar
-\sphinxstylestrong{Continuity equation of electric charge.}
-\begin{equation*}
-\begin{split}\partial_t \rho + \nabla \cdot \vec{j} = 0\end{split}
-\end{equation*}
+From the approximate governing equations some consequences follow:
+\begin{itemize}
+\item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Maxwell’s equations.}
-\begin{equation*}
-\begin{split}\begin{cases}
-    \nabla \cdot \vec{e} = \dfrac{\rho}{\varepsilon_0} \\
-    \nabla \times \vec{e} + \partial_t \vec{b} = \vec{0} \\ 
-    \nabla \cdot \vec{b} = 0 \\
-    \nabla \times \vec{b} \simeq \mu_0 \vec{j} 
-  \end{cases}\end{split}
-\end{equation*}
-\sphinxAtStartPar
-\sphinxstylestrong{Potentials.}
+in slow operating regime wave equations can be approximated with Poisson equations: perturbations can’t travel anymore in form of waves, while their transmission is governed by a diffusive equation.
+{\hyperref[\detokenize{ch/waves-equation:classical-electromagnetism-waves-wave-equation}]{\sphinxcrossref{\DUrole{std,std-ref}{Wave equations}}}} becomes Poisson equations, as the wave operator \(\square \sim \nabla^2\) if \(\left( \frac{L F}{c} \right)^2 \ll 1\), as the non\sphinxhyphen{}dimensional form of a wave equation follows from
 \begin{equation*}
 \begin{split}\begin{aligned}
-      \vec{b} & = \nabla \times \vec{a} \\
-      \vec{e} & \simeq - \nabla \phi \\
-   \end{aligned}\end{split}
+      \frac{F^2}{c^2} \partial_{tt} f - \dfrac{1}{L^2} \nabla^2 f & = \dots \\
+      \dfrac{1}{L^2} \left[ \left( \frac{F L}{c}\right)^2 \partial_{tt} f -  \nabla^2 f \right] & = \dots \\
+     - \dfrac{1}{L^2} \nabla^2 f  & \sim \dots 
+    \end{aligned}\end{split}
 \end{equation*}
+\item {} 
+\sphinxAtStartPar
+radiation is negligible in energy balance, as it’s shown for {\hyperref[\detokenize{ch/circuits-energy:classical-electromagnetism-circuits-energy-boundary}]{\sphinxcrossref{\DUrole{std,std-ref}{energy balance in circuit approximation}}}}
+
+\end{itemize}
+
+
+
 \sphinxstepscope
 
 
@@ -2489,7 +2546,7 @@ with the constitutive law of Ohm resistors \(\vec{e} = \rho_R \vec{j}\), the def
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-the “VI” contribution, that can be re\sphinxhyphen{}written as the product of voltage and current intensity at wires of the electric ports, the only “active” interface in circuit approximation
+the \sphinxstylestrong{“vi”} contribution, that can be re\sphinxhyphen{}written as the product of voltage and current intensity at wires of the electric ports, the only “active” interface in circuit approximation
 \begin{equation*}
 \begin{split}\oint_{\partial V} \phi \vec{j} \cdot \hat{n} = - \sum_{k \in \text{wires}} \phi_k \int_{S_k} \hat{j} \cdot \hat{n} = \sum_{k \in \text{wires}} v_k \, i_k \ ,\end{split}
 \end{equation*}
@@ -2503,7 +2560,7 @@ as the unit vector \(\hat{n}\) is pointing outwards the boundary of the system.
 
 \item {} 
 \sphinxAtStartPar
-a radiation term, due to radiation of electromagnetic energy in free\sphinxhyphen{}space through the boundary of the domain; this contribution is the dominant contribution making antenna wokr, and it’s usually negligible for slow regimes of systems of moderate dimensions, as discussed below comparing the order of magnitude of these contributions.
+a \sphinxstylestrong{radiation} term, due to radiation of electromagnetic energy in free\sphinxhyphen{}space through the boundary of the domain; this contribution is the dominant contribution making an antenna work, and it’s usually negligible for slow regimes of systems of moderate dimensions, as discussed below comparing the order of magnitude of these contributions.
 
 \end{itemize}
 
@@ -2511,29 +2568,28 @@ a radiation term, due to radiation of electromagnetic energy in free\sphinxhyphe
 \section{Boundary terms in circuit approximation}
 \label{\detokenize{ch/circuits-energy:boundary-terms-in-circuit-approximation}}\label{\detokenize{ch/circuits-energy:classical-electromagnetism-circuits-energy-boundary}}
 \sphinxAtStartPar
-In the limit of {\hyperref[\detokenize{ch/regimes-slow:classical-electromagnetism-regimes-slow}]{\sphinxcrossref{\DUrole{std,std-ref}{slow regime}}}}, \(\frac{f L}{c_0} \ll 1\), the comparison of the characteristic dimensions of the three boundary contributions gives
+In the limit of {\hyperref[\detokenize{ch/regimes-slow:classical-electromagnetism-regimes-slow}]{\sphinxcrossref{\DUrole{std,std-ref}{slow regime}}}}, \(\frac{f L}{c_0} \ll 1\), the comparison of the characteristic dimensions of the three boundary contributions gives (with the same abuse of notation used for {\hyperref[\detokenize{ch/regimes-non-dimensional:classical-electromagnetism-regimes-non-dimensional}]{\sphinxcrossref{\DUrole{std,std-ref}{non\sphinxhyphen{}dimensional equations in electromagnetism}}}}, indicating non\sphinxhyphen{}dimensional quantities with the same symbols as the dimensional quantities),
 \begin{equation*}
 \begin{split}\begin{aligned}
-  - \oint_{\partial V} \phi \, \vec{j} \cdot \hat{n} & = \sum_{k \in \text{wires}} v_k i_k = V I \sum_{k \in \text{wires}} v_k i_k && (1) \\
-  \oint_{\partial V} \hat{n} \cdot \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b} & = S \dfrac{ f A B }{\mu_0} \oint_{\partial \widetilde{V}} \hat{n} \cdot \partial_t \vec{a} \times \vec{b} = S \dfrac{B^2 f L}{\mu_0}  \oint_{\partial \widetilde{V}} \hat{n} \cdot \partial_t \vec{a} \times \vec{b}  && (2) \\
-  \oint_{\partial V} \hat{n} \cdot \varepsilon_0 \, \phi\, \partial_t \vec{e} & = S \, \varepsilon_0 f E \Phi \oint_{\partial \widetilde{V}} \hat{n} \cdot \phi\, \partial_t \vec{e} = S \dfrac{B^2 f L}{\mu_0} \left( \dfrac{f L}{c_0} \right)^2 \oint_{\partial \widetilde{V}} \hat{n} \cdot \phi\, \partial_t \vec{e} && (3) \\
+  - \oint_{\partial V} \phi \, \vec{j} \cdot \hat{n} & = \sum_{k \in \text{wires}} v_k i_k = \Phi I \sum_{k \in \text{wires}} v_k i_k && (1) \\ \\
+  \oint_{\partial V} \hat{n} \cdot \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b} & = S \dfrac{ F A B }{\mu_0} \oint_{\partial \widetilde{V}} \hat{n} \cdot \partial_t \vec{a} \times \vec{b} = S \frac{\Phi B F^2 L}{\mu c^2}  \oint_{\partial \widetilde{V}} \hat{n} \cdot \partial_t \vec{a} \times \vec{b}  && (2) \\ \\
+  \oint_{\partial V} \hat{n} \cdot \varepsilon_0 \, \phi\, \partial_t \vec{e} & = S \, \varepsilon F E \Phi \oint_{\partial \widetilde{V}} \hat{n} \cdot \phi\, \partial_t \vec{e} = S \varepsilon \Phi B F^2 L \oint_{\partial \widetilde{V}} \hat{n} \cdot \phi\, \partial_t \vec{e} && (3) \\
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-being \(E = B f L\), and \(\Phi = E L = B f L^2\), \(E \Phi = (B f L)^2 L\), and \(\varepsilon_0 = \dfrac{1}{\mu_0 c_0^2}\). If the integrals with non\sphinxhyphen{}dimensional quantities have the same order of magnitude (and this should occur if the non\sphinxhyphen{}dimensional equations are build using reference quantities of the system), the contribution (3) is smaller than the contribution (2) in the slow regime limit, as its \(\left( \frac{f L}{c_0} \right)^2 \ll 1\) times the order of magnitude.
+having used results from \eqref{equation:ch/regimes-non-dimensional:eq:non-dim:c}, namely in (2) \(A = \frac{\Phi F L}{c^2}\), and in (3) \( \Phi = E L\), \(E = B F L\). As \(\varepsilon \mu = \frac{1}{c^2}\), terms (2) and (3) have the same order of magnitude, \(\sim S \frac{\Phi B F^2 L}{\mu c^2}\).
+
+
 
 \sphinxAtStartPar
-Comparing (1) and (2), the second contribution is negligible if
+Comparing the order of magnitude of terms (1) and (2) (equal to (3)), radiation contributions (2), (3) are negligible if
 \begin{equation*}
-\begin{split}1 \gg \dfrac{S \frac{B^2 f L}{\mu_0}}{VI} = \dots\end{split}
+\begin{split}1 \gg \dfrac{S \frac{\Phi B F^2 L}{\mu c^2}}{\Phi I} = \left(\frac{FL}{c}\right)^2 \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{todo} \sphinxstyleemphasis{check this! Is it ok that the frequency disappears? Term (1) is non\sphinxhyphen{}zero but (2) is identically zero for steady regime, \(f = 0\). And if it’s required to separate steady and unsteady contributions in the discussion of non\sphinxhyphen{}dimensional equations}
-\begin{equation*}
-\begin{split}1 \gg \dfrac{S \frac{B^2 f L}{\mu_0}}{VI} = S \dfrac{B^2 f L}{\mu_0 \Phi I} = S \frac{B^2 f L}{\mu_0 B f L^2 I} = S \frac{B}{\mu_0 L I} = S \frac{\mu_0 J L}{\mu_0 L I} = \frac{S J}{I} \ .\end{split}
-\end{equation*}
-\sphinxAtStartPar
-The dimension of the boundary of the domain is proprotional to the square of the linear dimension of the system, \(S \sim L_{V}^2\). This inequality holds if the product of the dimension of the boundary of the domain and the characteristic current density \(J\) is much smaller than the characteristic current \(I\) at the boundary.
+having used the definition of the characteristic intensity of the magnetic field \(B = \mu J L = \mu \frac{I}{S} L\), from \eqref{equation:ch/regimes-non-dimensional:eq:non-dim:c}. In the limit of slow operating regime for systems of modest dimensions, \(\frac{FL}{c} \ll 1\), \sphinxstylestrong{radiation is negligible} if compared with the \sphinxstylestrong{“vi” power flux at the electric port}. This conclusion is a strong argument in favor of \sphinxstylestrong{circuit approximation} of electromagnetic systems of modest dimensions with low characteristic frequencies.
+
+
 
 
 
@@ -5762,7 +5818,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-May 06, 2025
+May 07, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
@@ -6100,7 +6156,7 @@ basics
 \begin{sphinxuseclass}{sd-d-flex-row}
 \begin{sphinxuseclass}{sd-align-minor-center}
 \sphinxAtStartPar
-May 06, 2025
+May 07, 2025
 
 \end{sphinxuseclass}
 \end{sphinxuseclass}
