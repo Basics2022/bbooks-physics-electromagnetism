@@ -407,6 +407,11 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="non-dimensional-equations-of-electromagnetism">
 <span id="classical-electromagnetism-regimes-non-dimensional"></span><h1><span class="section-number">5.1. </span>Non-dimensional equations of electromagnetism<a class="headerlink" href="#non-dimensional-equations-of-electromagnetism" title="Permalink to this heading">#</a></h1>
+<p>Non-dimensional form of the equations of electromagnetism are derived here, defining every dimensional physical quantity as the product of a dimensional reference value and the non-dimensional quantity, <span class="math notranslate nohighlight">\(g = G \widetilde{g}\)</span>, or with a small abuse of notation to avoid writing lots of tildes and to keep lighter notation,</p>
+<div class="math notranslate nohighlight">
+\[g = G g \ ,\]</div>
+<p>using the same symbol to indicate the dimensional and the non-dimensional quantity. Here, capital letters are used for reference dimensional quantities.</p>
+<p>This procedure allows to estimate the order of magnitude of the physical quantities involved in the problem: without any independent physical quantities, non-dimensional numbers are set equal to <span class="math notranslate nohighlight">\(1\)</span>, whenever it’s possible. Only two equations, namely Ampére-Maxwell equation and the definition of the electric field with the EM potentials, contain 3 terms</p>
 <p><strong>Continuity equation of electric charge.</strong></p>
 <div class="math notranslate nohighlight">
 \[\partial_t \rho + \nabla \cdot \vec{j} = 0\]</div>
@@ -418,78 +423,106 @@ document.write(`
     \nabla \cdot \vec{b} = 0 \\
     \nabla \times \vec{b} - \frac{1}{c_0^2} \partial_t \vec{e} = \mu_0 \vec{j} 
   \end{cases}\end{split}\]</div>
+<p><strong>Constitutive laws</strong>, here for linear isotropic medium</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{d} &amp; = \varepsilon \vec{e} \\
+  \vec{b} &amp; = \mu         \vec{h} \\
+\end{aligned}\end{split}\]</div>
 <p><strong>Potentials.</strong></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
       \vec{b} &amp; = \nabla \times \vec{a} \\
       \vec{e} &amp; = -\partial_t \vec{a} - \nabla \phi \\
    \end{aligned}\end{split}\]</div>
-<p><strong>Gauge.</strong>
-<strong>Wave equations.</strong></p>
+<p><strong>Gauge.</strong> Lorentz’s gauge</p>
+<div class="math notranslate nohighlight">
+\[0 = \dfrac{1}{c^2} \partial_t \phi + \nabla \cdot \vec{a}\]</div>
+<p><strong>Wave equations.</strong></p>
+<p>…</p>
 <p>Assuming characteristic dimensions of the physical quantities involved in the problem exist, and allow to write the governing equations in non-dimensional form with contributions with (approximately at least) the same order of magnitude,</p>
 <div class="math notranslate nohighlight">
-\[
-    f R \, \partial_t \rho + \dfrac{J}{L} \nabla \cdot \vec{j} = 0
-  \qquad , \qquad
-    \partial_t \rho + \dfrac{J}{f L R} \nabla \cdot \vec{j} = 0
-  \]</div>
-<div class="math notranslate nohighlight">
 \[\begin{split}
-  \begin{cases}
-    \dfrac{E}{L} \nabla \cdot \vec{e} - \dfrac{R}{\varepsilon_0} \rho = 0 \\
-    \dfrac{E}{L} \nabla \times \vec{e} + {B f} \, \partial_t \vec{b} = \vec{0} \\ 
-    \dfrac{B}{L} \nabla \cdot \vec{b} = 0 \\
-    \dfrac{B}{L} \nabla \times \vec{b} - \dfrac{E f}{c_0^2} \partial_t \vec{e} = \mu_0 J \, \vec{j} 
-  \end{cases}
-  \qquad , \qquad 
-  \begin{cases}
-    \nabla \cdot \vec{e} - \dfrac{R L}{\varepsilon_0 E} \rho = 0 \\
-    \nabla \times \vec{e} + \dfrac{B f L}{E} \, \partial_t \vec{b} = \vec{0} \\ 
-    \dfrac{B}{L} \nabla \cdot \vec{b} = 0 \\
-    \nabla \times \vec{b} - \dfrac{E f L}{c_0^2 B} \partial_t \vec{e} = \dfrac{\mu_0 J L}{B} \, \vec{j} 
-  \end{cases}
-  \end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-  \begin{aligned}
-     B \vec{b} &amp; = \dfrac{A}{L} \nabla \times \vec{a} \\
-     E \vec{e} &amp; = - A f \, \partial_t \vec{a} - \frac{\Phi}{L} \nabla \phi \\
-  \end{aligned}
-  \qquad , \qquad 
-  \begin{aligned}
-     \vec{b} &amp; = \dfrac{A}{B L} \nabla \times \vec{a} \\
-     \vec{e} &amp; = - \dfrac{A f}{E} \, \partial_t \vec{a} - \frac{\Phi}{E L} \nabla \phi \\
-  \end{aligned}
-  \end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[
-    \dfrac{A}{L} \nabla \cdot \vec{a} + \dfrac{f \Phi}{c_0^2} \partial_t \phi = 0
-  \qquad , \qquad 
-    \nabla \cdot \vec{a} + \frac{\Phi f L}{c_0^2 A} \partial_t \phi = 0
-  \]</div>
+\begin{aligned}
+   &amp;  F R \, \partial_t \rho_f + \dfrac{J}{L} \nabla \cdot \vec{j}_f = 0 \\ \\
+   &amp;  \dfrac{D}{L} \nabla \cdot \vec{d} - R \rho_f = 0 \\
+   &amp;  \dfrac{E}{L} \nabla \times \vec{e} + {B F} \, \partial_t \vec{b} = \vec{0} \\ 
+   &amp;  \dfrac{B}{L} \nabla \cdot \vec{b} = 0 \\
+   &amp;  \dfrac{H}{L} \nabla \times \vec{h} - F D \partial_t \vec{d} = J \, \vec{j}_f  \\ \\
+   &amp;  D \vec{d} = \varepsilon E \vec{e} \\
+   &amp;  B \vec{b} = \mu H \vec{h} \\ \\
+   &amp;  B \vec{b} = \dfrac{A}{L} \nabla \times \vec{a} \\
+   &amp;  E \vec{e} = - A F \, \partial_t \vec{a} - \frac{\Phi}{L} \nabla \phi \\ \\
+   &amp; \dfrac{A}{L} \nabla \cdot \vec{a} + \dfrac{F \Phi}{c_0^2} \partial_t \phi = 0
+\end{aligned}
+\qquad , \qquad
+\begin{aligned}
+   &amp;  \partial_t \rho_f + \dfrac{J}{F L R} \nabla \cdot \vec{j}_f = 0 \\ \\
+   &amp;  \nabla \cdot \vec{d} - \dfrac{R L}{D} \rho_f = 0 \\
+   &amp;  \nabla \times \vec{e} + \frac{B F L}{E} \, \partial_t \vec{b} = \vec{0} \\ 
+   &amp;  \nabla \cdot \vec{b} = 0 \\
+   &amp;  \nabla \times \vec{h} - \dfrac{D L F}{H} \partial_t \vec{d} = \frac{J L}{H} \, \vec{j}_f  \\ \\
+   &amp;  \vec{d} = \frac{\varepsilon E}{D} \vec{e} \\
+   &amp;  \vec{b} = \frac{\mu H}{B} \vec{h} \\ \\
+   &amp;  \vec{b} = \dfrac{A}{B L} \nabla \times \vec{a} \\
+   &amp;  \vec{e} = \frac{\Phi}{E L} \left[ - \dfrac{A FL}{\Phi} \, \partial_t \vec{a} - \nabla \phi \right] \\ \\
+   &amp;  \nabla \cdot \vec{a} + \dfrac{F L \Phi}{A c_0^2} \partial_t \phi = 0
+\end{aligned}
+\end{split}\]</div>
 <p>All these relations but Ampére-Maxwell’s law and the definition of the electric field in terms of the potentials contains at most two terms: these relations can be used to immediately find the relation between the scales of the problem (if they’re not independent), by setting the non-dimensional numbers equal to <span class="math notranslate nohighlight">\(1\)</span>,</p>
 <!--  J & = f L R && \text{from charge continuity equation} \\ -->
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  R &amp; = \frac{\varepsilon_0 E}{L} &amp;&amp; \text{from Gauss' law for $\vec{e}$} \\
-  E &amp; = B f L  &amp;&amp; \text{from Faraday's law} \\
-  A &amp; = B L &amp;&amp; \text{from the definition $\vec{b} = \nabla \times \vec{a}$} \\
-  A &amp; = \dfrac{\Phi f L}{c_0^2} &amp;&amp; \text{from Lorentz's gauge} \\
+<div class="math notranslate nohighlight" id="equation-eq-non-dim-c">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-eq-non-dim-c" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+  J &amp; = R F L                                &amp;  \text{from contintuity} \\
+  R &amp; = \frac{D}{L}                          &amp;  \text{from Gauss' law for $\vec{d}$} \\
+  E &amp; = B F L                                &amp;  \text{from Faraday's law} \\
+  D &amp; = \varepsilon E                        &amp;  \text{from $\vec{d} = \varepsilon \vec{e}$} \\
+  B &amp; = \mu H                                &amp;  \text{from $\vec{b} = \mu         \vec{h}$} \\
+  A &amp; = B L                                  &amp;  \text{from the definition $\vec{b} = \nabla \times \vec{a}$} \\
+  A &amp; = \dfrac{\Phi F L}{c_0^2}              &amp;  \text{from Lorentz's gauge} \\
 \end{aligned}\end{split}\]</div>
-<p>while Ampére-Maxwell’s equation and the definition of the electric field as a function of the electromagnetic potentials can be used to compare to define different regimes, comparing the non-dimensional numbers appearing in these relations</p>
+<p>Using these definitions of the characteristic dimensions of the problem, the pairs of terms in Ampére-Maxwell law and in the the definition of the electric field are compared</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
+  \frac{D L F}{H}     &amp; = \dfrac{\varepsilon \mu E L F}{B} = \left( \dfrac{FL}{c} \right)^2 \\
+  \frac{A FL}{\Phi} &amp; = \dfrac{\Phi F L}{c^2} \frac{FL}{\Phi} = \left(\dfrac{FL}{c}\right)^2 \\
+\end{aligned}\end{split}\]</div>
+<p><span style="color:red"><strong>todo</strong> <em>check obseration at the end of thi section</em></span></p>
+<p>Setting equal to <span class="math notranslate nohighlight">\(1\)</span> al the independent non-dimensional numbers, (<strong>todo</strong> <em>is it possible? Are they really independent</em>), including</p>
+<div class="math notranslate nohighlight">
+\[H = JL \qquad , \qquad \Phi = E L \ ,\]</div>
+<p>the non-dimensional form of the equations of electromagnetism becomes</p>
+<div class="math notranslate nohighlight" id="equation-eq-em-non-dimensional">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-eq-em-non-dimensional" title="Permalink to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+  &amp; \text{continuity equation for charge}        &amp;&amp;  \partial_t \rho_f +  \nabla \cdot \vec{j}_f = 0 \\ \\
+  &amp; \text{Maxwell's equations}                   &amp;&amp;  \nabla \cdot \vec{d} - \rho_f = 0 \\
+  &amp;                                              &amp;&amp;  \nabla \times \vec{e} +  \partial_t \vec{b} = \vec{0} \\ 
+  &amp;                                              &amp;&amp;  \nabla \cdot \vec{b} = 0 \\
+  &amp;                                              &amp;&amp;  \nabla \times \vec{h} - \left(\dfrac{FL}{c}\right)^2 \partial_t \vec{d} = \, \vec{j}_f  \\ \\
+  &amp; \text{constitutive equations}                &amp;&amp;  \vec{d} = \vec{e} \\
+  &amp;                                              &amp;&amp;  \vec{b} = \vec{h} \\ \\
+  &amp; \text{EM potentials}                         &amp;&amp;  \vec{b} = \nabla \times \vec{a} \\
+  &amp;                                              &amp;&amp;  \vec{e} = - \left( \dfrac{FL}{c} \right)^2 \partial_t \vec{a} - \nabla \phi \\ \\
+  &amp; \text{Lorentz's gauge}                       &amp;&amp;  \nabla \cdot \vec{a} + \partial_t \phi = 0
+\end{aligned}
+\end{split}\]</div>
+<p><span style="color:red"><strong>todo</strong> <em>check compatibility in the definition of the charactersitic physical quantities; need to distinguish steady and time-dependent terms?</em></span></p>
+<!--
+while Ampére-Maxwell's equation and the definition of the electric field as a function of the electromagnetic potentials can be used to compare to define different regimes, comparing the non-dimensional numbers appearing in these relations
+
+$$\begin{aligned}
   \nabla \times \vec{b} 
-  &amp; = \dfrac{\mu_0 J L}{B} \vec{j} + \dfrac{E f L}{c_0^2 B} \partial_t \vec{e}  = &amp;&amp; (E = B f L) \\
-  &amp; = \dfrac{\mu_0 J L}{B} \vec{j} + \left(\dfrac{f L}{c_0}\right)^2 \partial_t \vec{e} = \\
-  &amp; = \dfrac{\mu_0 J L}{B} \left[ \vec{j} + \dfrac{B}{\mu_0 J L} \left(\dfrac{f L}{c_0}\right)^2 \partial_t \vec{e} \right] \\
-\end{aligned}\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
+  & = \dfrac{\mu_0 J L}{B} \vec{j} + \dfrac{E f L}{c_0^2 B} \partial_t \vec{e}  = && (E = B f L) \\
+  & = \dfrac{\mu_0 J L}{B} \vec{j} + \left(\dfrac{f L}{c_0}\right)^2 \partial_t \vec{e} = \\
+  & = \dfrac{\mu_0 J L}{B} \left[ \vec{j} + \dfrac{B}{\mu_0 J L} \left(\dfrac{f L}{c_0}\right)^2 \partial_t \vec{e} \right] \\
+\end{aligned}$$
+$$\begin{aligned}
   \vec{e}
-  &amp; = - \dfrac{\Phi}{E L} \left[ \nabla \phi + \dfrac{A f L}{\Phi} \partial_t \vec{a} \right] = &amp;&amp; \left( A = \dfrac{\Phi f L}{c_0^2} \right) \\ 
-  &amp; = - \dfrac{\Phi}{E L} \left[ \nabla \phi + \left( \dfrac{f L}{c_0} \right)^2 \partial_t \vec{a} \right]
-\end{aligned}\end{split}\]</div>
+  & = - \dfrac{\Phi}{E L} \left[ \nabla \phi + \dfrac{A f L}{\Phi} \partial_t \vec{a} \right] = && \left( A = \dfrac{\Phi f L}{c_0^2} \right) \\ 
+  & = - \dfrac{\Phi}{E L} \left[ \nabla \phi + \left( \dfrac{F L}{c_0} \right)^2 \partial_t \vec{a} \right]
+\end{aligned}$$
+-->
 </div>
 
     <script type="text/x-thebe-config">

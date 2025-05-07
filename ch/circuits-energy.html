@@ -435,7 +435,7 @@ document.write(`
 </ul>
 <p><strong>Boundary terms</strong> represent:</p>
 <ul>
-<li><p>the “VI” contribution, that can be re-written as the product of voltage and current intensity at wires of the electric ports, the only “active” interface in circuit approximation</p>
+<li><p>the <strong>“vi”</strong> contribution, that can be re-written as the product of voltage and current intensity at wires of the electric ports, the only “active” interface in circuit approximation</p>
 <div class="math notranslate nohighlight">
 \[\oint_{\partial V} \phi \vec{j} \cdot \hat{n} = - \sum_{k \in \text{wires}} \phi_k \int_{S_k} \hat{j} \cdot \hat{n} = \sum_{k \in \text{wires}} v_k \, i_k \ ,\]</div>
 <p>having defined the current current entering the system through wire <span class="math notranslate nohighlight">\(k\)</span> (assuming equipotential section of the wire, constant <span class="math notranslate nohighlight">\(\phi = v_k\)</span> on section <span class="math notranslate nohighlight">\(S_k\)</span> of the <span class="math notranslate nohighlight">\(k^{th}\)</span> wire),</p>
@@ -443,25 +443,36 @@ document.write(`
 \[i_k = - \int_{S_k} \vec{j} \cdot \hat{n} \ ,\]</div>
 <p>as the unit vector <span class="math notranslate nohighlight">\(\hat{n}\)</span> is pointing outwards the boundary of the system.</p>
 </li>
-<li><p>a radiation term, due to radiation of electromagnetic energy in free-space through the boundary of the domain; this contribution is the dominant contribution making antenna wokr, and it’s usually negligible for slow regimes of systems of moderate dimensions, as discussed below comparing the order of magnitude of these contributions.</p></li>
+<li><p>a <strong>radiation</strong> term, due to radiation of electromagnetic energy in free-space through the boundary of the domain; this contribution is the dominant contribution making an antenna work, and it’s usually negligible for slow regimes of systems of moderate dimensions, as discussed below comparing the order of magnitude of these contributions.</p></li>
 </ul>
 <div class="section" id="boundary-terms-in-circuit-approximation">
 <span id="classical-electromagnetism-circuits-energy-boundary"></span><h2><span class="section-number">7.1. </span>Boundary terms in circuit approximation<a class="headerlink" href="#boundary-terms-in-circuit-approximation" title="Permalink to this heading">#</a></h2>
-<p>In the limit of <a class="reference internal" href="regimes-slow.html#classical-electromagnetism-regimes-slow"><span class="std std-ref">slow regime</span></a>, <span class="math notranslate nohighlight">\(\frac{f L}{c_0} \ll 1\)</span>, the comparison of the characteristic dimensions of the three boundary contributions gives</p>
+<p>In the limit of <a class="reference internal" href="regimes-slow.html#classical-electromagnetism-regimes-slow"><span class="std std-ref">slow regime</span></a>, <span class="math notranslate nohighlight">\(\frac{f L}{c_0} \ll 1\)</span>, the comparison of the characteristic dimensions of the three boundary contributions gives (with the same abuse of notation used for <a class="reference internal" href="regimes-non-dimensional.html#classical-electromagnetism-regimes-non-dimensional"><span class="std std-ref">non-dimensional equations in electromagnetism</span></a>, indicating non-dimensional quantities with the same symbols as the dimensional quantities),</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-  - \oint_{\partial V} \phi \, \vec{j} \cdot \hat{n} &amp; = \sum_{k \in \text{wires}} v_k i_k = V I \sum_{k \in \text{wires}} v_k i_k &amp;&amp; (1) \\
-  \oint_{\partial V} \hat{n} \cdot \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b} &amp; = S \dfrac{ f A B }{\mu_0} \oint_{\partial \widetilde{V}} \hat{n} \cdot \partial_t \vec{a} \times \vec{b} = S \dfrac{B^2 f L}{\mu_0}  \oint_{\partial \widetilde{V}} \hat{n} \cdot \partial_t \vec{a} \times \vec{b}  &amp;&amp; (2) \\
-  \oint_{\partial V} \hat{n} \cdot \varepsilon_0 \, \phi\, \partial_t \vec{e} &amp; = S \, \varepsilon_0 f E \Phi \oint_{\partial \widetilde{V}} \hat{n} \cdot \phi\, \partial_t \vec{e} = S \dfrac{B^2 f L}{\mu_0} \left( \dfrac{f L}{c_0} \right)^2 \oint_{\partial \widetilde{V}} \hat{n} \cdot \phi\, \partial_t \vec{e} &amp;&amp; (3) \\
+  - \oint_{\partial V} \phi \, \vec{j} \cdot \hat{n} &amp; = \sum_{k \in \text{wires}} v_k i_k = \Phi I \sum_{k \in \text{wires}} v_k i_k &amp;&amp; (1) \\ \\
+  \oint_{\partial V} \hat{n} \cdot \frac{1}{\mu_0} \partial_t \vec{a} \times \vec{b} &amp; = S \dfrac{ F A B }{\mu_0} \oint_{\partial \widetilde{V}} \hat{n} \cdot \partial_t \vec{a} \times \vec{b} = S \frac{\Phi B F^2 L}{\mu c^2}  \oint_{\partial \widetilde{V}} \hat{n} \cdot \partial_t \vec{a} \times \vec{b}  &amp;&amp; (2) \\ \\
+  \oint_{\partial V} \hat{n} \cdot \varepsilon_0 \, \phi\, \partial_t \vec{e} &amp; = S \, \varepsilon F E \Phi \oint_{\partial \widetilde{V}} \hat{n} \cdot \phi\, \partial_t \vec{e} = S \varepsilon \Phi B F^2 L \oint_{\partial \widetilde{V}} \hat{n} \cdot \phi\, \partial_t \vec{e} &amp;&amp; (3) \\
 \end{aligned}\end{split}\]</div>
-<p>being <span class="math notranslate nohighlight">\(E = B f L\)</span>, and <span class="math notranslate nohighlight">\(\Phi = E L = B f L^2\)</span>, <span class="math notranslate nohighlight">\(E \Phi = (B f L)^2 L\)</span>, and <span class="math notranslate nohighlight">\(\varepsilon_0 = \dfrac{1}{\mu_0 c_0^2}\)</span>. If the integrals with non-dimensional quantities have the same order of magnitude (and this should occur if the non-dimensional equations are build using reference quantities of the system), the contribution (3) is smaller than the contribution (2) in the slow regime limit, as its <span class="math notranslate nohighlight">\(\left( \frac{f L}{c_0} \right)^2 \ll 1\)</span> times the order of magnitude.</p>
-<p>Comparing (1) and (2), the second contribution is negligible if</p>
+<p>having used results from <a class="reference internal" href="regimes-non-dimensional.html#equation-eq-non-dim-c">(5.1)</a>, namely in (2) <span class="math notranslate nohighlight">\(A = \frac{\Phi F L}{c^2}\)</span>, and in (3) <span class="math notranslate nohighlight">\( \Phi = E L\)</span>, <span class="math notranslate nohighlight">\(E = B F L\)</span>. As <span class="math notranslate nohighlight">\(\varepsilon \mu = \frac{1}{c^2}\)</span>, terms (2) and (3) have the same order of magnitude, <span class="math notranslate nohighlight">\(\sim S \frac{\Phi B F^2 L}{\mu c^2}\)</span>.</p>
+<!--
+being $E = B f L$, and $\Phi = E L = B f L^2$, $E \Phi = (B f L)^2 L$, and $\varepsilon_0 = \dfrac{1}{\mu_0 c_0^2}$. If the integrals with non-dimensional quantities have the same order of magnitude (and this should occur if the non-dimensional equations are build using reference quantities of the system), the contribution (3) is smaller than the contribution (2) in the slow regime limit, as its $\left( \frac{f L}{c_0} \right)^2 \ll 1$ times the order of magnitude.
+-->
+<p>Comparing the order of magnitude of terms (1) and (2) (equal to (3)), radiation contributions (2), (3) are negligible if</p>
 <div class="math notranslate nohighlight">
-\[1 \gg \dfrac{S \frac{B^2 f L}{\mu_0}}{VI} = \dots\]</div>
-<p><strong>todo</strong> <span style="color:red"><em>check this! Is it ok that the frequency disappears? Term (1) is non-zero but (2) is identically zero for steady regime, <span class="math notranslate nohighlight">\(f = 0\)</span>. And if it’s required to separate steady and unsteady contributions in the discussion of non-dimensional equations</em></span></p>
-<div class="math notranslate nohighlight">
-\[1 \gg \dfrac{S \frac{B^2 f L}{\mu_0}}{VI} = S \dfrac{B^2 f L}{\mu_0 \Phi I} = S \frac{B^2 f L}{\mu_0 B f L^2 I} = S \frac{B}{\mu_0 L I} = S \frac{\mu_0 J L}{\mu_0 L I} = \frac{S J}{I} \ .\]</div>
-<p><span style="color:red">The dimension of the boundary of the domain is proprotional to the square of the linear dimension of the system, <span class="math notranslate nohighlight">\(S \sim L_{V}^2\)</span>. This inequality holds if the product of the dimension of the boundary of the domain and the characteristic current density <span class="math notranslate nohighlight">\(J\)</span> is much smaller than the characteristic current <span class="math notranslate nohighlight">\(I\)</span> at the boundary.</span></p>
+\[1 \gg \dfrac{S \frac{\Phi B F^2 L}{\mu c^2}}{\Phi I} = \left(\frac{FL}{c}\right)^2 \ ,\]</div>
+<p>having used the definition of the characteristic intensity of the magnetic field <span class="math notranslate nohighlight">\(B = \mu J L = \mu \frac{I}{S} L\)</span>, from <a class="reference internal" href="regimes-non-dimensional.html#equation-eq-non-dim-c">(5.1)</a>. In the limit of slow operating regime for systems of modest dimensions, <span class="math notranslate nohighlight">\(\frac{FL}{c} \ll 1\)</span>, <strong>radiation is negligible</strong> if compared with the <strong>“vi” power flux at the electric port</strong>. This conclusion is a strong argument in favor of <strong>circuit approximation</strong> of electromagnetic systems of modest dimensions with low characteristic frequencies.</p>
+<!--
+<span style="color:red">*check if the non-dimensionalization is ok, with $B_{steady} = \mu_0 J L$, $B_{unsteady} = \frac{E}{fL}$*</span>
+
+$$1 \gg \frac{S \frac{B^2 f L}{\mu_0}}{V I} = $$
+
+**todo** <span style="color:red">*check this! Is it ok that the frequency disappears? Term (1) is non-zero but (2) is identically zero for steady regime, $f = 0$. And if it's required to separate steady and unsteady contributions in the discussion of non-dimensional equations*</span>
+
+$$1 \gg \dfrac{S \frac{B^2 f L}{\mu_0}}{VI} = S \dfrac{B^2 f L}{\mu_0 \Phi I} = S \frac{B^2 f L}{\mu_0 B f L^2 I} = S \frac{B}{\mu_0 L I} = S \frac{\mu_0 J L}{\mu_0 L I} = \frac{S J}{I} \ .$$
+
+<span style="color:red">The dimension of the boundary of the domain is proprotional to the square of the linear dimension of the system, $S \sim L_{V}^2$. This inequality holds if the product of the dimension of the boundary of the domain and the characteristic current density $J$ is much smaller than the characteristic current $I$ at the boundary.</span>
+-->
 <!--
 ---
 
