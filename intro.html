@@ -64,6 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="shortcut icon" href="_static/favicon.svg"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -426,8 +428,9 @@ Electric Engineering<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><strong>Electric circuits</strong>.</p>
-<p class="sd-card-text"><strong>Electromagentic systems</strong>.</p>
+<p class="sd-card-text"><strong>Circuit approximation and Energy Balance.</strong> Circuit approximation for moderate dimensions EM systems operating in low frequency regime; under these assumptions, circuit approach is justified by the order of magnitude of the boundary terms in integral form of the energy balance equation.</p>
+<p class="sd-card-text"><strong>Electric circuits</strong>. Electric circuits in regions of space with no time-varying magnetic field are discussed first; in these regions, electric field is irrotational and can be written as the gradient of a (scalar) potential <span class="math notranslate nohighlight">\(v\)</span>. Kirchhoff laws are derived from equations of EM. Elementary components (resistors, capacitors, inductors, ideal generators,…) are introduced and connected into elementary circuits. Then, electric circuits in regions with time varying magnetic field, and EM induction are discussed. Operating regimes (steady (DC), transient (switch open/close), harmonic (AC)) are discussed.</p>
+<p class="sd-card-text"><strong>Electromagentic systems</strong>. Circuit approximation and Kirchhoff laws fro magnetic systems are introduced under the assumption of negligible <span class="math notranslate nohighlight">\(\partial_t \vec{d}\)</span> and linear algebraic constitutive law <span class="math notranslate nohighlight">\(\vec{b} = \mu \vec{h}\)</span> of media.</p>
 <p class="sd-card-text"><strong>Electromagneto-mechanics systems</strong>.</p>
 </div>
 </details><div class="toctree-wrapper compound">
