@@ -24,9 +24,11 @@ This material is part of the [**basics-books project**](https://basics2022.githu
 ```{dropdown} Electric Engineering
 :open:
 
-**Electric circuits**.
+**Circuit approximation and Energy Balance.** Circuit approximation for moderate dimensions EM systems operating in low frequency regime; under these assumptions, circuit approach is justified by the order of magnitude of the boundary terms in integral form of the energy balance equation.
 
-**Electromagentic systems**.
+**Electric circuits**. Electric circuits in regions of space with no time-varying magnetic field are discussed first; in these regions, electric field is irrotational and can be written as the gradient of a (scalar) potential $v$. Kirchhoff laws are derived from equations of EM. Elementary components (resistors, capacitors, inductors, ideal generators,...) are introduced and connected into elementary circuits. Then, electric circuits in regions with time varying magnetic field, and EM induction are discussed. Operating regimes (steady (DC), transient (switch open/close), harmonic (AC)) are discussed.
+
+**Electromagentic systems**. Circuit approximation and Kirchhoff laws fro magnetic systems are introduced under the assumption of negligible $\partial_t \vec{d}$ and linear algebraic constitutive law $\vec{b} = \mu \vec{h}$ of media.
 
 **Electromagneto-mechanics systems**.
 
