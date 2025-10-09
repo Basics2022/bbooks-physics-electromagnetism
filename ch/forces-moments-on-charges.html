@@ -462,7 +462,7 @@ document.write(`
    &amp; = q \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+} \right] - q \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-} \right] = \\
    &amp; = q \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] + \\ 
    &amp; - q \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] = \\
-   &amp; = q \vec{\ell} \cdot \nabla \vec{e}(C) - \left( q \vec{\ell} \cdot \nabla \vec{b}(C) \right) \times \vec{v}_C + \vec{b}(C) \times \left(  \vec{\omega} \times q \vec{\ell} \right) + o(|\vec{\ell}|)
+   &amp; = q \vec{\ell} \cdot \nabla \vec{e}(C) - \left( q \vec{\ell} \cdot \nabla \vec{b}(C) \right) \times \vec{v}_C - \vec{b}(C) \times \left(  \vec{\omega} \times q \vec{\ell} \right) + o(|\vec{\ell}|)
 \end{aligned}\end{split}\]</div>
 <p><strong>Net moment, w.r.t. <span class="math notranslate nohighlight">\(C\)</span>.</strong></p>
 <div class="math notranslate nohighlight">
@@ -474,36 +474,114 @@ document.write(`
    &amp; + q \frac{\vec{\ell}}{2} \times \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] = \\
    &amp; = q \vec{\ell} \times \left[ \vec{e}_C - \vec{b}_C \times \vec{v}_C \right] + o(|\vec{\ell}|) \ .
 \end{aligned}\end{split}\]</div>
-<p><strong>Power.</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{aligned}
-  P &amp; = P_+ + P_- = \\
-  &amp; = \vec{F}_+ \cdot \vec{v}_+ + \vec{F}_- \cdot \vec{v}_- = \\
-  &amp; = q \, \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+}  \right] \cdot \vec{v}_{+} 
+<p><strong>Power.</strong> <em>Check, discuss the effects of motion, and uncomment</em></p>
+<!--
+$$\begin{aligned}
+  P & = P_+ + P_- = \\
+  & = \vec{F}_+ \cdot \vec{v}_+ + \vec{F}_- \cdot \vec{v}_- = \\
+  & = q \, \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+}  \right] \cdot \vec{v}_{+} 
     - q \, \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-}  \right] \cdot \vec{v}_{-} = \\
-  &amp; = q \, \vec{e}(P_+) \cdot \vec{v}_{+} 
+  & = q \, \vec{e}(P_+) \cdot \vec{v}_{+} 
     - q \, \vec{e}(P_-) \cdot \vec{v}_{-} = \\
-  &amp; = q \, \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] 
+  & = q \, \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] 
     - q \, \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] = \\
-  &amp; = \vec{e}_C \cdot \left( \vec{\omega} \times q \vec{\ell} \right) + \left( q \vec{\ell} \cdot \nabla \vec{e}_C \right) \cdot \vec{v}_C + o(|\vec{\ell}|^2) \ .
-\end{aligned}\end{split}\]</div>
+  & = \vec{e}_C \cdot \left( \vec{\omega} \times q \vec{\ell} \right) + \left( q \vec{\ell} \cdot \nabla \vec{e}_C \right) \cdot \vec{v}_C + o(|\vec{\ell}|^2) \ .
+  & = \left( q \vec{\ell} \times \vec{e}_C \right) \cdot \vec{\omega}   + \left( q \vec{\ell} \cdot \nabla \vec{e}_C \right) \cdot \vec{v}_C + o(|\vec{\ell}|^2) \ .
+\end{aligned}$$
+-->
 </div>
 <div class="section" id="force-moment-and-power-on-a-magnetic-dipole">
 <h2><span class="section-number">4.1.3. </span>Force, moment and power on a magnetic dipole<a class="headerlink" href="#force-moment-and-power-on-a-magnetic-dipole" title="Permalink to this heading">#</a></h2>
-<p>On an elementary magnetic dipole, modeled as a “small” circuit with current <span class="math notranslate nohighlight">\(i\)</span> enclosing area <span class="math notranslate nohighlight">\(S\)</span> and center <span class="math notranslate nohighlight">\(C\)</span>, with <span class="math notranslate nohighlight">\(S \rightarrow 0\)</span>, <span class="math notranslate nohighlight">\(i \rightarrow + \infty\)</span> so that <span class="math notranslate nohighlight">\(i S \hat{n} := \vec{m}\)</span> finite</p>
-<p><strong>Force.</strong></p>
+<p>On an elementary magnetic dipole, modeled as a “small” circuit with current <span class="math notranslate nohighlight">\(i\)</span> enclosing area <span class="math notranslate nohighlight">\(S\)</span> and center <span class="math notranslate nohighlight">\(C\)</span>, with <span class="math notranslate nohighlight">\(S \rightarrow 0\)</span>, <span class="math notranslate nohighlight">\(i \rightarrow + \infty\)</span> so that <span class="math notranslate nohighlight">\(i S \hat{n} := \vec{m}\)</span> finite. Here, a circular loop with center <span class="math notranslate nohighlight">\(C\)</span> and radius <span class="math notranslate nohighlight">\(r\)</span>, lying in plane with normal <span class="math notranslate nohighlight">\(\hat{n}\)</span> is considered.</p>
+<p><strong>Force.</strong> The force acting on such an elementary loop immersed in a magnetic field <span class="math notranslate nohighlight">\(\vec{b}(P)\)</span> reads,</p>
 <div class="math notranslate nohighlight">
-\[\dots\]</div>
+\[\vec{F} = \nabla \vec{b}(C) \cdot \vec{m} \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(\nabla \vec{b}(C)\)</span> the gradient of the magnetic field, evaluated in the point <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Force on an Amperian loop<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The force is evaluated as the integral of the elementary contributions acting on all the points of the loop. The elementary force contribution acting on an elementary segment <span class="math notranslate nohighlight">\(d \vec{\ell}(P)\)</span> containing point <span class="math notranslate nohighlight">\(P\)</span> and tangent to the loop, with direction <span class="math notranslate nohighlight">\(\hat{t}(P)\)</span>, follows Biot-Savart elementary law</p>
 <div class="math notranslate nohighlight">
-\[\vec{F} = \nabla \vec{b}(C) \cdot \vec{m}\]</div>
-<p><strong>Moment.</strong></p>
+\[d \vec{F}(P) = - i \vec{b}(P) \times d \vec{\ell}(P) \ . \]</div>
+<p class="sd-card-text">Here, a Cartesian basis <span class="math notranslate nohighlight">\(\{ \hat{l}, \hat{m}, \hat{n}\}\)</span> is introduced, and the points of the Amperian loop are described with the angle <span class="math notranslate nohighlight">\(\theta\)</span> between the <span class="math notranslate nohighlight">\(\hat{l}\)</span> vector and the radius <span class="math notranslate nohighlight">\(\vec{r} = P - C\)</span> connecting the point <span class="math notranslate nohighlight">\(P\)</span> of the loop with the center <span class="math notranslate nohighlight">\(C\)</span>. The magnetic field is approximated with its Taylor expansion as the dimension of the loop goes to zero, and everything is expressed using the angle <span class="math notranslate nohighlight">\(\theta\)</span> and the Cartesian reference frame.</p>
+<p class="sd-card-text"><strong>Expansion of the magnetic field.</strong></p>
 <div class="math notranslate nohighlight">
-\[\dots\]</div>
+\[\vec{b}(P) = \vec{b}(C) + \vec{r} \cdot \nabla \vec{b}(C) + o(|\vec{r}|) \ ,\]</div>
+<p class="sd-card-text">or, using Einstein notation for Cartesian components,</p>
 <div class="math notranslate nohighlight">
-\[\vec{M}_C = \vec{m} \times \vec{b}(C)\]</div>
-<p><strong>Power.</strong></p>
+\[b_i(P) = b_i(C) + r_k \partial_k b_i(C) + o(|\vec{r}|) \ .\]</div>
+<p class="sd-card-text"><strong>Integral of elementary contribution.</strong> The force acting on the Amperian loop is evaluated through integration of elementary contributions on segments $<span class="math notranslate nohighlight">\(d \vec{\ell} = \hat{t} \, ds = \hat{t} \, r \, d\theta\)</span>,</p>
 <div class="math notranslate nohighlight">
-\[P = \vec{v}_C \cdot \nabla \vec{b}(C) \cdot \vec{m} + \vec{\omega} \cdot \vec{m} \times \vec{b}(C) \ .\]</div>
+\[\begin{split}\begin{aligned}
+ \vec{F} 
+ &amp; = \oint_{\alpha} d \vec{F} = \\
+ &amp; = \oint_{\alpha} - i \, \vec{b}(P) \times \hat{t}(P) \, ds = \\
+ &amp; = -i r \int_{\theta=0}^{2 \pi} \left[ \vec{b}(C) + \vec{r} \cdot \nabla \vec{b}(C) + o(|d \vec{r}) \right] \times \hat{t}(P) \, d \theta \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">The first contribution goes to zero, as it’s proportional to the loop integral</p>
+<div class="math notranslate nohighlight">
+\[\oint_{\alpha} \hat{t}(P) = \int_{\theta=0}^{2\pi} \left[ - \hat{l} \sin \theta + \hat{m} \cos \theta \right] r \, d \theta = \vec{0} \ .\]</div>
+<p class="sd-card-text">Using the Cartesian reference frame, the second contribution can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  &amp; -i r \int_{\theta=0}^{2 \pi} \left[ \vec{r} \cdot \nabla \vec{b}(C) \right] \times \hat{t}(P) \, d \theta = \\
+  &amp; \quad =  - i r^2 \int_{\theta=0}^{2\pi} \left[ \left( \hat{l} \cos \theta + \hat{m} \sin \theta \right) \cdot \nabla \vec{b}(C) \right] \times \left( - \hat{l} \sin \theta + \hat{m} \cos \theta \right) \, d\theta = \\
+  &amp; \quad = - i r^2 \int_{\theta=0}^{2\pi} \left[  \cos \theta \, \partial_l \vec{b}(C) + \sin \theta \, \partial_m \vec{b}(C) \right] \times \left( - \hat{l} \sin \theta + \hat{m} \cos \theta \right) \, d\theta = \\
+  &amp; \quad = - i r^2 \int_{\theta=0}^{2\pi} \left\{ \hat{l} \left( - \partial_l b_n \cos^2 \theta - \partial_m b_n \sin \theta \cos \theta \right) + \hat{m} \left( - \partial_l b_n \sin \theta \cos \theta - \partial_m b_n \sin^2 \theta \right) + \hat{n} \left( \partial_l b_l \cos^2 \theta + \partial_l b_m \cos \theta \sin \theta  + \partial_m b_l \sin \theta \cos \theta + \partial_m b_m \sin^2 \theta \right)  \right\} \, d\theta = \\
+  &amp; \quad = - i \underbrace{ \pi r^2}_{S} \left\{ -\partial_l b_n \hat{l} - \partial_m b_n \hat{m} - \partial_n b_n \hat{n}  \right\} = \\
+  &amp; \quad = i S \, \nabla \vec{b}(C) \cdot \hat{n} = \\
+  &amp; \quad = \nabla \vec{b}(C) \cdot \vec{m} \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">being <span class="math notranslate nohighlight">\(\partial_i \vec{b} = \hat{l} \partial_i b_l + \hat{m} \partial_i b_m +  \hat{n} \partial_i b_n\)</span>, having used <span class="math notranslate nohighlight">\(\int_{0}^{2\pi} \sin \theta \cos \theta d \theta = 0\)</span>, and <span class="math notranslate nohighlight">\(\int_{0}^{2\pi} \sin^2 \theta d \theta = \int_{0}^{2\pi} \cos^2 \theta d \theta = \pi\)</span>, and the Gauss’ law for the magnetic field, <span class="math notranslate nohighlight">\(0 = \nabla \cdot \vec{b} = \partial_l b_l + \partial_m b_m + \partial_n b_n\)</span>.</p>
+<p class="sd-card-text">Higher order terms in <span class="math notranslate nohighlight">\(\vec{r}\)</span> vanish as the dimension of the loop goes to zero.</p>
+</div>
+</details><p><strong>Moment.</strong> The moment w.r.t. the center <span class="math notranslate nohighlight">\(C\)</span> acting on such an elementary loop immersed in a magnetic field <span class="math notranslate nohighlight">\(\vec{b}(P)\)</span> reads,</p>
+<div class="math notranslate nohighlight">
+\[\vec{M}_C = \vec{m} \times \vec{b}(C) \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Moment on an Amperian loop<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Following the very same procedure done for evaluating the force acting on an Amperian loop immersed in a magnetic field, the moment is evaluated integrating elemenatry moment contributions,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  d \vec{M}_C
+  &amp; = \vec{r}(P) \times d \vec{F}(P) = \\
+  &amp; = - i \vec{r}(P) \times \left( \vec{b}(P) \times \hat{t}(P) \right) \, ds = \\
+  &amp; = - i \vec{r}(P) \times \left[ \left( \vec{b}(C) + \vec{r}(P) \times \nabla \vec{b}(C) + o(\vec{r}) \right) \times \hat{t}(P) \right] \, r \, d\theta = \\
+  &amp; = - i r^2 \hat{r}(P) \times \left( \vec{b}(C) \times \hat{t}(P) + O(r) \right) \, d\theta \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">The double cross product can be evaluated as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \hat{r} \times \left(\vec{b} \times \hat{t} \right) 
+  &amp; = \left( \hat{l} \, \cos \theta + \hat{m} \, \sin \theta \right) \times \left[ \left( b_l \hat{l} + b_m \hat{m} + b_n \hat{n} \right) \times \left( - \hat{l} \, \sin \theta + \hat{m} \, \cos \theta \right) \right] = \\
+  &amp; = \left( \hat{l} \, \cos \theta + \hat{m} \, \sin \theta \right) \times \left[ \left( - b_n \cos \theta \right) \hat{l} + \left( - b_n \sin \theta \right) \hat{m} + \left( b_l \cos \theta + b_m \sin \theta \right) \hat{n} \right] = \\
+  &amp; = \left( b_l \sin \theta \cos \theta + b_m \sin^2 \theta \right) \hat{l} + \left( -b_l \cos^2 \theta - b_m \sin \theta \cos \theta \right) \hat{m} + \left( - b_n \cos\theta \sin\theta + b_n \sin \theta \cos \theta \right) \hat{n} = \\
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Integration over the Amperian loop then gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{M}_C 
+  &amp; = \oint_{\alpha} d\vec{M}_C = \\
+  &amp; = - i \, \pi r^2 \, \left( b_m \hat{l} - b_l \hat{m}  \right) = \\
+  &amp; = - i \, S \, \vec{b}(C) \times \hat{n} = \\
+  &amp; = \vec{m} \times \vec{b}(C) \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details><p><strong>Power.</strong> <em>Check, discuss the effects of motion, and uncomment</em></p>
+<!--
+
+$$P = \vec{v}_C \cdot \nabla \vec{b}(C) \cdot \vec{m} + \vec{\omega} \cdot \vec{m} \times \vec{b}(C) \ .$$
+
+-->
 </div>
 <div class="section" id="energy-balance">
 <h2><span class="section-number">4.1.4. </span>Energy balance<a class="headerlink" href="#energy-balance" title="Permalink to this heading">#</a></h2>

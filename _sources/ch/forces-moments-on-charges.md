@@ -44,7 +44,7 @@ $$\begin{aligned}
    & = q \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+} \right] - q \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-} \right] = \\
    & = q \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] + \\ 
    & - q \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] = \\
-   & = q \vec{\ell} \cdot \nabla \vec{e}(C) - \left( q \vec{\ell} \cdot \nabla \vec{b}(C) \right) \times \vec{v}_C + \vec{b}(C) \times \left(  \vec{\omega} \times q \vec{\ell} \right) + o(|\vec{\ell}|)
+   & = q \vec{\ell} \cdot \nabla \vec{e}(C) - \left( q \vec{\ell} \cdot \nabla \vec{b}(C) \right) \times \vec{v}_C - \vec{b}(C) \times \left(  \vec{\omega} \times q \vec{\ell} \right) + o(|\vec{\ell}|)
 \end{aligned}$$
 
 **Net moment, w.r.t. $C$.**
@@ -58,8 +58,9 @@ $$\begin{aligned}
    & = q \vec{\ell} \times \left[ \vec{e}_C - \vec{b}_C \times \vec{v}_C \right] + o(|\vec{\ell}|) \ .
 \end{aligned}$$
 
-**Power.**
+**Power.** *Check, discuss the effects of motion, and uncomment*
 
+<!--
 $$\begin{aligned}
   P & = P_+ + P_- = \\
   & = \vec{F}_+ \cdot \vec{v}_+ + \vec{F}_- \cdot \vec{v}_- = \\
@@ -70,27 +71,112 @@ $$\begin{aligned}
   & = q \, \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] 
     - q \, \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] = \\
   & = \vec{e}_C \cdot \left( \vec{\omega} \times q \vec{\ell} \right) + \left( q \vec{\ell} \cdot \nabla \vec{e}_C \right) \cdot \vec{v}_C + o(|\vec{\ell}|^2) \ .
+  & = \left( q \vec{\ell} \times \vec{e}_C \right) \cdot \vec{\omega}   + \left( q \vec{\ell} \cdot \nabla \vec{e}_C \right) \cdot \vec{v}_C + o(|\vec{\ell}|^2) \ .
 \end{aligned}$$
-
+-->
 
 ## Force, moment and power on a magnetic dipole
 
-On an elementary magnetic dipole, modeled as a "small" circuit with current $i$ enclosing area $S$ and center $C$, with $S \rightarrow 0$, $i \rightarrow + \infty$ so that $i S \hat{n} := \vec{m}$ finite
+On an elementary magnetic dipole, modeled as a "small" circuit with current $i$ enclosing area $S$ and center $C$, with $S \rightarrow 0$, $i \rightarrow + \infty$ so that $i S \hat{n} := \vec{m}$ finite. Here, a circular loop with center $C$ and radius $r$, lying in plane with normal $\hat{n}$ is considered.
 
-**Force.**
+**Force.** The force acting on such an elementary loop immersed in a magnetic field $\vec{b}(P)$ reads,
 
-$$\dots$$
-$$\vec{F} = \nabla \vec{b}(C) \cdot \vec{m}$$
+$$\vec{F} = \nabla \vec{b}(C) \cdot \vec{m} \ ,$$
 
-**Moment.**
+being $\nabla \vec{b}(C)$ the gradient of the magnetic field, evaluated in the point $C$.
 
-$$\dots$$
-$$\vec{M}_C = \vec{m} \times \vec{b}(C)$$
+```{dropdown} Force on an Amperian loop
 
-**Power.**
+The force is evaluated as the integral of the elementary contributions acting on all the points of the loop. The elementary force contribution acting on an elementary segment $d \vec{\ell}(P)$ containing point $P$ and tangent to the loop, with direction $\hat{t}(P)$, follows Biot-Savart elementary law
+
+$$d \vec{F}(P) = - i \vec{b}(P) \times d \vec{\ell}(P) \ . $$
+
+Here, a Cartesian basis $\{ \hat{l}, \hat{m}, \hat{n}\}$ is introduced, and the points of the Amperian loop are described with the angle $\theta$ between the $\hat{l}$ vector and the radius $\vec{r} = P - C$ connecting the point $P$ of the loop with the center $C$. The magnetic field is approximated with its Taylor expansion as the dimension of the loop goes to zero, and everything is expressed using the angle $\theta$ and the Cartesian reference frame.
+
+**Expansion of the magnetic field.**
+
+$$\vec{b}(P) = \vec{b}(C) + \vec{r} \cdot \nabla \vec{b}(C) + o(|\vec{r}|) \ ,$$
+
+or, using Einstein notation for Cartesian components,
+
+$$b_i(P) = b_i(C) + r_k \partial_k b_i(C) + o(|\vec{r}|) \ .$$
+
+**Integral of elementary contribution.** The force acting on the Amperian loop is evaluated through integration of elementary contributions on segments $$d \vec{\ell} = \hat{t} \, ds = \hat{t} \, r \, d\theta$,
+
+$$\begin{aligned}
+ \vec{F} 
+ & = \oint_{\alpha} d \vec{F} = \\
+ & = \oint_{\alpha} - i \, \vec{b}(P) \times \hat{t}(P) \, ds = \\
+ & = -i r \int_{\theta=0}^{2 \pi} \left[ \vec{b}(C) + \vec{r} \cdot \nabla \vec{b}(C) + o(|d \vec{r}) \right] \times \hat{t}(P) \, d \theta \ .
+\end{aligned}$$
+
+The first contribution goes to zero, as it's proportional to the loop integral 
+
+$$\oint_{\alpha} \hat{t}(P) = \int_{\theta=0}^{2\pi} \left[ - \hat{l} \sin \theta + \hat{m} \cos \theta \right] r \, d \theta = \vec{0} \ .$$
+
+Using the Cartesian reference frame, the second contribution can be written as
+
+$$\begin{aligned}
+  & -i r \int_{\theta=0}^{2 \pi} \left[ \vec{r} \cdot \nabla \vec{b}(C) \right] \times \hat{t}(P) \, d \theta = \\
+  & \quad =  - i r^2 \int_{\theta=0}^{2\pi} \left[ \left( \hat{l} \cos \theta + \hat{m} \sin \theta \right) \cdot \nabla \vec{b}(C) \right] \times \left( - \hat{l} \sin \theta + \hat{m} \cos \theta \right) \, d\theta = \\
+  & \quad = - i r^2 \int_{\theta=0}^{2\pi} \left[  \cos \theta \, \partial_l \vec{b}(C) + \sin \theta \, \partial_m \vec{b}(C) \right] \times \left( - \hat{l} \sin \theta + \hat{m} \cos \theta \right) \, d\theta = \\
+  & \quad = - i r^2 \int_{\theta=0}^{2\pi} \left\{ \hat{l} \left( - \partial_l b_n \cos^2 \theta - \partial_m b_n \sin \theta \cos \theta \right) + \hat{m} \left( - \partial_l b_n \sin \theta \cos \theta - \partial_m b_n \sin^2 \theta \right) + \hat{n} \left( \partial_l b_l \cos^2 \theta + \partial_l b_m \cos \theta \sin \theta  + \partial_m b_l \sin \theta \cos \theta + \partial_m b_m \sin^2 \theta \right)  \right\} \, d\theta = \\
+  & \quad = - i \underbrace{ \pi r^2}_{S} \left\{ -\partial_l b_n \hat{l} - \partial_m b_n \hat{m} - \partial_n b_n \hat{n}  \right\} = \\
+  & \quad = i S \, \nabla \vec{b}(C) \cdot \hat{n} = \\
+  & \quad = \nabla \vec{b}(C) \cdot \vec{m} \ .
+\end{aligned}$$
+
+being $\partial_i \vec{b} = \hat{l} \partial_i b_l + \hat{m} \partial_i b_m +  \hat{n} \partial_i b_n$, having used $\int_{0}^{2\pi} \sin \theta \cos \theta d \theta = 0$, and $\int_{0}^{2\pi} \sin^2 \theta d \theta = \int_{0}^{2\pi} \cos^2 \theta d \theta = \pi$, and the Gauss' law for the magnetic field, $0 = \nabla \cdot \vec{b} = \partial_l b_l + \partial_m b_m + \partial_n b_n$.
+
+Higher order terms in $\vec{r}$ vanish as the dimension of the loop goes to zero.
+
+```
+
+**Moment.** The moment w.r.t. the center $C$ acting on such an elementary loop immersed in a magnetic field $\vec{b}(P)$ reads,
+
+$$\vec{M}_C = \vec{m} \times \vec{b}(C) \ .$$
+
+```{dropdown} Moment on an Amperian loop
+:open:
+
+Following the very same procedure done for evaluating the force acting on an Amperian loop immersed in a magnetic field, the moment is evaluated integrating elemenatry moment contributions,
+
+$$\begin{aligned}
+  d \vec{M}_C
+  & = \vec{r}(P) \times d \vec{F}(P) = \\
+  & = - i \vec{r}(P) \times \left( \vec{b}(P) \times \hat{t}(P) \right) \, ds = \\
+  & = - i \vec{r}(P) \times \left[ \left( \vec{b}(C) + \vec{r}(P) \times \nabla \vec{b}(C) + o(\vec{r}) \right) \times \hat{t}(P) \right] \, r \, d\theta = \\
+  & = - i r^2 \hat{r}(P) \times \left( \vec{b}(C) \times \hat{t}(P) + O(r) \right) \, d\theta \ .
+\end{aligned}$$
+
+The double cross product can be evaluated as
+
+$$\begin{aligned}
+  \hat{r} \times \left(\vec{b} \times \hat{t} \right) 
+  & = \left( \hat{l} \, \cos \theta + \hat{m} \, \sin \theta \right) \times \left[ \left( b_l \hat{l} + b_m \hat{m} + b_n \hat{n} \right) \times \left( - \hat{l} \, \sin \theta + \hat{m} \, \cos \theta \right) \right] = \\
+  & = \left( \hat{l} \, \cos \theta + \hat{m} \, \sin \theta \right) \times \left[ \left( - b_n \cos \theta \right) \hat{l} + \left( - b_n \sin \theta \right) \hat{m} + \left( b_l \cos \theta + b_m \sin \theta \right) \hat{n} \right] = \\
+  & = \left( b_l \sin \theta \cos \theta + b_m \sin^2 \theta \right) \hat{l} + \left( -b_l \cos^2 \theta - b_m \sin \theta \cos \theta \right) \hat{m} + \left( - b_n \cos\theta \sin\theta + b_n \sin \theta \cos \theta \right) \hat{n} = \\
+\end{aligned}$$
+
+Integration over the Amperian loop then gives
+
+$$\begin{aligned}
+  \vec{M}_C 
+  & = \oint_{\alpha} d\vec{M}_C = \\
+  & = - i \, \pi r^2 \, \left( b_m \hat{l} - b_l \hat{m}  \right) = \\
+  & = - i \, S \, \vec{b}(C) \times \hat{n} = \\
+  & = \vec{m} \times \vec{b}(C) \ .
+\end{aligned}$$
+
+```
+
+**Power.** *Check, discuss the effects of motion, and uncomment*
+
+<!--
 
 $$P = \vec{v}_C \cdot \nabla \vec{b}(C) \cdot \vec{m} + \vec{\omega} \cdot \vec{m} \times \vec{b}(C) \ .$$
 
+-->
 
 ## Energy balance
 
