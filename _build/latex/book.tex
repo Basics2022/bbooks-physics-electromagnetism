@@ -85,7 +85,7 @@
         
 
 \title{Classical Electromagnetism and Principles of Electrical Engineering}
-\date{May 07, 2025}
+\date{Oct 09, 2025}
 \release{}
 \author{basics}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -125,10 +125,13 @@ This material is part of the \sphinxhref{https://basics2022.github.io/bbooks}{\s
 \subsubsection*{Electric Engineering}
 
 \sphinxAtStartPar
-\sphinxstylestrong{Electric circuits}.
+\sphinxstylestrong{Circuit approximation and Energy Balance.} Circuit approximation for moderate dimensions EM systems operating in low frequency regime; under these assumptions, circuit approach is justified by the order of magnitude of the boundary terms in integral form of the energy balance equation.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Electromagentic systems}.
+\sphinxstylestrong{Electric circuits}. Electric circuits in regions of space with no time\sphinxhyphen{}varying magnetic field are discussed first; in these regions, electric field is irrotational and can be written as the gradient of a (scalar) potential \(v\). Kirchhoff laws are derived from equations of EM. Elementary components (resistors, capacitors, inductors, ideal generators,…) are introduced and connected into elementary circuits. Then, electric circuits in regions with time varying magnetic field, and EM induction are discussed. Operating regimes (steady (DC), transient (switch open/close), harmonic (AC)) are discussed.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Electromagentic systems}. Circuit approximation and Kirchhoff laws fro magnetic systems are introduced under the assumption of negligible \(\partial_t \vec{d}\) and linear algebraic constitutive law \(\vec{b} = \mu \vec{h}\) of media.
 
 \sphinxAtStartPar
 \sphinxstylestrong{Electromagneto\sphinxhyphen{}mechanics systems}.
@@ -1640,7 +1643,7 @@ Electric dipole with center \(\vec{r}_C(t)\), axis \(\vec{\ell}\), so that the p
    & = q \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+} \right] - q \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-} \right] = \\
    & = q \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] + \\ 
    & - q \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C - \left( \vec{b}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{b}_C \right) \times \left( \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right) \right] = \\
-   & = q \vec{\ell} \cdot \nabla \vec{e}(C) - \left( q \vec{\ell} \cdot \nabla \vec{b}(C) \right) \times \vec{v}_C + \vec{b}(C) \times \left(  \vec{\omega} \times q \vec{\ell} \right) + o(|\vec{\ell}|)
+   & = q \vec{\ell} \cdot \nabla \vec{e}(C) - \left( q \vec{\ell} \cdot \nabla \vec{b}(C) \right) \times \vec{v}_C - \vec{b}(C) \times \left(  \vec{\omega} \times q \vec{\ell} \right) + o(|\vec{\ell}|)
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
@@ -1656,45 +1659,120 @@ Electric dipole with center \(\vec{r}_C(t)\), axis \(\vec{\ell}\), so that the p
 \end{aligned}\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Power.}
-\begin{equation*}
-\begin{split}\begin{aligned}
-  P & = P_+ + P_- = \\
-  & = \vec{F}_+ \cdot \vec{v}_+ + \vec{F}_- \cdot \vec{v}_- = \\
-  & = q \, \left[ \vec{e}(P_+) - \vec{b}(P_+) \times \vec{v}_{+}  \right] \cdot \vec{v}_{+} 
-    - q \, \left[ \vec{e}(P_-) - \vec{b}(P_-) \times \vec{v}_{-}  \right] \cdot \vec{v}_{-} = \\
-  & = q \, \vec{e}(P_+) \cdot \vec{v}_{+} 
-    - q \, \vec{e}(P_-) \cdot \vec{v}_{-} = \\
-  & = q \, \left[ \vec{e}_C + \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C + \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] 
-    - q \, \left[ \vec{e}_C - \dfrac{\vec{\ell}}{2} \cdot \nabla \vec{e}_C  \right] \cdot \left[ \vec{v}_C - \vec{\omega} \times \dfrac{\vec{\ell}}{2} \right] = \\
-  & = \vec{e}_C \cdot \left( \vec{\omega} \times q \vec{\ell} \right) + \left( q \vec{\ell} \cdot \nabla \vec{e}_C \right) \cdot \vec{v}_C + o(|\vec{\ell}|^2) \ .
-\end{aligned}\end{split}
-\end{equation*}
+\sphinxstylestrong{Power.} \sphinxstyleemphasis{Check, discuss the effects of motion, and uncomment}
+
+
+
 
 \subsection{Force, moment and power on a magnetic dipole}
 \label{\detokenize{ch/forces-moments-on-charges:force-moment-and-power-on-a-magnetic-dipole}}
 \sphinxAtStartPar
-On an elementary magnetic dipole, modeled as a “small” circuit with current \(i\) enclosing area \(S\) and center \(C\), with \(S \rightarrow 0\), \(i \rightarrow + \infty\) so that \(i S \hat{n} := \vec{m}\) finite
+On an elementary magnetic dipole, modeled as a “small” circuit with current \(i\) enclosing area \(S\) and center \(C\), with \(S \rightarrow 0\), \(i \rightarrow + \infty\) so that \(i S \hat{n} := \vec{m}\) finite. Here, a circular loop with center \(C\) and radius \(r\), lying in plane with normal \(\hat{n}\) is considered.
 
 \sphinxAtStartPar
-\sphinxstylestrong{Force.}
+\sphinxstylestrong{Force.} The force acting on such an elementary loop immersed in a magnetic field \(\vec{b}(P)\) reads,
 \begin{equation*}
-\begin{split}\dots\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\vec{F} = \nabla \vec{b}(C) \cdot \vec{m}\end{split}
+\begin{split}\vec{F} = \nabla \vec{b}(C) \cdot \vec{m} \ ,\end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Moment.}
+being \(\nabla \vec{b}(C)\) the gradient of the magnetic field, evaluated in the point \(C\).
+\subsubsection*{Force on an Amperian loop}
+
+\sphinxAtStartPar
+The force is evaluated as the integral of the elementary contributions acting on all the points of the loop. The elementary force contribution acting on an elementary segment \(d \vec{\ell}(P)\) containing point \(P\) and tangent to the loop, with direction \(\hat{t}(P)\), follows Biot\sphinxhyphen{}Savart elementary law
 \begin{equation*}
-\begin{split}\dots\end{split}
-\end{equation*}\begin{equation*}
-\begin{split}\vec{M}_C = \vec{m} \times \vec{b}(C)\end{split}
+\begin{split}d \vec{F}(P) = - i \vec{b}(P) \times d \vec{\ell}(P) \ . \end{split}
 \end{equation*}
 \sphinxAtStartPar
-\sphinxstylestrong{Power.}
+Here, a Cartesian basis \(\{ \hat{l}, \hat{m}, \hat{n}\}\) is introduced, and the points of the Amperian loop are described with the angle \(\theta\) between the \(\hat{l}\) vector and the radius \(\vec{r} = P - C\) connecting the point \(P\) of the loop with the center \(C\). The magnetic field is approximated with its Taylor expansion as the dimension of the loop goes to zero, and everything is expressed using the angle \(\theta\) and the Cartesian reference frame.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Expansion of the magnetic field.}
 \begin{equation*}
-\begin{split}P = \vec{v}_C \cdot \nabla \vec{b}(C) \cdot \vec{m} + \vec{\omega} \cdot \vec{m} \times \vec{b}(C) \ .\end{split}
+\begin{split}\vec{b}(P) = \vec{b}(C) + \vec{r} \cdot \nabla \vec{b}(C) + o(|\vec{r}|) \ ,\end{split}
 \end{equation*}
+\sphinxAtStartPar
+or, using Einstein notation for Cartesian components,
+\begin{equation*}
+\begin{split}b_i(P) = b_i(C) + r_k \partial_k b_i(C) + o(|\vec{r}|) \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Integral of elementary contribution.} The force acting on the Amperian loop is evaluated through integration of elementary contributions on segments \$\(d \vec{\ell} = \hat{t} \, ds = \hat{t} \, r \, d\theta\),
+\begin{equation*}
+\begin{split}\begin{aligned}
+ \vec{F} 
+ & = \oint_{\alpha} d \vec{F} = \\
+ & = \oint_{\alpha} - i \, \vec{b}(P) \times \hat{t}(P) \, ds = \\
+ & = -i r \int_{\theta=0}^{2 \pi} \left[ \vec{b}(C) + \vec{r} \cdot \nabla \vec{b}(C) + o(|d \vec{r}) \right] \times \hat{t}(P) \, d \theta \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The first contribution goes to zero, as it’s proportional to the loop integral
+\begin{equation*}
+\begin{split}\oint_{\alpha} \hat{t}(P) = \int_{\theta=0}^{2\pi} \left[ - \hat{l} \sin \theta + \hat{m} \cos \theta \right] r \, d \theta = \vec{0} \ .\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using the Cartesian reference frame, the second contribution can be written as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  & -i r \int_{\theta=0}^{2 \pi} \left[ \vec{r} \cdot \nabla \vec{b}(C) \right] \times \hat{t}(P) \, d \theta = \\
+  & \quad =  - i r^2 \int_{\theta=0}^{2\pi} \left[ \left( \hat{l} \cos \theta + \hat{m} \sin \theta \right) \cdot \nabla \vec{b}(C) \right] \times \left( - \hat{l} \sin \theta + \hat{m} \cos \theta \right) \, d\theta = \\
+  & \quad = - i r^2 \int_{\theta=0}^{2\pi} \left[  \cos \theta \, \partial_l \vec{b}(C) + \sin \theta \, \partial_m \vec{b}(C) \right] \times \left( - \hat{l} \sin \theta + \hat{m} \cos \theta \right) \, d\theta = \\
+  & \quad = - i r^2 \int_{\theta=0}^{2\pi} \left\{ \hat{l} \left( - \partial_l b_n \cos^2 \theta - \partial_m b_n \sin \theta \cos \theta \right) + \hat{m} \left( - \partial_l b_n \sin \theta \cos \theta - \partial_m b_n \sin^2 \theta \right) + \hat{n} \left( \partial_l b_l \cos^2 \theta + \partial_l b_m \cos \theta \sin \theta  + \partial_m b_l \sin \theta \cos \theta + \partial_m b_m \sin^2 \theta \right)  \right\} \, d\theta = \\
+  & \quad = - i \underbrace{ \pi r^2}_{S} \left\{ -\partial_l b_n \hat{l} - \partial_m b_n \hat{m} - \partial_n b_n \hat{n}  \right\} = \\
+  & \quad = i S \, \nabla \vec{b}(C) \cdot \hat{n} = \\
+  & \quad = \nabla \vec{b}(C) \cdot \vec{m} \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+being \(\partial_i \vec{b} = \hat{l} \partial_i b_l + \hat{m} \partial_i b_m +  \hat{n} \partial_i b_n\), having used \(\int_{0}^{2\pi} \sin \theta \cos \theta d \theta = 0\), and \(\int_{0}^{2\pi} \sin^2 \theta d \theta = \int_{0}^{2\pi} \cos^2 \theta d \theta = \pi\), and the Gauss’ law for the magnetic field, \(0 = \nabla \cdot \vec{b} = \partial_l b_l + \partial_m b_m + \partial_n b_n\).
+
+\sphinxAtStartPar
+Higher order terms in \(\vec{r}\) vanish as the dimension of the loop goes to zero.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Moment.} The moment w.r.t. the center \(C\) acting on such an elementary loop immersed in a magnetic field \(\vec{b}(P)\) reads,
+\begin{equation*}
+\begin{split}\vec{M}_C = \vec{m} \times \vec{b}(C) \ .\end{split}
+\end{equation*}\subsubsection*{Moment on an Amperian loop}
+
+\sphinxAtStartPar
+Following the very same procedure done for evaluating the force acting on an Amperian loop immersed in a magnetic field, the moment is evaluated integrating elemenatry moment contributions,
+\begin{equation*}
+\begin{split}\begin{aligned}
+  d \vec{M}_C
+  & = \vec{r}(P) \times d \vec{F}(P) = \\
+  & = - i \vec{r}(P) \times \left( \vec{b}(P) \times \hat{t}(P) \right) \, ds = \\
+  & = - i \vec{r}(P) \times \left[ \left( \vec{b}(C) + \vec{r}(P) \times \nabla \vec{b}(C) + o(\vec{r}) \right) \times \hat{t}(P) \right] \, r \, d\theta = \\
+  & = - i r^2 \hat{r}(P) \times \left( \vec{b}(C) \times \hat{t}(P) + O(r) \right) \, d\theta \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The double cross product can be evaluated as
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \hat{r} \times \left(\vec{b} \times \hat{t} \right) 
+  & = \left( \hat{l} \, \cos \theta + \hat{m} \, \sin \theta \right) \times \left[ \left( b_l \hat{l} + b_m \hat{m} + b_n \hat{n} \right) \times \left( - \hat{l} \, \sin \theta + \hat{m} \, \cos \theta \right) \right] = \\
+  & = \left( \hat{l} \, \cos \theta + \hat{m} \, \sin \theta \right) \times \left[ \left( - b_n \cos \theta \right) \hat{l} + \left( - b_n \sin \theta \right) \hat{m} + \left( b_l \cos \theta + b_m \sin \theta \right) \hat{n} \right] = \\
+  & = \left( b_l \sin \theta \cos \theta + b_m \sin^2 \theta \right) \hat{l} + \left( -b_l \cos^2 \theta - b_m \sin \theta \cos \theta \right) \hat{m} + \left( - b_n \cos\theta \sin\theta + b_n \sin \theta \cos \theta \right) \hat{n} = \\
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Integration over the Amperian loop then gives
+\begin{equation*}
+\begin{split}\begin{aligned}
+  \vec{M}_C 
+  & = \oint_{\alpha} d\vec{M}_C = \\
+  & = - i \, \pi r^2 \, \left( b_m \hat{l} - b_l \hat{m}  \right) = \\
+  & = - i \, S \, \vec{b}(C) \times \hat{n} = \\
+  & = \vec{m} \times \vec{b}(C) \ .
+\end{aligned}\end{split}
+\end{equation*}
+\sphinxAtStartPar
+\sphinxstylestrong{Power.} \sphinxstyleemphasis{Check, discuss the effects of motion, and uncomment}
+
+
+
 
 \subsection{Energy balance}
 \label{\detokenize{ch/forces-moments-on-charges:energy-balance}}
