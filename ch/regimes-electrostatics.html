@@ -405,6 +405,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#governing-equation-of-electrostatics">5.2.1. Governing equation of electrostatics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-electric-field-inside-a-conductor">5.2.2. Zero electric field inside a conductor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-of-a-system-of-charges">5.2.3. Energy of a system of charges</a></li>
 </ul>
             </nav>
         </div>
@@ -419,13 +420,14 @@ document.write(`
   <div class="tex2jax_ignore mathjax_ignore section" id="electrostatics">
 <span id="classical-electromagnetism-electrostatics"></span><h1><span class="section-number">5.2. </span>Electrostatics<a class="headerlink" href="#electrostatics" title="Permalink to this heading">#</a></h1>
 <p>Elextrostatics studies the electric phenomena in systems with stationary charges. Thus, current is identically zero <span class="math notranslate nohighlight">\(\vec{j} = \vec{0}\)</span>.</p>
-<p>So far, random topics</p>
+<p>So far, this chapter contains random topics:</p>
 <ul class="simple">
-<li><p>governing equations of electrostatics</p></li>
-<li><p>zero electric field insiede a conductor</p></li>
+<li><p><a class="reference internal" href="#classical-electromagnetism-electrostatics-governing-equations"><span class="std std-ref">Governing equations of electrostatics</span></a></p></li>
+<li><p><a class="reference internal" href="#classical-electromagnetism-electrostatics-zero-field-conductor"><span class="std std-ref">Zero electric field insiede a conductor</span></a></p></li>
+<li><p><a class="reference internal" href="#classical-electromagnetism-electrostatics-energy-system-of-charges"><span class="std std-ref">Energy of a system of charges</span></a></p></li>
 </ul>
 <div class="section" id="governing-equation-of-electrostatics">
-<h2><span class="section-number">5.2.1. </span>Governing equation of electrostatics<a class="headerlink" href="#governing-equation-of-electrostatics" title="Permalink to this heading">#</a></h2>
+<span id="classical-electromagnetism-electrostatics-governing-equations"></span><h2><span class="section-number">5.2.1. </span>Governing equation of electrostatics<a class="headerlink" href="#governing-equation-of-electrostatics" title="Permalink to this heading">#</a></h2>
 <p>Electrostatics studies systems with no motion of charges, and thus no currents, <span class="math notranslate nohighlight">\(\vec{j} = \vec{0}\)</span>, and time dependency, <span class="math notranslate nohighlight">\(\partial_t \equiv 0\)</span>.</p>
 <p><strong>Maxwell’s equations.</strong></p>
 <div class="math notranslate nohighlight">
@@ -451,7 +453,7 @@ In absence of magnetic field, the problem is fully determined by the Gauss’ la
 <p>supplied with the proper boundary conditions. <strong>todo</strong> <em>discuss boundary conditions…</em></p>
 </div>
 <div class="section" id="zero-electric-field-inside-a-conductor">
-<h2><span class="section-number">5.2.2. </span>Zero electric field inside a conductor<a class="headerlink" href="#zero-electric-field-inside-a-conductor" title="Permalink to this heading">#</a></h2>
+<span id="classical-electromagnetism-electrostatics-zero-field-conductor"></span><h2><span class="section-number">5.2.2. </span>Zero electric field inside a conductor<a class="headerlink" href="#zero-electric-field-inside-a-conductor" title="Permalink to this heading">#</a></h2>
 <p>Studying the transient of the electric charge distribution inside a conductor,</p>
 <div class="math notranslate nohighlight">
 \[\vec{e} = \rho_R \vec{j} \ ,\]</div>
@@ -501,7 +503,82 @@ Proof<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\rho_f(\mathbf{r},t) = \rho_{f,0}(\mathbf{r}) \exp \left[ -\dfrac{t}{\rho_R \varepsilon} \right]\]</div>
 </div>
-</details></div>
+</details><p>As charge density and current density is zero inside a conductor, the electric field is zero as well. Thus, the electrostatic potential is uniform inside a conductor in electrostatic regime.</p>
+</div>
+<div class="section" id="energy-of-a-system-of-charges">
+<span id="classical-electromagnetism-electrostatics-energy-system-of-charges"></span><h2><span class="section-number">5.2.3. </span>Energy of a system of charges<a class="headerlink" href="#energy-of-a-system-of-charges" title="Permalink to this heading">#</a></h2>
+<p>This section discusses the electrostatic energy of a system of charges. The energy of the system of charges is computed using the external work done on the system required to build the final configuration of the system, see <a class="reference external" href="https://basics2022.github.io/bbooks-physics-hs/ch/electromagnetism/electrostatics.html#energia-potenziale-di-una-distribuzione-di-cariche">here</a> for more details. The work done by external forces is equal and opposite in sign to the work done by internal forces, if the initial and final configurations are at rest (and thus, there’s no change in kinetic energy between the initial and final configuration), and no dissipative actions occurs in the process. Positioning one charge after the other, the external force acting on the <span class="math notranslate nohighlight">\(n^{th}\)</span> charge must equilibrate the sum of internal forces (Coulomb force) due to the <span class="math notranslate nohighlight">\(n-1\)</span> charges previously arranged.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  L^{ext}_{1} &amp; = 0 \\
+  L^{ext}_{2} &amp; = \int_{P_\infty}^{P_2} \vec{F}_{21}(\vec{r}) \cdot d \vec{r} = - q_2 \int_{P_\infty}^{P_2} \vec{E}_{1}(\vec{r}) \cdot d \vec{r}
+  = q_2 \Delta V_{21} = q_1 q_2 \Delta V^{(1)}_{21} \\
+  \dots \\
+  L^{ext}_{n} &amp; = \int_{P_\infty}^{P_n} \sum_{i=1}^{n-1} \vec{F}_{ni}(\vec{r}) \cdot d \vec{r} = - q_n \int_{P_\infty}^{P_n} \sum_{i=1}^{n-1} \vec{E}_{i}(\vec{r}) \cdot d \vec{r} = \sum_{i=1}^{n-1} q_{n} q_{i} \Delta V^{(1)}_{ni} \\
+\end{aligned}\end{split}\]</div>
+<p>so that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  E 
+  &amp; = \sum_{i=1}^{n} L^{ext}_i = - \sum_{i=1}^{n} L^{int}_i = \\
+  &amp; = \sum_{n=1}^{N} \sum_{i=1}^{n-1} q_n q_i \Delta V_{ni}^{(1)} = \\
+  &amp; = \sum_{\{ i,j \}, i \ne j} q_j q_i \Delta V_{ji}^{(1)} = \\
+  &amp; = \sum_{  (i,j), i \ne j} \frac{1}{2} q_j q_i \Delta V_{ji}^{(1)} \ ,
+\end{aligned}\end{split}\]</div>
+<p>with the <span class="math notranslate nohighlight">\(\{ i, j \}\)</span> unordered pairs (i.e. not summing twice on <span class="math notranslate nohighlight">\(\{ i,k \}\)</span> and <span class="math notranslate nohighlight">\(\{ k, i\}\)</span>) or ordered pairs <span class="math notranslate nohighlight">\((i, k)\)</span> (summing both <span class="math notranslate nohighlight">\((i,k)\)</span> and <span class="math notranslate nohighlight">\((k,i)\)</span>), and <span class="math notranslate nohighlight">\(V_{ij}^{(1)} = V_{ji}^{(1)}\)</span>.</p>
+<p><strong>Point charges.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \vec{F}_{ik} &amp; = \frac{q_i q_k}{4 \pi \varepsilon} \frac{\vec{r}_i - \vec{r}_k}{|\vec{r}_i - \vec{r}_k|^3} \\
+  \vec{E}_{k}(\vec{r}_i) &amp; = \frac{q_k}{4 \pi \varepsilon} \frac{\vec{r}_i - \vec{r}_k}{|\vec{r}_i - \vec{r}_k|^3} \\
+        V_{k}(\vec{r}_i) &amp; = \frac{q_k}{4 \pi \varepsilon} \frac{1}{|\vec{r}_i - \vec{r}_k|} \\
+        V_{ki}^{(1)} &amp; = V_{ik}^{(1)} = \frac{1}{4 \pi \varepsilon} \frac{1}{|\vec{r}_i - \vec{r}_k|} \ .
+\end{aligned}\end{split}\]</div>
+<p><strong>System with uniform potential.</strong> The work done by an external force to move a charge <span class="math notranslate nohighlight">\(q\)</span> from a region with electric potential <span class="math notranslate nohighlight">\(V_0 = 0\)</span> to a system with electic potential <span class="math notranslate nohighlight">\(V\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[L^{ext} = q (V - V_0) = q V \ .\]</div>
+<p>As an example, a <strong>double layer of charges</strong> (globally neutral) creates a potential difference across it. Assuming a piecewise uniform charge distribution,</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p><span class="math notranslate nohighlight">\(x\)</span></p></th>
+<th class="text-left head"><p><span class="math notranslate nohighlight">\(\rho(x)\)</span></p></th>
+<th class="text-left head"><p><span class="math notranslate nohighlight">\(e(x)\)</span></p></th>
+<th class="text-left head"><p><span class="math notranslate nohighlight">\(V(x)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\in (-\infty,x_1]\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(\in [x_1,0]\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(-q\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(-\frac{q}{\varepsilon}(x-x_1)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\( \frac{q}{2 \varepsilon}(x-x_1)^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><span class="math notranslate nohighlight">\(\in [0,x_2]\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\( q\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\( \frac{q}{\varepsilon}(x-x_2)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(-\frac{q}{2 \varepsilon}(x-x_2)^2 + \frac{q}{2 \varepsilon}(x_1^2 + x_2^2)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><span class="math notranslate nohighlight">\(\in [x_2,+\infty)\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\frac{q}{2 \varepsilon}(x_1^2 + x_2^2)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>with <span class="math notranslate nohighlight">\(\sigma = q x_2 = - q x_1 = \frac{Q}{S}\)</span> the surface density <span class="math notranslate nohighlight">\(\left[ \frac{\text{charge}}{\text{length}^2} \right]\)</span>, for the global neutrality of the interface, <span class="math notranslate nohighlight">\(S\)</span> the area of the interface and <span class="math notranslate nohighlight">\(Q\)</span> the electric charge on its positive side. Thus the potential difference across the interface reads</p>
+<div class="math notranslate nohighlight">
+\[V = \frac{q}{2 \varepsilon}(x_1^2 + x_2^2) = \frac{q}{2 \varepsilon} ( (-x_1)(-x_1) + x_2 x_2 ) = \frac{\sigma}{2 \varepsilon} (x_2 - x_1) = \frac{\sigma}{2} w = \frac{w}{2 \varepsilon S} Q \ .\]</div>
+<p>The potential difference is a function of the charge <span class="math notranslate nohighlight">\(Q\)</span>. In order to move a charge <span class="math notranslate nohighlight">\(dQ\)</span> from the negative to the positive side of the interface, with potential <span class="math notranslate nohighlight">\(V(Q)\)</span>, a work equal to</p>
+<div class="math notranslate nohighlight">
+\[d L = V(Q) dQ\]</div>
+<p>is required. Assuming <span class="math notranslate nohighlight">\(w\)</span>, <span class="math notranslate nohighlight">\(\varepsilon\)</span>, <span class="math notranslate nohighlight">\(S\)</span> as a constant, the work to transfer a total charge <span class="math notranslate nohighlight">\(\Delta Q_0 = Q_1 - Q_0\)</span> starting from <span class="math notranslate nohighlight">\(Q_0\)</span> reads</p>
+<div class="math notranslate nohighlight">
+\[L = \int_{Q_0}^{Q_1} d L =  \int_{Q_0}^{Q_1} V(Q) dQ = \int_{Q_0}^{Q_1} \frac{w}{2 \varepsilon S} Q dQ = \frac{w}{4 \varepsilon S} \left( Q_1^2 - Q_0^2 \right) \ .\]</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -569,6 +646,7 @@ Proof<div class="sd-summary-down docutils">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#governing-equation-of-electrostatics">5.2.1. Governing equation of electrostatics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-electric-field-inside-a-conductor">5.2.2. Zero electric field inside a conductor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-of-a-system-of-charges">5.2.3. Energy of a system of charges</a></li>
 </ul>
   </nav></div>
 
