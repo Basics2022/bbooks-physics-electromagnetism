@@ -133,7 +133,10 @@ $$\begin{aligned}
         V_{ki}^{(1)} & = V_{ik}^{(1)} = \frac{1}{4 \pi \varepsilon} \frac{1}{|\vec{r}_i - \vec{r}_k|} \ .
 \end{aligned}$$
 
-**System with uniform potential.** The work done by an external force to move a charge $q$ from a region with electric potential $V_0 = 0$ to a system with electic potential $V$ reads
+(classical-electromagnetism:electrostatics:energy-system-of-charges:uniform-potential)=
+### Systems with uniform potential
+
+ The work done by an external force to move a charge $q$ from a region with electric potential $V_0 = 0$ to a system with electic potential $V$ reads
 
 $$L^{ext} = q (V - V_0) = q V \ .$$
 
