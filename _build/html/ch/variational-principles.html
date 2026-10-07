@@ -1,0 +1,707 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15. Variational principles in electromagnetism &#8212; Classical Electromagnetism and Principles of Electrical Engineering</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch/variational-principles';</script>
+    <link rel="shortcut icon" href="../_static/favicon.svg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="16. todo: appendices" href="appendix-list.html" />
+    <link rel="prev" title="14. Electromagnetism in transformed domain" href="transformed-domain.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X6MNXBVGKF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X6MNXBVGKF');
+</script>
+
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.svg" class="logo__image only-light" alt="Classical Electromagnetism and Principles of Electrical Engineering - Home"/>
+    <script>document.write(`<img src="../_static/logo-dark.svg" class="logo__image only-dark" alt="Classical Electromagnetism and Principles of Electrical Engineering - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Electromagnetism</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="experiments.html">1. Brief history of Electromagnetism</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="principles.html">2. Principles of Classical Electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="principles-vacuum.html">2.1. Principles of Classical Electromagnetism in Free Space</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="principles-matter.html">2.2. Electromagnetism in Matter</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="principles-matter-polarization.html">2.2.6. Polarization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="principles-matter-magnetization.html">2.2.7. Magnetization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="principles-relativity.html">2.3. Galileian relativity in electromagnetism</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="waves.html">3. Electromagnetic waves</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="potentials.html">3.1. Electromagnetic Potentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">3.2. Wave Equations in Electromagnetism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">3.3. Plane Electromagnetic Waves</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="energy.html">4. Force, moments, energy and momentum in electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="forces-moments-on-charges.html">4.1. Force, moment, and power on elementary charge distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="energy-momentum-balance.html">4.2. Energy and momentum balance in linear, local, isotropic, non-dispersive media</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="regimes.html">5. Regimes in Electromagnetic systems</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="regimes-non-dimensional.html">5.1. Non-dimensional equations of electromagnetism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regimes-electrostatics.html">5.2. Electrostatics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regimes-steady.html">5.3. Steady regime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regimes-slow.html">5.4. Slow regime</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Electrical Engineering</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="circuits.html">6. Circuit Approximation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="circuits-energy.html">7. Energy balance in circuit approximation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="circuits-electric.html">8. Electric circuits</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="circuits-electric-components.html">8.1. Circuit Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuits-electric-elementary-connections.html">8.2. Elementary circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuits-electric-induction.html">8.3. Electromagnetic Induction in Circuit Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="circuits-electric-regimes.html">8.4. Operating Regimes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="circuits-electromagnetic.html">9. Electromagnetic Circuits</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="circuits-electromagnetic-transformer.html">9.1. Transformer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="systems-electromechanic.html">10. Electromechanical Systems</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="systems-electromechanic-energy.html">10.1. Energy balance in electromechanic systems</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="systems-electromechanic-examples.html">10.2. Electromechanic systems: examples</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="systems-electromechanic-induction-intro.html">10.2.1. Electromechanic systems: first examples with induction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="systems-electromechanic-lock.html">10.2.2. Electromechanic lock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="systems-electromechanic-motor-dc.html">10.2.3. DC motors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="systems-electromechanic-motor-ac.html">10.2.4. AC motors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="circuits-electromechanic-old.html">10.3. Electromechanical Systems - OLD</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="electrical-engineering-networks.html">11. Network analysis</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks-linear.html">11.1. Network analysis of linear circuits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-networks-harmonic.html">11.2. Network analysis of linear circuits - harmonic regime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical-engineering-three-phase.html">11.3. Three-phase circuits</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="electrical-engineering-exercises.html">11.4. Exercises</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-transient-1-dynamic.html">11.4.1. Transient dynamics of linear electrical grids with one dynamic component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-harmonic.html">11.4.2. Harmonic regime of linear electrical grids</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-three-phase.html">11.4.3. Three-phase electrical circuits in harmonic regime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical-engineering-exercises-electromagnetic.html">11.4.4. Electromagnetic circuits</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Numerical Methods</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="green-function.html">12. Green’s function method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numerical-methods.html">13. Metodi numerici</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transformed-domain.html">14. Electromagnetism in transformed domain</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">15. Variational principles in electromagnetism</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="appendix-list.html">16. todo: appendices</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/ch/variational-principles.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Variational principles in electromagnetism</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particle-in-a-prescribed-electromagnetic-field">15.1. Particle in a prescribed electromagnetic field</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#field-equations">15.2. Field equations</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="tex2jax_ignore mathjax_ignore section" id="variational-principles-in-electromagnetism">
+<span id="classical-electromagnetism-variational-principles"></span><h1><span class="section-number">15. </span>Variational principles in electromagnetism<a class="headerlink" href="#variational-principles-in-electromagnetism" title="Permalink to this heading">#</a></h1>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Contents<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">Particle in a prescribed electromagnetic field</p></li>
+<li><p class="sd-card-text">Field equations: Maxwell equations</p></li>
+<li><p class="sd-card-text">Particle-field equations: charged particles creating electromagnetic field and moving subject to electromagnetic force (i.e. Lorentz force)</p></li>
+</ul>
+</div>
+</details><div class="section" id="particle-in-a-prescribed-electromagnetic-field">
+<span id="classical-electromagnetism-variational-principles-particle-motion-in-prescribed-field"></span><h2><span class="section-number">15.1. </span>Particle in a prescribed electromagnetic field<a class="headerlink" href="#particle-in-a-prescribed-electromagnetic-field" title="Permalink to this heading">#</a></h2>
+<p>For the equations in special relativity, see <a class="reference external" href="https://basics2022.github.io/bbooks-math-miscellanea/ch/calculus-variations/examples.html#lagrange-equations-in-special-relativity">Math: Examples of calculus of variations: Lagrange equations in special relativity</a>.</p>
+<p>Starting from the equation of motion of a charged particle in an electromagnetic field</p>
+<div class="math notranslate nohighlight">
+\[m \ddot{\mathbf{r}} = q \left( \mathbf{e}(\mathbf{r}, t) - \mathbf{b}(\mathbf{r},t) \times \dot{\mathbf{r}} \right) \ ,\]</div>
+<p>with <span class="math notranslate nohighlight">\(\mathbf{r}(t)\)</span> representing the position of the point particle. Using the definition of the electromangetic potentials, <span class="math notranslate nohighlight">\(\mathbf{b} = \nabla \times \mathbf{a}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{e} = - \nabla \varphi - \partial_t \mathbf{a}\)</span>, multiplying by a test function <span class="math notranslate nohighlight">\(\delta \mathbf{r}\)</span>, and using integration by parts,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0 
+  &amp; = \delta \mathbf{r} \cdot \left\{ m \ddot{\mathbf{r}} - q \mathbf{e} + q \mathbf{b} \times \dot{\mathbf{r}} \right) = &amp;&amp; \text{(1)} \\
+  &amp; = d_t \left( \delta \mathbf{r} \cdot m \dot{\mathbf{r}} \right) - \delta \dot{\mathbf{r}} \cdot m \dot{\mathbf{r}} + q \left[ \delta \mathbf{r} \cdot \nabla \varphi + \delta \mathbf{r} \cdot \partial_t \mathbf{a} + \delta \mathbf{r} \cdot \left( \nabla \times \mathbf{a} \right) \times \dot{\mathbf{r}} \right] = &amp;&amp; \text{(2)} \\
+  &amp; = d_t \left( \delta \mathbf{r} \cdot m \dot{\mathbf{r}} \right) - \delta \dot{\mathbf{r}} \cdot m \dot{\mathbf{r}} + q \left[ \delta \mathbf{r} \cdot \nabla \varphi + \delta \mathbf{r} \cdot d_t \mathbf{a} - \delta \mathbf{r} \cdot \nabla \mathbf{a} \cdot \dot{\mathbf{r}} \right] = \\
+  &amp; = d_t \left( \delta \mathbf{r} \cdot m \dot{\mathbf{r}} \right) - \delta \dot{\mathbf{r}} \cdot m \dot{\mathbf{r}} + q \delta \mathbf{r} \cdot \nabla \varphi + q d_t \left( \delta \mathbf{r} \cdot \mathbf{a} \right) - q \delta \dot{\mathbf{r}} \cdot \mathbf{a} - q \delta \mathbf{r} \cdot \nabla \mathbf{a} \cdot \dot{\mathbf{r}} = \\
+  &amp; = d_t \left\{ \delta \mathbf{r} \cdot \left( m \dot{\mathbf{r}} + q \mathbf{a} \right) \right\} + \delta \left\{ - \dfrac{1}{2} m |\dot{\mathbf{r}}|^2 + q \left( \varphi - \mathbf{a} \cdot \dot{\mathbf{r}} \right) \right\} \ .
+\end{aligned}\end{split}\]</div>
+<p>With prescribed extreme points of the trajectory <span class="math notranslate nohighlight">\(\delta \mathbf{r}(t_0) = \delta \mathbf{r}(t_1) = \mathbf{0}\)</span>, the equations of motion follows from the principle of stationariety of the action integral,</p>
+<div class="math notranslate nohighlight">
+\[0 = \delta S = \delta \int_{t_0}^{t_1} \mathcal{L} \, d t = \delta \int_{t_0}^{t_1} \left\{ \dfrac{1}{2} m |\dot{\mathbf{r}}|^2 - q \left( \varphi - \mathbf{a} \cdot \dot{\mathbf{r}} \right) \right\} \, d t \ ,\]</div>
+<p>being <span class="math notranslate nohighlight">\(\mathcal{L}\)</span> the Lagrangian function.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\text{(1)}\)</span> electromagnetic field as a function of the electromagnetic potentials</p>
+<p class="sd-card-text"><span class="math notranslate nohighlight">\(\text{(2)}\)</span>, as <span class="math notranslate nohighlight">\(\mathbf{r}(t)\)</span>, thus</p>
+<div class="math notranslate nohighlight">
+\[d_t \mathbf{a}(\mathbf{r}(t), t) = \partial_t \mathbf{a} + \dot{\mathbf{r}} \cdot \nabla \mathbf{a} \ .\]</div>
+<p class="sd-card-text">The vector product of <span class="math notranslate nohighlight">\(\dot{\mathbf{r}}\)</span> with the curl of <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> can be recast using vector identity</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \dot{\mathbf{r}} \times \left( \nabla \times \mathbf{a} \right) 
+  &amp; = \hat{\mathbf{e}}_i \varepsilon_{ijk} \dot{r}_j \varepsilon_{klm} \partial_l a_m = \\
+  &amp; = \hat{\mathbf{e}}_i \dot{r}_j \left( \delta_{il} \delta_{jm} - \delta_{im} \delta_{jl} \right) \partial_l a_m = \\
+  &amp; = \hat{\mathbf{e}}_i \left( \dot{r}_m \partial_i a_m - \dot{r}_{m} \partial_m a_i \right) = \\
+  &amp; = \nabla \mathbf{a} \cdot \dot{\mathbf{r}} - \dot{\mathbf{r}} \cdot \nabla \mathbf{a} \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details><p><strong>Lagrange equations without using the principle of stationariety of the action.</strong> Using generalized coordinates <span class="math notranslate nohighlight">\(q^k(t)\)</span> to write the position of the point particle <span class="math notranslate nohighlight">\(\mathbf{r}(q^k(t), t)\)</span>, the velocity becomes</p>
+<div class="math notranslate nohighlight">
+\[\dot{\mathbf{r}} = \dot{q}^k \partial_{q^k} \mathbf{r} + \partial_t \mathbf{r} \ ,\]</div>
+<p>so that <span class="math notranslate nohighlight">\(\partial_{\dot{q}^k} \dot{\mathbf{r}} = \partial_{q^k} \mathbf{r}\)</span>. Using the test function <span class="math notranslate nohighlight">\(\delta \mathbf{r} = \partial_{q^k} \mathbf{r}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0
+  &amp; = \partial_{q^k} \mathbf{r} \cdot \left\{ m \ddot{\mathbf{r}} - q \mathbf{e} + q \mathbf{b} \times \dot{\mathbf{r}} \right) = \\
+  &amp; = \partial_{\dot{q}^k} \dot{\mathbf{r}} \cdot m \ddot{\mathbf{r}} + \partial_{q^k} \mathbf{r} \cdot \left\{  - q \mathbf{e} + q \mathbf{b} \times \dot{\mathbf{r}} \right) = \\
+  &amp; = \dfrac{d}{dt} \left( \partial_{\dot{q}^k} \dot{\mathbf{r}} \cdot m \dot{\mathbf{r}} \right) - \partial_{q^k} \dot{\mathbf{r}} \cdot m \dot{\mathbf{r}} + \partial_{q^k} \mathbf{r} \cdot \left\{ q \nabla \varphi + q \partial_t \mathbf{a} + q ( \nabla \times \mathbf{a} ) \times \dot{\mathbf{r}} \right\} = \\
+  &amp; = \dfrac{d}{dt} \left( \partial_{\dot{q}^k} \dot{\mathbf{r}} \cdot m \dot{\mathbf{r}} \right) - \partial_{q^k} \dot{\mathbf{r}} \cdot m \dot{\mathbf{r}} + \partial_{q^k} \mathbf{r} \cdot \left\{ q \nabla \varphi + q \dot{ \mathbf{a} } - q \nabla \mathbf{a} \times \dot{\mathbf{r}} \right\} = \\
+  &amp; = \dfrac{d}{dt} \left( \partial_{\dot{q}^k} \dot{\mathbf{r}} \cdot m \dot{\mathbf{r}} \right) - \partial_{q^k} \dot{\mathbf{r}} \cdot m \dot{\mathbf{r}} + \dfrac{d}{dt} \left( q \partial_{q^k} \mathbf{r} \cdot \mathbf{a} \right) + \partial_{q^k} \mathbf{r} \cdot \left\{ q \nabla \varphi - q \nabla \mathbf{a} \times \dot{\mathbf{r}} \right\} - q \partial_{q^k} \dot{\mathbf{r}} \cdot \mathbf{a} = \\
+  &amp; = \dfrac{d}{dt} \left\{ \partial_{\dot{q}^k} \dot{\mathbf{r}} \cdot \left( m \dot{\mathbf{r}} +  q \mathbf{a} \right) \right\} - \partial_{q^k} \dot{\mathbf{r}} \cdot m \dot{\mathbf{r}} + \partial_{q^k} \mathbf{r} \cdot \left\{ q \nabla \varphi - q \nabla \mathbf{a} \times \dot{\mathbf{r}} \right\} - q \partial_{q^k} \dot{\mathbf{r}} \cdot \mathbf{a} = \\
+  &amp; = \dfrac{d}{dt} \dfrac{\partial}{\partial \dot{q}^k} \left\{ \frac{1}{2} m | \dot{\mathbf{r}} |^2 +  q \mathbf{a} \cdot \dot{\mathbf{r}} \right\} - \dfrac{\partial}{\partial q^k} \left\{ \dfrac{1}{2} m |\dot{\mathbf{r}}|^2 - q \varphi + q \mathbf{a} \cdot \dot{\mathbf{r}} \right\} \ .
+\end{aligned}\end{split}\]</div>
+<p>as</p>
+<div class="math notranslate nohighlight">
+\[\partial_{q^k} \left( \mathbf{a} \cdot \dot{\mathbf{r}} \right) = \partial_{q^k} \mathbf{r} \cdot \nabla \mathbf{a} \cdot \dot{\mathbf{r}} + \mathbf{a} \cdot \partial_{q^k} \dot{\mathbf{r}} \ .\]</div>
+<p>As <span class="math notranslate nohighlight">\(q \varphi(\mathbf{r},t)\)</span> doesn’t depend on <span class="math notranslate nohighlight">\(\dot{q}^k\)</span>, it’s possible to defined the Lagrangian function</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L}(\dot{q}^k, q^k, t) := \dfrac{1}{2} m |\dot{\mathbf{r}}|^2 + q \mathbf{a}(\mathbf{r},t) \cdot \dot{\mathbf{r}} - q \varphi(\mathbf{r},t) \ ,\]</div>
+<p>so that the equation of motion can be written as the common Lagrange equations</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{d}{dt}\dfrac{\partial \mathcal{L}}{\partial \dot{q}^k} - \dfrac{\partial \mathcal{L}}{\partial q^k} = 0 \ . \]</div>
+<p><strong>Generalized momentum.</strong></p>
+<div class="math notranslate nohighlight">
+\[p_k := \dfrac{\partial \mathcal{L}}{\partial \dot{q}^k} = m \partial_{\dot{q}^k} \dot{\mathbf{r}} \cdot \dot{\mathbf{r}} + q \mathbf{a} \cdot \partial_{\dot{q}^k} \mathbf{r} \ .\]</div>
+<p>If the generalized coordinates are the position vector <span class="math notranslate nohighlight">\(\mathbf{r}\)</span> itself, then</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{p} = m \dot{\mathbf{r}} + q \mathbf{a} \ .\]</div>
+<p><strong>Hamiltonian function.</strong></p>
+<div class="math notranslate nohighlight">
+\[\mathcal{H} := \mathbf{p} \cdot \dot{\mathbf{q}} - \mathcal{L} = \dfrac{1}{2} m |\dot{\mathbf{r}}|^2 + q \varphi \ .\]</div>
+</div>
+<div class="section" id="field-equations">
+<span id="classical-electromagnetism-variational-principles-field-equations"></span><h2><span class="section-number">15.2. </span>Field equations<a class="headerlink" href="#field-equations" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Equations of the electromagnetism<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Maxwell’s equation.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{
+\begin{aligned}
+  &amp; \nabla \cdot \mathbf{d} = \rho_f \\
+  &amp; \nabla \times \mathbf{e} + \partial_t \mathbf{b} = \mathbf{0} \\
+  &amp; \nabla \cdot \mathbf{b} = 0 \\
+  &amp; \nabla \times \mathbf{h} - \partial_t \mathbf{d} = \mathbf{j}_f
+\end{aligned}
+\right.\end{split}\]</div>
+<p class="sd-card-text"><strong>Continuity equation.</strong></p>
+<div class="math notranslate nohighlight">
+\[\partial_t \rho + \nabla \cdot \mathbf{j} = 0\]</div>
+<p class="sd-card-text"><strong>Electromagnetic potentials.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathbf{b} &amp; = \nabla \times \mathbf{a} \\
+  \mathbf{e} &amp; = - \nabla \varphi - \partial_t \mathbf{a}
+\end{aligned}\end{split}\]</div>
+</div>
+</details><p>Using the electromagnetic potentials, <span class="math notranslate nohighlight">\(\mathbf{a}\)</span>, <span class="math notranslate nohighlight">\(\varphi\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ 0
+ &amp; = \delta u \, \left\{ \nabla \cdot \left( - \nabla \varphi - \partial_t \mathbf{a} \right) - \frac{\rho}{\varepsilon_0} \right\} + \delta \mathbf{v} \cdot \left( \nabla \times \nabla \times \mathbf{a} - \varepsilon_{0} \mu_0 \partial_t \left( -\nabla \varphi - \partial_t \mathbf{a} \right) - \mu_0 \mathbf{j} \right) = \\
+ &amp; = - \nabla \cdot \left\{ \delta u \left( \nabla \varphi + \partial_t \mathbf{a} \right) \right\} + \nabla \delta u \cdot \nabla \varphi + \nabla \delta u \cdot \partial_t \mathbf{a} - \delta u \dfrac{\rho}{\varepsilon_0} + \\
+ &amp; \quad + \nabla \cdot \left\{ \left( \nabla \times \mathbf{a} \right) \times \delta \mathbf{v} \right\} + \nabla \times \delta \mathbf{v} \cdot \nabla \times \mathbf{a} + \dfrac{1}{c_0^2} \partial_t \left\{ \delta \mathbf{v} \cdot \left( \nabla \varphi + \partial_t \mathbf{a} \right) \right\} - \dfrac{1}{c_0^2} \partial_t \delta \mathbf{v} \cdot \nabla \varphi - \dfrac{1}{c_0^2} \partial_t \delta \mathbf{v} \cdot \partial_t \mathbf{a} - \mu_0 \delta \mathbf{v} \cdot \mathbf{j} \ .
+\end{aligned}\end{split}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \delta \mathbf{v} \cdot \nabla \times \nabla \times \mathbf{a}
+  &amp; = \delta v_i \varepsilon_{ijk} \partial_j \varepsilon_{klm} \partial_l a_m = \\
+  &amp; = \varepsilon_{ijk} \partial_j \left( \delta v_i \varepsilon_{klm} \partial_{l} a_m \right) - \varepsilon_{ijk} \partial_j \delta v_i \, \varepsilon_{klm} \partial_{l} a_m  \\
+  &amp; = \nabla \cdot \left( \left( \nabla \times \mathbf{a} \right) \times \delta \mathbf{v} \right) + \nabla \times \delta \mathbf{v} \cdot \nabla \times \mathbf{a} 
+\end{aligned}\end{split}\]</div>
+</div>
+</details><p>If <span class="math notranslate nohighlight">\(\delta u = \varepsilon_0 \delta \varphi\)</span>, and <span class="math notranslate nohighlight">\(\delta \mathbf{v} = -\frac{1}{\mu_0} \delta \mathbf{a}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ 0
+ &amp; = - \nabla \cdot \left\{ \varepsilon_0 \delta \varphi \left( \nabla \varphi + \partial_t \mathbf{a} \right) \right\} + \varepsilon_0 \nabla \delta \varphi \cdot \nabla \varphi + \varepsilon_0 \nabla \delta \varphi \cdot \partial_t \mathbf{a} - \delta \varphi \, \rho + \\
+ &amp; \quad - \dfrac{1}{\mu_0} \nabla \cdot \left\{ \left( \nabla \times \mathbf{a} \right) \times \delta \mathbf{a} \right\} - \dfrac{1}{\mu_0} \nabla \times \delta \mathbf{a} \cdot \nabla \times \mathbf{a}  - \varepsilon_0 \partial_t \left\{ \delta \mathbf{a} \cdot \left( \nabla \varphi + \partial_t \mathbf{a} \right) \right\} + \varepsilon_0 \partial_t \delta \mathbf{a} \cdot \nabla \varphi + \varepsilon_0 \partial_t \delta \mathbf{a} \cdot \partial_t \mathbf{a} + \delta \mathbf{a} \cdot \mathbf{j} = \\
+ &amp; = \nabla \cdot \left\{ \dots \right\} + \partial_t \left\{ \dots \right\} + \delta \left\{  \varepsilon_0 \left[ \dfrac{|\nabla \varphi|^2}{2} + \nabla \varphi \cdot \partial_t \mathbf{a} + \dfrac{|\partial_t \mathbf{a}|}{2} \right] - \dfrac{1}{\mu_0} | \nabla \times \mathbf{a} |^2 \right\} - \delta \varphi \rho + \delta \mathbf{a} \cdot  \mathbf{j} \ .
+\end{aligned}\end{split}\]</div>
+<p>The content of the curly bracket can be defined as the field Lagrangian function,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \mathcal{L}_{field}(\varphi, \mathbf{a}, \partial_t \varphi, \partial_t \mathbf{a}, \partial_k \varphi, \partial_k \mathbf{a} )
+  &amp; := \varepsilon_0 \left[ \dfrac{|\nabla \varphi|^2}{2} + \nabla \varphi \cdot \partial_t \mathbf{a} + \dfrac{|\partial_t \mathbf{a}|^2}{2} \right] - \dfrac{1}{\mu_0} | \nabla \times \mathbf{a} |^2 = \\ 
+  &amp; = \varepsilon_0 | \mathbf{e} |^2 - \dfrac{1}{\mu_0} | \mathbf{b} |^2 \ .
+\end{aligned}\end{split}\]</div>
+<p>The last two contributions can defined as the Lagrangian function of the interaction between prescribed charge and current densities with the electromagnetic field</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L}_{inter} = - \varphi \rho + \mathbf{a} \cdot \mathbf{j} \ .\]</div>
+<p>If charge and current densities are not prescribed, then the full variation of this contribution produces the continuous counterpart of the equations of motion for charges subject to Lorentz force,</p>
+<div class="math notranslate nohighlight">
+\[m D_t \mathbf{u} = \rho \left( \mathbf{e} - \mathbf{b} \times \mathbf{u} \right) \ ,\]</div>
+<p>with <span class="math notranslate nohighlight">\(m\)</span> the charge mass density, and <span class="math notranslate nohighlight">\(\mathbf{u}(\mathbf{r},t)\)</span> the velocity field of the continuous charge distribution, and <span class="math notranslate nohighlight">\(D_t = \partial_t + \mathbf{u} \cdot \nabla\)</span> the total derivative.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="transformed-domain.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">14. </span>Electromagnetism in transformed domain</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="appendix-list.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">16. </span>todo: appendices</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particle-in-a-prescribed-electromagnetic-field">15.1. Particle in a prescribed electromagnetic field</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#field-equations">15.2. Field equations</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By basics
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
