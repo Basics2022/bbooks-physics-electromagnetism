@@ -75,6 +75,7 @@ parts:
   chapters:
   - file: ch/green-function
   - file: ch/numerical-methods
+  - file: ch/transformed-domain
 - caption: Appendices
   numbered: true
   chapters:
