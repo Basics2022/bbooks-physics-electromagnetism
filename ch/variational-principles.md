@@ -169,7 +169,60 @@ The last two contributions can defined as the Lagrangian function of the interac
 
 $$\mathcal{L}_{inter} = - \varphi \rho + \mathbf{a} \cdot \mathbf{j} \ .$$
 
-If charge and current densities are not prescribed, then the full variation of this contribution produces the continuous counterpart of the equations of motion for charges subject to Lorentz force,
+````{dropdown} Equations of the electromagnetism from Lagrange equation
+:open:
+
+$$\begin{aligned}
+  \mathcal{L}_{field}(\varphi, \mathbf{a}, \partial_t \varphi, \partial_t \mathbf{a}, \partial_k \varphi, \partial_k \mathbf{a} )
+  & := \varepsilon_0 \left[ \dfrac{|\nabla \varphi|^2}{2} + \nabla \varphi \cdot \partial_t \mathbf{a} + \dfrac{|\partial_t \mathbf{a}|^2}{2} \right] - \dfrac{1}{\mu_0} \dfrac{| \nabla \times \mathbf{a} |^2}{2} - \varphi \rho + \mathbf{a} \cdot \mathbf{j} \ . 
+\end{aligned}$$
+
+Lagrange equation w.r.t. $\varphi$, $\partial_t \varphi$, $\partial_k \varphi$,
+
+$$\begin{aligned}
+  0
+  & = \dfrac{\partial}{\partial t} \dfrac{\partial \mathcal{L}}{\partial (\partial_t \varphi)}
+  + \dfrac{\partial}{\partial k} \dfrac{\partial \mathcal{L}}{\partial (\partial_k \varphi)}
+  - \dfrac{\partial \mathcal{L}}{\partial \varphi} = \\
+  & = 0 + \varepsilon_0 \partial_k \left( \partial_k \varphi + \partial_t a_k \right) + \rho = \\
+  & = - \varepsilon_0 \nabla \cdot \mathbf{e} + \rho \ .
+\end{aligned}$$
+
+Lagrange equations w.r.t. $a_i$, $\partial_t a_i$, $\partial_k a_i$,
+
+$$\begin{aligned}
+  0
+  & = \dfrac{\partial}{\partial t} \dfrac{\partial \mathcal{L}}{\partial (\partial_t a_i)}
+  + \dfrac{\partial}{\partial k} \dfrac{\partial \mathcal{L}}{\partial (\partial_k a_i)}
+  - \dfrac{\partial \mathcal{L}}{\partial a_i} = \\
+  & = \varepsilon_0 \partial_t \left( \partial_i \varphi + \partial_t a_i \right) + \dfrac{1}{\mu_0} \partial_k \left( \varepsilon_{kpi} b_p \right) - j_i = \\
+  & = - \varepsilon_0 \partial_t e_i + \dfrac{1}{\mu_0} \varepsilon_{ikp} \partial_k b_p - j_i \ ,
+\end{aligned}$$
+
+or in vector form
+
+$$\mathbf{0} = - \varepsilon_{0} \partial_t \mathbf{e} + \dfrac{1}{\mu_0} \nabla \times \mathbf{b} - \mathbf{j} \ .$$
+
+```{dropdown} Details
+:open:
+
+$$\begin{aligned}
+  \dfrac{\partial}{\partial (\partial_u a_v)}|\nabla \times \mathbf{a}|^2
+  & = \dfrac{\partial}{\partial (\partial_u a_v)} \left( \varepsilon_{ijk} \partial_j a_k \varepsilon_{ilm} \partial_l a_m \right) = \\
+  & = \varepsilon_{ijk} \delta_{uj} \delta_{vk} \varepsilon_{ilm} \partial_l a_m + \varepsilon_{ijk} \partial_j a_k \varepsilon_{ilm} \delta_{ul} \delta_{vm} = \\
+  & = \varepsilon_{iuv} \varepsilon_{ilm} \partial_l a_m + \varepsilon_{ijk} \partial_j a_k \varepsilon_{iuv} = \\
+  & = ( \delta_{ul} \delta_{vm} - \delta_{um} \delta_{vl} ) \partial_l a_m + \left( \delta_{ju} \delta_{kv} - \delta_{jv} \delta_{ku} \right) \partial_j a_k = \\
+  & = \partial_u a_v - \partial_v a_u + \partial_u a_v - \partial_v a_u = \\
+  & = 2 \left( \partial_u a_v - \partial_v a_u \right) = \\
+  & = 2 \varepsilon_{upv} b_p \ .
+\end{aligned}$$
+
+```
+
+````
+
+
+**Charged-field Lagrangian function.** If charge and current densities are not prescribed, then the full variation of this contribution produces the continuous counterpart of the equations of motion for charges subject to Lorentz force,
 
 $$m D_t \mathbf{u} = \rho \left( \mathbf{e} - \mathbf{b} \times \mathbf{u} \right) \ ,$$
 
@@ -205,14 +258,31 @@ $$\varepsilon_{ijk} b_j = \varepsilon_{ijk} \varepsilon_{jlm} \partial_l a_m = \
 ```
 
 **Hamiltonian.**
-*uncomment*
 
-<!--
 $$\begin{aligned}
   \mathcal{H}
-  & = \Pi_{\varphi} \partial_t \varphi + \Pi_{a_i} \partial_{t} a_i - \mathcal{L} = \\
-  & = - \varepsilon_0 \mathbf{e} \cdot \partial_t \mathbf{a} - \varepsilon_0 \left[ \dfrac{|\nabla \varphi|^2}{2} + \dfrac{1}{2} \nabla \varphi \cdot \partial_t \mathbf{a} + \dfrac{1}{2} \partial_t \mathbf{a} \cdot \left( \nabla \varphi + \partial_t \mathbf{a} \right) \right] + \dfrac{1}{2\mu_0} | \nabla \times \mathbf{a} |^2 - \mathcal{L}_{inter} = \\
+  & := \Pi_{\varphi} \partial_t \varphi + \Pi_{a_i} \partial_{t} a_i - \mathcal{L} = \\
+  & = 0 - \varepsilon_0 \mathbf{e} \cdot \partial_t \mathbf{a} - \dfrac{\varepsilon_0}{2} |\mathbf{e}|^2 + \dfrac{1}{2 \mu_0} | \mathbf{b} |^2 - \mathcal{L}_{inter} = \\
+  & = - \varepsilon_0 \mathbf{e} \cdot \left( - \mathbf{e} - \nabla \varphi \right) - \dfrac{\varepsilon_0}{2} |\mathbf{e}|^2 + \dfrac{1}{2 \mu_0} | \mathbf{b} |^2 + \varphi\rho - \mathbf{a} \cdot \mathbf{j} = \\
+  & = \dfrac{\varepsilon_0}{2} | \mathbf{e} |^2 + \dfrac{1}{2 \mu_0} | \mathbf{b} |^2 + \nabla \cdot \left( \varepsilon_0 \varphi \mathbf{e} \right) - \varepsilon_0 \varphi \nabla \cdot \mathbf{e} + \varphi\rho - \mathbf{a} \cdot \mathbf{j} = \\
+  & = \dfrac{\varepsilon_0}{2} | \mathbf{e} |^2 + \dfrac{1}{2 \mu_0} | \mathbf{b} |^2 + \nabla \cdot \left( \varepsilon_0 \varphi \mathbf{e} \right) - \varphi \underbrace{\left( \varepsilon_0 \nabla \cdot \mathbf{e} - \rho \right)}_{=0} - \mathbf{a} \cdot \mathbf{j} = \\
+  & = \dfrac{\varepsilon_0}{2} | \mathbf{e} |^2 + \dfrac{1}{2 \mu_0} | \mathbf{b} |^2 + \nabla \cdot \left( \varepsilon_0 \varphi \mathbf{e} \right) - \mathbf{a} \cdot \mathbf{j} \ .
 \end{aligned}$$
--->
 
+```{dropdown} Terms with the spatial derivatives
+:open:
+
+$$\begin{aligned}
+  \partial_k \varphi \dfrac{\partial \mathcal{L}_{field}}{\partial (\partial_k \varphi)}
+  & = \partial_k \varphi \varepsilon_0 \left( \partial_k \varphi + \partial_t a_k \right) = \\
+  & = - \varepsilon_0 \nabla \varphi \cdot \mathbf{e} \\
+\end{aligned}$$
+
+$$\begin{aligned}
+  \partial_k a_i \dfrac{\partial \mathcal{L}_{field}}{\partial (\partial_k a_i)}
+  & = - \partial_k a_i \dfrac{1}{\mu_0} \left( \partial_k a_i - \partial_i a_k \right) = \\
+\end{aligned}$$
+
+
+```
 

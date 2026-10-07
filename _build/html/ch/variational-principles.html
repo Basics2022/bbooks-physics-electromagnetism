@@ -578,7 +578,62 @@ Details<div class="sd-summary-down docutils">
 <p>The last two contributions can defined as the Lagrangian function of the interaction between prescribed charge and current densities with the electromagnetic field</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{L}_{inter} = - \varphi \rho + \mathbf{a} \cdot \mathbf{j} \ .\]</div>
-<p>If charge and current densities are not prescribed, then the full variation of this contribution produces the continuous counterpart of the equations of motion for charges subject to Lorentz force,</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Equations of the electromagnetism from Lagrange equation<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{aligned}
+  \mathcal{L}_{field}(\varphi, \mathbf{a}, \partial_t \varphi, \partial_t \mathbf{a}, \partial_k \varphi, \partial_k \mathbf{a} )
+  &amp; := \varepsilon_0 \left[ \dfrac{|\nabla \varphi|^2}{2} + \nabla \varphi \cdot \partial_t \mathbf{a} + \dfrac{|\partial_t \mathbf{a}|^2}{2} \right] - \dfrac{1}{\mu_0} \dfrac{| \nabla \times \mathbf{a} |^2}{2} - \varphi \rho + \mathbf{a} \cdot \mathbf{j} \ . 
+\end{aligned}\]</div>
+<p class="sd-card-text">Lagrange equation w.r.t. <span class="math notranslate nohighlight">\(\varphi\)</span>, <span class="math notranslate nohighlight">\(\partial_t \varphi\)</span>, <span class="math notranslate nohighlight">\(\partial_k \varphi\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0
+  &amp; = \dfrac{\partial}{\partial t} \dfrac{\partial \mathcal{L}}{\partial (\partial_t \varphi)}
+  + \dfrac{\partial}{\partial k} \dfrac{\partial \mathcal{L}}{\partial (\partial_k \varphi)}
+  - \dfrac{\partial \mathcal{L}}{\partial \varphi} = \\
+  &amp; = 0 + \varepsilon_0 \partial_k \left( \partial_k \varphi + \partial_t a_k \right) + \rho = \\
+  &amp; = - \varepsilon_0 \nabla \cdot \mathbf{e} + \rho \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">Lagrange equations w.r.t. <span class="math notranslate nohighlight">\(a_i\)</span>, <span class="math notranslate nohighlight">\(\partial_t a_i\)</span>, <span class="math notranslate nohighlight">\(\partial_k a_i\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  0
+  &amp; = \dfrac{\partial}{\partial t} \dfrac{\partial \mathcal{L}}{\partial (\partial_t a_i)}
+  + \dfrac{\partial}{\partial k} \dfrac{\partial \mathcal{L}}{\partial (\partial_k a_i)}
+  - \dfrac{\partial \mathcal{L}}{\partial a_i} = \\
+  &amp; = \varepsilon_0 \partial_t \left( \partial_i \varphi + \partial_t a_i \right) + \dfrac{1}{\mu_0} \partial_k \left( \varepsilon_{kpi} b_p \right) - j_i = \\
+  &amp; = - \varepsilon_0 \partial_t e_i + \dfrac{1}{\mu_0} \varepsilon_{ikp} \partial_k b_p - j_i \ ,
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">or in vector form</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{0} = - \varepsilon_{0} \partial_t \mathbf{e} + \dfrac{1}{\mu_0} \nabla \times \mathbf{b} - \mathbf{j} \ .\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \dfrac{\partial}{\partial (\partial_u a_v)}|\nabla \times \mathbf{a}|^2
+  &amp; = \dfrac{\partial}{\partial (\partial_u a_v)} \left( \varepsilon_{ijk} \partial_j a_k \varepsilon_{ilm} \partial_l a_m \right) = \\
+  &amp; = \varepsilon_{ijk} \delta_{uj} \delta_{vk} \varepsilon_{ilm} \partial_l a_m + \varepsilon_{ijk} \partial_j a_k \varepsilon_{ilm} \delta_{ul} \delta_{vm} = \\
+  &amp; = \varepsilon_{iuv} \varepsilon_{ilm} \partial_l a_m + \varepsilon_{ijk} \partial_j a_k \varepsilon_{iuv} = \\
+  &amp; = ( \delta_{ul} \delta_{vm} - \delta_{um} \delta_{vl} ) \partial_l a_m + \left( \delta_{ju} \delta_{kv} - \delta_{jv} \delta_{ku} \right) \partial_j a_k = \\
+  &amp; = \partial_u a_v - \partial_v a_u + \partial_u a_v - \partial_v a_u = \\
+  &amp; = 2 \left( \partial_u a_v - \partial_v a_u \right) = \\
+  &amp; = 2 \varepsilon_{upv} b_p \ .
+\end{aligned}\end{split}\]</div>
+</div>
+</details></div>
+</details><p><strong>Charged-field Lagrangian function.</strong> If charge and current densities are not prescribed, then the full variation of this contribution produces the continuous counterpart of the equations of motion for charges subject to Lorentz force,</p>
 <div class="math notranslate nohighlight">
 \[m D_t \mathbf{u} = \rho \left( \mathbf{e} - \mathbf{b} \times \mathbf{u} \right) \ ,\]</div>
 <p>with <span class="math notranslate nohighlight">\(m\)</span> the charge mass density, and <span class="math notranslate nohighlight">\(\mathbf{u}(\mathbf{r},t)\)</span> the velocity field of the continuous charge distribution, and <span class="math notranslate nohighlight">\(D_t = \partial_t + \mathbf{u} \cdot \nabla\)</span> the total derivative.</p>
@@ -613,16 +668,37 @@ Details<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\varepsilon_{ijk} b_j = \varepsilon_{ijk} \varepsilon_{jlm} \partial_l a_m = \left( \delta_{kl} \delta_{im} - \delta_{km} \delta_{il} \right) \partial_l a_m = \partial_k a_i - \partial_i a_k \ .\]</div>
 </div>
-</details><p><strong>Hamiltonian.</strong>
-<em>uncomment</em></p>
-<!--
-$$\begin{aligned}
+</details><p><strong>Hamiltonian.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
   \mathcal{H}
-  & = \Pi_{\varphi} \partial_t \varphi + \Pi_{a_i} \partial_{t} a_i - \mathcal{L} = \\
-  & = - \varepsilon_0 \mathbf{e} \cdot \partial_t \mathbf{a} - \varepsilon_0 \left[ \dfrac{|\nabla \varphi|^2}{2} + \dfrac{1}{2} \nabla \varphi \cdot \partial_t \mathbf{a} + \dfrac{1}{2} \partial_t \mathbf{a} \cdot \left( \nabla \varphi + \partial_t \mathbf{a} \right) \right] + \dfrac{1}{2\mu_0} | \nabla \times \mathbf{a} |^2 - \mathcal{L}_{inter} = \\
-\end{aligned}$$
--->
+  &amp; := \Pi_{\varphi} \partial_t \varphi + \Pi_{a_i} \partial_{t} a_i - \mathcal{L} = \\
+  &amp; = 0 - \varepsilon_0 \mathbf{e} \cdot \partial_t \mathbf{a} - \dfrac{\varepsilon_0}{2} |\mathbf{e}|^2 + \dfrac{1}{2 \mu_0} | \mathbf{b} |^2 - \mathcal{L}_{inter} = \\
+  &amp; = - \varepsilon_0 \mathbf{e} \cdot \left( - \mathbf{e} - \nabla \varphi \right) - \dfrac{\varepsilon_0}{2} |\mathbf{e}|^2 + \dfrac{1}{2 \mu_0} | \mathbf{b} |^2 + \varphi\rho - \mathbf{a} \cdot \mathbf{j} = \\
+  &amp; = \dfrac{\varepsilon_0}{2} | \mathbf{e} |^2 + \dfrac{1}{2 \mu_0} | \mathbf{b} |^2 + \nabla \cdot \left( \varepsilon_0 \varphi \mathbf{e} \right) - \varepsilon_0 \varphi \nabla \cdot \mathbf{e} + \varphi\rho - \mathbf{a} \cdot \mathbf{j} = \\
+  &amp; = \dfrac{\varepsilon_0}{2} | \mathbf{e} |^2 + \dfrac{1}{2 \mu_0} | \mathbf{b} |^2 + \nabla \cdot \left( \varepsilon_0 \varphi \mathbf{e} \right) - \varphi \underbrace{\left( \varepsilon_0 \nabla \cdot \mathbf{e} - \rho \right)}_{=0} - \mathbf{a} \cdot \mathbf{j} = \\
+  &amp; = \dfrac{\varepsilon_0}{2} | \mathbf{e} |^2 + \dfrac{1}{2 \mu_0} | \mathbf{b} |^2 + \nabla \cdot \left( \varepsilon_0 \varphi \mathbf{e} \right) - \mathbf{a} \cdot \mathbf{j} \ .
+\end{aligned}\end{split}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Terms with the spatial derivatives<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial_k \varphi \dfrac{\partial \mathcal{L}_{field}}{\partial (\partial_k \varphi)}
+  &amp; = \partial_k \varphi \varepsilon_0 \left( \partial_k \varphi + \partial_t a_k \right) = \\
+  &amp; = - \varepsilon_0 \nabla \varphi \cdot \mathbf{e} \\
+\end{aligned}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \partial_k a_i \dfrac{\partial \mathcal{L}_{field}}{\partial (\partial_k a_i)}
+  &amp; = - \partial_k a_i \dfrac{1}{\mu_0} \left( \partial_k a_i - \partial_i a_k \right) = \\
+\end{aligned}\end{split}\]</div>
 </div>
+</details></div>
 </div>
 
     <script type="text/x-thebe-config">
