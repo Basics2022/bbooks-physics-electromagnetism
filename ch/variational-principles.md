@@ -161,8 +161,8 @@ The content of the curly bracket can be defined as the field Lagrangian function
 
 $$\begin{aligned}
   \mathcal{L}_{field}(\varphi, \mathbf{a}, \partial_t \varphi, \partial_t \mathbf{a}, \partial_k \varphi, \partial_k \mathbf{a} )
-  & := \varepsilon_0 \left[ \dfrac{|\nabla \varphi|^2}{2} + \nabla \varphi \cdot \partial_t \mathbf{a} + \dfrac{|\partial_t \mathbf{a}|^2}{2} \right] - \dfrac{1}{\mu_0} | \nabla \times \mathbf{a} |^2 = \\ 
-  & = \varepsilon_0 | \mathbf{e} |^2 - \dfrac{1}{\mu_0} | \mathbf{b} |^2 \ .
+  & := \varepsilon_0 \left[ \dfrac{|\nabla \varphi|^2}{2} + \nabla \varphi \cdot \partial_t \mathbf{a} + \dfrac{|\partial_t \mathbf{a}|^2}{2} \right] - \dfrac{1}{\mu_0} \dfrac{| \nabla \times \mathbf{a} |^2}{2} = \\ 
+  & = \dfrac{1}{2} \left[ \varepsilon_0 | \mathbf{e} |^2 - \dfrac{1}{\mu_0} | \mathbf{b} |^2 \right] \ .
 \end{aligned}$$
 
 The last two contributions can defined as the Lagrangian function of the interaction between prescribed charge and current densities with the electromagnetic field
@@ -175,7 +175,44 @@ $$m D_t \mathbf{u} = \rho \left( \mathbf{e} - \mathbf{b} \times \mathbf{u} \righ
 
 with $m$ the charge mass density, and $\mathbf{u}(\mathbf{r},t)$ the velocity field of the continuous charge distribution, and $D_t = \partial_t + \mathbf{u} \cdot \nabla$ the total derivative.
 
+**Generalized momentum.** 
 
+$$\begin{aligned}
+  \Pi_{\varphi} := \dfrac{\partial \mathcal{L}_{field}}{\partial (\partial_t \varphi)} & = 0 \\
+  \dfrac{\partial \mathcal{L}_{field}}{\partial (\partial_k \varphi)} & = \varepsilon_0 \left( \partial_k \varphi + \partial_t a_k \right) = - \varepsilon_0 \left\{ \mathbf{e} \right\}_k \\
+  \Pi_{a_i} := \dfrac{\partial \mathcal{L}_{field}}{\partial (\partial_t a_i)} & = \varepsilon_0 \left( \partial_i \varphi + \partial_t a_i \right) = - \varepsilon_0 \left\{ \mathbf{e} \right\}_i \\
+  \dfrac{\partial \mathcal{L}_{field}}{\partial (\partial_k a_i)} & = - \dfrac{1}{\mu_0} \left( \partial_k a_i - \partial_i a_k \right) = - \dfrac{1}{\mu_0} \left\{ \mathbf{b}_{\times} \right\}_{ik} \ .
+\end{aligned}$$
 
+```{dropdown} Details
+
+$$\begin{aligned}
+  2 \dfrac{\partial \mathcal{L}}{\partial (\partial_k a_i)}
+  & = - \dfrac{1}{\mu_0} \dfrac{\partial}{\partial (\partial_k a_i)} \left( \varepsilon_{abc} \partial_b a_c \right) \left( \varepsilon_{ade} \partial_d a_e \right) = \\
+  & = - \dfrac{1}{\mu_0} \left( \varepsilon_{abc} \delta_{kb} \delta_{ic} \varepsilon_{ade} \partial_d a_e + \varepsilon_{abc} \partial_b a_c \varepsilon_{ade} \delta_{dk} \delta_{ei}  \right) = \\
+  & = - \dfrac{1}{\mu_0} \left( \varepsilon_{aki} \varepsilon_{ade} \partial_d a_e + \varepsilon_{abc} \partial_b a_c \varepsilon_{aki} \right) = \\
+  & = - \dfrac{1}{\mu_0} \left[ \left( \delta_{kd} \delta_{ie} - \delta_{ke} \delta_{id} \right) \partial_d a_e + \left( \delta_{bk} \delta_{ci} - \delta_{bi} \delta_{ck} \right) \partial_b a_c  \right] = \\
+  & = - \dfrac{1}{\mu_0} \left[ \partial_k a_i - \partial_i a_k + \partial_k a_i - \partial_i a_k \right] = \\
+  & = - \dfrac{2}{\mu_0} \left[ \partial_k a_i - \partial_i a_k \right] = \\
+  & = - \dfrac{2}{\mu_0} \varepsilon_{ijk} b_j = \\
+  & = - \dfrac{2}{\mu_0} \left\{ \mathbf{b}_{\times} \right\}_{ik} \ .
+\end{aligned}$$
+
+as
+
+$$\varepsilon_{ijk} b_j = \varepsilon_{ijk} \varepsilon_{jlm} \partial_l a_m = \left( \delta_{kl} \delta_{im} - \delta_{km} \delta_{il} \right) \partial_l a_m = \partial_k a_i - \partial_i a_k \ .$$
+
+```
+
+**Hamiltonian.**
+*uncomment*
+
+<!--
+$$\begin{aligned}
+  \mathcal{H}
+  & = \Pi_{\varphi} \partial_t \varphi + \Pi_{a_i} \partial_{t} a_i - \mathcal{L} = \\
+  & = - \varepsilon_0 \mathbf{e} \cdot \partial_t \mathbf{a} - \varepsilon_0 \left[ \dfrac{|\nabla \varphi|^2}{2} + \dfrac{1}{2} \nabla \varphi \cdot \partial_t \mathbf{a} + \dfrac{1}{2} \partial_t \mathbf{a} \cdot \left( \nabla \varphi + \partial_t \mathbf{a} \right) \right] + \dfrac{1}{2\mu_0} | \nabla \times \mathbf{a} |^2 - \mathcal{L}_{inter} = \\
+\end{aligned}$$
+-->
 
 

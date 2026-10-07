@@ -572,8 +572,8 @@ Details<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \mathcal{L}_{field}(\varphi, \mathbf{a}, \partial_t \varphi, \partial_t \mathbf{a}, \partial_k \varphi, \partial_k \mathbf{a} )
-  &amp; := \varepsilon_0 \left[ \dfrac{|\nabla \varphi|^2}{2} + \nabla \varphi \cdot \partial_t \mathbf{a} + \dfrac{|\partial_t \mathbf{a}|^2}{2} \right] - \dfrac{1}{\mu_0} | \nabla \times \mathbf{a} |^2 = \\ 
-  &amp; = \varepsilon_0 | \mathbf{e} |^2 - \dfrac{1}{\mu_0} | \mathbf{b} |^2 \ .
+  &amp; := \varepsilon_0 \left[ \dfrac{|\nabla \varphi|^2}{2} + \nabla \varphi \cdot \partial_t \mathbf{a} + \dfrac{|\partial_t \mathbf{a}|^2}{2} \right] - \dfrac{1}{\mu_0} \dfrac{| \nabla \times \mathbf{a} |^2}{2} = \\ 
+  &amp; = \dfrac{1}{2} \left[ \varepsilon_0 | \mathbf{e} |^2 - \dfrac{1}{\mu_0} | \mathbf{b} |^2 \right] \ .
 \end{aligned}\end{split}\]</div>
 <p>The last two contributions can defined as the Lagrangian function of the interaction between prescribed charge and current densities with the electromagnetic field</p>
 <div class="math notranslate nohighlight">
@@ -582,6 +582,46 @@ Details<div class="sd-summary-down docutils">
 <div class="math notranslate nohighlight">
 \[m D_t \mathbf{u} = \rho \left( \mathbf{e} - \mathbf{b} \times \mathbf{u} \right) \ ,\]</div>
 <p>with <span class="math notranslate nohighlight">\(m\)</span> the charge mass density, and <span class="math notranslate nohighlight">\(\mathbf{u}(\mathbf{r},t)\)</span> the velocity field of the continuous charge distribution, and <span class="math notranslate nohighlight">\(D_t = \partial_t + \mathbf{u} \cdot \nabla\)</span> the total derivative.</p>
+<p><strong>Generalized momentum.</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  \Pi_{\varphi} := \dfrac{\partial \mathcal{L}_{field}}{\partial (\partial_t \varphi)} &amp; = 0 \\
+  \dfrac{\partial \mathcal{L}_{field}}{\partial (\partial_k \varphi)} &amp; = \varepsilon_0 \left( \partial_k \varphi + \partial_t a_k \right) = - \varepsilon_0 \left\{ \mathbf{e} \right\}_k \\
+  \Pi_{a_i} := \dfrac{\partial \mathcal{L}_{field}}{\partial (\partial_t a_i)} &amp; = \varepsilon_0 \left( \partial_i \varphi + \partial_t a_i \right) = - \varepsilon_0 \left\{ \mathbf{e} \right\}_i \\
+  \dfrac{\partial \mathcal{L}_{field}}{\partial (\partial_k a_i)} &amp; = - \dfrac{1}{\mu_0} \left( \partial_k a_i - \partial_i a_k \right) = - \dfrac{1}{\mu_0} \left\{ \mathbf{b}_{\times} \right\}_{ik} \ .
+\end{aligned}\end{split}\]</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Details<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+  2 \dfrac{\partial \mathcal{L}}{\partial (\partial_k a_i)}
+  &amp; = - \dfrac{1}{\mu_0} \dfrac{\partial}{\partial (\partial_k a_i)} \left( \varepsilon_{abc} \partial_b a_c \right) \left( \varepsilon_{ade} \partial_d a_e \right) = \\
+  &amp; = - \dfrac{1}{\mu_0} \left( \varepsilon_{abc} \delta_{kb} \delta_{ic} \varepsilon_{ade} \partial_d a_e + \varepsilon_{abc} \partial_b a_c \varepsilon_{ade} \delta_{dk} \delta_{ei}  \right) = \\
+  &amp; = - \dfrac{1}{\mu_0} \left( \varepsilon_{aki} \varepsilon_{ade} \partial_d a_e + \varepsilon_{abc} \partial_b a_c \varepsilon_{aki} \right) = \\
+  &amp; = - \dfrac{1}{\mu_0} \left[ \left( \delta_{kd} \delta_{ie} - \delta_{ke} \delta_{id} \right) \partial_d a_e + \left( \delta_{bk} \delta_{ci} - \delta_{bi} \delta_{ck} \right) \partial_b a_c  \right] = \\
+  &amp; = - \dfrac{1}{\mu_0} \left[ \partial_k a_i - \partial_i a_k + \partial_k a_i - \partial_i a_k \right] = \\
+  &amp; = - \dfrac{2}{\mu_0} \left[ \partial_k a_i - \partial_i a_k \right] = \\
+  &amp; = - \dfrac{2}{\mu_0} \varepsilon_{ijk} b_j = \\
+  &amp; = - \dfrac{2}{\mu_0} \left\{ \mathbf{b}_{\times} \right\}_{ik} \ .
+\end{aligned}\end{split}\]</div>
+<p class="sd-card-text">as</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon_{ijk} b_j = \varepsilon_{ijk} \varepsilon_{jlm} \partial_l a_m = \left( \delta_{kl} \delta_{im} - \delta_{km} \delta_{il} \right) \partial_l a_m = \partial_k a_i - \partial_i a_k \ .\]</div>
+</div>
+</details><p><strong>Hamiltonian.</strong>
+<em>uncomment</em></p>
+<!--
+$$\begin{aligned}
+  \mathcal{H}
+  & = \Pi_{\varphi} \partial_t \varphi + \Pi_{a_i} \partial_{t} a_i - \mathcal{L} = \\
+  & = - \varepsilon_0 \mathbf{e} \cdot \partial_t \mathbf{a} - \varepsilon_0 \left[ \dfrac{|\nabla \varphi|^2}{2} + \dfrac{1}{2} \nabla \varphi \cdot \partial_t \mathbf{a} + \dfrac{1}{2} \partial_t \mathbf{a} \cdot \left( \nabla \varphi + \partial_t \mathbf{a} \right) \right] + \dfrac{1}{2\mu_0} | \nabla \times \mathbf{a} |^2 - \mathcal{L}_{inter} = \\
+\end{aligned}$$
+-->
 </div>
 </div>
 
