@@ -75,15 +75,6 @@ const thebe_selector_output = ".output, .cell_output"
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X6MNXBVGKF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-X6MNXBVGKF');
-</script>
-
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -496,11 +487,26 @@ Proof<div class="sd-summary-down docutils">
 </div>
 <div class="section" id="electric-field-and-magnetic-field">
 <span id="classical-electromagnetism-waves-wave-equation-coulomb-em-field"></span><h2><span class="section-number">3.3.2. </span>Electric Field and Magnetic Field<a class="headerlink" href="#electric-field-and-magnetic-field" title="Permalink to this heading">#</a></h2>
+<p>The wave equations of the electromagnetic field are independent from the choice of the gauge.</p>
 <div class="section" id="electric-field">
 <span id="classical-electromagnetism-waves-wave-equation-coulomb-em-field-e"></span><h3><span class="section-number">3.3.2.1. </span>Electric field<a class="headerlink" href="#electric-field" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \square \vec{e}
+ &amp; = \square \left( - \nabla \varphi - \partial_t \vec{a} \right) = \\
+ &amp; = - \nabla \square \varphi - \partial_t \nabla \vec{a} = \\
+\end{aligned}\end{split}\]</div>
 </div>
 <div class="section" id="magnetic-field">
 <span id="classical-electromagnetism-waves-wave-equation-coulomb-em-field-b"></span><h3><span class="section-number">3.3.2.2. </span>Magnetic field<a class="headerlink" href="#magnetic-field" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ \square \vec{b}
+ &amp; = \square \left( \nabla \times \vec{a} \right) = \\
+ &amp; = \mu \nabla \times \vec{j}_{\perp} = \\ 
+ &amp; = \mu \nabla \times \vec{j} \ ,
+\end{aligned}\end{split}\]</div>
+<p>as <span class="math notranslate nohighlight">\(\nabla \times \vec{j}_{\parallel} = \vec{0}\)</span>.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="todo-poisson"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>

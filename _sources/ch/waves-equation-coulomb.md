@@ -76,9 +76,26 @@ It follows $\vec{j}_{\parallel} = \varepsilon \partial_t \nabla \varphi + \nabla
 (classical-electromagnetism:waves:wave-equation-coulomb:em-field)=
 ## Electric Field and Magnetic Field
 
+The wave equations of the electromagnetic field are independent from the choice of the gauge.
+
 (classical-electromagnetism:waves:wave-equation-coulomb:em-field:e)=
 ### Electric field
+
+$$\begin{aligned}
+ \square \vec{e}
+ & = \square \left( - \nabla \varphi - \partial_t \vec{a} \right) = \\
+ & = - \nabla \square \varphi - \partial_t \nabla \vec{a} = \\
+\end{aligned}$$
+
 
 (classical-electromagnetism:waves:wave-equation-coulomb:em-field:b)=
 ### Magnetic field
 
+$$\begin{aligned}
+ \square \vec{b}
+ & = \square \left( \nabla \times \vec{a} \right) = \\
+ & = \mu \nabla \times \vec{j}_{\perp} = \\ 
+ & = \mu \nabla \times \vec{j} \ ,
+\end{aligned}$$
+
+as $\nabla \times \vec{j}_{\parallel} = \vec{0}$.
