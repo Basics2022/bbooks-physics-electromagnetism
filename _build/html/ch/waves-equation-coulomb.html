@@ -411,11 +411,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-potential">3.3.1.2. Vector potential</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-field-and-magnetic-field">3.3.2. Electric Field and Magnetic Field</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-field">3.3.2.1. Electric field</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetic-field">3.3.2.2. Magnetic field</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-field-and-magnetic-field">3.3.2. Electric Field and Magnetic Field</a></li>
 </ul>
             </nav>
         </div>
@@ -462,7 +458,7 @@ document.write(`
 <p>Using Coulomb gauge <span class="math notranslate nohighlight">\(\nabla \cdot \vec{a} = 0\)</span>, a wave eqaution for <span class="math notranslate nohighlight">\(\vec{a}\)</span> follows</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{c^2} \partial_{tt} \vec{a} - \nabla^2 \vec{a} = \mu \vec{j} - \frac{1}{c^2} \partial_t \nabla \varphi \ .\]</div>
-<p>The last term can be written as a function of the irrotational part of the current density, using expresion <a class="reference internal" href="#equation-eq-wave-coulomb-j-irrot">(3.6)</a>, so that the wave equation becomes</p>
+<p>The last term can be written as a function of the irrotational part of the current density, using expresion <a class="reference internal" href="#equation-eq-wave-coulomb-j-irrot">(3.8)</a>, so that the wave equation becomes</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{c^2} \partial_{tt} \vec{a} - \nabla^2 \vec{a} = \mu \vec{j}_{\perp} \ ,\]</div>
 <p>as <span class="math notranslate nohighlight">\(\mu\vec{j} - \tfrac{1}{c^2}\partial_t \nabla \varphi = \mu\vec{j} - \tfrac{1}{\varepsilon c^2} \vec{j}_{\parallel} = \mu \left( \vec{j} - \vec{j}_{\parallel} \right) = \mu \vec{j}_{\perp}\)</span>.</p>
@@ -475,7 +471,7 @@ Helmholtz decomposition of the charge current density<div class="sd-summary-down
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Let <span class="math notranslate nohighlight">\(\vec{j} = \vec{j}_{\parallel} + \vec{j}_{\perp}\)</span>, with <span class="math notranslate nohighlight">\(\vec{j}_{\parallel}\)</span> irrotational (<span class="math notranslate nohighlight">\(\nabla \times \vec{j}_{\parallel} = \vec{0}\)</span>) and <span class="math notranslate nohighlight">\(\vec{j}_{\perp}\)</span> solenoidal (<span class="math notranslate nohighlight">\(\nabla \cdot \vec{j}_{\perp} = 0\)</span>). The irrotational part reads</p>
 <div class="math notranslate nohighlight" id="equation-eq-wave-coulomb-j-irrot">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-eq-wave-coulomb-j-irrot" title="Permalink to this equation">#</a></span>\[\vec{j}_{\parallel} = \varepsilon \partial_t \nabla \varphi \ .\]</div>
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-eq-wave-coulomb-j-irrot" title="Permalink to this equation">#</a></span>\[\vec{j}_{\parallel} = \varepsilon \partial_t \nabla \varphi \ .\]</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Proof<div class="sd-summary-down docutils">
@@ -496,18 +492,49 @@ Proof<div class="sd-summary-down docutils">
 </div>
 <div class="section" id="electric-field-and-magnetic-field">
 <span id="classical-electromagnetism-waves-wave-equation-coulomb-em-field"></span><h2><span class="section-number">3.3.2. </span>Electric Field and Magnetic Field<a class="headerlink" href="#electric-field-and-magnetic-field" title="Permalink to this heading">#</a></h2>
-<div class="section" id="electric-field">
-<span id="classical-electromagnetism-waves-wave-equation-coulomb-em-field-e"></span><h3><span class="section-number">3.3.2.1. </span>Electric field<a class="headerlink" href="#electric-field" title="Permalink to this heading">#</a></h3>
+<p>The wave equations of the electromagnetic field are independent from the choice of the gauge. The wave equations for the electromagnetic field derived in this section starting from the PDE for the EM potentials with Coulomb gauge are the same <a class="reference internal" href="waves-equation.html#classical-electromagnetism-waves-wave-equation-em-field"><span class="std std-ref">wave equations derived using Lorentz gauge</span></a>, namely <a class="reference internal" href="waves-equation.html#equation-eq-wave-equation-em-field-e">(3.6)</a>, <a class="reference internal" href="waves-equation.html#equation-eq-wave-equation-em-field-b">(3.7)</a>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Electric field<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="math notranslate nohighlight" id="equation-eq-wave-equation-coulomb-em-field-e">
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-eq-wave-equation-coulomb-em-field-e" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{aligned}
+ \square \vec{e}
+ &amp; = \square \left( - \nabla \varphi - \partial_t \vec{a} \right) = \\
+ &amp; = - \nabla \square \varphi - \partial_t \square \vec{a} = \\
+ &amp; = - \nabla \left( \frac{1}{c^2} \partial_{tt} \varphi - \nabla^2 \varphi \right) - \partial_t \square \vec{a} = \\
+ &amp; = - \nabla \left( \frac{1}{c^2} \partial_{tt} \varphi + \frac{\rho}{\varepsilon} \right) - \partial_t \left( \mu \vec{j}_{\perp} \right) = \\
+ &amp; = - \frac{\nabla \rho}{\varepsilon} - \partial_t \left( \frac{1}{c^2} \nabla \partial_t \varphi + \mu \vec{j}_{\perp} \right) = \\
+ &amp; = - \frac{\nabla \rho}{\varepsilon} - \partial_t \left( \frac{1}{ \varepsilon c^2}  \vec{j}_{\parallel} + \mu \vec{j}_{\perp} \right) = \\
+ &amp; = - \frac{\nabla \rho}{\varepsilon} - \mu \partial_t \vec{j} \ .
+\end{aligned}\end{split}\]</div>
 </div>
-<div class="section" id="magnetic-field">
-<span id="classical-electromagnetism-waves-wave-equation-coulomb-em-field-b"></span><h3><span class="section-number">3.3.2.2. </span>Magnetic field<a class="headerlink" href="#magnetic-field" title="Permalink to this heading">#</a></h3>
-<hr class="footnotes docutils" />
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Magnetic field<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The appliction of the wave operator <span class="math notranslate nohighlight">\(\square\)</span> to the magnetic field <span class="math notranslate nohighlight">\(\vec{b}(\vec{r},t)\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eq-wave-equation-coulomb-em-field-b">
+<span class="eqno">(3.10)<a class="headerlink" href="#equation-eq-wave-equation-coulomb-em-field-b" title="Permalink to this equation">#</a></span>\[\begin{aligned}
+ \square \vec{b}
+ &amp; = \square \left( \nabla \times \vec{a} \right) 
+   = \mu \nabla \times \vec{j}_{\perp} 
+   = \mu \nabla \times \vec{j} \ ,
+\end{aligned}\]</div>
+<p class="sd-card-text">as <span class="math notranslate nohighlight">\(\nabla \times \vec{j}_{\parallel} = \vec{0}\)</span>.</p>
+</div>
+</details><hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="todo-poisson"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Add a discussion of these aspects of Poisson equation in Math book. This also helps the discussion of incompressible and compressible fluid dynamics.</p>
 </dd>
 </dl>
-</div>
 </div>
 </div>
 
@@ -579,11 +606,7 @@ Proof<div class="sd-summary-down docutils">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-potential">3.3.1.2. Vector potential</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-field-and-magnetic-field">3.3.2. Electric Field and Magnetic Field</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-field">3.3.2.1. Electric field</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#magnetic-field">3.3.2.2. Magnetic field</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-field-and-magnetic-field">3.3.2. Electric Field and Magnetic Field</a></li>
 </ul>
   </nav></div>
 

@@ -76,9 +76,36 @@ It follows $\vec{j}_{\parallel} = \varepsilon \partial_t \nabla \varphi + \nabla
 (classical-electromagnetism:waves:wave-equation-coulomb:em-field)=
 ## Electric Field and Magnetic Field
 
-(classical-electromagnetism:waves:wave-equation-coulomb:em-field:e)=
-### Electric field
+The wave equations of the electromagnetic field are independent from the choice of the gauge. The wave equations for the electromagnetic field derived in this section starting from the PDE for the EM potentials with Coulomb gauge are the same [wave equations derived using Lorentz gauge](classical-electromagnetism:waves:wave-equation:em-field), namely {eq}`eq:wave-equation:em-field:e`, {eq}`eq:wave-equation:em-field:b`.
 
-(classical-electromagnetism:waves:wave-equation-coulomb:em-field:b)=
-### Magnetic field
+```{dropdown} Electric field
+:open:
 
+$$\begin{aligned}
+ \square \vec{e}
+ & = \square \left( - \nabla \varphi - \partial_t \vec{a} \right) = \\
+ & = - \nabla \square \varphi - \partial_t \square \vec{a} = \\
+ & = - \nabla \left( \frac{1}{c^2} \partial_{tt} \varphi - \nabla^2 \varphi \right) - \partial_t \square \vec{a} = \\
+ & = - \nabla \left( \frac{1}{c^2} \partial_{tt} \varphi + \frac{\rho}{\varepsilon} \right) - \partial_t \left( \mu \vec{j}_{\perp} \right) = \\
+ & = - \frac{\nabla \rho}{\varepsilon} - \partial_t \left( \frac{1}{c^2} \nabla \partial_t \varphi + \mu \vec{j}_{\perp} \right) = \\
+ & = - \frac{\nabla \rho}{\varepsilon} - \partial_t \left( \frac{1}{ \varepsilon c^2}  \vec{j}_{\parallel} + \mu \vec{j}_{\perp} \right) = \\
+ & = - \frac{\nabla \rho}{\varepsilon} - \mu \partial_t \vec{j} \ .
+\end{aligned}$$ (eq:wave-equation-coulomb:em-field:e)
+
+```
+
+```{dropdown} Magnetic field
+:open:
+
+The appliction of the wave operator $\square$ to the magnetic field $\vec{b}(\vec{r},t)$,
+
+$$\begin{aligned}
+ \square \vec{b}
+ & = \square \left( \nabla \times \vec{a} \right) 
+   = \mu \nabla \times \vec{j}_{\perp} 
+   = \mu \nabla \times \vec{j} \ ,
+\end{aligned}$$ (eq:wave-equation-coulomb:em-field:b)
+
+as $\nabla \times \vec{j}_{\parallel} = \vec{0}$.
+
+```

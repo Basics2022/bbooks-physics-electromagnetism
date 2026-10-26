@@ -101,7 +101,7 @@ $$\begin{aligned}
 & =\square ( -\nabla \varphi - \partial_t \vec{a}) = && (2) \\
 & = - \nabla \square \varphi - \partial_t \square \vec{a} = && (3) \\
 & = - \nabla \dfrac{\rho}{\varepsilon} - \mu \partial_t \vec{j}  \ .
-\end{aligned}$$
+\end{aligned}$$ (eq:wave-equation:em-field:e)
 
 (classical-electromagnetism:waves:wave-equation:em-field:b)=
 ### Magnetic field
@@ -111,5 +111,5 @@ $$\begin{aligned}
  & = \square \nabla \times \vec{a} = && (2) \\
  & = \nabla \times \square \vec{a} = && (3) \\
  & = \mu \nabla \times \vec{j}
-\end{aligned}$$
+\end{aligned}$$ (eq:wave-equation:em-field:b)
 
