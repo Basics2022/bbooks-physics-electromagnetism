@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3.3. Plane Electromagnetic Waves &#8212; Classical Electromagnetism and Principles of Electrical Engineering</title>
+    <title>3.4. Plane Electromagnetic Waves &#8212; Classical Electromagnetism and Principles of Electrical Engineering</title>
   
   
   
@@ -71,7 +71,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. Force, moments, energy and momentum in electromagnetism" href="energy.html" />
-    <link rel="prev" title="3.2. Wave Equations in Electromagnetism" href="waves-equation.html" />
+    <link rel="prev" title="3.3. Wave Equations in Electromagnetism - using Coulomb gauge" href="waves-equation-coulomb.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -189,8 +189,9 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="waves.html">3. Electromagnetic waves</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="potentials.html">3.1. Electromagnetic Potentials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">3.2. Wave Equations in Electromagnetism</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.3. Plane Electromagnetic Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">3.2. Wave Equations in Electromagnetism - using Lorentz gauge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-equation-coulomb.html">3.3. Wave Equations in Electromagnetism - using Coulomb gauge</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.4. Plane Electromagnetic Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="energy.html">4. Force, moments, energy and momentum in electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -251,10 +252,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="green-function.html">12. Green’s function method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numerical-methods.html">13. Metodi numerici</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transformed-domain.html">14. Electromagnetism in transformed domain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variational-principles.html">15. Variational principles in electromagnetism</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="appendix-list.html">14. todo: appendices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix-list.html">16. todo: appendices</a></li>
 </ul>
 
     </div>
@@ -403,7 +406,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#snell-s-law-at-an-interface">3.3.1. Snell’s Law at an Interface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#snell-s-law-at-an-interface">3.4.1. Snell’s Law at an Interface</a></li>
 </ul>
             </nav>
         </div>
@@ -423,7 +426,7 @@ document.write(`
 ```
 -->
 <div class="tex2jax_ignore mathjax_ignore section" id="plane-electromagnetic-waves">
-<span id="classical-electromagnetism-waves-plane-waves"></span><h1><span class="section-number">3.3. </span>Plane Electromagnetic Waves<a class="headerlink" href="#plane-electromagnetic-waves" title="Permalink to this heading">#</a></h1>
+<span id="classical-electromagnetism-waves-plane-waves"></span><h1><span class="section-number">3.4. </span>Plane Electromagnetic Waves<a class="headerlink" href="#plane-electromagnetic-waves" title="Permalink to this heading">#</a></h1>
 <p>Harmonic decomposition of the electromagnetic field. The EM field can be written as the superposition of plane waves (Fourier decomposition)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -507,7 +510,7 @@ Proof using vector algebra identity<div class="sd-summary-down docutils">
 \[c = \dfrac{\omega}{|\mathbf{k}|} \ .\]</div>
 </div>
 </details><div class="section" id="snell-s-law-at-an-interface">
-<span id="classical-electromagnetism-waves-plane-waves-snell"></span><h2><span class="section-number">3.3.1. </span>Snell’s Law at an Interface<a class="headerlink" href="#snell-s-law-at-an-interface" title="Permalink to this heading">#</a></h2>
+<span id="classical-electromagnetism-waves-plane-waves-snell"></span><h2><span class="section-number">3.4.1. </span>Snell’s Law at an Interface<a class="headerlink" href="#snell-s-law-at-an-interface" title="Permalink to this heading">#</a></h2>
 <p>Snell’s law is derived here assuming isotropic linear media, so that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
@@ -778,12 +781,12 @@ Proof of the power balance, for P-polarization<div class="sd-summary-down docuti
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="waves-equation.html"
+       href="waves-equation-coulomb.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.2. </span>Wave Equations in Electromagnetism</p>
+        <p class="prev-next-title"><span class="section-number">3.3. </span>Wave Equations in Electromagnetism - using Coulomb gauge</p>
       </div>
     </a>
     <a class="right-next"
@@ -810,7 +813,7 @@ Proof of the power balance, for P-polarization<div class="sd-summary-down docuti
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#snell-s-law-at-an-interface">3.3.1. Snell’s Law at an Interface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#snell-s-law-at-an-interface">3.4.1. Snell’s Law at an Interface</a></li>
 </ul>
   </nav></div>
 

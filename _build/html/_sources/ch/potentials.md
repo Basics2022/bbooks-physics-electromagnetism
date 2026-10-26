@@ -11,6 +11,7 @@
 
 It is possible to demonstrate that the system of Maxwell's equations and the charge continuity equation is overdetermined. Specifically, it can be shown that, given the distribution of charge and current density—considered as the generating causes of the electric field—and the constitutive laws of the material, four unknowns are sufficient to define the six unknowns (three components for two vector fields) of the problem. Therefore, the problem can be formulated in terms of a scalar potential $\varphi$ and a vector potential $\vec{a}$, along with a gauge condition that eliminates the remaining two arbitrary factors (irrelevant for the calculation of physical fields).
 
+(classical-electromagnetism:potentials:vector-scalar)=
 ## Vector Potential and Scalar Potential
 
 Starting from Maxwell's equations, the potentials of the electromagnetic field can be defined. Using Gauss's law for the magnetic field, the vector potential $\vec{a}(\vec{r},t)$ can be introduced,
@@ -28,6 +29,7 @@ $$\begin{aligned}
  \vec{b} & = \nabla \times \vec{a} && (b) \\
 \end{aligned}$$ (eq:potentials)
 
+(classical-electromagnetism:potentials:gauge)=
 ## Gauge Conditions
 
 The potentials are defined up to a gauge condition, an additional condition that eliminates any arbitrariness in the definition. For example, the vector potential is defined up to the gradient of a scalar function, since $\nabla \times \nabla f \equiv \vec{0}$, and thus the potential $\tilde{\vec{a}} = \vec{a} + \nabla f$ produces the same magnetic field $\vec{b}$
@@ -40,6 +42,6 @@ $$\nabla \cdot \vec{a} + \frac{1}{c^2} \partial_t \varphi = 0$$ (eq:potential:ga
 
 **Coulomb Gauge Condition.**
 
-$$\nabla \cdot \vec{a} = 0$$
+$$\nabla \cdot \vec{a} = 0$$ (eq:potential:gauge:coulomb)
 
 

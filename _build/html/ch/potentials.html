@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.2. Wave Equations in Electromagnetism" href="waves-equation.html" />
+    <link rel="next" title="3.2. Wave Equations in Electromagnetism - using Lorentz gauge" href="waves-equation.html" />
     <link rel="prev" title="3. Electromagnetic waves" href="waves.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -189,8 +189,9 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="waves.html">3. Electromagnetic waves</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">3.1. Electromagnetic Potentials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">3.2. Wave Equations in Electromagnetism</a></li>
-<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">3.3. Plane Electromagnetic Waves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-equation.html">3.2. Wave Equations in Electromagnetism - using Lorentz gauge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-equation-coulomb.html">3.3. Wave Equations in Electromagnetism - using Coulomb gauge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">3.4. Plane Electromagnetic Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="energy.html">4. Force, moments, energy and momentum in electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -251,10 +252,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="green-function.html">12. Green’s function method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numerical-methods.html">13. Metodi numerici</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transformed-domain.html">14. Electromagnetism in transformed domain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variational-principles.html">15. Variational principles in electromagnetism</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="appendix-list.html">14. todo: appendices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix-list.html">16. todo: appendices</a></li>
 </ul>
 
     </div>
@@ -427,7 +430,7 @@ document.write(`
 <span id="classical-electromagnetism-potentials"></span><h1><span class="section-number">3.1. </span>Electromagnetic Potentials<a class="headerlink" href="#electromagnetic-potentials" title="Permalink to this heading">#</a></h1>
 <p>It is possible to demonstrate that the system of Maxwell’s equations and the charge continuity equation is overdetermined. Specifically, it can be shown that, given the distribution of charge and current density—considered as the generating causes of the electric field—and the constitutive laws of the material, four unknowns are sufficient to define the six unknowns (three components for two vector fields) of the problem. Therefore, the problem can be formulated in terms of a scalar potential <span class="math notranslate nohighlight">\(\varphi\)</span> and a vector potential <span class="math notranslate nohighlight">\(\vec{a}\)</span>, along with a gauge condition that eliminates the remaining two arbitrary factors (irrelevant for the calculation of physical fields).</p>
 <div class="section" id="vector-potential-and-scalar-potential">
-<h2><span class="section-number">3.1.1. </span>Vector Potential and Scalar Potential<a class="headerlink" href="#vector-potential-and-scalar-potential" title="Permalink to this heading">#</a></h2>
+<span id="classical-electromagnetism-potentials-vector-scalar"></span><h2><span class="section-number">3.1.1. </span>Vector Potential and Scalar Potential<a class="headerlink" href="#vector-potential-and-scalar-potential" title="Permalink to this heading">#</a></h2>
 <p>Starting from Maxwell’s equations, the potentials of the electromagnetic field can be defined. Using Gauss’s law for the magnetic field, the vector potential <span class="math notranslate nohighlight">\(\vec{a}(\vec{r},t)\)</span> can be introduced,</p>
 <div class="math notranslate nohighlight">
 \[0 = \nabla \cdot \vec{b} \qquad \rightarrow \qquad \vec{b} = \nabla \times \vec{a} \ ,\]</div>
@@ -442,7 +445,7 @@ document.write(`
 \end{aligned}\end{split}\]</div>
 </div>
 <div class="section" id="gauge-conditions">
-<h2><span class="section-number">3.1.2. </span>Gauge Conditions<a class="headerlink" href="#gauge-conditions" title="Permalink to this heading">#</a></h2>
+<span id="classical-electromagnetism-potentials-gauge"></span><h2><span class="section-number">3.1.2. </span>Gauge Conditions<a class="headerlink" href="#gauge-conditions" title="Permalink to this heading">#</a></h2>
 <p>The potentials are defined up to a gauge condition, an additional condition that eliminates any arbitrariness in the definition. For example, the vector potential is defined up to the gradient of a scalar function, since <span class="math notranslate nohighlight">\(\nabla \times \nabla f \equiv \vec{0}\)</span>, and thus the potential <span class="math notranslate nohighlight">\(\tilde{\vec{a}} = \vec{a} + \nabla f\)</span> produces the same magnetic field <span class="math notranslate nohighlight">\(\vec{b}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\nabla \times \tilde{\vec{a}} = \nabla \times (\vec{a} + \nabla f) = \nabla \times \vec{a} \ .\]</div>
@@ -450,8 +453,8 @@ document.write(`
 <div class="math notranslate nohighlight" id="equation-eq-potential-gauge-lorentz">
 <span class="eqno">(3.2)<a class="headerlink" href="#equation-eq-potential-gauge-lorentz" title="Permalink to this equation">#</a></span>\[\nabla \cdot \vec{a} + \frac{1}{c^2} \partial_t \varphi = 0\]</div>
 <p><strong>Coulomb Gauge Condition.</strong></p>
-<div class="math notranslate nohighlight">
-\[\nabla \cdot \vec{a} = 0\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-potential-gauge-coulomb">
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-eq-potential-gauge-coulomb" title="Permalink to this equation">#</a></span>\[\nabla \cdot \vec{a} = 0\]</div>
 </div>
 </div>
 
@@ -499,7 +502,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.2. </span>Wave Equations in Electromagnetism</p>
+        <p class="prev-next-title"><span class="section-number">3.2. </span>Wave Equations in Electromagnetism - using Lorentz gauge</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

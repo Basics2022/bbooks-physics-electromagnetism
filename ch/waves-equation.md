@@ -7,7 +7,7 @@
 -->
 
 (classical-electromagnetism:waves:wave-equation)=
-# Wave Equations in Electromagnetism
+# Wave Equations in Electromagnetism - using Lorentz gauge
 
 Wave equations for physical quantities in electromagnetism are derived from the governing equations for linear local isotropic homogeneous ($\varepsilon$, $\mu$ uniform, not function of space) media with constitutive equations
 
@@ -37,6 +37,7 @@ $$\vec{d} = \varepsilon \ \vec{e} \qquad , \qquad
 \vec{b} = \mu \vec{h} $$
 -->
 
+(classical-electromagnetism:waves:wave-equation:potentials:vector)=
 ### Vector potential
 
 Wave equation for the vector potential,
@@ -62,6 +63,7 @@ wave equation for the vector potential reads,
 
 $$ \dfrac{1}{c^2} \partial_{tt} \vec{a} - \Delta \vec{a}  =  \mu \vec{j}  \ .$$ (eq:wave:a)
 
+(classical-electromagnetism:waves:wave-equation:potentials:scalar)=
 ### Scalar potential
 
 Wave equation for the the scalar potential, $\varphi(\vec{r},t)$, can be derived taking the time derivative of Lorentz's gauge condition,
@@ -77,6 +79,7 @@ using (1) the definition {eq}`eq:potentials`(a)  of the electric field as a func
 
 $$ \frac{1}{c^2} \partial_{tt} \varphi - \Delta \varphi = \frac{\rho_f}{\varepsilon} \ .$$ (eq:wave:phi)
 
+(classical-electromagnetism:waves:wave-equation:em-field)=
 ## Electric Field and Magnetic Field
 <!--
 Using the definitions of the physical fields in terms of the electromagnetic potentials and the linearity (**TODO** *everything must be linear, including the constitutive laws*) of the operations, starting from the wave equations for the potentials, we can derive the wave equations for the physical fields. **TODO** *Assuming constant and uniform properties*
@@ -90,6 +93,7 @@ to the (1) definitions {eq}`eq:potentials` of the electric and the magnetic fiel
 
 [^swap]: $\square \partial_k f = \left( \frac{1}{c^2} \partial_{tt} - \partial_{ii} \right) \partial_k f = \partial_k \left( \frac{1}{c^2} \partial_{tt} - \partial_{ii} \right) f = \partial_k \, \square f $.
 
+(classical-electromagnetism:waves:wave-equation:em-field:e)=
 ### Electric field
 
 $$\begin{aligned}
@@ -99,6 +103,7 @@ $$\begin{aligned}
 & = - \nabla \dfrac{\rho}{\varepsilon} - \mu \partial_t \vec{j}  \ .
 \end{aligned}$$
 
+(classical-electromagnetism:waves:wave-equation:em-field:b)=
 ### Magnetic field
 
 $$\begin{aligned}
