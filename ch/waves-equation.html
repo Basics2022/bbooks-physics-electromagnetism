@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3.2. Wave Equations in Electromagnetism &#8212; Classical Electromagnetism and Principles of Electrical Engineering</title>
+    <title>3.2. Wave Equations in Electromagnetism - using Lorentz gauge &#8212; Classical Electromagnetism and Principles of Electrical Engineering</title>
   
   
   
@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.3. Plane Electromagnetic Waves" href="waves-plane.html" />
+    <link rel="next" title="3.3. Wave Equations in Electromagnetism - using Coulomb gauge" href="waves-equation-coulomb.html" />
     <link rel="prev" title="3.1. Electromagnetic Potentials" href="potentials.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -189,8 +189,9 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="waves.html">3. Electromagnetic waves</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="potentials.html">3.1. Electromagnetic Potentials</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.2. Wave Equations in Electromagnetism</a></li>
-<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">3.3. Plane Electromagnetic Waves</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.2. Wave Equations in Electromagnetism - using Lorentz gauge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-equation-coulomb.html">3.3. Wave Equations in Electromagnetism - using Coulomb gauge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="waves-plane.html">3.4. Plane Electromagnetic Waves</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="energy.html">4. Force, moments, energy and momentum in electromagnetism</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -251,10 +252,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="green-function.html">12. Green’s function method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numerical-methods.html">13. Metodi numerici</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transformed-domain.html">14. Electromagnetism in transformed domain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variational-principles.html">15. Variational principles in electromagnetism</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendices</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="appendix-list.html">14. todo: appendices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix-list.html">16. todo: appendices</a></li>
 </ul>
 
     </div>
@@ -393,7 +396,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Wave Equations in Electromagnetism</h1>
+    <h1>Wave Equations in Electromagnetism - using Lorentz gauge</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -431,8 +434,8 @@ document.write(`
 :read-time: "{sub-ref}`wordcount-minutes` min read"
 ```
 -->
-<div class="tex2jax_ignore mathjax_ignore section" id="wave-equations-in-electromagnetism">
-<span id="classical-electromagnetism-waves-wave-equation"></span><h1><span class="section-number">3.2. </span>Wave Equations in Electromagnetism<a class="headerlink" href="#wave-equations-in-electromagnetism" title="Permalink to this heading">#</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="wave-equations-in-electromagnetism-using-lorentz-gauge">
+<span id="classical-electromagnetism-waves-wave-equation"></span><h1><span class="section-number">3.2. </span>Wave Equations in Electromagnetism - using Lorentz gauge<a class="headerlink" href="#wave-equations-in-electromagnetism-using-lorentz-gauge" title="Permalink to this heading">#</a></h1>
 <p>Wave equations for physical quantities in electromagnetism are derived from the governing equations for linear local isotropic homogeneous (<span class="math notranslate nohighlight">\(\varepsilon\)</span>, <span class="math notranslate nohighlight">\(\mu\)</span> uniform, not function of space) media with constitutive equations</p>
 <div class="math notranslate nohighlight">
 \[\vec{d} = \varepsilon \vec{e} \qquad , \qquad \vec{b} = \mu \vec{h} \ ,\]</div>
@@ -456,7 +459,7 @@ $$\vec{d} = \varepsilon \ \vec{e} \qquad , \qquad
 \vec{b} = \mu \vec{h} $$
 -->
 <div class="section" id="vector-potential">
-<h3><span class="section-number">3.2.1.1. </span>Vector potential<a class="headerlink" href="#vector-potential" title="Permalink to this heading">#</a></h3>
+<span id="classical-electromagnetism-waves-wave-equation-potentials-vector"></span><h3><span class="section-number">3.2.1.1. </span>Vector potential<a class="headerlink" href="#vector-potential" title="Permalink to this heading">#</a></h3>
 <p>Wave equation for the vector potential,</p>
 <div class="math notranslate nohighlight">
 \[\vec{b} = \nabla \times \vec{a} \ ,\]</div>
@@ -475,10 +478,10 @@ $$\vec{d} = \varepsilon \ \vec{e} \qquad , \qquad
 \[\nabla \cdot \vec{a} + \frac{1}{c^2} \partial_t  \varphi = 0 \ ,\]</div>
 <p>wave equation for the vector potential reads,</p>
 <div class="math notranslate nohighlight" id="equation-eq-wave-a">
-<span class="eqno">(3.3)<a class="headerlink" href="#equation-eq-wave-a" title="Permalink to this equation">#</a></span>\[ \dfrac{1}{c^2} \partial_{tt} \vec{a} - \Delta \vec{a}  =  \mu \vec{j}  \ .\]</div>
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-eq-wave-a" title="Permalink to this equation">#</a></span>\[ \dfrac{1}{c^2} \partial_{tt} \vec{a} - \Delta \vec{a}  =  \mu \vec{j}  \ .\]</div>
 </div>
 <div class="section" id="scalar-potential">
-<h3><span class="section-number">3.2.1.2. </span>Scalar potential<a class="headerlink" href="#scalar-potential" title="Permalink to this heading">#</a></h3>
+<span id="classical-electromagnetism-waves-wave-equation-potentials-scalar"></span><h3><span class="section-number">3.2.1.2. </span>Scalar potential<a class="headerlink" href="#scalar-potential" title="Permalink to this heading">#</a></h3>
 <p>Wave equation for the the scalar potential, <span class="math notranslate nohighlight">\(\varphi(\vec{r},t)\)</span>, can be derived taking the time derivative of Lorentz’s gauge condition,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -489,20 +492,20 @@ $$\vec{d} = \varepsilon \ \vec{e} \qquad , \qquad
 \end{aligned}\end{split}\]</div>
 <p>using (1) the definition <a class="reference internal" href="potentials.html#equation-eq-potentials">(3.1)</a>(a)  of the electric field as a function of the potentials, and (2) Gauss’ law for the electric field,</p>
 <div class="math notranslate nohighlight" id="equation-eq-wave-phi">
-<span class="eqno">(3.4)<a class="headerlink" href="#equation-eq-wave-phi" title="Permalink to this equation">#</a></span>\[ \frac{1}{c^2} \partial_{tt} \varphi - \Delta \varphi = \frac{\rho_f}{\varepsilon} \ .\]</div>
+<span class="eqno">(3.5)<a class="headerlink" href="#equation-eq-wave-phi" title="Permalink to this equation">#</a></span>\[ \frac{1}{c^2} \partial_{tt} \varphi - \Delta \varphi = \frac{\rho_f}{\varepsilon} \ .\]</div>
 </div>
 </div>
 <div class="section" id="electric-field-and-magnetic-field">
-<h2><span class="section-number">3.2.2. </span>Electric Field and Magnetic Field<a class="headerlink" href="#electric-field-and-magnetic-field" title="Permalink to this heading">#</a></h2>
+<span id="classical-electromagnetism-waves-wave-equation-em-field"></span><h2><span class="section-number">3.2.2. </span>Electric Field and Magnetic Field<a class="headerlink" href="#electric-field-and-magnetic-field" title="Permalink to this heading">#</a></h2>
 <!--
 Using the definitions of the physical fields in terms of the electromagnetic potentials and the linearity (**TODO** *everything must be linear, including the constitutive laws*) of the operations, starting from the wave equations for the potentials, we can derive the wave equations for the physical fields. **TODO** *Assuming constant and uniform properties*
 -->
 <p>Exploiting the linearity - obviously, if the problem is linear - wave equations for the electric and the magnetic field can be readily derived from applying the wave operator</p>
 <div class="math notranslate nohighlight">
 \[\square := \frac{1}{c^2} \partial_{tt} - \Delta \ ,\]</div>
-<p>to the (1) definitions <a class="reference internal" href="potentials.html#equation-eq-potentials">(3.1)</a> of the electric and the magnetic fields as functions of the potentials, (2) swapping the order of the operator <span class="math notranslate nohighlight">\(\square\)</span> with <span class="math notranslate nohighlight">\(\partial_t\)</span> and <span class="math notranslate nohighlight">\(\nabla\)</span><a class="footnote-reference brackets" href="#swap" id="id1">1</a>, and (3) using the expressions of the wave equations for the vector potential <a class="reference internal" href="#equation-eq-wave-a">(3.3)</a> and the scalar potential <a class="reference internal" href="#equation-eq-wave-phi">(3.4)</a>.</p>
+<p>to the (1) definitions <a class="reference internal" href="potentials.html#equation-eq-potentials">(3.1)</a> of the electric and the magnetic fields as functions of the potentials, (2) swapping the order of the operator <span class="math notranslate nohighlight">\(\square\)</span> with <span class="math notranslate nohighlight">\(\partial_t\)</span> and <span class="math notranslate nohighlight">\(\nabla\)</span><a class="footnote-reference brackets" href="#swap" id="id1">1</a>, and (3) using the expressions of the wave equations for the vector potential <a class="reference internal" href="waves-equation-coulomb.html#equation-eq-wave-a">(3.6)</a> and the scalar potential <a class="reference internal" href="waves-equation-coulomb.html#equation-eq-wave-phi">(3.7)</a>.</p>
 <div class="section" id="electric-field">
-<h3><span class="section-number">3.2.2.1. </span>Electric field<a class="headerlink" href="#electric-field" title="Permalink to this heading">#</a></h3>
+<span id="classical-electromagnetism-waves-wave-equation-em-field-e"></span><h3><span class="section-number">3.2.2.1. </span>Electric field<a class="headerlink" href="#electric-field" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 \square \vec{e} &amp; = &amp;&amp; (1) \\
@@ -512,7 +515,7 @@ Using the definitions of the physical fields in terms of the electromagnetic pot
 \end{aligned}\end{split}\]</div>
 </div>
 <div class="section" id="magnetic-field">
-<h3><span class="section-number">3.2.2.2. </span>Magnetic field<a class="headerlink" href="#magnetic-field" title="Permalink to this heading">#</a></h3>
+<span id="classical-electromagnetism-waves-wave-equation-em-field-b"></span><h3><span class="section-number">3.2.2.2. </span>Magnetic field<a class="headerlink" href="#magnetic-field" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
  \square \vec{b} &amp; = &amp;&amp; (1) \\
@@ -570,11 +573,11 @@ Using the definitions of the physical fields in terms of the electromagnetic pot
       </div>
     </a>
     <a class="right-next"
-       href="waves-plane.html"
+       href="waves-equation-coulomb.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.3. </span>Plane Electromagnetic Waves</p>
+        <p class="prev-next-title"><span class="section-number">3.3. </span>Wave Equations in Electromagnetism - using Coulomb gauge</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
